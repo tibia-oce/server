@@ -11,7 +11,7 @@
 /vcpkg_installed
 
 # Personal Config File
-config.lua
+./config.lua
 
 # CLion and other JetBrains tools
 /.idea
