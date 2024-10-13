@@ -1,3 +1,6 @@
+env:
+	cp .env.example .env
+
 compose:
 	docker-compose down
 	docker volume prune -f
