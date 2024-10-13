@@ -3581,7 +3581,7 @@
         <attribute key="imbuementslots" value="3" />
     </item>
     <item id="2428" article="an" name="orcish axe">
-        <attribute key="weight" value="4500" />
+        <attribute key="weight" value="3200" />
         <attribute key="defense" value="12" />
         <attribute key="attack" value="23" />
         <attribute key="weaponType" value="axe" />
@@ -3667,7 +3667,7 @@
         <attribute key="imbuementslots" value="2" />
     </item>
     <item id="2439" article="a" name="daramian mace">
-        <attribute key="weight" value="6800" />
+        <attribute key="weight" value="4800" />
         <attribute key="defense" value="12" />
         <attribute key="attack" value="21" />
         <attribute key="weaponType" value="club" />
@@ -3842,7 +3842,7 @@
         <attribute key="imbuementslots" value="2" />
     </item>
     <item id="2465" article="a" name="brass armor">
-        <attribute key="weight" value="8000" />
+        <attribute key="weight" value="3500" />
         <attribute key="armor" value="8" />
         <attribute key="slotType" value="body" />
     </item>
@@ -10677,8 +10677,9 @@
         <attribute key="weight" value="830" />
         <attribute key="description" value="It obviously shows Treasure Island including a big, red cross." />
     </item>
-    <item id="6119" article="a" name="scroll">
+    <item id="6119" article="a" name="temple scroll">
         <attribute key="weight" value="120" />
+        <attribute key="description" value="Returns you to the temple." />
     </item>
     <item id="6120" name="Dragha's spellbook">
         <attribute key="description" value="It apparently belonged to someone called Dragha, the apprentice of a voodoomaster." />
@@ -37870,4 +37871,5 @@
     <item id="26379" article="a" name="golden dragon tapestry" />
     <item id="26380" article="a" name="sword tapestry" />
     <item id="26381" article="a" name="brocade tapestry" />
+
 </items>
