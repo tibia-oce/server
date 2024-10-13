@@ -16,3 +16,4 @@
 # CLion and other JetBrains tools
 /.idea
 .vscode/
+.env
