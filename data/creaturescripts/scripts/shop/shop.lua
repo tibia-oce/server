@@ -3,13 +3,9 @@ local config = require('data.creaturescripts.scripts.shop.config')
 local Callbacks = require('data.creaturescripts.scripts.shop.callbacks')
 local Repository = require('data.creaturescripts.scripts.shop.repository')
 
-local SHOP_EXTENDED_OPCODE = config.EXTENDED_OPCODE
-local SHOP_OFFERS = config.OFFERS
-local SHOP_CALLBACKS = config.CALLBACKS
-local SHOP_CATEGORIES = config.CATEGORIES
-local SHOP_BUY_URL = config.BUY_URL
-local SHOP_AD = config.AD
-local MAX_PACKET_SIZE = config.MAX_PACKET_SIZE
+local SHOP_OFFERS = {}
+local SHOP_CALLBACKS = {}
+local SHOP_CATEGORIES = nil
 
 function init()
 
@@ -37,32 +33,9 @@ function init()
             rotating = true
         }
     })
-    -- local category3 = addCategory({
-    --   type="image",
-    --   image="http://otclient.ovh/images/137.png",
-    --   name="Category with http image"
-    -- })
-    -- local category4 = addCategory({
-    --   type="image",
-    --   image="/data/images/game/states/electrified.png",
-    --   name="Category with local image"
-    -- })
 
     category1.addItem(90, 2160, 100, "100 Crystal coin", "description of cristal coin")
     category1.addItem(200, 2493, 1, "Demon helmet", "woo\ndemon helmet\nnice, you should buy it")
-
-    -- category2.addOutfit(500, {
-    --       mount=0,
-    --       feet=114,
-    --       legs=114,
-    --       body=116,
-    --       type=143,
-    --       auxType=0,
-    --       addons=3,
-    --       head=2,
-    --       rotating=true
-    --   }, "title of this cool outfit or whatever", "this is your new cool outfit. You can buy it here.\nsrlsy")
-
     category2.addOutfit(100, {
         mount = 682,
         feet = 0,
@@ -74,18 +47,6 @@ function init()
         head = 0,
         rotating = true
     }, "Mount example")
-
-    -- category2.addOutfit(100, {
-    --     mount=0,
-    --     feet=0,
-    --     legs=0,
-    --     body=0,
-    --     type=35,
-    --     auxType=0,
-    --     addons=0,
-    --     head=0,
-    --     rotating=true
-    -- }, "Demon outfit", "Want be a demon?\nNo problem...")
 
 end
 
@@ -141,9 +102,9 @@ end
 
 function getStatus(player)
     local status = {
-        ad = SHOP_AD,
+        ad = config.AD,
         points = Repository.getPoints(player),
-        buyUrl = SHOP_BUY_URL
+        buyUrl = config.BUY_URL
     }
     return status
 end
@@ -161,32 +122,32 @@ function sendJSON(player, action, data, forceStatus)
         status = status
     })
     local s = {}
-    for i = 1, #buffer, MAX_PACKET_SIZE do
-        s[#s + 1] = buffer:sub(i, i + MAX_PACKET_SIZE - 1)
+    for i = 1, #buffer, config.MAX_PACKET_SIZE do
+        s[#s + 1] = buffer:sub(i, i + config.MAX_PACKET_SIZE - 1)
     end
     local msg = NetworkMessage()
     if #s == 1 then
         msg:addByte(50)
-        msg:addByte(SHOP_EXTENDED_OPCODE)
+        msg:addByte(config.EXTENDED_OPCODE)
         msg:addString(s[1])
         msg:sendToPlayer(player)
         return
     end
     -- split message if too big
     msg:addByte(50)
-    msg:addByte(SHOP_EXTENDED_OPCODE)
+    msg:addByte(config.EXTENDED_OPCODE)
     msg:addString("S" .. s[1])
     msg:sendToPlayer(player)
     for i = 2, #s - 1 do
         msg = NetworkMessage()
         msg:addByte(50)
-        msg:addByte(SHOP_EXTENDED_OPCODE)
+        msg:addByte(config.EXTENDED_OPCODE)
         msg:addString("P" .. s[i])
         msg:sendToPlayer(player)
     end
     msg = NetworkMessage()
     msg:addByte(50)
-    msg:addByte(SHOP_EXTENDED_OPCODE)
+    msg:addByte(config.EXTENDED_OPCODE)
     msg:addString("E" .. s[#s])
     msg:sendToPlayer(player)
 end
@@ -221,8 +182,8 @@ function processBuy(player, data)
     -- Process the purchase via callback
     local status = callback(player, offer)
     if status == true then
-        Repository.updatePoints(player, offer['cost'])  -- Deduct points
-        Repository.logPurchase(player, offer)  -- Log the purchase
+        Repository.updatePoints(player, offer['cost']) -- Deduct points
+        Repository.logPurchase(player, offer) -- Log the purchase
         return sendMessage(player, "Success!", "You bought " .. offer['title'] .. "!", true)
     end
 
@@ -234,40 +195,21 @@ function processBuy(player, data)
 end
 
 function sendHistory(player)
+    -- Check cooldown to avoid spam requests
     if player:getStorageValue(1150002) and player:getStorageValue(1150002) + 10 > os.time() then
         return
     end
     player:setStorageValue(1150002, os.time())
 
-    local history = {}
-    local resultId = db.storeQuery("SELECT * FROM `shop_history` WHERE `account` = " .. player:getAccountId() ..
-                                       " order by `id` DESC")
+    -- Fetch purchase history from the repository
+    local history = Repository.getPurchaseHistory(player)
 
-    if resultId ~= false then
-        repeat
-            local details = result.getDataString(resultId, "details")
-            local status, json_data = pcall(function()
-                return json.decode(details)
-            end)
-            if not status then
-                json_data = {
-                    type = "image",
-                    title = result.getDataString(resultId, "title"),
-                    cost = result.getDataInt(resultId, "cost")
-                }
-            end
-            table.insert(history, json_data)
-            history[#history]["description"] = "Bought on " .. result.getDataString(resultId, "date") .. " for " ..
-                                                   result.getDataInt(resultId, "cost") .. " points."
-        until not result.next(resultId)
-        result.free(resultId)
-    end
-
+    -- Send history as JSON response
     sendJSON(player, "history", history)
 end
 
 function onExtendedOpcode(player, opcode, buffer)
-    if opcode ~= SHOP_EXTENDED_OPCODE then
+    if opcode ~= config.EXTENDED_OPCODE then
         return false
     end
     local status, json_data = pcall(function()

@@ -28,4 +28,35 @@ function Repository.logPurchase(player, offer)
     )
 end
 
+function Repository.getPurchaseHistory(player)
+    local accountId = player:getAccountId()
+    local query = "SELECT * FROM `shop_history` WHERE `account` = " .. accountId .. " ORDER BY `id` DESC"
+    local resultId = db.storeQuery(query)
+
+    if not resultId then
+        return {}
+    end
+
+    local history = {}
+    repeat
+        local details = result.getDataString(resultId, "details")
+        local status, json_data = pcall(function() return json.decode(details) end)
+
+        if not status then
+            json_data = {
+                type = "image",
+                title = result.getDataString(resultId, "title"),
+                cost = result.getDataInt(resultId, "cost")
+            }
+        end
+
+        json_data["description"] = "Bought on " .. result.getDataString(resultId, "date") ..
+                                   " for " .. result.getDataInt(resultId, "cost") .. " points."
+        table.insert(history, json_data)
+    until not result.next(resultId)
+
+    result.free(resultId)
+    return history
+end
+
 return Repository

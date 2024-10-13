@@ -1,8 +1,5 @@
 local Config = {
   EXTENDED_OPCODE = 201,
-  OFFERS = {},
-  CALLBACKS = {},
-  CATEGORIES = nil,
   BUY_URL = "https://myaac.mythbound.dev",
   AD = {
       image = "",
