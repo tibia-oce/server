@@ -79,6 +79,24 @@ function gameStoreInitialize()
         legs = 124,
         feet = 116
     }, 400)
+
+    offers.addOutfit(GAME_STORE, "Outfits", "Beggar Outfit", "Beggar", {
+        mount = 0,
+        type = 153,
+        addons = 3,
+        head = 9,
+        body = 126,
+        legs = 124,
+        feet = 116
+    }, {
+        mount = 0,
+        type = 157,
+        addons = 3,
+        head = 9,
+        body = 126,
+        legs = 124,
+        feet = 116
+    }, 400)
 end
 
 function ExtendedEvent.onExtendedOpcode(player, opcode, buffer)
