@@ -1,5 +1,5 @@
 # Stage 1: Install system dependencies and vcpkg
-FROM ubuntu:22.04 AS dependencies
+FROM ubuntu:24.04 AS dependencies
 ENV VCPKG_FORCE_SYSTEM_BINARIES=1
 ENV VCPKG_ROOT=/bts/vcpkg
 
@@ -35,7 +35,7 @@ RUN premake5 gmake2 && make -j$(nproc) config=${RELEASE_ARCH}
 
 
 # Stage 4: Create the final image
-FROM ubuntu:22.04 AS final
+FROM ubuntu:24.04 AS final
 COPY --from=build /usr/src/bts/Black-Tek-Server /app/Black-Tek-Server
 COPY data /app/data
 COPY *.sql key.pem /app/
