@@ -6,3 +6,7 @@ compose: env
 	docker volume prune -f
 	docker-compose up --build -d
 	docker logs server -f
+
+
+clean:
+	docker system prune -a --volumes -f

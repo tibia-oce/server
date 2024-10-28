@@ -39215,7 +39215,7 @@
         <attribute key="loottype" value="misc" />
     </item>
     <item id="26414" article="a" name="beginner's pickaxe">
-        <attribute key="weight" value="6000" />
+        <attribute key="weight" value="500" />
         <attribute key="loottype" value="misc" />
     </item>
     <item id="26415" article="a" name="miner's pickaxe">
@@ -39397,7 +39397,7 @@
     <attribute key="description" value="You can use this recipe to learn how to craft big silver ingot." />
     </item>
     <item id="26588" article="a" name="beginner's axe">
-    <attribute key="weight" value="6000" />
+    <attribute key="weight" value="500" />
         <attribute key="loottype" value="misc" />
     </item>
     <item id="26589" article="a" name="apprentice's axe">
@@ -39710,7 +39710,7 @@
         <attribute key="showattributes" value="1" />
     </item>
     <item id="26712" article="a" name="beginner's scissor">
-    <attribute key="weight" value="3500" />
+    <attribute key="weight" value="500" />
     <attribute key="loottype" value="misc" />
     </item>
     <item id="26713" article="a" name="apprentice's scissor">
