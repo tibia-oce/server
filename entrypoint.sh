@@ -10,7 +10,7 @@ log() {
 download_and_extract() {
     local dir="$1"
     local path="./data/$dir"
-    local repo_url="https://github.com/tibia-oce/assets/archive/refs/heads/feat/new-map.zip"
+    local repo_url="https://github.com/tibia-oce/assets/archive/refs/heads/master.zip"
     local zipfile="./data/$(basename "$repo_url")"
 
     # Check if the directory already exists to avoid redundant downloads
@@ -62,11 +62,12 @@ download_and_extract() {
 # Download and extract necessary directories
 download_and_extract "world"
 download_and_extract "items"
+download_and_extract "npc"
 download_and_extract "monster/monsters"
 
 # Start the executable
 if [ -x "./Black-Tek-Server" ]; then
-    log "Starting Black-Tek-Server...\n"
+    log "Starting Black-Tek-Server..."
     exec ./Black-Tek-Server
 else
     log "Executable ./Black-Tek-Server not found or not executable."
