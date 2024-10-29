@@ -66,9 +66,7 @@ monster.light = {
 monster.voices = {
 }
 
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.loot = {
 	{id = "crystal coin", chance = 70540, maxCount = 25},
 	{id = 28081, chance = 71920, maxCount = 8},

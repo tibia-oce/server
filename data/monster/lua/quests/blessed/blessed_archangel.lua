@@ -60,9 +60,7 @@ monster.light = {
 
 monster.summon = {
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.voices = {
 	interval = 5000,
 	chance = 10,

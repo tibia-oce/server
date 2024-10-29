@@ -28,9 +28,7 @@ monster.changeTarget = {
 monster.strategiesTarget = {
 	nearest = 100,
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.flags = {
 	summonable = false,
 	attackable = true,

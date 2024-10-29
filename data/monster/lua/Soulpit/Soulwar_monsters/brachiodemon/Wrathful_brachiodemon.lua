@@ -30,9 +30,7 @@ monster.getLevel = {
 	minLevel = 500,
 	maxLevel = 500
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.strategiesTarget = {
 	nearest = 70,
 	health = 10,

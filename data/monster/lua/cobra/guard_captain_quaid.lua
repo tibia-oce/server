@@ -25,9 +25,7 @@ monster.changeTarget = {
 	chance = 10
 }
 
-monster.events = {
-	"playerAttackSound"
-}
+
 
 monster.strategiesTarget = {
 	nearest = 70,

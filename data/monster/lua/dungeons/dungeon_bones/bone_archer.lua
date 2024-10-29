@@ -22,9 +22,7 @@ monster.getLevel = {
 	minLevel = 1,
 	maxLevel = 50
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.flags = {
 	summonable = false,
 	attackable = true,

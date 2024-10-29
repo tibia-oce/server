@@ -33,9 +33,7 @@ monster.flags = {
 	staticAttackChance = 90,
 	runHealth = 5000
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.summons = {
 }
 

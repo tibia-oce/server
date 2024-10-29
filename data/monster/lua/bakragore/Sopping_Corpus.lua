@@ -32,9 +32,7 @@ monster.strategiesTarget = {
 	health = 10,
 	damage = 10,
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.flags = {
 	summonable = false,
 	attackable = true,

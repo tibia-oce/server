@@ -61,9 +61,7 @@ monster.light = {
 	level = 0,
 	color = 0
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.summon = {
 }
 

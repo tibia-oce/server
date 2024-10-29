@@ -71,9 +71,7 @@ monster.loot = {
 
     	
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.attacks = {
 	{name ="melee", interval = 2000, chance = 100, skill = 150, attack = 130},
 	{name ="combat", interval = 2000, chance = 20, type = COMBAT_EARTHDAMAGE, minDamage = -400, maxDamage = -1430, range = 7, radius = 1, shootEffect = 83, effect = 310, target = true},

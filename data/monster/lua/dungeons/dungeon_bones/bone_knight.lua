@@ -37,9 +37,7 @@ monster.flags = {
 	targetDistance = 1,
 	staticAttackChance = 90
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.summons = {
 }
 

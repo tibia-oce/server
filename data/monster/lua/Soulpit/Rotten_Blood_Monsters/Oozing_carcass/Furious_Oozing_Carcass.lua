@@ -25,9 +25,7 @@ monster.changeTarget = {
 	interval = 4000,
 	chance = 10
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.getLevel = {
 	minLevel = 300,
 	maxLevel = 300

@@ -24,9 +24,7 @@ monster.changeTarget = {
 	interval = 2000,
 	chance = 15
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.flags = {
 	summonable = false,
 	attackable = true,

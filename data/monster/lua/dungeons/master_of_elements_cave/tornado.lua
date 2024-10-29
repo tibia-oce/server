@@ -36,9 +36,7 @@ monster.flags = {
 	healthHidden = true,
 	runHealth = 5000
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.summons = {
 	
 }

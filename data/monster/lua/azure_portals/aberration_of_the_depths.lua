@@ -40,9 +40,7 @@ monster.flags = {
 monster.summons = {
 }
 
-monster.events = {
-	"playerAttackSound"
-}
+
 
 monster.voices = {
 }

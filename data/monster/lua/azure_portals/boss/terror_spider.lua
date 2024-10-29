@@ -43,9 +43,7 @@ monster.summons = {
 monster.voices = {
 }
 
-monster.events = {
-	"playerAttackSound"
-}
+
 
 monster.loot = {
 }

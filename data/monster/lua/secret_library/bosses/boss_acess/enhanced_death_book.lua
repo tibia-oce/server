@@ -51,9 +51,7 @@ monster.flags = {
 	canWalkOnPoison = true,
 	pet = false
 }
-monster.events = {
-	"playerAttackSound"
-}
+
 monster.light = {
 	level = 0,
 	color = 0
