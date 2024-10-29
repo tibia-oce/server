@@ -1,5 +1,4 @@
-env:
-	if [ ! -f .env ]; then cp .env.example .env; else echo ".env already exists. Skipping."; fi
+.PHONY: compose env clean
 
 compose: env
 	docker-compose down -v
@@ -7,6 +6,9 @@ compose: env
 	docker-compose up --build -d
 	docker logs server -f
 
+env:
+	@ if [ ! -f .env ]; then cp .env.example .env; fi
 
 clean:
+	docker-compose down -v
 	docker system prune -a --volumes -f
