@@ -962,6 +962,32 @@ void Player::sendPing()
 	}
 }
 
+// todo: auto open containers
+// void Player::autoOpenContainers()
+// {
+// 	for (int32_t i = CONST_SLOT_FIRST; i <= CONST_SLOT_LAST; i++) {
+// 		Item* item = inventory[i];
+// 		if (!item) {
+// 			continue;
+// 		}
+
+// 		if (Container* container = item->getContainer()) {
+// 			if (container->getAutoOpen() >= 0) {
+// 				addContainer(container->getAutoOpen(), container);
+// 				onSendContainer(container);
+// 			}
+// 			for (ContainerIterator it = container->iterator(); it.hasNext(); it.advance()) {
+// 				if (Container* subContainer = (*it)->getContainer()) {
+// 					if (subContainer->getAutoOpen() >= 0) {
+// 						addContainer(subContainer->getAutoOpen(), subContainer);
+// 						onSendContainer(subContainer);
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
 Item* Player::getWriteItem(uint32_t& windowTextId, uint16_t& maxWriteLen)
 {
 	windowTextId = this->windowTextId;
@@ -4794,6 +4820,7 @@ void Player::updateRegeneration()
 	}
 }
 
+
 void Player::addItemImbuements(Item* item) {
 	if (item->hasImbuements()) {
 		const std::vector<std::shared_ptr<Imbuement>>& imbuementList = item->getImbuements();
@@ -5051,4 +5078,141 @@ void Player::addImbuementEffect(std::shared_ptr<Imbuement> imbue) {
 	}
 	sendSkills();
 	sendStats();
+}
+
+
+void Player::doAutoLoot(const std::vector<Item*>& items)
+{
+	if (items.empty()) {
+		return;
+	}
+
+	for (const auto& item : items) {
+		if (std::find(autoLootItems.begin(), autoLootItems.end(), item->getID()) == autoLootItems.end()) {
+			continue;
+		}
+
+		addAutoLootItems(item);
+	}
+}
+
+void Player::updateAutoLoot(uint16_t clientId, const std::string& name, bool remove)
+{
+	std::string itemName;
+	uint16_t serverId = 0;
+	if (clientId > 0) {
+		const ItemType& itemType = Item::items.getItemIdByClientId(clientId);
+		serverId = itemType.id;
+		itemName = itemType.name;
+
+		if (serverId == 0) {
+			sendTextMessage(MESSAGE_EVENT_ADVANCE, fmt::format("Item with ID {:d} does not exist.", clientId));
+			return;
+		}
+	}
+	else if (!name.empty()) {
+		const ItemType& itemType = Item::items.getItemByName(name);
+		serverId = itemType.id;
+		itemName = itemType.name;
+		clientId = itemType.clientId;
+
+		if (serverId == 0) {
+			sendTextMessage(MESSAGE_EVENT_ADVANCE, fmt::format("{:s} does not exist.", name));
+			return;
+		}
+	}
+	else {
+		sendTextMessage(MESSAGE_EVENT_ADVANCE, fmt::format("Item with ID {:d} does not exist.", clientId));
+		return;
+	}
+
+	auto it = std::find(autoLootItems.begin(), autoLootItems.end(), serverId);
+	if (!remove && it == autoLootItems.end()) {
+		autoLootItems.push_back(serverId);
+		sendTextMessage(MESSAGE_EVENT_ADVANCE, fmt::format("{:s} has been added to the auto loot list.", itemName));
+	}
+	else if (remove && it != autoLootItems.end()) {
+		autoLootItems.erase(it);
+		sendTextMessage(MESSAGE_EVENT_ADVANCE, fmt::format("{:s} has been removed from the auto loot list.", itemName));
+	}
+
+	if (client) {
+		std::map<uint16_t, std::string> autoloot;
+		autoloot.insert_or_assign(clientId, itemName);
+		client->sendAutolootItems(autoloot, remove);
+	}
+}
+
+const std::map<uint16_t, std::string> Player::getAutolootItems() const
+{
+	std::map<uint16_t, std::string> autoloot;
+	if (!client) {
+		return autoloot;
+	}
+
+	for (auto& itemId : autoLootItems) {
+		const ItemType& itemType = Item::items[itemId];
+		autoloot.insert_or_assign(itemType.clientId, itemType.name);
+	}
+
+	return autoloot;
+}
+
+void Player::sendUpdateContainer(const Container* container)
+{
+	if (!client || !container) {
+		return;
+	}
+
+	for (auto& itContainer : openContainers) {
+		if (itContainer.second.container == container) {
+			client->sendUpdateContainer(itContainer.first);
+			break;
+		}
+	}
+}
+
+void Player::addAutoLootItems(Item* item)
+{
+	Item* backpack = getInventoryItem(CONST_SLOT_BACKPACK);
+	if (!backpack) {
+		return;
+	}
+
+	Container* backpackContainer = backpack->getContainer();
+	if (!backpackContainer) {
+		return;
+	}
+
+	Item* moveItem = nullptr;
+	const LootCategory_t lootCategoryId = item->getLootCategoryId();
+
+	std::list<Container*> listContainer = { backpackContainer };
+	std::list<Container*> containers;
+	while (listContainer.size() > 0) {
+		Container* container = listContainer.front();
+		listContainer.pop_front();
+		for (auto& itItem : container->getItemList()) {
+			Container* tmpContainer = itItem->getContainer();
+			if (tmpContainer) {
+				uint16_t categoryId = tmpContainer->getLootCategory();
+				if (hasBitSet(lootCategoryId, categoryId))
+				{
+					if (g_game.internalMoveItem(item->getParent(), tmpContainer, INDEX_WHEREEVER, item, item->getItemCount(), &moveItem, 0) == RETURNVALUE_NOERROR) {
+						return;
+					}
+				}
+
+				listContainer.push_front(tmpContainer);
+				containers.push_back(tmpContainer);
+			}
+		}
+	}
+
+	if (g_game.internalMoveItem(item->getParent(), backpackContainer, INDEX_WHEREEVER, item, item->getItemCount(), &moveItem, 0) != RETURNVALUE_NOERROR) {
+		sendTextMessage(MESSAGE_STATUS_WARNING, fmt::format("There is not enough space in the backpack assigned to this item and in the main backpack. The {:s} has been left in the corpse.", item->getName()));
+	}
+	else {
+		sendTextMessage(MESSAGE_STATUS_WARNING, fmt::format("There is not enough space in the backpack assigned to this item. The {:s} has been send to your main backpack.", item->getName()));
+	}
 }

@@ -153,6 +153,16 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	enableXTEAEncryption();
 	setXTEAKey(std::move(key));
 
+	// todo: 0x60 ?
+	// uint8_t var = msg.getByte();
+	// if (var == 1) {
+	// 	auto output = OutputMessagePool::getOutputMessage();
+	// 	output->addByte(0x60);
+	// 	send(output);
+	// 	disconnect();
+	// 	return;
+	// }
+
 	if (version < CLIENT_VERSION_MIN || version > CLIENT_VERSION_MAX) {
 		disconnectClient(fmt::format("Only clients with protocol {:s} allowed!", CLIENT_VERSION_STR), version);
 		return;

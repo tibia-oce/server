@@ -4236,6 +4236,7 @@ int LuaScriptInterface::luaResultGetStream(lua_State* L)
 	}
 
 	auto stream = res->getString(getString(L, 2));
+	// const char* stream = res->getStream(getString(L, 2), length);
 	lua_pushlstring(L, stream.data(), stream.size());
 	lua_pushnumber(L, stream.size());
 	return 2;
@@ -7127,8 +7128,24 @@ int LuaScriptInterface::luaItemMoveTo(lua_State* L)
 	uint32_t flags = getNumber<uint32_t>(L, 3, FLAG_NOLIMIT | FLAG_IGNOREBLOCKITEM | FLAG_IGNOREBLOCKCREATURE | FLAG_IGNORENOTMOVEABLE);
 
 	if (item->getParent() == VirtualCylinder::virtualCylinder) {
+    	// If parent is VirtualCylinder, just add item.
 		pushBoolean(L, g_game.internalAddItem(toCylinder, item, INDEX_WHEREEVER, flags) == RETURNVALUE_NOERROR);
 	} else {
+    	// Additional logic if the "enable item categories" flag is set
+		if (hasBitSet(FLAG_ENABLEITEMCATEGORIES, flags)) {
+			Creature* creature = toCylinder->getCreature();
+			if (creature) {
+				Player* player = creature->getPlayer();
+				if (player) {
+					// If we have a valid player, do the auto-loot logic
+					player->addAutoLootItems(item);
+					// Indicate success to Lua
+					pushBoolean(L, true);
+					return 1;
+				}
+			}
+		}
+		// Otherwise, do the normal "internalMoveItem" logic
 		Item* moveItem = nullptr;
 		ReturnValue ret = g_game.internalMoveItem(item->getParent(), toCylinder, INDEX_WHEREEVER, item, item->getItemCount(), &moveItem, flags);
 		if (moveItem) {

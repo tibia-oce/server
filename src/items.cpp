@@ -1772,3 +1772,12 @@ uint16_t Items::getItemIdByName(const std::string& name)
 
 	return result->second;
 }
+
+const ItemType& Items::getItemByName(const std::string& name) const
+{
+	auto result = nameToItems.find(asLowerCaseString(name));
+	if (result == nameToItems.end())
+		return items.front();
+
+	return getItemType(result->second);
+}

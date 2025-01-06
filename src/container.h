@@ -107,6 +107,9 @@ class Container : public Item, public Cylinder
 
 		std::string getName(bool addArticle = false) const;
 
+		// Autoloot categories
+		void onUpdateContainer();
+
 		bool hasParent() const;
 		void addItem(Item* item);
 		Item* getItemByIndex(size_t index) const;
