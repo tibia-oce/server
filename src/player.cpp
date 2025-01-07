@@ -10,6 +10,7 @@
 #include "creatureevent.h"
 #include "events.h"
 #include "game.h"
+#include "enums.h"
 #include "iologindata.h"
 #include "monster.h"
 #include "movement.h"
@@ -5188,43 +5189,43 @@ void Player::addAutoLootItems(Item* item)
 
 	Item* moveItem = nullptr;
 	const LootCategory_t lootCategoryId = item->getLootCategoryId();
-	if (lootCategoryId == 1) {
-		sendTextMessage(MESSAGE_STATUS_WARNING, fmt::format(
-			"Undefined loot category for {:s} (ID: {:d}). Moving to main backpack. Please lodge a ticket to have this updated.",
-			item->getName(), item->getID()));
+	const auto itemName = item->getName();
+	const auto itemId = item->getID();
+	if (lootCategoryId == LOOT_CATEGORY_NONE) {
+		sendTextMessage(MESSAGE_STATUS_DEFAULT, fmt::format(
+			"Undefined loot category for {} (ID: {}). Moving to main backpack. Please lodge a ticket to have this updated.",
+			itemName, itemId));
 	}
 
-	std::list<Container*> listContainer = { backpackContainer };
-	std::list<Container*> containers;
+	// Recursive container search
+	std::list<Container*> containersToCheck = { backpackContainer };
+	while (!containersToCheck.empty()) {
+		Container* container = containersToCheck.front();
+		containersToCheck.pop_front();
 
-	while (!listContainer.empty()) {
-		Container* container = listContainer.front();
-		listContainer.pop_front();
-
-		for (auto& itItem : container->getItemList()) {
-			Container* tmpContainer = itItem->getContainer();
-			if (tmpContainer) {
-				uint16_t categoryId = tmpContainer->getLootCategory();
-
-				// Check if the container matches the loot category
-				if (hasBitSet(lootCategoryId, categoryId)) {
-					// Attempt to move the item
-					if (g_game.internalMoveItem(item->getParent(), tmpContainer, INDEX_WHEREEVER, item, item->getItemCount(), &moveItem, 0) == RETURNVALUE_NOERROR) {
-						// todo: success message with MESSAGE_INFO_DESCR
-						return;
-					}
-				}
-
-				listContainer.push_front(tmpContainer);
-				containers.push_back(tmpContainer);
+		for (Item* containedItem : container->getItemList()) {
+			Container* nestedContainer = containedItem->getContainer();
+			if (!nestedContainer) {
+				continue;
 			}
+
+			// Check if the container matches the loot category
+			if (hasBitSet(lootCategoryId, nestedContainer->getLootCategory())) {
+				// Attempt to move the item
+				if (g_game.internalMoveItem(item->getParent(), nestedContainer, INDEX_WHEREEVER, item, item->getItemCount(), &moveItem, 0) == RETURNVALUE_NOERROR) {
+					return;
+				}
+			}
+			containersToCheck.push_front(nestedContainer);
 		}
 	}
 
+	// Move item to main backpack
 	if (g_game.internalMoveItem(item->getParent(), backpackContainer, INDEX_WHEREEVER, item, item->getItemCount(), &moveItem, 0) != RETURNVALUE_NOERROR) {
-		sendTextMessage(MESSAGE_STATUS_WARNING, fmt::format("No space for {:s} (ID: {:d}). Item left in corpse.",item->getName(), static_cast<uint32_t>(lootCategoryId)));
-	}
-	else {
-		sendTextMessage(MESSAGE_STATUS_WARNING, fmt::format("There is not enough space in the backpack assigned to this item. The {:s} has been send to your main backpack.", item->getName()));
+		sendTextMessage(MESSAGE_STATUS_WARNING, fmt::format(
+			"No space for {} (ID: {}). Item left in corpse.", itemName, itemId));
+	} else if (lootCategoryId != LOOT_CATEGORY_NONE) {
+		sendTextMessage(MESSAGE_STATUS_WARNING, fmt::format(
+			"Not enough space in the assigned backpack. The {} has been sent to your main backpack.", itemName));
 	}
 }
