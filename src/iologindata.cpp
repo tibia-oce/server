@@ -285,7 +285,8 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 		condition = Condition::createCondition(propStream);
 	}
 
-	// Unserialize loot list
+	// unserialize loot list
+	// todo(autoloot): change stream datatype?
 	unsigned long autolootSize;
 	const char* autoloot = result->getStream("autoloot", autolootSize);
 	PropStream propStreamAutoloot;
@@ -763,17 +764,15 @@ bool IOLoginData::savePlayer(Player* player)
 		}
 	}
 
-	//serialize loot list
+	// Serialize loot list
+	// todo(autoloot): datatype from blob to strings?
 	PropWriteStream propWriteStreamLootList;
 	propWriteStreamLootList.write<uint16_t>(player->autoLootItems.size());
-	for (auto& itItem : player->autoLootItems)
-	{
+	for (auto& itItem : player->autoLootItems) {
 		propWriteStreamLootList.write<uint16_t>(itItem);
 	}
-
 	propWriteStreamLootList.write<uint16_t>(0);
-	size_t autolootSize;
-	// const char* autoloot = propWriteStreamLootList.getStream(autolootSize);
+	std::string autoloot = std::string(propWriteStreamLootList.getStream());
 
 	//First, an UPDATE query to write the player itself
 	std::ostringstream query;
@@ -814,8 +813,9 @@ bool IOLoginData::savePlayer(Player* player)
 	}
 
 	query << "`conditions` = " << db.escapeString(propWriteStream.getStream()) << ',';
-	query << "`autoloot` = " << db.escapeString(propWriteStream.getStream()) << ',';
-	// query << "`autoloot` = " << db.escapeBlob(autoloot, autolootSize) << ',';
+	// todo(autoloot): provided code for db Blob type
+	// query << "`autoloot` = " << db.escapeBlob(autoloot, autolootSize) << ','; 
+	query << "`autoloot` = " << db.escapeString(autoloot) << ',';
 
 	if (g_game.getWorldType() != WORLD_TYPE_PVP_ENFORCED) {
 		int64_t skullTime = 0;

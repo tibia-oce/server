@@ -5176,29 +5176,41 @@ void Player::addAutoLootItems(Item* item)
 {
 	Item* backpack = getInventoryItem(CONST_SLOT_BACKPACK);
 	if (!backpack) {
+		sendTextMessage(MESSAGE_STATUS_WARNING, "Autoloot failed - no backpack equipped.");
 		return;
 	}
 
 	Container* backpackContainer = backpack->getContainer();
 	if (!backpackContainer) {
+		sendTextMessage(MESSAGE_STATUS_WARNING, "Autoloot failed - main backpack is not considered a container.");
 		return;
 	}
 
 	Item* moveItem = nullptr;
 	const LootCategory_t lootCategoryId = item->getLootCategoryId();
+	if (lootCategoryId == 1) {
+		sendTextMessage(MESSAGE_STATUS_WARNING, fmt::format(
+			"Undefined loot category for {:s} (ID: {:d}). Moving to main backpack. Please lodge a ticket to have this updated.",
+			item->getName(), item->getID()));
+	}
 
 	std::list<Container*> listContainer = { backpackContainer };
 	std::list<Container*> containers;
-	while (listContainer.size() > 0) {
+
+	while (!listContainer.empty()) {
 		Container* container = listContainer.front();
 		listContainer.pop_front();
+
 		for (auto& itItem : container->getItemList()) {
 			Container* tmpContainer = itItem->getContainer();
 			if (tmpContainer) {
 				uint16_t categoryId = tmpContainer->getLootCategory();
-				if (hasBitSet(lootCategoryId, categoryId))
-				{
+
+				// Check if the container matches the loot category
+				if (hasBitSet(lootCategoryId, categoryId)) {
+					// Attempt to move the item
 					if (g_game.internalMoveItem(item->getParent(), tmpContainer, INDEX_WHEREEVER, item, item->getItemCount(), &moveItem, 0) == RETURNVALUE_NOERROR) {
+						// todo: success message with MESSAGE_INFO_DESCR
 						return;
 					}
 				}
@@ -5210,7 +5222,7 @@ void Player::addAutoLootItems(Item* item)
 	}
 
 	if (g_game.internalMoveItem(item->getParent(), backpackContainer, INDEX_WHEREEVER, item, item->getItemCount(), &moveItem, 0) != RETURNVALUE_NOERROR) {
-		sendTextMessage(MESSAGE_STATUS_WARNING, fmt::format("There is not enough space in the backpack assigned to this item and in the main backpack. The {:s} has been left in the corpse.", item->getName()));
+		sendTextMessage(MESSAGE_STATUS_WARNING, fmt::format("No space for {:s} (ID: {:d}). Item left in corpse.",item->getName(), static_cast<uint32_t>(lootCategoryId)));
 	}
 	else {
 		sendTextMessage(MESSAGE_STATUS_WARNING, fmt::format("There is not enough space in the backpack assigned to this item. The {:s} has been send to your main backpack.", item->getName()));
