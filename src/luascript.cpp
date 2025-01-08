@@ -1042,6 +1042,7 @@ void LuaScriptInterface::registerFunctions()
 	lua_register(luaState, "isMovable", LuaScriptInterface::luaIsMoveable);
 
 	//doAddContainerItem(uid, itemid, <optional> count/subtype)
+	lua_register(luaState, "doAddContainerItem", LuaScriptInterface::luaDoAddContainerItem);
 
 	//getDepotId(uid)
 	lua_register(luaState, "getDepotId", LuaScriptInterface::luaGetDepotId);
@@ -3730,6 +3731,71 @@ int LuaScriptInterface::luaIsMoveable(lua_State* L)
 	return 1;
 }
 
+int LuaScriptInterface::luaDoAddContainerItem(lua_State* L)
+{
+	//doAddContainerItem(uid, itemid, <optional> count/subtype)
+	uint32_t uid = getNumber<uint32_t>(L, 1);
+
+	ScriptEnvironment* env = getScriptEnv();
+	Container* container = env->getContainerByUID(uid);
+	if (!container) {
+		reportErrorFunc(L, getErrorDesc(LUA_ERROR_CONTAINER_NOT_FOUND));
+		pushBoolean(L, false);
+		return 1;
+	}
+
+	uint16_t itemId = getNumber<uint16_t>(L, 2);
+	const ItemType& it = Item::items[itemId];
+
+	int32_t itemCount = 1;
+	int32_t subType = 1;
+	uint32_t count = getNumber<uint32_t>(L, 3, 1);
+
+	if (it.hasSubType()) {
+		if (it.stackable) {
+			itemCount = static_cast<int32_t>(std::ceil(static_cast<float>(count) / 100));
+		}
+
+		subType = count;
+	} else {
+		itemCount = std::max<int32_t>(1, count);
+	}
+
+	while (itemCount > 0) {
+		int32_t stackCount = std::min<int32_t>(subType, 100);
+		Item* newItem = Item::CreateItem(itemId, stackCount);
+		if (!newItem) {
+			reportErrorFunc(L, getErrorDesc(LUA_ERROR_ITEM_NOT_FOUND));
+			pushBoolean(L, false);
+			return 1;
+		}
+
+		if (it.stackable) {
+			subType -= stackCount;
+		}
+
+		ReturnValue ret = g_game.internalAddItem(container, newItem);
+		if (ret != RETURNVALUE_NOERROR) {
+			delete newItem;
+			pushBoolean(L, false);
+			return 1;
+		}
+
+		if (--itemCount == 0) {
+			if (newItem->getParent()) {
+				lua_pushnumber(L, env->addThing(newItem));
+			} else {
+				//stackable item stacked with existing object, newItem will be released
+				pushBoolean(L, false);
+			}
+			return 1;
+		}
+	}
+
+	pushBoolean(L, false);
+	return 1;
+}
+
 int LuaScriptInterface::luaGetDepotId(lua_State* L)
 {
 	//getDepotId(uid)
@@ -4235,10 +4301,10 @@ int LuaScriptInterface::luaResultGetStream(lua_State* L)
 		return 1;
 	}
 
-	auto stream = res->getString(getString(L, 2));
-	// const char* stream = res->getStream(getString(L, 2), length);
-	lua_pushlstring(L, stream.data(), stream.size());
-	lua_pushnumber(L, stream.size());
+	unsigned long length;
+	const char* stream = res->getStream(getString(L, 2), length);
+	lua_pushlstring(L, stream, length);
+	lua_pushnumber(L, length);
 	return 2;
 }
 

@@ -871,9 +871,6 @@ class Player final : public Creature, public Cylinder
 				client->sendItems();
 			}
 		}
-		
-		// todo: auto open containers
-		// void autoOpenContainers();
 
 		void sendQuiverUpdate(bool sendAll = false)	{
 			if (!sendAll) {

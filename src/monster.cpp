@@ -2079,21 +2079,6 @@ void Monster::dropLoot(Container* corpse, Creature* mostDamageCreature)
         g_events->eventMonsterOnDropLoot(this, corpse);
         std::list<Container*> containers = { corpse };
 
-        // todo: sets the rarity level of the items inside the container
-        // while (!containers.empty()) {
-        //     Container* container = containers.front();
-        //     containers.pop_front();
-        //     for (Item* item : container->getItemList()) {
-        //         Container* subContainer = item->getContainer();
-        //         if (subContainer) {
-        //             containers.push_back(subContainer);
-        //         }
-        //         else {
-        //             item->c(corpse->getPosition(), true);
-        //         }
-        //     }
-        // }
-
         Player* mostDamagePlayer = nullptr;
         if (mostDamageCreature) {
             mostDamagePlayer = mostDamageCreature->getPlayer();

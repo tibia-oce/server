@@ -140,6 +140,13 @@ class NetworkMessage
 			info.position = 2;
 			return buffer + HEADER_LENGTH;
 		}
+		uint8_t peekByte() const {
+			if ((info.position) >= (info.length + INITIAL_BUFFER_POSITION)) {
+				return 0;
+			}
+			return buffer[info.position];
+		}
+
 
 	protected:
 		struct NetworkMessageInfo {

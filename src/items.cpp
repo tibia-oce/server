@@ -1687,7 +1687,7 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 					break;
 				}
 				case ITEM_PARSE_LOOTTYPE: {
-					tmpStrValue = asLowerCaseString(valueAttribute.as_string());					
+					tmpStrValue = asLowerCaseString(valueAttribute.as_string());
 					if (tmpStrValue == "coins") {
 						it.lootType = LOOT_CATEGORY_GOLD;
 					}

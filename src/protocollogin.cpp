@@ -121,7 +121,7 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	}
 
 	msg.skipBytes(2); // client OS
-
+	
 	uint16_t version = msg.get<uint16_t>();
 	if (version >= 971) {
 		msg.skipBytes(17);
@@ -152,16 +152,6 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	key[3] = msg.get<uint32_t>();
 	enableXTEAEncryption();
 	setXTEAKey(std::move(key));
-
-	// todo: 0x60 ?
-	// uint8_t var = msg.getByte();
-	// if (var == 1) {
-	// 	auto output = OutputMessagePool::getOutputMessage();
-	// 	output->addByte(0x60);
-	// 	send(output);
-	// 	disconnect();
-	// 	return;
-	// }
 
 	if (version < CLIENT_VERSION_MIN || version > CLIENT_VERSION_MAX) {
 		disconnectClient(fmt::format("Only clients with protocol {:s} allowed!", CLIENT_VERSION_STR), version);
@@ -194,10 +184,10 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	}
 
 	auto accountName = msg.getString();
-	if (accountName.empty()) {
-		disconnectClient("Invalid account name.", version);
-		return;
-	}
+    if (accountName.empty()) {
+        disconnectClient("Invalid account name.", version);
+        return;
+    }
 
 	auto password = msg.getString();
 	if (password.empty()) {

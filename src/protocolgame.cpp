@@ -201,9 +201,6 @@ void ProtocolGame::login(uint32_t characterId, uint32_t accountId, OperatingSyst
 			}
 		}
 
-		// todo: auto open containers
-		// player->autoOpenContainers();
-
 		if (operatingSystem >= CLIENTOS_OTCLIENT_LINUX) {
 			player->registerCreatureEvent("ExtendedOpcode");
 		}
@@ -258,9 +255,6 @@ void ProtocolGame::connect(uint32_t playerId, OperatingSystem_t operatingSystem)
 
 	player->client = getThis();
 	sendAddCreature(player, player->getPosition(), 0);
-
-	// todo: auto open containers
-	// player->autoOpenContainers();
 
 	player->lastIP = player->getIP();
 	player->lastLoginSaved = std::max<time_t>(time(nullptr), player->lastLoginSaved + 1);
@@ -565,22 +559,25 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 		case 0xF7: parseMarketCancelOffer(msg); break;
 		case 0xF8: parseMarketAcceptOffer(msg); break;
 		case 0xF9: parseModalWindowAnswer(msg); break;
-
-		// Autoloot
 		case 0x60: parseUpdateAutoLoot(msg); break;
 		case 0x5E: parseRemoveLootCategory(msg); break;
 		case 0x5F: parseAddLootCategory(msg); break;
 
-		default:
-			// std::cout << "Player: " << player->getName() << " sent an unknown packet header: 0x" << std::hex << static_cast<uint16_t>(recvbyte) << std::dec << "!" << std::endl;
+		default: {
+			const auto opcode = static_cast<uint16_t>(recvbyte);
+			std::cerr << "[Warning - ProtocolGame::parsePacket] Unknown opcode: 0x"
+					<< std::hex << std::uppercase << std::setw(2) << std::setfill('0') << opcode
+					<< std::dec << std::endl;
 			break;
+		}
 	}
 
 	if (msg.isOverrun()) {
+		std::cerr << "[Error - ProtocolGame::parsePacket] Buffer overrun detected" << std::endl;
 		disconnect();
 	}
 }
-
+ 
 void ProtocolGame::GetTileDescription(const Tile* tile, NetworkMessage& msg)
 {
 	msg.add<uint16_t>(0x00); //environmental effects
@@ -1407,7 +1404,7 @@ void ProtocolGame::sendStats()
 void ProtocolGame::sendBasicData()
 {
 	NetworkMessage msg;
-	// msg.addByte(0x9F);
+	msg.addByte(0x9F);
 	if (player->isPremium()) {
 		msg.addByte(1);
 		msg.add<uint32_t>(g_config.getBoolean(ConfigManager::FREE_PREMIUM) ? 0 : player->premiumEndsAt);
@@ -3241,7 +3238,6 @@ void ProtocolGame::parseUpdateAutoLoot(NetworkMessage& msg)
     std::string name = std::string(msg.getString()); 
     bool remove = msg.getByte() == 1;
     uint32_t playerId = player->getID();
-
     addGameTask([playerId, spriteId, name, remove]() { g_game.playerUpdateAutoLoot(playerId, spriteId, name, remove); });
 }
 
