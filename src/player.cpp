@@ -5185,7 +5185,6 @@ void Player::addAutoLootItems(Item* item)
 
 			// Check if the container matches the loot category
 			if (hasBitSet(lootCategoryId, nestedContainer->getLootCategory())) {
-				// Attempt to move the item
 				if (g_game.internalMoveItem(item->getParent(), nestedContainer, INDEX_WHEREEVER, item, item->getItemCount(), &moveItem, 0) == RETURNVALUE_NOERROR) {
 					return;
 				}

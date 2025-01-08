@@ -460,7 +460,6 @@ class Game
 		void setGameState(GameState_t newState);
 		void saveGameState();
 
-		// Autoloot categories
 		void updateContainer(Player* player, Item* item);
 		Item* getItemBySpriteId(Player* player, const Position& pos, int16_t stackpos, const uint16_t spriteId, stackPosType_t stackposType);
 		bool playerRemoveLootCategory(uint32_t playerId, const Position& pos, uint16_t spriteId, int16_t stackpos);

@@ -255,7 +255,6 @@ void ProtocolGame::connect(uint32_t playerId, OperatingSystem_t operatingSystem)
 
 	player->client = getThis();
 	sendAddCreature(player, player->getPosition(), 0);
-
 	player->lastIP = player->getIP();
 	player->lastLoginSaved = std::max<time_t>(time(nullptr), player->lastLoginSaved + 1);
 	player->resetIdleTime();
@@ -563,11 +562,8 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 		case 0x5E: parseRemoveLootCategory(msg); break;
 		case 0x5F: parseAddLootCategory(msg); break;
 
-		default: {
-			const auto opcode = static_cast<uint16_t>(recvbyte);
-			std::cerr << "[Warning - ProtocolGame::parsePacket] Unknown opcode: 0x"
-					<< std::hex << std::uppercase << std::setw(2) << std::setfill('0') << opcode
-					<< std::dec << std::endl;
+		default:
+			// std::cout << "Player: " << player->getName() << " sent an unknown packet header: 0x" << std::hex << static_cast<uint16_t>(recvbyte) << std::dec << "!" << std::endl;
 			break;
 		}
 	}
