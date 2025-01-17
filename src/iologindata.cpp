@@ -625,7 +625,8 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 	player->updateItemsLight(true);
 	return true;
 }
-bool IOLoginData::saveItems(const Player* player, const ItemBlockList& itemList, DBInsert& query_insert, PropWriteStream& propWriteStream)
+
+bool IOLoginData::saveItems(const Player* player, const ItemBlockList& itemList, DBInsert& query_insert, PropWriteStream& propWriteStream, std::map<Container*, int>& openContainers)
 {
 	using ContainerBlock = std::pair<Container*, int32_t>;
 	std::list<ContainerBlock> queue;
@@ -638,6 +639,10 @@ bool IOLoginData::saveItems(const Player* player, const ItemBlockList& itemList,
 		int32_t pid = it.first;
 		Item* item = it.second;
 		++runningId;
+
+		if (Container* container = item->getContainer()) {
+			queue.emplace_back(container, runningId);
+		}
 
 		propWriteStream.clear();
 		item->serializeAttr(propWriteStream);
@@ -658,10 +663,6 @@ bool IOLoginData::saveItems(const Player* player, const ItemBlockList& itemList,
 			db.escapeString(attributesData),
 			db.escapeString(augmentsData)))) {
 			return false;
-		}
-
-		if (Container* container = item->getContainer()) {
-			queue.emplace_back(container, runningId);
 		}
 	}
 
@@ -705,70 +706,6 @@ bool IOLoginData::saveItems(const Player* player, const ItemBlockList& itemList,
 	return query_insert.execute();
 }
 
-bool IOLoginData::addRewardItems(uint32_t playerId, const ItemBlockList& itemList, DBInsert& query_insert, PropWriteStream& propWriteStream)
-{
-	using ContainerBlock = std::pair<Container*, int32_t>;
-	std::list<ContainerBlock> queue;
-
-	Database& db = Database::getInstance();
-
-	DBResult_ptr result = db.storeQuery(fmt::format("SELECT MAX(pid) as max_pid FROM `player_rewarditems` WHERE `player_id` = {:d}", playerId));
-	int32_t runningId = 1;
-	int32_t pidCounter = 1;
-
-	if (result) {
-		int32_t maxPid = result->getNumber<int32_t>("max_pid");
-
-		if (maxPid > 0) {
-			pidCounter = maxPid + 1; 
-		}
-	}
-
-	int32_t parentPid = pidCounter;
-
-	for (const auto& it : itemList) {
-		Item* item = it.second;
-
-		propWriteStream.clear();
-		item->serializeAttr(propWriteStream);
-
-		if (!query_insert.addRow(fmt::format("{:d}, {:d}, {:d}, {:d}, {:d}, {:s}", playerId, parentPid, runningId, item->getID(), item->getSubType(), db.escapeString(propWriteStream.getStream())))) {
-			return false;
-		}
-
-		if (Container* container = item->getContainer()) {
-			queue.emplace_back(container, runningId);
-		}
-
-		++runningId; // Always increment SID upwards
-	}
-
-	while (!queue.empty()) {
-		const ContainerBlock& cb = queue.front();
-		Container* container = cb.first;
-		int32_t parentId = cb.second;
-		queue.pop_front();
-
-		for (Item* item : container->getItemList()) {
-			propWriteStream.clear();
-			item->serializeAttr(propWriteStream);
-
-			if (!query_insert.addRow(fmt::format("{:d}, {:d}, {:d}, {:d}, {:d}, {:s}", playerId, parentId, runningId, item->getID(), item->getSubType(), db.escapeString(propWriteStream.getStream())))) {
-				return false;
-			}
-
-			Container* subContainer = item->getContainer();
-			if (subContainer) {
-				queue.emplace_back(subContainer, runningId);
-			}
-
-			++runningId; // Always increment SID upwards
-		}
-	}
-	return query_insert.execute();
-}
-
-
 bool IOLoginData::saveAugments(const Player* player, DBInsert& query_insert, PropWriteStream& augmentStream) {
 	Database& db = Database::getInstance();
 	auto& augments = player->getPlayerAugments();
@@ -802,8 +739,6 @@ bool IOLoginData::saveAugments(const Player* player, DBInsert& query_insert, Pro
 
 	return query_insert.execute();
 }
-
-
 
 bool IOLoginData::addRewardItems(uint32_t playerID, const ItemBlockList& itemList, DBInsert& query_insert, PropWriteStream& propWriteStream)
 {
@@ -877,7 +812,6 @@ bool IOLoginData::addRewardItems(uint32_t playerID, const ItemBlockList& itemLis
 
 	return query_insert.execute();
 }
-
 
 bool IOLoginData::savePlayer(Player* player)
 {

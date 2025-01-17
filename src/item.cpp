@@ -662,44 +662,6 @@ Attr_ReadValue Item::readAttr(AttrTypes_t attr, PropStream& propStream)
 			break;
 		}
 
-		case ATTR_REFLECT: {
-			uint16_t size;
-			if (!propStream.read<uint16_t>(size)) {
-				return ATTR_READ_ERROR;
-			}
-
-			for (uint16_t i = 0; i < size; ++i) {
-				CombatType_t combatType;
-				Reflect reflect;
-
-				if (!propStream.read<CombatType_t>(combatType) || !propStream.read<uint16_t>(reflect.percent) || !propStream.read<uint16_t>(reflect.chance)) {
-					return ATTR_READ_ERROR;
-				}
-
-				getAttributes()->reflect[combatType] = reflect;
-			}
-			break;
-		}
-
-		case ATTR_BOOST: {
-			uint16_t size;
-			if (!propStream.read<uint16_t>(size)) {
-				return ATTR_READ_ERROR;
-			}
-
-			for (uint16_t i = 0; i < size; ++i) {
-				CombatType_t combatType;
-				uint16_t percent;
-
-				if (!propStream.read<CombatType_t>(combatType) || !propStream.read<uint16_t>(percent)) {
-					return ATTR_READ_ERROR;
-				}
-
-				getAttributes()->boostPercent[combatType] = percent;
-			}
-			break;
-		}
-
 		//12+ compatibility
 		case ATTR_OPENCONTAINER:
 		case ATTR_PODIUMOUTFIT: {
