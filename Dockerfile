@@ -19,13 +19,15 @@ RUN /bts/vcpkg/vcpkg install
 # Stage 2: Install Premake after vcpkg is ready
 FROM dependencies AS premake
 RUN cd /bts && \
-    wget --no-netrc -q \
-        -O premake.tar.gz \
-        "https://github.com/premake/premake-core/releases/download/v5.0.0-beta4/premake-5.0.0-beta4-linux.tar.gz" && \
-    tar -xzf premake.tar.gz && \
-    rm premake.tar.gz && \
-    mv premake5 /usr/local/bin/ && \
-    chmod +x /usr/local/bin/premake5
+    git clone https://github.com/premake/premake-core.git && \
+    cd premake-core && \
+    git checkout v5.0.0-beta2 && \
+    make -f Bootstrap.mak linux && \
+    mv bin/release/premake5 /usr/local/bin/ && \
+    chmod +x /usr/local/bin/premake5 && \
+    cd .. && \
+    rm -rf premake-core
+
 
 # Stage 3: Build the project with Premake and vcpkg
 FROM premake AS build
@@ -33,7 +35,7 @@ ARG RELEASE_ARCH=release_arm64
 WORKDIR /usr/src/bts
 COPY premake5.lua /usr/src/bts/
 COPY src /usr/src/bts/src/
-RUN premake5 gmake2 && make -j$(nproc) config=${RELEASE_ARCH}
+RUN premake5 gmake2 && make -j1 config=${RELEASE_ARCH}
 
 
 # Stage 4: Create the final image

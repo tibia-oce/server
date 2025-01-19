@@ -22,81 +22,31 @@ function gameStoreInitialize()
 
     -- Items
     offers.addCategory(GAME_STORE, "Items", "Tools, Dolls & Boxes.", "item", 2331)
-    offers.addItem(GAME_STORE, "Items", "VIP Medal (30 days)",
-        "Earn 10% more exp, Access To Gambling\nAnd Gold Dump(Obtainable ingame)", 10135, 1, 200)
     offers.addItem(GAME_STORE, "Items", "Outfit Doll", "Use this to obtain one outfit with full Addons.", 8982, 1, 300)
     offers.addItem(GAME_STORE, "Items", "Gender Doll", "Can be used to change your gender.", 13581, 1, 200)
     offers.addItem(GAME_STORE, "Items", "Name Doll", "Can be used to change your name.", 12666, 1, 400)
-    offers.addItem(GAME_STORE, "Items", "Frag Remover", "Use this to remove your frags & Red/Black Skull.", 16105, 1,
-        500)
+    offers.addItem(GAME_STORE, "Items", "Frag Remover", "Use this to remove your frags & Red/Black Skull.", 16105, 1, 500)
     offers.addItem(GAME_STORE, "Items", "Stamina Refiller", "Can be used to fully recharge your stamina.", 21705, 1, 400)
     offers.addItem(GAME_STORE, "Items", "Squeezing Gear of Girlpower", "Multitool", 10513, 1, 200)
 
     -- Mounts
     offers.addCategory(GAME_STORE, "Mounts", "Giddy up", "mount", 426)
-    offers.addMount(GAME_STORE, "Mounts", "Blackpelt", "Wont be taking any damage with that armor..", 58, 651, 400)
-    offers.addMount(GAME_STORE, "Mounts", "Doombringer", "Shall curse your enemies with doom.", 53, 644, 350)
-    offers.addMount(GAME_STORE, "Mounts", "Walker", "Mechanical experiment.", 43, 606, 300)
-    offers.addMount(GAME_STORE, "Mounts", "Ladybug", "Lets out a mighty roar.", 27, 447, 300)
+	offers.addMount(GAME_STORE, "Mounts", "Neon Sparkid", "Luminescent shining moth.", 98, 889, 400)
+	offers.addMount(GAME_STORE, "Mounts", "Blackpelt", "Wont be taking any damage with that armor..", 58, 651, 400)
+	offers.addMount(GAME_STORE, "Mounts", "Doombringer", "Shall curse your enemies with doom.", 53, 644, 350)
+	offers.addMount(GAME_STORE, "Mounts", "Walker", "Mechanical experiment.", 43, 606, 300)
+	offers.addMount(GAME_STORE, "Mounts", "Ladybug", "Lets out a mighty roar.", 27, 447, 300)
 
     -- Equipment
-    offers.addCategory(GAME_STORE, "Equipment", "Beginner Item Sets.", "item", 2331)
-    offers.addItem(GAME_STORE, "Equipment", "Dwarven Legs", "", 2504, 1, 5)
-    offers.addItem(GAME_STORE, "Equipment", "Mastermind Shield", "", 2514, 1, 5)
-    offers.addItem(GAME_STORE, "Equipment", "Boots of Haste", "", 2195, 1, 5)
-    offers.addItem(GAME_STORE, "Equipment", "Demon Helmet", "", 2493, 1, 5)
-    offers.addItem(GAME_STORE, "Equipment", "Demon Armour", "", 2494, 1, 5)
-
-    offers.addItem(GAME_STORE, "Equipment", "Mage Starter Box", "Contains a full mage beginner set.", 29223, 1, 500)
-    offers.addItem(GAME_STORE, "Equipment", "Paladin Starter Box", "Contains a full paladin beginner set.", 29224, 1,
-        500)
-    offers.addItem(GAME_STORE, "Equipment", "Knight Starter Box", "Contains a full knight beginner set.", 29227, 1, 500)
+    offers.addCategory(GAME_STORE, "Equipment", "Item Sets", "item", 2331)
+    offers.addItem(GAME_STORE, "Equipment", "Mage Starter Box", "Contains a full mage beginner set.", 28129, 1, 500)
+    offers.addItem(GAME_STORE, "Equipment", "Paladin Starter Box", "Contains a full paladin beginner set.", 28128, 1, 500)
+    offers.addItem(GAME_STORE, "Equipment", "Knight Starter Box", "Contains a full knight beginner set.", 28130, 1, 500)
 
     -- Outfits
-    offers.addCategory(GAME_STORE, "Outfits", "Contains all addons.", "outfit", {
-        mount = 0,
-        type = 577,
-        addons = 3,
-        head = 9,
-        body = 126,
-        legs = 124,
-        feet = 116
-    })
-    offers.addOutfit(GAME_STORE, "Outfits", "Dream Warden Outfit", "Dream Warden", {
-        mount = 0,
-        type = 577,
-        addons = 3,
-        head = 9,
-        body = 126,
-        legs = 124,
-        feet = 116
-    }, {
-        mount = 0,
-        type = 578,
-        addons = 3,
-        head = 9,
-        body = 126,
-        legs = 124,
-        feet = 116
-    }, 400)
-
-    offers.addOutfit(GAME_STORE, "Outfits", "Beggar Outfit", "Beggar", {
-        mount = 0,
-        type = 153,
-        addons = 3,
-        head = 9,
-        body = 126,
-        legs = 124,
-        feet = 116
-    }, {
-        mount = 0,
-        type = 157,
-        addons = 3,
-        head = 9,
-        body = 126,
-        legs = 124,
-        feet = 116
-    }, 400)
+    offers.addCategory(GAME_STORE, "Outfits", "Contains all addons.", "outfit", { mount = 0, type = 577, addons = 3, head = 9, body = 126, legs = 124, feet = 116 })
+    offers.addOutfit(GAME_STORE, "Outfits", "Beggar Outfit", "Beggar", {mount = 0, type = 153, addons = 3, head = 9, body = 126, legs = 124, feet = 116}, {mount = 0, type = 157, addons = 3, head = 9, body = 126, legs = 124, feet = 116}, 400)
+    offers.addOutfit(GAME_STORE, "Outfits", "Dream Warden Outfit", "Dream Warden", {mount = 0, type = 577, addons = 3, head = 9, body = 126, legs = 124, feet = 116}, {mount = 0, type = 578, addons = 3, head = 9, body = 126, legs = 124, feet = 116}, 400)
 end
 
 function ExtendedEvent.onExtendedOpcode(player, opcode, buffer)

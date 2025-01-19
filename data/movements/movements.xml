@@ -1431,4 +1431,17 @@
 	</movevent>
 	<movevent event="DeEquip" itemid="12425" slot="shield" function="onDeEquipItem" />
 
+	<!-- Kits -->
+	<movevent event="Equip" itemid="28131" slot="hand" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="28131" slot="hand" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="28136" slot="shield" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="28136" slot="shield" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="28132" slot="hand" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="28132" slot="hand" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="28133" slot="shield" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="28133" slot="shield" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="28134" slot="hand" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="28134" slot="hand" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="28135" slot="shield" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="28135" slot="shield" function="onDeEquipItem" />
 </movements>

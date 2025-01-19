@@ -41,5 +41,6 @@ function onLogin(player)
 	player:registerEvent("PlayerDeath")
 	player:registerEvent("DropLoot")
 	player:registerEvent("Shop")
+	player:registerEvent("ExtendedOpcode")
 	return true
 end
