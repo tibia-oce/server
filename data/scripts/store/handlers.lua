@@ -1,5 +1,3 @@
--- data/scripts/store/handlers.lua
-
 local repository = require("data/scripts/store/repository")
 local events = require("data/scripts/store/events")
 

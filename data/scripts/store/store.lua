@@ -47,10 +47,10 @@ function gameStoreInitialize()
     offers.addItem(GAME_STORE, "Equipment", "Demon Helmet", "", 2493, 1, 5)
     offers.addItem(GAME_STORE, "Equipment", "Demon Armour", "", 2494, 1, 5)
 
-    offers.addItem(GAME_STORE, "Equipment", "Mage Starter Box", "Contains a full mage beginner set.", 29223, 1, 500)
-    offers.addItem(GAME_STORE, "Equipment", "Paladin Starter Box", "Contains a full paladin beginner set.", 29224, 1,
+    offers.addItem(GAME_STORE, "Equipment", "Mage Starter Box", "Contains a full mage beginner set.", 28129, 1, 500)
+    offers.addItem(GAME_STORE, "Equipment", "Paladin Starter Box", "Contains a full paladin beginner set.", 28128, 1,
         500)
-    offers.addItem(GAME_STORE, "Equipment", "Knight Starter Box", "Contains a full knight beginner set.", 29227, 1, 500)
+    offers.addItem(GAME_STORE, "Equipment", "Knight Starter Box", "Contains a full knight beginner set.", 28130, 1, 500)
 
     -- Outfits
     offers.addCategory(GAME_STORE, "Outfits", "Contains all addons.", "outfit", {
