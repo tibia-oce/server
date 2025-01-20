@@ -1,5 +1,3 @@
--- data/scripts/store/offers.lua
-
 local callbacks = require("data/scripts/store/callbacks")
 local offers = {}
 

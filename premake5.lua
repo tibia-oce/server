@@ -1,27 +1,26 @@
 workspace "Black-Tek-Server"
-   configurations { "Debug", "Release"}
+   configurations { "Debug", "Release" }
    platforms { "64", "ARM64", "ARM" }
    location ""
    editorintegration "On"
 
-   project        "Black-Tek-Server"
-      kind        "ConsoleApp"
-      language    "C++"
-      cppdialect  "C++20"
-      targetdir   "%{wks.location}"
-      objdir      "build/%{cfg.buildcfg}/obj"
-      location    ""
+   project "Black-Tek-Server"
+      kind "ConsoleApp"
+      language "C++"
+      cppdialect "C++20"
+      targetdir "%{wks.location}"
+      objdir "build/%{cfg.buildcfg}/obj"
+      location ""
       files { "src/**.cpp", "src/**.h" }
-      flags {"MultiProcessorCompile"}
-      enableunitybuild "On"
-      intrinsics   "On"
+      flags { "MultiProcessorCompile" }
+      intrinsics "On"
       editandcontinue "Off"
 
       newoption {
          trigger     = "lua",
-         description = "Specific Lua library to use. For example lua5.4. Useful if the packaged lua does not provide a symbolic liblua.so",
+         description = "Specific Lua library to use. For example lua5.4.",
          value       = "libname",
-         category    = "BlackTek", -- Group options together
+         category    = "BlackTek",
          default     = "lua",
          allowed     = {
             {"lua", "Default"},
@@ -34,20 +33,20 @@ workspace "Black-Tek-Server"
          trigger     = "custom-includes",
          description = "A comma separated list of custom include paths.",
          value       = "include paths",
-         category    = "BlackTek", -- Group options together
+         category    = "BlackTek",
       }
 
       newoption {
          trigger     = "custom-libs",
          description = "A comma separated list of custom library paths.",
          value       = "library paths",
-         category    = "BlackTek", -- Group options together
+         category    = "BlackTek",
       }
 
       newoption {
          trigger     = "verbose",
          description = "Show warnings during compilation.",
-         category    = "BlackTek" -- Group options together
+         category    = "BlackTek"
       }
 
       if _OPTIONS["custom-includes"] then
@@ -58,21 +57,24 @@ workspace "Black-Tek-Server"
          libdirs { string.explode(_OPTIONS["custom-libs"], ",") }
       end
 
+      -- Debug configuration
       filter "configurations:Debug"
          defines { "DEBUG" }
          runtime "Debug"
          symbols "On"
          optimize "Debug"
-         flags {"NoIncrementalLink"}
+         flags { "NoIncrementalLink" }
       filter {}
 
+      -- Release configuration
       filter "configurations:Release"
          defines { "NDEBUG" }
          runtime "Release"
          symbols "Off"
-         optimize "Full"
+         optimize "Size"
       filter {}
 
+      -- Platform specific settings
       filter "platforms:64"
          architecture "x86_64"
       filter {}
@@ -85,26 +87,37 @@ workspace "Black-Tek-Server"
          architecture "ARM"
       filter {}
 
+      -- System specific settings
       filter "system:not windows"
-         buildoptions { "-Wall", "-Wextra", "-pedantic", "-pipe", "-fvisibility=hidden", "-Wno-unused-local-typedefs" }
-         linkoptions{"-flto=auto"}
-         flags {}
+         buildoptions { 
+            "-Wall", 
+            "-Wextra", 
+            "-pedantic", 
+            "-pipe", 
+            "-fvisibility=hidden", 
+            "-Wno-unused-local-typedefs",
+            "-Wno-unused-parameter",
+            "-Wno-ignored-qualifiers",
+            "-Wno-unused-function",
+            "-Wno-maybe-uninitialized"
+         }
+         linkoptions { "-flto=thin" }
       filter {}
 
       filter "system:windows"
          openmp "On"
          characterset "MBCS"
-         linkoptions {"/IGNORE:4099"}
-         buildoptions {"/bigobj"}
-         vsprops { VcpkgEnableManifest = "true" }
+         linkoptions { "/IGNORE:4099" }
+         buildoptions { "/bigobj" }
          symbolspath '$(OutDir)$(TargetName).pdb'
       filter {}
 
       filter "architecture:amd64"
-	     vectorextensions "AVX"
-      filter{}
+         vectorextensions "AVX"
+      filter {}
 
-      filter {"system:linux", "options:verbose"}
+      -- Linux specific settings
+      filter { "system:linux", "options:verbose" }
          linkoptions { "-v" }
          warnings "Extra"
       filter {}
@@ -113,31 +126,60 @@ workspace "Black-Tek-Server"
          warnings "Off"
       filter {}
 
+      -- ARM specific paths
       filter { "system:linux", "architecture:ARM" }
-         -- Paths to vcpkg installed dependencies
-         libdirs { "vcpkg_installed/arm-linux/lib", "/usr/arm-linux-gnueabihf" }
-         includedirs { "vcpkg_installed/arm-linux/include", "/usr/arm-linux-gnueabihf" }
-      filter{}
+         libdirs { 
+            "vcpkg_installed/arm-linux/lib",
+            "/usr/arm-linux-gnueabihf"
+         }
+         includedirs { 
+            "vcpkg_installed/arm-linux/include",
+            "/usr/arm-linux-gnueabihf"
+         }
+      filter {}
 
       filter { "system:linux", "architecture:ARM64" }
-         -- Paths to vcpkg installed dependencies
-         libdirs { "vcpkg_installed/arm64-linux/lib", "/usr/arm-linux-gnueabi" }
-         includedirs { "vcpkg_installed/arm64-linux/include", "/usr/arm-linux-gnueabi" }
-      filter{}
+         libdirs { 
+            "vcpkg_installed/arm64-linux/lib",
+            "/usr/arm-linux-gnueabi"
+         }
+         includedirs { 
+            "vcpkg_installed/arm64-linux/include",
+            "/usr/arm-linux-gnueabi"
+         }
+         buildoptions {
+            "--param ggc-min-expand=10",
+            "--param ggc-min-heapsize=8192",
+            "-g0"
+         }
+         linkoptions { "-Wl,--gc-sections" }
+      filter {}
 
       filter { "system:linux", "architecture:amd64" }
-         -- Paths to vcpkg installed dependencies
          libdirs { "vcpkg_installed/x64-linux/lib" }
          includedirs { "vcpkg_installed/x64-linux/include" }
-      filter{}
+      filter {}
 
+      -- Common Linux settings
       filter "system:linux"
-         -- Common Linux paths
          libdirs { "/usr/lib" }
          includedirs { "/usr/include", "/usr/include/lua5.*" }
-         links { "pugixml", _OPTIONS["lua"], "fmt", "mariadb", "cryptopp", "boost_iostreams", "zstd", "z", "curl", "ssl", "crypto" }
-      filter{}
+         links { 
+            "pugixml",
+            _OPTIONS["lua"],
+            "fmt",
+            "mariadb",
+            "cryptopp",
+            "boost_iostreams",
+            "zstd",
+            "z",
+            "curl",
+            "ssl",
+            "crypto"
+         }
+      filter {}
 
+      -- Compiler specific settings
       filter "toolset:gcc"
          buildoptions { "-fno-strict-aliasing" }
       filter {}
@@ -147,5 +189,5 @@ workspace "Black-Tek-Server"
       filter {}
 
       filter { "system:macosx", "action:gmake" }
-         buildoptions { "-fvisibility=hidden" }   
+         buildoptions { "-fvisibility=hidden" }
       filter {}

@@ -5,10 +5,10 @@ local RewardType = {
     Gold = 4,
     Item = 5,
     Storage = 6,
-    Teleport = 7,
-  }
-  
-  local Config = {
+    Teleport = 7
+}
+
+local Config = {
     TasksOpCode = 92,
     StoragePoints = 87613,
     StorageSlot = 87614, -- 87615 - 87625 reserved (10)
@@ -39,27 +39,20 @@ local RewardType = {
     ]]
     GoldIncrease = 15,
     Party = {
-      Enabled = true, -- should party members share kills
-      Range = 8 -- party members in this range (tiles) will have task kill added, 0 to make it infinite range
+        Enabled = true, -- should party members share kills
+        Range = 8 -- party members in this range (tiles) will have task kill added, 0 to make it infinite range
     },
     Ranks = {
-      [40] = "Rookie",
-      [100] = "Bronze",
-      [250] = "Silver",
-      [470] = "Gold",
-      [770] = "Platinum",
-      [1220] = "Diamond",
-      [1820] = "Ancestral",
-      [2820] = "Mystic",
-      [4320] = "Abyssal",
-      [6320] = "Ascending",
-      [9999] = "Chaos",
-      [10000] = "Awakening"
-  
-  
+        [40] = "Iron",
+        [100] = "Bronze",
+        [250] = "Silver",
+        [470] = "Gold",
+        [770] = "Platinum",
+        [1220] = "Diamond",
+
     },
     Tasks = {
-      --[[
+        --[[
         {
           RaceName = "Trolls", -- Name of the task
           Level = 8, -- Recommended level for this task (see RecommendedLevelRange)
@@ -74,442 +67,580 @@ local RewardType = {
           }
         },
       ]]
-      {
-        RaceName = "Rotworms",
-        Level = 8,
-        Monsters = {"Rotworm", "Carrion Worm", "Rotworm Queen"},
-        Rewards = {
-          {Type = RewardType.Points, BaseValue = 1},
-          {Type = RewardType.Ranking, BaseValue = 2},
-          {Type = RewardType.Experience, BaseValue = 80000},
-          {Type = RewardType.Gold, BaseValue = 500},
-          -- {Type = RewardType.Teleport, Position = Position(191, 279, 7), Description = "Rotworm boss fight"}
+        {
+            RaceName = "Rotworms",
+            Level = 8,
+            Monsters = {"Rotworm", "Carrion Worm", "Rotworm Queen"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 1},
+                {Type = RewardType.Ranking, BaseValue = 2},
+                {Type = RewardType.Experience, BaseValue = 80000},
+                {Type = RewardType.Gold, BaseValue = 500}
+                -- {Type = RewardType.Item, Id = 8855, Amount = 1}, 
+            }
+        }, {
+            RaceName = "Tarantulas",
+            Level = 8,
+            Monsters = {"Tarantula"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 1},
+                {Type = RewardType.Ranking, BaseValue = 2},
+                {Type = RewardType.Experience, BaseValue = 240000},
+                {Type = RewardType.Gold, BaseValue = 600}
+            }
+        }, {
+            RaceName = "Mutated rat",
+            Level = 50,
+            Monsters = {"Mutated Rat"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 2},
+                {Type = RewardType.Ranking, BaseValue = 3},
+                {Type = RewardType.Experience, BaseValue = 1230000},
+                {Type = RewardType.Gold, BaseValue = 4800}
+            }
+        }, {
+            RaceName = "Ancient Scarabs",
+            Level = 50,
+            Monsters = {"Ancient Scarab"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 2},
+                {Type = RewardType.Ranking, BaseValue = 3},
+                {Type = RewardType.Experience, BaseValue = 1440000},
+                {Type = RewardType.Gold, BaseValue = 8000}
+            }
+        }, {
+            RaceName = "Bonebeasts",
+            Level = 50,
+            Monsters = {"Bonebeast"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 2},
+                {Type = RewardType.Ranking, BaseValue = 3},
+                {Type = RewardType.Experience, BaseValue = 1160000},
+                {Type = RewardType.Gold, BaseValue = 4500}
+            }
+        }, {
+            RaceName = "Underwater Quara",
+            Level = 50,
+            Monsters = {
+                "Quara Hydromancer", "Quara Predator", "Quara Constrictor",
+                "Quara Mantassin", "Quara Pincher"
+            },
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 2},
+                {Type = RewardType.Ranking, BaseValue = 4},
+                {Type = RewardType.Experience, BaseValue = 1600000},
+                {Type = RewardType.Gold, BaseValue = 8000}
+            }
+        }, {
+            RaceName = "Giant Spiders",
+            Level = 80,
+            Monsters = {"Giant Spider"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 3},
+                {Type = RewardType.Ranking, BaseValue = 4},
+                {Type = RewardType.Experience, BaseValue = 1800000},
+                {Type = RewardType.Gold, BaseValue = 12500}
+            }
+        }, {
+            RaceName = "Werewolves",
+            Level = 80,
+            Monsters = {"Werewolf"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 3},
+                {Type = RewardType.Ranking, BaseValue = 4},
+                {Type = RewardType.Experience, BaseValue = 3800000},
+                {Type = RewardType.Gold, BaseValue = 15000}
+            }
+        }, {
+            RaceName = "Nightmares",
+            Level = 80,
+            Monsters = {"Nightmare", "Nightmare Scion"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 3},
+                {Type = RewardType.Ranking, BaseValue = 4},
+                {Type = RewardType.Experience, BaseValue = 3800000},
+                {Type = RewardType.Gold, BaseValue = 15000}
+            }
+        }, {
+            RaceName = "Dragon Lords",
+            Level = 80,
+            Monsters = {"Dragon Lord"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 3},
+                {Type = RewardType.Ranking, BaseValue = 4},
+                {Type = RewardType.Experience, BaseValue = 4200000},
+                {Type = RewardType.Gold, BaseValue = 25000}
+            }
+        }, {
+            RaceName = "Hellspawns",
+            Level = 80,
+            Monsters = {"Hellspawn"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 3},
+                {Type = RewardType.Ranking, BaseValue = 4},
+                {Type = RewardType.Experience, BaseValue = 5100000},
+                {Type = RewardType.Gold, BaseValue = 25000}
+            }
+        }, {
+            RaceName = "High Class Lizards",
+            Level = 100,
+            Monsters = {
+                "Lizard Chosen", "Lizard Dragon Priest", "Lizard High Guard",
+                "Lizard Legionnaire"
+            },
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 3},
+                {Type = RewardType.Ranking, BaseValue = 5},
+                {Type = RewardType.Experience, BaseValue = 4400000},
+                {Type = RewardType.Gold, BaseValue = 30000}
+            }
+        }, {
+            RaceName = "Wyrms",
+            Level = 100,
+            Monsters = {"Wyrm", "Elder Wyrm"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 3},
+                {Type = RewardType.Ranking, BaseValue = 4},
+                {Type = RewardType.Experience, BaseValue = 4000000},
+                {Type = RewardType.Gold, BaseValue = 30000},
+                {Type = RewardType.Item, Id = 8855, Amount = 1},
+                {Type = RewardType.Item, Id = 7451, Amount = 1}
+            }
         }
-      },
     }
-  }
-  
-  local Cache = {}
-  
-  local StartupEvent = GlobalEvent("TasksStartUp")
-  
-  function StartupEvent.onStartup()
+}
+
+local Cache = {}
+
+local StartupEvent = GlobalEvent("TasksStartUp")
+
+function StartupEvent.onStartup()
     Cache.Ranks = {}
     local ordered = {}
-    for key, _ in pairs(Config.Ranks) do
-      table.insert(ordered, key)
-    end
+    for key, _ in pairs(Config.Ranks) do table.insert(ordered, key) end
     table.sort(ordered)
-    
+
     local to = ordered[1] - 1
-    for k = 0, to do
-      Cache.Ranks[k] = Config.Ranks[ordered[1]]
-    end
-  
+    for k = 0, to do Cache.Ranks[k] = Config.Ranks[ordered[1]] end
+
     for i = 1, #ordered do
-      local from = ordered[i]
-      local to = i == #ordered and ordered[i] or ordered[i + 1] - 1
-      for k = from, to do
-        Cache.Ranks[k] = Config.Ranks[from]
-      end
-      Cache.LastRank = from
+        local from = ordered[i]
+        local to = i == #ordered and ordered[i] or ordered[i + 1] - 1
+        for k = from, to do Cache.Ranks[k] = Config.Ranks[from] end
+        Cache.LastRank = from
     end
-  
+
     Cache.Tasks = {}
     for id, task in ipairs(Config.Tasks) do
-      for _, name in ipairs(task.Monsters) do
-        Cache.Tasks[name] = id
-      end
+        for _, name in ipairs(task.Monsters) do Cache.Tasks[name] = id end
     end
-    
+
     for _, task in ipairs(Config.Tasks) do
-      if not task.Outfits then
-        task.Outfits = {}
-        for _, monster in ipairs(task.Monsters) do
-          local monsterType = MonsterType(monster)
-          if not monsterType then
-            print("[Error] Tasks: Monster " .. monster .. " not found!")
-          else
-            table.insert(task.Outfits, monsterType:getOutfitOTC())
-          end
+        if not task.Outfits then
+            task.Outfits = {}
+            for _, monster in ipairs(task.Monsters) do
+                local monsterType = MonsterType(monster)
+                if not monsterType then
+                    print("[Error] Tasks: Monster " .. monster .. " not found!")
+                else
+                    table.insert(task.Outfits, monsterType:getOutfitOTC())
+                end
+            end
         end
-      end
     end
-  end
-  
-  local LoginEvent = CreatureEvent("TasksLogin")
-  
-  function LoginEvent.onLogin(player)
+end
+
+local LoginEvent = CreatureEvent("TasksLogin")
+
+function LoginEvent.onLogin(player)
     player:registerEvent("TasksExtended")
     player:registerEvent("TasksKill")
     player:sendTasksData()
     return true
-  end
-  
-  local ExtendedEvent = CreatureEvent("TasksExtended")
-  
-  function ExtendedEvent.onExtendedOpcode(player, opcode, buffer)
+end
+
+local ExtendedEvent = CreatureEvent("TasksExtended")
+
+function ExtendedEvent.onExtendedOpcode(player, opcode, buffer)
     if opcode == Config.TasksOpCode then
-      local status, json_data =
-        pcall(
-        function()
-          return json.decode(buffer)
+        local status, json_data = pcall(function()
+            return json.decode(buffer)
+        end)
+        if not status then return false end
+
+        local action = json_data.action
+        local data = json_data.data
+
+        if action == "start" then
+            player:startNewTask(data.taskId, data.kills)
+        elseif action == "cancel" then
+            player:cancelTask(data)
         end
-      )
-      if not status then
-        return false
-      end
-  
-      local action = json_data.action
-      local data = json_data.data
-  
-      if action == "start" then
-        player:startNewTask(data.taskId, data.kills)
-      elseif action == "cancel" then
-        player:cancelTask(data)
-      end
     end
     return true
-  end
-  
-  function Player:openTasksList()
+end
+
+function Player:openTasksList()
     self:sendExtendedOpcode(Config.TasksOpCode, json.encode({action = "open"}))
-  end
-  
-  function Player:closeTasksList()
+end
+
+function Player:closeTasksList()
     self:sendExtendedOpcode(Config.TasksOpCode, json.encode({action = "close"}))
-  end
-  
-  function Player:sendTasksData()
+end
+
+function Player:sendTasksData()
     -- #region Send config
     local config = {
-      kills = Config.RequiredKills,
-      bonus = Config.KillsForBonus,
-      range = Config.RecommendedLevelRange,
-      points = Config.PointsIncrease,
-      exp = Config.ExperienceIncrease,
-      gold = Config.GoldIncrease
+        kills = Config.RequiredKills,
+        bonus = Config.KillsForBonus,
+        range = Config.RecommendedLevelRange,
+        points = Config.PointsIncrease,
+        exp = Config.ExperienceIncrease,
+        gold = Config.GoldIncrease
     }
-    self:sendExtendedOpcode(Config.TasksOpCode, json.encode({action = "config", data = config}))
+    self:sendExtendedOpcode(Config.TasksOpCode,
+                            json.encode({action = "config", data = config}))
     -- #endregion
-  
+
     -- #region Send tasks list
     local tasks = {}
     for _, task in ipairs(Config.Tasks) do
-      local taskData = {
-        name = task.RaceName,
-        lvl = task.Level,
-        mobs = task.Monsters,
-        outfits = task.Outfits,
-        rewards = {}
-      }
-  
-      for _, reward in ipairs(task.Rewards) do
-        if reward.Type == RewardType.Points or reward.Type == RewardType.Experience or reward.Type == RewardType.Gold or reward.Type == RewardType.Ranking  then
-          table.insert(taskData.rewards, {type = reward.Type, value = reward.BaseValue})
-        elseif reward.Type == RewardType.Item then
-          table.insert(taskData.rewards, {type = reward.Type, name = ItemType(reward.Id):getName(), amount = reward.Amount})
-        elseif reward.Type == RewardType.Storage or reward.Type == RewardType.Teleport then
-          table.insert(taskData.rewards, {type = reward.Type, desc = reward.Description})
+        local taskData = {
+            name = task.RaceName,
+            lvl = task.Level,
+            mobs = task.Monsters,
+            outfits = task.Outfits,
+            rewards = {}
+        }
+
+        for _, reward in ipairs(task.Rewards) do
+            if reward.Type == RewardType.Points or reward.Type ==
+                RewardType.Experience or reward.Type == RewardType.Gold or
+                reward.Type == RewardType.Ranking then
+                table.insert(taskData.rewards,
+                             {type = reward.Type, value = reward.BaseValue})
+            elseif reward.Type == RewardType.Item then
+                table.insert(taskData.rewards, {
+                    type = reward.Type,
+                    name = ItemType(reward.Id):getName(),
+                    amount = reward.Amount
+                })
+            elseif reward.Type == RewardType.Storage or reward.Type ==
+                RewardType.Teleport then
+                table.insert(taskData.rewards,
+                             {type = reward.Type, desc = reward.Description})
+            end
         end
-      end
-  
-      table.insert(tasks, taskData)
+
+        table.insert(tasks, taskData)
     end
-  
+
     local buffer = json.encode({action = "tasks", data = tasks})
     local s = {}
-    for i = 1, #buffer, 8191 do
-      s[#s + 1] = buffer:sub(i, i + 8191 - 1)
-    end
+    for i = 1, #buffer, 8191 do s[#s + 1] = buffer:sub(i, i + 8191 - 1) end
     if #s == 1 then
-      self:sendExtendedOpcode(Config.TasksOpCode, buffer)
+        self:sendExtendedOpcode(Config.TasksOpCode, buffer)
     else
-      self:sendExtendedOpcode(Config.TasksOpCode, "S" .. s[1])
-      for i = 2, #s - 1 do
-        self:sendExtendedOpcode(Config.TasksOpCode, "P" .. s[i])
-      end
-      self:sendExtendedOpcode(Config.TasksOpCode, "E" .. s[#s])
+        self:sendExtendedOpcode(Config.TasksOpCode, "S" .. s[1])
+        for i = 2, #s - 1 do
+            self:sendExtendedOpcode(Config.TasksOpCode, "P" .. s[i])
+        end
+        self:sendExtendedOpcode(Config.TasksOpCode, "E" .. s[#s])
     end
     -- #endregion
-  
+
     -- #region Send active tasks
     local active = {}
     for slot = 1, Config.ActiveTasksLimit do
-      local taskId = self:getTaskIdBySlot(slot)
-      if taskId ~= 0 then
-        local requiredKills = self:getTaskRequiredKills(slot)
-        local kills = self:getTaskKills(slot)
-        table.insert(
-          active,
-          {
-            kills = kills,
-            required = requiredKills,
-            slot = slot,
-            taskId = taskId
-          }
-        )
-      end
+        local taskId = self:getTaskIdBySlot(slot)
+        if taskId ~= 0 then
+            local requiredKills = self:getTaskRequiredKills(slot)
+            local kills = self:getTaskKills(slot)
+            table.insert(active, {
+                kills = kills,
+                required = requiredKills,
+                slot = slot,
+                taskId = taskId
+            })
+        end
     end
-    self:sendExtendedOpcode(Config.TasksOpCode, json.encode({action = "active", data = active}))
+    self:sendExtendedOpcode(Config.TasksOpCode,
+                            json.encode({action = "active", data = active}))
     -- #endregion
-  
+
     self:sendTasksPointsUpdate()
     self:sendTasksRankingUpdate()
-  end
-  
-  function Player:sendTaskUpdate(taskId)
-    local update = {}
-  
-    local slot = self:getSlotByTaskId(taskId)
-    if not slot then
-      update.status = 2 -- abandoned
-      update.taskId = taskId
-    else
-      local requiredKills = self:getTaskRequiredKills(slot)
-      local kills = self:getTaskKills(slot)
-  
-      if kills < requiredKills then
-        update.status = 1 -- in progress
-        update.kills = kills
-        update.required = requiredKills
-        update.taskId = taskId
-      else
-        update.status = 2 -- finished
-        update.taskId = taskId
-      end
-    end
-  
-    self:sendExtendedOpcode(Config.TasksOpCode, json.encode({action = "update", data = update}))
-  end
-  
-  function Player:sendTasksPointsUpdate()
-    self:sendExtendedOpcode(Config.TasksOpCode, json.encode({action = "points", data = self:getTasksPoints()}))
-  end
-
-  function Player:sendTasksRankingUpdate()
-    local rank = self:getRankTask()
-    local data = { rank = rank }
-    self:sendExtendedOpcode(Config.TasksOpCode, json.encode({ action = "ranking", data = data }))
 end
 
-  
-  
-  function Player:startNewTask(taskId, kills)
-    local task = Config.Tasks[taskId]
-    if task then
-      local slot = self:getFreeTaskSlot()
-      if not slot then
-        self:popupFYI("You can't accept more tasks.")
-        return
-      end
-  
-      if self:getSlotByTaskId(taskId) then
-        self:popupFYI("You already have this task active.")
-        return
-      end
-  
-      kills = math.max(kills, Config.RequiredKills.Min)
-      kills = math.min(kills, Config.RequiredKills.Max)
-  
-      self:setStorageValue(Config.StorageSlot + slot, taskId)
-      self:setStorageValue(Config.StorageKillsCurrent + slot, 0)
-      self:setStorageValue(Config.StorageKillsSelected + slot, kills)
-  
-      self:sendTaskUpdate(taskId)
+function Player:sendTaskUpdate(taskId)
+    local update = {}
+
+    local slot = self:getSlotByTaskId(taskId)
+    if not slot then
+        update.status = 2 -- abandoned
+        update.taskId = taskId
+    else
+        local requiredKills = self:getTaskRequiredKills(slot)
+        local kills = self:getTaskKills(slot)
+
+        if kills < requiredKills then
+            update.status = 1 -- in progress
+            update.kills = kills
+            update.required = requiredKills
+            update.taskId = taskId
+        else
+            update.status = 2 -- finished
+            update.taskId = taskId
+        end
     end
-  end
-  
-  function Player:cancelTask(taskId)
+
+    self:sendExtendedOpcode(Config.TasksOpCode,
+                            json.encode({action = "update", data = update}))
+end
+
+function Player:sendTasksPointsUpdate()
+    self:sendExtendedOpcode(Config.TasksOpCode, json.encode(
+                                {
+            action = "points",
+            data = self:getTasksPoints()
+        }))
+end
+
+function Player:sendTasksRankingUpdate()
+    local rank = self:getRankTask()
+    local data = {rank = rank}
+    self:sendExtendedOpcode(Config.TasksOpCode,
+                            json.encode({action = "ranking", data = data}))
+end
+
+function Player:startNewTask(taskId, kills)
     local task = Config.Tasks[taskId]
     if task then
-      local slot = self:getSlotByTaskId(taskId)
-      if slot then
-        self:setStorageValue(Config.StorageSlot + slot, -1)
-        self:setStorageValue(Config.StorageKillsCurrent + slot, -1)
-        self:setStorageValue(Config.StorageKillsSelected + slot, -1)
+        local slot = self:getFreeTaskSlot()
+        if not slot then
+            self:popupFYI("You can't accept more tasks.")
+            return
+        end
+
+        if self:getSlotByTaskId(taskId) then
+            self:popupFYI("You already have this task active.")
+            return
+        end
+
+        kills = math.max(kills, Config.RequiredKills.Min)
+        kills = math.min(kills, Config.RequiredKills.Max)
+
+        self:setStorageValue(Config.StorageSlot + slot, taskId)
+        self:setStorageValue(Config.StorageKillsCurrent + slot, 0)
+        self:setStorageValue(Config.StorageKillsSelected + slot, kills)
+
         self:sendTaskUpdate(taskId)
-      end
     end
-  end
-  
-  local KillEvent = CreatureEvent("TasksKill")
-  
-  function KillEvent.onKill(player, target)
-    if not target or target:isPlayer() or target:getMaster() then
-      return true
+end
+
+function Player:cancelTask(taskId)
+    local task = Config.Tasks[taskId]
+    if task then
+        local slot = self:getSlotByTaskId(taskId)
+        if slot then
+            self:setStorageValue(Config.StorageSlot + slot, -1)
+            self:setStorageValue(Config.StorageKillsCurrent + slot, -1)
+            self:setStorageValue(Config.StorageKillsSelected + slot, -1)
+            self:sendTaskUpdate(taskId)
+        end
     end
-  
+end
+
+local KillEvent = CreatureEvent("TasksKill")
+
+function KillEvent.onKill(player, target)
+    if not target or target:isPlayer() or target:getMaster() then return true end
+
     local taskId = Cache.Tasks[target:getName()]
     if taskId then
-      local task = Config.Tasks[taskId]
-      if task then
-        local party = player:getParty()
-        if party and Config.Party.Enabled then
-          local members = party:getMembers()
-          table.insert(members, party:getLeader())
-  
-          local killerPos = player:getPosition()
-          for _, member in ipairs(members) do
-            if Config.Party.Range > 0 then
-              if member:getPosition():getDistance(killerPos) <= Config.Party.Range then
-                member:taskProcessKill(taskId)
-              end
+        local task = Config.Tasks[taskId]
+        if task then
+            local party = player:getParty()
+            if party and Config.Party.Enabled then
+                local members = party:getMembers()
+                table.insert(members, party:getLeader())
+
+                local killerPos = player:getPosition()
+                for _, member in ipairs(members) do
+                    if Config.Party.Range > 0 then
+                        if member:getPosition():getDistance(killerPos) <=
+                            Config.Party.Range then
+                            member:taskProcessKill(taskId)
+                        end
+                    else
+                        member:taskProcessKill(taskId)
+                    end
+                end
             else
-              member:taskProcessKill(taskId)
+                player:taskProcessKill(taskId)
             end
-          end
-        else
-          player:taskProcessKill(taskId)
         end
-      end
     end
-  
+
     return true
-  end
-  
-  function Player:taskProcessKill(taskId)
+end
+
+function Player:taskProcessKill(taskId)
     local slot = self:getSlotByTaskId(taskId)
     if slot then
-      self:addTaskKill(slot)
-  
-      local requiredKills = self:getTaskRequiredKills(slot)
-      local kills = self:getTaskKills(slot)
-      if kills >= requiredKills then
-        self:setStorageValue(Config.StorageSlot + slot, -1)
-        self:setStorageValue(Config.StorageKillsCurrent + slot, -1)
-        self:setStorageValue(Config.StorageKillsSelected + slot, -1)
-  
-        local task = Config.Tasks[taskId]
-        for _, reward in ipairs(task.Rewards) do
-          self:addTaskReward(reward, requiredKills)
+        self:addTaskKill(slot)
+
+        local requiredKills = self:getTaskRequiredKills(slot)
+        local kills = self:getTaskKills(slot)
+        if kills >= requiredKills then
+            self:setStorageValue(Config.StorageSlot + slot, -1)
+            self:setStorageValue(Config.StorageKillsCurrent + slot, -1)
+            self:setStorageValue(Config.StorageKillsSelected + slot, -1)
+
+            local task = Config.Tasks[taskId]
+            for _, reward in ipairs(task.Rewards) do
+                self:addTaskReward(reward, requiredKills)
+            end
+            self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE,
+                                 "[Task Status] You have finished " ..
+                                     task.RaceName .. " task!")
         end
-        self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "[Task Status] You have finished " .. task.RaceName .. " task!")
-      end
-      self:sendTaskUpdate(taskId)
+        self:sendTaskUpdate(taskId)
     end
-  end
-  
-  function Player:addTaskReward(reward, requiredKills)
-    local bonus = math.floor((math.max(0, requiredKills - Config.KillsForBonus) / Config.KillsForBonus) + 0.5)
+end
+
+function Player:addTaskReward(reward, requiredKills)
+    local bonus = math.floor(
+                      (math.max(0, requiredKills - Config.KillsForBonus) /
+                          Config.KillsForBonus) + 0.5)
     if reward.Type == RewardType.Points then
-      bonus = bonus * Config.PointsIncrease
-      local value = reward.BaseValue + math.floor((reward.BaseValue * bonus / 100) + 0.5)
-      self:addTasksPoints(value)
-      self:sendTextMessage(
-        MESSAGE_STATUS_CONSOLE_ORANGE,
-        "[Ancestral Task Reward] Tasks Points +" .. value .. ", you have now " .. self:getTasksPoints() .. " ancestral tasks points."
-      )
+        bonus = bonus * Config.PointsIncrease
+        local value = reward.BaseValue +
+                          math.floor((reward.BaseValue * bonus / 100) + 0.5)
+        self:addTasksPoints(value)
+        self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE,
+                             "[Task Reward] Tasks Points +" .. value ..
+                                 ", you have now " .. self:getTasksPoints() ..
+                                 " ancestral tasks points.")
     elseif reward.Type == RewardType.Experience then
-      bonus = bonus * Config.ExperienceIncrease
-      local value = reward.BaseValue + math.floor((reward.BaseValue * bonus / 100) + 0.5)
-      self:addExperience(value, true)
-      self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "[Ancestral Task Reward] Experience +" .. value .. ".")
+        bonus = bonus * Config.ExperienceIncrease
+        local value = reward.BaseValue +
+                          math.floor((reward.BaseValue * bonus / 100) + 0.5)
+        self:addExperience(value, true)
+        self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE,
+                             "[Task Reward] Experience +" .. value .. ".")
     elseif reward.Type == RewardType.Gold then
-      bonus = bonus * Config.GoldIncrease
-      local value = reward.BaseValue + math.floor((reward.BaseValue * bonus / 100) + 0.5)
-      self:setBankBalance(self:getBankBalance() + value)
-      self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "[Ancestral Task Reward] " .. value .. " gold added to your bank.")
+        bonus = bonus * Config.GoldIncrease
+        local value = reward.BaseValue +
+                          math.floor((reward.BaseValue * bonus / 100) + 0.5)
+        self:setBankBalance(self:getBankBalance() + value)
+        self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "[Task Reward] " ..
+                                 value .. " gold added to your bank.")
     elseif reward.Type == RewardType.Item then
-      local itemType = ItemType(reward.Id)
-      local itemWeight = itemType:getWeight(reward.Amount)
-      local playerCap = self:getFreeCapacity()
-      if playerCap >= itemWeight then
-        self:addItem(reward.Id, reward.Amount)
-        self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "[Ancestral Task Reward] " .. reward.Amount .. "x " .. itemType:getName() .. ".")
-      else
-        self:getStoreInbox():addItem(reward.Id, reward.Amount)
-        self:sendTextMessage(
-          MESSAGE_STATUS_CONSOLE_ORANGE,
-          "[Ancestral Task Reward] Low on capacity, sending " .. reward.Amount .. "x " .. itemType:getName() .. " to your Purse."
-        )
-      end
+        local itemType = ItemType(reward.Id)
+        local itemWeight = itemType:getWeight(reward.Amount)
+        local playerCap = self:getFreeCapacity()
+        if playerCap >= itemWeight then
+            self:addItem(reward.Id, reward.Amount)
+            self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE,
+                                 "[Task Reward] " .. reward.Amount .. "x " ..
+                                     itemType:getName() .. ".")
+        else
+            self:getStoreInbox():addItem(reward.Id, reward.Amount)
+            self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE,
+                                 "[Task Reward] Low on capacity, sending " ..
+                                     reward.Amount .. "x " .. itemType:getName() ..
+                                     " to your Purse.")
+        end
     elseif reward.Type == RewardType.Storage then
-      if self:getStorageValue(reward.Key) ~= reward.Value then
-        self:setStorageValue(reward.Key, reward.Value)
-        self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, '[Ancestral Task Reward] You have been granted "' .. reward.Description .. '".')
-      end
+        if self:getStorageValue(reward.Key) ~= reward.Value then
+            self:setStorageValue(reward.Key, reward.Value)
+            self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE,
+                                 '[Task Reward] You have been granted "' ..
+                                     reward.Description .. '".')
+        end
     elseif reward.Type == RewardType.Teleport then
-      self:teleportTo(reward.Position)
-      self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, '[Ancestral Task Reward] You have been teleported to "' .. reward.Description .. '".')
+        self:teleportTo(reward.Position)
+        self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE,
+                             '[Task Reward] You have been teleported to "' ..
+                                 reward.Description .. '".')
     elseif reward.Type == RewardType.Ranking then
         local points = reward.BaseValue
         self:addTaskRankAncestral(points)
-        self:sendTextMessage(
-          MESSAGE_STATUS_CONSOLE_ORANGE,
-          "[Ancestral Task Reward] Ranking Points +" .. points .. ", you have now " .. self:getTaskRankAncestral() .. " ranking points."
-        )
+        self:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE,
+                             "[Task Reward] Ranking Points +" .. points ..
+                                 ", you have now " ..
+                                 self:getTaskRankAncestral() ..
+                                 " ranking points.")
     end
-  end
-  
-  function Player:getTaskIdBySlot(slot)
-    return math.max(0, self:getStorageValue(Config.StorageSlot + slot))
-  end
-  
-  function Player:getSlotByTaskId(taskId)
-    for i = 1, Config.ActiveTasksLimit do
-      local slotTask = self:getTaskIdBySlot(i)
-      if taskId == slotTask then
-        return i
-      end
-    end
-  
-    return nil
-  end
-  
-  function Player:getTaskKills(slot)
-    return math.max(0, self:getStorageValue(Config.StorageKillsCurrent + slot))
-  end
-  
-  function Player:getTaskRequiredKills(slot)
-    return math.max(0, self:getStorageValue(Config.StorageKillsSelected + slot))
-  end
-  
-  function Player:addTaskKill(slot)
-    self:setStorageValue(Config.StorageKillsCurrent + slot, self:getTaskKills(slot) + 1)
-  end
-  
-  function Player:addTasksPoints(points)
-    local accountId = self:getGuid() 
-    db.query(string.format("UPDATE players SET ancestral_points = ancestral_points + %d WHERE id = %d", points, accountId))
-    self:sendTasksPointsUpdate()
-  end
+end
 
-  local ranks_task = {
-    [{1, 40}] = "Rookie", 
+function Player:getTaskIdBySlot(slot)
+    return math.max(0, self:getStorageValue(Config.StorageSlot + slot))
+end
+
+function Player:getSlotByTaskId(taskId)
+    for i = 1, Config.ActiveTasksLimit do
+        local slotTask = self:getTaskIdBySlot(i)
+        if taskId == slotTask then return i end
+    end
+
+    return nil
+end
+
+function Player:getTaskKills(slot)
+    return math.max(0, self:getStorageValue(Config.StorageKillsCurrent + slot))
+end
+
+function Player:getTaskRequiredKills(slot)
+    return math.max(0, self:getStorageValue(Config.StorageKillsSelected + slot))
+end
+
+function Player:addTaskKill(slot)
+    self:setStorageValue(Config.StorageKillsCurrent + slot,
+                         self:getTaskKills(slot) + 1)
+end
+
+function Player:addTasksPoints(points)
+    local accountId = self:getGuid()
+    db.query(string.format(
+                 "UPDATE players SET ancestral_points = ancestral_points + %d WHERE id = %d",
+                 points, accountId))
+    self:sendTasksPointsUpdate()
+end
+
+local ranks_task = {
+    [{1, 40}] = "Iron",
     [{41, 100}] = "Bronze",
     [{101, 250}] = "Silver",
     [{251, 470}] = "Gold",
     [{471, 770}] = "Platinum",
-    [{771, 1220}] = "Diamond",
-    [{1221, 1820}] = "Ancestral",
-    [{1821, 2820}] = "Mystic",
-    [{2821, 4320}] = "Abyssal",
-    [{4321, 6320}] = "Ascending",
-    [{6321, 9999}] = "Chaos",
-    [{10000, math.huge}] = "Awakening"
-    }
+    [{771, math.huge}] = "Diamond",
+}
 
-  function Player:addTaskRankAncestral(count)
-    local accountId = self:getGuid() 
+function Player:addTaskRankAncestral(count)
+    local accountId = self:getGuid()
 
-    db.query(string.format("UPDATE players SET ancestral_rank_points = ancestral_rank_points + %d WHERE id = %d", count, accountId))
+    db.query(string.format(
+                 "UPDATE players SET ancestral_rank_points = ancestral_rank_points + %d WHERE id = %d",
+                 count, accountId))
     self:sendTasksRankingUpdate()
 end
 
 function Player:getTaskRankAncestral()
-    local accountId = self:getGuid() 
+    local accountId = self:getGuid()
     local ancestralPoints = 0
-    local resultId = db.storeQuery("SELECT `ancestral_rank_points` FROM `players` WHERE `id` = " .. accountId)
+    local resultId = db.storeQuery(
+                         "SELECT `ancestral_rank_points` FROM `players` WHERE `id` = " ..
+                             accountId)
     if resultId ~= false then
         ancestralPoints = result.getDataInt(resultId, "ancestral_rank_points")
         result.free(resultId)
     end
     return ancestralPoints
- end
+end
 
-
- function Player:getRankTask()
+function Player:getRankTask()
     local ancestralPointsRank = self:getTaskRankAncestral()
     local ret
     for _, z in pairs(ranks_task) do
@@ -519,57 +650,54 @@ function Player:getTaskRankAncestral()
     end
     return ret
 end
-  
-  function Player:getTasksPoints()
+
+function Player:getTasksPoints()
     local points = 0
-      local accountId = self:getGuid() 
-      local resultId = db.storeQuery("SELECT `ancestral_points` FROM `players` WHERE `id` = " .. accountId)
-      if resultId ~= false then
-          points = result.getDataInt(resultId, "ancestral_points")
-          result.free(resultId)
-      end
-      return points
-  end
-  
-  function Player:getTasksRank()
-    local rank = self:getTasksPoints()
-    if rank >= Cache.LastRank then
-      return Cache.Ranks[Cache.LastRank]
+    local accountId = self:getGuid()
+    local resultId = db.storeQuery(
+                         "SELECT `ancestral_points` FROM `players` WHERE `id` = " ..
+                             accountId)
+    if resultId ~= false then
+        points = result.getDataInt(resultId, "ancestral_points")
+        result.free(resultId)
     end
+    return points
+end
+
+function Player:getTasksRank()
+    local rank = self:getTasksPoints()
+    if rank >= Cache.LastRank then return Cache.Ranks[Cache.LastRank] end
     self:sendTasksRankingUpdate()
     return Cache.Ranks[rank]
-  end
-  
-  function Player:getFreeTaskSlot()
+end
+
+function Player:getFreeTaskSlot()
     for i = 1, Config.ActiveTasksLimit do
-      if self:getTaskIdBySlot(i) == 0 then
-        return i
-      end
+        if self:getTaskIdBySlot(i) == 0 then return i end
     end
-  
+
     return nil
-  end
-  
-  function MonsterType:getOutfitOTC()
+end
+
+function MonsterType:getOutfitOTC()
     local outfit = self:outfit()
     return {
-      type = outfit.lookType,
-      auxType = outfit.lookTypeEx,
-      head = outfit.lookHead,
-      body = outfit.lookBody,
-      legs = outfit.lookLegs,
-      feet = outfit.lookFeet,
-      addons = outfit.lookAddons,
-      mount = outfit.lookMount
+        type = outfit.lookType,
+        auxType = outfit.lookTypeEx,
+        head = outfit.lookHead,
+        body = outfit.lookBody,
+        legs = outfit.lookLegs,
+        feet = outfit.lookFeet,
+        addons = outfit.lookAddons,
+        mount = outfit.lookMount
     }
-  end
-  
-  LoginEvent:type("login")
-  LoginEvent:register()
-  ExtendedEvent:type("extendedopcode")
-  ExtendedEvent:register()
-  KillEvent:type("kill")
-  KillEvent:register()
-  StartupEvent:type("startup")
-  StartupEvent:register()
-  
+end
+
+LoginEvent:type("login")
+LoginEvent:register()
+ExtendedEvent:type("extendedopcode")
+ExtendedEvent:register()
+KillEvent:type("kill")
+KillEvent:register()
+StartupEvent:type("startup")
+StartupEvent:register()

@@ -1,6 +1,9 @@
 local OPCODE_LANGUAGE = 1
+local json = require('data/lib/core/json')
 
 function onExtendedOpcode(player, opcode, buffer)
+
+	-- Ancestral points
     local points = 0
     local resultId = db.storeQuery("SELECT `ancestral_points` FROM `players` WHERE `id` = " .. player:getGuid())
     if resultId ~= false then
@@ -8,6 +11,7 @@ function onExtendedOpcode(player, opcode, buffer)
       result.free(resultId)
     end
     player:sendExtendedOpcode(89, points)
+
     if opcode == OPCODE_LANGUAGE then
         -- otclient language
         if buffer == 'en' or buffer == 'pt' then
@@ -17,4 +21,5 @@ function onExtendedOpcode(player, opcode, buffer)
     else
         -- other opcodes can be ignored, and the server will just work fine...
     end
+
 end

@@ -32,6 +32,7 @@ PlayerStorageKeys = {
 	challengePoints = 87360,
 	templeTeleportItemCooldown = 40001,
 	houseTeleportItemCooldown = 40002,
+	playerStarterKit = 40003,
 }
 
 GlobalStorageKeys = {

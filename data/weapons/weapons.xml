@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <weapons>
 	<!-- Rods -->
+	<wand id="28131" level="7" mana="2" min="55" max="105" type="death"> <!-- Nepotism Nimbus -->
+		<vocation name="Sorcerer" />
+		<vocation name="Druid" />
+	</wand>
 	<wand id="23721" level="1" mana="1" min="3" max="7" type="ice"> <!-- The Chiller -->
 		<vocation name="Druid" />
 	</wand>
