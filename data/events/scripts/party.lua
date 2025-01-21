@@ -1,4 +1,5 @@
 function Party:onJoin(player)
+	onDungeonPartyJoin(self, player)
 	local onJoin = EventCallback.onJoin
 	if onJoin then
 		return onJoin(self, player)
@@ -7,6 +8,7 @@ function Party:onJoin(player)
 end
 
 function Party:onLeave(player)
+	onDungeonPartyLeave(self, player)
 	local onLeave = EventCallback.onLeave
 	if onLeave then
 		return onLeave(self, player)
@@ -15,6 +17,7 @@ function Party:onLeave(player)
 end
 
 function Party:onDisband()
+	onDungeonPartyDisband(self)
 	local onDisband = EventCallback.onDisband
 	if onDisband then
 		return onDisband(self)
@@ -66,6 +69,7 @@ function Party:onRevokeInvitation(player)
 end
 
 function Party:onPassLeadership(player)
+	onDungeonPartyLeaderPass(self, oldLeader, newLeader)
 	local onPassLeadership = EventCallback.onPassLeadership
 	if onPassLeadership then
 		return onPassLeadership(self, player)
