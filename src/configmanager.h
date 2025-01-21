@@ -129,6 +129,9 @@ class ConfigManager
 		};
 
 		enum float_config_t {
+			MLVL_BONUSDMG,
+			MLVL_BONUSSPEED,
+			MLVL_BONUSHP,
 			REWARD_BASE_RATE,
 			REWARD_RATE_DAMAGE_DONE,
 			REWARD_RATE_DAMAGE_TAKEN,
