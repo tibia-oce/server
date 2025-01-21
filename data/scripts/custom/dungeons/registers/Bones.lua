@@ -9,11 +9,11 @@ Bones:setRequiredParty(1, 5)
 
 -- Boss
 Bones:setBoss("Prince Skeletal", Position(312, 106, 7))
-Bones:setKillPercent(75)
+Bones:setKillPercent(65)
 
 -- Requirements
-Bones:setRequiredLevel(200)
-Bones:setRequiredGold(1 * 100 * 100) -- 1cc
+Bones:setRequiredLevel(150)
+Bones:setRequiredGold(5 * 100 * 100) -- 1cc
 Bones:addRequiredItem(27487, 1)
 
 -- Boss Loot

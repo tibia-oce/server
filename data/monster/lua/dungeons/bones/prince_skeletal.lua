@@ -6,8 +6,8 @@ monster.outfit = {
 	lookType = 952
 }
 
-monster.health = 200000
-monster.maxHealth = 200000
+monster.health = 15000
+monster.maxHealth = 15000
 monster.corpse = 26691
 monster.speed = 650
 monster.maxSummons = 0
@@ -58,7 +58,6 @@ monster.loot = {
 	{id = "bone fetish", chance = 33000, maxCount = 4},
 	{id = "dirty turban", chance = 24000, maxCount = 3},
 	{id = 8844, chance = 17777, maxCount = 9}
-
 }
 
 monster.attacks = {
