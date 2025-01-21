@@ -20066,7 +20066,7 @@ int LuaScriptInterface::luaRegisterDungeon(lua_State* L)
 		dungeon->setId(g_game.dungeons.size() + 1);
 		dungeon->preBuild();
 		g_game.dungeons.push_back(dungeon);
-		std::cout << "[Dungeons] Registered Dungeon " << dungeon->getTitle() << std::endl;
+		std::cout << ">> Registered dungeon: " << dungeon->getTitle() << std::endl;
 		pushBoolean(L, true);
 	}
 	else {
