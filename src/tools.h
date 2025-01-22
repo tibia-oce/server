@@ -138,6 +138,8 @@ int64_t OTSYS_TIME();
 
 SpellGroup_t stringToSpellGroup(const std::string& value);
 
+std::string timeFromSeconds(uint64_t seconds);
+
 namespace Titan {
 
 #if __has_cpp_attribute(__cpp_lib_to_underlying)

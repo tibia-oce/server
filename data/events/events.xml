@@ -54,4 +54,14 @@
 	<event class="Item" method="onAugment" enabled="1"/>
 	<event class="Item" method="onRemoveAugment" enabled="1"/>
 
+	<!-- Dungeon Methods -->
+	<event class="Player" method="onQueueLeave" enabled="1" />
+	<event class="Dungeon" method="onQueue" enabled="1" />
+	<event class="Dungeon" method="onPrepare" enabled="1" />
+	<event class="Dungeon" method="onStart" enabled="1" />
+	<event class="Dungeon" method="onSuccess" enabled="1" />
+	<event class="Dungeon" method="onFail" enabled="1" />
+	<event class="Dungeon" method="onPlayerLeft" enabled="1" />
+	<event class="Dungeon" method="onMonstersCount" enabled="1" />
+
 </events>

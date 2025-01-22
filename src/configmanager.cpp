@@ -295,6 +295,10 @@ bool ConfigManager::load()
 	floats[REWARD_RATE_DAMAGE_TAKEN] = getGlobalFloat(L, "rewardRateDamageTaken", 1.0f);
 	floats[REWARD_RATE_HEALING_DONE] = getGlobalFloat(L, "rewardRateHealingDone", 1.0f);
 
+	floats[MLVL_BONUSDMG] = getGlobalFloat(L, "monsterBonusDamage", 0);
+	floats[MLVL_BONUSSPEED] = getGlobalFloat(L, "monsterBonusSpeed", 0);
+	floats[MLVL_BONUSHP] = getGlobalFloat(L, "monsterBonusHealth", 0);
+
 	expStages = loadXMLStages();
 	if (expStages.empty()) {
 		expStages = loadLuaStages(L);

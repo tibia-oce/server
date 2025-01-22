@@ -95,6 +95,10 @@ class Game
 		bool loadMainMap(const std::string& filename);
 		void loadMap(const std::string& path);
 
+		void loadDungeon(const std::string& path, const Position& pos);
+		void respawnDungeon(const std::string& path, DungeonInstance* instance, const Position& pos, uint8_t difficulty);
+		void clearDungeon(DungeonInstance* instance);
+
 		/**
 		  * Get the map size - info purpose only
 		  * \param width width of the map
@@ -543,6 +547,7 @@ class Game
 		Raids raids;
 		Quests quests;
 
+		std::vector<Dungeon*> dungeons;
 		std::forward_list<Item*> toDecayItems;
 
 		std::unordered_set<Tile*> getTilesToClean() const {
