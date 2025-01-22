@@ -1,4 +1,4 @@
-Crafting.armorsmith = {
+Crafting.armour = {
     {
         id = 2457,
         name = "Steel Helmet",

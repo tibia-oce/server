@@ -1,47 +1,49 @@
-Crafting.herbalist = {
-    --- Scissors
-    { 
-        id = 26713,
-        name = "Apprentice's Scissor",
+Crafting.alchemy = {
+    {
+        id = 28120,
+        name = "Life Orb",
         level = 10,
-        cost = 1000,
+        cost = 1200,
         count = 1,
         materials = {
-            {id = 26712, count = 1},
-            {id = 26729, count = 5},
+            {id = 26795, count = 2},
+            {id = 5944, count = 10},
         }
     },
     {
-        id = 26714,
-        name = "Herbalist's Scissor",
+        id = 28123,
+        name = "Forcrest Herb",
+        level = 10,
+        cost = 900,
+        count = 1,
+        materials = {
+            {id = 26727, count = 2},
+            {id = 26726, count = 2},
+            {id = 26732, count = 2},
+            {id = 26729, count = 2},
+        }
+    },
+    {
+        id = 28118,
+        name = "Monster Skull",
         level = 15,
+        cost = 1450,
+        count = 1,
+        materials = {
+            {id = 28117, count = 4},
+            {id = 28119, count = 1},
+            {id = 28122, count = 1},
+        }
+    },
+    {
+        id = 28121,
+        name = "Cursed Plank",
+        level = 20,
         cost = 2000,
         count = 1,
         materials = {
-            {id = 26413, count = 1},
-            {id = 26732, count = 5},
-        }
-    },
-    {
-        id = 26715,
-        name = "Expert's Scissor",
-        level = 20,
-        cost = 3000,
-        count = 1,
-        materials = {
-            {id = 26714, count = 1},
-            {id = 26726, count = 5},
-        }
-    },
-    {
-        id = 26716,
-        name = "Master's Scissor",
-        level = 25,
-        cost = 5000,
-        count = 1,
-        materials = {
-            {id = 26715, count = 1},
-            {id = 26727, count = 5},
+            {id = 26602, count = 3},
+            {id = 26603, count = 1},
         }
     },
     {
