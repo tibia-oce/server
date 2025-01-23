@@ -170,6 +170,7 @@ function Crafting:craft(player, category, craftId)
             end
 
             Crafting:sendMoney(player)
+            Crafting:sendCrafts(player, category)
             Crafting:sendMaterials(player, category)
             player:sendExtendedOpcode(CODE_CRAFTING,
                                       json.encode({action = "crafted"}))
