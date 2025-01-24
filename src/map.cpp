@@ -1106,3 +1106,40 @@ uint32_t Map::clean() const
 		<< (OTSYS_TIME() - start) / (1000.) << " seconds." << std::endl;
 	return count;
 }
+
+bool Map::loadDungeon(const std::string& identifier, const Position& pos)
+{
+	IOMap loader;
+	if (!loader.loadMap(this, identifier, pos, false)) {
+		std::cout << "[Fatal - Map::loadDungeon] " << loader.getLastErrorString() << std::endl;
+		return false;
+	}
+
+	return true;
+}
+
+void Map::respawnDungeon(const std::string& identifier, DungeonInstance* instance, const Position& pos, uint8_t difficulty)
+{
+  auto instanceId = instance->getId();
+	if (instanceId >= chunkSpawns.size())
+		chunkSpawns.resize(static_cast<size_t>(instanceId) + 1);
+
+	if (chunkSpawns[instanceId].isStarted()) {
+		chunkSpawns[instanceId].clear();
+	}
+
+	if (!IOMap::loadChunkSpawns(this, identifier, pos, instanceId)) {
+		std::cout << "[Warning - Map::respawnDungeon] Failed to load chunk spawn data." << std::endl;
+	}
+
+	chunkSpawns[instanceId].startup(instance, difficulty);
+}
+
+void Map::clearDungeon(DungeonInstance* instance)
+{
+  auto instanceId = instance->getId();
+	if (instanceId >= chunkSpawns.size())
+		return;
+
+	chunkSpawns[instanceId].clear();
+}

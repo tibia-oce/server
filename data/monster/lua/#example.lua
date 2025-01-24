@@ -36,6 +36,11 @@ monster.summons = {
 	{name = "demon", chance = 10, interval = 2*1000}
 }
 
+monster.getLevel = {
+	minLevel = 1,
+	maxLevel = 10
+}
+
 monster.voices = {
 	interval = 5000,
 	chance = 10,

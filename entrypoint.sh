@@ -45,6 +45,7 @@ download_and_extract() {
 }
 
 download_and_extract "world"
+download_and_extract "dungeons"
 download_and_extract "items"
 download_and_extract "npc"
 download_and_extract "monster/monsters"

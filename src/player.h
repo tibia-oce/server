@@ -35,6 +35,7 @@ class Party;
 class SchedulerTask;
 class Bed;
 class Guild;
+class Dungeon;
 
 constexpr uint16_t MaximumStamina = 2520;
 
@@ -543,6 +544,10 @@ class Player final : public Creature, public Cylinder
 		}
 
 		uint64_t getMoney() const;
+		bool removeTotalMoney(uint64_t amount);
+		uint64_t getTotalMoney() const {
+			return getMoney() + getBankBalance();
+		}
 
 		//safe-trade functions
 		void setTradeState(tradestate_t state) {
@@ -731,6 +736,20 @@ class Player final : public Creature, public Cylinder
 
 		size_t getMaxVIPEntries() const;
 		size_t getMaxDepotItems() const;
+
+		// Dungeons
+		void setDungeon(Dungeon* dungeon) {
+			this->dungeon = dungeon;
+		}
+		Dungeon* getDungeon() {
+			return dungeon;
+		}
+		void setDungeonDifficulty(uint8_t difficulty) {
+			this->dungeonDifficulty = difficulty;
+		}
+		uint8_t getDungeonDifficulty() const {
+			return dungeonDifficulty;
+		}
 
 		//tile
 		//send methods
@@ -1272,6 +1291,8 @@ class Player final : public Creature, public Cylinder
 
 		std::unique_ptr<AreaCombat> generateDeflectArea(std::optional<std::reference_wrapper<Creature>> attacker, int32_t targetCount);
 
+		uint32_t getItemTypeCount(uint16_t itemId, int32_t subType = -1) const override;
+
 	private:
 		std::forward_list<Condition*> getMuteConditions() const;
 
@@ -1311,7 +1332,6 @@ class Player final : public Creature, public Cylinder
 		int32_t getThingIndex(const Thing* thing) const override;
 		size_t getFirstIndex() const override;
 		size_t getLastIndex() const override;
-		uint32_t getItemTypeCount(uint16_t itemId, int32_t subType = -1) const override;
 		std::map<uint32_t, uint32_t>& getAllItemTypeCount(std::map<uint32_t, uint32_t>& countMap) const override;
 		Thing* getThing(size_t index) const override;
 
@@ -1382,6 +1402,7 @@ class Player final : public Creature, public Cylinder
 		StoreInbox* storeInbox = nullptr;
 		std::shared_ptr<RewardChest> rewardChest = nullptr;
 		DepotLocker_ptr depotLocker = nullptr;
+		Dungeon* dungeon = nullptr;
 
 		uint32_t inventoryWeight = 0;
 		uint32_t capacity = 40000;
@@ -1421,6 +1442,7 @@ class Player final : public Creature, public Cylinder
 		std::bitset<6> blessings;
 		uint8_t levelPercent = 0;
 		uint8_t magLevelPercent = 0;
+		uint8_t dungeonDifficulty = 0;
 
 		PlayerSex_t sex = PLAYERSEX_FEMALE;
 		OperatingSystem_t operatingSystem = CLIENTOS_NONE;

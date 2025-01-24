@@ -43,6 +43,56 @@ Monster::Monster(MonsterType* mType) :
 	internalLight = mType->info.light;
 	hiddenHealth = mType->info.hiddenHealth;
 
+	int randomChance = std::rand() % 100;
+	if (mType->info.minLevel != 0 && mType->info.maxLevel != 0) {
+		if (randomChance > 1 || randomChance < 20) {
+			level = std::rand() % (mType->info.maxLevel - mType->info.minLevel + 1) + mType->info.minLevel;
+		}
+		else if (randomChance > 20 || randomChance < 40) {
+			level = std::rand() % (mType->info.maxLevel - mType->info.minLevel - 70 + 1) + (mType->info.minLevel + 71);
+		}
+		else if (randomChance > 40 || randomChance < 70) {
+			level = std::rand() % (mType->info.maxLevel - mType->info.minLevel - 150 + 1) + (mType->info.minLevel + 151);
+		}
+		else if (randomChance > 70 || randomChance < 90) {
+			level = std::rand() % (mType->info.maxLevel - mType->info.minLevel - 300 + 1) + (mType->info.minLevel + 301);
+		}
+		else if (randomChance > 90 || randomChance < 99) {
+			level = std::rand() % (mType->info.maxLevel - mType->info.minLevel - 450 + 1) + (mType->info.minLevel + 451);
+		}
+	}
+
+	if (level > 0) {
+		float bonusHp = g_config.getFloat(ConfigManager::MLVL_BONUSHP) * level;
+		if (bonusHp != 0.0) {
+			healthMax += healthMax * bonusHp;
+			health += health * bonusHp;
+		}
+		float bonusSpeed = g_config.getFloat(ConfigManager::MLVL_BONUSSPEED) * level;
+		if (bonusSpeed != 0.0) {
+			baseSpeed += baseSpeed * bonusSpeed;
+		}
+	}
+
+	if (level >= 50 && level <= 100) {
+		skull = SKULL_WHITE;
+	}
+	else if (level >= 101 && level <= 200) {
+		skull = SKULL_GREEN;
+	}
+	else if (level >= 201 && level <= 300) {
+		skull = SKULL_YELLOW;
+	}
+	else if (level >= 301 && level <= 350) {
+		skull = SKULL_ORANGE;
+	}
+	else if (level >= 351 && level <= 400) {
+		skull = SKULL_RED;
+	}
+	else if (level >= 401 && level <= 500000) {
+		skull = SKULL_BLACK;
+	}
+
 	// register creature events
 	for (const std::string& scriptName : mType->info.scripts) {
 		if (!registerCreatureEvent(scriptName)) {

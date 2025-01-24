@@ -7,6 +7,7 @@
 #include "luascript.h"
 #include "const.h"
 #include "creature.h"
+#include "dungeon.h"
 
 class Party;
 class ItemType;
@@ -65,6 +66,16 @@ class Events
 		int32_t playerOnSpellTry = -1;
 		int32_t playerOnAugment = -1;
 		int32_t playerOnRemoveAugment = -1;
+		int32_t playerOnQueueLeave = -1;
+
+		// Dungeons
+		int32_t dungeonOnQueue = -1;
+		int32_t dungeonOnPrepare = -1;
+		int32_t dungeonOnStart = -1;
+		int32_t dungeonOnSuccess = -1;
+		int32_t dungeonOnFail = -1;
+		int32_t dungeonOnPlayerLeave = -1;
+		int32_t dungeonOnMonstersCount = -1;
 
 		// Monster
 		int32_t monsterOnDropLoot = -1;
@@ -140,6 +151,15 @@ class Events
 		void eventItemOnAugment(Item* item, std::shared_ptr<Augment> augment);
 		void eventItemOnRemoveAugment(Item* item, std::shared_ptr<Augment> augment);
 		
+		// Dungeon
+		void eventPlayerOnQueueLeave(Player* player, DungeonQueue* queue);
+		void eventDungeonOnQueue(Dungeon* dungeon);
+		void eventDungeonOnPrepare(Dungeon* dungeon, DungeonInstance* instance, Player* player);
+		void eventDungeonOnStart(Dungeon* dungeon, DungeonInstance* instance, Player* player);
+		void eventDungeonOnSuccess(Dungeon* dungeon, DungeonInstance* instance);
+		void eventDungeonOnFail(Dungeon* dungeon, DungeonInstance* instance);
+		void eventDungeonOnPlayerLeave(Dungeon* dungeon, DungeonInstance* instance, Player* player);
+		void eventDungeonOnMonstersCount(DungeonInstance* instance, uint16_t monsters);
 
 		int32_t getScriptId(EventInfoId eventInfoId) {
 			switch (eventInfoId)

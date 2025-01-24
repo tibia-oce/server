@@ -5833,6 +5833,32 @@ const std::map<uint16_t, std::string> Player::getAutolootItems() const
 	return autoloot;
 }
 
+bool Player::removeTotalMoney(uint64_t amount)
+{
+	uint64_t moneyCount = getMoney();
+	uint64_t bankCount = getBankBalance();
+
+	if (amount <= moneyCount) {
+		return g_game.removeMoney(this, amount);
+	}
+	else if (amount <= (moneyCount + bankCount)) {
+		if (moneyCount != 0) {
+			g_game.removeMoney(this, moneyCount);
+			uint64_t remains = amount - moneyCount;
+			setBankBalance(bankCount - remains);
+			sendTextMessage(MESSAGE_INFO_DESCR, fmt::format("Paid {:d} from inventory and {:d} gold from bank account. Your account balance is now {:d} gold.", moneyCount, amount - moneyCount, getBankBalance()));
+			return true;
+		}
+		else {
+			setBankBalance(bankCount - amount);
+			sendTextMessage(MESSAGE_INFO_DESCR, fmt::format("Paid {:d} gold from bank account. Your account balance is now {:d} gold.", amount, getBankBalance()));
+			return true;
+		}
+	}
+
+	return false;
+}
+
 void Player::sendUpdateContainer(const Container* container)
 {
 	if (!client || !container) {

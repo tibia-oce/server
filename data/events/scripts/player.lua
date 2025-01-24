@@ -233,3 +233,16 @@ function Player:onRemoveAugment(augment)
 		onRemoveAugment(self, augment)
 	end
 end
+
+function Player:onQueueLeave(queue)
+	self:sendExtendedOpcode(ExtendedOPCodes.CODE_DUNGEONS, json.encode({action = "queue", data = {joined = false}}))
+	local dungeon = queue:getDungeon()
+	local players = Game.getPlayers()
+	local inQueue = queue:getPlayersNumber()
+	for _, player in ipairs(players) do
+		player:sendExtendedOpcode(
+			ExtendedOPCodes.CODE_DUNGEONS,
+			json.encode({action = "queueUpdate", data = {id = dungeon:getId(), queue = inQueue, estimated = dungeon:getEstimatedQueueTime(player)}})
+		)
+	end
+end
