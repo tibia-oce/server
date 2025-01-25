@@ -1282,6 +1282,20 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(CONDITION_PARAM_SPECIALSKILL_MANALEECHAMOUNT)
 	registerEnum(CONDITION_PARAM_AGGRESSIVE)
 
+	// custom skills
+    registerEnum(CONDITION_PARAM_SKILL_MINING)
+    registerEnum(CONDITION_PARAM_SKILL_MININGPERCENT)
+    registerEnum(CONDITION_PARAM_SKILL_WOODCUTTING)
+    registerEnum(CONDITION_PARAM_SKILL_WOODCUTTINGPERCENT)
+    registerEnum(CONDITION_PARAM_SKILL_HERBALISM)
+    registerEnum(CONDITION_PARAM_SKILL_HERBALISPERCENT)
+    registerEnum(CONDITION_PARAM_SKILL_CRAFTING)
+    registerEnum(CONDITION_PARAM_SKILL_CRAFTINGPERCENT)
+    registerEnum(CONDITION_PARAM_SKILL_ENCHANTING)
+    registerEnum(CONDITION_PARAM_SKILL_ENCHANTINGPERCENT)
+    registerEnum(CONDITION_PARAM_SKILL_DISENCHANTING)
+    registerEnum(CONDITION_PARAM_SKILL_DISENCHANTINGPERCENT)
+
 	registerEnum(CONST_ME_NONE)
 	registerEnum(CONST_ME_DRAWBLOOD)
 	registerEnum(CONST_ME_LOSEENERGY)
@@ -1688,6 +1702,12 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(SKILL_FISHING)
 	registerEnum(SKILL_MAGLEVEL)
 	registerEnum(SKILL_LEVEL)
+	registerEnum(SKILL_MINING)
+    registerEnum(SKILL_WOODCUTTING)
+    registerEnum(SKILL_HERBALISM)
+    registerEnum(SKILL_CRAFTING)
+    registerEnum(SKILL_ENCHANTING)
+    registerEnum(SKILL_DISENCHANTING)
 
 	registerEnum(SPECIALSKILL_CRITICALHITCHANCE)
 	registerEnum(SPECIALSKILL_CRITICALHITAMOUNT)
@@ -1983,6 +2003,12 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(ImbuementType::IMBUEMENT_TYPE_CLUB_SKILL);
 	registerEnum(ImbuementType::IMBUEMENT_TYPE_DISTANCE_SKILL);
 	registerEnum(ImbuementType::IMBUEMENT_TYPE_FISHING_SKILL);
+	registerEnum(ImbuementType::IMBUEMENT_TYPE_MINING_SKILL);
+    registerEnum(ImbuementType::IMBUEMENT_TYPE_WOODCUTTING_SKILL);
+    registerEnum(ImbuementType::IMBUEMENT_TYPE_HERBALISM_SKILL);
+    registerEnum(ImbuementType::IMBUEMENT_TYPE_CRAFTING_SKILL);
+    registerEnum(ImbuementType::IMBUEMENT_TYPE_ENCHANTING_SKILL);
+    registerEnum(ImbuementType::IMBUEMENT_TYPE_DISENCHANTING_SKILL);
 	registerEnum(ImbuementType::IMBUEMENT_TYPE_SHIELD_SKILL);
 	registerEnum(ImbuementType::IMBUEMENT_TYPE_MAGIC_LEVEL);
 	registerEnum(ImbuementType::IMBUEMENT_TYPE_LAST);
