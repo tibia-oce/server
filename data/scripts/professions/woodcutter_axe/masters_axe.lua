@@ -166,6 +166,7 @@ function woodcutterSystem.onUse(cid, item, fromPosition, itemEx, toPosition)
                 return true
             end
 
+            player:addSkillTries(SKILL_WOODCUTTING, 1)
             local multiple = 1
             local rand_multiple = math.random(15)
             if rand_multiple == 15 then

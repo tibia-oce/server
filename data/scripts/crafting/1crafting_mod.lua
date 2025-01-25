@@ -163,6 +163,7 @@ function Crafting:craft(player, category, craftId)
     if item then
         if player:addItemEx(item) then
             player:removeTotalMoney(craft.cost)
+            player:addSkillTries(SKILL_CRAFTING, 1)
 
             for i = 1, #craft.materials do
                 local material = craft.materials[i]
