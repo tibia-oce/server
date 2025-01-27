@@ -181,4 +181,54 @@
     <action itemid="28128" script="custom/kits/paladin.lua" />
     <action itemid="28129" script="custom/kits/mage.lua" />
     <action itemid="28130" script="custom/kits/knight.lua" />
+	
+	<!-- Augments: Elemental Damage -->
+   <action itemid="27860" script="custom/augments/tablet.lua" />
+   <action itemid="27861" script="custom/augments/tablet.lua" />
+   <action itemid="27862" script="custom/augments/tablet.lua" />
+   <action itemid="27863" script="custom/augments/tablet.lua" />
+   
+   <!-- Augments: Physical Damage -->
+   <action itemid="27853" script="custom/augments/tablet.lua" />
+   <action itemid="27854" script="custom/augments/tablet.lua" />
+   <action itemid="27855" script="custom/augments/tablet.lua" />
+   <action itemid="27856" script="custom/augments/tablet.lua" />
+   
+   <!-- Augments: Skills -->
+   <action itemid="27870" script="custom/augments/tablet.lua" />
+   <action itemid="27871" script="custom/augments/tablet.lua" />
+   <action itemid="27872" script="custom/augments/tablet.lua" />
+   <action itemid="27873" script="custom/augments/tablet.lua" />
+   
+   <!-- Augments: Healing -->
+   <action itemid="27857" script="custom/augments/tablet.lua" />
+   <action itemid="27858" script="custom/augments/tablet.lua" />
+   <action itemid="27859" script="custom/augments/tablet.lua" />
+   
+   <!-- Augments: Magic Level -->
+   <action itemid="27849" script="custom/augments/tablet.lua" />
+   <action itemid="27850" script="custom/augments/tablet.lua" />
+   <action itemid="27851" script="custom/augments/tablet.lua" />
+   <action itemid="27852" script="custom/augments/tablet.lua" />
+   
+   <!-- Augments: Health -->
+   <action itemid="27846" script="custom/augments/tablet.lua" />
+   <action itemid="27847" script="custom/augments/tablet.lua" />
+   <action itemid="27848" script="custom/augments/tablet.lua" />
+   
+   <!-- Augments: Marksman's Focus -->
+   <action itemid="27864" script="custom/augments/tablet.lua" />
+   <action itemid="27865" script="custom/augments/tablet.lua" />
+   <action itemid="27866" script="custom/augments/tablet.lua" />
+   
+   <!-- Augments: Spellweaver's Bond -->
+   <action itemid="27843" script="custom/augments/tablet.lua" />
+   <action itemid="27844" script="custom/augments/tablet.lua" />
+   <action itemid="27845" script="custom/augments/tablet.lua" />
+   
+   <!-- Augments: Warrior's Guard -->
+   <action itemid="27867" script="custom/augments/tablet.lua" />
+   <action itemid="27868" script="custom/augments/tablet.lua" />
+   <action itemid="27869" script="custom/augments/tablet.lua" />
+
 </actions>

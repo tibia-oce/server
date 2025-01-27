@@ -1,0 +1,55 @@
+[ElementalDamage1]
+name = "Elemental Augment [1]"
+description = "Pierces creature elemental resistances by 2%."
+modifiers = [
+    { mod = "piercing", value = 2, chance = 100, damage = "energy", origin = "spell"},
+    { mod = "piercing", value = 2, chance = 100, damage = "water", origin = "spell"},
+    { mod = "piercing", value = 2, chance = 100, damage = "fire", origin = "spell"},
+    { mod = "piercing", value = 2, chance = 100, damage = "ice", origin = "spell"},
+    { mod = "piercing", value = 2, chance = 100, damage = "death", origin = "spell"},
+    { mod = "piercing", value = 2, chance = 100, damage = "earth", origin = "spell"},
+    { mod = "piercing", value = 2, chance = 100, damage = "curse", origin = "spell"},
+    { mod = "piercing", value = 2, chance = 100, damage = "holy", origin = "spell"}
+]
+
+[ElementalDamage2]
+name = "Elemental Augment [2]"
+description = "Increases all elemental damage by 4%."
+modifiers = [
+    { mod = "piercing", value = 4, chance = 100, damage = "energy", origin = "spell"},
+    { mod = "piercing", value = 4, chance = 100, damage = "water", origin = "spell"},
+    { mod = "piercing", value = 4, chance = 100, damage = "fire", origin = "spell"},
+    { mod = "piercing", value = 4, chance = 100, damage = "ice", origin = "spell"},
+    { mod = "piercing", value = 4, chance = 100, damage = "death", origin = "spell"},
+    { mod = "piercing", value = 4, chance = 100, damage = "earth", origin = "spell"},
+    { mod = "piercing", value = 4, chance = 100, damage = "curse", origin = "spell"},
+    { mod = "piercing", value = 4, chance = 100, damage = "holy", origin = "spell"}
+]
+
+[ElementalDamage3]
+name = "Elemental Augment [3]"
+description = "Increases all elemental damage by 6%."
+modifiers = [
+    { mod = "piercing", value = 6, chance = 100, damage = "energy", origin = "spell"},
+    { mod = "piercing", value = 6, chance = 100, damage = "water", origin = "spell"},
+    { mod = "piercing", value = 6, chance = 100, damage = "fire", origin = "spell"},
+    { mod = "piercing", value = 6, chance = 100, damage = "ice", origin = "spell"},
+    { mod = "piercing", value = 6, chance = 100, damage = "death", origin = "spell"},
+    { mod = "piercing", value = 6, chance = 100, damage = "earth", origin = "spell"},
+    { mod = "piercing", value = 6, chance = 100, damage = "curse", origin = "spell"},
+    { mod = "piercing", value = 6, chance = 100, damage = "holy", origin = "spell"}
+]
+
+[ElementalDamage4]
+name = "Elemental Augment [4]"
+description = "Increases all elemental damage by 8%."
+modifiers = [
+    { mod = "piercing", value = 8, chance = 100, damage = "energy", origin = "spell"},
+    { mod = "piercing", value = 8, chance = 100, damage = "water", origin = "spell"},
+    { mod = "piercing", value = 8, chance = 100, damage = "fire", origin = "spell"},
+    { mod = "piercing", value = 8, chance = 100, damage = "ice", origin = "spell"},
+    { mod = "piercing", value = 8, chance = 100, damage = "death", origin = "spell"},
+    { mod = "piercing", value = 8, chance = 100, damage = "earth", origin = "spell"},
+    { mod = "piercing", value = 8, chance = 100, damage = "curse", origin = "spell"},
+    { mod = "piercing", value = 8, chance = 100, damage = "holy", origin = "spell"}
+]

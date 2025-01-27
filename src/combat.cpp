@@ -862,8 +862,8 @@ void Combat::doTargetCombat(Creature* caster, Creature* target, CombatDamage& da
 					piercingParams.combatType = COMBAT_UNDEFINEDDAMAGE;
 					piercingParams.impactEffect = CONST_ME_SKULLHORIZONTAL;
 
-					const auto message = "You pierced " + target->getName() + " for " + std::to_string(piercingDamage) + " damage!" ;
-					casterPlayer.value()->sendTextMessage(MESSAGE_EVENT_DEFAULT, message);
+					// const auto message = "You pierced " + target->getName() + " for " + std::to_string(piercingDamage) + " damage!" ;
+					// casterPlayer.value()->sendTextMessage(MESSAGE_EVENT_DEFAULT, message);
 					g_game.combatChangeHealth(caster, target, piercing);
 
 					if (damage.primary.value == 0) {
