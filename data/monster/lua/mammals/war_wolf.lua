@@ -1,3 +1,6 @@
+-- War Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/War_Wolf)
+-- Version: 7.0
+
 local mType = Game.createMonsterType("War Wolf")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 3
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Orc Fort, the Orc Peninsula, Magician Tower and northwest tower or south underground of Thais, Zao steppe encaged, Vengoth.",
-}
 
 monster.health = 140
 monster.maxHealth = 140
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,9 +65,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "ham", chance = 35000, maxCount = 2 },
-	{ name = "wolf paw", chance = 710 },
-	{ name = "warwolf fur", chance = 5230 },
+	{ id = "ham", chance = 35000, maxCount = 2 },
+	{ id = "wolf paw", chance = 710 },
+	{ id = "warwolf fur", chance = 5230 },
 }
 
 monster.attacks = {

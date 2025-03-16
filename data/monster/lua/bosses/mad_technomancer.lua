@@ -1,3 +1,6 @@
+-- Mad Technomancer (Tibia Wiki: https://tibia.fandom.com/wiki/Mad_Technomancer)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Mad Technomancer")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Death Priest Shargon (Tibia Wiki: https://tibia.fandom.com/wiki/Death_Priest_Shargon)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Death Priest Shargon")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

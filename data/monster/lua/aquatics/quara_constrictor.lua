@@ -1,3 +1,6 @@
+-- Quara Constrictor (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Constrictor)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Quara Constrictor")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 239
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Calassa, Frozen Trench underwater sites, Yalahar (Sunken Quarter).",
-}
 
 monster.health = 450
 monster.maxHealth = 450
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -77,13 +67,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 87500, maxCount = 100 },
-	{ name = "quara tentacle", chance = 14520 },
-	{ name = "longsword", chance = 6931 },
-	{ name = "shrimp", chance = 5140, maxCount = 5 },
-	{ name = "brass armor", chance = 4810 },
-	{ name = "small amethyst", chance = 3060 },
-	{ name = "fish fin", chance = 490 },
+	{ id = "gold coin", chance = 87500, maxCount = 100 },
+	{ id = "quara tentacle", chance = 14520 },
+	{ id = "longsword", chance = 6931 },
+	{ id = "shrimp", chance = 5140, maxCount = 5 },
+	{ id = "brass armor", chance = 4810 },
+	{ id = "small amethyst", chance = 3060 },
+	{ id = "fish fin", chance = 490 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Adept of the Cult (Tibia Wiki: https://tibia.fandom.com/wiki/Adept_of_the_Cult)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Adept of the Cult")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 254
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Goroma, Liberty Bay's deeper cult dungeon, Formorgar Mines, Magician Quarter, Forbidden Temple.",
-}
 
 monster.health = 430
 monster.maxHealth = 430
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -87,21 +77,21 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2828, chance = 940 }, -- book
-	{ name = "small ruby", chance = 320 },
-	{ name = "gold coin", chance = 65520, maxCount = 60 },
+	{ id = "small ruby", chance = 320 },
+	{ id = "gold coin", chance = 65520, maxCount = 60 },
 	{ id = 3053, chance = 420 }, -- time ring
-	{ name = "silver amulet", chance = 1020 },
-	{ name = "hailstorm rod", chance = 220 },
-	{ name = "clerical mace", chance = 1260 },
-	{ name = "red robe", chance = 80 },
-	{ name = "pirate voodoo doll", chance = 1730 },
+	{ id = "silver amulet", chance = 1020 },
+	{ id = "hailstorm rod", chance = 220 },
+	{ id = "clerical mace", chance = 1260 },
+	{ id = "red robe", chance = 80 },
+	{ id = "pirate voodoo doll", chance = 1730 },
 	{ id = 6089, chance = 700 }, -- music sheet
-	{ name = "lunar staff", chance = 120 },
-	{ name = "amber staff", chance = 680 },
-	{ name = "cultish robe", chance = 10080 },
-	{ name = "cultish symbol", chance = 90 },
-	{ name = "rope belt", chance = 10000 },
-	{ name = "broken key ring", chance = 120 },
+	{ id = "lunar staff", chance = 120 },
+	{ id = "amber staff", chance = 680 },
+	{ id = "cultish robe", chance = 10080 },
+	{ id = "cultish symbol", chance = 90 },
+	{ id = "rope belt", chance = 10000 },
+	{ id = "broken key ring", chance = 120 },
 }
 
 monster.attacks = {

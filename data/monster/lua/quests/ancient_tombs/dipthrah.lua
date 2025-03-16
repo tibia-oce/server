@@ -1,3 +1,6 @@
+-- Dipthrah (Tibia Wiki: https://tibia.fandom.com/wiki/Dipthrah)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Dipthrah")
 local monster = {}
 
@@ -52,8 +55,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,24 +79,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small sapphire", chance = 7000, maxCount = 3 },
-	{ name = "gold coin", chance = 50000, maxCount = 80 },
-	{ name = "gold coin", chance = 50000, maxCount = 80 },
-	{ name = "blue gem", chance = 1500 },
+	{ id = "small sapphire", chance = 7000, maxCount = 3 },
+	{ id = "gold coin", chance = 50000, maxCount = 80 },
+	{ id = "gold coin", chance = 50000, maxCount = 80 },
+	{ id = "blue gem", chance = 1500 },
 	{ id = 3051, chance = 7000 }, -- energy ring
-	{ name = "mind stone", chance = 1500 },
-	{ name = "ankh", chance = 500 },
-	{ name = "ornamented ankh", chance = 100000 },
-	{ name = "skull staff", chance = 500 },
-	{ name = "pharaoh sword", chance = 300 },
-	{ name = "great mana potion", chance = 7000 },
+	{ id = "mind stone", chance = 1500 },
+	{ id = "ankh", chance = 500 },
+	{ id = "ornamented ankh", chance = 100000 },
+	{ id = "skull staff", chance = 500 },
+	{ id = "pharaoh sword", chance = 300 },
+	{ id = "great mana potion", chance = 7000 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -200, condition = { type = CONDITION_POISON, totalDamage = 65, interval = 4000 } },
 	{ name = "combat", interval = 4000, chance = 20, type = COMBAT_LIFEDRAIN, minDamage = -100, maxDamage = -800, range = 1, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_MANADRAIN, minDamage = -100, maxDamage = -500, range = 7, effect = CONST_ME_MAGIC_RED, target = false },
-	{ name = "speed", interval = 1000, chance = 15, speedChange = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 50000 },
+	{ name = "speed", interval = 1000, chance = 15, speed = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 50000 },
 	{ name = "drunk", interval = 1000, chance = 12, radius = 7, effect = CONST_ME_LOSEENERGY, target = false },
 	{ name = "melee", interval = 3000, chance = 34, minDamage = -50, maxDamage = -600 },
 }

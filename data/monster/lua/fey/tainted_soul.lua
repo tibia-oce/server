@@ -1,3 +1,6 @@
+-- Tainted Soul (Tibia Wiki: https://tibia.fandom.com/wiki/Tainted_Soul)
+-- Version: 10.80
+
 local mType = Game.createMonsterType("Tainted Soul")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1137
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_FEY,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Tainted Caves in the Green Claw Swamp.",
-}
 
 monster.health = 250
 monster.maxHealth = 250
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 1000 },
+	{ id = "small ruby", chance = 1000 },
 }
 
 monster.attacks = {
@@ -88,7 +77,7 @@ monster.defenses = {
 	defense = 10,
 	armor = 10,
 	mitigation = 0.46,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 170},
 	{ name = "combat", interval = 2000, chance = 5, type = COMBAT_HEALING, minDamage = 15, maxDamage = 25, effect = CONST_ME_MAGIC_GREEN, target = false },
 	{ name = "invisible", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 3000 },
 }

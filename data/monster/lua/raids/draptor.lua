@@ -1,3 +1,6 @@
+-- Draptor (Tibia Wiki: https://tibia.fandom.com/wiki/Draptor)
+-- Version: 8.70
+
 local mType = Game.createMonsterType("Draptor")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 695
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Zao, north east of Dragonblaze Peaks during raid. There are up to 10 draptors per raid, \z
-		while 6 of them may also appear in mission 8 of Wrath of the Emperor Quest.",
-}
 
 monster.health = 3000
 monster.maxHealth = 3000
@@ -63,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,12 +69,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 33750, maxCount = 90 },
-	{ name = "gold coin", chance = 33750, maxCount = 60 },
-	{ name = "strong health potion", chance = 3150 },
-	{ name = "strong mana potion", chance = 4150 },
-	{ name = "dragon robe", chance = 950 },
-	{ name = "draptor scales", chance = 6650 },
+	{ id = "gold coin", chance = 33750, maxCount = 90 },
+	{ id = "gold coin", chance = 33750, maxCount = 60 },
+	{ id = "strong health potion", chance = 3150 },
+	{ id = "strong mana potion", chance = 4150 },
+	{ id = "dragon robe", chance = 950 },
+	{ id = "draptor scales", chance = 6650 },
 }
 
 monster.attacks = {
@@ -101,7 +89,7 @@ monster.defenses = {
 	armor = 40,
 	mitigation = 0.91,
 	{ name = "combat", interval = 1000, chance = 25, type = COMBAT_HEALING, minDamage = 57, maxDamage = 93, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 12, speedChange = 457, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 12, effect = CONST_ME_MAGIC_RED, speed = 680},
 }
 
 monster.elements = {

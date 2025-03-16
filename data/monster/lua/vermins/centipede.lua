@@ -1,3 +1,6 @@
+-- Centipede (Tibia Wiki: https://tibia.fandom.com/wiki/Centipede)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Centipede")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 124
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "All around Port Hope and Tiquanda, Dark Cathedral, Vandura, Meriana, Razzachai, \z
-	Slime cave east of Venore, Arena and Zoo Quarter, Gnarlhound Caves.",
-}
 
 monster.health = 70
 monster.maxHealth = 70
@@ -61,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,8 +64,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 80000, maxCount = 15 },
-	{ name = "centipede leg", chance = 10300 },
+	{ id = "gold coin", chance = 80000, maxCount = 15 },
+	{ id = "centipede leg", chance = 10300 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Phantasm (Tibia Wiki: https://tibia.fandom.com/wiki/Phantasm)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Phantasm")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 292
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Pits of Inferno, The Inquisition Quest, Deeper Banuta.",
-}
 
 monster.health = 3950
 monster.maxHealth = 3950
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 3,
@@ -85,24 +75,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 12160, maxCount = 3 },
-	{ name = "gold coin", chance = 30000, maxCount = 100 },
-	{ name = "gold coin", chance = 30000, maxCount = 100 },
-	{ name = "gold coin", chance = 28000, maxCount = 33 },
-	{ name = "small emerald", chance = 10190, maxCount = 3 },
-	{ name = "small amethyst", chance = 14570, maxCount = 3 },
-	{ name = "platinum coin", chance = 87730, maxCount = 4 },
+	{ id = "small ruby", chance = 12160, maxCount = 3 },
+	{ id = "gold coin", chance = 30000, maxCount = 100 },
+	{ id = "gold coin", chance = 30000, maxCount = 100 },
+	{ id = "gold coin", chance = 28000, maxCount = 33 },
+	{ id = "small emerald", chance = 10190, maxCount = 3 },
+	{ id = "small amethyst", chance = 14570, maxCount = 3 },
+	{ id = "platinum coin", chance = 87730, maxCount = 4 },
 	{ id = 3049, chance = 550 }, -- stealth ring
-	{ name = "blank rune", chance = 22500, maxCount = 2 },
-	{ name = "crown armor", chance = 660 },
-	{ name = "shadow herb", chance = 26930, maxCount = 2 },
+	{ id = "blank rune", chance = 22500, maxCount = 2 },
+	{ id = "crown armor", chance = 660 },
+	{ id = "shadow herb", chance = 26930, maxCount = 2 },
 	{ id = 6299, chance = 330 }, -- death ring
-	{ name = "demonic essence", chance = 16320 },
-	{ name = "abyss hammer", chance = 110 },
-	{ name = "shadow sceptre", chance = 550 },
-	{ name = "great mana potion", chance = 32750, maxCount = 2 },
-	{ name = "ultimate health potion", chance = 14680 },
-	{ name = "small topaz", chance = 12810, maxCount = 3 },
+	{ id = "demonic essence", chance = 16320 },
+	{ id = "abyss hammer", chance = 110 },
+	{ id = "shadow sceptre", chance = 550 },
+	{ id = "great mana potion", chance = 32750, maxCount = 2 },
+	{ id = "ultimate health potion", chance = 14680 },
+	{ id = "small topaz", chance = 12810, maxCount = 3 },
 }
 
 monster.attacks = {
@@ -118,7 +108,7 @@ monster.defenses = {
 	armor = 80,
 	mitigation = 1.10,
 	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 228, maxDamage = 449, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 500, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_RED, speed = 340},
 	{ name = "invisible", interval = 2000, chance = 25, effect = CONST_ME_MAGIC_BLUE },
 }
 

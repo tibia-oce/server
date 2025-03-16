@@ -1,3 +1,6 @@
+-- Cyclops Drone (Tibia Wiki: https://tibia.fandom.com/wiki/Cyclops_Drone)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Cyclops Drone")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 391
-monster.Bestiary = {
-	class = "Giant",
-	race = BESTY_RACE_GIANT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Cyclopolis, Mount Sternum, Mistrock and in the Cyclops version of the Forsaken Mine.",
-}
 
 monster.health = 325
 monster.maxHealth = 325
@@ -60,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,17 +68,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 82000, maxCount = 30 },
+	{ id = "gold coin", chance = 82000, maxCount = 30 },
 	{ id = 3093, chance = 90 }, -- club ring
-	{ name = "halberd", chance = 680 },
-	{ name = "short sword", chance = 8000 },
-	{ name = "dark helmet", chance = 190 },
-	{ name = "plate shield", chance = 2000 },
-	{ name = "battle shield", chance = 1600 },
-	{ name = "meat", chance = 50430, maxCount = 2 },
+	{ id = "halberd", chance = 680 },
+	{ id = "short sword", chance = 8000 },
+	{ id = "dark helmet", chance = 190 },
+	{ id = "plate shield", chance = 2000 },
+	{ id = "battle shield", chance = 1600 },
+	{ id = "meat", chance = 50430, maxCount = 2 },
 	{ id = 7398, chance = 120 }, -- cyclops trophy
-	{ name = "strong health potion", chance = 520 },
-	{ name = "cyclops toe", chance = 6750 },
+	{ id = "strong health potion", chance = 520 },
+	{ id = "cyclops toe", chance = 6750 },
 }
 
 monster.attacks = {

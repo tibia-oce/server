@@ -1,3 +1,6 @@
+-- The Handmaiden (Tibia Wiki: https://tibia.fandom.com/wiki/The_Handmaiden)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("The Handmaiden")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -81,10 +83,10 @@ monster.defenses = {
 	defense = 35,
 	armor = 25,
 	--	mitigation = ???,
-	{ name = "speed", interval = 3000, chance = 12, speedChange = 380, effect = CONST_ME_MAGIC_RED, target = false, duration = 8000 },
+	{ name = "speed", interval = 3000, chance = 12, effect = CONST_ME_MAGIC_RED, speed = 450},
 	{ name = "invisible", interval = 4000, chance = 50, effect = CONST_ME_MAGIC_RED },
 	{ name = "combat", interval = 2000, chance = 50, type = COMBAT_HEALING, minDamage = 100, maxDamage = 250, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 1000, chance = 35, speedChange = 370, effect = CONST_ME_MAGIC_RED, target = false, duration = 30000 },
+	{ name = "speed", interval = 1000, chance = 35, effect = CONST_ME_MAGIC_RED, speed = 450},
 }
 
 monster.elements = {

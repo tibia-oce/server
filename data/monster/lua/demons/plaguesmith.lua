@@ -1,3 +1,6 @@
+-- Plaguesmith (Tibia Wiki: https://tibia.fandom.com/wiki/Plaguesmith)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Plaguesmith")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 314
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Pits of Inferno, Formorgar Mines, Edron Demon Forge (The Vats, The Foundry), \z
-	Magician Quarter, Alchemist Quarter, Roshamuul Prison, Grounds of Plague and Halls of Ascension.",
-}
 
 monster.health = 8250
 monster.maxHealth = 8250
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -81,33 +70,33 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "emerald bangle", chance = 341 },
-	{ name = "silver brooch", chance = 2000 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 40000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 65 },
-	{ name = "small amethyst", chance = 5000, maxCount = 3 },
-	{ name = "platinum coin", chance = 7142, maxCount = 2 },
+	{ id = "emerald bangle", chance = 341 },
+	{ id = "silver brooch", chance = 2000 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 40000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 65 },
+	{ id = "small amethyst", chance = 5000, maxCount = 3 },
+	{ id = "platinum coin", chance = 7142, maxCount = 2 },
 	{ id = 3092, chance = 4347 }, -- axe ring
 	{ id = 3093, chance = 4761 }, -- club ring
-	{ name = "piece of iron", chance = 20000 },
-	{ name = "mouldy cheese", chance = 50000 },
+	{ id = "piece of iron", chance = 20000 },
+	{ id = "mouldy cheese", chance = 50000 },
 	{ id = 3122, chance = 60000 }, -- dirty cape
-	{ name = "two handed sword", chance = 20000 },
-	{ name = "war hammer", chance = 2127 },
-	{ name = "morning star", chance = 29000 },
-	{ name = "battle hammer", chance = 20000 },
-	{ name = "hammer of wrath", chance = 952 },
-	{ name = "knight legs", chance = 6250 },
-	{ name = "steel shield", chance = 20000 },
-	{ name = "steel boots", chance = 1123 },
-	{ name = "piece of royal steel", chance = 1234 },
-	{ name = "piece of hell steel", chance = 1010 },
-	{ name = "piece of draconian steel", chance = 1030 },
-	{ name = "soul orb", chance = 11111 },
-	{ name = "demonic essence", chance = 9033 },
-	{ name = "onyx arrow", chance = 7692, maxCount = 4 },
-	{ name = "great health potion", chance = 10000 },
+	{ id = "two handed sword", chance = 20000 },
+	{ id = "war hammer", chance = 2127 },
+	{ id = "morning star", chance = 29000 },
+	{ id = "battle hammer", chance = 20000 },
+	{ id = "hammer of wrath", chance = 952 },
+	{ id = "knight legs", chance = 6250 },
+	{ id = "steel shield", chance = 20000 },
+	{ id = "steel boots", chance = 1123 },
+	{ id = "piece of royal steel", chance = 1234 },
+	{ id = "piece of hell steel", chance = 1010 },
+	{ id = "piece of draconian steel", chance = 1030 },
+	{ id = "soul orb", chance = 11111 },
+	{ id = "demonic essence", chance = 9033 },
+	{ id = "onyx arrow", chance = 7692, maxCount = 4 },
+	{ id = "great health potion", chance = 10000 },
 	{ id = 8896, chance = 540 }, -- slightly rusted armor
 }
 
@@ -115,7 +104,7 @@ monster.attacks = {
 	{ name = "melee", interval = 1500, chance = 100, minDamage = 0, maxDamage = -539, condition = { type = CONDITION_POISON, totalDamage = 200, interval = 4000 } },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -60, maxDamage = -114, radius = 4, effect = CONST_ME_POISONAREA, target = false },
 	{ name = "plaguesmith wave", interval = 2000, chance = 10, minDamage = -100, maxDamage = -350, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -800, radius = 4, effect = CONST_ME_POISONAREA, target = false, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -800, radius = 4, effect = CONST_ME_POISONAREA, target = false, duration = 30000 },
 }
 
 monster.defenses = {
@@ -123,7 +112,7 @@ monster.defenses = {
 	armor = 30,
 	mitigation = 1.32,
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 200, maxDamage = 280, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 440, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 320},
 }
 
 monster.elements = {

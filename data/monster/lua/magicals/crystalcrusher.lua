@@ -1,3 +1,6 @@
+-- Crystalcrusher (Tibia Wiki: https://tibia.fandom.com/wiki/Crystalcrusher)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Crystalcrusher")
 local monster = {}
 
@@ -17,18 +20,6 @@ monster.events = {
 	"MiddleSpikeDeath",
 }
 
-monster.raceId = 869
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Crystal Grounds, Mushroom Farms, Middle Spike.",
-}
 
 monster.health = 570
 monster.maxHealth = 570
@@ -66,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,12 +72,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 85000, maxCount = 90 },
-	{ name = "crystalline arrow", chance = 5000, maxCount = 3 },
-	{ name = "green crystal splinter", chance = 4920 },
-	{ name = "brown crystal splinter", chance = 5250 },
-	{ name = "blue crystal splinter", chance = 5000 },
-	{ name = "crystalline spikes", chance = 3690 },
+	{ id = "gold coin", chance = 85000, maxCount = 90 },
+	{ id = "crystalline arrow", chance = 5000, maxCount = 3 },
+	{ id = "green crystal splinter", chance = 4920 },
+	{ id = "brown crystal splinter", chance = 5250 },
+	{ id = "blue crystal splinter", chance = 5000 },
+	{ id = "crystalline spikes", chance = 3690 },
 }
 
 monster.attacks = {

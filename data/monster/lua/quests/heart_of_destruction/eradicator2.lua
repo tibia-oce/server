@@ -1,3 +1,6 @@
+-- Eradicator2 (Tibia Wiki: https://tibia.fandom.com/wiki/Eradicator)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Eradicator2")
 local monster = {}
 
@@ -55,8 +58,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.events = {
 	"HeartBossDeath",

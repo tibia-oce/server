@@ -1,3 +1,6 @@
+-- Yaga the Crone (Tibia Wiki: https://tibia.fandom.com/wiki/Yaga_the_Crone)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Yaga the Crone")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -71,17 +73,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "cape", chance = 66000 },
-	{ name = "broom", chance = 62500 },
-	{ name = "cookie", chance = 62500, maxCount = 8 },
-	{ name = "gold coin", chance = 29170, maxCount = 55 },
-	{ name = "star herb", chance = 20833 },
+	{ id = "cape", chance = 66000 },
+	{ id = "broom", chance = 62500 },
+	{ id = "cookie", chance = 62500, maxCount = 8 },
+	{ id = "gold coin", chance = 29170, maxCount = 55 },
+	{ id = "star herb", chance = 20833 },
 	{ id = 3012, chance = 20833 }, -- wolf tooth chain
-	{ name = "garlic necklace", chance = 8333 },
-	{ name = "spellbook of mind control", chance = 8333 },
-	{ name = "coat", chance = 4170 },
-	{ name = "necrotic rod", chance = 4170 },
-	{ name = "silver dagger", chance = 4170 },
+	{ id = "garlic necklace", chance = 8333 },
+	{ id = "spellbook of mind control", chance = 8333 },
+	{ id = "coat", chance = 4170 },
+	{ id = "necrotic rod", chance = 4170 },
+	{ id = "silver dagger", chance = 4170 },
 }
 
 monster.attacks = {

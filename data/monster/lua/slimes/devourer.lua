@@ -1,3 +1,6 @@
+-- Devourer (Tibia Wiki: https://tibia.fandom.com/wiki/Devourer)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Devourer")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1056
-monster.Bestiary = {
-	class = "Slime",
-	race = BESTY_RACE_SLIME,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Rathleton Sewers, Lower Rathleton, Oramond/Western Plains, \z
-		Underground Glooth Factory, Jaccus Maxxen's Dungeon.",
-}
 
 monster.health = 1900
 monster.maxHealth = 1900
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 4,

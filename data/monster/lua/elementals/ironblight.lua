@@ -1,3 +1,6 @@
+-- Ironblight (Tibia Wiki: https://tibia.fandom.com/wiki/Ironblight)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Ironblight")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 890
-monster.Bestiary = {
-	class = "Elemental",
-	race = BESTY_RACE_ELEMENTAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 1,
-	Locations = "Warzone 3.",
-}
 
 monster.health = 6600
 monster.maxHealth = 6600
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,30 +68,30 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 199 },
-	{ name = "small emerald", chance = 10890, maxCount = 3 },
-	{ name = "small amethyst", chance = 15020, maxCount = 3 },
-	{ name = "platinum coin", chance = 100000, maxCount = 8 },
+	{ id = "gold coin", chance = 100000, maxCount = 199 },
+	{ id = "small emerald", chance = 10890, maxCount = 3 },
+	{ id = "small amethyst", chance = 15020, maxCount = 3 },
+	{ id = "platinum coin", chance = 100000, maxCount = 8 },
 	{ id = 3039, chance = 3510 }, -- red gem
-	{ name = "blue gem", chance = 480 },
-	{ name = "epee", chance = 480 },
-	{ name = "magic sulphur", chance = 830 },
-	{ name = "sapphire hammer", chance = 480 },
-	{ name = "great mana potion", chance = 17640 },
-	{ name = "terra legs", chance = 1110 },
-	{ name = "ultimate health potion", chance = 18330 },
-	{ name = "composite hornbow", chance = 210 },
-	{ name = "springsprout rod", chance = 1720 },
-	{ name = "crystal of balance", chance = 4480 },
-	{ name = "crystal of power", chance = 2480 },
-	{ name = "war crystal", chance = 21230 },
-	{ name = "shiny stone", chance = 15230 },
-	{ name = "jade hat", chance = 210 },
-	{ name = "glacial rod", chance = 960 },
-	{ name = "green crystal shard", chance = 5720 },
-	{ name = "brown crystal splinter", chance = 12610, maxCount = 2 },
-	{ name = "red crystal fragment", chance = 10540 },
-	{ name = "crystalline spikes", chance = 18400 },
+	{ id = "blue gem", chance = 480 },
+	{ id = "epee", chance = 480 },
+	{ id = "magic sulphur", chance = 830 },
+	{ id = "sapphire hammer", chance = 480 },
+	{ id = "great mana potion", chance = 17640 },
+	{ id = "terra legs", chance = 1110 },
+	{ id = "ultimate health potion", chance = 18330 },
+	{ id = "composite hornbow", chance = 210 },
+	{ id = "springsprout rod", chance = 1720 },
+	{ id = "crystal of balance", chance = 4480 },
+	{ id = "crystal of power", chance = 2480 },
+	{ id = "war crystal", chance = 21230 },
+	{ id = "shiny stone", chance = 15230 },
+	{ id = "jade hat", chance = 210 },
+	{ id = "glacial rod", chance = 960 },
+	{ id = "green crystal shard", chance = 5720 },
+	{ id = "brown crystal splinter", chance = 12610, maxCount = 2 },
+	{ id = "red crystal fragment", chance = 10540 },
+	{ id = "crystalline spikes", chance = 18400 },
 }
 
 monster.attacks = {
@@ -110,7 +100,7 @@ monster.attacks = {
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -460, maxDamage = -480, radius = 6, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_ICEDAMAGE, minDamage = -260, maxDamage = -350, length = 7, spread = 0, shootEffect = CONST_ANI_ICE, effect = CONST_ME_ICEATTACK, target = false },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_EARTHDAMAGE, minDamage = -180, maxDamage = -250, radius = 2, shootEffect = CONST_ANI_GREENSTAR, effect = CONST_ME_BIGPLANTS, target = true },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -800, length = 5, spread = 0, effect = CONST_ME_BLOCKHIT, target = false, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -800, length = 5, spread = 0, effect = CONST_ME_BLOCKHIT, target = false, duration = 30000 },
 }
 
 monster.defenses = {

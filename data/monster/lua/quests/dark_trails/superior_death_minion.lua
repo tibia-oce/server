@@ -1,3 +1,6 @@
+-- Superior Death Minion (Tibia Wiki: https://tibia.fandom.com/wiki/Superior_Death_Minion)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Superior Death Minion")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

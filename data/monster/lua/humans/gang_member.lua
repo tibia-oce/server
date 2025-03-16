@@ -1,3 +1,6 @@
+-- Gang Member (Tibia Wiki: https://tibia.fandom.com/wiki/Gang_Member)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Gang Member")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 526
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Throughout the Foreigner, Factory, and Trade Quarters in Yalahar.",
-}
 
 monster.health = 295
 monster.maxHealth = 295
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,10 +68,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50110, maxCount = 30 },
+	{ id = "gold coin", chance = 50110, maxCount = 30 },
 	{ id = 3093, chance = 740 }, -- club ring
-	{ name = "studded legs", chance = 5220 },
-	{ name = "leather legs", chance = 15330 },
+	{ id = "studded legs", chance = 5220 },
+	{ id = "leather legs", chance = 15330 },
 }
 
 monster.attacks = {

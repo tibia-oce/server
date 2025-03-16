@@ -1,3 +1,6 @@
+-- Lesser Swarmer (Tibia Wiki: https://tibia.fandom.com/wiki/Lesser_Swarmer)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Lesser Swarmer")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

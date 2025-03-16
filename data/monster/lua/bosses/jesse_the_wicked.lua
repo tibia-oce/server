@@ -1,3 +1,6 @@
+-- Jesse the Wicked (Tibia Wiki: https://tibia.fandom.com/wiki/Jesse_the_Wicked)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Jesse the Wicked")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -73,8 +75,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 100000, maxCount = 99 },
-	{ name = "bag with stolen gold", chance = 100000 },
+	{ id = "platinum coin", chance = 100000, maxCount = 99 },
+	{ id = "bag with stolen gold", chance = 100000 },
 }
 
 monster.attacks = {

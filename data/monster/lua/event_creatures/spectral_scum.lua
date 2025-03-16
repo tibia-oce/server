@@ -1,3 +1,6 @@
+-- Spectral Scum (Tibia Wiki: https://tibia.fandom.com/wiki/Spectral_Scum)
+-- Version: 8.70
+
 local mType = Game.createMonsterType("Spectral Scum")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

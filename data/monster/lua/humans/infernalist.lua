@@ -1,3 +1,6 @@
+-- Infernalist (Tibia Wiki: https://tibia.fandom.com/wiki/Infernalist)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Infernalist")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 529
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Magician Quarter, Hero Cave, Demona, Fury Dungeon.",
-}
 
 monster.health = 3650
 monster.maxHealth = 3650
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -84,24 +74,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "red tome", chance = 300 },
-	{ name = "piggy bank", chance = 220 },
-	{ name = "gold coin", chance = 56500, maxCount = 100 },
-	{ name = "gold coin", chance = 40000, maxCount = 47 },
+	{ id = "red tome", chance = 300 },
+	{ id = "piggy bank", chance = 220 },
+	{ id = "gold coin", chance = 56500, maxCount = 100 },
+	{ id = "gold coin", chance = 40000, maxCount = 47 },
 	{ id = 3051, chance = 1800 }, -- energy ring
-	{ name = "skull staff", chance = 6500 },
-	{ name = "magic sulphur", chance = 600 },
-	{ name = "red piece of cloth", chance = 1420 },
-	{ name = "great mana potion", chance = 19700 },
-	{ name = "great health potion", chance = 1900 },
-	{ name = "small enchanted ruby", chance = 4250 },
-	{ name = "magma boots", chance = 300 },
-	{ name = "raspberry", chance = 8500, maxCount = 5 },
-	{ name = "spellbook of mind control", chance = 370 },
-	{ name = "royal tapestry", chance = 520 },
+	{ id = "skull staff", chance = 6500 },
+	{ id = "magic sulphur", chance = 600 },
+	{ id = "red piece of cloth", chance = 1420 },
+	{ id = "great mana potion", chance = 19700 },
+	{ id = "great health potion", chance = 1900 },
+	{ id = "small enchanted ruby", chance = 4250 },
+	{ id = "magma boots", chance = 300 },
+	{ id = "raspberry", chance = 8500, maxCount = 5 },
+	{ id = "spellbook of mind control", chance = 370 },
+	{ id = "royal tapestry", chance = 520 },
 	{ id = 9056, chance = 820 }, -- black skull
-	{ name = "gold ingot", chance = 70 },
-	{ name = "crystal of power", chance = 220 },
+	{ id = "gold ingot", chance = 70 },
+	{ id = "crystal of power", chance = 220 },
 }
 
 monster.attacks = {

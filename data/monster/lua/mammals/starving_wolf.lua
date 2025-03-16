@@ -1,3 +1,6 @@
+-- Starving Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Starving_Wolf)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Starving Wolf")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 723
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 2,
-	Locations = "East, west and south-west of the Femor Hills.",
-}
 
 monster.health = 85
 monster.maxHealth = 85
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,9 +66,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "dirty fur", chance = 64730 },
-	{ name = "meat", chance = 5300, maxCount = 2 },
-	{ name = "wolf paw", chance = 1430 },
+	{ id = "dirty fur", chance = 64730 },
+	{ id = "meat", chance = 5300, maxCount = 2 },
+	{ id = "wolf paw", chance = 1430 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Wild Dog (Tibia Wiki: https://tibia.fandom.com/wiki/Wild_Dog)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Wild Dog")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

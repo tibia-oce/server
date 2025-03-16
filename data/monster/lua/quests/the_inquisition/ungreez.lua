@@ -1,3 +1,6 @@
+-- Ungreez (Tibia Wiki: https://tibia.fandom.com/wiki/Ungreez)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Ungreez")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

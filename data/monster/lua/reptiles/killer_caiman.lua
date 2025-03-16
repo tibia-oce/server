@@ -1,3 +1,6 @@
+-- Killer Caiman (Tibia Wiki: https://tibia.fandom.com/wiki/Killer_Caiman)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Killer Caiman")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 627
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Northern Zao Plantations, Souleater Mountains, Muggy Plains, \z
-		Killer Caiman Cave in the Zao Steppe, Chyllfroest.",
-}
 
 monster.health = 1500
 monster.maxHealth = 1500
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,15 +63,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 80 },
-	{ name = "small emerald", chance = 10150, maxCount = 5 },
-	{ name = "obsidian lance", chance = 4975 },
-	{ name = "ham", chance = 40100 },
-	{ name = "crocodile boots", chance = 510 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 80 },
+	{ id = "small emerald", chance = 10150, maxCount = 5 },
+	{ id = "obsidian lance", chance = 4975 },
+	{ id = "ham", chance = 40100 },
+	{ id = "crocodile boots", chance = 510 },
 	{ id = 281, chance = 1130 }, -- giant shimmering pearl (green)
-	{ name = "piece of crocodile leather", chance = 25430 },
-	{ name = "bunch of ripe rice", chance = 4800, maxCount = 2 },
+	{ id = "piece of crocodile leather", chance = 25430 },
+	{ id = "bunch of ripe rice", chance = 4800, maxCount = 2 },
 }
 
 monster.attacks = {
@@ -93,7 +82,7 @@ monster.defenses = {
 	defense = 35,
 	armor = 40,
 	mitigation = 0.38,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 700, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 186},
 }
 
 monster.elements = {

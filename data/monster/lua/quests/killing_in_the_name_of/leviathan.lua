@@ -1,3 +1,6 @@
+-- Leviathan (Tibia Wiki: https://tibia.fandom.com/wiki/Leviathan)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Leviathan")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

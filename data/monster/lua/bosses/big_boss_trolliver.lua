@@ -1,3 +1,6 @@
+-- Big Boss Trolliver (Tibia Wiki: https://tibia.fandom.com/wiki/Big_Boss_Trolliver)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Big Boss Trolliver")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,13 +79,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 64 },
-	{ name = "meat", chance = 25000 },
-	{ name = "hand axe", chance = 9650 },
-	{ name = "leather boots", chance = 9000 },
-	{ name = "silver amulet", chance = 5450 },
-	{ name = "studded club", chance = 5450 },
-	{ name = "spear", chance = 100000 },
+	{ id = "gold coin", chance = 100000, maxCount = 64 },
+	{ id = "meat", chance = 25000 },
+	{ id = "hand axe", chance = 9650 },
+	{ id = "leather boots", chance = 9000 },
+	{ id = "silver amulet", chance = 5450 },
+	{ id = "studded club", chance = 5450 },
+	{ id = "spear", chance = 100000 },
 }
 
 monster.attacks = {

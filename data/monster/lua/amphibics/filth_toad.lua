@@ -1,3 +1,6 @@
+-- Filth Toad (Tibia Wiki: https://tibia.fandom.com/wiki/Filth_Toad)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Filth Toad")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 735
-monster.Bestiary = {
-	class = "Amphibic",
-	race = BESTY_RACE_AMPHIBIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 1,
-	Locations = "Tiquanda, around Lake Equivocolao.",
-}
 
 monster.health = 185
 monster.maxHealth = 185
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,11 +63,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 75000, maxCount = 21 },
-	{ name = "two handed sword", chance = 500 },
-	{ name = "mace", chance = 2000 },
+	{ id = "gold coin", chance = 75000, maxCount = 21 },
+	{ id = "two handed sword", chance = 500 },
+	{ id = "mace", chance = 2000 },
 	{ id = 3578, chance = 22000 }, -- fish
-	{ name = "poisonous slime", chance = 3000 },
+	{ id = "poisonous slime", chance = 3000 },
 }
 
 monster.attacks = {
@@ -90,7 +79,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 6,
 	mitigation = 0.41,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 210},
 }
 
 monster.elements = {

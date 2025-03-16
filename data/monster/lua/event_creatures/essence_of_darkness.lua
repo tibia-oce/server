@@ -1,3 +1,6 @@
+-- Essence of Darkness (Tibia Wiki: https://tibia.fandom.com/wiki/Essence_of_Darkness)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Essence of Darkness")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

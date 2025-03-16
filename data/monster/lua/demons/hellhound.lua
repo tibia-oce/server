@@ -1,3 +1,6 @@
+-- Hellhound (Tibia Wiki: https://tibia.fandom.com/wiki/Hellhound)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Hellhound")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 294
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Pits of Inferno (Infernatil's Throneroom), The Inquisition Quest Area, Hellgorge, \z
-	Roshamuul Prison, Chyllfroest, Oramond Dungeon, The Extension Site and Asura Vaults.",
-}
 
 monster.health = 7500
 monster.maxHealth = 7500
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,
@@ -132,7 +121,7 @@ monster.defenses = {
 	defense = 40,
 	armor = 60,
 	mitigation = 2.75,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 320, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 360},
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_HEALING, minDamage = 220, maxDamage = 425, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

@@ -1,3 +1,6 @@
+-- Heoni (Tibia Wiki: https://tibia.fandom.com/wiki/Heoni)
+-- Version: 8.60
+
 local mType = Game.createMonsterType("Heoni")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,7 +84,7 @@ monster.defenses = {
 	armor = 25,
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 11, type = COMBAT_HEALING, minDamage = 76, maxDamage = 84, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 290, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_RED, speed = 300},
 }
 
 monster.elements = {

@@ -1,3 +1,6 @@
+-- Wild Warrior (Tibia Wiki: https://tibia.fandom.com/wiki/Wild_Warrior)
+-- Version: 5.0
+
 local mType = Game.createMonsterType("Wild Warrior")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 47
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Dark Cathedral, Outlaw Camp, North of Thais, Cyclopolis, in Edron Hero Cave and around it, \z
-		the small camp near Femor Hills, in Ghostlands disguised as a statue.",
-}
 
 monster.health = 135
 monster.maxHealth = 135
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,14 +66,14 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2991, chance = 520 }, -- doll
-	{ name = "gold coin", chance = 49070, maxCount = 30 },
-	{ name = "axe", chance = 30710 },
-	{ name = "mace", chance = 9800 },
-	{ name = "chain helmet", chance = 5250 },
-	{ name = "iron helmet", chance = 580 },
-	{ name = "brass armor", chance = 2540 },
-	{ name = "steel shield", chance = 910 },
-	{ name = "brass shield", chance = 17000 },
+	{ id = "gold coin", chance = 49070, maxCount = 30 },
+	{ id = "axe", chance = 30710 },
+	{ id = "mace", chance = 9800 },
+	{ id = "chain helmet", chance = 5250 },
+	{ id = "iron helmet", chance = 580 },
+	{ id = "brass armor", chance = 2540 },
+	{ id = "steel shield", chance = 910 },
+	{ id = "brass shield", chance = 17000 },
 	{ id = 3606, chance = 9730, maxCount = 2 }, -- egg
 }
 
@@ -96,7 +85,7 @@ monster.defenses = {
 	defense = 20,
 	armor = 8,
 	mitigation = 0.46,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 190},
 }
 
 monster.elements = {

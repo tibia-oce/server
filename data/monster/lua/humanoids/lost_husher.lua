@@ -1,3 +1,6 @@
+-- Lost Husher (Tibia Wiki: https://tibia.fandom.com/wiki/Lost_Husher)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Lost Husher")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 924
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Caves of the Lost, Lower Spike and in the Lost Dwarf version of the Forsaken Mine.",
-}
 
 monster.health = 1600
 monster.maxHealth = 1600
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,28 +67,28 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "platinum coin", chance = 58670, maxCount = 2 },
-	{ name = "fire axe", chance = 330 },
-	{ name = "skull staff", chance = 280 },
-	{ name = "guardian shield", chance = 830 },
-	{ name = "tower shield", chance = 440 },
-	{ name = "brown mushroom", chance = 14920, maxCount = 2 },
-	{ name = "spiked squelcher", chance = 50 },
-	{ name = "strong health potion", chance = 11050, maxCount = 3 },
-	{ name = "great mana potion", chance = 10770, maxCount = 2 },
-	{ name = "terra legs", chance = 50 },
-	{ name = "terra boots", chance = 880 },
-	{ name = "small topaz", chance = 9780 },
-	{ name = "clay lump", chance = 500 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "platinum coin", chance = 58670, maxCount = 2 },
+	{ id = "fire axe", chance = 330 },
+	{ id = "skull staff", chance = 280 },
+	{ id = "guardian shield", chance = 830 },
+	{ id = "tower shield", chance = 440 },
+	{ id = "brown mushroom", chance = 14920, maxCount = 2 },
+	{ id = "spiked squelcher", chance = 50 },
+	{ id = "strong health potion", chance = 11050, maxCount = 3 },
+	{ id = "great mana potion", chance = 10770, maxCount = 2 },
+	{ id = "terra legs", chance = 50 },
+	{ id = "terra boots", chance = 880 },
+	{ id = "small topaz", chance = 9780 },
+	{ id = "clay lump", chance = 500 },
 	{ id = 12600, chance = 10930 }, -- coal
-	{ name = "buckle", chance = 8180 },
-	{ name = "buckle", chance = 770 },
-	{ name = "bonecarving knife", chance = 8510 },
-	{ name = "wimp tooth chain", chance = 8950 },
-	{ name = "skull shatterer", chance = 12320 },
-	{ name = "red hair dye", chance = 8510 },
-	{ name = "basalt figurine", chance = 8560 },
+	{ id = "buckle", chance = 8180 },
+	{ id = "buckle", chance = 770 },
+	{ id = "bonecarving knife", chance = 8510 },
+	{ id = "wimp tooth chain", chance = 8950 },
+	{ id = "skull shatterer", chance = 12320 },
+	{ id = "red hair dye", chance = 8510 },
+	{ id = "basalt figurine", chance = 8560 },
 }
 
 monster.attacks = {

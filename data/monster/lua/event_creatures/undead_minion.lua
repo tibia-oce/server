@@ -1,3 +1,6 @@
+-- Undead Minion (Tibia Wiki: https://tibia.fandom.com/wiki/Undead_Minion)
+-- Version: 7.92
+
 local mType = Game.createMonsterType("Undead Minion")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -63,11 +65,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 40 },
-	{ name = "blank rune", chance = 10000 },
-	{ name = "battle hammer", chance = 5000 },
-	{ name = "battle shield", chance = 1000 },
-	{ name = "guardian shield", chance = 5000 },
+	{ id = "gold coin", chance = 100000, maxCount = 40 },
+	{ id = "blank rune", chance = 10000 },
+	{ id = "battle hammer", chance = 5000 },
+	{ id = "battle shield", chance = 1000 },
+	{ id = "guardian shield", chance = 5000 },
 	{ id = 6570, chance = 5538 }, -- surprise bag
 	{ id = 6571, chance = 1538 }, -- surprise bag
 }

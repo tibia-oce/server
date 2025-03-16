@@ -1,3 +1,6 @@
+-- Death Blob (Tibia Wiki: https://tibia.fandom.com/wiki/Death_Blob)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Death Blob")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 514
-monster.Bestiary = {
-	class = "Slime",
-	race = BESTY_RACE_SLIME,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Alchemist Quarter, Drefia, Razzachai, Souleater Mountains, \z
-		Northern Zao Plantations and Raging Mage tower.",
-}
 
 monster.health = 320
 monster.maxHealth = 320
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -85,7 +74,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "glob of tar", chance = 18470 },
+	{ id = "glob of tar", chance = 18470 },
 }
 
 monster.attacks = {

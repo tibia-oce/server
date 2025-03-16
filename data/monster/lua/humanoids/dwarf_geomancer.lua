@@ -1,3 +1,6 @@
+-- Dwarf Geomancer (Tibia Wiki: https://tibia.fandom.com/wiki/Dwarf_Geomancer)
+-- Version: 7.0
+
 local mType = Game.createMonsterType("Dwarf Geomancer")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 66
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Mount Sternum Undead Cave, Dwarf Mines, Circle Room in Kazordoon, Triangle Tower, \z
-		Tiquanda Dwarf Cave, Cormaya Dwarven Cave, Beregar Mines.",
-}
 
 monster.health = 380
 monster.maxHealth = 380
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,19 +66,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small sapphire", chance = 710 },
-	{ name = "gold coin", chance = 50000, maxCount = 35 },
+	{ id = "small sapphire", chance = 710 },
+	{ id = "gold coin", chance = 50000, maxCount = 35 },
 	{ id = 3046, chance = 14000 }, -- magic light wand
 	{ id = 3059, chance = 360 }, -- spellbook
 	{ id = 3097, chance = 530 }, -- dwarven ring
-	{ name = "blank rune", chance = 33000 },
-	{ name = "clerical mace", chance = 1120 },
-	{ name = "pear", chance = 25000 },
-	{ name = "white mushroom", chance = 60000, maxCount = 2 },
-	{ name = "iron ore", chance = 120 },
-	{ name = "terra boots", chance = 470 },
-	{ name = "geomancer's robe", chance = 8000 },
-	{ name = "geomancer's staff", chance = 7000 },
+	{ id = "blank rune", chance = 33000 },
+	{ id = "clerical mace", chance = 1120 },
+	{ id = "pear", chance = 25000 },
+	{ id = "white mushroom", chance = 60000, maxCount = 2 },
+	{ id = "iron ore", chance = 120 },
+	{ id = "terra boots", chance = 470 },
+	{ id = "geomancer's robe", chance = 8000 },
+	{ id = "geomancer's staff", chance = 7000 },
 }
 
 monster.attacks = {

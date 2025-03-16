@@ -1,3 +1,6 @@
+-- Hellspawn (Tibia Wiki: https://tibia.fandom.com/wiki/Hellspawn)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Hellspawn")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 519
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Magician Quarter, Vengoth, Deeper Banuta, Formorgar Minese, Chyllfroest, Oramond Dungeon, Asura Palace, Asura Vaults.",
-}
 
 monster.health = 3500
 monster.maxHealth = 3500
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -81,25 +71,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 93000, maxCount = 236 },
-	{ name = "morning star", chance = 10000 },
-	{ name = "warrior helmet", chance = 1886 },
-	{ name = "knight legs", chance = 3030 },
-	{ name = "red mushroom", chance = 7692, maxCount = 2 },
-	{ name = "demonic essence", chance = 9090 },
-	{ name = "battle shield", chance = 7500 },
-	{ name = "assassin star", chance = 9090, maxCount = 2 },
-	{ name = "onyx flail", chance = 103 },
-	{ name = "berserk potion", chance = 934 },
-	{ name = "spiked squelcher", chance = 970 },
-	{ name = "great health potion", chance = 40333 },
-	{ name = "ultimate health potion", chance = 9090 },
+	{ id = "gold coin", chance = 93000, maxCount = 236 },
+	{ id = "morning star", chance = 10000 },
+	{ id = "warrior helmet", chance = 1886 },
+	{ id = "knight legs", chance = 3030 },
+	{ id = "red mushroom", chance = 7692, maxCount = 2 },
+	{ id = "demonic essence", chance = 9090 },
+	{ id = "battle shield", chance = 7500 },
+	{ id = "assassin star", chance = 9090, maxCount = 2 },
+	{ id = "onyx flail", chance = 103 },
+	{ id = "berserk potion", chance = 934 },
+	{ id = "spiked squelcher", chance = 970 },
+	{ id = "great health potion", chance = 40333 },
+	{ id = "ultimate health potion", chance = 9090 },
 	{ id = 8895, chance = 3125 }, -- rusted armor
 	{ id = 8896, chance = 3125 }, -- slightly rusted armor
 	{ id = 9034, chance = 140 }, -- dracoyle statue
 	{ id = 9056, chance = 151 }, -- black skull
-	{ name = "small topaz", chance = 5882, maxCount = 3 },
-	{ name = "hellspawn tail", chance = 20000 },
+	{ id = "small topaz", chance = 5882, maxCount = 3 },
+	{ id = "hellspawn tail", chance = 20000 },
 }
 
 monster.attacks = {
@@ -113,7 +103,7 @@ monster.defenses = {
 	armor = 44,
 	mitigation = 1.32,
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 120, maxDamage = 230, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 270, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 344},
 }
 
 monster.elements = {

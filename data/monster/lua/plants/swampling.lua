@@ -1,3 +1,6 @@
+-- Swampling (Tibia Wiki: https://tibia.fandom.com/wiki/Swampling)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Swampling")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 919
-monster.Bestiary = {
-	class = "Plant",
-	race = BESTY_RACE_PLANT,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Venore swamp area, Venore Salamander Cave, Tiquanda Laboratory.",
-}
 
 monster.health = 80
 monster.maxHealth = 80
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,17 +68,17 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3003, chance = 5080 }, -- rope
-	{ name = "gold coin", chance = 84900, maxCount = 12 },
-	{ name = "white mushroom", chance = 10220, maxCount = 5 },
-	{ name = "swampling club", chance = 7410 },
-	{ name = "swampling moss", chance = 19900 },
-	{ name = "piece of swampling wood", chance = 14870 },
+	{ id = "gold coin", chance = 84900, maxCount = 12 },
+	{ id = "white mushroom", chance = 10220, maxCount = 5 },
+	{ id = "swampling club", chance = 7410 },
+	{ id = "swampling moss", chance = 19900 },
+	{ id = "piece of swampling wood", chance = 14870 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -80 },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -2, maxDamage = -15, range = 7, shootEffect = CONST_ANI_POISON, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -300, length = 3, spread = 2, effect = CONST_ME_WATERSPLASH, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -300, length = 3, spread = 2, effect = CONST_ME_WATERSPLASH, target = false, duration = 5000 },
 }
 
 monster.defenses = {

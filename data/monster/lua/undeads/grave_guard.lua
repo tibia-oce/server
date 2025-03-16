@@ -1,3 +1,6 @@
+-- Grave Guard (Tibia Wiki: https://tibia.fandom.com/wiki/Grave_Guard)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Grave Guard")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 707
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Horestis Tomb.",
-}
 
 monster.health = 720
 monster.maxHealth = 720
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,14 +66,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 30 },
-	{ name = "scarab coin", chance = 4166 },
-	{ name = "daramian waraxe", chance = 1170 },
-	{ name = "grave flower", chance = 70000 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 30 },
+	{ id = "scarab coin", chance = 4166 },
+	{ id = "daramian waraxe", chance = 1170 },
+	{ id = "grave flower", chance = 70000 },
 	{ id = 6299, chance = 1754 }, -- death ring
-	{ name = "health potion", chance = 20000 },
-	{ name = "mana potion", chance = 20000 },
+	{ id = "health potion", chance = 20000 },
+	{ id = "mana potion", chance = 20000 },
 }
 
 monster.attacks = {

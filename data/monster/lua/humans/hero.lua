@@ -1,3 +1,6 @@
+-- Hero (Tibia Wiki: https://tibia.fandom.com/wiki/Hero)
+-- Version: 6.4
+
 local mType = Game.createMonsterType("Hero")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 73
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "In Hero Cave in Edron, it has many rooms with many kinds of monsters and different amounts of Heroes. \z
-		Also in Magician Quarter, accompanied by other monsters. Old Fortress.",
-}
 
 monster.health = 1400
 monster.maxHealth = 1400
@@ -62,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,30 +71,30 @@ monster.voices = {
 monster.loot = {
 	{ id = 2815, chance = 45000 }, -- scroll
 	{ id = 2949, chance = 1640 }, -- lyre
-	{ name = "piggy bank", chance = 80 },
+	{ id = "piggy bank", chance = 80 },
 	{ id = 3003, chance = 2190 }, -- rope
-	{ name = "wedding ring", chance = 4910 },
-	{ name = "gold coin", chance = 59500, maxCount = 100 },
-	{ name = "might ring", chance = 470 },
-	{ name = "two handed sword", chance = 1500 },
-	{ name = "war hammer", chance = 870 },
-	{ name = "fire sword", chance = 550 },
-	{ name = "bow", chance = 13300 },
-	{ name = "crown armor", chance = 490 },
-	{ name = "crown legs", chance = 660 },
-	{ name = "crown helmet", chance = 450 },
-	{ name = "crown shield", chance = 280 },
-	{ name = "arrow", chance = 26000, maxCount = 13 },
-	{ name = "green tunic", chance = 8000 },
-	{ name = "scarf", chance = 1110 },
-	{ name = "meat", chance = 8200, maxCount = 3 },
-	{ name = "grapes", chance = 19850 },
-	{ name = "red rose", chance = 20450 },
-	{ name = "red piece of cloth", chance = 2006 },
-	{ name = "sniper arrow", chance = 11400, maxCount = 4 },
-	{ name = "great health potion", chance = 720 },
-	{ name = "small notebook", chance = 930 },
-	{ name = "scroll of heroic deeds", chance = 5000 },
+	{ id = "wedding ring", chance = 4910 },
+	{ id = "gold coin", chance = 59500, maxCount = 100 },
+	{ id = "might ring", chance = 470 },
+	{ id = "two handed sword", chance = 1500 },
+	{ id = "war hammer", chance = 870 },
+	{ id = "fire sword", chance = 550 },
+	{ id = "bow", chance = 13300 },
+	{ id = "crown armor", chance = 490 },
+	{ id = "crown legs", chance = 660 },
+	{ id = "crown helmet", chance = 450 },
+	{ id = "crown shield", chance = 280 },
+	{ id = "arrow", chance = 26000, maxCount = 13 },
+	{ id = "green tunic", chance = 8000 },
+	{ id = "scarf", chance = 1110 },
+	{ id = "meat", chance = 8200, maxCount = 3 },
+	{ id = "grapes", chance = 19850 },
+	{ id = "red rose", chance = 20450 },
+	{ id = "red piece of cloth", chance = 2006 },
+	{ id = "sniper arrow", chance = 11400, maxCount = 4 },
+	{ id = "great health potion", chance = 720 },
+	{ id = "small notebook", chance = 930 },
+	{ id = "scroll of heroic deeds", chance = 5000 },
 }
 
 monster.attacks = {

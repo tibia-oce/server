@@ -1,3 +1,6 @@
+-- Mooh'Tah Warrior (Tibia Wiki: https://tibia.fandom.com/wiki/Mooh'Tah_Warrior)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Mooh'Tah Warrior")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1051
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Oramond/Southern Plains, Minotaur Hills, \z
-		Oramond Dungeon (depending on Magistrate votes), Underground Glooth Factory.",
-}
 
 monster.health = 1200
 monster.maxHealth = 1200
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,24 +65,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 119 },
-	{ name = "platinum coin", chance = 45450, maxCount = 3 },
+	{ id = "gold coin", chance = 100000, maxCount = 119 },
+	{ id = "platinum coin", chance = 45450, maxCount = 3 },
 	{ id = 21202, chance = 18970 }, -- mooh'tah shell
-	{ name = "strong mana potion", chance = 9290 },
-	{ name = "strong health potion", chance = 8500 },
-	{ name = "small ruby", chance = 7710 },
-	{ name = "small emerald", chance = 6320 },
-	{ name = "small amethyst", chance = 5340 },
-	{ name = "minotaur leather", chance = 5340 },
-	{ name = "minotaur horn", chance = 4550, maxCount = 2 },
-	{ name = "small topaz", chance = 4350 },
+	{ id = "strong mana potion", chance = 9290 },
+	{ id = "strong health potion", chance = 8500 },
+	{ id = "small ruby", chance = 7710 },
+	{ id = "small emerald", chance = 6320 },
+	{ id = "small amethyst", chance = 5340 },
+	{ id = "minotaur leather", chance = 5340 },
+	{ id = "minotaur horn", chance = 4550, maxCount = 2 },
+	{ id = "small topaz", chance = 4350 },
 	{ id = 3094, chance = 1580 }, -- sword ring
-	{ name = "cowtana", chance = 1380 },
+	{ id = "cowtana", chance = 1380 },
 	{ id = 21166, chance = 1380 }, -- mooh'tah plate
-	{ name = "knight armor", chance = 990 },
-	{ name = "red piece of cloth", chance = 790 },
-	{ name = "knight legs", chance = 590 },
-	{ name = "guardian shield", chance = 590 },
+	{ id = "knight armor", chance = 990 },
+	{ id = "red piece of cloth", chance = 790 },
+	{ id = "knight legs", chance = 590 },
+	{ id = "guardian shield", chance = 590 },
 	{ id = 7401, chance = 160 }, -- minotaur trophy
 }
 

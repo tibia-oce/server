@@ -1,3 +1,6 @@
+-- Elf (Tibia Wiki: https://tibia.fandom.com/wiki/Elf)
+-- Version: 6.2
+
 local mType = Game.createMonsterType("Elf")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 62
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Yalahar Foreigner Quarter and Trade Quarter, Maze of Lost Souls, Orc Fort (unreachable), \z
-		Hellgate, Shadowthorn, Ab'Dendriel elf caves, Elvenbane, north of Thais.",
-}
 
 monster.health = 100
 monster.maxHealth = 100
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,16 +68,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 44000, maxCount = 30 },
-	{ name = "longsword", chance = 10800 },
-	{ name = "studded helmet", chance = 13500 },
-	{ name = "studded armor", chance = 8960 },
-	{ name = "plate shield", chance = 9300 },
-	{ name = "arrow", chance = 7060, maxCount = 3 },
-	{ name = "leather boots", chance = 11410 },
+	{ id = "gold coin", chance = 44000, maxCount = 30 },
+	{ id = "longsword", chance = 10800 },
+	{ id = "studded helmet", chance = 13500 },
+	{ id = "studded armor", chance = 8960 },
+	{ id = "plate shield", chance = 9300 },
+	{ id = "arrow", chance = 7060, maxCount = 3 },
+	{ id = "leather boots", chance = 11410 },
 	{ id = 5921, chance = 940 }, -- heaven blossom
-	{ name = "plum", chance = 20000, maxCount = 2 },
-	{ name = "elvish talisman", chance = 2100 },
+	{ id = "plum", chance = 20000, maxCount = 2 },
+	{ id = "elvish talisman", chance = 2100 },
 }
 
 monster.attacks = {

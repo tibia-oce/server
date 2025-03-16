@@ -1,3 +1,6 @@
+-- Rat (Tibia Wiki: https://tibia.fandom.com/wiki/Rat)
+-- Version: 3.0
+
 local mType = Game.createMonsterType("Rat")
 local monster = {}
 
@@ -17,18 +20,6 @@ monster.events = {
 	"RationalRequestRatDeath",
 }
 
-monster.raceId = 21
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Rookgaard and Mainland, in most sewers and caves near towns. They can be found almost everywhere in Tibia.",
-}
 
 monster.health = 20
 monster.maxHealth = 20
@@ -63,8 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,7 +68,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 4 },
+	{ id = "gold coin", chance = 100000, maxCount = 4 },
 	{ id = 3607, chance = 39410 }, -- cheese
 }
 

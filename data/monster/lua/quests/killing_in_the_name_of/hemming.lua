@@ -1,3 +1,6 @@
+-- Hemming (Tibia Wiki: https://tibia.fandom.com/wiki/Hemming)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Hemming")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -102,7 +104,7 @@ monster.defenses = {
 	armor = 40,
 	mitigation = 1.03,
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 50, maxDamage = 200, effect = CONST_ME_MAGIC_GREEN, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 300, range = 7, effect = CONST_ME_SOUND_PURPLE, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, range = 7, effect = CONST_ME_SOUND_PURPLE, speed = 210},
 }
 
 monster.elements = {

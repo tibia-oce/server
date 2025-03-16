@@ -1,3 +1,6 @@
+-- Weakened Shlorg (Tibia Wiki: https://tibia.fandom.com/wiki/Weakened_Shlorg)
+-- Version: 10.20
+
 local mType = Game.createMonsterType("Weakened Shlorg")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

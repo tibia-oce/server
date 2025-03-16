@@ -1,3 +1,6 @@
+-- Terramite (Tibia Wiki: https://tibia.fandom.com/wiki/Terramite)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Terramite")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 631
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Steppe of Zao, Lion's Rock, Zao Terramite Caves, Darama Terramite Cave, \z
-		Terramite Breeding Tunnels. Also raids desert north of Ankrahmun.",
-}
 
 monster.health = 365
 monster.maxHealth = 365
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,10 +64,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 97520, maxCount = 45 },
-	{ name = "terramite shell", chance = 7730 },
-	{ name = "terramite eggs", chance = 4680, maxCount = 3 },
-	{ name = "terramite legs", chance = 14880 },
+	{ id = "gold coin", chance = 97520, maxCount = 45 },
+	{ id = "terramite shell", chance = 7730 },
+	{ id = "terramite eggs", chance = 4680, maxCount = 3 },
+	{ id = "terramite legs", chance = 14880 },
 }
 
 monster.attacks = {

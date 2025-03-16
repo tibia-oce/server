@@ -1,3 +1,6 @@
+-- Flamingo (Tibia Wiki: https://tibia.fandom.com/wiki/Flamingo)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Flamingo")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 212
-monster.Bestiary = {
-	class = "Bird",
-	race = BESTY_RACE_BIRD,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Tiquanda, Shattered Isles, Gardens of Night.",
-}
 
 monster.health = 25
 monster.maxHealth = 25
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,7 +63,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "downy feather", chance = 1180 },
+	{ id = "downy feather", chance = 1180 },
 }
 
 monster.defenses = {

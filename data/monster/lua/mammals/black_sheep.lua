@@ -1,3 +1,6 @@
+-- Black Sheep (Tibia Wiki: https://tibia.fandom.com/wiki/Black_Sheep)
+-- Version: 6.1
+
 local mType = Game.createMonsterType("Black Sheep")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 13
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Femor Hills, cultist cave in Liberty Bay, Drefia.",
-}
 
 monster.health = 20
 monster.maxHealth = 20
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,8 +64,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 70860, maxCount = 5 },
-	{ name = "black wool", chance = 1000 },
+	{ id = "meat", chance = 70860, maxCount = 5 },
+	{ id = "black wool", chance = 1000 },
 }
 
 monster.defenses = {

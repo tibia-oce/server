@@ -1,3 +1,6 @@
+-- The Mutated Pumpkin (Tibia Wiki: https://tibia.fandom.com/wiki/The_Mutated_Pumpkin)
+-- Version: 8.30
+
 local mType = Game.createMonsterType("The Mutated Pumpkin")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 6,
@@ -78,15 +80,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "pumpkin", chance = 100000 },
-	{ name = "yummy gummy worm", chance = 100000, maxCount = 20 },
+	{ id = "pumpkin", chance = 100000 },
+	{ id = "yummy gummy worm", chance = 100000, maxCount = 20 },
 	{ id = 3599, chance = 1000, maxCount = 50 }, -- candy cane
 	{ id = 6569, chance = 1000, maxCount = 50 }, -- candy
-	{ name = "spiderwebs", chance = 1000 },
+	{ id = "spiderwebs", chance = 1000 },
 	{ id = 8178, chance = 1000 }, -- toy spider
 	{ id = 6491, chance = 1000 }, -- bat decoration
 	{ id = 6525, chance = 1000 }, -- skeleton decoration
-	{ name = "bar of chocolate", chance = 1000 },
+	{ id = "bar of chocolate", chance = 1000 },
 	{ id = 6570, chance = 1000 }, -- surprise bag
 	{ id = 6571, chance = 1000 }, -- surprise bag
 	{ id = 2977, chance = 1000 }, -- pumpkinhead

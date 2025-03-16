@@ -1,3 +1,6 @@
+-- Glooth Powered Minotaur (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Powered_Minotaur)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Glooth Powered Minotaur")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

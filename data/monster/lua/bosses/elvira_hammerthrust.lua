@@ -1,3 +1,6 @@
+-- Elvira Hammerthrust (Tibia Wiki: https://tibia.fandom.com/wiki/Elvira_Hammerthrust)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Elvira Hammerthrust")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -72,8 +74,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "bag with stolen gold", chance = 100000 },
-	{ name = "platinum coin", chance = 75000, maxCount = 100 },
+	{ id = "bag with stolen gold", chance = 100000 },
+	{ id = "platinum coin", chance = 75000, maxCount = 100 },
 }
 
 monster.attacks = {

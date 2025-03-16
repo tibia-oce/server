@@ -1,3 +1,6 @@
+-- The Count (Tibia Wiki: https://tibia.fandom.com/wiki/The_Count)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("The Count")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

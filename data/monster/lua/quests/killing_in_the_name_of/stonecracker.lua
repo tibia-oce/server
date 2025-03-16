@@ -1,3 +1,6 @@
+-- Stonecracker (Tibia Wiki: https://tibia.fandom.com/wiki/Stonecracker)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Stonecracker")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -84,7 +86,7 @@ monster.defenses = {
 	defense = 45,
 	armor = 40,
 	mitigation = 1.94,
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 360, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_RED, speed = 280},
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 500, maxDamage = 600, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

@@ -1,3 +1,6 @@
+-- Frost Giant (Tibia Wiki: https://tibia.fandom.com/wiki/Frost_Giant)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Frost Giant")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 324
-monster.Bestiary = {
-	class = "Giant",
-	race = BESTY_RACE_GIANT,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Tyrsung (in the Jotunar mountain), Formorgar Glacier (single spawn), \z
-		Mammoth Shearing Factory, Chyllfroest.",
-}
 
 monster.health = 270
 monster.maxHealth = 270
@@ -61,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,18 +70,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 82000, maxCount = 40 },
+	{ id = "gold coin", chance = 82000, maxCount = 40 },
 	{ id = 3093, chance = 130 }, -- club ring
-	{ name = "halberd", chance = 560 },
-	{ name = "short sword", chance = 8140 },
-	{ name = "dark helmet", chance = 180 },
-	{ name = "battle shield", chance = 1350 },
-	{ name = "meat", chance = 4970, maxCount = 2 },
-	{ name = "shard", chance = 60 },
+	{ id = "halberd", chance = 560 },
+	{ id = "short sword", chance = 8140 },
+	{ id = "dark helmet", chance = 180 },
+	{ id = "battle shield", chance = 1350 },
+	{ id = "meat", chance = 4970, maxCount = 2 },
+	{ id = "shard", chance = 60 },
 	{ id = 7441, chance = 2180 }, -- ice cube
-	{ name = "norse shield", chance = 250 },
-	{ name = "health potion", chance = 819 },
-	{ name = "frost giant pelt", chance = 5000 },
+	{ id = "norse shield", chance = 250 },
+	{ id = "health potion", chance = 819 },
+	{ id = "frost giant pelt", chance = 5000 },
 }
 
 monster.attacks = {
@@ -104,7 +93,7 @@ monster.defenses = {
 	defense = 20,
 	armor = 22,
 	mitigation = 0.46,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 300, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 190},
 }
 
 monster.elements = {

@@ -1,3 +1,6 @@
+-- Ferumbras (Tibia Wiki: https://tibia.fandom.com/wiki/Ferumbras)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Ferumbras")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

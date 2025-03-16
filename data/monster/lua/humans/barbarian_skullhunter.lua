@@ -1,3 +1,6 @@
+-- Barbarian Skullhunter (Tibia Wiki: https://tibia.fandom.com/wiki/Barbarian_Skullhunter)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Barbarian Skullhunter")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 322
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Ragnir, Krimhorn, Bittermor, and Fenrock.",
-}
 
 monster.health = 135
 monster.maxHealth = 135
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,18 +70,18 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 6680 }, -- torch
-	{ name = "gold coin", chance = 8240, maxCount = 30 },
+	{ id = "gold coin", chance = 8240, maxCount = 30 },
 	{ id = 3052, chance = 300 }, -- life ring
 	{ id = 3114, chance = 3000 }, -- skull
-	{ name = "knife", chance = 1067 },
-	{ name = "brass helmet", chance = 2200 },
-	{ name = "viking helmet", chance = 860 },
-	{ name = "scale armor", chance = 440 },
-	{ name = "brown piece of cloth", chance = 500 },
-	{ name = "crystal sword", chance = 100 },
-	{ name = "fur boots", chance = 100 },
-	{ name = "ragnir helmet", chance = 100 },
-	{ name = "health potion", chance = 100 },
+	{ id = "knife", chance = 1067 },
+	{ id = "brass helmet", chance = 2200 },
+	{ id = "viking helmet", chance = 860 },
+	{ id = "scale armor", chance = 440 },
+	{ id = "brown piece of cloth", chance = 500 },
+	{ id = "crystal sword", chance = 100 },
+	{ id = "fur boots", chance = 100 },
+	{ id = "ragnir helmet", chance = 100 },
+	{ id = "health potion", chance = 100 },
 }
 
 monster.attacks = {

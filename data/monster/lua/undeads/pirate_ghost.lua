@@ -1,3 +1,6 @@
+-- Pirate Ghost (Tibia Wiki: https://tibia.fandom.com/wiki/Pirate_Ghost)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Pirate Ghost")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 257
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Drefia, Goroma, Nargor Undead Cave, hidden caves under Treasure Island, \z
-		single spawn at Liberty Bay ruins, Chyllfroest (unreachable).",
-}
 
 monster.health = 275
 monster.maxHealth = 275
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,11 +69,11 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2817, chance = 910 }, -- blank parchment
-	{ name = "gold coin", chance = 48000, maxCount = 67 },
+	{ id = "gold coin", chance = 48000, maxCount = 67 },
 	{ id = 3049, chance = 650 }, -- stealth ring
-	{ name = "spike sword", chance = 130 },
-	{ name = "red robe", chance = 130 },
-	{ name = "tattered piece of robe", chance = 4300 },
+	{ id = "spike sword", chance = 130 },
+	{ id = "red robe", chance = 130 },
+	{ id = "tattered piece of robe", chance = 4300 },
 }
 
 monster.attacks = {

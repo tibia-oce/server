@@ -1,3 +1,6 @@
+-- Vashresamun (Tibia Wiki: https://tibia.fandom.com/wiki/Vashresamun)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Vashresamun")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -82,14 +84,14 @@ monster.loot = {
 	{ id = 2950, chance = 7000 }, -- lute
 	{ id = 2953, chance = 1500 }, -- panpipes
 	{ id = 3007, chance = 1500 }, -- crystal ring
-	{ name = "ancient tiara", chance = 300 },
-	{ name = "white pearl", chance = 7000 },
-	{ name = "gold coin", chance = 50000, maxCount = 90 },
-	{ name = "gold coin", chance = 50000, maxCount = 80 },
-	{ name = "gold coin", chance = 50000, maxCount = 65 },
-	{ name = "blue note", chance = 100000 },
-	{ name = "crystal mace", chance = 500 },
-	{ name = "blue robe", chance = 2500 },
+	{ id = "ancient tiara", chance = 300 },
+	{ id = "white pearl", chance = 7000 },
+	{ id = "gold coin", chance = 50000, maxCount = 90 },
+	{ id = "gold coin", chance = 50000, maxCount = 80 },
+	{ id = "gold coin", chance = 50000, maxCount = 65 },
+	{ id = "blue note", chance = 100000 },
+	{ id = "crystal mace", chance = 500 },
+	{ id = "blue robe", chance = 2500 },
 }
 
 monster.attacks = {
@@ -101,7 +103,7 @@ monster.defenses = {
 	defense = 35,
 	armor = 20,
 	{ name = "combat", interval = 1000, chance = 20, type = COMBAT_HEALING, minDamage = 60, maxDamage = 450, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 1000, chance = 12, speedChange = 350, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 30000 },
+	{ name = "speed", interval = 1000, chance = 12, range = 7, effect = CONST_ME_MAGIC_RED, speed = 340},
 }
 
 monster.elements = {

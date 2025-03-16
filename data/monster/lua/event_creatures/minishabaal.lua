@@ -1,3 +1,6 @@
+-- Minishabaal (Tibia Wiki: https://tibia.fandom.com/wiki/Minishabaal)
+-- Version: 7.92
+
 local mType = Game.createMonsterType("Minishabaal")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -109,7 +111,7 @@ monster.defenses = {
 	armor = 25,
 	mitigation = 1.60,
 	{ name = "combat", interval = 1000, chance = 50, type = COMBAT_HEALING, minDamage = 155, maxDamage = 255, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 1000, chance = 12, speedChange = 320, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 1000, chance = 12, effect = CONST_ME_MAGIC_RED, speed = 700},
 	{ name = "invisible", interval = 4000, chance = 50, effect = CONST_ME_MAGIC_RED },
 }
 

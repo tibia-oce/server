@@ -1,3 +1,6 @@
+-- Zombie (Tibia Wiki: https://tibia.fandom.com/wiki/Zombie)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Zombie")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 512
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Cemetery Quarter, Drefia, Vampire Castle, Treasure Island, Isle of Evil, Upper Spike.",
-}
 
 monster.health = 500
 monster.maxHealth = 500
@@ -61,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,16 +69,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 82000, maxCount = 65 },
-	{ name = "halberd", chance = 3750 },
-	{ name = "mace", chance = 7250 },
-	{ name = "battle hammer", chance = 7000 },
-	{ name = "steel helmet", chance = 4600 },
-	{ name = "brass helmet", chance = 9400 },
-	{ name = "simple dress", chance = 560 },
-	{ name = "mana potion", chance = 740 },
+	{ id = "gold coin", chance = 82000, maxCount = 65 },
+	{ id = "halberd", chance = 3750 },
+	{ id = "mace", chance = 7250 },
+	{ id = "battle hammer", chance = 7000 },
+	{ id = "steel helmet", chance = 4600 },
+	{ id = "brass helmet", chance = 9400 },
+	{ id = "simple dress", chance = 560 },
+	{ id = "mana potion", chance = 740 },
 	{ id = 8894, chance = 5680 }, -- heavily rusted armor
-	{ name = "half-eaten brain", chance = 10000 },
+	{ id = "half-eaten brain", chance = 10000 },
 }
 
 monster.attacks = {

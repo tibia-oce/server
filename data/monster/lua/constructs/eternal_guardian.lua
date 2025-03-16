@@ -1,3 +1,6 @@
+-- Eternal Guardian (Tibia Wiki: https://tibia.fandom.com/wiki/Eternal_Guardian)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Eternal Guardian")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 615
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "North-east Muggy Plains, Deeper Banuta.",
-}
 
 monster.health = 2500
 monster.maxHealth = 2500
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,19 +68,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small stone", chance = 30230, maxCount = 10 },
-	{ name = "gold coin", chance = 99930, maxCount = 100 },
-	{ name = "platinum coin", chance = 99540, maxCount = 4 },
-	{ name = "guardian halberd", chance = 560 },
-	{ name = "tower shield", chance = 820 },
-	{ name = "iron ore", chance = 1700 },
-	{ name = "ancient stone", chance = 20020 },
-	{ name = "shiny stone", chance = 800 },
-	{ name = "zaoan sword", chance = 100 },
-	{ name = "zaoan halberd", chance = 1860 },
-	{ name = "spiked iron ball", chance = 9960 },
-	{ name = "clay lump", chance = 720 },
-	{ name = "piece of marble rock", chance = 430 },
+	{ id = "small stone", chance = 30230, maxCount = 10 },
+	{ id = "gold coin", chance = 99930, maxCount = 100 },
+	{ id = "platinum coin", chance = 99540, maxCount = 4 },
+	{ id = "guardian halberd", chance = 560 },
+	{ id = "tower shield", chance = 820 },
+	{ id = "iron ore", chance = 1700 },
+	{ id = "ancient stone", chance = 20020 },
+	{ id = "shiny stone", chance = 800 },
+	{ id = "zaoan sword", chance = 100 },
+	{ id = "zaoan halberd", chance = 1860 },
+	{ id = "spiked iron ball", chance = 9960 },
+	{ id = "clay lump", chance = 720 },
+	{ id = "piece of marble rock", chance = 430 },
 	{ id = 12600, chance = 400 }, -- coal
 }
 

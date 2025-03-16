@@ -1,3 +1,6 @@
+-- Lizard Abomination (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Abomination)
+-- Version: 8.60
+
 local mType = Game.createMonsterType("Lizard Abomination")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 4,

@@ -1,3 +1,6 @@
+-- Shadow Hound (Tibia Wiki: https://tibia.fandom.com/wiki/Shadow_Hound)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Shadow Hound")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 582
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Ramoa around the Lightbringers basin.",
-}
 
 monster.health = 555
 monster.maxHealth = 555
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,7 +67,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "midnight shard", chance = 8333 },
+	{ id = "midnight shard", chance = 8333 },
 }
 
 monster.attacks = {

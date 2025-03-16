@@ -1,3 +1,6 @@
+-- Chikhaton (Tibia Wiki: https://tibia.fandom.com/wiki/Chikhaton)
+-- Version: 8.61
+
 local mType = Game.createMonsterType("Chikhaton")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 4,

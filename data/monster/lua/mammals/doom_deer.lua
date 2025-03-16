@@ -1,3 +1,6 @@
+-- Doom Deer (Tibia Wiki: https://tibia.fandom.com/wiki/Doom_Deer)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Doom Deer")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 559
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 1,
-	Locations = "Isle of Evil.",
-}
 
 monster.health = 405
 monster.maxHealth = 405
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,7 +64,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
 }
 
 monster.attacks = {
@@ -87,7 +76,7 @@ monster.defenses = {
 	defense = 35,
 	armor = 19,
 	mitigation = 0.70,
-	{ name = "speed", interval = 3000, chance = 30, speedChange = 400, effect = CONST_ME_MAGIC_RED, target = false, duration = 8000 },
+	{ name = "speed", interval = 3000, chance = 30, effect = CONST_ME_MAGIC_RED, speed = 182},
 }
 
 monster.elements = {

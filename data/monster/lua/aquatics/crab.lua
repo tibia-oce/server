@@ -1,3 +1,6 @@
+-- Crab (Tibia Wiki: https://tibia.fandom.com/wiki/Crab)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Crab")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 112
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Various locations like Goroma, Edron, Port Hope, Nargor and other Shattered Isles. \z
-		There is also one located underwater by The Tibianic, however it is unreachable.",
-}
 
 monster.health = 55
 monster.maxHealth = 55
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,9 +63,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 80000, maxCount = 10 },
+	{ id = "gold coin", chance = 80000, maxCount = 10 },
 	{ id = 3578, chance = 20000 }, -- fish
-	{ name = "crab pincers", chance = 20000 },
+	{ id = "crab pincers", chance = 20000 },
 }
 
 monster.attacks = {

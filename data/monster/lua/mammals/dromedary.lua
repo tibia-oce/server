@@ -1,3 +1,6 @@
+-- Dromedary (Tibia Wiki: https://tibia.fandom.com/wiki/Dromedary)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Dromedary")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 733
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Ankrahmun near the way to Darashia, Ankrahmun near sea, around Darashia, Issavi.",
-}
 
 monster.health = 45
 monster.maxHealth = 45
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 36000, maxCount = 2 },
+	{ id = "meat", chance = 36000, maxCount = 2 },
 }
 
 monster.attacks = {

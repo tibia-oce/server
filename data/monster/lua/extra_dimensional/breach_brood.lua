@@ -1,3 +1,6 @@
+-- Breach Brood (Tibia Wiki: https://tibia.fandom.com/wiki/Breach_Brood)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Breach Brood")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1235
-monster.Bestiary = {
-	class = "Extra Dimensional",
-	race = BESTY_RACE_EXTRA_DIMENSIONAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Otherworld.",
-}
 
 monster.health = 3500
 monster.maxHealth = 3500
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -95,7 +85,7 @@ monster.loot = {
 	{ id = 16121, chance = 4100 }, -- green crystal shard
 	{ id = 23544, chance = 470 }, -- collar of red plasma
 	{ id = 23542, chance = 470 }, -- collar of blue plasma
-	{ name = "spark sphere", chance = 14870 },
+	{ id = "spark sphere", chance = 14870 },
 }
 
 monster.attacks = {

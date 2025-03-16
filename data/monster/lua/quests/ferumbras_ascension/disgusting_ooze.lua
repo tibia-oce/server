@@ -1,3 +1,6 @@
+-- Disgusting Ooze (Tibia Wiki: https://tibia.fandom.com/wiki/Disgusting_Ooze)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Disgusting Ooze")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"DisgustingOozeDeath",

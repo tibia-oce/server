@@ -1,3 +1,6 @@
+-- Deepsea Blood Crab (Tibia Wiki: https://tibia.fandom.com/wiki/Deepsea_Blood_Crab)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Deepsea Blood Crab")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 437
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Svargrond Sea Serpent Area, Drefia. There is also one under Rookgaard Academy, however it is unreachable.",
-}
 
 monster.health = 320
 monster.maxHealth = 320
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,12 +63,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 87000, maxCount = 20 },
+	{ id = "gold coin", chance = 87000, maxCount = 20 },
 	{ id = 3578, chance = 10450 }, -- fish
-	{ name = "bloody pincers", chance = 6980 },
-	{ name = "chain armor", chance = 5020 },
-	{ name = "brass legs", chance = 2720 },
-	{ name = "white pearl", chance = 620 },
+	{ id = "bloody pincers", chance = 6980 },
+	{ id = "chain armor", chance = 5020 },
+	{ id = "brass legs", chance = 2720 },
+	{ id = "white pearl", chance = 620 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Massive Water Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Massive_Water_Elemental)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Massive Water Elemental")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 279
-monster.Bestiary = {
-	class = "Elemental",
-	race = BESTY_RACE_ELEMENTAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Calassa, Frozen Trench, Water Elemental Dungeon through the water channels, before Zugurosh in The Inquisition Quest.",
-}
 
 monster.health = 1250
 monster.maxHealth = 1250
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 4,
@@ -76,17 +66,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 1900, maxCount = 2 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "small emerald", chance = 1000, maxCount = 2 },
-	{ name = "platinum coin", chance = 20000, maxCount = 2 },
+	{ id = "small diamond", chance = 1900, maxCount = 2 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "small emerald", chance = 1000, maxCount = 2 },
+	{ id = "platinum coin", chance = 20000, maxCount = 2 },
 	{ id = 3051, chance = 910 }, -- energy ring
 	{ id = 3052, chance = 1000 }, -- life ring
 	{ id = 3578, chance = 40000, maxCount = 2 }, -- fish
-	{ name = "rainbow trout", chance = 1340 },
-	{ name = "green perch", chance = 1590 },
-	{ name = "great mana potion", chance = 10400 },
-	{ name = "great health potion", chance = 10000 },
+	{ id = "rainbow trout", chance = 1340 },
+	{ id = "green perch", chance = 1590 },
+	{ id = "great mana potion", chance = 10400 },
+	{ id = "great health potion", chance = 10000 },
 }
 
 monster.attacks = {

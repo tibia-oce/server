@@ -1,3 +1,6 @@
+-- Cobra (Tibia Wiki: https://tibia.fandom.com/wiki/Cobra)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Cobra")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 81
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Ankrahmun Library Tomb, Tarpit Tomb, Mountain Tomb, Peninsula Tomb, Darama, Tiquanda, \z
-		Drefia, Forbidden Lands, Arena Quarter, Lion's Rock.",
-}
 
 monster.health = 65
 monster.maxHealth = 65
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "cobra tongue", chance = 5000 },
+	{ id = "cobra tongue", chance = 5000 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Northern Pike (Tibia Wiki: https://tibia.fandom.com/wiki/Northern_Pike)
+-- Version: 7.2
+
 local mType = Game.createMonsterType("Northern Pike")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 783
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 25,
-	FirstUnlock = 5,
-	SecondUnlock = 10,
-	CharmsPoints = 1,
-	Stars = 0,
-	Occurrence = 1,
-	Locations = "Fiehonja.",
-}
 
 monster.health = 95
 monster.maxHealth = 95
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

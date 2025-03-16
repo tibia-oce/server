@@ -1,3 +1,6 @@
+-- Coldheart (Tibia Wiki: https://tibia.fandom.com/wiki/Coldheart)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Coldheart")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

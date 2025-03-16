@@ -1,3 +1,6 @@
+-- Brittle Skeleton (Tibia Wiki: https://tibia.fandom.com/wiki/Brittle_Skeleton)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Brittle Skeleton")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

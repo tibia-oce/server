@@ -1,3 +1,6 @@
+-- Massive Energy Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Massive_Energy_Elemental)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Massive Energy Elemental")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 456
-monster.Bestiary = {
-	class = "Elemental",
-	race = BESTY_RACE_ELEMENTAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 1,
-	Locations = "North west of Ankrahmun, you must Levitate to hunt. Two can also be found in the Asura Palace.",
-}
 
 monster.health = 1100
 monster.maxHealth = 1100
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 4,
@@ -77,17 +66,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 91 },
-	{ name = "small amethyst", chance = 3270, maxCount = 3 },
-	{ name = "strong mana potion", chance = 17450 },
-	{ name = "great mana potion", chance = 5450 },
-	{ name = "lightning pendant", chance = 730 },
-	{ name = "lightning legs", chance = 150 },
-	{ name = "spellbook of warding", chance = 360 },
-	{ name = "wand of starstorm", chance = 730 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 91 },
+	{ id = "small amethyst", chance = 3270, maxCount = 3 },
+	{ id = "strong mana potion", chance = 17450 },
+	{ id = "great mana potion", chance = 5450 },
+	{ id = "lightning pendant", chance = 730 },
+	{ id = "lightning legs", chance = 150 },
+	{ id = "spellbook of warding", chance = 360 },
+	{ id = "wand of starstorm", chance = 730 },
 	{ id = 8895, chance = 730 }, -- rusted armor
-	{ name = "shockwave amulet", chance = 500 },
+	{ id = "shockwave amulet", chance = 500 },
 }
 
 monster.attacks = {

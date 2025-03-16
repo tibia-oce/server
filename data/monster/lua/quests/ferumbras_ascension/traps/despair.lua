@@ -1,3 +1,6 @@
+-- Despair (Tibia Wiki: https://tibia.fandom.com/wiki/Despair)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Despair")
 local monster = {}
 
@@ -43,8 +46,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

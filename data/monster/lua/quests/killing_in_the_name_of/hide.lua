@@ -1,3 +1,6 @@
+-- Hide (Tibia Wiki: https://tibia.fandom.com/wiki/Hide)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Hide")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,7 +82,7 @@ monster.defenses = {
 	defense = 40,
 	armor = 25,
 	mitigation = 0.71,
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 340, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_RED, speed = 280},
 }
 
 monster.elements = {

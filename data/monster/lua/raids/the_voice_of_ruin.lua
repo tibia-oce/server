@@ -1,3 +1,6 @@
+-- The Voice of Ruin (Tibia Wiki: https://tibia.fandom.com/wiki/The_Voice_of_Ruin)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("The Voice of Ruin")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

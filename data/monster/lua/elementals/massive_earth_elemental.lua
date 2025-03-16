@@ -1,3 +1,6 @@
+-- Massive Earth Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Massive_Earth_Elemental)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Massive Earth Elemental")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 455
-monster.Bestiary = {
-	class = "Elemental",
-	race = BESTY_RACE_ELEMENTAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Forbidden Lands, on top of a hill in the northern part of the Arena and Zoo Quarter, \z
-		Lower Spike, Truffels Garden and Mushroom Gardens.",
-}
 
 monster.health = 1330
 monster.maxHealth = 1330
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,19 +66,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small stone", chance = 25280, maxCount = 10 },
-	{ name = "gold coin", chance = 32000, maxCount = 100 },
-	{ name = "gold coin", chance = 32000, maxCount = 100 },
-	{ name = "gold coin", chance = 32000, maxCount = 41 },
-	{ name = "stone skin amulet", chance = 980 },
-	{ name = "protection amulet", chance = 1580 },
+	{ id = "small stone", chance = 25280, maxCount = 10 },
+	{ id = "gold coin", chance = 32000, maxCount = 100 },
+	{ id = "gold coin", chance = 32000, maxCount = 100 },
+	{ id = "gold coin", chance = 32000, maxCount = 41 },
+	{ id = "stone skin amulet", chance = 980 },
+	{ id = "protection amulet", chance = 1580 },
 	{ id = 3097, chance = 2790 }, -- dwarven ring
-	{ name = "diamond sceptre", chance = 150 },
-	{ name = "terra amulet", chance = 500 },
+	{ id = "diamond sceptre", chance = 150 },
+	{ id = "terra amulet", chance = 500 },
 	{ id = 8895, chance = 3300 }, -- rusted armor
-	{ name = "small topaz", chance = 5280, maxCount = 2 },
-	{ name = "lump of earth", chance = 40680 },
-	{ name = "clay lump", chance = 480 },
+	{ id = "small topaz", chance = 5280, maxCount = 2 },
+	{ id = "lump of earth", chance = 40680 },
+	{ id = "clay lump", chance = 480 },
 	{ id = 12600, chance = 430 }, -- coal
 }
 
@@ -101,7 +90,7 @@ monster.attacks = {
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 15, minDamage = -300, maxDamage = -320, length = 6, spread = 0, effect = CONST_ME_BIGPLANTS, target = false },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -200, maxDamage = -220, radius = 5, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = false },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -330, range = 5, effect = CONST_ME_SMALLPLANTS, target = true, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -330, range = 5, effect = CONST_ME_SMALLPLANTS, target = true, duration = 5000 },
 }
 
 monster.defenses = {

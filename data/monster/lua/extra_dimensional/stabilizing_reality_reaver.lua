@@ -1,3 +1,6 @@
+-- Stabilizing Reality Reaver (Tibia Wiki: https://tibia.fandom.com/wiki/Stabilizing_Reality_Reaver)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Stabilizing Reality Reaver")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1266
-monster.Bestiary = {
-	class = "Extra Dimensional",
-	race = BESTY_RACE_EXTRA_DIMENSIONAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Otherworld (Edron)",
-}
 
 monster.health = 2500
 monster.maxHealth = 2500
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -108,7 +98,7 @@ monster.defenses = {
 	mitigation = 1.57,
 	{ name = "invisible", interval = 2000, chance = 15, effect = CONST_ME_POFF },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 80, maxDamage = 210, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 330, effect = CONST_ME_HITAREA, target = false, duration = 8000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_HITAREA, speed = 310},
 }
 
 monster.elements = {

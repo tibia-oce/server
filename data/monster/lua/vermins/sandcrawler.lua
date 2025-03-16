@@ -1,3 +1,6 @@
+-- Sandcrawler (Tibia Wiki: https://tibia.fandom.com/wiki/Sandcrawler)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Sandcrawler")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 641
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Zao Steppe, Raging Mage tower, Ankrahmun Desert, Darashia Desert, Drefia.",
-}
 
 monster.health = 30
 monster.maxHealth = 30
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,8 +64,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 33333, maxCount = 6 },
-	{ name = "sandcrawler shell", chance = 2173 },
+	{ id = "gold coin", chance = 33333, maxCount = 6 },
+	{ id = "sandcrawler shell", chance = 2173 },
 }
 
 monster.attacks = {

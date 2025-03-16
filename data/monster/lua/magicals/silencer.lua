@@ -1,3 +1,6 @@
+-- Silencer (Tibia Wiki: https://tibia.fandom.com/wiki/Silencer)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Silencer")
 local monster = {}
 
@@ -17,18 +20,6 @@ monster.events = {
 	"RoshamuulKillsDeath",
 }
 
-monster.raceId = 1014
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "All over the Roshamuul surface and Nightmare Isles.",
-}
 
 monster.health = 5400
 monster.maxHealth = 5400
@@ -66,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -84,22 +74,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "platinum coin", chance = 100000, maxCount = 8 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "platinum coin", chance = 100000, maxCount = 8 },
 	{ id = 3049, chance = 1200 }, -- stealth ring
-	{ name = "boots of haste", chance = 360 },
-	{ name = "dark shield", chance = 2000 },
-	{ name = "assassin star", chance = 7600, maxCount = 10 },
-	{ name = "diamond sceptre", chance = 960 },
-	{ name = "haunted blade", chance = 2000 },
-	{ name = "titan axe", chance = 2200 },
-	{ name = "shadow sceptre", chance = 640 },
-	{ name = "glorious axe", chance = 2400 },
-	{ name = "terra legs", chance = 960 },
-	{ name = "terra boots", chance = 480 },
-	{ name = "cluster of solace", chance = 4560 },
-	{ name = "silencer claws", chance = 17000 },
-	{ name = "silencer resonating chamber", chance = 8410 },
+	{ id = "boots of haste", chance = 360 },
+	{ id = "dark shield", chance = 2000 },
+	{ id = "assassin star", chance = 7600, maxCount = 10 },
+	{ id = "diamond sceptre", chance = 960 },
+	{ id = "haunted blade", chance = 2000 },
+	{ id = "titan axe", chance = 2200 },
+	{ id = "shadow sceptre", chance = 640 },
+	{ id = "glorious axe", chance = 2400 },
+	{ id = "terra legs", chance = 960 },
+	{ id = "terra boots", chance = 480 },
+	{ id = "cluster of solace", chance = 4560 },
+	{ id = "silencer claws", chance = 17000 },
+	{ id = "silencer resonating chamber", chance = 8410 },
 }
 
 monster.attacks = {
@@ -112,7 +102,7 @@ monster.defenses = {
 	defense = 20,
 	armor = 71,
 	mitigation = 1.82,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 450, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 470},
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 220, maxDamage = 425, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

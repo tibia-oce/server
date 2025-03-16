@@ -1,3 +1,6 @@
+-- Nightstalker (Tibia Wiki: https://tibia.fandom.com/wiki/Nightstalker)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Nightstalker")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 520
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Cemetery Quarter, Vengoth Castle, Vandura Mountain, Robson Isle.",
-}
 
 monster.health = 700
 monster.maxHealth = 700
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -83,17 +73,17 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3007, chance = 1030 }, -- crystal ring
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 10 },
-	{ name = "platinum amulet", chance = 121 },
-	{ name = "boots of haste", chance = 121 },
-	{ name = "protection amulet", chance = 847 },
-	{ name = "shadow herb", chance = 4761 },
-	{ name = "haunted blade", chance = 318 },
-	{ name = "chaos mace", chance = 121 },
-	{ name = "strong mana potion", chance = 1612 },
-	{ name = "spirit cloak", chance = 520 },
-	{ name = "crystal of balance", chance = 127 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 10 },
+	{ id = "platinum amulet", chance = 121 },
+	{ id = "boots of haste", chance = 121 },
+	{ id = "protection amulet", chance = 847 },
+	{ id = "shadow herb", chance = 4761 },
+	{ id = "haunted blade", chance = 318 },
+	{ id = "chaos mace", chance = 121 },
+	{ id = "strong mana potion", chance = 1612 },
+	{ id = "spirit cloak", chance = 520 },
+	{ id = "crystal of balance", chance = 127 },
 }
 
 monster.attacks = {
@@ -106,7 +96,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 40,
 	mitigation = 1.18,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 240, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 260},
 	{ name = "invisible", interval = 2000, chance = 10, effect = CONST_ME_YELLOW_RINGS },
 	{ name = "outfit", interval = 5000, chance = 10, target = false, duration = 4000, outfitMonster = "nightstalker" },
 	{ name = "outfit", interval = 5000, chance = 10, target = false, duration = 4000, outfitMonster = "werewolf" },

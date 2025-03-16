@@ -1,3 +1,6 @@
+-- Vulcongra (Tibia Wiki: https://tibia.fandom.com/wiki/Vulcongra)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Vulcongra")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 898
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Hot Spot (in Gnomebase Alpha) and Lower Spike.",
-}
 
 monster.health = 1600
 monster.maxHealth = 1600
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,23 +69,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 7 },
-	{ name = "platinum coin", chance = 14780 },
-	{ name = "wand of inferno", chance = 1000 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 7 },
+	{ id = "platinum coin", chance = 14780 },
+	{ id = "wand of inferno", chance = 1000 },
 	{ id = 3091, chance = 2920 }, -- sword ring
-	{ name = "fire sword", chance = 260 },
-	{ name = "banana", chance = 10420, maxCount = 10 },
-	{ name = "strong health potion", chance = 7100 },
-	{ name = "strong mana potion", chance = 7100 },
-	{ name = "magma amulet", chance = 970 },
-	{ name = "magma coat", chance = 140 },
-	{ name = "fiery heart", chance = 9380 },
+	{ id = "fire sword", chance = 260 },
+	{ id = "banana", chance = 10420, maxCount = 10 },
+	{ id = "strong health potion", chance = 7100 },
+	{ id = "strong mana potion", chance = 7100 },
+	{ id = "magma amulet", chance = 970 },
+	{ id = "magma coat", chance = 140 },
+	{ id = "fiery heart", chance = 9380 },
 	{ id = 12600, chance = 940 }, -- coal
-	{ name = "brown crystal splinter", chance = 4850 },
-	{ name = "red crystal fragment", chance = 2280 },
-	{ name = "magma clump", chance = 12440 },
-	{ name = "blazing bone", chance = 8030 },
+	{ id = "brown crystal splinter", chance = 4850 },
+	{ id = "red crystal fragment", chance = 2280 },
+	{ id = "magma clump", chance = 12440 },
+	{ id = "blazing bone", chance = 8030 },
 }
 
 monster.attacks = {

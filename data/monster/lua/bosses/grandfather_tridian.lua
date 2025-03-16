@@ -1,3 +1,6 @@
+-- Grandfather Tridian (Tibia Wiki: https://tibia.fandom.com/wiki/Grandfather_Tridian)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Grandfather Tridian")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,10 +82,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 80 },
-	{ name = "jewelled backpack", chance = 100000 },
-	{ name = "strong mana potion", chance = 5000 },
-	{ name = "brown mushroom", chance = 5000, maxCount = 3 },
+	{ id = "gold coin", chance = 100000, maxCount = 80 },
+	{ id = "jewelled backpack", chance = 100000 },
+	{ id = "strong mana potion", chance = 5000 },
+	{ id = "brown mushroom", chance = 5000, maxCount = 3 },
 	{ id = 6087, chance = 3000 }, -- music sheet (first verse)
 	{ id = 6088, chance = 3000 }, -- music sheet (second verse)
 	{ id = 6089, chance = 3000 }, -- music sheet (third verse)

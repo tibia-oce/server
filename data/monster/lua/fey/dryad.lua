@@ -1,3 +1,6 @@
+-- Dryad (Tibia Wiki: https://tibia.fandom.com/wiki/Dryad)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Dryad")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 383
-monster.Bestiary = {
-	class = "Fey",
-	race = BESTY_RACE_FEY,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Dryads appear in forest areas of Edron, Port Hope, Carlin and Cormaya during raids in June. \z
-		There are 5 total waves, the initial one with the raid message and the rest every 15 minutes during next hour.",
-}
 
 monster.health = 310
 monster.maxHealth = 310
@@ -63,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,7 +68,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 40000, maxCount = 20 },
+	{ id = "gold coin", chance = 40000, maxCount = 20 },
 }
 
 monster.attacks = {

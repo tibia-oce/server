@@ -1,3 +1,6 @@
+-- Shaburak Demon (Tibia Wiki: https://tibia.fandom.com/wiki/Shaburak_Demon)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Shaburak Demon")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 724
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Demonwar Crypt.",
-}
 
 monster.health = 1500
 monster.maxHealth = 1500
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,20 +70,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "piggy bank", chance = 1030 },
-	{ name = "small ruby", chance = 4761, maxCount = 5 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 50 },
+	{ id = "piggy bank", chance = 1030 },
+	{ id = "small ruby", chance = 4761, maxCount = 5 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 50 },
 	{ id = 3051, chance = 1052 }, -- energy ring
-	{ name = "wand of inferno", chance = 564 },
-	{ name = "brown mushroom", chance = 3846 },
-	{ name = "magic sulphur", chance = 81 },
-	{ name = "royal spear", chance = 10000, maxCount = 6 },
-	{ name = "bullseye potion", chance = 628 },
-	{ name = "strong health potion", chance = 4761 },
-	{ name = "strong mana potion", chance = 5000 },
-	{ name = "magma legs", chance = 155 },
+	{ id = "wand of inferno", chance = 564 },
+	{ id = "brown mushroom", chance = 3846 },
+	{ id = "magic sulphur", chance = 81 },
+	{ id = "royal spear", chance = 10000, maxCount = 6 },
+	{ id = "bullseye potion", chance = 628 },
+	{ id = "strong health potion", chance = 4761 },
+	{ id = "strong mana potion", chance = 5000 },
+	{ id = "magma legs", chance = 155 },
 }
 
 monster.attacks = {
@@ -102,7 +91,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -20, maxDamage = -60, range = 7, radius = 6, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREATTACK, target = false },
 	{ name = "shaburak wave", interval = 2000, chance = 15, minDamage = -70, maxDamage = -140, target = false },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_FIREDAMAGE, minDamage = -130, maxDamage = -170, length = 4, spread = 0, effect = CONST_ME_FIREATTACK, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -600, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -600, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 15000 },
 }
 
 monster.defenses = {

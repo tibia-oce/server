@@ -1,3 +1,6 @@
+-- Askarak Lord (Tibia Wiki: https://tibia.fandom.com/wiki/Askarak_Lord)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Askarak Lord")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 728
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Demonwar Crypt.",
-}
 
 monster.health = 2100
 monster.maxHealth = 2100
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,20 +71,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 90 },
-	{ name = "small emerald", chance = 5882, maxCount = 5 },
-	{ name = "platinum coin", chance = 35333, maxCount = 2 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 90 },
+	{ id = "small emerald", chance = 5882, maxCount = 5 },
+	{ id = "platinum coin", chance = 35333, maxCount = 2 },
 	{ id = 3051, chance = 606 }, -- energy ring
-	{ name = "brown mushroom", chance = 5263, maxCount = 5 },
-	{ name = "magic sulphur", chance = 620 },
-	{ name = "assassin star", chance = 70, maxCount = 5 },
-	{ name = "dreaded cleaver", chance = 30 },
-	{ name = "mastermind potion", chance = 750 },
-	{ name = "strong health potion", chance = 6250 },
-	{ name = "strong mana potion", chance = 7692 },
-	{ name = "terra mantle", chance = 70 },
-	{ name = "springsprout rod", chance = 1010 },
+	{ id = "brown mushroom", chance = 5263, maxCount = 5 },
+	{ id = "magic sulphur", chance = 620 },
+	{ id = "assassin star", chance = 70, maxCount = 5 },
+	{ id = "dreaded cleaver", chance = 30 },
+	{ id = "mastermind potion", chance = 750 },
+	{ id = "strong health potion", chance = 6250 },
+	{ id = "strong mana potion", chance = 7692 },
+	{ id = "terra mantle", chance = 70 },
+	{ id = "springsprout rod", chance = 1010 },
 }
 
 monster.attacks = {
@@ -103,7 +92,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_EARTHDAMAGE, minDamage = -40, maxDamage = -80, range = 7, radius = 6, shootEffect = CONST_ANI_POISON, effect = CONST_ME_GREEN_RINGS, target = false },
 	{ name = "askarak wave", interval = 2000, chance = 15, minDamage = -95, maxDamage = -180, target = false },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -130, maxDamage = -180, length = 4, spread = 0, effect = CONST_ME_GREEN_RINGS, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -650, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -650, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 15000 },
 }
 
 monster.defenses = {

@@ -1,3 +1,6 @@
+-- Green Frog (Tibia Wiki: https://tibia.fandom.com/wiki/Green_Frog)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Green Frog")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 267
-monster.Bestiary = {
-	class = "Amphibic",
-	race = BESTY_RACE_AMPHIBIC,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Meriana and other Shattered Isles, Port Hope caves, The Witches Cliff (only accessible during a quest).",
-}
 
 monster.health = 25
 monster.maxHealth = 25
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

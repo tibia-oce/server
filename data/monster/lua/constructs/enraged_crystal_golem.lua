@@ -1,3 +1,6 @@
+-- Enraged Crystal Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Enraged_Crystal_Golem)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Enraged Crystal Golem")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 873
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Golem Workshop.",
-}
 
 monster.health = 700
 monster.maxHealth = 700
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,14 +67,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "crystal sword", chance = 4710 },
-	{ name = "glorious axe", chance = 360 },
-	{ name = "strong health potion", chance = 7140 },
-	{ name = "strong mana potion", chance = 8270 },
-	{ name = "blue crystal splinter", chance = 4120 },
-	{ name = "cyan crystal fragment", chance = 1050 },
-	{ name = "crystalline spikes", chance = 7980 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "crystal sword", chance = 4710 },
+	{ id = "glorious axe", chance = 360 },
+	{ id = "strong health potion", chance = 7140 },
+	{ id = "strong mana potion", chance = 8270 },
+	{ id = "blue crystal splinter", chance = 4120 },
+	{ id = "cyan crystal fragment", chance = 1050 },
+	{ id = "crystalline spikes", chance = 7980 },
 }
 
 monster.attacks = {

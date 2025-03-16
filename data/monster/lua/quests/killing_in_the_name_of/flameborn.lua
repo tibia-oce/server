@@ -1,3 +1,6 @@
+-- Flameborn (Tibia Wiki: https://tibia.fandom.com/wiki/Flameborn)
+-- Version: 9.20
+
 local mType = Game.createMonsterType("Flameborn")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -94,7 +96,7 @@ monster.defenses = {
 	armor = 40,
 	mitigation = 1.52,
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 120, maxDamage = 230, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 270, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 260},
 }
 
 monster.elements = {

@@ -1,3 +1,6 @@
+-- Lizard Dragon Priest (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Dragon_Priest)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Lizard Dragon Priest")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 623
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Zzaion, Zao Palace and its antechambers, Muggy Plains, Corruption Hole, Razachai, \z
-		Temple of Equilibrium, Northern Zao Plantations.",
-}
 
 monster.health = 1450
 monster.maxHealth = 1450
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,23 +71,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 5000, maxCount = 100 },
-	{ name = "gold coin", chance = 4400, maxCount = 88 },
-	{ name = "small amethyst", chance = 4900, maxCount = 3 },
-	{ name = "platinum coin", chance = 4090, maxCount = 2 },
-	{ name = "yellow gem", chance = 1000 },
+	{ id = "gold coin", chance = 5000, maxCount = 100 },
+	{ id = "gold coin", chance = 4400, maxCount = 88 },
+	{ id = "small amethyst", chance = 4900, maxCount = 3 },
+	{ id = "platinum coin", chance = 4090, maxCount = 2 },
+	{ id = "yellow gem", chance = 1000 },
 	{ id = 3052, chance = 770 }, -- life ring
-	{ name = "terra rod", chance = 1001 },
-	{ name = "wand of inferno", chance = 1480 },
-	{ name = "lizard leather", chance = 980 },
-	{ name = "lizard scale", chance = 1130 },
-	{ name = "strong mana potion", chance = 12110 },
-	{ name = "great mana potion", chance = 7940 },
-	{ name = "focus cape", chance = 660 },
-	{ name = "bunch of ripe rice", chance = 960 },
-	{ name = "zaoan shoes", chance = 450 },
-	{ name = "zaoan robe", chance = 300 },
-	{ name = "dragon priest's wandtip", chance = 9910 },
+	{ id = "terra rod", chance = 1001 },
+	{ id = "wand of inferno", chance = 1480 },
+	{ id = "lizard leather", chance = 980 },
+	{ id = "lizard scale", chance = 1130 },
+	{ id = "strong mana potion", chance = 12110 },
+	{ id = "great mana potion", chance = 7940 },
+	{ id = "focus cape", chance = 660 },
+	{ id = "bunch of ripe rice", chance = 960 },
+	{ id = "zaoan shoes", chance = 450 },
+	{ id = "zaoan robe", chance = 300 },
+	{ id = "dragon priest's wandtip", chance = 9910 },
 }
 
 monster.attacks = {

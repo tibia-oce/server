@@ -1,3 +1,6 @@
+-- Mutated Human (Tibia Wiki: https://tibia.fandom.com/wiki/Mutated_Human)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Mutated Human")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 521
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Alchemist Quarter and Factory Quarter (Yalahar), Robson's Isle, Tiquanda Laboratory.",
-}
 
 monster.health = 240
 monster.maxHealth = 240
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,19 +69,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 44000, maxCount = 80 },
-	{ name = "gold coin", chance = 44000, maxCount = 50 },
-	{ name = "strange talisman", chance = 4980 },
-	{ name = "silver amulet", chance = 70 },
-	{ name = "fishbone", chance = 10050 },
+	{ id = "gold coin", chance = 44000, maxCount = 80 },
+	{ id = "gold coin", chance = 44000, maxCount = 50 },
+	{ id = "strange talisman", chance = 4980 },
+	{ id = "silver amulet", chance = 70 },
+	{ id = "fishbone", chance = 10050 },
 	{ id = 3264, chance = 5030 }, -- sword
-	{ name = "scale armor", chance = 8080 },
+	{ id = "scale armor", chance = 8080 },
 	{ id = 3607, chance = 8000 }, -- cheese
-	{ name = "fern", chance = 420 },
-	{ name = "worm", chance = 7110, maxCount = 2 },
-	{ name = "peanut", chance = 580 },
+	{ id = "fern", chance = 420 },
+	{ id = "worm", chance = 7110, maxCount = 2 },
+	{ id = "peanut", chance = 580 },
 	{ id = 8894, chance = 190 }, -- heavily rusted armor
-	{ name = "mutated flesh", chance = 19940 },
+	{ id = "mutated flesh", chance = 19940 },
 }
 
 monster.attacks = {
@@ -99,14 +89,14 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_DEATHDAMAGE, minDamage = -50, maxDamage = -60, length = 3, spread = 1, effect = CONST_ME_POISONAREA, target = false },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 20, minDamage = -190, maxDamage = -280, effect = CONST_ME_HITBYPOISON, target = true },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -600, range = 7, effect = CONST_ME_STUN, target = true, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -600, range = 7, effect = CONST_ME_STUN, target = true, duration = 30000 },
 }
 
 monster.defenses = {
 	defense = 15,
 	armor = 14,
 	mitigation = 0.59,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 220, effect = CONST_ME_GREEN_RINGS, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_GREEN_RINGS, speed = 154},
 }
 
 monster.elements = {

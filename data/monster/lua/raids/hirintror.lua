@@ -1,3 +1,6 @@
+-- Hirintror (Tibia Wiki: https://tibia.fandom.com/wiki/Hirintror)
+-- Version: 10.20
+
 local mType = Game.createMonsterType("Hirintror")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

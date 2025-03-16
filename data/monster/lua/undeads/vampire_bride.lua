@@ -1,3 +1,6 @@
+-- Vampire Bride (Tibia Wiki: https://tibia.fandom.com/wiki/Vampire_Bride)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Vampire Bride")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 483
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Drefia and Vampire Castle on Vengoth, Edron Vampire Crypt.",
-}
 
 monster.health = 1200
 monster.maxHealth = 1200
@@ -61,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -81,22 +71,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "emerald bangle", chance = 1100 },
-	{ name = "small diamond", chance = 1020, maxCount = 2 },
-	{ name = "gold coin", chance = 90000, maxCount = 149 },
-	{ name = "platinum coin", chance = 9910 },
-	{ name = "moonlight rod", chance = 5500 },
-	{ name = "boots of haste", chance = 220 },
-	{ name = "strong health potion", chance = 5000 },
-	{ name = "strong mana potion", chance = 10210 },
+	{ id = "emerald bangle", chance = 1100 },
+	{ id = "small diamond", chance = 1020, maxCount = 2 },
+	{ id = "gold coin", chance = 90000, maxCount = 149 },
+	{ id = "platinum coin", chance = 9910 },
+	{ id = "moonlight rod", chance = 5500 },
+	{ id = "boots of haste", chance = 220 },
+	{ id = "strong health potion", chance = 5000 },
+	{ id = "strong mana potion", chance = 10210 },
 	{ id = 649, chance = 200 }, -- flower bouquet
-	{ name = "hibiscus dress", chance = 1030 },
-	{ name = "blood goblet", chance = 60 },
+	{ id = "hibiscus dress", chance = 1030 },
+	{ id = "blood goblet", chance = 60 },
 	{ id = 8895, chance = 1010 }, -- rusted armor
 	{ id = 8923, chance = 970 }, -- velvet tapestry
-	{ name = "vampire teeth", chance = 10000 },
-	{ name = "blood preservation", chance = 4950 },
-	{ name = "leather whip", chance = 20 },
+	{ id = "vampire teeth", chance = 10000 },
+	{ id = "blood preservation", chance = 4950 },
+	{ id = "leather whip", chance = 20 },
 }
 
 monster.attacks = {

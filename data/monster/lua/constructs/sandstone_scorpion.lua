@@ -1,3 +1,6 @@
+-- Sandstone Scorpion (Tibia Wiki: https://tibia.fandom.com/wiki/Sandstone_Scorpion)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Sandstone Scorpion")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 705
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Horestis Tomb.",
-}
 
 monster.health = 900
 monster.maxHealth = 900
@@ -60,9 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,13 +67,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 92590, maxCount = 128 },
-	{ name = "small emerald", chance = 1100, maxCount = 2 },
-	{ name = "platinum coin", chance = 10750, maxCount = 2 },
-	{ name = "daramian mace", chance = 5100 },
-	{ name = "steel helmet", chance = 4620 },
-	{ name = "black shield", chance = 1820 },
-	{ name = "fist on a stick", chance = 220 },
+	{ id = "gold coin", chance = 92590, maxCount = 128 },
+	{ id = "small emerald", chance = 1100, maxCount = 2 },
+	{ id = "platinum coin", chance = 10750, maxCount = 2 },
+	{ id = "daramian mace", chance = 5100 },
+	{ id = "steel helmet", chance = 4620 },
+	{ id = "black shield", chance = 1820 },
+	{ id = "fist on a stick", chance = 220 },
 }
 
 monster.attacks = {

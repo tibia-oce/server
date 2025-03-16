@@ -1,3 +1,6 @@
+-- The Flaming Orchid (Tibia Wiki: https://tibia.fandom.com/wiki/The_Flaming_Orchid)
+-- Version: 10.80
+
 local mType = Game.createMonsterType("The Flaming Orchid")
 local monster = {}
 
@@ -50,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -66,24 +68,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 250 },
-	{ name = "platinum coin", chance = 9240, maxCount = 10 },
+	{ id = "gold coin", chance = 100000, maxCount = 250 },
+	{ id = "platinum coin", chance = 9240, maxCount = 10 },
 	{ id = 3039, chance = 18200 }, -- red gem
-	{ name = "gold ingot", chance = 29700, maxCount = 5 },
-	{ name = "assassin star", chance = 29700, maxCount = 13 },
-	{ name = "demonic essence", chance = 330 },
-	{ name = "great spirit potion", chance = 330 },
-	{ name = "soul orb", chance = 19530 },
-	{ name = "small amethyst", chance = 8310, maxCount = 2 },
-	{ name = "small amethyst", chance = 8310, maxCount = 2 },
-	{ name = "ultimate health potion", chance = 700, maxCount = 4 },
-	{ name = "golden lotus brooch", chance = 19740 },
-	{ name = "green gem", chance = 15780 },
-	{ name = "magma coat", chance = 1050 },
-	{ name = "moonlight rod", chance = 1050 },
-	{ name = "necrotic rod", chance = 1050 },
-	{ name = "oriental shoes", chance = 490 },
-	{ name = "peacock feather fan", chance = 16870 },
+	{ id = "gold ingot", chance = 29700, maxCount = 5 },
+	{ id = "assassin star", chance = 29700, maxCount = 13 },
+	{ id = "demonic essence", chance = 330 },
+	{ id = "great spirit potion", chance = 330 },
+	{ id = "soul orb", chance = 19530 },
+	{ id = "small amethyst", chance = 8310, maxCount = 2 },
+	{ id = "small amethyst", chance = 8310, maxCount = 2 },
+	{ id = "ultimate health potion", chance = 700, maxCount = 4 },
+	{ id = "golden lotus brooch", chance = 19740 },
+	{ id = "green gem", chance = 15780 },
+	{ id = "magma coat", chance = 1050 },
+	{ id = "moonlight rod", chance = 1050 },
+	{ id = "necrotic rod", chance = 1050 },
+	{ id = "oriental shoes", chance = 490 },
+	{ id = "peacock feather fan", chance = 16870 },
 }
 
 monster.attacks = {
@@ -99,7 +101,7 @@ monster.defenses = {
 	defense = 55,
 	armor = 55,
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 50, maxDamage = 280, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 320, duration = 5000, areaEffect = CONST_ME_MAGIC_RED },
+	{ name = "speed", interval = 2000, chance = 15, areaEffect = CONST_ME_MAGIC_RED , speed = 420},
 	{ name = "invisible", interval = 1000, chance = 100, duration = 10000, areaEffect = CONST_ME_MAGIC_BLUE },
 }
 

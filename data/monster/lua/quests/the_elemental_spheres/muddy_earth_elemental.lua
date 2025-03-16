@@ -1,3 +1,6 @@
+-- Muddy Earth Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Muddy_Earth_Elemental)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Muddy Earth Elemental")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -63,11 +65,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small stone", chance = 40000, maxCount = 3 },
-	{ name = "gold coin", chance = 24500, maxCount = 80 },
-	{ name = "gold coin", chance = 24500, maxCount = 47 },
+	{ id = "small stone", chance = 40000, maxCount = 3 },
+	{ id = "gold coin", chance = 24500, maxCount = 80 },
+	{ id = "gold coin", chance = 24500, maxCount = 47 },
 	{ id = 3129, chance = 22000 }, -- some leaves
-	{ name = "natural soil", chance = 3750 },
+	{ id = "natural soil", chance = 3750 },
 }
 
 monster.attacks = {

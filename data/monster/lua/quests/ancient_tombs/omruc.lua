@@ -1,3 +1,6 @@
+-- Omruc (Tibia Wiki: https://tibia.fandom.com/wiki/Omruc)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Omruc")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,19 +81,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 7000, maxCount = 3 },
-	{ name = "gold coin", chance = 50000, maxCount = 90 },
-	{ name = "gold coin", chance = 50000, maxCount = 70 },
-	{ name = "yellow gem", chance = 5000 },
+	{ id = "small diamond", chance = 7000, maxCount = 3 },
+	{ id = "gold coin", chance = 50000, maxCount = 90 },
+	{ id = "gold coin", chance = 50000, maxCount = 70 },
+	{ id = "yellow gem", chance = 5000 },
 	{ id = 3049, chance = 5000 }, -- stealth ring
-	{ name = "boots of haste", chance = 1500 },
-	{ name = "crystal arrow", chance = 100000 },
-	{ name = "arrow", chance = 10000, maxCount = 21 },
-	{ name = "poison arrow", chance = 10000, maxCount = 20 },
+	{ id = "boots of haste", chance = 1500 },
+	{ id = "crystal arrow", chance = 100000 },
+	{ id = "arrow", chance = 10000, maxCount = 21 },
+	{ id = "poison arrow", chance = 10000, maxCount = 20 },
 	{ id = 3449, chance = 10000, maxCount = 15 }, -- burst arrow
-	{ name = "power bolt", chance = 10000, maxCount = 3 },
-	{ name = "onyx arrow", chance = 10000, maxCount = 2 },
-	{ name = "great health potion", chance = 7000 },
+	{ id = "power bolt", chance = 10000, maxCount = 3 },
+	{ id = "onyx arrow", chance = 10000, maxCount = 2 },
+	{ id = "great health potion", chance = 7000 },
 }
 
 monster.attacks = {
@@ -100,7 +102,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_EARTHDAMAGE, minDamage = -200, maxDamage = -500, shootEffect = CONST_ANI_POISONARROW, target = false },
 	{ name = "combat", interval = 1000, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -120, maxDamage = -450, range = 3, shootEffect = CONST_ANI_BURSTARROW, effect = CONST_ME_EXPLOSIONAREA, target = false },
 	{ name = "melee", interval = 3000, chance = 20, minDamage = -150, maxDamage = -500 },
-	{ name = "speed", interval = 1000, chance = 25, speedChange = -900, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 50000 },
+	{ name = "speed", interval = 1000, chance = 25, speed = -900, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 50000 },
 }
 
 monster.defenses = {

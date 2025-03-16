@@ -1,3 +1,6 @@
+-- Ragiaz (Tibia Wiki: https://tibia.fandom.com/wiki/Ragiaz)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Ragiaz")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -112,7 +114,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_DEATHDAMAGE, minDamage = -500, maxDamage = -900, range = 4, radius = 4, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_POFF, target = true },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_LIFEDRAIN, minDamage = -1000, maxDamage = -1200, length = 10, spread = 3, effect = CONST_ME_MAGIC_GREEN, target = false },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -1500, maxDamage = -1900, length = 10, spread = 3, effect = CONST_ME_GROUNDSHAKER, target = false },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -600, radius = 7, effect = CONST_ME_POFF, target = false, duration = 20000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -600, radius = 7, effect = CONST_ME_POFF, target = false, duration = 20000 },
 }
 
 monster.defenses = {
@@ -120,7 +122,7 @@ monster.defenses = {
 	armor = 125,
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 1000, maxDamage = 2000, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = 600, effect = CONST_ME_MAGIC_GREEN, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 20, effect = CONST_ME_MAGIC_GREEN, speed = 340},
 	{ name = "ragiaz transform", interval = 2000, chance = 8, target = false },
 }
 

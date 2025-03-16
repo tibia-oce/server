@@ -1,3 +1,6 @@
+-- Agressive Chicken (Tibia Wiki: https://tibia.fandom.com/wiki/Agressive_Chicken)
+-- Version: 12.20
+
 local mType = Game.createMonsterType("Agressive Chicken")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -62,10 +64,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 2120, maxCount = 2 },
+	{ id = "meat", chance = 2120, maxCount = 2 },
 	{ id = 3606, chance = 950 }, -- egg
-	{ name = "worm", chance = 10000, maxCount = 3 },
-	{ name = "chicken feather", chance = 20000 },
+	{ id = "worm", chance = 10000, maxCount = 3 },
+	{ id = "chicken feather", chance = 20000 },
 }
 
 monster.defenses = {

@@ -1,3 +1,6 @@
+-- Bonelord (Tibia Wiki: https://tibia.fandom.com/wiki/Bonelord)
+-- Version: 4.0
+
 local mType = Game.createMonsterType("Bonelord")
 local monster = {}
 
@@ -13,23 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 17
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Ancient Temple, Alatar Lake, Mount Sternum Undead Cave, Desert Dungeon, Hellgate, \z
-		Helheim, Fibula Dungeon, Villa Scapula, Hero Cave before Dragons, Eastern Drefia, Folda hidden cave, \z
-		Maze of Lost Souls, way to Mintwallin, before Kazordoon city entrance, abandoned building east of Venore, \z
-		Green Claw Swamp, north of the Venore Amazon Camp, Below Point of No Return in Outlaw Camp, Vandura Bonelord Cave, \z
-		Triangle Tower, Hidden cave north of Port Hope, Deeper Banuta, Dark Cathedral, Shadow Tomb, Ancient Ruins Tomb, \z
-		Tarpit Tomb, Mountain Tomb, Peninsula Tomb, Oasis Tomb and beneath Fenrock.",
-}
 
 monster.health = 260
 monster.maxHealth = 260
@@ -67,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -93,17 +78,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 99400, maxCount = 48 },
+	{ id = "gold coin", chance = 99400, maxCount = 48 },
 	{ id = 3059, chance = 4990 }, -- spellbook
-	{ name = "terra rod", chance = 510 },
-	{ name = "two handed sword", chance = 3950 },
-	{ name = "morning star", chance = 7020 },
-	{ name = "longsword", chance = 9060 },
-	{ name = "steel shield", chance = 3980 },
-	{ name = "bonelord shield", chance = 110 },
-	{ name = "bonelord eye", chance = 1000 },
-	{ name = "mana potion", chance = 300 },
-	{ name = "small flask of eyedrops", chance = 5060 },
+	{ id = "terra rod", chance = 510 },
+	{ id = "two handed sword", chance = 3950 },
+	{ id = "morning star", chance = 7020 },
+	{ id = "longsword", chance = 9060 },
+	{ id = "steel shield", chance = 3980 },
+	{ id = "bonelord shield", chance = 110 },
+	{ id = "bonelord eye", chance = 1000 },
+	{ id = "mana potion", chance = 300 },
+	{ id = "small flask of eyedrops", chance = 5060 },
 }
 
 monster.attacks = {

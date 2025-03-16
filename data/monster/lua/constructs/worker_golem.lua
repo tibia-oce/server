@@ -1,3 +1,6 @@
+-- Worker Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Worker_Golem)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Worker Golem")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 503
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Factory Quarter.",
-}
 
 monster.health = 1470
 monster.maxHealth = 1470
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,
@@ -82,25 +71,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 1000, maxCount = 2 },
-	{ name = "gold coin", chance = 43000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 40 },
-	{ name = "might ring", chance = 370 },
-	{ name = "life crystal", chance = 890 },
-	{ name = "war hammer", chance = 920 },
-	{ name = "iron ore", chance = 1001 },
-	{ name = "bonebreaker", chance = 130 },
-	{ name = "berserk potion", chance = 820 },
-	{ name = "spiked squelcher", chance = 1003 },
-	{ name = "great mana potion", chance = 1470 },
-	{ name = "great health potion", chance = 2100 },
-	{ name = "nail", chance = 5000, maxCount = 5 },
-	{ name = "great spirit potion", chance = 830 },
-	{ name = "gear wheel", chance = 1007 },
+	{ id = "small diamond", chance = 1000, maxCount = 2 },
+	{ id = "gold coin", chance = 43000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 40 },
+	{ id = "might ring", chance = 370 },
+	{ id = "life crystal", chance = 890 },
+	{ id = "war hammer", chance = 920 },
+	{ id = "iron ore", chance = 1001 },
+	{ id = "bonebreaker", chance = 130 },
+	{ id = "berserk potion", chance = 820 },
+	{ id = "spiked squelcher", chance = 1003 },
+	{ id = "great mana potion", chance = 1470 },
+	{ id = "great health potion", chance = 2100 },
+	{ id = "nail", chance = 5000, maxCount = 5 },
+	{ id = "great spirit potion", chance = 830 },
+	{ id = "gear wheel", chance = 1007 },
 	{ id = 8895, chance = 200 }, -- rusted armor
 	{ id = 8898, chance = 50 }, -- rusted legs
 	{ id = 9066, chance = 2270 }, -- crystal pedestal
-	{ name = "gear crystal", chance = 2270 },
+	{ id = "gear crystal", chance = 2270 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Battlemaster Zunzu (Tibia Wiki: https://tibia.fandom.com/wiki/Battlemaster_Zunzu)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Battlemaster Zunzu")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -69,13 +71,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "great health potion", chance = 2775, maxCount = 2 },
-	{ name = "red lantern", chance = 100000 },
-	{ name = "zaoan armor", chance = 1050 },
-	{ name = "zaoan shoes", chance = 3150 },
-	{ name = "zaoan legs", chance = 2625 },
-	{ name = "zaogun flag", chance = 11250 },
-	{ name = "zaogun shoulderplates", chance = 100000 },
+	{ id = "great health potion", chance = 2775, maxCount = 2 },
+	{ id = "red lantern", chance = 100000 },
+	{ id = "zaoan armor", chance = 1050 },
+	{ id = "zaoan shoes", chance = 3150 },
+	{ id = "zaoan legs", chance = 2625 },
+	{ id = "zaogun flag", chance = 11250 },
+	{ id = "zaogun shoulderplates", chance = 100000 },
 }
 
 monster.attacks = {

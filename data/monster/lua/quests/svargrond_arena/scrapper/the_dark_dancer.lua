@@ -1,3 +1,6 @@
+-- The Dark Dancer (Tibia Wiki: https://tibia.fandom.com/wiki/The_Dark_Dancer)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("The Dark Dancer")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,7 +79,7 @@ monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -45, condition = { type = CONDITION_POISON, totalDamage = 220, interval = 4000 } },
 	{ name = "combat", interval = 3000, chance = 70, type = COMBAT_PHYSICALDAMAGE, minDamage = -60, maxDamage = -95, range = 5, radius = 1, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_MORTAREA, target = true },
 	{ name = "combat", interval = 6000, chance = 90, type = COMBAT_PHYSICALDAMAGE, minDamage = -60, maxDamage = -95, range = 5, radius = 1, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_MORTAREA, target = true },
-	{ name = "speed", interval = 3500, chance = 35, speedChange = -400, range = 5, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 10000 },
+	{ name = "speed", interval = 3500, chance = 35, speed = -400, range = 5, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 10000 },
 	{ name = "combat", interval = 4000, chance = 30, type = COMBAT_MANADRAIN, minDamage = -2, maxDamage = -110, range = 5, radius = 1, effect = CONST_ME_MAGIC_RED, target = true },
 }
 

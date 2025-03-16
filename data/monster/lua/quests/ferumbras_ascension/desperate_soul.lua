@@ -1,3 +1,6 @@
+-- Desperate Soul (Tibia Wiki: https://tibia.fandom.com/wiki/Desperate_Soul)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Desperate Soul")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -70,7 +72,7 @@ monster.defenses = {
 	defense = 7,
 	armor = 6,
 	mitigation = 0.00,
-	{ name = "speed", interval = 2000, chance = 25, speedChange = 1200, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 25, effect = CONST_ME_MAGIC_RED, speed = 670},
 }
 
 monster.elements = {

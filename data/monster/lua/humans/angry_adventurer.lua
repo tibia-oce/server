@@ -1,3 +1,6 @@
+-- Angry Adventurer (Tibia Wiki: https://tibia.fandom.com/wiki/Angry_Adventurer)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Angry Adventurer")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

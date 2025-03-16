@@ -1,3 +1,6 @@
+-- Insectoid Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Insectoid_Scout)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Insectoid Scout")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 732
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 2,
-	Locations = "West and south of Greenshore.",
-}
 
 monster.health = 230
 monster.maxHealth = 230
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,10 +65,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 80000, maxCount = 80 },
+	{ id = "gold coin", chance = 80000, maxCount = 80 },
 	{ id = 3093, chance = 100 }, -- club ring
-	{ name = "ripper lance", chance = 850 },
-	{ name = "health potion", chance = 280 },
+	{ id = "ripper lance", chance = 850 },
+	{ id = "health potion", chance = 280 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Orc Spearman (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Spearman)
+-- Version: 6.0
+
 local mType = Game.createMonsterType("Orc Spearman")
 local monster = {}
 
@@ -13,21 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 50
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Orc Fortress, Folda Dungeon, Edron Orc Cave and around it, Ancient Temple, \z
-		Venore Orc Cave, below the Point of No Return in Outlaw Camp, Plains of Havoc, \z
-		North of Thais in the Orc Peninsula, Elvenbane and Orc Camp in Foreigner Quarter. \z
-		Also found in Rookgaard West plains, Zao Orc Land.",
-}
 
 monster.health = 105
 monster.maxHealth = 105
@@ -62,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,14 +64,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 25050, maxCount = 11 },
-	{ name = "spear", chance = 17440 },
-	{ name = "machete", chance = 3000 },
-	{ name = "studded legs", chance = 10000 },
-	{ name = "studded helmet", chance = 9000 },
-	{ name = "meat", chance = 30200 },
-	{ name = "orc tooth", chance = 150 },
-	{ name = "orc leather", chance = 2300 },
+	{ id = "gold coin", chance = 25050, maxCount = 11 },
+	{ id = "spear", chance = 17440 },
+	{ id = "machete", chance = 3000 },
+	{ id = "studded legs", chance = 10000 },
+	{ id = "studded helmet", chance = 9000 },
+	{ id = "meat", chance = 30200 },
+	{ id = "orc tooth", chance = 150 },
+	{ id = "orc leather", chance = 2300 },
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 

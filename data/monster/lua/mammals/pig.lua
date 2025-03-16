@@ -1,3 +1,6 @@
+-- Pig (Tibia Wiki: https://tibia.fandom.com/wiki/Pig)
+-- Version: 6.0
+
 local mType = Game.createMonsterType("Pig")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 60
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Rookgaard, Orc Fort, under Femor Hills with Goblins, some farms like Donald McRonaldThe McRonalds Farm, Liberty Bay slums and Nargor, Foreigner Quarter in Yalahar, Isle of the Kings, cells in The Pits of Inferno QuestTafariels throneroom in Pits of Inferno, Gardens of Night Mapper Coords129.18126.125104texthere, unreachable.",
-}
 
 monster.health = 25
 monster.maxHealth = 25
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,8 +65,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 64000, maxCount = 4 },
-	{ name = "pig foot", chance = 950 },
+	{ id = "meat", chance = 64000, maxCount = 4 },
+	{ id = "pig foot", chance = 950 },
 }
 
 monster.defenses = {

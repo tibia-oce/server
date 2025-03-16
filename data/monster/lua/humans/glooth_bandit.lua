@@ -1,3 +1,6 @@
+-- Glooth Bandit (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Bandit)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Glooth Bandit")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1119
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Underground Glooth Factory.",
-}
 
 monster.health = 2600
 monster.maxHealth = 2600
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

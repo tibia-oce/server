@@ -1,3 +1,6 @@
+-- Dwarf (Tibia Wiki: https://tibia.fandom.com/wiki/Dwarf)
+-- Version: 6.1
+
 local mType = Game.createMonsterType("Dwarf")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 69
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Kazordoon Dwarf Mines, Dwarf Bridge, deep Elvenbane, Tiquanda Dwarf Cave, Cormaya Dwarf Cave, \z
-		Island of Destiny (Knights area), Beregar.",
-}
 
 monster.health = 90
 monster.maxHealth = 90
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,17 +64,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 35000, maxCount = 8 },
+	{ id = "gold coin", chance = 35000, maxCount = 8 },
 	{ id = 3097, chance = 100 }, -- dwarven ring
-	{ name = "axe", chance = 15000 },
-	{ name = "hatchet", chance = 25000 },
-	{ name = "studded armor", chance = 8000 },
-	{ name = "copper shield", chance = 10000 },
+	{ id = "axe", chance = 15000 },
+	{ id = "hatchet", chance = 25000 },
+	{ id = "studded armor", chance = 8000 },
+	{ id = "copper shield", chance = 10000 },
 	{ id = 3456, chance = 10000 }, -- pick
 	{ id = 3505, chance = 8000 }, -- letter
-	{ name = "leather legs", chance = 10000 },
-	{ name = "white mushroom", chance = 50000 },
-	{ name = "iron ore", chance = 700 },
+	{ id = "leather legs", chance = 10000 },
+	{ id = "white mushroom", chance = 50000 },
+	{ id = "iron ore", chance = 700 },
 }
 
 monster.attacks = {

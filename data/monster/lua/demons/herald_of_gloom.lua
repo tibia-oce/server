@@ -1,3 +1,6 @@
+-- Herald of Gloom (Tibia Wiki: https://tibia.fandom.com/wiki/Herald_of_Gloom)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Herald of Gloom")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 586
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Edron Hero Cave around the Lightbringers basin.",
-}
 
 monster.health = 340
 monster.maxHealth = 340
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,12 +69,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "midnight shard", chance = 1886 },
+	{ id = "midnight shard", chance = 1886 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -90 },
-	{ name = "speed", interval = 3000, chance = 10, speedChange = -600, range = 7, effect = CONST_ME_MAGIC_RED, target = true, duration = 30000 },
+	{ name = "speed", interval = 3000, chance = 10, speed = -600, range = 7, effect = CONST_ME_MAGIC_RED, target = true, duration = 30000 },
 	{ name = "combat", interval = 2000, chance = 24, type = COMBAT_HOLYDAMAGE, minDamage = -90, maxDamage = -170, range = 4, shootEffect = CONST_ANI_SMALLHOLY, target = false },
 }
 
@@ -93,7 +82,7 @@ monster.defenses = {
 	defense = 55,
 	armor = 25,
 	mitigation = 1.32,
-	{ name = "speed", interval = 1000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
+	{ name = "speed", interval = 1000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 170},
 	{ name = "invisible", interval = 5000, chance = 20, effect = CONST_ME_MAGIC_RED },
 	{ name = "outfit", interval = 1500, chance = 20, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 6000, outfitMonster = "nightstalker" },
 	{ name = "outfit", interval = 1500, chance = 10, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 6000, outfitMonster = "werewolf" },

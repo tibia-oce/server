@@ -1,3 +1,6 @@
+-- Deepling Worker (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Worker)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Deepling Worker")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 795
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Fiehonja, Coral mine.",
-}
 
 monster.health = 190
 monster.maxHealth = 190
@@ -33,8 +24,6 @@ monster.corpse = 14094
 monster.speed = 65
 monster.manaCost = 0
 
-monster.faction = FACTION_DEEPLING
-monster.enemyFactions = { FACTION_PLAYER, FACTION_DEATHLING }
 
 monster.changeTarget = {
 	interval = 4000,
@@ -65,8 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,13 +68,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 75000, maxCount = 25 },
+	{ id = "gold coin", chance = 75000, maxCount = 25 },
 	{ id = 3578, chance = 12020, maxCount = 3 }, -- fish
-	{ name = "deepling scales", chance = 6950 },
-	{ name = "heavy trident", chance = 510 },
-	{ name = "fish fin", chance = 350 },
-	{ name = "eye of a deepling", chance = 283 },
-	{ name = "small emerald", chance = 110, maxCount = 1 },
+	{ id = "deepling scales", chance = 6950 },
+	{ id = "heavy trident", chance = 510 },
+	{ id = "fish fin", chance = 350 },
+	{ id = "eye of a deepling", chance = 283 },
+	{ id = "small emerald", chance = 110, maxCount = 1 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Pirate Cutthroat (Tibia Wiki: https://tibia.fandom.com/wiki/Pirate_Cutthroat)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Pirate Cutthroat")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 248
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Nargor, Tyrsung on the ship, Yalahar, Krailos Steppe and The Cave.",
-}
 
 monster.health = 325
 monster.maxHealth = 325
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,19 +66,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 78000, maxCount = 50 },
-	{ name = "scale armor", chance = 3000 },
-	{ name = "steel shield", chance = 2800 },
+	{ id = "gold coin", chance = 78000, maxCount = 50 },
+	{ id = "scale armor", chance = 3000 },
+	{ id = "steel shield", chance = 2800 },
 	{ id = 5090, chance = 1000 }, -- treasure map
-	{ name = "rum flask", chance = 90 },
-	{ name = "light shovel", chance = 2000 },
+	{ id = "rum flask", chance = 90 },
+	{ id = "light shovel", chance = 2000 },
 	{ id = 5792, chance = 110 }, -- die
-	{ name = "pirate knee breeches", chance = 980 },
-	{ name = "pirate bag", chance = 1000 },
-	{ name = "hook", chance = 550 },
-	{ name = "eye patch", chance = 450 },
-	{ name = "peg leg", chance = 500 },
-	{ name = "compass", chance = 10120 },
+	{ id = "pirate knee breeches", chance = 980 },
+	{ id = "pirate bag", chance = 1000 },
+	{ id = "hook", chance = 550 },
+	{ id = "eye patch", chance = 450 },
+	{ id = "peg leg", chance = 500 },
+	{ id = "compass", chance = 10120 },
 }
 
 monster.attacks = {

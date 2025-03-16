@@ -1,3 +1,6 @@
+-- Diabolic Imp (Tibia Wiki: https://tibia.fandom.com/wiki/Diabolic_Imp)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Diabolic Imp")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 288
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Inquisition, Pits of Inferno, Fenrock, Fury Dungeon and inside the Hellgore volcano \z
-	on Goroma during the Fire from the Earth Mini World Change.",
-}
 
 monster.health = 1950
 monster.maxHealth = 1950
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,24 +68,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 40000, maxCount = 97 },
-	{ name = "gold coin", chance = 3390, maxCount = 7 },
-	{ name = "small amethyst", chance = 2250, maxCount = 3 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 40000, maxCount = 97 },
+	{ id = "gold coin", chance = 3390, maxCount = 7 },
+	{ id = "small amethyst", chance = 2250, maxCount = 3 },
 	{ id = 3049, chance = 2702 }, -- stealth ring
-	{ name = "necrotic rod", chance = 830 },
-	{ name = "blank rune", chance = 16666, maxCount = 2 },
-	{ name = "double axe", chance = 1994 },
+	{ id = "necrotic rod", chance = 830 },
+	{ id = "blank rune", chance = 16666, maxCount = 2 },
+	{ id = "double axe", chance = 1994 },
 	{ id = 3307, chance = 5660 }, -- scimitar
-	{ name = "guardian shield", chance = 8130 },
-	{ name = "pitchfork", chance = 50000 },
-	{ name = "cleaver", chance = 8830 },
-	{ name = "soul orb", chance = 7230 },
+	{ id = "guardian shield", chance = 8130 },
+	{ id = "pitchfork", chance = 50000 },
+	{ id = "cleaver", chance = 8830 },
+	{ id = "soul orb", chance = 7230 },
 	{ id = 6299, chance = 120 }, -- death ring
-	{ name = "demonic essence", chance = 8000 },
-	{ name = "flask of demonic blood", chance = 25000, maxCount = 2 },
-	{ name = "magma coat", chance = 250 },
-	{ name = "magma monocle", chance = 430 },
+	{ id = "demonic essence", chance = 8000 },
+	{ id = "flask of demonic blood", chance = 25000, maxCount = 2 },
+	{ id = "magma coat", chance = 250 },
+	{ id = "magma monocle", chance = 430 },
 }
 
 monster.attacks = {
@@ -111,7 +100,7 @@ monster.defenses = {
 	armor = 29,
 	mitigation = 1.46,
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 650, maxDamage = 800, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 800, effect = CONST_ME_MAGIC_RED, target = false, duration = 2000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 210},
 	{ name = "invisible", interval = 2000, chance = 10, effect = CONST_ME_TELEPORT },
 }
 

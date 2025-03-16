@@ -1,3 +1,6 @@
+-- Troll Guard (Tibia Wiki: https://tibia.fandom.com/wiki/Troll_Guard)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Troll Guard")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 745
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 5,
-	FirstUnlock = 1,
-	SecondUnlock = 3,
-	CharmsPoints = 30,
-	Stars = 2,
-	Occurrence = 3,
-	Locations = "Rookgaard and in Thais during raids",
-}
 
 monster.health = 60
 monster.maxHealth = 60
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,9 +64,9 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3003, chance = 10000 }, -- rope
-	{ name = "gold coin", chance = 58000, maxCount = 12 },
-	{ name = "studded club", chance = 3000 },
-	{ name = "meat", chance = 14000, maxCount = 2 },
+	{ id = "gold coin", chance = 58000, maxCount = 12 },
+	{ id = "studded club", chance = 3000 },
+	{ id = "meat", chance = 14000, maxCount = 2 },
 }
 
 monster.attacks = {

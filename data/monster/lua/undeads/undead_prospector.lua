@@ -1,3 +1,6 @@
+-- Undead Prospector (Tibia Wiki: https://tibia.fandom.com/wiki/Undead_Prospector)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Undead Prospector")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 595
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 1,
-	Locations = "West of Edron, in a some Lost Mines.",
-}
 
 monster.health = 100
 monster.maxHealth = 100
@@ -61,9 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,15 +69,15 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 46150 }, -- torch
-	{ name = "gold coin", chance = 53850, maxCount = 30 },
+	{ id = "gold coin", chance = 53850, maxCount = 30 },
 	{ id = 3052, chance = 200 }, -- life ring
 	{ id = 3114, chance = 240 }, -- skull
-	{ name = "knife", chance = 15380 },
-	{ name = "brass helmet", chance = 23000 },
-	{ name = "viking helmet", chance = 1000 },
-	{ name = "scale armor", chance = 1000 },
-	{ name = "worm", chance = 92310, maxCount = 6 },
-	{ name = "brown piece of cloth", chance = 1000 },
+	{ id = "knife", chance = 15380 },
+	{ id = "brass helmet", chance = 23000 },
+	{ id = "viking helmet", chance = 1000 },
+	{ id = "scale armor", chance = 1000 },
+	{ id = "worm", chance = 92310, maxCount = 6 },
+	{ id = "brown piece of cloth", chance = 1000 },
 }
 
 monster.attacks = {

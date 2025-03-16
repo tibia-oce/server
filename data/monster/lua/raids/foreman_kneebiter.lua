@@ -1,3 +1,6 @@
+-- Foreman Kneebiter (Tibia Wiki: https://tibia.fandom.com/wiki/Foreman_Kneebiter)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Foreman Kneebiter")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

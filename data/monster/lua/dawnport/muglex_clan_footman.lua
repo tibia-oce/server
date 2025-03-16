@@ -1,3 +1,6 @@
+-- Muglex Clan Footman (Tibia Wiki: https://tibia.fandom.com/wiki/Muglex_Clan_Footman)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Muglex Clan Footman")
 local monster = {}
 
@@ -50,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Bat (Tibia Wiki: https://tibia.fandom.com/wiki/Bat)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Bat")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Dark Cathedral, Tiquanda, Drefia, Mount Sternum, Folda, Ghostlands, Kazordoon, \z
-		Femor Hills, Thais Bat Dungeon, Thais Bandit Cave and in many other caves.",
-}
 
 monster.health = 30
 monster.maxHealth = 30
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,7 +64,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "bat wing", chance = 1220 },
+	{ id = "bat wing", chance = 1220 },
 }
 
 monster.attacks = {

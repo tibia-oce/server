@@ -1,3 +1,6 @@
+-- Ladybug (Tibia Wiki: https://tibia.fandom.com/wiki/Ladybug)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Ladybug")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 778
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 2,
-	Locations = "The Hive surface during the Hive Born World Change's third stage.",
-}
 
 monster.health = 255
 monster.maxHealth = 255
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,7 +64,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 65000, maxCount = 40 },
+	{ id = "gold coin", chance = 65000, maxCount = 40 },
 }
 
 monster.attacks = {

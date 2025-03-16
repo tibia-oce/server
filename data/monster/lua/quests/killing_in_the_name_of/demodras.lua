@@ -1,3 +1,6 @@
+-- Demodras (Tibia Wiki: https://tibia.fandom.com/wiki/Demodras)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Demodras")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Larva (Tibia Wiki: https://tibia.fandom.com/wiki/Larva)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Larva")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 82
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Larva Caves, Ankrahmun Tombs, Lions Rock, Gardens of Night (unreachable)",
-}
 
 monster.health = 70
 monster.maxHealth = 70
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -73,8 +63,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 63000, maxCount = 15 },
-	{ name = "meat", chance = 14666 },
+	{ id = "gold coin", chance = 63000, maxCount = 15 },
+	{ id = "meat", chance = 14666 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Braindeath (Tibia Wiki: https://tibia.fandom.com/wiki/Braindeath)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Braindeath")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 321
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Helheim, Demon Forge (The Arcanum), beneath Fenrock, Vandura Bonelord Cave, \z
-		Alchemist Quarter and Cemetery Quarter.",
-}
 
 monster.health = 1225
 monster.maxHealth = 1225
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,
@@ -88,18 +77,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 99470, maxCount = 89 },
-	{ name = "bone sword", chance = 15130 },
-	{ name = "sniper arrow", chance = 9560, maxCount = 4 },
-	{ name = "steel shield", chance = 5940 },
-	{ name = "piece of dead brain", chance = 5030 },
-	{ name = "bonelord eye", chance = 2960 },
-	{ name = "clerical mace", chance = 1970 },
-	{ name = "haunted blade", chance = 1440 },
+	{ id = "gold coin", chance = 99470, maxCount = 89 },
+	{ id = "bone sword", chance = 15130 },
+	{ id = "sniper arrow", chance = 9560, maxCount = 4 },
+	{ id = "steel shield", chance = 5940 },
+	{ id = "piece of dead brain", chance = 5030 },
+	{ id = "bonelord eye", chance = 2960 },
+	{ id = "clerical mace", chance = 1970 },
+	{ id = "haunted blade", chance = 1440 },
 	{ id = 3059, chance = 930 }, -- spellbook
-	{ name = "spiked squelcher", chance = 180 },
-	{ name = "bonelord shield", chance = 100 },
-	{ name = "bonelord helmet", chance = 100 },
+	{ id = "spiked squelcher", chance = 180 },
+	{ id = "bonelord shield", chance = 100 },
+	{ id = "bonelord helmet", chance = 100 },
 }
 
 monster.attacks = {
@@ -117,7 +106,7 @@ monster.defenses = {
 	armor = 12,
 	mitigation = 0.67,
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 150, maxDamage = 200, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 260, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 218},
 }
 
 monster.elements = {

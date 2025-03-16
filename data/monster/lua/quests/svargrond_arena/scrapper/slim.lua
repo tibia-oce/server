@@ -1,3 +1,6 @@
+-- Slim (Tibia Wiki: https://tibia.fandom.com/wiki/Slim)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Slim")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

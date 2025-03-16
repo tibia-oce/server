@@ -1,3 +1,6 @@
+-- Bretzecutioner (Tibia Wiki: https://tibia.fandom.com/wiki/Bretzecutioner)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Bretzecutioner")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -99,7 +101,7 @@ monster.defenses = {
 	defense = 30,
 	armor = 30,
 	mitigation = 2.04,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 420, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 270},
 }
 
 monster.elements = {

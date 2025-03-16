@@ -1,3 +1,6 @@
+-- Koshei the Deathless (Tibia Wiki: https://tibia.fandom.com/wiki/Koshei_the_Deathless)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Koshei the Deathless")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -86,7 +88,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 9, type = COMBAT_DEATHDAMAGE, minDamage = -50, maxDamage = -140, length = 8, spread = 0, effect = CONST_ME_MORTAREA, target = false },
 	-- curse
 	{ name = "condition", type = CONDITION_CURSED, interval = 3000, chance = 15, minDamage = -54, maxDamage = -54, range = 1, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -900, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -900, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 30000 },
 }
 
 monster.defenses = {

@@ -1,3 +1,6 @@
+-- Smuggler (Tibia Wiki: https://tibia.fandom.com/wiki/Smuggler)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Smuggler")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 222
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Around Dark Cathedral, Tiquanda Bandit Caves, the Outlaw Camp, Tyrsung, Yalahar and Nargor.",
-}
 
 monster.health = 130
 monster.maxHealth = 130
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,16 +66,16 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 30200, maxCount = 2 }, -- torch
-	{ name = "gold coin", chance = 80000, maxCount = 10 },
+	{ id = "gold coin", chance = 80000, maxCount = 10 },
 	{ id = 3264, chance = 5000 }, -- sword
-	{ name = "knife", chance = 9920 },
-	{ name = "combat knife", chance = 4400 },
-	{ name = "short sword", chance = 10000 },
-	{ name = "leather helmet", chance = 10050 },
-	{ name = "leather legs", chance = 14840 },
-	{ name = "ham", chance = 10200 },
+	{ id = "knife", chance = 9920 },
+	{ id = "combat knife", chance = 4400 },
+	{ id = "short sword", chance = 10000 },
+	{ id = "leather helmet", chance = 10050 },
+	{ id = "leather legs", chance = 14840 },
+	{ id = "ham", chance = 10200 },
 	{ id = 7397, chance = 110 }, -- deer trophy
-	{ name = "raspberry", chance = 5000, maxCount = 5 },
+	{ id = "raspberry", chance = 5000, maxCount = 5 },
 }
 
 monster.attacks = {

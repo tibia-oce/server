@@ -1,3 +1,6 @@
+-- Overcharge (Tibia Wiki: https://tibia.fandom.com/wiki/Overcharge)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Overcharge")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.events = {
 	"OverchargeDeath",

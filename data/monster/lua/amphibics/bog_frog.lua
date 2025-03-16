@@ -1,3 +1,6 @@
+-- Bog Frog (Tibia Wiki: https://tibia.fandom.com/wiki/Bog_Frog)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Bog Frog")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 738
-monster.Bestiary = {
-	class = "Amphibic",
-	race = BESTY_RACE_AMPHIBIC,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Shadowthorn in the bog god's temple, Drefia, around Lake Equivocolao when it's dirty.",
-}
 
 monster.health = 25
 monster.maxHealth = 25
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

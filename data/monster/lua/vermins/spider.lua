@@ -1,3 +1,6 @@
+-- Spider (Tibia Wiki: https://tibia.fandom.com/wiki/Spider)
+-- Version: 2.0
+
 local mType = Game.createMonsterType("Spider")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 30
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Almost everywhere, in grass areas, sewers like Carlin sewers, \z
-		caves like as Ancient Temple, Rookgaard and the Tiquanda Tarantula Caves.",
-}
 
 monster.health = 20
 monster.maxHealth = 20
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,8 +63,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 65150, maxCount = 5 },
-	{ name = "spider fangs", chance = 960 },
+	{ id = "gold coin", chance = 65150, maxCount = 5 },
+	{ id = "spider fangs", chance = 960 },
 }
 
 monster.attacks = {

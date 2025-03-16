@@ -1,3 +1,6 @@
+-- Gnarlhound (Tibia Wiki: https://tibia.fandom.com/wiki/Gnarlhound)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Gnarlhound")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 630
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Zao Steppe, Raging Mage Tower, Gnarlhound Caves. \z
-		Four inaccessible ones can be seen in Telas's basement.",
-}
 
 monster.health = 198
 monster.maxHealth = 198
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,10 +65,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 48000, maxCount = 30 },
-	{ name = "meat", chance = 39075, maxCount = 3 },
-	{ name = "worm", chance = 33300, maxCount = 3 },
-	{ name = "shaggy tail", chance = 25550 },
+	{ id = "gold coin", chance = 48000, maxCount = 30 },
+	{ id = "meat", chance = 39075, maxCount = 3 },
+	{ id = "worm", chance = 33300, maxCount = 3 },
+	{ id = "shaggy tail", chance = 25550 },
 }
 
 monster.attacks = {

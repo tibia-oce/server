@@ -1,3 +1,6 @@
+-- Tormented Ghost (Tibia Wiki: https://tibia.fandom.com/wiki/Tormented_Ghost)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Tormented Ghost")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

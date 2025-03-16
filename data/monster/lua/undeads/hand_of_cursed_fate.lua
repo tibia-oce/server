@@ -1,3 +1,6 @@
+-- Hand of Cursed Fate (Tibia Wiki: https://tibia.fandom.com/wiki/Hand_of_Cursed_Fate)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Hand of Cursed Fate")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 281
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Pits of Inferno, The Battlefield, The Arcanum, The Blood Halls and The Crystal Caves.",
-}
 
 monster.health = 6600
 monster.maxHealth = 6600
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,34 +66,34 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "emerald bangle", chance = 3500 },
-	{ name = "small sapphire", chance = 11000, maxCount = 4 },
-	{ name = "gold coin", chance = 60000, maxCount = 100 },
-	{ name = "gold coin", chance = 60000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 67 },
-	{ name = "platinum coin", chance = 100000, maxCount = 7 },
-	{ name = "violet gem", chance = 700 },
-	{ name = "yellow gem", chance = 5940 },
+	{ id = "emerald bangle", chance = 3500 },
+	{ id = "small sapphire", chance = 11000, maxCount = 4 },
+	{ id = "gold coin", chance = 60000, maxCount = 100 },
+	{ id = "gold coin", chance = 60000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 67 },
+	{ id = "platinum coin", chance = 100000, maxCount = 7 },
+	{ id = "violet gem", chance = 700 },
+	{ id = "yellow gem", chance = 5940 },
 	{ id = 3051, chance = 3150 }, -- energy ring
-	{ name = "platinum amulet", chance = 1005 },
-	{ name = "mind stone", chance = 9090 },
-	{ name = "wand of inferno", chance = 5590 },
-	{ name = "boots of haste", chance = 540 },
-	{ name = "protection amulet", chance = 8740 },
-	{ name = "sudden death rune", chance = 4200, maxCount = 8 },
-	{ name = "skull staff", chance = 700 },
-	{ name = "knight armor", chance = 4550 },
-	{ name = "crown armor", chance = 1400 },
-	{ name = "mysterious voodoo skull", chance = 247 },
-	{ name = "soul orb", chance = 31111 },
+	{ id = "platinum amulet", chance = 1005 },
+	{ id = "mind stone", chance = 9090 },
+	{ id = "wand of inferno", chance = 5590 },
+	{ id = "boots of haste", chance = 540 },
+	{ id = "protection amulet", chance = 8740 },
+	{ id = "sudden death rune", chance = 4200, maxCount = 8 },
+	{ id = "skull staff", chance = 700 },
+	{ id = "knight armor", chance = 4550 },
+	{ id = "crown armor", chance = 1400 },
+	{ id = "mysterious voodoo skull", chance = 247 },
+	{ id = "soul orb", chance = 31111 },
 	{ id = 6299, chance = 1750 }, -- death ring
-	{ name = "demonic essence", chance = 12000 },
-	{ name = "flask of demonic blood", chance = 30000, maxCount = 4 },
-	{ name = "assassin star", chance = 7692, maxCount = 5 },
-	{ name = "abyss hammer", chance = 495 },
-	{ name = "great mana potion", chance = 19990, maxCount = 2 },
-	{ name = "ultimate health potion", chance = 18000 },
-	{ name = "gold ingot", chance = 700 },
+	{ id = "demonic essence", chance = 12000 },
+	{ id = "flask of demonic blood", chance = 30000, maxCount = 4 },
+	{ id = "assassin star", chance = 7692, maxCount = 5 },
+	{ id = "abyss hammer", chance = 495 },
+	{ id = "great mana potion", chance = 19990, maxCount = 2 },
+	{ id = "ultimate health potion", chance = 18000 },
+	{ id = "gold ingot", chance = 700 },
 }
 
 monster.attacks = {
@@ -117,7 +107,7 @@ monster.defenses = {
 	defense = 25,
 	armor = 53,
 	mitigation = 1.88,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 1000, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 260},
 	{ name = "invisible", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_BLUE },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_HEALING, minDamage = 100, maxDamage = 250, effect = CONST_ME_MAGIC_BLUE, target = false },
 }

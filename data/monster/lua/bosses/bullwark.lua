@@ -1,3 +1,6 @@
+-- Bullwark (Tibia Wiki: https://tibia.fandom.com/wiki/Bullwark)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Bullwark")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -68,24 +70,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 200 },
-	{ name = "platinum coin", chance = 80000, maxCount = 5 },
-	{ name = "great health potion", chance = 40000, maxCount = 5 },
-	{ name = "great mana potion", chance = 40000, maxCount = 5 },
-	{ name = "great spirit potion", chance = 40000, maxCount = 5 },
-	{ name = "ham", chance = 35250, maxCount = 5 },
-	{ name = "meat", chance = 35250, maxCount = 5 },
-	{ name = "minotaur leather", chance = 26500, maxCount = 2 },
-	{ name = "moohtant horn", chance = 21000, maxCount = 2 },
-	{ name = "small diamond", chance = 17900, maxCount = 5 },
-	{ name = "small emerald", chance = 16350, maxCount = 5 },
-	{ name = "small ruby", chance = 15500, maxCount = 5 },
-	{ name = "small sapphire", chance = 14200, maxCount = 5 },
-	{ name = "giant pacifier", chance = 1920 },
-	{ name = "moohtant cudgel", chance = 1800 },
-	{ name = "red piece of cloth", chance = 1500 },
-	{ name = "yellow gem", chance = 1200 },
-	{ name = "one hit wonder", chance = 350 },
+	{ id = "gold coin", chance = 100000, maxCount = 200 },
+	{ id = "platinum coin", chance = 80000, maxCount = 5 },
+	{ id = "great health potion", chance = 40000, maxCount = 5 },
+	{ id = "great mana potion", chance = 40000, maxCount = 5 },
+	{ id = "great spirit potion", chance = 40000, maxCount = 5 },
+	{ id = "ham", chance = 35250, maxCount = 5 },
+	{ id = "meat", chance = 35250, maxCount = 5 },
+	{ id = "minotaur leather", chance = 26500, maxCount = 2 },
+	{ id = "moohtant horn", chance = 21000, maxCount = 2 },
+	{ id = "small diamond", chance = 17900, maxCount = 5 },
+	{ id = "small emerald", chance = 16350, maxCount = 5 },
+	{ id = "small ruby", chance = 15500, maxCount = 5 },
+	{ id = "small sapphire", chance = 14200, maxCount = 5 },
+	{ id = "giant pacifier", chance = 1920 },
+	{ id = "moohtant cudgel", chance = 1800 },
+	{ id = "red piece of cloth", chance = 1500 },
+	{ id = "yellow gem", chance = 1200 },
+	{ id = "one hit wonder", chance = 350 },
 }
 
 monster.attacks = {
@@ -103,7 +105,7 @@ monster.defenses = {
 	armor = 48,
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 1, type = COMBAT_HEALING, minDamage = 4000, maxDamage = 6000, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 11, speedChange = 660, effect = CONST_ME_HITAREA, target = false, duration = 7000 },
+	{ name = "speed", interval = 2000, chance = 11, effect = CONST_ME_HITAREA, speed = 300},
 	{ name = "bullwark summon", interval = 2000, chance = 9, target = false },
 }
 

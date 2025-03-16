@@ -1,3 +1,6 @@
+-- Slug (Tibia Wiki: https://tibia.fandom.com/wiki/Slug)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Slug")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 731
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "South-east of Venore, Swamp Troll Cave.",
-}
 
 monster.health = 255
 monster.maxHealth = 255
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,8 +65,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 62000, maxCount = 40 },
-	{ name = "worm", chance = 5000, maxCount = 3 },
+	{ id = "gold coin", chance = 62000, maxCount = 40 },
+	{ id = "worm", chance = 5000, maxCount = 3 },
 }
 
 monster.attacks = {

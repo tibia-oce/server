@@ -1,3 +1,6 @@
+-- The Imperor (Tibia Wiki: https://tibia.fandom.com/wiki/The_Imperor)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("The Imperor")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -101,7 +103,7 @@ monster.defenses = {
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 35, type = COMBAT_HEALING, minDamage = 275, maxDamage = 840, effect = CONST_ME_MAGIC_RED, target = false },
 	{ name = "the imperor summon", interval = 2000, chance = 21, target = false },
-	{ name = "speed", interval = 2000, chance = 12, speedChange = 1496, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 12, effect = CONST_ME_MAGIC_RED, speed = 310},
 	{ name = "invisible", interval = 2000, chance = 11, effect = CONST_ME_TELEPORT },
 }
 

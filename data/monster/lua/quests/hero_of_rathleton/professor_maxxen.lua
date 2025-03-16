@@ -1,3 +1,6 @@
+-- Professor Maxxen (Tibia Wiki: https://tibia.fandom.com/wiki/Professor_Maxxen)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Professor Maxxen")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -100,7 +102,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 45,
 	armor = 40,
-	{ name = "speed", interval = 2000, chance = 13, speedChange = 460, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 13, effect = CONST_ME_MAGIC_RED, speed = 340},
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_HEALING, minDamage = 200, maxDamage = 250, effect = CONST_ME_MAGIC_BLUE, target = false },
 	{ name = "generator", interval = 30000, chance = 50, target = false },
 	{ name = "maxxenteleport", interval = 2000, chance = 5, target = false },

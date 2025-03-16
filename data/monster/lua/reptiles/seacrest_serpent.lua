@@ -1,3 +1,6 @@
+-- Seacrest Serpent (Tibia Wiki: https://tibia.fandom.com/wiki/Seacrest_Serpent)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Seacrest Serpent")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1096
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 2,
-	Locations = "Seacrest Grounds when Quara Renegades are not spawning.",
-}
 
 monster.health = 3000
 monster.maxHealth = 3000
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,

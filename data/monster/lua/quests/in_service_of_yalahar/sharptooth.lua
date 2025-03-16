@@ -1,3 +1,6 @@
+-- Sharptooth (Tibia Wiki: https://tibia.fandom.com/wiki/Sharptooth)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Sharptooth")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 2,
@@ -82,7 +84,7 @@ monster.defenses = {
 	defense = 29,
 	armor = 20,
 	mitigation = 1.46,
-	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_GREEN, target = false },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_GREEN, speed = 290},
 	{ name = "combat", interval = 2000, chance = 12, type = COMBAT_HEALING, minDamage = 200, maxDamage = 240, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

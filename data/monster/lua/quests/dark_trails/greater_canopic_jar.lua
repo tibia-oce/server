@@ -1,3 +1,6 @@
+-- Greater Canopic Jar (Tibia Wiki: https://tibia.fandom.com/wiki/Greater_Canopic_Jar)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Greater Canopic Jar")
 local monster = {}
 
@@ -55,8 +58,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

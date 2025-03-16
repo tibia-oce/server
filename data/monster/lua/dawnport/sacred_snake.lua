@@ -1,3 +1,6 @@
+-- Sacred Snake (Tibia Wiki: https://tibia.fandom.com/wiki/Sacred_Snake)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Sacred Snake")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -63,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "eggs of a sacred snake", chance = 100000, maxCount = 20 },
+	{ id = "eggs of a sacred snake", chance = 100000, maxCount = 20 },
 }
 
 monster.attacks = {

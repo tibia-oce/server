@@ -1,3 +1,6 @@
+-- Dworc Fleshhunter (Tibia Wiki: https://tibia.fandom.com/wiki/Dworc_Fleshhunter)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Dworc Fleshhunter")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 215
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "South of Port Hope (Trapwood) on ground level and underground.",
-}
 
 monster.health = 85
 monster.maxHealth = 85
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,14 +67,14 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 4750 }, -- torch
-	{ name = "gold coin", chance = 69000, maxCount = 13 },
+	{ id = "gold coin", chance = 69000, maxCount = 13 },
 	{ id = 3114, chance = 3300, maxCount = 3 }, -- skull
-	{ name = "poison dagger", chance = 2250 },
-	{ name = "bone shield", chance = 1000 },
-	{ name = "cleaver", chance = 9750 },
-	{ name = "ripper lance", chance = 90 },
-	{ name = "hunting spear", chance = 2000 },
-	{ name = "tribal mask", chance = 500 },
+	{ id = "poison dagger", chance = 2250 },
+	{ id = "bone shield", chance = 1000 },
+	{ id = "cleaver", chance = 9750 },
+	{ id = "ripper lance", chance = 90 },
+	{ id = "hunting spear", chance = 2000 },
+	{ id = "tribal mask", chance = 500 },
 }
 
 monster.attacks = {

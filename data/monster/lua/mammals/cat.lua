@@ -1,3 +1,6 @@
+-- Cat (Tibia Wiki: https://tibia.fandom.com/wiki/Cat)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Cat")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 387
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 25,
-	FirstUnlock = 5,
-	SecondUnlock = 10,
-	CharmsPoints = 1,
-	Stars = 0,
-	Occurrence = 0,
-	Locations = "Carlin, Rookgaard, Factory Quarter, Yalahar, \z
-		The Witches' Cliff (only accessible during a quest), probably more areas.",
-}
 
 monster.health = 20
 monster.maxHealth = 20
@@ -60,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

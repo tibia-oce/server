@@ -1,3 +1,6 @@
+-- Furious Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Furious_Troll)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Furious Troll")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 540
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 1,
-	Locations = "Old Beregar mines.",
-}
 
 monster.health = 245
 monster.maxHealth = 245
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -83,10 +72,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 93000, maxCount = 146 },
-	{ name = "platinum coin", chance = 6000 },
-	{ name = "war hammer", chance = 750 },
-	{ name = "bunch of troll hair", chance = 4400 },
+	{ id = "gold coin", chance = 93000, maxCount = 146 },
+	{ id = "platinum coin", chance = 6000 },
+	{ id = "war hammer", chance = 750 },
+	{ id = "bunch of troll hair", chance = 4400 },
 }
 
 monster.attacks = {

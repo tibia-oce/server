@@ -1,3 +1,6 @@
+-- Ferumbras Essence (Tibia Wiki: https://tibia.fandom.com/wiki/Ferumbras_Essence)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Ferumbras Essence")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,7 +79,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 10,
 	--	mitigation = ???,
-	{ name = "speed", interval = 2000, chance = 8, speedChange = 240, effect = CONST_ME_MAGIC_GREEN, target = false, duration = 20000 },
+	{ name = "speed", interval = 2000, chance = 8, effect = CONST_ME_MAGIC_GREEN, speed = 200},
 	{ name = "combat", interval = 2000, chance = 11, type = COMBAT_HEALING, minDamage = 15, maxDamage = 25, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

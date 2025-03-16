@@ -1,3 +1,6 @@
+-- Hydra (Tibia Wiki: https://tibia.fandom.com/wiki/Hydra)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Hydra")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 121
-monster.Bestiary = {
-	class = "Dragon",
-	race = BESTY_RACE_DRAGON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Northern Hydra Mountain in east Tiquanda, southern Hydra Mountain, Hydra Egg Quest in Tiquanda \z
-	north-east of the Elephant Tusk Quest, Forbidden Lands hydra cave, Deeper Banuta, Talahu surface, \z
-	Ferumbras Citadel, Yalahar Arena and Zoo Quarter, Yalahar Foreigner Quarter (Crystal Lake), Oramond Hydra/Bog Raider Cave.",
-}
 
 monster.health = 2350
 monster.maxHealth = 2350
@@ -64,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,27 +68,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 87970, maxCount = 212 },
-	{ name = "ham", chance = 59510, maxCount = 3 },
-	{ name = "platinum coin", chance = 49910, maxCount = 3 },
-	{ name = "hydra head", chance = 10820 },
-	{ name = "cucumber", chance = 6900 },
-	{ name = "small sapphire", chance = 3920 },
-	{ name = "warrior helmet", chance = 1310 },
-	{ name = "knight armor", chance = 1120 },
-	{ name = "life crystal", chance = 930 },
+	{ id = "gold coin", chance = 87970, maxCount = 212 },
+	{ id = "ham", chance = 59510, maxCount = 3 },
+	{ id = "platinum coin", chance = 49910, maxCount = 3 },
+	{ id = "hydra head", chance = 10820 },
+	{ id = "cucumber", chance = 6900 },
+	{ id = "small sapphire", chance = 3920 },
+	{ id = "warrior helmet", chance = 1310 },
+	{ id = "knight armor", chance = 1120 },
+	{ id = "life crystal", chance = 930 },
 	{ id = 3098, chance = 840 }, -- ring of healing
-	{ name = "hydra egg", chance = 840 },
-	{ name = "strong mana potion", chance = 840 },
-	{ name = "stone skin amulet", chance = 750 },
-	{ name = "boots of haste", chance = 190 },
-	{ name = "medusa shield", chance = 190 },
-	{ name = "royal helmet", chance = 90 },
+	{ id = "hydra egg", chance = 840 },
+	{ id = "strong mana potion", chance = 840 },
+	{ id = "stone skin amulet", chance = 750 },
+	{ id = "boots of haste", chance = 190 },
+	{ id = "medusa shield", chance = 190 },
+	{ id = "royal helmet", chance = 90 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -270 },
-	{ name = "speed", interval = 2000, chance = 25, speedChange = -700, range = 7, radius = 4, shootEffect = CONST_ANI_POISON, effect = CONST_ME_GREEN_RINGS, target = true, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 25, speed = -700, range = 7, radius = 4, shootEffect = CONST_ANI_POISON, effect = CONST_ME_GREEN_RINGS, target = true, duration = 15000 },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_ICEDAMAGE, minDamage = -100, maxDamage = -250, length = 8, spread = 3, effect = CONST_ME_LOSEENERGY, target = false },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_ICEDAMAGE, minDamage = -80, maxDamage = -155, shootEffect = CONST_ANI_SMALLICE, target = true },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -66, maxDamage = -320, length = 8, spread = 3, effect = CONST_ME_CARNIPHILA, target = false },

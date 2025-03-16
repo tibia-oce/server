@@ -1,3 +1,6 @@
+-- Hellgorak (Tibia Wiki: https://tibia.fandom.com/wiki/Hellgorak)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Hellgorak")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

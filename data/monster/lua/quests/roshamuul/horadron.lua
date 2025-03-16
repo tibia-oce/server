@@ -1,3 +1,6 @@
+-- Horadron (Tibia Wiki: https://tibia.fandom.com/wiki/Horadron)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Horadron")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

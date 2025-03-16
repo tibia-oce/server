@@ -1,3 +1,6 @@
+-- Desperate White Deer (Tibia Wiki: https://tibia.fandom.com/wiki/Desperate_White_Deer)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Desperate White Deer")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -64,9 +66,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "ham", chance = 20000, maxCount = 3 },
-	{ name = "white deer antlers", chance = 20000 },
-	{ name = "white deer skin", chance = 20000 },
+	{ id = "ham", chance = 20000, maxCount = 3 },
+	{ id = "white deer antlers", chance = 20000 },
+	{ id = "white deer skin", chance = 20000 },
 }
 
 monster.attacks = {}
@@ -75,7 +77,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 1,
 	mitigation = 0.05,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 400, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 224},
 }
 
 monster.elements = {

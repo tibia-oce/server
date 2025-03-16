@@ -1,3 +1,6 @@
+-- Leaf Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Leaf_Golem)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("Leaf Golem")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 979
-monster.Bestiary = {
-	class = "Plant",
-	race = BESTY_RACE_PLANT,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Leaf dungeon in Hellgate, Lair of the Treeling Witch, Forest Fury Camp and in the \z
-		Forest Fury version of the Forsaken Mine.",
-}
 
 monster.health = 90
 monster.maxHealth = 90
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,18 +68,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 87460, maxCount = 27 },
-	{ name = "fir cone", chance = 14930 },
-	{ name = "dowser", chance = 12190 },
-	{ name = "swampling club", chance = 5130 },
-	{ name = "white mushroom", chance = 4920, maxCount = 3 },
-	{ name = "small emerald", chance = 950 },
+	{ id = "gold coin", chance = 87460, maxCount = 27 },
+	{ id = "fir cone", chance = 14930 },
+	{ id = "dowser", chance = 12190 },
+	{ id = "swampling club", chance = 5130 },
+	{ id = "white mushroom", chance = 4920, maxCount = 3 },
+	{ id = "small emerald", chance = 950 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -90 },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -15, range = 7, shootEffect = CONST_ANI_SMALLSTONE, target = true },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -600, radius = 3, effect = CONST_ME_SMALLPLANTS, target = false, duration = 9000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -600, radius = 3, effect = CONST_ME_SMALLPLANTS, target = false, duration = 9000 },
 }
 
 monster.defenses = {

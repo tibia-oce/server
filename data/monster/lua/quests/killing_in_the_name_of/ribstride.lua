@@ -1,3 +1,6 @@
+-- Ribstride (Tibia Wiki: https://tibia.fandom.com/wiki/Ribstride)
+-- Version: 9.20
+
 local mType = Game.createMonsterType("Ribstride")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -82,7 +84,7 @@ monster.attacks = {
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -50, maxDamage = -60, radius = 3, effect = CONST_ME_POISONAREA, target = false },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -70, maxDamage = -80, length = 6, spread = 3, effect = CONST_ME_POISONAREA, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -300, target = true, duration = 13000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -300, target = true, duration = 13000 },
 }
 
 monster.defenses = {

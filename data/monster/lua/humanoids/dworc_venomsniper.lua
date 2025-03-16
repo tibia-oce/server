@@ -1,3 +1,6 @@
+-- Dworc Venomsniper (Tibia Wiki: https://tibia.fandom.com/wiki/Dworc_Venomsniper)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Dworc Venomsniper")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 216
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "South of Port Hope (Trapwood) on ground level and underground and on Foreigner Quarter of Yalahar.",
-}
 
 monster.health = 80
 monster.maxHealth = 80
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,15 +67,15 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 6000 }, -- torch
-	{ name = "gold coin", chance = 75000, maxCount = 13 },
-	{ name = "bronze amulet", chance = 110 },
+	{ id = "gold coin", chance = 75000, maxCount = 13 },
+	{ id = "bronze amulet", chance = 110 },
 	{ id = 3114, chance = 1000, maxCount = 2 }, -- skull
-	{ name = "poison dagger", chance = 1500 },
-	{ name = "leather armor", chance = 10000 },
-	{ name = "poison arrow", chance = 5000, maxCount = 3 },
-	{ name = "tribal mask", chance = 510 },
-	{ name = "bast skirt", chance = 100 },
-	{ name = "seeds", chance = 200 },
+	{ id = "poison dagger", chance = 1500 },
+	{ id = "leather armor", chance = 10000 },
+	{ id = "poison arrow", chance = 5000, maxCount = 3 },
+	{ id = "tribal mask", chance = 510 },
+	{ id = "bast skirt", chance = 100 },
+	{ id = "seeds", chance = 200 },
 }
 
 monster.attacks = {

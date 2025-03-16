@@ -1,3 +1,6 @@
+-- Deepling Elite (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Elite)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Deepling Elite")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 862
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 1,
-	Locations = "Fiehonja (Tanjis lair).",
-}
 
 monster.health = 3200
 monster.maxHealth = 3200
@@ -33,8 +24,6 @@ monster.corpse = 13713
 monster.speed = 165
 monster.manaCost = 0
 
-monster.faction = FACTION_DEEPLING
-monster.enemyFactions = { FACTION_PLAYER, FACTION_DEATHLING }
 
 monster.changeTarget = {
 	interval = 4000,
@@ -65,9 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,22 +67,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "gold coin", chance = 100000, maxCount = 86 },
-	{ name = "great health potion", chance = 25000 },
-	{ name = "eye of a deepling", chance = 25000 },
-	{ name = "deepling filet", chance = 25000 },
-	{ name = "vortex bolt", chance = 24800, maxCount = 5 },
-	{ name = "deepling warts", chance = 24400 },
-	{ name = "great mana potion", chance = 24200 },
-	{ name = "deeptags", chance = 20600 },
-	{ name = "deepling ridge", chance = 19500 },
-	{ name = "small emerald", chance = 6890, maxCount = 2 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "gold coin", chance = 100000, maxCount = 86 },
+	{ id = "great health potion", chance = 25000 },
+	{ id = "eye of a deepling", chance = 25000 },
+	{ id = "deepling filet", chance = 25000 },
+	{ id = "vortex bolt", chance = 24800, maxCount = 5 },
+	{ id = "deepling warts", chance = 24400 },
+	{ id = "great mana potion", chance = 24200 },
+	{ id = "deeptags", chance = 20600 },
+	{ id = "deepling ridge", chance = 19500 },
+	{ id = "small emerald", chance = 6890, maxCount = 2 },
 	{ id = 3052, chance = 5360 }, -- life ring
-	{ name = "heavy trident", chance = 3680 },
-	{ name = "fish fin", chance = 2300 },
-	{ name = "warrior's shield", chance = 1534 },
-	{ name = "warrior's axe", chance = 820 },
+	{ id = "heavy trident", chance = 3680 },
+	{ id = "fish fin", chance = 2300 },
+	{ id = "warrior's shield", chance = 1534 },
+	{ id = "warrior's axe", chance = 820 },
 }
 
 monster.attacks = {

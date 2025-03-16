@@ -1,3 +1,6 @@
+-- Evil Sheep (Tibia Wiki: https://tibia.fandom.com/wiki/Evil_Sheep)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Evil Sheep")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 555
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Isle of Evil.",
-}
 
 monster.health = 350
 monster.maxHealth = 350
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,7 +64,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 50 },
+	{ id = "gold coin", chance = 50000, maxCount = 50 },
 }
 
 monster.attacks = {

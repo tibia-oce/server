@@ -1,3 +1,6 @@
+-- Deathstrike (Tibia Wiki: https://tibia.fandom.com/wiki/Deathstrike)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Deathstrike")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -88,7 +90,7 @@ monster.loot = {
 
 monster.attacks = {
 	{ name = "melee", interval = 1300, chance = 100, skill = 80, attack = 120 },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -400, range = 7, shootEffect = CONST_ANI_WHIRLWINDAXE, target = false, duration = 2500 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -400, range = 7, shootEffect = CONST_ANI_WHIRLWINDAXE, target = false, duration = 2500 },
 	{ name = "combat", interval = 2000, chance = 100, type = COMBAT_FIREDAMAGE, minDamage = -820, maxDamage = -950, range = 7, effect = CONST_ME_FIREAREA, target = false },
 	{ name = "combat", interval = 1000, chance = 12, type = COMBAT_ENERGYDAMAGE, minDamage = -350, maxDamage = -800, range = 3, effect = CONST_ME_PURPLEENERGY, target = true },
 }

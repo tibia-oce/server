@@ -1,3 +1,6 @@
+-- Bruise Payne (Tibia Wiki: https://tibia.fandom.com/wiki/Bruise_Payne)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Bruise Payne")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

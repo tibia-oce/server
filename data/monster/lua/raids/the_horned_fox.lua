@@ -1,3 +1,6 @@
+-- The Horned Fox (Tibia Wiki: https://tibia.fandom.com/wiki/The_Horned_Fox)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("The Horned Fox")
 local monster = {}
 
@@ -48,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

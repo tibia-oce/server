@@ -1,3 +1,6 @@
+-- Shiversleep (Tibia Wiki: https://tibia.fandom.com/wiki/Shiversleep)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Shiversleep")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Renegade Quara Predator (Tibia Wiki: https://tibia.fandom.com/wiki/Renegade_Quara_Predator)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Renegade Quara Predator")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1101
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Seacrest Grounds when Seacrest Serpents are not spawning.",
-}
 
 monster.health = 3250
 monster.maxHealth = 3250
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -77,22 +66,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 80000, maxCount = 4 },
-	{ name = "quara bone", chance = 10000, maxCount = 1 },
-	{ name = "royal spear", chance = 8000, maxCount = 7 },
-	{ name = "great health potion", chance = 6680, maxCount = 2 },
-	{ name = "mind stone", chance = 6440 },
-	{ name = "assassin star", chance = 5233, maxCount = 10 },
-	{ name = "shrimp", chance = 4510, maxCount = 5 },
-	{ name = "small diamond", chance = 3140, maxCount = 3 },
-	{ name = "fish fin", chance = 2101 },
-	{ name = "blue crystal shard", chance = 1290 },
-	{ name = "relic sword", chance = 1051 },
-	{ name = "skull helmet", chance = 560 },
-	{ name = "glacier robe", chance = 400 },
-	{ name = "abyss hammer", chance = 320 },
-	{ name = "frozen plate", chance = 160 },
-	{ name = "giant shrimp", chance = 80 },
+	{ id = "platinum coin", chance = 80000, maxCount = 4 },
+	{ id = "quara bone", chance = 10000, maxCount = 1 },
+	{ id = "royal spear", chance = 8000, maxCount = 7 },
+	{ id = "great health potion", chance = 6680, maxCount = 2 },
+	{ id = "mind stone", chance = 6440 },
+	{ id = "assassin star", chance = 5233, maxCount = 10 },
+	{ id = "shrimp", chance = 4510, maxCount = 5 },
+	{ id = "small diamond", chance = 3140, maxCount = 3 },
+	{ id = "fish fin", chance = 2101 },
+	{ id = "blue crystal shard", chance = 1290 },
+	{ id = "relic sword", chance = 1051 },
+	{ id = "skull helmet", chance = 560 },
+	{ id = "glacier robe", chance = 400 },
+	{ id = "abyss hammer", chance = 320 },
+	{ id = "frozen plate", chance = 160 },
+	{ id = "giant shrimp", chance = 80 },
 }
 
 monster.attacks = {
@@ -103,7 +92,7 @@ monster.defenses = {
 	defense = 45,
 	armor = 40,
 	mitigation = 1.46,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 30, effect = CONST_ME_MAGIC_GREEN, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_GREEN, speed = 450},
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 50, maxDamage = 100, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

@@ -1,3 +1,6 @@
+-- Manta Ray (Tibia Wiki: https://tibia.fandom.com/wiki/Manta_Ray)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Manta Ray")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 779
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Fiehonja only in stage 3 in a large room.",
-}
 
 monster.health = 680
 monster.maxHealth = 680
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,7 +64,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 63000, maxCount = 39 },
+	{ id = "gold coin", chance = 63000, maxCount = 39 },
 }
 
 monster.attacks = {

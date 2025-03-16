@@ -1,3 +1,6 @@
+-- Charged Disruption (Tibia Wiki: https://tibia.fandom.com/wiki/Charged_Disruption)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Charged Disruption")
 local monster = {}
 
@@ -43,8 +46,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.events = {
 	"ChargedDisruptionTransform",

@@ -1,3 +1,6 @@
+-- Werebear (Tibia Wiki: https://tibia.fandom.com/wiki/Werebear)
+-- Version: 10.80
+
 local mType = Game.createMonsterType("Werebear")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1142
-monster.Bestiary = {
-	class = "Lycanthrope",
-	race = BESTY_RACE_LYCANTHROPE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Grimvale underground, were-beasts cave south-west of Edron and in the Last Sanctum east of Cormaya.",
-}
 
 monster.health = 2400
 monster.maxHealth = 2400
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

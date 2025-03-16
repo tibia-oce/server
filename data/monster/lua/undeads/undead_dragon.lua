@@ -1,3 +1,6 @@
+-- Undead Dragon (Tibia Wiki: https://tibia.fandom.com/wiki/Undead_Dragon)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Undead Dragon")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 282
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Helheim (single, isolated spawn), Pits of Inferno (Ashfalor's throneroom), \z
-		Demon Forge (The Shadow Nexus and The Arcanum), under Razachai (including the Inner Sanctum), \z
-		Chyllfroest, Oramond Fury Dungeon.",
-}
 
 monster.health = 8350
 monster.maxHealth = 8350
@@ -64,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,31 +68,31 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "golden mug", chance = 6002 },
-	{ name = "black pearl", chance = 22780, maxCount = 2 },
-	{ name = "small sapphire", chance = 28370, maxCount = 2 },
-	{ name = "gold coin", chance = 35500, maxCount = 100 },
-	{ name = "gold coin", chance = 55500, maxCount = 98 },
-	{ name = "platinum coin", chance = 52000, maxCount = 5 },
-	{ name = "life crystal", chance = 2500 },
-	{ name = "war axe", chance = 1290 },
-	{ name = "golden armor", chance = 860 },
-	{ name = "knight armor", chance = 5500 },
-	{ name = "royal helmet", chance = 1720 },
-	{ name = "power bolt", chance = 15190, maxCount = 15 },
-	{ name = "hardened bone", chance = 14180 },
+	{ id = "golden mug", chance = 6002 },
+	{ id = "black pearl", chance = 22780, maxCount = 2 },
+	{ id = "small sapphire", chance = 28370, maxCount = 2 },
+	{ id = "gold coin", chance = 35500, maxCount = 100 },
+	{ id = "gold coin", chance = 55500, maxCount = 98 },
+	{ id = "platinum coin", chance = 52000, maxCount = 5 },
+	{ id = "life crystal", chance = 2500 },
+	{ id = "war axe", chance = 1290 },
+	{ id = "golden armor", chance = 860 },
+	{ id = "knight armor", chance = 5500 },
+	{ id = "royal helmet", chance = 1720 },
+	{ id = "power bolt", chance = 15190, maxCount = 15 },
+	{ id = "hardened bone", chance = 14180 },
 	{ id = 6299, chance = 1150 }, -- death ring
-	{ name = "demonic essence", chance = 12460 },
-	{ name = "assassin star", chance = 26650, maxCount = 5 },
-	{ name = "dragon slayer", chance = 860 },
-	{ name = "dragonbone staff", chance = 4000 },
-	{ name = "great mana potion", chance = 21490 },
-	{ name = "great health potion", chance = 21200 },
-	{ name = "divine plate", chance = 430 },
-	{ name = "skullcracker armor", chance = 290 },
-	{ name = "gold ingot", chance = 570 },
-	{ name = "unholy bone", chance = 33380 },
-	{ name = "spellweaver's robe", chance = 860 },
+	{ id = "demonic essence", chance = 12460 },
+	{ id = "assassin star", chance = 26650, maxCount = 5 },
+	{ id = "dragon slayer", chance = 860 },
+	{ id = "dragonbone staff", chance = 4000 },
+	{ id = "great mana potion", chance = 21490 },
+	{ id = "great health potion", chance = 21200 },
+	{ id = "divine plate", chance = 430 },
+	{ id = "skullcracker armor", chance = 290 },
+	{ id = "gold ingot", chance = 570 },
+	{ id = "unholy bone", chance = 33380 },
+	{ id = "spellweaver's robe", chance = 860 },
 }
 
 monster.attacks = {

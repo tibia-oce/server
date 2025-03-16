@@ -1,3 +1,6 @@
+-- Terror Bird (Tibia Wiki: https://tibia.fandom.com/wiki/Terror_Bird)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Terror Bird")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 218
-monster.Bestiary = {
-	class = "Bird",
-	race = BESTY_RACE_BIRD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Around Port Hope, Arena and Zoo Quarter in Yalahar, few on Zao steppes.",
-}
 
 monster.health = 300
 monster.maxHealth = 300
@@ -60,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,14 +67,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 82430, maxCount = 30 },
-	{ name = "meat", chance = 48550, maxCount = 3 },
-	{ name = "terrorbird beak", chance = 10310 },
-	{ name = "worm", chance = 9540, maxCount = 3 },
-	{ name = "colourful feather", chance = 3090 },
-	{ name = "health potion", chance = 690 },
-	{ name = "seeds", chance = 280 },
-	{ name = "feather headdress", chance = 100 },
+	{ id = "gold coin", chance = 82430, maxCount = 30 },
+	{ id = "meat", chance = 48550, maxCount = 3 },
+	{ id = "terrorbird beak", chance = 10310 },
+	{ id = "worm", chance = 9540, maxCount = 3 },
+	{ id = "colourful feather", chance = 3090 },
+	{ id = "health potion", chance = 690 },
+	{ id = "seeds", chance = 280 },
+	{ id = "feather headdress", chance = 100 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Outburst (Tibia Wiki: https://tibia.fandom.com/wiki/Outburst)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Outburst")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"HeartBossDeath",

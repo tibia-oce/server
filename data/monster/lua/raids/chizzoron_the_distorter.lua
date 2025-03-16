@@ -1,3 +1,6 @@
+-- Chizzoron the Distorter (Tibia Wiki: https://tibia.fandom.com/wiki/Chizzoron_the_Distorter)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Chizzoron the Distorter")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

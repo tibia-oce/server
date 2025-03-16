@@ -1,3 +1,6 @@
+-- Infected Weeper (Tibia Wiki: https://tibia.fandom.com/wiki/Infected_Weeper)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Infected Weeper")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 897
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 1,
-	Locations = "Warzone 2.",
-}
 
 monster.health = 3000
 monster.maxHealth = 3000
@@ -60,9 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 5,
@@ -83,8 +72,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 198 },
-	{ name = "platinum coin", chance = 100000, maxCount = 7 },
+	{ id = "gold coin", chance = 100000, maxCount = 198 },
+	{ id = "platinum coin", chance = 100000, maxCount = 7 },
 	{ id = 12600, chance = 1460 }, -- coal
 }
 
@@ -92,7 +81,7 @@ monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -280 },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_LIFEDRAIN, minDamage = -250, maxDamage = -700, length = 5, spread = 3, effect = CONST_ME_MAGIC_RED, target = false },
 	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_FIREDAMAGE, minDamage = -80, maxDamage = -250, radius = 3, effect = CONST_ME_HITBYFIRE, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -800, length = 5, spread = 3, effect = CONST_ME_BLOCKHIT, target = false, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -800, length = 5, spread = 3, effect = CONST_ME_BLOCKHIT, target = false, duration = 30000 },
 }
 
 monster.defenses = {

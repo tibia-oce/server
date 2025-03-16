@@ -1,3 +1,6 @@
+-- Bibby Bloodbath (Tibia Wiki: https://tibia.fandom.com/wiki/Bibby_Bloodbath)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Bibby Bloodbath")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -70,29 +72,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "platinum coin", chance = 100000, maxCount = 10 },
-	{ name = "orcish axe", chance = 32910 },
-	{ name = "two handed sword", chance = 24680 },
-	{ name = "throwing star", chance = 19600, maxCount = 18 },
-	{ name = "mana potion", chance = 15200, maxCount = 3 },
-	{ name = "dark armor", chance = 14000 },
-	{ name = "health potion", chance = 12000, maxCount = 3 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "platinum coin", chance = 100000, maxCount = 10 },
+	{ id = "orcish axe", chance = 32910 },
+	{ id = "two handed sword", chance = 24680 },
+	{ id = "throwing star", chance = 19600, maxCount = 18 },
+	{ id = "mana potion", chance = 15200, maxCount = 3 },
+	{ id = "dark armor", chance = 14000 },
+	{ id = "health potion", chance = 12000, maxCount = 3 },
 	{ id = 3578, chance = 10300, maxCount = 1 }, -- fish
-	{ name = "meat", chance = 10300 },
-	{ name = "plate legs", chance = 8100 },
+	{ id = "meat", chance = 10300 },
+	{ id = "plate legs", chance = 8100 },
 	{ id = 3049, chance = 6960 }, -- stealth ring
-	{ name = "magma amulet", chance = 5700 },
-	{ name = "giant sword", chance = 3160 },
-	{ name = "crusader helmet", chance = 1900 },
-	{ name = "butcher's axe", chance = 1270 },
+	{ id = "magma amulet", chance = 5700 },
+	{ id = "giant sword", chance = 3160 },
+	{ id = "crusader helmet", chance = 1900 },
+	{ id = "butcher's axe", chance = 1270 },
 	{ id = 7395, chance = 1270 }, -- orc trophy
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -200 },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -200, length = 5, spread = 3, effect = CONST_ME_BLOCKHIT, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -300, radius = 3, effect = CONST_ME_BLOCKHIT, target = false, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -300, radius = 3, effect = CONST_ME_BLOCKHIT, target = false, duration = 30000 },
 }
 
 monster.defenses = {

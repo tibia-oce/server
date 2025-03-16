@@ -1,3 +1,6 @@
+-- The Obliverator (Tibia Wiki: https://tibia.fandom.com/wiki/The_Obliverator)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("The Obliverator")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

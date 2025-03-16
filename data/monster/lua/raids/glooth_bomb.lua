@@ -1,3 +1,6 @@
+-- Glooth Bomb (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Bomb)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Glooth Bomb")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

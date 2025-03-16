@@ -1,3 +1,6 @@
+-- Silver Rabbit (Tibia Wiki: https://tibia.fandom.com/wiki/Silver_Rabbit)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Silver Rabbit")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 327
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "A lot of places on the Ice Islands and one on Rookgaard (unreachable).",
-}
 
 monster.health = 15
 monster.maxHealth = 15
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,9 +63,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 86170, maxCount = 2 },
+	{ id = "meat", chance = 86170, maxCount = 2 },
 	{ id = 3595, chance = 11150 }, -- carrot
-	{ name = "silky fur", chance = 28670 },
+	{ id = "silky fur", chance = 28670 },
 }
 
 monster.defenses = {

@@ -1,3 +1,6 @@
+-- Woodling (Tibia Wiki: https://tibia.fandom.com/wiki/Woodling)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Woodling")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

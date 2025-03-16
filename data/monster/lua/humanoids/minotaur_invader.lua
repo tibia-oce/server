@@ -1,3 +1,6 @@
+-- Minotaur Invader (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Invader)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Minotaur Invader")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1109
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Second floor Glooth Underground Factory, east side during the Oramond Minotaurs raid.",
-}
 
 monster.health = 1850
 monster.maxHealth = 1850
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

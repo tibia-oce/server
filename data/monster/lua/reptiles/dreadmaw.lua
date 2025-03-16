@@ -1,3 +1,6 @@
+-- Dreadmaw (Tibia Wiki: https://tibia.fandom.com/wiki/Dreadmaw)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Dreadmaw")
 local monster = {}
 
@@ -51,8 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -65,10 +67,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 99990, maxCount = 10 },
-	{ name = "gold ingot", chance = 99990 },
-	{ name = "ham", chance = 50000 },
-	{ name = "piece of crocodile leather", chance = 99990 },
+	{ id = "gold coin", chance = 99990, maxCount = 10 },
+	{ id = "gold ingot", chance = 99990 },
+	{ id = "ham", chance = 50000 },
+	{ id = "piece of crocodile leather", chance = 99990 },
 }
 
 monster.attacks = {

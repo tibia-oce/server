@@ -1,3 +1,6 @@
+-- Little Corym Charlatan (Tibia Wiki: https://tibia.fandom.com/wiki/Little_Corym_Charlatan)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Little Corym Charlatan")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 920
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 1,
-	Locations = "Venore marshes.",
-}
 
 monster.health = 90
 monster.maxHealth = 90
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

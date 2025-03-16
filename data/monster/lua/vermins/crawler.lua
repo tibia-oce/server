@@ -1,3 +1,6 @@
+-- Crawler (Tibia Wiki: https://tibia.fandom.com/wiki/Crawler)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Crawler")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 786
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Hive, Hive Outpost.",
-}
 
 monster.health = 1450
 monster.maxHealth = 1450
@@ -60,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,17 +64,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 90 },
-	{ name = "yellow gem", chance = 530 },
-	{ name = "war hammer", chance = 2070 },
-	{ name = "great mana potion", chance = 9300 },
-	{ name = "great health potion", chance = 6200 },
-	{ name = "springsprout rod", chance = 710 },
-	{ name = "small topaz", chance = 10040, maxCount = 2 },
-	{ name = "crawler head plating", chance = 18430 },
-	{ name = "compound eye", chance = 14640 },
-	{ name = "grasshopper legs", chance = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 90 },
+	{ id = "yellow gem", chance = 530 },
+	{ id = "war hammer", chance = 2070 },
+	{ id = "great mana potion", chance = 9300 },
+	{ id = "great health potion", chance = 6200 },
+	{ id = "springsprout rod", chance = 710 },
+	{ id = "small topaz", chance = 10040, maxCount = 2 },
+	{ id = "crawler head plating", chance = 18430 },
+	{ id = "compound eye", chance = 14640 },
+	{ id = "grasshopper legs", chance = 100 },
 }
 
 monster.attacks = {
@@ -96,7 +86,7 @@ monster.defenses = {
 	defense = 30,
 	armor = 38,
 	mitigation = 1.26,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 300, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 250},
 }
 
 monster.elements = {

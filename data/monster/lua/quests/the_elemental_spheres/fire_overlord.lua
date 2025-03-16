@@ -1,3 +1,6 @@
+-- Fire Overlord (Tibia Wiki: https://tibia.fandom.com/wiki/Fire_Overlord)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Fire Overlord")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 5,
@@ -67,11 +69,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 75 },
-	{ name = "platinum coin", chance = 50000, maxCount = 3 },
-	{ name = "magma coat", chance = 819 },
-	{ name = "eternal flames", chance = 100000 },
-	{ name = "fiery heart", chance = 100000 },
+	{ id = "gold coin", chance = 50000, maxCount = 75 },
+	{ id = "platinum coin", chance = 50000, maxCount = 3 },
+	{ id = "magma coat", chance = 819 },
+	{ id = "eternal flames", chance = 100000 },
+	{ id = "fiery heart", chance = 100000 },
 }
 
 monster.attacks = {

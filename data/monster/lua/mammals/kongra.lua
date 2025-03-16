@@ -1,3 +1,6 @@
+-- Kongra (Tibia Wiki: https://tibia.fandom.com/wiki/Kongra)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Kongra")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 116
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "In Banuta, northeast of Port Hope, Arena and Zoo Quarter.",
-}
 
 monster.health = 340
 monster.maxHealth = 340
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,15 +66,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 69000, maxCount = 40 },
+	{ id = "gold coin", chance = 69000, maxCount = 40 },
 	{ id = 3050, chance = 300 }, -- power ring
-	{ name = "protection amulet", chance = 990 },
+	{ id = "protection amulet", chance = 990 },
 	{ id = 3093, chance = 230 }, -- club ring
-	{ name = "plate armor", chance = 950 },
-	{ name = "banana", chance = 30000, maxCount = 12 },
-	{ name = "ape fur", chance = 980 },
-	{ name = "health potion", chance = 570 },
-	{ name = "kongra's shoulderpad", chance = 4900 },
+	{ id = "plate armor", chance = 950 },
+	{ id = "banana", chance = 30000, maxCount = 12 },
+	{ id = "ape fur", chance = 980 },
+	{ id = "health potion", chance = 570 },
+	{ id = "kongra's shoulderpad", chance = 4900 },
 }
 
 monster.attacks = {
@@ -95,7 +85,7 @@ monster.defenses = {
 	defense = 20,
 	armor = 18,
 	mitigation = 0.36,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 260, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 184},
 }
 
 monster.elements = {

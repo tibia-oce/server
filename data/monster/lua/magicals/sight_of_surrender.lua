@@ -1,3 +1,6 @@
+-- Sight of Surrender (Tibia Wiki: https://tibia.fandom.com/wiki/Sight_of_Surrender)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Sight of Surrender")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1012
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Dark Grounds, Guzzlemaw Valley (if less than 100 Blowing Horns tasks \z
-		have been done the day before) and the Silencer Plateau (when Silencer Resonating Chambers are used there).",
-}
 
 monster.health = 28000
 monster.maxHealth = 28000
@@ -63,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,30 +70,30 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 100000, maxCount = 15 },
-	{ name = "might ring", chance = 8000 },
-	{ name = "stone skin amulet", chance = 18000 },
-	{ name = "hammer of wrath", chance = 1380 },
-	{ name = "crystal mace", chance = 5500 },
-	{ name = "magic plate armor", chance = 1380 },
-	{ name = "crown legs", chance = 920 },
-	{ name = "crusader helmet", chance = 920 },
-	{ name = "tower shield", chance = 1380 },
-	{ name = "steel boots", chance = 920 },
-	{ name = "onyx flail", chance = 920 },
-	{ name = "jade hammer", chance = 920 },
-	{ name = "great mana potion", chance = 78000, maxCount = 5 },
-	{ name = "great spirit potion", chance = 72000, maxCount = 5 },
-	{ name = "ultimate health potion", chance = 30000, maxCount = 5 },
-	{ name = "blue crystal shard", chance = 23000, maxCount = 3 },
-	{ name = "violet crystal shard", chance = 32000, maxCount = 3 },
-	{ name = "green crystal shard", chance = 21600, maxCount = 3 },
-	{ name = "green crystal splinter", chance = 30000, maxCount = 5 },
-	{ name = "brown crystal splinter", chance = 30410, maxCount = 5 },
-	{ name = "blue crystal splinter", chance = 40000, maxCount = 5 },
-	{ name = "cluster of solace", chance = 11800 },
-	{ name = "sight of surrender's eye", chance = 100000 },
-	{ name = "broken visor", chance = 100000 },
+	{ id = "platinum coin", chance = 100000, maxCount = 15 },
+	{ id = "might ring", chance = 8000 },
+	{ id = "stone skin amulet", chance = 18000 },
+	{ id = "hammer of wrath", chance = 1380 },
+	{ id = "crystal mace", chance = 5500 },
+	{ id = "magic plate armor", chance = 1380 },
+	{ id = "crown legs", chance = 920 },
+	{ id = "crusader helmet", chance = 920 },
+	{ id = "tower shield", chance = 1380 },
+	{ id = "steel boots", chance = 920 },
+	{ id = "onyx flail", chance = 920 },
+	{ id = "jade hammer", chance = 920 },
+	{ id = "great mana potion", chance = 78000, maxCount = 5 },
+	{ id = "great spirit potion", chance = 72000, maxCount = 5 },
+	{ id = "ultimate health potion", chance = 30000, maxCount = 5 },
+	{ id = "blue crystal shard", chance = 23000, maxCount = 3 },
+	{ id = "violet crystal shard", chance = 32000, maxCount = 3 },
+	{ id = "green crystal shard", chance = 21600, maxCount = 3 },
+	{ id = "green crystal splinter", chance = 30000, maxCount = 5 },
+	{ id = "brown crystal splinter", chance = 30410, maxCount = 5 },
+	{ id = "blue crystal splinter", chance = 40000, maxCount = 5 },
+	{ id = "cluster of solace", chance = 11800 },
+	{ id = "sight of surrender's eye", chance = 100000 },
+	{ id = "broken visor", chance = 100000 },
 	{ id = 20208, chance = 460 }, -- string of mending
 }
 
@@ -120,7 +108,7 @@ monster.defenses = {
 	armor = 92,
 	mitigation = 2.31,
 	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 550, maxDamage = 1100, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 520, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 340},
 }
 
 monster.elements = {

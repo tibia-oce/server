@@ -1,3 +1,6 @@
+-- Lisa (Tibia Wiki: https://tibia.fandom.com/wiki/Lisa)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Lisa")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -68,27 +70,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "bowl of glooth soup", chance = 55000, maxCount = 5 },
-	{ name = "glooth sandwich", chance = 34500, maxCount = 5 },
-	{ name = "great health potion", chance = 33000, maxCount = 5 },
-	{ name = "great mana potion", chance = 33000, maxCount = 5 },
-	{ name = "great spirit potion", chance = 33000, maxCount = 5 },
-	{ name = "glooth steak", chance = 28000, maxCount = 5 },
-	{ name = "slimy leaf tentacle", chance = 22000, maxCount = 3 },
-	{ name = "small amethyst", chance = 21000, maxCount = 5 },
-	{ name = "small diamond", chance = 18000, maxCount = 5 },
-	{ name = "small ruby", chance = 16000, maxCount = 5 },
-	{ name = "small topaz", chance = 14800, maxCount = 5 },
-	{ name = "glooth club", chance = 10500 },
-	{ name = "glooth spear", chance = 9900 },
-	{ name = "glooth whip", chance = 9500 },
-	{ name = "glooth amulet", chance = 9000 },
-	{ name = "glooth axe", chance = 8000 },
-	{ name = "glooth blade", chance = 7000 },
-	{ name = "glooth cape", chance = 6000 },
+	{ id = "bowl of glooth soup", chance = 55000, maxCount = 5 },
+	{ id = "glooth sandwich", chance = 34500, maxCount = 5 },
+	{ id = "great health potion", chance = 33000, maxCount = 5 },
+	{ id = "great mana potion", chance = 33000, maxCount = 5 },
+	{ id = "great spirit potion", chance = 33000, maxCount = 5 },
+	{ id = "glooth steak", chance = 28000, maxCount = 5 },
+	{ id = "slimy leaf tentacle", chance = 22000, maxCount = 3 },
+	{ id = "small amethyst", chance = 21000, maxCount = 5 },
+	{ id = "small diamond", chance = 18000, maxCount = 5 },
+	{ id = "small ruby", chance = 16000, maxCount = 5 },
+	{ id = "small topaz", chance = 14800, maxCount = 5 },
+	{ id = "glooth club", chance = 10500 },
+	{ id = "glooth spear", chance = 9900 },
+	{ id = "glooth whip", chance = 9500 },
+	{ id = "glooth amulet", chance = 9000 },
+	{ id = "glooth axe", chance = 8000 },
+	{ id = "glooth blade", chance = 7000 },
+	{ id = "glooth cape", chance = 6000 },
 	{ id = 3039, chance = 2600 }, -- red gem
-	{ name = "yellow gem", chance = 2500 },
-	{ name = "lisa's doll", chance = 300 },
+	{ id = "yellow gem", chance = 2500 },
+	{ id = "lisa's doll", chance = 300 },
 }
 
 monster.attacks = {

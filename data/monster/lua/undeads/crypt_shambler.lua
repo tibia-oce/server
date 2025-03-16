@@ -1,3 +1,6 @@
+-- Crypt Shambler (Tibia Wiki: https://tibia.fandom.com/wiki/Crypt_Shambler)
+-- Version: 7.4
+
 local mType = Game.createMonsterType("Crypt Shambler")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 100
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Ankrahmun Tombs, Trapwood, Ramoa, Hellgate, Helheim, Mount Sternum Undead Cave, Deeper Catacombs, \z
-		Cemetery Quarter, Treasure Island, Upper Spike, Lion's Rock.",
-}
 
 monster.health = 330
 monster.maxHealth = 330
@@ -61,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,17 +68,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 510 },
-	{ name = "gold coin", chance = 57000, maxCount = 55 },
-	{ name = "rotten meat", chance = 1850 },
+	{ id = "small diamond", chance = 510 },
+	{ id = "gold coin", chance = 57000, maxCount = 55 },
+	{ id = "rotten meat", chance = 1850 },
 	{ id = 3115, chance = 5000 }, -- bone
-	{ name = "throwing star", chance = 910, maxCount = 3 },
-	{ name = "bone sword", chance = 1000 },
-	{ name = "iron helmet", chance = 2130 },
-	{ name = "iron helmet", chance = 2000 },
-	{ name = "bone shield", chance = 1000 },
-	{ name = "worm", chance = 9000, maxCount = 10 },
-	{ name = "half-digested piece of meat", chance = 5000 },
+	{ id = "throwing star", chance = 910, maxCount = 3 },
+	{ id = "bone sword", chance = 1000 },
+	{ id = "iron helmet", chance = 2130 },
+	{ id = "iron helmet", chance = 2000 },
+	{ id = "bone shield", chance = 1000 },
+	{ id = "worm", chance = 9000, maxCount = 10 },
+	{ id = "half-digested piece of meat", chance = 5000 },
 }
 
 monster.attacks = {

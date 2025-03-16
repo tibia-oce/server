@@ -1,3 +1,6 @@
+-- Fazzrah (Tibia Wiki: https://tibia.fandom.com/wiki/Fazzrah)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Fazzrah")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Groam (Tibia Wiki: https://tibia.fandom.com/wiki/Groam)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Groam")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -71,11 +73,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 50 },
-	{ name = "hunting spear", chance = 31250, maxCount = 4 },
+	{ id = "gold coin", chance = 100000, maxCount = 50 },
+	{ id = "hunting spear", chance = 31250, maxCount = 4 },
 	{ id = 3052, chance = 25000 }, -- life ring
-	{ name = "rusted armor", chance = 6250 },
-	{ name = "fish fin", chance = 1500 },
+	{ id = "rusted armor", chance = 6250 },
+	{ id = "fish fin", chance = 1500 },
 }
 
 monster.attacks = {

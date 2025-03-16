@@ -1,3 +1,6 @@
+-- Paiz the Pauperizer (Tibia Wiki: https://tibia.fandom.com/wiki/Paiz_the_Pauperizer)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Paiz the Pauperizer")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 3,

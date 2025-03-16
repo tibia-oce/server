@@ -1,3 +1,6 @@
+-- Tormentor (Tibia Wiki: https://tibia.fandom.com/wiki/Tormentor)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Tormentor")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -93,7 +95,7 @@ monster.defenses = {
 	armor = 25,
 	mitigation = 1.23,
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 60, maxDamage = 100, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 420, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 240},
 }
 
 monster.elements = {

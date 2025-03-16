@@ -1,3 +1,6 @@
+-- Renegade Quara Mantassin (Tibia Wiki: https://tibia.fandom.com/wiki/Renegade_Quara_Mantassin)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Renegade Quara Mantassin")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1099
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Seacrest Grounds when Seacrest Serpents are not spawning.",
-}
 
 monster.health = 1200
 monster.maxHealth = 1200
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -77,17 +66,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "mantassin tail", chance = 14490 },
-	{ name = "mind stone", chance = 10370 },
-	{ name = "shrimp", chance = 3950, maxCount = 3 },
-	{ name = "small sapphire", chance = 3540, maxCount = 3 },
+	{ id = "mantassin tail", chance = 14490 },
+	{ id = "mind stone", chance = 10370 },
+	{ id = "shrimp", chance = 3950, maxCount = 3 },
+	{ id = "small sapphire", chance = 3540, maxCount = 3 },
 	{ id = 3049, chance = 3290 }, -- stealth ring
-	{ name = "ice rapier", chance = 2060 },
-	{ name = "blue crystal shard", chance = 1890 },
-	{ name = "strange helmet", chance = 1320 },
-	{ name = "two handed sword", chance = 820 },
-	{ name = "fish fin", chance = 740 },
-	{ name = "blue robe", chance = 660 },
+	{ id = "ice rapier", chance = 2060 },
+	{ id = "blue crystal shard", chance = 1890 },
+	{ id = "strange helmet", chance = 1320 },
+	{ id = "two handed sword", chance = 820 },
+	{ id = "fish fin", chance = 740 },
+	{ id = "blue robe", chance = 660 },
 	{ id = 3051, chance = 580 }, -- energy ring
 }
 

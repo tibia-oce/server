@@ -1,3 +1,6 @@
+-- Tanjis (Tibia Wiki: https://tibia.fandom.com/wiki/Tanjis)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Tanjis")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -73,9 +75,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "depth ocrea", chance = 1200 },
-	{ name = "ornate mace", chance = 1100, unique = true },
-	{ name = "ornate shield", chance = 1100 },
+	{ id = "depth ocrea", chance = 1200 },
+	{ id = "ornate mace", chance = 1100, unique = true },
+	{ id = "ornate shield", chance = 1100 },
 }
 
 monster.attacks = {
@@ -88,7 +90,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = -100, maxDamage = -400, range = 7, radius = 1, shootEffect = CONST_ANI_LARGEROCK, target = true },
 	{ name = "combat", interval = 1200, chance = 7, type = COMBAT_DEATHDAMAGE, minDamage = -300, maxDamage = -800, length = 8, spread = 3, effect = CONST_ME_SMALLCLOUDS, target = false },
 	{ name = "combat", interval = 2000, chance = 14, type = COMBAT_ENERGYDAMAGE, minDamage = -200, maxDamage = -500, length = 8, spread = 3, effect = CONST_ME_PURPLEENERGY, target = false },
-	{ name = "speed", interval = 2150, chance = 16, speedChange = -600, range = 7, radius = 1, target = true, duration = 15000 },
+	{ name = "speed", interval = 2150, chance = 16, speed = -600, range = 7, radius = 1, target = true, duration = 15000 },
 }
 
 monster.defenses = {

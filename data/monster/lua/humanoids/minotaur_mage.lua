@@ -1,3 +1,6 @@
+-- Minotaur Mage (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Mage)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Minotaur Mage")
 local monster = {}
 
@@ -13,21 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 23
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Cyclopolis, Mintwallin, Maze of Lost Souls, Dark Pyramid, Folda (hidden cave), \z
-		Kazordoon (The Horned Fox's hideout), the Plains of Havoc, Point of No Return south of Outlaw Camp, \z
-		Elvenbane, the depths of Fibula Dungeon (level 50+), cave east from Dwarf Bridge, Foreigner Quarter, \z
-		Rookgaard Minotaur Hell (not reachable).",
-}
 
 monster.health = 155
 monster.maxHealth = 155
@@ -62,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,16 +66,16 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 4950 }, -- torch
-	{ name = "gold coin", chance = 85780, maxCount = 35 },
-	{ name = "wand of cosmic energy", chance = 600 },
-	{ name = "leather helmet", chance = 3000 },
-	{ name = "leather legs", chance = 5190 },
+	{ id = "gold coin", chance = 85780, maxCount = 35 },
+	{ id = "wand of cosmic energy", chance = 600 },
+	{ id = "leather helmet", chance = 3000 },
+	{ id = "leather legs", chance = 5190 },
 	{ id = 3595, chance = 15003, maxCount = 8 }, -- carrot
-	{ name = "minotaur leather", chance = 2290 },
-	{ name = "taurus mace", chance = 1000 },
-	{ name = "mana potion", chance = 490 },
-	{ name = "minotaur horn", chance = 3020, maxCount = 2 },
-	{ name = "purple robe", chance = 6430, maxCount = 2 },
+	{ id = "minotaur leather", chance = 2290 },
+	{ id = "taurus mace", chance = 1000 },
+	{ id = "mana potion", chance = 490 },
+	{ id = "minotaur horn", chance = 3020, maxCount = 2 },
+	{ id = "purple robe", chance = 6430, maxCount = 2 },
 }
 
 monster.attacks = {

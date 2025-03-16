@@ -1,3 +1,6 @@
+-- Cyclops Smith (Tibia Wiki: https://tibia.fandom.com/wiki/Cyclops_Smith)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Cyclops Smith")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 389
-monster.Bestiary = {
-	class = "Giant",
-	race = BESTY_RACE_GIANT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Cyclopolis second floor and below, Mistrock, Mount Sternum, \z
-		Cyclops Camp second floor and in the Cyclops version of the Forsaken Mine.",
-}
 
 monster.health = 435
 monster.maxHealth = 435
@@ -61,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,20 +67,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 82920, maxCount = 70 },
+	{ id = "gold coin", chance = 82920, maxCount = 70 },
 	{ id = 3093, chance = 90 }, -- club ring
-	{ name = "battle axe", chance = 5450 },
-	{ name = "double axe", chance = 880 },
-	{ name = "battle hammer", chance = 5200 },
-	{ name = "heavy machete", chance = 2000 },
-	{ name = "dark helmet", chance = 200 },
-	{ name = "plate shield", chance = 2000 },
-	{ name = "battle shield", chance = 6190 },
-	{ name = "meat", chance = 49950 },
+	{ id = "battle axe", chance = 5450 },
+	{ id = "double axe", chance = 880 },
+	{ id = "battle hammer", chance = 5200 },
+	{ id = "heavy machete", chance = 2000 },
+	{ id = "dark helmet", chance = 200 },
+	{ id = "plate shield", chance = 2000 },
+	{ id = "battle shield", chance = 6190 },
+	{ id = "meat", chance = 49950 },
 	{ id = 7398, chance = 140 }, -- cyclops trophy
-	{ name = "spiked squelcher", chance = 150 },
-	{ name = "strong health potion", chance = 390 },
-	{ name = "cyclops toe", chance = 10280 },
+	{ id = "spiked squelcher", chance = 150 },
+	{ id = "strong health potion", chance = 390 },
+	{ id = "cyclops toe", chance = 10280 },
 }
 
 monster.attacks = {

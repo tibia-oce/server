@@ -1,3 +1,6 @@
+-- Lizard Magistratus (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Magistratus)
+-- Version: 8.60
+
 local mType = Game.createMonsterType("Lizard Magistratus")
 local monster = {}
 
@@ -17,18 +20,6 @@ monster.events = {
 	"LizardMagistratusDeath",
 }
 
-monster.raceId = 655
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Razzachai.",
-}
 
 monster.health = 6250
 monster.maxHealth = 6250
@@ -63,9 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,13 +69,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 8970, maxCount = 5 },
-	{ name = "gold coin", chance = 77230, maxCount = 50 },
-	{ name = "platinum coin", chance = 13400, maxCount = 19 },
-	{ name = "lizard leather", chance = 220 },
-	{ name = "lizard scale", chance = 450 },
-	{ name = "strong mana potion", chance = 6280 },
-	{ name = "great mana potion", chance = 4480 },
+	{ id = "small ruby", chance = 8970, maxCount = 5 },
+	{ id = "gold coin", chance = 77230, maxCount = 50 },
+	{ id = "platinum coin", chance = 13400, maxCount = 19 },
+	{ id = "lizard leather", chance = 220 },
+	{ id = "lizard scale", chance = 450 },
+	{ id = "strong mana potion", chance = 6280 },
+	{ id = "great mana potion", chance = 4480 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Morgaroth (Tibia Wiki: https://tibia.fandom.com/wiki/Morgaroth)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Morgaroth")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,60 +81,60 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 95000, maxCount = 74 },
-	{ name = "demonic essence", chance = 95000, maxCount = 5 },
-	{ name = "green gem", chance = 50000 },
-	{ name = "great mana potion", chance = 45000 },
-	{ name = "small amethyst", chance = 36000, maxCount = 18 },
-	{ name = "devileye", chance = 36000 },
-	{ name = "small emerald", chance = 27000, maxCount = 7 },
-	{ name = "small sapphire", chance = 27000, maxCount = 9 },
-	{ name = "red tome", chance = 27000 },
-	{ name = "ultimate health potion", chance = 27000 },
-	{ name = "talon", chance = 22000, maxCount = 7 },
-	{ name = "demon horn", chance = 22000, maxCount = 2 },
+	{ id = "platinum coin", chance = 95000, maxCount = 74 },
+	{ id = "demonic essence", chance = 95000, maxCount = 5 },
+	{ id = "green gem", chance = 50000 },
+	{ id = "great mana potion", chance = 45000 },
+	{ id = "small amethyst", chance = 36000, maxCount = 18 },
+	{ id = "devileye", chance = 36000 },
+	{ id = "small emerald", chance = 27000, maxCount = 7 },
+	{ id = "small sapphire", chance = 27000, maxCount = 9 },
+	{ id = "red tome", chance = 27000 },
+	{ id = "ultimate health potion", chance = 27000 },
+	{ id = "talon", chance = 22000, maxCount = 7 },
+	{ id = "demon horn", chance = 22000, maxCount = 2 },
 	{ id = 6299, chance = 22000 }, -- death ring
 	{ id = 3098, chance = 22000 }, -- ring of healing
-	{ name = "chain bolter", chance = 22000 },
-	{ name = "dark lord's cape", chance = 22000 },
-	{ name = "ironworker", chance = 25000 },
-	{ name = "double axe", chance = 18000 },
-	{ name = "great spirit potion", chance = 18000 },
-	{ name = "magic plate armor", chance = 18000 },
-	{ name = "might ring", chance = 18000 },
-	{ name = "mind stone", chance = 18000 },
+	{ id = "chain bolter", chance = 22000 },
+	{ id = "dark lord's cape", chance = 22000 },
+	{ id = "ironworker", chance = 25000 },
+	{ id = "double axe", chance = 18000 },
+	{ id = "great spirit potion", chance = 18000 },
+	{ id = "magic plate armor", chance = 18000 },
+	{ id = "might ring", chance = 18000 },
+	{ id = "mind stone", chance = 18000 },
 	{ id = 3049, chance = 18000 }, -- stealth ring
-	{ name = "fireborn giant armor", chance = 18000 },
-	{ name = "royal crossbow", chance = 18000 },
-	{ name = "teddy bear", chance = 18000 },
-	{ name = "white pearl", chance = 13000, maxCount = 11 },
-	{ name = "black pearl", chance = 13000, maxCount = 13 },
-	{ name = "assassin star", chance = 13000, maxCount = 35 },
-	{ name = "demonbone", chance = 13000 },
-	{ name = "golden mug", chance = 13000 },
-	{ name = "Morgaroth's heart", chance = 13000 },
-	{ name = "obsidian truncheon", chance = 13000 },
-	{ name = "stomper", chance = 13000 },
-	{ name = "blue gem", chance = 9000 },
-	{ name = "gold ring", chance = 9000 },
-	{ name = "demon shield", chance = 9000 },
+	{ id = "fireborn giant armor", chance = 18000 },
+	{ id = "royal crossbow", chance = 18000 },
+	{ id = "teddy bear", chance = 18000 },
+	{ id = "white pearl", chance = 13000, maxCount = 11 },
+	{ id = "black pearl", chance = 13000, maxCount = 13 },
+	{ id = "assassin star", chance = 13000, maxCount = 35 },
+	{ id = "demonbone", chance = 13000 },
+	{ id = "golden mug", chance = 13000 },
+	{ id = "Morgaroth's heart", chance = 13000 },
+	{ id = "obsidian truncheon", chance = 13000 },
+	{ id = "stomper", chance = 13000 },
+	{ id = "blue gem", chance = 9000 },
+	{ id = "gold ring", chance = 9000 },
+	{ id = "demon shield", chance = 9000 },
 	{ id = 3051, chance = 9000 }, -- energy ring
-	{ name = "giant sword", chance = 9000 },
-	{ name = "golden legs", chance = 9000 },
-	{ name = "life crystal", chance = 9000 },
+	{ id = "giant sword", chance = 9000 },
+	{ id = "golden legs", chance = 9000 },
+	{ id = "life crystal", chance = 9000 },
 	{ id = 3046, chance = 9000 }, -- magic light wand
-	{ name = "orb", chance = 9000 },
-	{ name = "strange symbol", chance = 9000 },
-	{ name = "steel boots", chance = 9000 },
-	{ name = "thunder hammer", chance = 9000 },
-	{ name = "small diamond", chance = 4500, maxCount = 5 },
+	{ id = "orb", chance = 9000 },
+	{ id = "strange symbol", chance = 9000 },
+	{ id = "steel boots", chance = 9000 },
+	{ id = "thunder hammer", chance = 9000 },
+	{ id = "small diamond", chance = 4500, maxCount = 5 },
 	{ id = 3007, chance = 4500 }, -- crystal ring
-	{ name = "fire axe", chance = 4500 },
-	{ name = "great health potion", chance = 4500 },
-	{ name = "mastermind shield", chance = 4500 },
-	{ name = "dragon robe", chance = 4500 },
-	{ name = "molten plate", chance = 4500 },
-	{ name = "great shield", chance = 500 },
+	{ id = "fire axe", chance = 4500 },
+	{ id = "great health potion", chance = 4500 },
+	{ id = "mastermind shield", chance = 4500 },
+	{ id = "dragon robe", chance = 4500 },
+	{ id = "molten plate", chance = 4500 },
+	{ id = "great shield", chance = 500 },
 }
 
 monster.attacks = {
@@ -144,7 +146,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = -250, maxDamage = -500, range = 7, radius = 13, effect = CONST_ME_SOUND_RED, target = false },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -200, maxDamage = -450, radius = 14, effect = CONST_ME_LOSEENERGY, target = false },
 	{ name = "combat", interval = 3000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = -100, maxDamage = -200, range = 7, radius = 3, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -400, range = 7, effect = CONST_ME_SOUND_RED, target = false, duration = 20000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -400, range = 7, effect = CONST_ME_SOUND_RED, target = false, duration = 20000 },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_MANADRAIN, minDamage = -70, maxDamage = -320, radius = 3, effect = CONST_ME_HITAREA, target = true },
 	{ name = "dark torturer skill reducer", interval = 2000, chance = 5, target = false },
 }
@@ -155,7 +157,7 @@ monster.defenses = {
 	--	mitigation = ???,
 	{ name = "combat", interval = 3000, chance = 35, type = COMBAT_HEALING, minDamage = 800, maxDamage = 1100, effect = CONST_ME_MAGIC_BLUE, target = false },
 	{ name = "combat", interval = 9000, chance = 15, type = COMBAT_HEALING, minDamage = 3800, maxDamage = 4000, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 4000, chance = 80, speedChange = 470, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 4000, chance = 80, effect = CONST_ME_MAGIC_RED, speed = 610},
 }
 
 monster.elements = {

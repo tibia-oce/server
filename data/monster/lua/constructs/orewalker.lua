@@ -1,3 +1,6 @@
+-- Orewalker (Tibia Wiki: https://tibia.fandom.com/wiki/Orewalker)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Orewalker")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 883
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 1,
-	Locations = "Warzone 3.",
-}
 
 monster.health = 7200
 monster.maxHealth = 7200
@@ -60,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,35 +65,35 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 98 },
-	{ name = "platinum coin", chance = 100000, maxCount = 10 },
-	{ name = "yellow gem", chance = 1030 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 98 },
+	{ id = "platinum coin", chance = 100000, maxCount = 10 },
+	{ id = "yellow gem", chance = 1030 },
 	{ id = 3097, chance = 4660 }, -- dwarven ring
-	{ name = "knight legs", chance = 1910 },
-	{ name = "crown armor", chance = 370 },
-	{ name = "crown helmet", chance = 890 },
-	{ name = "iron ore", chance = 15000 },
-	{ name = "magic sulphur", chance = 3000 },
-	{ name = "titan axe", chance = 2600 },
-	{ name = "glorious axe", chance = 1870 },
-	{ name = "strong health potion", chance = 15600, maxCount = 2 },
-	{ name = "strong mana potion", chance = 14000, maxCount = 2 },
-	{ name = "great mana potion", chance = 14000, maxCount = 2 },
-	{ name = "mana potion", chance = 14000, maxCount = 4 },
-	{ name = "ultimate health potion", chance = 9500, maxCount = 2 },
-	{ name = "crystalline armor", chance = 560 },
-	{ name = "small topaz", chance = 16500, maxCount = 3 },
-	{ name = "shiny stone", chance = 13700 },
-	{ name = "sulphurous stone", chance = 20700 },
-	{ name = "wand of defiance", chance = 1300 },
-	{ name = "green crystal shard", chance = 8000 },
-	{ name = "blue crystal splinter", chance = 16000, maxCount = 2 },
-	{ name = "cyan crystal fragment", chance = 13000 },
-	{ name = "pulverized ore", chance = 20500 },
-	{ name = "vein of ore", chance = 15000 },
-	{ name = "prismatic bolt", chance = 15500, maxCount = 5 },
-	{ name = "crystal crossbow", chance = 300 },
+	{ id = "knight legs", chance = 1910 },
+	{ id = "crown armor", chance = 370 },
+	{ id = "crown helmet", chance = 890 },
+	{ id = "iron ore", chance = 15000 },
+	{ id = "magic sulphur", chance = 3000 },
+	{ id = "titan axe", chance = 2600 },
+	{ id = "glorious axe", chance = 1870 },
+	{ id = "strong health potion", chance = 15600, maxCount = 2 },
+	{ id = "strong mana potion", chance = 14000, maxCount = 2 },
+	{ id = "great mana potion", chance = 14000, maxCount = 2 },
+	{ id = "mana potion", chance = 14000, maxCount = 4 },
+	{ id = "ultimate health potion", chance = 9500, maxCount = 2 },
+	{ id = "crystalline armor", chance = 560 },
+	{ id = "small topaz", chance = 16500, maxCount = 3 },
+	{ id = "shiny stone", chance = 13700 },
+	{ id = "sulphurous stone", chance = 20700 },
+	{ id = "wand of defiance", chance = 1300 },
+	{ id = "green crystal shard", chance = 8000 },
+	{ id = "blue crystal splinter", chance = 16000, maxCount = 2 },
+	{ id = "cyan crystal fragment", chance = 13000 },
+	{ id = "pulverized ore", chance = 20500 },
+	{ id = "vein of ore", chance = 15000 },
+	{ id = "prismatic bolt", chance = 15500, maxCount = 5 },
+	{ id = "crystal crossbow", chance = 300 },
 }
 
 monster.attacks = {
@@ -112,7 +102,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -1500, length = 6, spread = 3, effect = CONST_ME_GROUNDSHAKER, target = false },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -800, maxDamage = -1080, radius = 3, shootEffect = CONST_ANI_SMALLEARTH, effect = CONST_ME_SMALLPLANTS, target = true },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -800, radius = 2, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -800, radius = 2, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
 }
 
 monster.defenses = {

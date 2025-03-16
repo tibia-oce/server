@@ -1,3 +1,6 @@
+-- Mummy (Tibia Wiki: https://tibia.fandom.com/wiki/Mummy)
+-- Version: 6.0
+
 local mType = Game.createMonsterType("Mummy")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 65
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Drefia, Darama's Dark Pyramid, Draconia, Mount Sternum Undead Cave, Green Claw Swamp, \z
-		Venore Amazon Camp underground, Helheim, Upper Spike, all Tombs, Dark Cathedral, Lion's Rock.",
-}
 
 monster.health = 240
 monster.maxHealth = 240
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -81,25 +70,25 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3007, chance = 1500 }, -- crystal ring
-	{ name = "silver brooch", chance = 4000 },
-	{ name = "black pearl", chance = 1000 },
-	{ name = "gold coin", chance = 38000, maxCount = 80 },
-	{ name = "strange talisman", chance = 5000 },
+	{ id = "silver brooch", chance = 4000 },
+	{ id = "black pearl", chance = 1000 },
+	{ id = "gold coin", chance = 38000, maxCount = 80 },
+	{ id = "strange talisman", chance = 5000 },
 	{ id = 3046, chance = 5800 }, -- magic light wand
-	{ name = "silver amulet", chance = 100 },
-	{ name = "poison dagger", chance = 450 },
-	{ name = "black shield", chance = 170 },
-	{ name = "worm", chance = 19000, maxCount = 3 },
-	{ name = "yellow piece of cloth", chance = 900 },
-	{ name = "gauze bandage", chance = 10000 },
-	{ name = "mini mummy", chance = 10 },
-	{ name = "flask of embalming fluid", chance = 11690 },
+	{ id = "silver amulet", chance = 100 },
+	{ id = "poison dagger", chance = 450 },
+	{ id = "black shield", chance = 170 },
+	{ id = "worm", chance = 19000, maxCount = 3 },
+	{ id = "yellow piece of cloth", chance = 900 },
+	{ id = "gauze bandage", chance = 10000 },
+	{ id = "mini mummy", chance = 10 },
+	{ id = "flask of embalming fluid", chance = 11690 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -85, condition = { type = CONDITION_POISON, totalDamage = 4, interval = 4000 } },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_DEATHDAMAGE, minDamage = -30, maxDamage = -40, range = 1, effect = CONST_ME_SMALLCLOUDS, target = true },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -226, range = 7, effect = CONST_ME_MAGIC_RED, target = true, duration = 10000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -226, range = 7, effect = CONST_ME_MAGIC_RED, target = true, duration = 10000 },
 }
 
 monster.defenses = {

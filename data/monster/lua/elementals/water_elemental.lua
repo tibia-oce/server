@@ -1,3 +1,6 @@
+-- Water Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Water_Elemental)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Water Elemental")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 236
-monster.Bestiary = {
-	class = "Elemental",
-	race = BESTY_RACE_ELEMENTAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Water Elemental Cave in Port Hope, Water Elemental Dungeon, Deeper Banuta, Malada, Ramoa, \z
-		Talahu, Folda (7 spawn on the 3rd floor), Water Elemental Cave in Outlaw Camp (only during the Down the \z
-		Drain Mini World Change), Krailos Steppe underwater cave.",
-}
 
 monster.health = 550
 monster.maxHealth = 550
@@ -64,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,
@@ -79,17 +67,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 2500 },
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "small emerald", chance = 2500, maxCount = 2 },
-	{ name = "platinum coin", chance = 25000 },
+	{ id = "small diamond", chance = 2500 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "small emerald", chance = 2500, maxCount = 2 },
+	{ id = "platinum coin", chance = 25000 },
 	{ id = 3051, chance = 950 }, -- energy ring
 	{ id = 3052, chance = 930 }, -- life ring
 	{ id = 3578, chance = 20000 }, -- fish
-	{ name = "rainbow trout", chance = 940 },
-	{ name = "green perch", chance = 1050 },
-	{ name = "strong health potion", chance = 10000 },
-	{ name = "strong mana potion", chance = 10000 },
+	{ id = "rainbow trout", chance = 940 },
+	{ id = "green perch", chance = 1050 },
+	{ id = "strong health potion", chance = 10000 },
+	{ id = "strong mana potion", chance = 10000 },
 }
 
 monster.attacks = {
@@ -105,7 +93,7 @@ monster.defenses = {
 	armor = 37,
 	mitigation = 0.88,
 	{ name = "combat", interval = 2000, chance = 5, type = COMBAT_HEALING, minDamage = 50, maxDamage = 80, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 300, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 230},
 }
 
 monster.elements = {

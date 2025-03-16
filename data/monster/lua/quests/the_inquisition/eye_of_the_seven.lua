@@ -1,3 +1,6 @@
+-- Eye of the Seven (Tibia Wiki: https://tibia.fandom.com/wiki/Eye_of_the_Seven)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Eye of the Seven")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Undead Mine Worker (Tibia Wiki: https://tibia.fandom.com/wiki/Undead_Mine_Worker)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Undead Mine Worker")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 594
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 1,
-	Locations = "West of Edron in the Lost Mines.",
-}
 
 monster.health = 65
 monster.maxHealth = 65
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,12 +66,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 73000, maxCount = 10 },
+	{ id = "gold coin", chance = 73000, maxCount = 10 },
 	{ id = 3115, chance = 42000 }, -- bone
 	{ id = 3264, chance = 3850 }, -- sword
-	{ name = "mace", chance = 26900 },
-	{ name = "white mushroom", chance = 15400, maxCount = 3 },
-	{ name = "brown mushroom", chance = 3850 },
+	{ id = "mace", chance = 26900 },
+	{ id = "white mushroom", chance = 15400, maxCount = 3 },
+	{ id = "brown mushroom", chance = 3850 },
 }
 
 monster.attacks = {

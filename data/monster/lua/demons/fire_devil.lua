@@ -1,3 +1,6 @@
+-- Fire Devil (Tibia Wiki: https://tibia.fandom.com/wiki/Fire_Devil)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Fire Devil")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 40
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Desert Dungeon, Ancient Temple, Magician Tower, Shadow Tomb, Ghostlands, Goroma, \z
-	Plains of Havoc at Ornamented Shield Quest, Spike Sword Quest.",
-}
 
 monster.health = 200
 monster.maxHealth = 200
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,14 +67,14 @@ monster.voices = {
 monster.loot = {
 	{ id = 2920, chance = 10000 }, -- torch
 	{ id = 2920, chance = 1420, maxCount = 2 }, -- torch
-	{ name = "small amethyst", chance = 300 },
-	{ name = "necrotic rod", chance = 460 },
-	{ name = "blank rune", chance = 10950 },
-	{ name = "double axe", chance = 1500 },
+	{ id = "small amethyst", chance = 300 },
+	{ id = "necrotic rod", chance = 460 },
+	{ id = "blank rune", chance = 10950 },
+	{ id = "double axe", chance = 1500 },
 	{ id = 3307, chance = 3000 }, -- scimitar
-	{ name = "guardian shield", chance = 210 },
-	{ name = "cleaver", chance = 1100 },
-	{ name = "small pitchfork", chance = 19770 },
+	{ id = "guardian shield", chance = 210 },
+	{ id = "cleaver", chance = 1100 },
+	{ id = "small pitchfork", chance = 19770 },
 }
 
 monster.attacks = {

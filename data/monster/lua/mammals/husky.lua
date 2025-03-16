@@ -1,3 +1,6 @@
+-- Husky (Tibia Wiki: https://tibia.fandom.com/wiki/Husky)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Husky")
 local monster = {}
 
@@ -17,18 +20,6 @@ monster.events = {
 	"HuskyDeath",
 }
 
-monster.raceId = 325
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 25,
-	FirstUnlock = 5,
-	SecondUnlock = 10,
-	CharmsPoints = 1,
-	Stars = 0,
-	Occurrence = 1,
-	Locations = "Svargrond and Nibelor.",
-}
 
 monster.health = 140
 monster.maxHealth = 140
@@ -63,9 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

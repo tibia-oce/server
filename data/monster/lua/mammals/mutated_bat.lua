@@ -1,3 +1,6 @@
+-- Mutated Bat (Tibia Wiki: https://tibia.fandom.com/wiki/Mutated_Bat)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Mutated Bat")
 local monster = {}
 
@@ -13,21 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 509
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Cemetery Quarter (around 10 underground on the west side along with banshees, \z
-		and 4 bats on the church roof), Alchemist Quarter (4 found on top of roofs), \z
-		Arena and Zoo Quarter (2 under the arena with other mutated creatures), \z
-		Razzachai, Northern Zao Plantations, Souleater Mountains, Middle Spike, Vengoth and Vengoth Castle.",
-}
 
 monster.health = 900
 monster.maxHealth = 900
@@ -62,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,20 +64,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "black pearl", chance = 720, maxCount = 3 },
-	{ name = "gold coin", chance = 92500, maxCount = 130 },
-	{ name = "small amethyst", chance = 500, maxCount = 2 },
+	{ id = "black pearl", chance = 720, maxCount = 3 },
+	{ id = "gold coin", chance = 92500, maxCount = 130 },
+	{ id = "small amethyst", chance = 500, maxCount = 2 },
 	{ id = 3051, chance = 990 }, -- energy ring
-	{ name = "battle shield", chance = 7760 },
-	{ name = "black shield", chance = 70 },
-	{ name = "obsidian lance", chance = 7260 },
-	{ name = "star herb", chance = 5060 },
-	{ name = "bat wing", chance = 4900, maxCount = 2 },
-	{ name = "mercenary sword", chance = 110 },
+	{ id = "battle shield", chance = 7760 },
+	{ id = "black shield", chance = 70 },
+	{ id = "obsidian lance", chance = 7260 },
+	{ id = "star herb", chance = 5060 },
+	{ id = "bat wing", chance = 4900, maxCount = 2 },
+	{ id = "mercenary sword", chance = 110 },
 	{ id = 8894, chance = 12530 }, -- heavily rusted armor
 	{ id = 8895, chance = 12530, maxCount = 2 }, -- rusted armor
-	{ name = "batwing hat", chance = 80 },
-	{ name = "mutated bat ear", chance = 4900 },
+	{ id = "batwing hat", chance = 80 },
+	{ id = "mutated bat ear", chance = 4900 },
 }
 
 monster.attacks = {

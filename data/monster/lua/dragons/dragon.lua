@@ -1,3 +1,6 @@
+-- Dragon (Tibia Wiki: https://tibia.fandom.com/wiki/Dragon)
+-- Version: 4.0
+
 local mType = Game.createMonsterType("Dragon")
 local monster = {}
 
@@ -18,23 +21,6 @@ monster.events = {
 	"TheFirstDragonDragonTaskDeath",
 }
 
-monster.raceId = 34
-monster.Bestiary = {
-	class = "Dragon",
-	race = BESTY_RACE_DRAGON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Thais Ancient Temple, Darashia Dragon Lair, Mount Sternum Dragon Cave, Mintwallin, \z
-		deep in Fibula Dungeon, Kazordoon Dragon Lair (near Dwarf Bridge), Plains of Havoc, Elven Bane castle, \z
-		Maze of Lost Souls, southern cave and dragon tower in Shadowthorn, Orc Fortress, Venore Dragon Lair, \z
-		Pits of Inferno, Behemoth Quest room in Edron, Hero Cave, deep Cyclopolis, Edron Dragon Lair, Goroma, \z
-		Ankrahmun Dragon Lairs, Draconia, Dragonblaze Peaks, some Ankrahmun Tombs, \z
-		underground of Fenrock (on the way to Beregar), Krailos Steppe and Crystal Lakes.",
-}
 
 monster.health = 1000
 monster.maxHealth = 1000
@@ -72,8 +58,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -88,27 +73,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 89920, maxCount = 102 },
-	{ name = "dragon ham", chance = 66270, maxCount = 2 },
-	{ name = "steel shield", chance = 15650 },
-	{ name = "dragon's tail", chance = 9680 },
-	{ name = "crossbow", chance = 9120 },
+	{ id = "gold coin", chance = 89920, maxCount = 102 },
+	{ id = "dragon ham", chance = 66270, maxCount = 2 },
+	{ id = "steel shield", chance = 15650 },
+	{ id = "dragon's tail", chance = 9680 },
+	{ id = "crossbow", chance = 9120 },
 	{ id = 3449, chance = 8060, maxCount = 10 }, -- burst arrow
-	{ name = "longsword", chance = 3830 },
-	{ name = "steel helmet", chance = 3490 },
-	{ name = "broadsword", chance = 2700 },
-	{ name = "plate legs", chance = 2029 },
-	{ name = "double axe", chance = 1580 },
-	{ name = "strong health potion", chance = 1130 },
-	{ name = "green dragon leather", chance = 1070 },
-	{ name = "green dragon scale", chance = 1010 },
-	{ name = "wand of inferno", chance = 560 },
-	{ name = "small diamond", chance = 450 },
-	{ name = "serpent sword", chance = 230 },
-	{ name = "dragon hammer", chance = 230 },
-	{ name = "dragonbone staff", chance = 170 },
-	{ name = "life crystal", chance = 170 },
-	{ name = "dragon shield", chance = 110 },
+	{ id = "longsword", chance = 3830 },
+	{ id = "steel helmet", chance = 3490 },
+	{ id = "broadsword", chance = 2700 },
+	{ id = "plate legs", chance = 2029 },
+	{ id = "double axe", chance = 1580 },
+	{ id = "strong health potion", chance = 1130 },
+	{ id = "green dragon leather", chance = 1070 },
+	{ id = "green dragon scale", chance = 1010 },
+	{ id = "wand of inferno", chance = 560 },
+	{ id = "small diamond", chance = 450 },
+	{ id = "serpent sword", chance = 230 },
+	{ id = "dragon hammer", chance = 230 },
+	{ id = "dragonbone staff", chance = 170 },
+	{ id = "life crystal", chance = 170 },
+	{ id = "dragon shield", chance = 110 },
 }
 
 monster.attacks = {

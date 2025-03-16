@@ -1,3 +1,6 @@
+-- Fire Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Fire_Elemental)
+-- Version: 6.4
+
 local mType = Game.createMonsterType("Fire Elemental")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 49
-monster.Bestiary = {
-	class = "Elemental",
-	race = BESTY_RACE_ELEMENTAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Cyclopolis, Hero Cave in Edron, Ankrahmun tombs, Serpentine Tower, Factory Quarter in Yalahar, \z
-		Deeper Banuta, Goroma inside the volcano and beneath Fenrock.",
-}
 
 monster.health = 280
 monster.maxHealth = 280
@@ -61,9 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 4,

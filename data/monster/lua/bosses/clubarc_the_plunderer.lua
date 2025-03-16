@@ -1,3 +1,6 @@
+-- Clubarc The Plunderer (Tibia Wiki: https://tibia.fandom.com/wiki/Cublarc_the_Plunderer
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Clubarc The Plunderer")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -64,15 +66,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 53500, maxCount = 78 },
-	{ name = "meat", chance = 23390 },
-	{ name = "orcish axe", chance = 19350 },
-	{ name = "shaggy tail", chance = 13700 },
-	{ name = "disgusting trophy", chance = 4840 },
-	{ name = "bow", chance = 3230 },
-	{ name = "orc tooth", chance = 2420 },
-	{ name = "silkweaver bow", chance = 2420 },
-	{ name = "crossbow", chance = 1610 },
+	{ id = "gold coin", chance = 53500, maxCount = 78 },
+	{ id = "meat", chance = 23390 },
+	{ id = "orcish axe", chance = 19350 },
+	{ id = "shaggy tail", chance = 13700 },
+	{ id = "disgusting trophy", chance = 4840 },
+	{ id = "bow", chance = 3230 },
+	{ id = "orc tooth", chance = 2420 },
+	{ id = "silkweaver bow", chance = 2420 },
+	{ id = "crossbow", chance = 1610 },
 }
 
 monster.attacks = {
@@ -85,7 +87,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 25,
 	armor = 25,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 350, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 210},
 }
 
 monster.elements = {

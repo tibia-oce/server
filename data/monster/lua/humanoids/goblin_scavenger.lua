@@ -1,3 +1,6 @@
+-- Goblin Scavenger (Tibia Wiki: https://tibia.fandom.com/wiki/Goblin_Scavenger)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Goblin Scavenger")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 464
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Femor Hills, Edron Goblin Cave, and Fenrock.",
-}
 
 monster.health = 60
 monster.maxHealth = 60
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,16 +68,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small stone", chance = 25560, maxCount = 2 },
-	{ name = "gold coin", chance = 50810, maxCount = 9 },
+	{ id = "small stone", chance = 25560, maxCount = 2 },
+	{ id = "gold coin", chance = 50810, maxCount = 9 },
 	{ id = 3115, chance = 12450 }, -- bone
-	{ name = "mouldy cheese", chance = 7000 },
-	{ name = "dagger", chance = 18280 },
-	{ name = "short sword", chance = 8900 },
-	{ name = "bone club", chance = 5000 },
-	{ name = "leather helmet", chance = 10180 },
-	{ name = "leather armor", chance = 7700 },
-	{ name = "small axe", chance = 9790 },
+	{ id = "mouldy cheese", chance = 7000 },
+	{ id = "dagger", chance = 18280 },
+	{ id = "short sword", chance = 8900 },
+	{ id = "bone club", chance = 5000 },
+	{ id = "leather helmet", chance = 10180 },
+	{ id = "leather armor", chance = 7700 },
+	{ id = "small axe", chance = 9790 },
 	{ id = 3578, chance = 13640 }, -- fish
 }
 

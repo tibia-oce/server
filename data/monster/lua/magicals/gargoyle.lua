@@ -1,3 +1,6 @@
+-- Gargoyle (Tibia Wiki: https://tibia.fandom.com/wiki/Gargoyle)
+-- Version: 7.4
+
 local mType = Game.createMonsterType("Gargoyle")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 95
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Meriana Gargoyle Cave, Ankrahmun Tombs, Mal'ouquah, Goroma, Deeper Banuta, \z
-		Formorgar Mines, Vengoth, Farmine Mines, Upper Spike and Medusa Tower.",
-}
 
 monster.health = 250
 monster.maxHealth = 250
@@ -61,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -81,17 +70,17 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3012, chance = 1480 }, -- wolf tooth chain
-	{ name = "gold coin", chance = 88000, maxCount = 30 },
+	{ id = "gold coin", chance = 88000, maxCount = 30 },
 	{ id = 3093, chance = 260 }, -- club ring
-	{ name = "morning star", chance = 2150 },
-	{ name = "steel helmet", chance = 850 },
-	{ name = "dark armor", chance = 300 },
-	{ name = "battle shield", chance = 1000 },
-	{ name = "strawberry", chance = 1810, maxCount = 5 },
-	{ name = "potato", chance = 9220, maxCount = 2 },
-	{ name = "stone wing", chance = 11730 },
-	{ name = "shiny stone", chance = 190 },
-	{ name = "piece of marble rock", chance = 630 },
+	{ id = "morning star", chance = 2150 },
+	{ id = "steel helmet", chance = 850 },
+	{ id = "dark armor", chance = 300 },
+	{ id = "battle shield", chance = 1000 },
+	{ id = "strawberry", chance = 1810, maxCount = 5 },
+	{ id = "potato", chance = 9220, maxCount = 2 },
+	{ id = "stone wing", chance = 11730 },
+	{ id = "shiny stone", chance = 190 },
+	{ id = "piece of marble rock", chance = 630 },
 }
 
 monster.attacks = {

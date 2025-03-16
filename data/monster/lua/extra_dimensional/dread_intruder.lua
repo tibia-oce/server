@@ -1,3 +1,6 @@
+-- Dread Intruder (Tibia Wiki: https://tibia.fandom.com/wiki/Dread_Intruder)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Dread Intruder")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1260
-monster.Bestiary = {
-	class = "Extra Dimensional",
-	race = BESTY_RACE_EXTRA_DIMENSIONAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Otherworld",
-}
 
 monster.health = 4500
 monster.maxHealth = 4500
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Empowered Glooth Horror (Tibia Wiki: https://tibia.fandom.com/wiki/Empowered_Glooth_Horror)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Empowered Glooth Horror")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

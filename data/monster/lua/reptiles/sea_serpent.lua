@@ -1,3 +1,6 @@
+-- Sea Serpent (Tibia Wiki: https://tibia.fandom.com/wiki/Sea_Serpent)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Sea Serpent")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 438
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Sea Serpent Area and Seacrest Grounds.",
-}
 
 monster.health = 1950
 monster.maxHealth = 1950
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,26 +65,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small sapphire", chance = 5600, maxCount = 3 },
-	{ name = "gold coin", chance = 38000, maxCount = 100 },
-	{ name = "gold coin", chance = 30000, maxCount = 100 },
-	{ name = "gold coin", chance = 30000, maxCount = 36 },
-	{ name = "platinum coin", chance = 25000, maxCount = 3 },
+	{ id = "small sapphire", chance = 5600, maxCount = 3 },
+	{ id = "gold coin", chance = 38000, maxCount = 100 },
+	{ id = "gold coin", chance = 30000, maxCount = 100 },
+	{ id = "gold coin", chance = 30000, maxCount = 36 },
+	{ id = "platinum coin", chance = 25000, maxCount = 3 },
 	{ id = 3049, chance = 400 }, -- stealth ring
 	{ id = 3098, chance = 1100 }, -- ring of healing
-	{ name = "serpent sword", chance = 4200 },
-	{ name = "plate legs", chance = 7150 },
-	{ name = "dragon ham", chance = 60000, maxCount = 2 },
-	{ name = "strong health potion", chance = 5500 },
-	{ name = "strong mana potion", chance = 3850 },
-	{ name = "great mana potion", chance = 920 },
-	{ name = "glacier amulet", chance = 880 },
-	{ name = "glacier kilt", chance = 430 },
-	{ name = "spirit cloak", chance = 2900 },
-	{ name = "focus cape", chance = 370 },
-	{ name = "crystalline armor", chance = 90 },
-	{ name = "northwind rod", chance = 930 },
-	{ name = "sea serpent scale", chance = 10200 },
+	{ id = "serpent sword", chance = 4200 },
+	{ id = "plate legs", chance = 7150 },
+	{ id = "dragon ham", chance = 60000, maxCount = 2 },
+	{ id = "strong health potion", chance = 5500 },
+	{ id = "strong mana potion", chance = 3850 },
+	{ id = "great mana potion", chance = 920 },
+	{ id = "glacier amulet", chance = 880 },
+	{ id = "glacier kilt", chance = 430 },
+	{ id = "spirit cloak", chance = 2900 },
+	{ id = "focus cape", chance = 370 },
+	{ id = "crystalline armor", chance = 90 },
+	{ id = "northwind rod", chance = 930 },
+	{ id = "sea serpent scale", chance = 10200 },
 }
 
 monster.attacks = {
@@ -109,7 +99,7 @@ monster.defenses = {
 	armor = 25,
 	mitigation = 1.04,
 	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 70, maxDamage = 273, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 400, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 480},
 }
 
 monster.elements = {

@@ -1,3 +1,6 @@
+-- Plagirath (Tibia Wiki: https://tibia.fandom.com/wiki/Plagirath)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Plagirath")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -107,7 +109,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_DEATHDAMAGE, minDamage = -500, maxDamage = -900, range = 4, radius = 4, effect = CONST_ME_POFF, target = true },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_EARTHDAMAGE, minDamage = -1000, maxDamage = -1200, length = 10, spread = 3, effect = CONST_ME_POFF, target = false },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_LIFEDRAIN, minDamage = -1500, maxDamage = -1900, length = 10, spread = 3, effect = CONST_ME_POFF, target = false },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -600, radius = 7, effect = CONST_ME_MAGIC_GREEN, target = false, duration = 20000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -600, radius = 7, effect = CONST_ME_MAGIC_GREEN, target = false, duration = 20000 },
 	{ name = "plagirath bog", interval = 20000, chance = 25, target = false },
 }
 
@@ -116,7 +118,7 @@ monster.defenses = {
 	armor = 125,
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 3000, maxDamage = 4000, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 30, speedChange = 440, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 30, effect = CONST_ME_MAGIC_RED, speed = 320},
 	{ name = "plagirath summon", interval = 2000, chance = 15, target = false },
 	{ name = "plagirath heal", interval = 2000, chance = 17, target = false },
 }

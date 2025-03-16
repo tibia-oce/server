@@ -1,3 +1,6 @@
+-- Pirate Marauder (Tibia Wiki: https://tibia.fandom.com/wiki/Pirate_Marauder)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Pirate Marauder")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 247
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Nargor, Tyrsung, Yalahar, Krailos Steppe, The Cave.",
-}
 
 monster.health = 210
 monster.maxHealth = 210
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,20 +67,20 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 9880 }, -- torch
-	{ name = "gold coin", chance = 77670, maxCount = 40 },
-	{ name = "spear", chance = 5140, maxCount = 2 },
-	{ name = "chain armor", chance = 3000 },
-	{ name = "plate shield", chance = 5000 },
+	{ id = "gold coin", chance = 77670, maxCount = 40 },
+	{ id = "spear", chance = 5140, maxCount = 2 },
+	{ id = "chain armor", chance = 3000 },
+	{ id = "plate shield", chance = 5000 },
 	{ id = 5090, chance = 910 }, -- treasure map
-	{ name = "rum flask", chance = 110 },
+	{ id = "rum flask", chance = 110 },
 	{ id = 5792, chance = 90 }, -- die
-	{ name = "bandana", chance = 880 },
-	{ name = "pirate bag", chance = 430 },
-	{ name = "empty goldfish bowl", chance = 80 },
-	{ name = "hook", chance = 520 },
-	{ name = "eye patch", chance = 530 },
-	{ name = "peg leg", chance = 520 },
-	{ name = "compass", chance = 9720 },
+	{ id = "bandana", chance = 880 },
+	{ id = "pirate bag", chance = 430 },
+	{ id = "empty goldfish bowl", chance = 80 },
+	{ id = "hook", chance = 520 },
+	{ id = "eye patch", chance = 530 },
+	{ id = "peg leg", chance = 520 },
+	{ id = "compass", chance = 9720 },
 }
 
 monster.attacks = {

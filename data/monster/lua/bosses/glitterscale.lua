@@ -1,3 +1,6 @@
+-- Glitterscale (Tibia Wiki: https://tibia.fandom.com/wiki/Glitterscale)
+-- Version: 8.60
+
 local mType = Game.createMonsterType("Glitterscale")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Renegade Quara Hydromancer (Tibia Wiki: https://tibia.fandom.com/wiki/Renegade_Quara_Hydromancer)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Renegade Quara Hydromancer")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1098
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Seacrest Grounds when Seacrest Serpents are not spawning.",
-}
 
 monster.health = 2000
 monster.maxHealth = 2000
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -77,29 +66,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 78000, maxCount = 4 },
-	{ name = "quara eye", chance = 20160 },
-	{ name = "mind stone", chance = 10710 },
-	{ name = "shrimp", chance = 7140, maxCount = 4 },
-	{ name = "small topaz", chance = 6800, maxCount = 2 },
-	{ name = "small emerald", chance = 6450, maxCount = 2 },
-	{ name = "great mana potion", chance = 5880, maxCount = 2 },
-	{ name = "spirit cloak", chance = 5650 },
-	{ name = "great health potion", chance = 4950, maxCount = 2 },
-	{ name = "yellow piece of cloth", chance = 3230 },
-	{ name = "green crystal shard", chance = 3000 },
-	{ name = "green piece of cloth", chance = 2880 },
+	{ id = "platinum coin", chance = 78000, maxCount = 4 },
+	{ id = "quara eye", chance = 20160 },
+	{ id = "mind stone", chance = 10710 },
+	{ id = "shrimp", chance = 7140, maxCount = 4 },
+	{ id = "small topaz", chance = 6800, maxCount = 2 },
+	{ id = "small emerald", chance = 6450, maxCount = 2 },
+	{ id = "great mana potion", chance = 5880, maxCount = 2 },
+	{ id = "spirit cloak", chance = 5650 },
+	{ id = "great health potion", chance = 4950, maxCount = 2 },
+	{ id = "yellow piece of cloth", chance = 3230 },
+	{ id = "green crystal shard", chance = 3000 },
+	{ id = "green piece of cloth", chance = 2880 },
 	{ id = 3052, chance = 2190 }, -- life ring
-	{ name = "fish fin", chance = 1380 },
+	{ id = "fish fin", chance = 1380 },
 	{ id = 281, chance = 1150 }, -- giant shimmering pearl (green)
-	{ name = "wand of cosmic energy", chance = 1150 },
-	{ name = "green gem", chance = 460 },
-	{ name = "knight armor", chance = 460 },
+	{ id = "wand of cosmic energy", chance = 1150 },
+	{ id = "green gem", chance = 460 },
+	{ id = "knight armor", chance = 460 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, skill = 110, attack = 90, effect = CONST_ME_DRAWBLOOD, condition = { type = CONDITION_POISON, totalDamage = 5, interval = 4000 } },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -350, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -350, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
 }
 
 monster.defenses = {

@@ -1,3 +1,6 @@
+-- Squidgy Slime (Tibia Wiki: https://tibia.fandom.com/wiki/Squidgy_Slime)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Squidgy Slime")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 20
-monster.Bestiary = {
-	class = "Slime",
-	race = BESTY_RACE_SLIME,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 2,
-	Locations = "Horestis Tomb during one of the states of The Mummys Curse World Change.",
-}
 
 monster.health = 150
 monster.maxHealth = 150
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

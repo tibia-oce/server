@@ -1,3 +1,6 @@
+-- Gloom Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Gloom_Wolf)
+-- Version: 10.80
+
 local mType = Game.createMonsterType("Gloom Wolf")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1139
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 1,
-	Locations = "Tainted Caves, Poacher Caves/Gloomy.",
-}
 
 monster.health = 200
 monster.maxHealth = 200
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -73,11 +63,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "ham", chance = 20120 },
+	{ id = "ham", chance = 20120 },
 	{ id = 3012, chance = 2000 }, -- wolf tooth chain
-	{ name = "gold coin", chance = 65000, maxCount = 48 },
-	{ name = "meat", chance = 55000, maxCount = 2 },
-	{ name = "wolf paw", chance = 980 },
+	{ id = "gold coin", chance = 65000, maxCount = 48 },
+	{ id = "meat", chance = 55000, maxCount = 2 },
+	{ id = "wolf paw", chance = 980 },
 	{ id = 22007, chance = 8000 }, --gloom wolf fur
 }
 

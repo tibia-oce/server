@@ -1,3 +1,6 @@
+-- Dawn Bat (Tibia Wiki: https://tibia.fandom.com/wiki/Dawn_Bat)
+-- Version: 10.96
+
 local mType = Game.createMonsterType("Dawn Bat")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -60,7 +62,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 5120, maxCount = 3 },
+	{ id = "gold coin", chance = 5120, maxCount = 3 },
 }
 
 monster.attacks = {

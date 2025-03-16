@@ -1,3 +1,6 @@
+-- Fluffy (Tibia Wiki: https://tibia.fandom.com/wiki/Fluffy)
+-- Version: 7.92
+
 local mType = Game.createMonsterType("Fluffy")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

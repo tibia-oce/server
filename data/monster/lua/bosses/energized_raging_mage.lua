@@ -1,3 +1,6 @@
+-- Energized Raging Mage (Tibia Wiki: https://tibia.fandom.com/wiki/Energized_Raging_Mage)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Energized Raging Mage")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 5,

@@ -1,3 +1,6 @@
+-- Dawn Scorpion (Tibia Wiki: https://tibia.fandom.com/wiki/Dawn_Scorpion)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Dawn Scorpion")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

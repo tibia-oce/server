@@ -1,3 +1,6 @@
+-- Snake (Tibia Wiki: https://tibia.fandom.com/wiki/Snake)
+-- Version: 3.0
+
 local mType = Game.createMonsterType("Snake")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 28
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "In almost all grassy areas of Tibia. Also found in Rookgaard.",
-}
 
 monster.health = 15
 monster.maxHealth = 15
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

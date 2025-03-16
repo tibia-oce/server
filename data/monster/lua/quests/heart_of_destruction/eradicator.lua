@@ -1,3 +1,6 @@
+-- Eradicator (Tibia Wiki: https://tibia.fandom.com/wiki/Eradicator)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Eradicator")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"HeartBossDeath",
@@ -98,7 +100,7 @@ monster.loot = {
 	{ id = 23533, chance = 3500 }, -- ring of red plasma
 	{ id = 3554, chance = 5000, unique = true }, -- steel boots
 	{ id = 8075, chance = 3000, unique = true }, -- spellbook of lost souls
-	{ name = "spark sphere", chance = 100000 },
+	{ id = "spark sphere", chance = 100000 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Energy Pulse (Tibia Wiki: https://tibia.fandom.com/wiki/Energy_Pulse)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Energy Pulse")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

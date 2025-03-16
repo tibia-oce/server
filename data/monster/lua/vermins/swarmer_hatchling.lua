@@ -1,3 +1,6 @@
+-- Swarmer Hatchling (Tibia Wiki: https://tibia.fandom.com/wiki/Swarmer_Hatchling)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Swarmer Hatchling")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

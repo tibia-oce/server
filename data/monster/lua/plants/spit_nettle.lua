@@ -1,3 +1,6 @@
+-- Spit Nettle (Tibia Wiki: https://tibia.fandom.com/wiki/Spit_Nettle)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Spit Nettle")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 221
-monster.Bestiary = {
-	class = "Plant",
-	race = BESTY_RACE_PLANT,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Tiquanda, Trapwood, the outskirts of Chor and Forbidden Lands, Alchemist Quarter in Yalahar, \z
-		Tiquanda Laboratory.",
-}
 
 monster.health = 150
 monster.maxHealth = 150
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,11 +63,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 10750, maxCount = 5 },
-	{ name = "shadow herb", chance = 11080 },
-	{ name = "nettle spit", chance = 9620 },
-	{ name = "sling herb", chance = 5680, maxCount = 2 },
-	{ name = "nettle blossom", chance = 970 },
+	{ id = "gold coin", chance = 10750, maxCount = 5 },
+	{ id = "shadow herb", chance = 11080 },
+	{ id = "nettle spit", chance = 9620 },
+	{ id = "sling herb", chance = 5680, maxCount = 2 },
+	{ id = "nettle blossom", chance = 970 },
 }
 
 monster.attacks = {

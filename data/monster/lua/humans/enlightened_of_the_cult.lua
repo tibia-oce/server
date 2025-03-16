@@ -1,3 +1,6 @@
+-- Enlightened of the Cult (Tibia Wiki: https://tibia.fandom.com/wiki/Enlightened_of_the_Cult)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Enlightened of the Cult")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 252
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Goroma, Formorgar Mines, Magician Quarter, Forbidden Temple.",
-}
 
 monster.health = 700
 monster.maxHealth = 700
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -89,30 +79,30 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2828, chance = 910 }, -- book
-	{ name = "piggy bank", chance = 130 },
-	{ name = "small sapphire", chance = 550 },
-	{ name = "gold coin", chance = 64550, maxCount = 70 },
+	{ id = "piggy bank", chance = 130 },
+	{ id = "small sapphire", chance = 550 },
+	{ id = "gold coin", chance = 64550, maxCount = 70 },
 	{ id = 3051, chance = 450 }, -- energy ring
-	{ name = "platinum amulet", chance = 200 },
-	{ name = "wand of inferno", chance = 180 },
-	{ name = "protection amulet", chance = 790 },
-	{ name = "skull staff", chance = 350 },
-	{ name = "blue robe", chance = 40 },
-	{ name = "jewelled backpack", chance = 100 },
-	{ name = "pirate voodoo doll", chance = 430 },
+	{ id = "platinum amulet", chance = 200 },
+	{ id = "wand of inferno", chance = 180 },
+	{ id = "protection amulet", chance = 790 },
+	{ id = "skull staff", chance = 350 },
+	{ id = "blue robe", chance = 40 },
+	{ id = "jewelled backpack", chance = 100 },
+	{ id = "pirate voodoo doll", chance = 430 },
 	{ id = 6090, chance = 490 }, -- music sheet
-	{ name = "amber staff", chance = 100 },
-	{ name = "strong mana potion", chance = 740 },
-	{ name = "cultish mask", chance = 10250 },
-	{ name = "cultish symbol", chance = 890 },
-	{ name = "broken key ring", chance = 100 },
+	{ id = "amber staff", chance = 100 },
+	{ id = "strong mana potion", chance = 740 },
+	{ id = "cultish mask", chance = 10250 },
+	{ id = "cultish symbol", chance = 890 },
+	{ id = "broken key ring", chance = 100 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -100, condition = { type = CONDITION_POISON, totalDamage = 4, interval = 4000 } },
 	{ name = "combat", interval = 2000, chance = 25, type = COMBAT_LIFEDRAIN, minDamage = -70, maxDamage = -185, range = 1, radius = 1, shootEffect = CONST_ANI_HOLY, effect = CONST_ME_HOLYAREA, target = true },
 	{ name = "drunk", interval = 2000, chance = 10, range = 7, shootEffect = CONST_ANI_HOLY, effect = CONST_ME_HOLYDAMAGE, target = true, duration = 5000 },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -360, range = 7, effect = CONST_ME_MAGIC_RED, target = true, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -360, range = 7, effect = CONST_ME_MAGIC_RED, target = true, duration = 6000 },
 }
 
 monster.defenses = {

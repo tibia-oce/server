@@ -1,3 +1,6 @@
+-- Blood Crab (Tibia Wiki: https://tibia.fandom.com/wiki/Blood_Crab)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Blood Crab")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 261
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Goroma (beyond electric barrier), Laguna Islands, Shattered Isles, Underground Port Hope, \z
-		Mistrock, Treasure Island. There is also one underwater next to The Tibianic, however it is unreachable.",
-}
 
 monster.health = 290
 monster.maxHealth = 290
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,12 +63,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 85750, maxCount = 20 },
+	{ id = "gold coin", chance = 85750, maxCount = 20 },
 	{ id = 3578, chance = 14300 }, -- fish
-	{ name = "bloody pincers", chance = 6190 },
-	{ name = "chain armor", chance = 5240 },
-	{ name = "brass legs", chance = 2120 },
-	{ name = "white pearl", chance = 530 },
+	{ id = "bloody pincers", chance = 6190 },
+	{ id = "chain armor", chance = 5240 },
+	{ id = "brass legs", chance = 2120 },
+	{ id = "white pearl", chance = 530 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Snake God Essence (Tibia Wiki: https://tibia.fandom.com/wiki/Snake_God_Essence)
+-- Version: 8.60
+
 local mType = Game.createMonsterType("Snake God Essence")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 4,

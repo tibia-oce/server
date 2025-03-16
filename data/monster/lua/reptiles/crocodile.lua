@@ -1,3 +1,6 @@
+-- Crocodile (Tibia Wiki: https://tibia.fandom.com/wiki/Crocodile)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Crocodile")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 119
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "In the crocodile cave and the jungle east of Port Hope as well as the swamp to the north, \z
-		Fenrock, Arena and Zoo Quarter, Trade Quarter, Talahu, also located on Meriana and Laguna Islands.",
-}
 
 monster.health = 105
 monster.maxHealth = 105
@@ -61,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,10 +64,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 10 },
-	{ name = "ham", chance = 40000 },
-	{ name = "crocodile boots", chance = 100 },
-	{ name = "piece of crocodile leather", chance = 20180 },
+	{ id = "gold coin", chance = 50000, maxCount = 10 },
+	{ id = "ham", chance = 40000 },
+	{ id = "crocodile boots", chance = 100 },
+	{ id = "piece of crocodile leather", chance = 20180 },
 }
 
 monster.attacks = {

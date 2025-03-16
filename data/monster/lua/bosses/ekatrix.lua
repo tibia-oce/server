@@ -1,3 +1,6 @@
+-- Ekatrix (Tibia Wiki: https://tibia.fandom.com/wiki/Ekatrix)
+-- Version: 10.80
+
 local mType = Game.createMonsterType("Ekatrix")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -68,16 +70,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 60 },
-	{ name = "witch broom", chance = 100000 },
-	{ name = "cape", chance = 64500 },
+	{ id = "gold coin", chance = 100000, maxCount = 60 },
+	{ id = "witch broom", chance = 100000 },
+	{ id = "cape", chance = 64500 },
 	{ id = 3012, chance = 41670 }, -- wolf tooth chain
-	{ name = "broom", chance = 37500 },
-	{ name = "coat", chance = 37500 },
-	{ name = "cookie", chance = 25000, maxCount = 10 },
-	{ name = "star herb", chance = 11333 },
-	{ name = "bag of apple slices", chance = 2940 },
-	{ name = "necrotic rod", chance = 2940 },
+	{ id = "broom", chance = 37500 },
+	{ id = "coat", chance = 37500 },
+	{ id = "cookie", chance = 25000, maxCount = 10 },
+	{ id = "star herb", chance = 11333 },
+	{ id = "bag of apple slices", chance = 2940 },
+	{ id = "necrotic rod", chance = 2940 },
 }
 
 monster.attacks = {

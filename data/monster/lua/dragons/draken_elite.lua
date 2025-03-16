@@ -1,3 +1,6 @@
+-- Draken Elite (Tibia Wiki: https://tibia.fandom.com/wiki/Draken_Elite)
+-- Version: 8.60
+
 local mType = Game.createMonsterType("Draken Elite")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 672
-monster.Bestiary = {
-	class = "Dragon",
-	race = BESTY_RACE_DRAGON,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Razachai, including the Crystal Column chambers in the Inner Sanctum.",
-}
 
 monster.health = 5550
 monster.maxHealth = 5550
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,
@@ -75,28 +65,28 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 97220, maxCount = 187 },
-	{ name = "platinum coin", chance = 49070, maxCount = 8 },
-	{ name = "meat", chance = 34260, maxCount = 4 },
-	{ name = "broken draken mail", chance = 25000 },
-	{ name = "broken slicer", chance = 25000 },
-	{ name = "ultimate health potion", chance = 12040, maxCount = 3 },
-	{ name = "great mana potion", chance = 9260, maxCount = 3 },
-	{ name = "draken sulphur", chance = 6480 },
-	{ name = "draken wristbands", chance = 6480 },
-	{ name = "small diamond", chance = 1850, maxCount = 2 },
-	{ name = "zaoan legs", chance = 1850 },
-	{ name = "magic sulphur", chance = 1850 },
-	{ name = "draken boots", chance = 930 },
-	{ name = "assassin dagger", chance = 930 },
-	{ name = "twiceslicer", chance = 930 },
-	{ name = "zaoan armor", chance = 650 },
-	{ name = "zaoan sword", chance = 550 },
-	{ name = "zaoan helmet", chance = 220 },
-	{ name = "elite draken mail", chance = 110 },
-	{ name = "blade of corruption", chance = 60 },
-	{ name = "snake god's wristguard", chance = 40 },
-	{ name = "cobra crown", chance = 0 },
+	{ id = "gold coin", chance = 97220, maxCount = 187 },
+	{ id = "platinum coin", chance = 49070, maxCount = 8 },
+	{ id = "meat", chance = 34260, maxCount = 4 },
+	{ id = "broken draken mail", chance = 25000 },
+	{ id = "broken slicer", chance = 25000 },
+	{ id = "ultimate health potion", chance = 12040, maxCount = 3 },
+	{ id = "great mana potion", chance = 9260, maxCount = 3 },
+	{ id = "draken sulphur", chance = 6480 },
+	{ id = "draken wristbands", chance = 6480 },
+	{ id = "small diamond", chance = 1850, maxCount = 2 },
+	{ id = "zaoan legs", chance = 1850 },
+	{ id = "magic sulphur", chance = 1850 },
+	{ id = "draken boots", chance = 930 },
+	{ id = "assassin dagger", chance = 930 },
+	{ id = "twiceslicer", chance = 930 },
+	{ id = "zaoan armor", chance = 650 },
+	{ id = "zaoan sword", chance = 550 },
+	{ id = "zaoan helmet", chance = 220 },
+	{ id = "elite draken mail", chance = 110 },
+	{ id = "blade of corruption", chance = 60 },
+	{ id = "snake god's wristguard", chance = 40 },
+	{ id = "cobra crown", chance = 0 },
 }
 
 monster.attacks = {

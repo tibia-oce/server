@@ -1,3 +1,6 @@
+-- Penguin (Tibia Wiki: https://tibia.fandom.com/wiki/Penguin)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Penguin")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 318
-monster.Bestiary = {
-	class = "Bird",
-	race = BESTY_RACE_BIRD,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "In and north of Formorgar Glacier, Nibelor, Helheim, Grimlund, south of Svargrond, Chyllfroest.",
-}
 
 monster.health = 33
 monster.maxHealth = 33
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,8 +64,8 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3578, chance = 7830, maxCount = 2 }, -- fish
-	{ name = "rainbow trout", chance = 70 },
-	{ name = "green perch", chance = 130 },
+	{ id = "rainbow trout", chance = 70 },
+	{ id = "green perch", chance = 130 },
 }
 
 monster.attacks = {

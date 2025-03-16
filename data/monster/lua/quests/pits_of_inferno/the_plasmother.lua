@@ -1,3 +1,6 @@
+-- The Plasmother (Tibia Wiki: https://tibia.fandom.com/wiki/The_Plasmother)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("The Plasmother")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,
@@ -89,7 +91,7 @@ monster.loot = {
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, skill = 30, attack = 50 },
-	{ name = "speed", interval = 1000, chance = 8, speedChange = -800, radius = 6, effect = CONST_ME_POISONAREA, target = false, duration = 10000 },
+	{ name = "speed", interval = 1000, chance = 8, speed = -800, radius = 6, effect = CONST_ME_POISONAREA, target = false, duration = 10000 },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -200, maxDamage = -350, radius = 4, effect = CONST_ME_POISONAREA, target = false },
 	{ name = "combat", interval = 3000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -200, maxDamage = -530, radius = 4, shootEffect = CONST_ANI_POISON, effect = CONST_ME_HITBYPOISON, target = true },
 }

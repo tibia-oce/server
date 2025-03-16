@@ -1,3 +1,6 @@
+-- Tromphonyte (Tibia Wiki: https://tibia.fandom.com/wiki/Tromphonyte)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Tromphonyte")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

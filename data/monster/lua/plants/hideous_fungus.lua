@@ -1,3 +1,6 @@
+-- Hideous Fungus (Tibia Wiki: https://tibia.fandom.com/wiki/Hideous_Fungus)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Hideous Fungus")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 891
-monster.Bestiary = {
-	class = "Plant",
-	race = BESTY_RACE_PLANT,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Warzone 1, Rathleton Sewers, unreachable location in Tiquanda Laboratory.",
-}
 
 monster.health = 4600
 monster.maxHealth = 4600
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -84,26 +74,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 197 },
-	{ name = "platinum coin", chance = 100000, maxCount = 7 },
-	{ name = "war hammer", chance = 4010 },
-	{ name = "white piece of cloth", chance = 6430 },
-	{ name = "green piece of cloth", chance = 3003 },
-	{ name = "red piece of cloth", chance = 1820 },
-	{ name = "blue piece of cloth", chance = 3700 },
-	{ name = "great mana potion", chance = 7692 },
-	{ name = "great health potion", chance = 7220 },
-	{ name = "mana potion", chance = 9090 },
-	{ name = "terra mantle", chance = 800 },
-	{ name = "terra legs", chance = 920 },
-	{ name = "terra boots", chance = 2000 },
-	{ name = "terra amulet", chance = 2000 },
-	{ name = "mushroom backpack", chance = 20 },
-	{ name = "mushroom pie", chance = 14500, maxCount = 3 },
-	{ name = "muck rod", chance = 590 },
-	{ name = "hideous chunk", chance = 14285 },
-	{ name = "envenomed arrow", chance = 14500, maxCount = 15 },
-	{ name = "mycological bow", chance = 60 },
+	{ id = "gold coin", chance = 100000, maxCount = 197 },
+	{ id = "platinum coin", chance = 100000, maxCount = 7 },
+	{ id = "war hammer", chance = 4010 },
+	{ id = "white piece of cloth", chance = 6430 },
+	{ id = "green piece of cloth", chance = 3003 },
+	{ id = "red piece of cloth", chance = 1820 },
+	{ id = "blue piece of cloth", chance = 3700 },
+	{ id = "great mana potion", chance = 7692 },
+	{ id = "great health potion", chance = 7220 },
+	{ id = "mana potion", chance = 9090 },
+	{ id = "terra mantle", chance = 800 },
+	{ id = "terra legs", chance = 920 },
+	{ id = "terra boots", chance = 2000 },
+	{ id = "terra amulet", chance = 2000 },
+	{ id = "mushroom backpack", chance = 20 },
+	{ id = "mushroom pie", chance = 14500, maxCount = 3 },
+	{ id = "muck rod", chance = 590 },
+	{ id = "hideous chunk", chance = 14285 },
+	{ id = "envenomed arrow", chance = 14500, maxCount = 15 },
+	{ id = "mycological bow", chance = 60 },
 }
 
 monster.attacks = {

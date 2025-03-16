@@ -1,3 +1,6 @@
+-- Ghazbaran (Tibia Wiki: https://tibia.fandom.com/wiki/Ghazbaran)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Ghazbaran")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,50 +81,50 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "blue tome", chance = 20000 },
-	{ name = "teddy bear", chance = 12500 },
+	{ id = "blue tome", chance = 20000 },
+	{ id = "teddy bear", chance = 12500 },
 	{ id = 3007, chance = 8333 }, -- crystal ring
-	{ name = "white pearl", chance = 25000, maxCount = 15 },
-	{ name = "black pearl", chance = 11111, maxCount = 14 },
-	{ name = "small diamond", chance = 25000, maxCount = 5 },
-	{ name = "small sapphire", chance = 25000, maxCount = 10 },
-	{ name = "small emerald", chance = 25000, maxCount = 10 },
-	{ name = "small amethyst", chance = 25000, maxCount = 17 },
-	{ name = "talon", chance = 12500, maxCount = 7 },
-	{ name = "platinum coin", chance = 100000, maxCount = 69 },
-	{ name = "green gem", chance = 20000 },
-	{ name = "blue gem", chance = 14285 },
-	{ name = "might ring", chance = 12500 },
+	{ id = "white pearl", chance = 25000, maxCount = 15 },
+	{ id = "black pearl", chance = 11111, maxCount = 14 },
+	{ id = "small diamond", chance = 25000, maxCount = 5 },
+	{ id = "small sapphire", chance = 25000, maxCount = 10 },
+	{ id = "small emerald", chance = 25000, maxCount = 10 },
+	{ id = "small amethyst", chance = 25000, maxCount = 17 },
+	{ id = "talon", chance = 12500, maxCount = 7 },
+	{ id = "platinum coin", chance = 100000, maxCount = 69 },
+	{ id = "green gem", chance = 20000 },
+	{ id = "blue gem", chance = 14285 },
+	{ id = "might ring", chance = 12500 },
 	{ id = 3049, chance = 12500 }, -- stealth ring
-	{ name = "strange symbol", chance = 11111 },
-	{ name = "life crystal", chance = 12500 },
-	{ name = "mind stone", chance = 20000 },
-	{ name = "gold ring", chance = 20000 },
+	{ id = "strange symbol", chance = 11111 },
+	{ id = "life crystal", chance = 12500 },
+	{ id = "mind stone", chance = 20000 },
+	{ id = "gold ring", chance = 20000 },
 	{ id = 3098, chance = 20000 }, -- ring of healing
-	{ name = "twin axe", chance = 11111 },
-	{ name = "golden armor", chance = 8333 },
-	{ name = "magic plate armor", chance = 8333 },
-	{ name = "demon shield", chance = 12500 },
-	{ name = "golden boots", chance = 8333 },
-	{ name = "demon horn", chance = 33333, maxCount = 2 },
+	{ id = "twin axe", chance = 11111 },
+	{ id = "golden armor", chance = 8333 },
+	{ id = "magic plate armor", chance = 8333 },
+	{ id = "demon shield", chance = 12500 },
+	{ id = "golden boots", chance = 8333 },
+	{ id = "demon horn", chance = 33333, maxCount = 2 },
 	{ id = 6299, chance = 25000 }, -- death ring
-	{ name = "demonic essence", chance = 100000 },
-	{ name = "ruthless axe", chance = 14285 },
-	{ name = "assassin star", chance = 12500, maxCount = 44 },
-	{ name = "havoc blade", chance = 16666 },
-	{ name = "ravenwing", chance = 14285 },
-	{ name = "great mana potion", chance = 20000 },
-	{ name = "great health potion", chance = 20000 },
-	{ name = "glacier kilt", chance = 8333 },
-	{ name = "great spirit potion", chance = 25000 },
-	{ name = "ultimate health potion", chance = 25000 },
-	{ name = "oceanborn leviathan armor", chance = 16666 },
-	{ name = "frozen plate", chance = 8333 },
-	{ name = "spellbook of warding", chance = 20000 },
-	{ name = "spellbook of mind control", chance = 11111 },
-	{ name = "spellbook of lost souls", chance = 16666 },
-	{ name = "spellscroll of prophecies", chance = 25000 },
-	{ name = "spellbook of dark mysteries", chance = 20000 },
+	{ id = "demonic essence", chance = 100000 },
+	{ id = "ruthless axe", chance = 14285 },
+	{ id = "assassin star", chance = 12500, maxCount = 44 },
+	{ id = "havoc blade", chance = 16666 },
+	{ id = "ravenwing", chance = 14285 },
+	{ id = "great mana potion", chance = 20000 },
+	{ id = "great health potion", chance = 20000 },
+	{ id = "glacier kilt", chance = 8333 },
+	{ id = "great spirit potion", chance = 25000 },
+	{ id = "ultimate health potion", chance = 25000 },
+	{ id = "oceanborn leviathan armor", chance = 16666 },
+	{ id = "frozen plate", chance = 8333 },
+	{ id = "spellbook of warding", chance = 20000 },
+	{ id = "spellbook of mind control", chance = 11111 },
+	{ id = "spellbook of lost souls", chance = 16666 },
+	{ id = "spellscroll of prophecies", chance = 25000 },
+	{ id = "spellbook of dark mysteries", chance = 20000 },
 }
 
 monster.attacks = {
@@ -141,7 +143,7 @@ monster.defenses = {
 	armor = 55,
 	--	mitigation = ???,
 	{ name = "combat", interval = 3000, chance = 35, type = COMBAT_HEALING, minDamage = 300, maxDamage = 800, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 4000, chance = 80, speedChange = 440, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 4000, chance = 80, effect = CONST_ME_MAGIC_RED, speed = 400},
 }
 
 monster.elements = {

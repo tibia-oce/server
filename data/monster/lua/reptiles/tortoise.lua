@@ -1,3 +1,6 @@
+-- Tortoise (Tibia Wiki: https://tibia.fandom.com/wiki/Tortoise)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Tortoise")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 258
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Laguna Islands, Fenrock, Port Hope and also can be found behind a wall below the center of Liberty Bay. These cannot be reached.",
-}
 
 monster.health = 185
 monster.maxHealth = 185
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -73,13 +63,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 59000, maxCount = 30 },
-	{ name = "battle hammer", chance = 730 },
-	{ name = "plate shield", chance = 2850 },
+	{ id = "gold coin", chance = 59000, maxCount = 30 },
+	{ id = "battle hammer", chance = 730 },
+	{ id = "plate shield", chance = 2850 },
 	{ id = 3578, chance = 4600 }, -- fish
-	{ name = "tortoise egg", chance = 770, maxCount = 2 },
+	{ id = "tortoise egg", chance = 770, maxCount = 2 },
 	{ id = 5899, chance = 1300 }, -- turtle shell
-	{ name = "tortoise shield", chance = 200 },
+	{ id = "tortoise shield", chance = 200 },
 }
 
 monster.attacks = {

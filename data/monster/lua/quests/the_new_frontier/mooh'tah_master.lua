@@ -1,3 +1,6 @@
+-- Mooh'Tah Master (Tibia Wiki: https://tibia.fandom.com/wiki/Mooh'Tah_Master)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Mooh'Tah Master")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

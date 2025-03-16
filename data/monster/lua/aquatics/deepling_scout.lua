@@ -1,3 +1,6 @@
+-- Deepling Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Scout)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Deepling Scout")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 734
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Fiehonja, Sunken Mines near Dwarf Mines.",
-}
 
 monster.health = 240
 monster.maxHealth = 240
@@ -33,8 +24,6 @@ monster.corpse = 12684
 monster.speed = 65
 monster.manaCost = 0
 
-monster.faction = FACTION_DEEPLING
-monster.enemyFactions = { FACTION_PLAYER, FACTION_DEATHLING }
 
 monster.changeTarget = {
 	interval = 4000,
@@ -65,8 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -83,15 +71,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 75000, maxCount = 50 },
-	{ name = "hunting spear", chance = 15185, maxCount = 3 },
+	{ id = "gold coin", chance = 75000, maxCount = 50 },
+	{ id = "hunting spear", chance = 15185, maxCount = 3 },
 	{ id = 3052, chance = 2127 }, -- life ring
-	{ name = "rusted armor", chance = 925 },
-	{ name = "heavy trident", chance = 505 },
-	{ name = "eye of a deepling", chance = 310 },
-	{ name = "fish fin", chance = 310 },
-	{ name = "small emerald", chance = 121 },
-	{ name = "flask of rust remover", chance = 111 },
+	{ id = "rusted armor", chance = 925 },
+	{ id = "heavy trident", chance = 505 },
+	{ id = "eye of a deepling", chance = 310 },
+	{ id = "fish fin", chance = 310 },
+	{ id = "small emerald", chance = 121 },
+	{ id = "flask of rust remover", chance = 111 },
 }
 
 monster.attacks = {

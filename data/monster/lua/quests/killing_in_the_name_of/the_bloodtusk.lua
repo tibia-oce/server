@@ -1,3 +1,6 @@
+-- The Bloodtusk (Tibia Wiki: https://tibia.fandom.com/wiki/The_Bloodtusk)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("The Bloodtusk")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

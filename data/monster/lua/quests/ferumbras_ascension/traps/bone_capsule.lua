@@ -1,3 +1,6 @@
+-- Bone Capsule (Tibia Wiki: https://tibia.fandom.com/wiki/Bone_Capsule)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Bone Capsule")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"BoneCapsule",

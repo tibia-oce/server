@@ -1,3 +1,6 @@
+-- Apprentice Sheng (Tibia Wiki: https://tibia.fandom.com/wiki/Apprentice_Sheng)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Apprentice Sheng")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,14 +76,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "minotaur leather", chance = 100000 },
+	{ id = "minotaur leather", chance = 100000 },
 	{ id = 3046, chance = 76000 }, -- magic light wand
-	{ name = "gold coin", chance = 38000, maxCount = 10 },
+	{ id = "gold coin", chance = 38000, maxCount = 10 },
 	{ id = 2920, chance = 30000, maxCount = 2 }, -- torch
-	{ name = "leather legs", chance = 23000 },
+	{ id = "leather legs", chance = 23000 },
 	{ id = 3595, chance = 7690 }, -- carrot
-	{ name = "leather helmet", chance = 7690 },
-	{ name = "knife", chance = 7690 },
+	{ id = "leather helmet", chance = 7690 },
+	{ id = "knife", chance = 7690 },
 }
 
 monster.attacks = {

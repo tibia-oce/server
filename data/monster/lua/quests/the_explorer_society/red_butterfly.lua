@@ -1,3 +1,6 @@
+-- Red Butterfly (Tibia Wiki: https://tibia.fandom.com/wiki/Red_Butterfly)
+-- Version: 7.50
+
 local mType = Game.createMonsterType("Red Butterfly")
 local monster = {}
 
@@ -14,20 +17,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 228
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 25,
-	FirstUnlock = 5,
-	SecondUnlock = 10,
-	CharmsPoints = 1,
-	Stars = 0,
-	Occurrence = 0,
-	Locations = "Banuta, Carlin Surroundings, Feyrist Meadows, Grimvale, Liberty Bay City, \z
-		Liberty Bay Surroundings, Meriana, Plains of Havoc, Port Hope Surroundings, \z
-		Yalahar Arena Quarter, Yalahar Centre, Yalahar Magician Quarter.",
-}
 
 monster.health = 2
 monster.maxHealth = 2
@@ -63,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

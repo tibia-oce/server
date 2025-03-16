@@ -1,3 +1,6 @@
+-- Bug (Tibia Wiki: https://tibia.fandom.com/wiki/Bug)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Bug")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 45
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "In many parts around Tibia, including Rookgaard.",
-}
 
 monster.health = 29
 monster.maxHealth = 29
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -73,8 +63,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 51170, maxCount = 6 },
-	{ name = "cherry", chance = 2590, maxCount = 3 },
+	{ id = "gold coin", chance = 51170, maxCount = 6 },
+	{ id = "cherry", chance = 2590, maxCount = 3 },
 }
 
 monster.attacks = {

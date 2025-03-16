@@ -1,3 +1,6 @@
+-- Doomhowl (Tibia Wiki: https://tibia.fandom.com/wiki/Doomhowl)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Doomhowl")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,7 +76,7 @@ monster.defenses = {
 	defense = 55,
 	armor = 50,
 	--	mitigation = ???,
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 390, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_RED, speed = 320},
 }
 
 monster.elements = {

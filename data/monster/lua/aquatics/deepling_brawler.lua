@@ -1,3 +1,6 @@
+-- Deepling Brawler (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Brawler)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Deepling Brawler")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 859
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 1,
-	Locations = "Fiehonja.",
-}
 
 monster.health = 380
 monster.maxHealth = 380
@@ -33,8 +24,6 @@ monster.corpse = 12685
 monster.speed = 85
 monster.manaCost = 0
 
-monster.faction = FACTION_DEEPLING
-monster.enemyFactions = { FACTION_PLAYER, FACTION_DEATHLING }
 
 monster.changeTarget = {
 	interval = 4000,
@@ -65,9 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,12 +68,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 96000, maxCount = 44 },
+	{ id = "gold coin", chance = 96000, maxCount = 44 },
 	{ id = 3578, chance = 19730, maxCount = 3 }, -- fish
-	{ name = "deepling scales", chance = 14500 },
-	{ name = "eye of a deepling", chance = 6500 },
-	{ name = "heavy trident", chance = 2720 },
-	{ name = "fish fin", chance = 680 },
+	{ id = "deepling scales", chance = 14500 },
+	{ id = "eye of a deepling", chance = 6500 },
+	{ id = "heavy trident", chance = 2720 },
+	{ id = "fish fin", chance = 680 },
 }
 
 monster.attacks = {

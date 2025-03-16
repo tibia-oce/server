@@ -1,3 +1,6 @@
+-- Orc Warlord (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Warlord)
+-- Version: 7.0
+
 local mType = Game.createMonsterType("Orc Warlord")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 2
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Orc Fortress, Foreigner Quarter, Zao Orc Land.",
-}
 
 monster.health = 950
 monster.maxHealth = 950
@@ -61,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,29 +69,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 18000, maxCount = 45 },
+	{ id = "gold coin", chance = 18000, maxCount = 45 },
 	{ id = 3049, chance = 90 }, -- stealth ring
-	{ name = "gold ring", chance = 30 },
-	{ name = "protection amulet", chance = 2190 },
-	{ name = "two handed sword", chance = 1680 },
-	{ name = "throwing star", chance = 13920, maxCount = 18 },
+	{ id = "gold ring", chance = 30 },
+	{ id = "protection amulet", chance = 2190 },
+	{ id = "two handed sword", chance = 1680 },
+	{ id = "throwing star", chance = 13920, maxCount = 18 },
 	{ id = 3307, chance = 3450 }, -- scimitar
-	{ name = "orcish axe", chance = 5400 },
-	{ name = "dragon hammer", chance = 320 },
-	{ name = "plate armor", chance = 5210 },
-	{ name = "brass armor", chance = 740 },
-	{ name = "dark helmet", chance = 1260 },
-	{ name = "crusader helmet", chance = 280 },
-	{ name = "plate legs", chance = 4280 },
+	{ id = "orcish axe", chance = 5400 },
+	{ id = "dragon hammer", chance = 320 },
+	{ id = "plate armor", chance = 5210 },
+	{ id = "brass armor", chance = 740 },
+	{ id = "dark helmet", chance = 1260 },
+	{ id = "crusader helmet", chance = 280 },
+	{ id = "plate legs", chance = 4280 },
 	{ id = 3578, chance = 10800, maxCount = 2 }, -- fish
-	{ name = "hunting spear", chance = 5260 },
+	{ id = "hunting spear", chance = 5260 },
 	{ id = 7395, chance = 50 }, -- orc trophy
-	{ name = "health potion", chance = 470 },
-	{ name = "magma boots", chance = 280 },
-	{ name = "orc tooth", chance = 9640 },
-	{ name = "broken helmet", chance = 24350 },
-	{ name = "orc leather", chance = 20620 },
-	{ name = "skull belt", chance = 4610 },
+	{ id = "health potion", chance = 470 },
+	{ id = "magma boots", chance = 280 },
+	{ id = "orc tooth", chance = 9640 },
+	{ id = "broken helmet", chance = 24350 },
+	{ id = "orc leather", chance = 20620 },
+	{ id = "skull belt", chance = 4610 },
 }
 
 monster.attacks = {

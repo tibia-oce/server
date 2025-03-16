@@ -1,3 +1,6 @@
+-- Lizard Snakecharmer (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Snakecharmer)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Lizard Snakecharmer")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 115
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Chor, Forbidden Temple.",
-}
 
 monster.health = 325
 monster.maxHealth = 325
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,18 +72,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 83740, maxCount = 55 },
-	{ name = "small amethyst", chance = 520 },
-	{ name = "yellow gem", chance = 150 },
+	{ id = "gold coin", chance = 83740, maxCount = 55 },
+	{ id = "small amethyst", chance = 520 },
+	{ id = "yellow gem", chance = 150 },
 	{ id = 3052, chance = 340 }, -- life ring
-	{ name = "life crystal", chance = 1430 },
-	{ name = "terra rod", chance = 920 },
-	{ name = "snakebite rod", chance = 230 },
-	{ name = "cape", chance = 8640 },
-	{ name = "charmer's tiara", chance = 230 },
-	{ name = "lizard leather", chance = 1320 },
-	{ name = "lizard scale", chance = 860 },
-	{ name = "mana potion", chance = 860 },
+	{ id = "life crystal", chance = 1430 },
+	{ id = "terra rod", chance = 920 },
+	{ id = "snakebite rod", chance = 230 },
+	{ id = "cape", chance = 8640 },
+	{ id = "charmer's tiara", chance = 230 },
+	{ id = "lizard leather", chance = 1320 },
+	{ id = "lizard scale", chance = 860 },
+	{ id = "mana potion", chance = 860 },
 }
 
 monster.attacks = {

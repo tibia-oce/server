@@ -1,3 +1,6 @@
+-- Terrified Elephant (Tibia Wiki: https://tibia.fandom.com/wiki/Terrified_Elephant)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Terrified Elephant")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 771
-monster.Bestiary = {
-	class = "Mammal",
-
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "East of Port Hope, close to the Deeper Banuta shortcut, Mapper Coords128.84127.16872texthere.",
-}
 
 monster.health = 320
 monster.maxHealth = 320
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,10 +66,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 40000, maxCount = 4 },
-	{ name = "ham", chance = 27000, maxCount = 9 },
-	{ name = "tusk", chance = 8510, maxCount = 2 },
-	{ name = "tusk shield", chance = 80 },
+	{ id = "meat", chance = 40000, maxCount = 4 },
+	{ id = "ham", chance = 27000, maxCount = 9 },
+	{ id = "tusk", chance = 8510, maxCount = 2 },
+	{ id = "tusk shield", chance = 80 },
 }
 
 monster.attacks = {
@@ -90,7 +80,7 @@ monster.defenses = {
 	defense = 0,
 	armor = 20,
 	mitigation = 0.41,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 800, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = 210},
 }
 
 monster.elements = {

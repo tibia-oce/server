@@ -1,3 +1,6 @@
+-- Glooth Blob (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Blob)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Glooth Blob")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1054
-monster.Bestiary = {
-	class = "Slime",
-	race = BESTY_RACE_SLIME,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Oramond/Western Plains, Lower Rathleton, Glooth Factory, Underground Glooth Factory, Rathleton Sewers.",
-}
 
 monster.health = 750
 monster.maxHealth = 750
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- The Blightfather (Tibia Wiki: https://tibia.fandom.com/wiki/The_Blightfather)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("The Blightfather")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

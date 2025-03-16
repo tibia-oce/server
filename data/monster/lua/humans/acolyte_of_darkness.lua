@@ -1,3 +1,6 @@
+-- Acolyte of Darkness (Tibia Wiki: https://tibia.fandom.com/wiki/Acolyte_of_Darkness)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Acolyte of Darkness")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 578
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 30,
-	Stars = 2,
-	Occurrence = 3,
-	Locations = "Drefia.",
-}
 
 monster.health = 325
 monster.maxHealth = 325
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,7 +66,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "midnight shard", chance = 1300 },
+	{ id = "midnight shard", chance = 1300 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Dwarf Guard (Tibia Wiki: https://tibia.fandom.com/wiki/Dwarf_Guard)
+-- Version: 6.1
+
 local mType = Game.createMonsterType("Dwarf Guard")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 70
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Kazordoon Dwarf Mines, Dwacatra, Ferngrims Gate, Cyclopolis, Mount Sternum Undead Cave, \z
-		Stonehome Rotworm cave (near Edron), Maze of Lost Souls, Tiquanda Dwarf Cave, Beregar, Cormaya Dwarf Cave.",
-}
 
 monster.health = 245
 monster.maxHealth = 245
@@ -62,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,18 +66,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 40000, maxCount = 30 },
-	{ name = "small amethyst", chance = 140 },
+	{ id = "gold coin", chance = 40000, maxCount = 30 },
+	{ id = "small amethyst", chance = 140 },
 	{ id = 3092, chance = 190 }, -- axe ring
-	{ name = "double axe", chance = 600 },
-	{ name = "battle hammer", chance = 4000 },
-	{ name = "steel helmet", chance = 1600 },
-	{ name = "scale armor", chance = 9200 },
-	{ name = "battle shield", chance = 6000 },
-	{ name = "leather boots", chance = 40000 },
-	{ name = "white mushroom", chance = 55000, maxCount = 2 },
-	{ name = "iron ore", chance = 510 },
-	{ name = "health potion", chance = 380 },
+	{ id = "double axe", chance = 600 },
+	{ id = "battle hammer", chance = 4000 },
+	{ id = "steel helmet", chance = 1600 },
+	{ id = "scale armor", chance = 9200 },
+	{ id = "battle shield", chance = 6000 },
+	{ id = "leather boots", chance = 40000 },
+	{ id = "white mushroom", chance = 55000, maxCount = 2 },
+	{ id = "iron ore", chance = 510 },
+	{ id = "health potion", chance = 380 },
 	{ id = 12600, chance = 280 }, -- coal
 }
 

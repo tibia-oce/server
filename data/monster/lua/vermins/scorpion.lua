@@ -1,3 +1,6 @@
+-- Scorpion (Tibia Wiki: https://tibia.fandom.com/wiki/Scorpion)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Scorpion")
 local monster = {}
 
@@ -13,22 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 43
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Near Thais Troll Cave, Plague Spike, Drefia, Jakundaf Desert, \z
-		Green Claw Swamp, beneath Folda, Maze of Lost Souls, Plains of Havoc, \z
-		Venore and Ankrahmun Dragon Lairs, beneath Edron Graveyard, Ancient Temple, \z
-		Hellgate, Mad Mage Room, Ankrahmun Tombs, Treasure Island, Mal'ouquah, Ramoa, \z
-		Cyclopolis, Ghostlands, Vengoth, Lion's Rock.",
-}
 
 monster.health = 45
 monster.maxHealth = 45
@@ -64,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,7 +64,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "scorpion tail", chance = 4930 },
+	{ id = "scorpion tail", chance = 4930 },
 }
 
 monster.attacks = {

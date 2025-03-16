@@ -1,3 +1,6 @@
+-- Fiery Heart (Tibia Wiki: https://tibia.fandom.com/wiki/Fiery_Heart)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Fiery Heart")
 local monster = {}
 
@@ -43,8 +46,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

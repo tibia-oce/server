@@ -1,3 +1,6 @@
+-- Abyssal Calamary (Tibia Wiki: https://tibia.fandom.com/wiki/Abyssal_Calamary)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Abyssal Calamary")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1105
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Seacrest Grounds.",
-}
 
 monster.health = 300
 monster.maxHealth = 300
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,11 +65,11 @@ monster.voices = {
 monster.loot = {
 	{ id = 3581, chance = 9680 }, -- shrimp
 	{ id = 3578, chance = 10770 }, -- fish
-	{ name = "black pearl", chance = 1500, maxCount = 1 },
-	{ name = "white pearl", chance = 830, maxCount = 1 },
-	{ name = "small sapphire", chance = 250, maxCount = 3 },
-	{ name = "small ruby", chance = 500, maxCount = 3 },
-	{ name = "small amethyst", chance = 750, maxCount = 3 },
+	{ id = "black pearl", chance = 1500, maxCount = 1 },
+	{ id = "white pearl", chance = 830, maxCount = 1 },
+	{ id = "small sapphire", chance = 250, maxCount = 3 },
+	{ id = "small ruby", chance = 500, maxCount = 3 },
+	{ id = "small amethyst", chance = 750, maxCount = 3 },
 }
 
 monster.attacks = {}

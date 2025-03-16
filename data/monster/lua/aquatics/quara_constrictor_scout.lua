@@ -1,3 +1,6 @@
+-- Quara Constrictor Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Constrictor_Scout)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Quara Constrictor Scout")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 240
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Malada, Arena Quarter, Treasure Island Eastern Caves, \z
-		Hrodmir Quara Scout Caves, Quara Grotto, Oramond.",
-}
 
 monster.health = 450
 monster.maxHealth = 450
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -78,13 +67,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 87620, maxCount = 100 },
-	{ name = "quara tentacle", chance = 14620 },
-	{ name = "longsword", chance = 6910 },
-	{ name = "shrimp", chance = 5140, maxCount = 3 },
-	{ name = "brass armor", chance = 4810 },
-	{ name = "small amethyst", chance = 3060 },
-	{ name = "fish fin", chance = 490 },
+	{ id = "gold coin", chance = 87620, maxCount = 100 },
+	{ id = "quara tentacle", chance = 14620 },
+	{ id = "longsword", chance = 6910 },
+	{ id = "shrimp", chance = 5140, maxCount = 3 },
+	{ id = "brass armor", chance = 4810 },
+	{ id = "small amethyst", chance = 3060 },
+	{ id = "fish fin", chance = 490 },
 }
 
 monster.attacks = {

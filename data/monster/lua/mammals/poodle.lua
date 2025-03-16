@@ -1,3 +1,6 @@
+-- Poodle (Tibia Wiki: https://tibia.fandom.com/wiki/Poodle)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Poodle")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

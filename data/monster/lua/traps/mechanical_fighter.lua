@@ -1,3 +1,6 @@
+-- Mechanical Fighter (Tibia Wiki: https://tibia.fandom.com/wiki/Mechanical_Fighter)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Mechanical Fighter")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Salamander (Tibia Wiki: https://tibia.fandom.com/wiki/Salamander)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Salamander")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 913
-monster.Bestiary = {
-	class = "Amphibic",
-	race = BESTY_RACE_AMPHIBIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Shadowthorn in the bog god's temple, Drefia, around Lake Equivocolao when it's dirty.",
-}
 
 monster.health = 70
 monster.maxHealth = 70
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,14 +64,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 72000, maxCount = 15 },
-	{ name = "gold coin", chance = 72000, maxCount = 15 },
-	{ name = "mace", chance = 3780 },
+	{ id = "gold coin", chance = 72000, maxCount = 15 },
+	{ id = "gold coin", chance = 72000, maxCount = 15 },
+	{ id = "mace", chance = 3780 },
 	{ id = 3003, chance = 5190 }, -- rope
-	{ name = "bow", chance = 740 },
-	{ name = "brass helmet", chance = 2180 },
-	{ name = "arrow", chance = 7890, maxCount = 3 },
-	{ name = "health potion", chance = 1480 },
+	{ id = "bow", chance = 740 },
+	{ id = "brass helmet", chance = 2180 },
+	{ id = "arrow", chance = 7890, maxCount = 3 },
+	{ id = "health potion", chance = 1480 },
 	{ id = 3307, chance = 490 }, -- scimitar
 }
 

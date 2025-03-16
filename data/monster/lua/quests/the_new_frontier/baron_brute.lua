@@ -1,3 +1,6 @@
+-- Baron Brute (Tibia Wiki: https://tibia.fandom.com/wiki/Baron_Brute)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Baron Brute")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Fahim the Wise (Tibia Wiki: https://tibia.fandom.com/wiki/Fahim_the_Wise)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Fahim the Wise")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -68,29 +70,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "blue piece of cloth", chance = 99990, maxCount = 4 },
-	{ name = "jewelled belt", chance = 99990 },
-	{ name = "gold coin", chance = 95240, maxCount = 118 },
-	{ name = "noble turban", chance = 66670 },
-	{ name = "royal spear", chance = 57140, maxCount = 3 },
-	{ name = "shiny stone", chance = 47620 },
-	{ name = "strong mana potion", chance = 42860, maxCount = 3 },
-	{ name = "blueberry", chance = 40480, maxCount = 22 },
-	{ name = "mystic turban", chance = 33330 },
-	{ name = "small sapphire", chance = 14290, maxCount = 2 },
-	{ name = "seeds", chance = 7140 },
-	{ name = "magma monocle", chance = 4760 },
-	{ name = "blue gem", chance = 2380 },
-	{ name = "small oil lamp", chance = 580 },
+	{ id = "blue piece of cloth", chance = 99990, maxCount = 4 },
+	{ id = "jewelled belt", chance = 99990 },
+	{ id = "gold coin", chance = 95240, maxCount = 118 },
+	{ id = "noble turban", chance = 66670 },
+	{ id = "royal spear", chance = 57140, maxCount = 3 },
+	{ id = "shiny stone", chance = 47620 },
+	{ id = "strong mana potion", chance = 42860, maxCount = 3 },
+	{ id = "blueberry", chance = 40480, maxCount = 22 },
+	{ id = "mystic turban", chance = 33330 },
+	{ id = "small sapphire", chance = 14290, maxCount = 2 },
+	{ id = "seeds", chance = 7140 },
+	{ id = "magma monocle", chance = 4760 },
+	{ id = "blue gem", chance = 2380 },
+	{ id = "small oil lamp", chance = 580 },
 	{ id = 2948, chance = 480 }, -- wooden flute
-	{ name = "heavy machete", chance = 380 },
+	{ id = "heavy machete", chance = 380 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -130 },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_ENERGYDAMAGE, minDamage = -100, maxDamage = -300, range = 7, shootEffect = CONST_ANI_ENERGYBALL, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_LIFEDRAIN, minDamage = -30, maxDamage = -90, range = 7, effect = CONST_ME_MAGIC_RED, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 1500 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 1500 },
 	{ name = "drunk", interval = 2000, chance = 10, range = 7, shootEffect = CONST_ANI_ENERGY, target = false, duration = 6000 },
 	{ name = "outfit", interval = 2000, chance = 1, range = 7, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 4000, outfitMonster = "rabbit" },
 	{ name = "djinn electrify", interval = 2000, chance = 15, range = 5, target = false },

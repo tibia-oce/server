@@ -1,3 +1,6 @@
+-- Ghoulish Hyaena (Tibia Wiki: https://tibia.fandom.com/wiki/Ghoulish_Hyaena)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Ghoulish Hyaena")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 704
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Horestis Tomb.",
-}
 
 monster.health = 400
 monster.maxHealth = 400
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,11 +65,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 2700, maxCount = 2 },
-	{ name = "gold coin", chance = 89000, maxCount = 40 },
-	{ name = "meat", chance = 51060, maxCount = 3 },
-	{ name = "worm", chance = 65000, maxCount = 7 },
-	{ name = "health potion", chance = 19840 },
+	{ id = "small ruby", chance = 2700, maxCount = 2 },
+	{ id = "gold coin", chance = 89000, maxCount = 40 },
+	{ id = "meat", chance = 51060, maxCount = 3 },
+	{ id = "worm", chance = 65000, maxCount = 7 },
+	{ id = "health potion", chance = 19840 },
 }
 
 monster.attacks = {
@@ -92,7 +81,7 @@ monster.defenses = {
 	defense = 20,
 	armor = 21,
 	mitigation = 0.80,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 3000, target = false, duration = 2000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = 204},
 }
 
 monster.elements = {

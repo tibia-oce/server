@@ -1,3 +1,6 @@
+-- Destroyer (Tibia Wiki: https://tibia.fandom.com/wiki/Destroyer)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Destroyer")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 287
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Pits of Inferno, Formorgar Mines, Alchemist Quarter, Oramond Dungeon and Grounds of Destruction.",
-}
 
 monster.health = 3700
 monster.maxHealth = 3700
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,27 +69,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "crystal necklace", chance = 500 },
-	{ name = "gold coin", chance = 92500, maxCount = 341 },
-	{ name = "small amethyst", chance = 5850, maxCount = 2 },
-	{ name = "platinum coin", chance = 2250, maxCount = 3 },
-	{ name = "mind stone", chance = 70 },
-	{ name = "giant sword", chance = 1250 },
-	{ name = "crowbar", chance = 10500 },
-	{ name = "plate armor", chance = 3400 },
-	{ name = "dark armor", chance = 6250 },
+	{ id = "crystal necklace", chance = 500 },
+	{ id = "gold coin", chance = 92500, maxCount = 341 },
+	{ id = "small amethyst", chance = 5850, maxCount = 2 },
+	{ id = "platinum coin", chance = 2250, maxCount = 3 },
+	{ id = "mind stone", chance = 70 },
+	{ id = "giant sword", chance = 1250 },
+	{ id = "crowbar", chance = 10500 },
+	{ id = "plate armor", chance = 3400 },
+	{ id = "dark armor", chance = 6250 },
 	{ id = 3449, chance = 8350, maxCount = 12 }, -- burst arrow
 	{ id = 3456, chance = 4850 }, -- pick
-	{ name = "steel boots", chance = 300 },
-	{ name = "meat", chance = 40000, maxCount = 6 },
-	{ name = "skull helmet", chance = 10 },
-	{ name = "soul orb", chance = 5350 },
+	{ id = "steel boots", chance = 300 },
+	{ id = "meat", chance = 40000, maxCount = 6 },
+	{ id = "skull helmet", chance = 10 },
+	{ id = "soul orb", chance = 5350 },
 	{ id = 6299, chance = 250 }, -- death ring
-	{ name = "demonic essence", chance = 13850 },
-	{ name = "dreaded cleaver", chance = 400 },
-	{ name = "chaos mace", chance = 800 },
-	{ name = "great health potion", chance = 1000 },
-	{ name = "metal spike", chance = 4850 },
+	{ id = "demonic essence", chance = 13850 },
+	{ id = "dreaded cleaver", chance = 400 },
+	{ id = "chaos mace", chance = 800 },
+	{ id = "great health potion", chance = 1000 },
+	{ id = "metal spike", chance = 4850 },
 }
 
 monster.attacks = {
@@ -111,7 +101,7 @@ monster.defenses = {
 	defense = 30,
 	armor = 35,
 	mitigation = 1.74,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 420, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 300},
 }
 
 monster.elements = {

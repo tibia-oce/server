@@ -1,3 +1,6 @@
+-- Rukor Zad (Tibia Wiki: https://tibia.fandom.com/wiki/Rukor_Zad)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Rukor Zad")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

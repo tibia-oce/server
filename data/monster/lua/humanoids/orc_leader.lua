@@ -1,3 +1,6 @@
+-- Orc Leader (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Leader)
+-- Version: 6.0
+
 local mType = Game.createMonsterType("Orc Leader")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 59
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Orc Fort, Edron Orc Cave, South of the temple in PoH, Maze of Lost Souls, Cyclopolis, Zao Orc Land.",
-}
 
 monster.health = 450
 monster.maxHealth = 450
@@ -61,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,24 +66,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 28000, maxCount = 35 },
+	{ id = "gold coin", chance = 28000, maxCount = 35 },
 	{ id = 3091, chance = 3920 }, -- sword ring
-	{ name = "longsword", chance = 2800 },
-	{ name = "throwing knife", chance = 9950, maxCount = 4 },
-	{ name = "broadsword", chance = 610 },
+	{ id = "longsword", chance = 2800 },
+	{ id = "throwing knife", chance = 9950, maxCount = 4 },
+	{ id = "broadsword", chance = 610 },
 	{ id = 3307, chance = 1860 }, -- scimitar
-	{ name = "plate armor", chance = 1650 },
-	{ name = "warrior helmet", chance = 180 },
-	{ name = "brass legs", chance = 3100 },
-	{ name = "plate shield", chance = 1650 },
-	{ name = "plate legs", chance = 440 },
+	{ id = "plate armor", chance = 1650 },
+	{ id = "warrior helmet", chance = 180 },
+	{ id = "brass legs", chance = 3100 },
+	{ id = "plate shield", chance = 1650 },
+	{ id = "plate legs", chance = 440 },
 	{ id = 3578, chance = 29400 }, -- fish
-	{ name = "brown mushroom", chance = 9650 },
-	{ name = "royal spear", chance = 2400 },
-	{ name = "health potion", chance = 550 },
-	{ name = "orc tooth", chance = 1030 },
-	{ name = "orc leather", chance = 19510 },
-	{ name = "skull belt", chance = 2008 },
+	{ id = "brown mushroom", chance = 9650 },
+	{ id = "royal spear", chance = 2400 },
+	{ id = "health potion", chance = 550 },
+	{ id = "orc tooth", chance = 1030 },
+	{ id = "orc leather", chance = 19510 },
+	{ id = "skull belt", chance = 2008 },
 }
 
 monster.attacks = {

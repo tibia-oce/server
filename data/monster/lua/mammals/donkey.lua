@@ -1,3 +1,6 @@
+-- Donkey (Tibia Wiki: https://tibia.fandom.com/wiki/Donkey)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Donkey")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -61,7 +63,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 20000, maxCount = 2 },
+	{ id = "meat", chance = 20000, maxCount = 2 },
 }
 
 monster.attacks = {

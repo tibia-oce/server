@@ -1,3 +1,6 @@
+-- Meadow Strider (Tibia Wiki: https://tibia.fandom.com/wiki/Meadow_Strider)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Meadow Strider")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,7 +84,7 @@ monster.defenses = {
 	defense = 2,
 	armor = 1,
 	--	mitigation = ???,
-	{ name = "speed", interval = 2000, chance = 13, speedChange = 192, effect = CONST_ME_HITAREA, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 13, effect = CONST_ME_HITAREA, speed = 136},
 }
 
 monster.elements = {

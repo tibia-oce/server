@@ -1,3 +1,6 @@
+-- Morguthis (Tibia Wiki: https://tibia.fandom.com/wiki/Morguthis)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Morguthis")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,22 +83,22 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3019, chance = 500 }, -- demonbone amulet
-	{ name = "black pearl", chance = 7000 },
-	{ name = "gold coin", chance = 50000, maxCount = 80 },
-	{ name = "gold coin", chance = 50000, maxCount = 73 },
-	{ name = "stone skin amulet", chance = 7000 },
-	{ name = "sword hilt", chance = 100000 },
-	{ name = "knight axe", chance = 7000 },
-	{ name = "ravager's axe", chance = 300 },
-	{ name = "steel boots", chance = 500 },
-	{ name = "assassin star", chance = 500, maxCount = 3 },
-	{ name = "great health potion", chance = 1500 },
+	{ id = "black pearl", chance = 7000 },
+	{ id = "gold coin", chance = 50000, maxCount = 80 },
+	{ id = "gold coin", chance = 50000, maxCount = 73 },
+	{ id = "stone skin amulet", chance = 7000 },
+	{ id = "sword hilt", chance = 100000 },
+	{ id = "knight axe", chance = 7000 },
+	{ id = "ravager's axe", chance = 300 },
+	{ id = "steel boots", chance = 500 },
+	{ id = "assassin star", chance = 500, maxCount = 3 },
+	{ id = "great health potion", chance = 1500 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -1000, condition = { type = CONDITION_POISON, totalDamage = 65, interval = 4000 } },
 	{ name = "combat", interval = 3000, chance = 7, type = COMBAT_LIFEDRAIN, minDamage = -55, maxDamage = -550, range = 1, target = false },
-	{ name = "speed", interval = 1000, chance = 25, speedChange = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 50000 },
+	{ name = "speed", interval = 1000, chance = 25, speed = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 50000 },
 	{ name = "combat", interval = 1000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -40, maxDamage = -400, radius = 3, effect = CONST_ME_HITAREA, target = false },
 	{ name = "combat", interval = 3000, chance = 7, type = COMBAT_PHYSICALDAMAGE, minDamage = -50, maxDamage = -500, radius = 3, effect = CONST_ME_MORTAREA, target = false },
 }
@@ -105,7 +107,7 @@ monster.defenses = {
 	defense = 25,
 	armor = 35,
 	{ name = "combat", interval = 1000, chance = 13, type = COMBAT_HEALING, minDamage = 200, maxDamage = 300, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 1000, chance = 7, speedChange = 1201, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 1000, chance = 7, effect = CONST_ME_MAGIC_RED, speed = 590},
 	{ name = "invisible", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_BLUE },
 }
 

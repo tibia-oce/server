@@ -1,3 +1,6 @@
+-- Orcus the Cruel (Tibia Wiki: https://tibia.fandom.com/wiki/Orcus_the_Cruel)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Orcus the Cruel")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

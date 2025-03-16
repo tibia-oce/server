@@ -1,3 +1,6 @@
+-- Incredibly Old Witch (Tibia Wiki: https://tibia.fandom.com/wiki/Incredibly_Old_Witch)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Incredibly Old Witch")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

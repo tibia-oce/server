@@ -1,3 +1,6 @@
+-- Nightmare (Tibia Wiki: https://tibia.fandom.com/wiki/Nightmare)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Nightmare")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 299
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Pits of Inferno, Formorgar Mines, Cemetery Quarter, Edron \z
-		(In multiple places during The Inquisition Quest), Alchemist Quarter, Vengoth Castle, Deeper Banuta, Krailos Ruins, Grounds of Deceit.",
-}
 
 monster.health = 2700
 monster.maxHealth = 2700
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -83,23 +72,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 55 },
-	{ name = "platinum coin", chance = 2564, maxCount = 3 },
-	{ name = "boots of haste", chance = 337 },
-	{ name = "war axe", chance = 95 },
-	{ name = "knight legs", chance = 961 },
-	{ name = "ancient shield", chance = 990 },
-	{ name = "power bolt", chance = 9090, maxCount = 4 },
-	{ name = "ham", chance = 29000, maxCount = 2 },
-	{ name = "mysterious voodoo skull", chance = 123 },
-	{ name = "soul orb", chance = 20000 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 55 },
+	{ id = "platinum coin", chance = 2564, maxCount = 3 },
+	{ id = "boots of haste", chance = 337 },
+	{ id = "war axe", chance = 95 },
+	{ id = "knight legs", chance = 961 },
+	{ id = "ancient shield", chance = 990 },
+	{ id = "power bolt", chance = 9090, maxCount = 4 },
+	{ id = "ham", chance = 29000, maxCount = 2 },
+	{ id = "mysterious voodoo skull", chance = 123 },
+	{ id = "soul orb", chance = 20000 },
 	{ id = 6299, chance = 1298 }, -- death ring
-	{ name = "demonic essence", chance = 10000 },
-	{ name = "skeleton decoration", chance = 337 },
-	{ name = "flask of demonic blood", chance = 19666, maxCount = 2 },
-	{ name = "essence of a bad dream", chance = 15240 },
-	{ name = "scythe leg", chance = 9090 },
+	{ id = "demonic essence", chance = 10000 },
+	{ id = "skeleton decoration", chance = 337 },
+	{ id = "flask of demonic blood", chance = 19666, maxCount = 2 },
+	{ id = "essence of a bad dream", chance = 15240 },
+	{ id = "scythe leg", chance = 9090 },
 }
 
 monster.attacks = {
@@ -113,7 +102,7 @@ monster.defenses = {
 	armor = 25,
 	mitigation = 0.70,
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 60, maxDamage = 100, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 420, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 464},
 }
 
 monster.elements = {

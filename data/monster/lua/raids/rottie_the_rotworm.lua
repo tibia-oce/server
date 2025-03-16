@@ -1,3 +1,6 @@
+-- Rottie the Rotworm (Tibia Wiki: https://tibia.fandom.com/wiki/Rottie_the_Rotworm)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Rottie the Rotworm")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

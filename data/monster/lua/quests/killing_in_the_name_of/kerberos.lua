@@ -1,3 +1,6 @@
+-- Kerberos (Tibia Wiki: https://tibia.fandom.com/wiki/Kerberos)
+-- Version: 9.20
+
 local mType = Game.createMonsterType("Kerberos")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,

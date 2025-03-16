@@ -1,3 +1,6 @@
+-- Glooth Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Golem)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Glooth Golem")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1038
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Glooth Factory, Underground Glooth Factory, Rathleton Sewers, Jaccus Maxxens Dungeon, \z
-		Oramond Dungeon (depending on Magistrate votes).",
-}
 
 monster.health = 2700
 monster.maxHealth = 2700
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -112,7 +101,7 @@ monster.defenses = {
 	defense = 45,
 	armor = 43,
 	mitigation = 1.37,
-	{ name = "speed", interval = 2000, chance = 13, speedChange = 404, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 13, effect = CONST_ME_MAGIC_RED, speed = 260},
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_HEALING, minDamage = 200, maxDamage = 250, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

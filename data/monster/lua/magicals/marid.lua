@@ -1,3 +1,6 @@
+-- Marid (Tibia Wiki: https://tibia.fandom.com/wiki/Marid)
+-- Version: 7.4
+
 local mType = Game.createMonsterType("Marid")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 104
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Kha'zeel, Magician Quarter, Djinn battle island through the Haunted Tomb.",
-}
 
 monster.health = 550
 monster.maxHealth = 550
@@ -33,8 +24,6 @@ monster.corpse = 6033
 monster.speed = 117
 monster.manaCost = 0
 
-monster.faction = FACTION_MARID
-monster.enemyFactions = { FACTION_PLAYER, FACTION_EFREET }
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -88,30 +76,30 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2659, chance = 2560 }, -- blue tapestry
-	{ name = "small oil lamp", chance = 110 },
-	{ name = "small sapphire", chance = 6200 },
-	{ name = "gold coin", chance = 60000, maxCount = 70 },
-	{ name = "gold coin", chance = 60000, maxCount = 30 },
-	{ name = "blue gem", chance = 110 },
-	{ name = "hailstorm rod", chance = 770 },
+	{ id = "small oil lamp", chance = 110 },
+	{ id = "small sapphire", chance = 6200 },
+	{ id = "gold coin", chance = 60000, maxCount = 70 },
+	{ id = "gold coin", chance = 60000, maxCount = 30 },
+	{ id = "blue gem", chance = 110 },
+	{ id = "hailstorm rod", chance = 770 },
 	{ id = 2948, chance = 5000 }, -- wooden flute
-	{ name = "heavy machete", chance = 4530 },
-	{ name = "mystic turban", chance = 290 },
-	{ name = "blueberry", chance = 65000, maxCount = 29 },
-	{ name = "blue piece of cloth", chance = 3750 },
-	{ name = "royal spear", chance = 15500, maxCount = 3 },
-	{ name = "strong mana potion", chance = 9800 },
-	{ name = "seeds", chance = 2400 },
-	{ name = "magma monocle", chance = 320 },
-	{ name = "jewelled belt", chance = 7880 },
-	{ name = "noble turban", chance = 530 },
+	{ id = "heavy machete", chance = 4530 },
+	{ id = "mystic turban", chance = 290 },
+	{ id = "blueberry", chance = 65000, maxCount = 29 },
+	{ id = "blue piece of cloth", chance = 3750 },
+	{ id = "royal spear", chance = 15500, maxCount = 3 },
+	{ id = "strong mana potion", chance = 9800 },
+	{ id = "seeds", chance = 2400 },
+	{ id = "magma monocle", chance = 320 },
+	{ id = "jewelled belt", chance = 7880 },
+	{ id = "noble turban", chance = 530 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -90 },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_ENERGYDAMAGE, minDamage = -100, maxDamage = -250, range = 7, shootEffect = CONST_ANI_ENERGYBALL, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_LIFEDRAIN, minDamage = -30, maxDamage = -90, range = 7, effect = CONST_ME_MAGIC_RED, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 1500 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 1500 },
 	{ name = "drunk", interval = 2000, chance = 10, range = 7, shootEffect = CONST_ANI_ENERGY, target = false, duration = 6000 },
 	{ name = "outfit", interval = 2000, chance = 1, range = 7, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 4000, outfitMonster = "rabbit" },
 	{ name = "djinn electrify", interval = 2000, chance = 15, range = 5, target = false },

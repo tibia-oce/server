@@ -1,3 +1,6 @@
+-- Calamary (Tibia Wiki: https://tibia.fandom.com/wiki/Calamary)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Calamary")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 780
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 1,
-	Locations = "Fiehonja.",
-}
 
 monster.health = 75
 monster.maxHealth = 75
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "shrimp", chance = 12270, maxCount = 2 },
+	{ id = "shrimp", chance = 12270, maxCount = 2 },
 }
 
 monster.defenses = {

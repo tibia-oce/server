@@ -1,3 +1,6 @@
+-- Mountain Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Mountain_Troll)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Mountain Troll")
 local monster = {}
 
@@ -50,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

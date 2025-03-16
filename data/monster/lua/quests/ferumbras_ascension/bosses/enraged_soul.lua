@@ -1,3 +1,6 @@
+-- Enraged Soul (Tibia Wiki: https://tibia.fandom.com/wiki/Enraged_Soul)
+-- Version: 10.20
+
 local mType = Game.createMonsterType("Enraged Soul")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Zevelon Duskbringer (Tibia Wiki: https://tibia.fandom.com/wiki/Zevelon_Duskbringer)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Zevelon Duskbringer")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

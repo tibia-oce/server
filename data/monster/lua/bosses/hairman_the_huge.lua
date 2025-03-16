@@ -1,3 +1,6 @@
+-- Hairman the Huge (Tibia Wiki: https://tibia.fandom.com/wiki/Hairman_the_Huge)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Hairman the Huge")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -71,9 +73,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 60 },
+	{ id = "gold coin", chance = 100000, maxCount = 60 },
 	{ id = 3093, chance = 25000 }, -- club ring
-	{ name = "banana", chance = 25000, maxCount = 1 },
+	{ id = "banana", chance = 25000, maxCount = 1 },
 }
 
 monster.attacks = {
@@ -84,7 +86,7 @@ monster.defenses = {
 	defense = 25,
 	armor = 20,
 	--	mitigation = ???,
-	{ name = "speed", interval = 1000, chance = 7, speedChange = 260, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
+	{ name = "speed", interval = 1000, chance = 7, effect = CONST_ME_MAGIC_RED, speed = 230},
 }
 
 monster.elements = {

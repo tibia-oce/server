@@ -1,3 +1,6 @@
+-- Badger (Tibia Wiki: https://tibia.fandom.com/wiki/Badger)
+-- Version: 7.4
+
 local mType = Game.createMonsterType("Badger")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 105
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Hrodmir, southern Tiquanda, unannounced raid in Ab'Dendriel and Edron.",
-}
 
 monster.health = 23
 monster.maxHealth = 23
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,8 +64,8 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 10299, chance = 10230 }, -- badger fur
-	{ name = "beetroot", chance = 40710 },
-	{ name = "acorn", chance = 5130 },
+	{ id = "beetroot", chance = 40710 },
+	{ id = "acorn", chance = 5130 },
 }
 
 monster.attacks = {

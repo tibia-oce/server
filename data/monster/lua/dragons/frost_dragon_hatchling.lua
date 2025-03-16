@@ -1,3 +1,6 @@
+-- Frost Dragon Hatchling (Tibia Wiki: https://tibia.fandom.com/wiki/Frost_Dragon_Hatchling)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Frost Dragon Hatchling")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 402
-monster.Bestiary = {
-	class = "Dragon",
-	race = BESTY_RACE_DRAGON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Okolnir, Factory Quarter (Yalahar), Dragonblaze Peaks, Ice Witch Temple, Frost Dragon Tunnel, Chyllfroest.",
-}
 
 monster.health = 800
 monster.maxHealth = 800
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,18 +68,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 91430, maxCount = 47 },
-	{ name = "dragon ham", chance = 82860 },
-	{ name = "frosty heart", chance = 8570 },
-	{ name = "health potion", chance = 510 },
-	{ name = "spellbook of enlightenment", chance = 430 },
+	{ id = "gold coin", chance = 91430, maxCount = 47 },
+	{ id = "dragon ham", chance = 82860 },
+	{ id = "frosty heart", chance = 8570 },
+	{ id = "health potion", chance = 510 },
+	{ id = "spellbook of enlightenment", chance = 430 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -160 },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_ICEDAMAGE, minDamage = -60, maxDamage = -110, length = 5, spread = 2, effect = CONST_ME_ICEATTACK, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_ICEDAMAGE, minDamage = -60, maxDamage = -110, radius = 4, effect = CONST_ME_ICEAREA, target = true },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -600, radius = 4, shootEffect = CONST_ANI_ICE, effect = CONST_ME_ICEAREA, target = true, duration = 12000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -600, radius = 4, shootEffect = CONST_ANI_ICE, effect = CONST_ME_ICEAREA, target = true, duration = 12000 },
 }
 
 monster.defenses = {

@@ -1,3 +1,6 @@
+-- Elder Wyrm (Tibia Wiki: https://tibia.fandom.com/wiki/Elder_Wyrm)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("Elder Wyrm")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 963
-monster.Bestiary = {
-	class = "Dragon",
-	race = BESTY_RACE_DRAGON,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Drefia Wyrm Lair, Vandura Wyrm Cave, Oramond Factory Raids (west), Warzone 4.",
-}
 
 monster.health = 2700
 monster.maxHealth = 2700
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,26 +68,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 161 },
-	{ name = "platinum coin", chance = 52380, maxCount = 3 },
-	{ name = "wyrm scale", chance = 33330 },
-	{ name = "dragon ham", chance = 23810, maxCount = 2 },
-	{ name = "strong health potion", chance = 23810 },
-	{ name = "strong mana potion", chance = 19050 },
-	{ name = "crossbow", chance = 14290 },
-	{ name = "small diamond", chance = 4760 },
-	{ name = "soul orb", chance = 4760 },
-	{ name = "wand of draconia", chance = 1510 },
-	{ name = "power bolt", chance = 1030, maxCount = 10 },
-	{ name = "wand of starstorm", chance = 830 },
-	{ name = "lightning pendant", chance = 750 },
-	{ name = "lightning legs", chance = 600 },
-	{ name = "lightning robe", chance = 290 },
-	{ name = "dragonbone staff", chance = 240 },
-	{ name = "composite hornbow", chance = 220 },
-	{ name = "shadow sceptre", chance = 170 },
-	{ name = "lightning boots", chance = 150 },
-	{ name = "shockwave amulet", chance = 120 },
+	{ id = "gold coin", chance = 100000, maxCount = 161 },
+	{ id = "platinum coin", chance = 52380, maxCount = 3 },
+	{ id = "wyrm scale", chance = 33330 },
+	{ id = "dragon ham", chance = 23810, maxCount = 2 },
+	{ id = "strong health potion", chance = 23810 },
+	{ id = "strong mana potion", chance = 19050 },
+	{ id = "crossbow", chance = 14290 },
+	{ id = "small diamond", chance = 4760 },
+	{ id = "soul orb", chance = 4760 },
+	{ id = "wand of draconia", chance = 1510 },
+	{ id = "power bolt", chance = 1030, maxCount = 10 },
+	{ id = "wand of starstorm", chance = 830 },
+	{ id = "lightning pendant", chance = 750 },
+	{ id = "lightning legs", chance = 600 },
+	{ id = "lightning robe", chance = 290 },
+	{ id = "dragonbone staff", chance = 240 },
+	{ id = "composite hornbow", chance = 220 },
+	{ id = "shadow sceptre", chance = 170 },
+	{ id = "lightning boots", chance = 150 },
+	{ id = "shockwave amulet", chance = 120 },
 }
 
 monster.attacks = {

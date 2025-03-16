@@ -1,3 +1,6 @@
+-- Berserker Chicken (Tibia Wiki: https://tibia.fandom.com/wiki/Berserker_Chicken)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Berserker Chicken")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 561
-monster.Bestiary = {
-	class = "Bird",
-	race = BESTY_RACE_BIRD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 1,
-	Locations = "Isle of Evil.",
-}
 
 monster.health = 465
 monster.maxHealth = 465
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,7 +66,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
 }
 
 monster.attacks = {
@@ -90,7 +79,7 @@ monster.defenses = {
 	defense = 12,
 	armor = 12,
 	mitigation = 0.28,
-	{ name = "speed", interval = 1000, chance = 40, speedChange = 400, effect = CONST_ME_MAGIC_RED, target = false, duration = 8000 },
+	{ name = "speed", interval = 1000, chance = 40, effect = CONST_ME_MAGIC_RED, speed = 166},
 }
 
 monster.elements = {

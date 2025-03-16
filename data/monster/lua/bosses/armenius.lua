@@ -1,3 +1,6 @@
+-- Armenius (Creature) (Tibia Wiki: https://tibia.fandom.com/wiki/Armenius_(Creature))
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Armenius (Creature)")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -70,7 +72,7 @@ monster.loot = {
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, skill = 50, attack = 50 },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_LIFEDRAIN, minDamage = -50, maxDamage = -200, range = 1, radius = 1, effect = CONST_ME_SMALLCLOUDS, target = true },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -400, radius = 1, effect = CONST_ME_MAGIC_RED, target = false, duration = 60000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -400, radius = 1, effect = CONST_ME_MAGIC_RED, target = false, duration = 60000 },
 }
 
 monster.defenses = {
@@ -78,7 +80,7 @@ monster.defenses = {
 	armor = 30,
 	--	mitigation = ???,
 	{ name = "outfit", interval = 2000, chance = 10, effect = CONST_ME_GROUNDSHAKER, target = false, duration = 5000, outfitMonster = "bat" },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 300, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 220},
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 15, maxDamage = 25, target = false },
 }
 

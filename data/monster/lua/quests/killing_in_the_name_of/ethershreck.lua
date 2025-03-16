@@ -1,3 +1,6 @@
+-- Ethershreck (Tibia Wiki: https://tibia.fandom.com/wiki/Ethershreck)
+-- Version: 9.20
+
 local mType = Game.createMonsterType("Ethershreck")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 4,

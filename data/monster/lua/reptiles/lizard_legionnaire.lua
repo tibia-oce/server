@@ -1,3 +1,6 @@
+-- Lizard Legionnaire (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Legionnaire)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Lizard Legionnaire")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 624
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Zzaion, Zao Palace and its antechambers, Muggy Plains, Zao Orc Land (in fort), \z
-		Corruption Hole, Razachai, Temple of Equilibrium, Northern Zao Plantations.",
-}
 
 monster.health = 1400
 monster.maxHealth = 1400
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,21 +64,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 1001, maxCount = 2 },
-	{ name = "gold coin", chance = 44000, maxCount = 100 },
-	{ name = "gold coin", chance = 54000, maxCount = 65 },
-	{ name = "lizard leather", chance = 970 },
-	{ name = "lizard scale", chance = 980, maxCount = 3 },
-	{ name = "strong health potion", chance = 3880 },
-	{ name = "red lantern", chance = 530 },
-	{ name = "bunch of ripe rice", chance = 1950 },
-	{ name = "zaoan armor", chance = 70 },
-	{ name = "zaoan shoes", chance = 460 },
-	{ name = "drakinata", chance = 710 },
-	{ name = "zaoan halberd", chance = 960 },
-	{ name = "legionnaire flags", chance = 1940 },
-	{ name = "broken halberd", chance = 14940 },
-	{ name = "lizard trophy", chance = 20 },
+	{ id = "small diamond", chance = 1001, maxCount = 2 },
+	{ id = "gold coin", chance = 44000, maxCount = 100 },
+	{ id = "gold coin", chance = 54000, maxCount = 65 },
+	{ id = "lizard leather", chance = 970 },
+	{ id = "lizard scale", chance = 980, maxCount = 3 },
+	{ id = "strong health potion", chance = 3880 },
+	{ id = "red lantern", chance = 530 },
+	{ id = "bunch of ripe rice", chance = 1950 },
+	{ id = "zaoan armor", chance = 70 },
+	{ id = "zaoan shoes", chance = 460 },
+	{ id = "drakinata", chance = 710 },
+	{ id = "zaoan halberd", chance = 960 },
+	{ id = "legionnaire flags", chance = 1940 },
+	{ id = "broken halberd", chance = 14940 },
+	{ id = "lizard trophy", chance = 20 },
 }
 
 monster.attacks = {

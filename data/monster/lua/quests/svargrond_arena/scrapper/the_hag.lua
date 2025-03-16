@@ -1,3 +1,6 @@
+-- The Hag (Tibia Wiki: https://tibia.fandom.com/wiki/The_Hag)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("The Hag")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,7 +81,7 @@ monster.loot = {}
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -100 },
 	{ name = "drunk", interval = 3000, chance = 35, range = 5, radius = 1, target = true, duration = 15000 },
-	{ name = "speed", interval = 4000, chance = 55, speedChange = -400, range = 5, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 12000 },
+	{ name = "speed", interval = 4000, chance = 55, speed = -400, range = 5, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 12000 },
 }
 
 monster.defenses = {

@@ -1,3 +1,6 @@
+-- Shark (Tibia Wiki: https://tibia.fandom.com/wiki/Shark)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Shark")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 782
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Fiehonja, Seacrest Grounds, Krailos Steppe underwater cave.",
-}
 
 monster.health = 1200
 monster.maxHealth = 1200
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,14 +64,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 41000, maxCount = 38 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 41000, maxCount = 38 },
 	{ id = 3578, chance = 25430, maxCount = 4 }, -- fish
-	{ name = "deepling scales", chance = 9620 },
-	{ name = "eye of a deepling", chance = 1200 },
-	{ name = "small sapphire", chance = 1090 },
+	{ id = "deepling scales", chance = 9620 },
+	{ id = "eye of a deepling", chance = 1200 },
+	{ id = "small sapphire", chance = 1090 },
 	{ id = 281, chance = 390 }, -- giant shimmering pearl (green)
-	{ name = "fish fin", chance = 161 },
+	{ id = "fish fin", chance = 161 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Phantasm Summon (Tibia Wiki: https://tibia.fandom.com/wiki/Phantasm)
+-- Version: 7.90
+
 local mType = Game.createMonsterType("Phantasm Summon")
 local monster = {}
 
@@ -47,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,7 +81,7 @@ monster.defenses = {
 	defense = 0,
 	armor = 0,
 	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 40, maxDamage = 65, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 500, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_RED, speed = 340},
 	{ name = "invisible", interval = 2000, chance = 25, effect = CONST_ME_MAGIC_BLUE },
 }
 

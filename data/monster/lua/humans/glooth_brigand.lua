@@ -1,3 +1,6 @@
+-- Glooth Brigand (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Brigand)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Glooth Brigand")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1120
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Underground Glooth Factory.",
-}
 
 monster.health = 2400
 monster.maxHealth = 2400
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

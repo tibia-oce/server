@@ -1,3 +1,6 @@
+-- Earth Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Earth_Elemental)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Earth Elemental")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 458
-monster.Bestiary = {
-	class = "Elemental",
-	race = BESTY_RACE_ELEMENTAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Edron Earth Elemental Cave, Vandura Mountain, Deeper Banuta, Vengoth Castle, Robson Isle, \z
-	Drillworm Caves, Crystal Grounds, Middle Spike.",
-}
 
 monster.health = 650
 monster.maxHealth = 650
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,16 +67,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small stone", chance = 10000, maxCount = 10 },
-	{ name = "gold coin", chance = 43000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 30 },
-	{ name = "blank rune", chance = 10000 },
-	{ name = "strong mana potion", chance = 1910 },
-	{ name = "earth arrow", chance = 20160, maxCount = 30 },
+	{ id = "small stone", chance = 10000, maxCount = 10 },
+	{ id = "gold coin", chance = 43000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 30 },
+	{ id = "blank rune", chance = 10000 },
+	{ id = "strong mana potion", chance = 1910 },
+	{ id = "earth arrow", chance = 20160, maxCount = 30 },
 	{ id = 8894, chance = 350 }, -- heavily rusted armor
-	{ name = "small topaz", chance = 620 },
-	{ name = "lump of earth", chance = 20460 },
-	{ name = "clay lump", chance = 570 },
+	{ id = "small topaz", chance = 620 },
+	{ id = "lump of earth", chance = 20460 },
+	{ id = "clay lump", chance = 570 },
 	{ id = 12600, chance = 470 }, -- coal
 }
 
@@ -99,7 +88,7 @@ monster.attacks = {
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 20, minDamage = -200, maxDamage = -260, length = 6, spread = 0, effect = CONST_ME_BIGPLANTS, target = false },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -100, maxDamage = -140, radius = 5, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -330, range = 5, effect = CONST_ME_SMALLPLANTS, target = true, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -330, range = 5, effect = CONST_ME_SMALLPLANTS, target = true, duration = 5000 },
 }
 
 monster.defenses = {

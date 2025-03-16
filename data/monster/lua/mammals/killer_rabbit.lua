@@ -1,3 +1,6 @@
+-- Killer Rabbit (Tibia Wiki: https://tibia.fandom.com/wiki/Killer_Rabbit)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Killer Rabbit")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 560
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 1,
-	Locations = "Isle of Evil.",
-}
 
 monster.health = 205
 monster.maxHealth = 205
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -82,7 +71,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 90 },
+	{ id = "gold coin", chance = 50000, maxCount = 90 },
 }
 
 monster.attacks = {
@@ -94,7 +83,7 @@ monster.defenses = {
 	defense = 35,
 	armor = 17,
 	mitigation = 0.51,
-	{ name = "speed", interval = 1000, chance = 40, speedChange = 380, effect = CONST_ME_ENERGYHIT, target = false, duration = 8000 },
+	{ name = "speed", interval = 1000, chance = 40, effect = CONST_ME_ENERGYHIT, speed = 340},
 	{ name = "invisible", interval = 2000, chance = 30, effect = CONST_ME_MAGIC_BLUE },
 }
 

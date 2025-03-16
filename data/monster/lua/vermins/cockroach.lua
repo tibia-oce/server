@@ -1,3 +1,6 @@
+-- Cockroach (Tibia Wiki: https://tibia.fandom.com/wiki/Cockroach)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Cockroach")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -60,7 +62,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "cockroach leg", chance = 100000 },
+	{ id = "cockroach leg", chance = 100000 },
 }
 
 monster.defenses = {

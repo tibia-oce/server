@@ -1,3 +1,6 @@
+-- Demon Outcast (Tibia Wiki: https://tibia.fandom.com/wiki/Demon_Outcast)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Demon Outcast")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1019
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Roshamuul Prison.",
-}
 
 monster.health = 6900
 monster.maxHealth = 6900
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -87,30 +77,30 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 10000, maxCount = 5 },
-	{ name = "small sapphire", chance = 10000, maxCount = 5 },
-	{ name = "small ruby", chance = 12000, maxCount = 5 },
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "small emerald", chance = 10000, maxCount = 5 },
-	{ name = "platinum coin", chance = 100000, maxCount = 6 },
-	{ name = "might ring", chance = 910 },
+	{ id = "small diamond", chance = 10000, maxCount = 5 },
+	{ id = "small sapphire", chance = 10000, maxCount = 5 },
+	{ id = "small ruby", chance = 12000, maxCount = 5 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "small emerald", chance = 10000, maxCount = 5 },
+	{ id = "platinum coin", chance = 100000, maxCount = 6 },
+	{ id = "might ring", chance = 910 },
 	{ id = 3049, chance = 1300 }, -- stealth ring
-	{ name = "platinum amulet", chance = 1000 },
+	{ id = "platinum amulet", chance = 1000 },
 	{ id = 3098, chance = 3000 }, -- ring of healing
-	{ name = "giant sword", chance = 2000 },
-	{ name = "ice rapier", chance = 660 },
-	{ name = "devil helmet", chance = 910 },
-	{ name = "crusader helmet", chance = 740 },
-	{ name = "crown shield", chance = 740 },
-	{ name = "demon shield", chance = 170 },
-	{ name = "fire mushroom", chance = 20600, maxCount = 6 },
+	{ id = "giant sword", chance = 2000 },
+	{ id = "ice rapier", chance = 660 },
+	{ id = "devil helmet", chance = 910 },
+	{ id = "crusader helmet", chance = 740 },
+	{ id = "crown shield", chance = 740 },
+	{ id = "demon shield", chance = 170 },
+	{ id = "fire mushroom", chance = 20600, maxCount = 6 },
 	{ id = 5906, chance = 1000 }, -- demon dust
-	{ name = "assassin star", chance = 8340, maxCount = 10 },
-	{ name = "demonrage sword", chance = 350 },
-	{ name = "great mana potion", chance = 18000, maxCount = 2 },
-	{ name = "ultimate health potion", chance = 20500, maxCount = 3 },
-	{ name = "small topaz", chance = 9300, maxCount = 5 },
-	{ name = "cluster of solace", chance = 4550 },
+	{ id = "assassin star", chance = 8340, maxCount = 10 },
+	{ id = "demonrage sword", chance = 350 },
+	{ id = "great mana potion", chance = 18000, maxCount = 2 },
+	{ id = "ultimate health potion", chance = 20500, maxCount = 3 },
+	{ id = "small topaz", chance = 9300, maxCount = 5 },
+	{ id = "cluster of solace", chance = 4550 },
 }
 
 monster.attacks = {

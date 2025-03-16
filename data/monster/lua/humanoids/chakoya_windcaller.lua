@@ -1,3 +1,6 @@
+-- Chakoya Windcaller (Tibia Wiki: https://tibia.fandom.com/wiki/Chakoya_Windcaller)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Chakoya Windcaller")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 329
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Inukaya, Chyllfroest, Chakoya Iceberg.",
-}
 
 monster.health = 84
 monster.maxHealth = 84
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,14 +67,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 71170, maxCount = 27 },
-	{ name = "brass helmet", chance = 4390 },
-	{ name = "bone shield", chance = 960 },
+	{ id = "gold coin", chance = 71170, maxCount = 27 },
+	{ id = "brass helmet", chance = 4390 },
+	{ id = "bone shield", chance = 960 },
 	{ id = 3578, chance = 30790, maxCount = 3 }, -- fish
-	{ name = "northern pike", chance = 40 },
-	{ name = "rainbow trout", chance = 40 },
-	{ name = "green perch", chance = 110 },
-	{ name = "fireproof horn", chance = 410 },
+	{ id = "northern pike", chance = 40 },
+	{ id = "rainbow trout", chance = 40 },
+	{ id = "green perch", chance = 110 },
+	{ id = "fireproof horn", chance = 410 },
 }
 
 monster.attacks = {

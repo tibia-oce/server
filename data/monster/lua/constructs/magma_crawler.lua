@@ -1,3 +1,6 @@
+-- Magma Crawler (Tibia Wiki: https://tibia.fandom.com/wiki/Magma_Crawler)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Magma Crawler")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 885
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Warzone 2.",
-}
 
 monster.health = 4800
 monster.maxHealth = 4800
@@ -60,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 5,
@@ -75,33 +65,33 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 8800, maxCount = 3 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 99 },
-	{ name = "platinum coin", chance = 100000, maxCount = 5 },
-	{ name = "yellow gem", chance = 1030 },
+	{ id = "small diamond", chance = 8800, maxCount = 3 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 99 },
+	{ id = "platinum coin", chance = 100000, maxCount = 5 },
+	{ id = "yellow gem", chance = 1030 },
 	{ id = 3051, chance = 1650 }, -- energy ring
-	{ name = "fire sword", chance = 1680 },
-	{ name = "black shield", chance = 1550 },
-	{ name = "iron ore", chance = 4280 },
-	{ name = "white piece of cloth", chance = 2310 },
-	{ name = "red piece of cloth", chance = 930 },
-	{ name = "yellow piece of cloth", chance = 2980 },
-	{ name = "great mana potion", chance = 6500 },
-	{ name = "great health potion", chance = 7270 },
-	{ name = "magma amulet", chance = 3120 },
-	{ name = "magma boots", chance = 1820 },
-	{ name = "wand of draconia", chance = 4280 },
-	{ name = "fiery heart", chance = 7810 },
+	{ id = "fire sword", chance = 1680 },
+	{ id = "black shield", chance = 1550 },
+	{ id = "iron ore", chance = 4280 },
+	{ id = "white piece of cloth", chance = 2310 },
+	{ id = "red piece of cloth", chance = 930 },
+	{ id = "yellow piece of cloth", chance = 2980 },
+	{ id = "great mana potion", chance = 6500 },
+	{ id = "great health potion", chance = 7270 },
+	{ id = "magma amulet", chance = 3120 },
+	{ id = "magma boots", chance = 1820 },
+	{ id = "wand of draconia", chance = 4280 },
+	{ id = "fiery heart", chance = 7810 },
 	{ id = 12600, chance = 1675 }, -- coal
-	{ name = "crystalline arrow", chance = 5950, maxCount = 10 },
-	{ name = "wand of everblazing", chance = 690 },
-	{ name = "blue crystal shard", chance = 3930, maxCount = 2 },
-	{ name = "brown crystal splinter", chance = 8500, maxCount = 2 },
-	{ name = "green crystal fragment", chance = 7000 },
-	{ name = "magma clump", chance = 11600 },
-	{ name = "blazing bone", chance = 11500 },
-	{ name = "blazing bone", chance = 12220 },
+	{ id = "crystalline arrow", chance = 5950, maxCount = 10 },
+	{ id = "wand of everblazing", chance = 690 },
+	{ id = "blue crystal shard", chance = 3930, maxCount = 2 },
+	{ id = "brown crystal splinter", chance = 8500, maxCount = 2 },
+	{ id = "green crystal fragment", chance = 7000 },
+	{ id = "magma clump", chance = 11600 },
+	{ id = "blazing bone", chance = 11500 },
+	{ id = "blazing bone", chance = 12220 },
 }
 
 monster.attacks = {
@@ -111,7 +101,7 @@ monster.attacks = {
 	{ name = "magma crawler soulfire", interval = 2000, chance = 20, target = false },
 	{ name = "soulfire rune", interval = 2000, chance = 10, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_FIREDAMAGE, minDamage = -140, maxDamage = -180, radius = 3, effect = CONST_ME_HITBYFIRE, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -800, radius = 2, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -800, radius = 2, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
 }
 
 monster.defenses = {

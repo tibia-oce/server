@@ -1,3 +1,6 @@
+-- Chicken (Tibia Wiki: https://tibia.fandom.com/wiki/Chicken)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Chicken")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 111
-monster.Bestiary = {
-	class = "Bird",
-	race = BESTY_RACE_BIRD,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Sabrehaven, Rookgaard, The McRonalds Farm in Thais, Northport, \z
-		Fibula, Carlin (killable but unreachable), Greenshore, Krimhorn, Orc Fortress, \z
-		Factory Quarter, also theres one in the farm near Edron.",
-}
 
 monster.health = 15
 monster.maxHealth = 15
@@ -62,9 +51,7 @@ monster.flags = {
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
-	isPreyable = true,
-	isPreyExclusive = true,
-}
+	isPreyable = true}
 
 monster.light = {
 	level = 0,
@@ -79,10 +66,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 2120, maxCount = 2 },
+	{ id = "meat", chance = 2120, maxCount = 2 },
 	{ id = 3606, chance = 950 }, -- egg
-	{ name = "worm", chance = 10000, maxCount = 3 },
-	{ name = "chicken feather", chance = 20000 },
+	{ id = "worm", chance = 10000, maxCount = 3 },
+	{ id = "chicken feather", chance = 20000 },
 }
 
 monster.defenses = {

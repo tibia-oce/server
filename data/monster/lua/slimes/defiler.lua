@@ -1,3 +1,6 @@
+-- Defiler (Tibia Wiki: https://tibia.fandom.com/wiki/Defiler)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Defiler")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 289
-monster.Bestiary = {
-	class = "Slime",
-	race = BESTY_RACE_SLIME,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Pits of Inferno, The Inquisition Quest (The Vats) and Grounds of Plague.",
-}
 
 monster.health = 3650
 monster.maxHealth = 3650
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,
@@ -78,23 +68,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 2439, maxCount = 2 },
-	{ name = "small ruby", chance = 3000, maxCount = 2 },
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "gold coin", chance = 100000, maxCount = 72 },
-	{ name = "small emerald", chance = 5366, maxCount = 3 },
-	{ name = "talon", chance = 5710 },
-	{ name = "platinum coin", chance = 95000, maxCount = 6 },
-	{ name = "yellow gem", chance = 1219 },
-	{ name = "green gem", chance = 613 },
+	{ id = "small diamond", chance = 2439, maxCount = 2 },
+	{ id = "small ruby", chance = 3000, maxCount = 2 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "gold coin", chance = 100000, maxCount = 72 },
+	{ id = "small emerald", chance = 5366, maxCount = 3 },
+	{ id = "talon", chance = 5710 },
+	{ id = "platinum coin", chance = 95000, maxCount = 6 },
+	{ id = "yellow gem", chance = 1219 },
+	{ id = "green gem", chance = 613 },
 	{ id = 3039, chance = 1538 }, -- red gem
-	{ name = "blue gem", chance = 300 },
-	{ name = "soul orb", chance = 20000 },
+	{ id = "blue gem", chance = 300 },
+	{ id = "soul orb", chance = 20000 },
 	{ id = 6299, chance = 3030 }, -- death ring
-	{ name = "demonic essence", chance = 20320 },
-	{ name = "glob of acid slime", chance = 14210 },
-	{ name = "glob of tar", chance = 12000 },
+	{ id = "demonic essence", chance = 20320 },
+	{ id = "glob of acid slime", chance = 14210 },
+	{ id = "glob of tar", chance = 12000 },
 }
 
 monster.attacks = {
@@ -105,7 +95,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_EARTHDAMAGE, minDamage = -120, maxDamage = -170, radius = 3, effect = CONST_ME_POISONAREA, target = false },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -500, maxDamage = -1000, length = 8, spread = 3, effect = CONST_ME_SMALLPLANTS, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -700, length = 8, spread = 3, effect = CONST_ME_SMALLCLOUDS, target = false, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -700, length = 8, spread = 3, effect = CONST_ME_SMALLCLOUDS, target = false, duration = 15000 },
 }
 
 monster.defenses = {

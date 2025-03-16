@@ -1,3 +1,6 @@
+-- Grorlam (Tibia Wiki: https://tibia.fandom.com/wiki/Grorlam)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Grorlam")
 local monster = {}
 
@@ -51,8 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -81,7 +83,7 @@ monster.defenses = {
 	armor = 15,
 	mitigation = 1.60,
 	{ name = "combat", interval = 1000, chance = 25, type = COMBAT_HEALING, minDamage = 100, maxDamage = 150, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 1000, chance = 6, speedChange = 270, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 1000, chance = 6, effect = CONST_ME_MAGIC_RED, speed = 240},
 }
 
 monster.elements = {

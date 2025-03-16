@@ -1,3 +1,6 @@
+-- Crustacea Gigantica (Tibia Wiki: https://tibia.fandom.com/wiki/Crustacea_Gigantica)
+-- Version: 8.70
+
 local mType = Game.createMonsterType("Crustacea Gigantica")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 697
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Calassa, Treasure Island , Seacrest Grounds. \z
-		In the Seacrest Grounds the spawns are Varying Monster Spawns in which the common creature is an Abyssal Calamary. \z
-		The chance to spawn a Crustacea Gigantica seems to be around 1%-2%.",
-}
 
 monster.health = 1600
 monster.maxHealth = 1600
@@ -61,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,13 +67,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 96000, maxCount = 100 },
-	{ name = "gold coin", chance = 56000, maxCount = 75 },
-	{ name = "strong mana potion", chance = 8885 },
-	{ name = "strong health potion", chance = 3880 },
-	{ name = "giant crab pincer", chance = 5000, maxCount = 2 },
+	{ id = "gold coin", chance = 96000, maxCount = 100 },
+	{ id = "gold coin", chance = 56000, maxCount = 75 },
+	{ id = "strong mana potion", chance = 8885 },
+	{ id = "strong health potion", chance = 3880 },
+	{ id = "giant crab pincer", chance = 5000, maxCount = 2 },
 	{ id = 3098, chance = 3000 }, -- ring of healing
-	{ name = "great mana potion", chance = 1220 },
+	{ id = "great mana potion", chance = 1220 },
 }
 
 monster.attacks = {

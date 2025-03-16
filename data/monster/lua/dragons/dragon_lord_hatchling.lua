@@ -1,3 +1,6 @@
+-- Dragon Lord Hatchling (Tibia Wiki: https://tibia.fandom.com/wiki/Dragon_Lord_Hatchling)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Dragon Lord Hatchling")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 386
-monster.Bestiary = {
-	class = "Dragon",
-	race = BESTY_RACE_DRAGON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Thais Dragon Lair, Venore Dragon Lair, Edron Dragon Lair by the Fire Axe Quest, \z
-		on the way to Pythius the Rotten, Razzachai, Dragonblaze Peaks.",
-}
 
 monster.health = 750
 monster.maxHealth = 750
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,11 +68,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "dragon ham", chance = 77910 },
-	{ name = "gold coin", chance = 72690, maxCount = 121 },
-	{ name = "mana potion", chance = 1200 },
-	{ name = "green mushroom", chance = 490 },
-	{ name = "magma boots", chance = 100 },
+	{ id = "dragon ham", chance = 77910 },
+	{ id = "gold coin", chance = 72690, maxCount = 121 },
+	{ id = "mana potion", chance = 1200 },
+	{ id = "green mushroom", chance = 490 },
+	{ id = "magma boots", chance = 100 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Swarmer (Tibia Wiki: https://tibia.fandom.com/wiki/Swarmer)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Swarmer")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 790
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "The Hive, Hive Outpost.",
-}
 
 monster.health = 460
 monster.maxHealth = 460
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,11 +65,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 75 },
-	{ name = "small emerald", chance = 920 },
-	{ name = "epee", chance = 450 },
-	{ name = "swarmer antenna", chance = 15300 },
-	{ name = "compound eye", chance = 12500 },
+	{ id = "gold coin", chance = 100000, maxCount = 75 },
+	{ id = "small emerald", chance = 920 },
+	{ id = "epee", chance = 450 },
+	{ id = "swarmer antenna", chance = 15300 },
+	{ id = "compound eye", chance = 12500 },
 }
 
 monster.attacks = {
@@ -91,7 +81,7 @@ monster.defenses = {
 	defense = 10,
 	armor = 29,
 	mitigation = 0.91,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 220, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 256},
 }
 
 monster.elements = {

@@ -1,3 +1,6 @@
+-- Hell Hole (Tibia Wiki: https://tibia.fandom.com/wiki/Hell_Hole)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Hell Hole")
 local monster = {}
 
@@ -40,8 +43,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

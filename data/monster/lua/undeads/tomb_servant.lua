@@ -1,3 +1,6 @@
+-- Tomb Servant (Tibia Wiki: https://tibia.fandom.com/wiki/Tomb_Servant)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Tomb Servant")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 708
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Horestis Tomb",
-}
 
 monster.health = 475
 monster.maxHealth = 475
@@ -61,9 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,15 +67,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 82350, maxCount = 108 },
-	{ name = "scarab coin", chance = 8210 },
-	{ name = "rotten meat", chance = 2000 },
+	{ id = "gold coin", chance = 82350, maxCount = 108 },
+	{ id = "scarab coin", chance = 8210 },
+	{ id = "rotten meat", chance = 2000 },
 	{ id = 3115, chance = 49000 }, -- bone
-	{ name = "longsword", chance = 6560 },
-	{ name = "bone shield", chance = 5300 },
-	{ name = "worm", chance = 25325, maxCount = 12 },
-	{ name = "half-digested piece of meat", chance = 1000 },
-	{ name = "fist on a stick", chance = 230 },
+	{ id = "longsword", chance = 6560 },
+	{ id = "bone shield", chance = 5300 },
+	{ id = "worm", chance = 25325, maxCount = 12 },
+	{ id = "half-digested piece of meat", chance = 1000 },
+	{ id = "fist on a stick", chance = 230 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Slick Water Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Slick_Water_Elemental)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Slick Water Elemental")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -65,10 +67,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 22500, maxCount = 70 },
-	{ name = "gold coin", chance = 22500, maxCount = 60 },
-	{ name = "shiver arrow", chance = 2575, maxCount = 3 },
-	{ name = "iced soil", chance = 6000 },
+	{ id = "gold coin", chance = 22500, maxCount = 70 },
+	{ id = "gold coin", chance = 22500, maxCount = 60 },
+	{ id = "shiver arrow", chance = 2575, maxCount = 3 },
+	{ id = "iced soil", chance = 6000 },
 }
 
 monster.attacks = {

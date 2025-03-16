@@ -1,3 +1,6 @@
+-- Inky (Tibia Wiki: https://tibia.fandom.com/wiki/Inky)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Inky")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,

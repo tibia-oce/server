@@ -1,3 +1,6 @@
+-- Wild Nature Magic (Tibia Wiki: https://tibia.fandom.com/wiki/Wild_Nature_Magic)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("Wild Nature Magic")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

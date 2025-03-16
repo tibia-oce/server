@@ -1,3 +1,6 @@
+-- Lost Thrower (Tibia Wiki: https://tibia.fandom.com/wiki/Lost_Thrower)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Lost Thrower")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 926
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Caves of the Lost, Lower Spike and in the Lost Dwarf version of the Forsaken Mine.",
-}
 
 monster.health = 1700
 monster.maxHealth = 1700
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,21 +66,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 37 },
-	{ name = "platinum coin", chance = 70000, maxCount = 2 },
-	{ name = "brown mushroom", chance = 14500, maxCount = 2 },
-	{ name = "iron ore", chance = 9470 },
-	{ name = "great mana potion", chance = 13470 },
-	{ name = "great health potion", chance = 14730 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 37 },
+	{ id = "platinum coin", chance = 70000, maxCount = 2 },
+	{ id = "brown mushroom", chance = 14500, maxCount = 2 },
+	{ id = "iron ore", chance = 9470 },
+	{ id = "great mana potion", chance = 13470 },
+	{ id = "great health potion", chance = 14730 },
 	{ id = 12600, chance = 12180 }, -- coal
-	{ name = "buckle", chance = 850 },
-	{ name = "broken throwing axe", chance = 1390 },
-	{ name = "helmet of the lost", chance = 13560 },
-	{ name = "lost bracers", chance = 14860 },
-	{ name = "mad froth", chance = 11810 },
-	{ name = "basalt fetish", chance = 6150 },
-	{ name = "basalt figurine", chance = 7900 },
+	{ id = "buckle", chance = 850 },
+	{ id = "broken throwing axe", chance = 1390 },
+	{ id = "helmet of the lost", chance = 13560 },
+	{ id = "lost bracers", chance = 14860 },
+	{ id = "mad froth", chance = 11810 },
+	{ id = "basalt fetish", chance = 6150 },
+	{ id = "basalt figurine", chance = 7900 },
 }
 
 monster.attacks = {

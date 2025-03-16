@@ -1,3 +1,6 @@
+-- Minotaur Amazon (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Amazon)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Minotaur Amazon")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1045
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Underground Glooth Factory, Oramond Minotaur Camp, Oramond Dungeon",
-}
 
 monster.health = 2600
 monster.maxHealth = 2600
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

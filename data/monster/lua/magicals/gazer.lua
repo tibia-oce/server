@@ -1,3 +1,6 @@
+-- Gazer (Tibia Wiki: https://tibia.fandom.com/wiki/Gazer)
+-- Version: 7.4
+
 local mType = Game.createMonsterType("Gazer")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 109
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Hellgate bonelord cave, Vandura Bonelord Cave, also anywhere Elder Bonelords exist, as summons.",
-}
 
 monster.health = 120
 monster.maxHealth = 120
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,8 +66,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 99350, maxCount = 16 },
-	{ name = "small flask of eyedrops", chance = 3200 },
+	{ id = "gold coin", chance = 99350, maxCount = 16 },
+	{ id = "small flask of eyedrops", chance = 3200 },
 }
 
 monster.attacks = {

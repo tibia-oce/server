@@ -1,3 +1,6 @@
+-- Redeemed Soul (Tibia Wiki: https://tibia.fandom.com/wiki/Redeemed_Soul)
+-- Version: 10.80
+
 local mType = Game.createMonsterType("Redeemed Soul")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1138
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Tainted Caves in the Green Claw Swamp (under the right conditions).",
-}
 
 monster.health = 250
 monster.maxHealth = 250
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -86,7 +75,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 12,
 	mitigation = 0.64,
-	{ name = "speed", interval = 2000, chance = 8, speedChange = 240, effect = CONST_ME_MAGIC_GREEN, target = false, duration = 20000 },
+	{ name = "speed", interval = 2000, chance = 8, effect = CONST_ME_MAGIC_GREEN, speed = 140},
 	{ name = "combat", interval = 2000, chance = 100, type = COMBAT_HEALING, minDamage = 200, maxDamage = 250, effect = CONST_ME_MAGIC_BLUE, target = false },
 	{ name = "invisible", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_BLUE },
 }

@@ -1,3 +1,6 @@
+-- Orc Marauder (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Marauder)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Orc Marauder")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 614
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Zao Orc Land.",
-}
 
 monster.health = 235
 monster.maxHealth = 235
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,17 +64,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 55000, maxCount = 90 },
-	{ name = "obsidian lance", chance = 1110 },
-	{ name = "orcish axe", chance = 1320 },
-	{ name = "crossbow", chance = 440 },
-	{ name = "bow", chance = 5210 },
-	{ name = "meat", chance = 24600 },
-	{ name = "silkweaver bow", chance = 70 },
-	{ name = "orc tooth", chance = 3890 },
-	{ name = "shaggy tail", chance = 10090 },
-	{ name = "broken crossbow", chance = 4830 },
-	{ name = "orc leather", chance = 3800 },
+	{ id = "gold coin", chance = 55000, maxCount = 90 },
+	{ id = "obsidian lance", chance = 1110 },
+	{ id = "orcish axe", chance = 1320 },
+	{ id = "crossbow", chance = 440 },
+	{ id = "bow", chance = 5210 },
+	{ id = "meat", chance = 24600 },
+	{ id = "silkweaver bow", chance = 70 },
+	{ id = "orc tooth", chance = 3890 },
+	{ id = "shaggy tail", chance = 10090 },
+	{ id = "broken crossbow", chance = 4830 },
+	{ id = "orc leather", chance = 3800 },
 }
 
 monster.attacks = {
@@ -96,7 +86,7 @@ monster.defenses = {
 	defense = 25,
 	armor = 16,
 	mitigation = 0.83,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 350, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 390},
 }
 
 monster.elements = {

@@ -1,3 +1,6 @@
+-- Xenia (Tibia Wiki: https://tibia.fandom.com/wiki/Xenia)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Xenia")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -72,9 +74,9 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3114, chance = 100000, maxCount = 2 }, -- skull
-	{ name = "gold coin", chance = 66666, maxCount = 34 },
-	{ name = "sabre", chance = 33000 },
-	{ name = "studded shield", chance = 33000 },
+	{ id = "gold coin", chance = 66666, maxCount = 34 },
+	{ id = "sabre", chance = 33000 },
+	{ id = "studded shield", chance = 33000 },
 }
 
 monster.attacks = {
@@ -86,7 +88,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 15,
 	mitigation = 0.71,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 320, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 176},
 }
 
 monster.elements = {

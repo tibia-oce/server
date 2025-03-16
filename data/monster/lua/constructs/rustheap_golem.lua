@@ -1,3 +1,6 @@
+-- Rustheap Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Rustheap_Golem)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Rustheap Golem")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1041
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Workshop Quarter, Glooth Factory, Underground Glooth Factory, \z
-		Oramond Dungeon (depending on Magistrate votes), Jaccus Maxxens Dungeon.",
-}
 
 monster.health = 2800
 monster.maxHealth = 2800
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -109,7 +98,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 45,
 	armor = 40,
-	{ name = "speed", interval = 2000, chance = 11, speedChange = 428, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 11, effect = CONST_ME_MAGIC_BLUE, speed = 250},
 }
 
 monster.elements = {

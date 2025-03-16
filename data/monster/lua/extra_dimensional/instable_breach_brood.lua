@@ -1,3 +1,6 @@
+-- Instable Breach Brood (Tibia Wiki: https://tibia.fandom.com/wiki/Instable_Breach_Brood)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Instable Breach Brood")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1265
-monster.Bestiary = {
-	class = "Extra Dimensional",
-	race = BESTY_RACE_EXTRA_DIMENSIONAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Otherworld Dwarf Bridge",
-}
 
 monster.health = 2200
 monster.maxHealth = 2200
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

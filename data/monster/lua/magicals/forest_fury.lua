@@ -1,3 +1,6 @@
+-- Forest Fury (Tibia Wiki: https://tibia.fandom.com/wiki/Forest_Fury)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("Forest Fury")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 980
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Forest Fury Camp and in the Forest Fury version of the Forsaken Mine.",
-}
 
 monster.health = 480
 monster.maxHealth = 480
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,15 +69,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 87250, maxCount = 53 },
-	{ name = "crossbow", chance = 2750 },
-	{ name = "bolt", chance = 48270, maxCount = 15 },
-	{ name = "meat", chance = 24930 },
-	{ name = "piercing bolt", chance = 14900, maxCount = 5 },
-	{ name = "elvish bow", chance = 90 },
-	{ name = "small topaz", chance = 470 },
-	{ name = "elven hoof", chance = 7030 },
-	{ name = "venison", chance = 13210 },
+	{ id = "gold coin", chance = 87250, maxCount = 53 },
+	{ id = "crossbow", chance = 2750 },
+	{ id = "bolt", chance = 48270, maxCount = 15 },
+	{ id = "meat", chance = 24930 },
+	{ id = "piercing bolt", chance = 14900, maxCount = 5 },
+	{ id = "elvish bow", chance = 90 },
+	{ id = "small topaz", chance = 470 },
+	{ id = "elven hoof", chance = 7030 },
+	{ id = "venison", chance = 13210 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Spider Queen (Tibia Wiki: https://tibia.fandom.com/wiki/Spider_Queen)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Spider Queen")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -71,7 +73,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 5,
 	armor = 10,
-	{ name = "speed", interval = 1000, chance = 10, speedChange = 480, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 1000, chance = 10, effect = CONST_ME_MAGIC_RED, speed = 280},
 }
 
 monster.elements = {

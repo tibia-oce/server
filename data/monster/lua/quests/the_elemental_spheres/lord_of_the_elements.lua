@@ -1,3 +1,6 @@
+-- Lord of the Elements (Tibia Wiki: https://tibia.fandom.com/wiki/Lord_of_the_Elements)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Lord of the Elements")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 5,
@@ -84,13 +86,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small sapphire", chance = 7142, maxCount = 4 },
-	{ name = "small ruby", chance = 11111, maxCount = 4 },
-	{ name = "small emerald", chance = 11111, maxCount = 4 },
-	{ name = "small amethyst", chance = 11111, maxCount = 3 },
-	{ name = "platinum coin", chance = 50000, maxCount = 9 },
-	{ name = "earthborn titan armor", chance = 2063 },
-	{ name = "gold ingot", chance = 25000 },
+	{ id = "small sapphire", chance = 7142, maxCount = 4 },
+	{ id = "small ruby", chance = 11111, maxCount = 4 },
+	{ id = "small emerald", chance = 11111, maxCount = 4 },
+	{ id = "small amethyst", chance = 11111, maxCount = 3 },
+	{ id = "platinum coin", chance = 50000, maxCount = 9 },
+	{ id = "earthborn titan armor", chance = 2063 },
+	{ id = "gold ingot", chance = 25000 },
 }
 
 monster.attacks = {

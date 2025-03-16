@@ -1,3 +1,6 @@
+-- Minion of Gaz'haragoth (Tibia Wiki: https://tibia.fandom.com/wiki/Minion_of_Gaz'haragoth)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Minion of Gaz'haragoth")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.events = {
 	"MinionGazDeath",

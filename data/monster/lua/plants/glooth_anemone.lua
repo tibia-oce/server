@@ -1,3 +1,6 @@
+-- Glooth Anemone (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Anemone)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Glooth Anemone")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1042
-monster.Bestiary = {
-	class = "Plant",
-	race = BESTY_RACE_PLANT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Rathleton Sewers, Underground Glooth Factory, Jaccus Maxxen's Dungeon.",
-}
 
 monster.health = 2400
 monster.maxHealth = 2400
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

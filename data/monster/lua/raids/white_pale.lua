@@ -1,3 +1,6 @@
+-- White Pale (Tibia Wiki: https://tibia.fandom.com/wiki/White_Pale)
+-- Version: 10.20
+
 local mType = Game.createMonsterType("White Pale")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

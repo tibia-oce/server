@@ -1,3 +1,6 @@
+-- Insectoid Worker (Tibia Wiki: https://tibia.fandom.com/wiki/Insectoid_Worker)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Insectoid Worker")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 796
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Hive, Hive Outpost.",
-}
 
 monster.health = 950
 monster.maxHealth = 950
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -73,11 +63,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 90 },
-	{ name = "small emerald", chance = 2880 },
-	{ name = "epee", chance = 560 },
-	{ name = "health potion", chance = 5090 },
-	{ name = "compound eye", chance = 15380 },
+	{ id = "gold coin", chance = 100000, maxCount = 90 },
+	{ id = "small emerald", chance = 2880 },
+	{ id = "epee", chance = 560 },
+	{ id = "health potion", chance = 5090 },
+	{ id = "compound eye", chance = 15380 },
 	{ id = 14225, chance = 14990 }, -- dung ball
 }
 

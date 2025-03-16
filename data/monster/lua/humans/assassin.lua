@@ -1,3 +1,6 @@
+-- Assassin (Tibia Wiki: https://tibia.fandom.com/wiki/Assassin)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Assassin")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 224
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Dark Cathedral, Trade Quarter, Factory Quarter, Foreigner Quarter.",
-}
 
 monster.health = 175
 monster.maxHealth = 175
@@ -61,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,18 +69,18 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 29980, maxCount = 2 }, -- torch
-	{ name = "small diamond", chance = 220 },
-	{ name = "gold coin", chance = 83210, maxCount = 50 },
-	{ name = "gold coin", chance = 7250, maxCount = 14 },
-	{ name = "knife", chance = 9500 },
-	{ name = "combat knife", chance = 4000 },
-	{ name = "steel helmet", chance = 3230 },
-	{ name = "steel shield", chance = 970 },
-	{ name = "plate shield", chance = 1900 },
-	{ name = "battle shield", chance = 1600 },
-	{ name = "leopard armor", chance = 480 },
-	{ name = "horseman helmet", chance = 230 },
-	{ name = "viper star", chance = 4200, maxCount = 7 },
+	{ id = "small diamond", chance = 220 },
+	{ id = "gold coin", chance = 83210, maxCount = 50 },
+	{ id = "gold coin", chance = 7250, maxCount = 14 },
+	{ id = "knife", chance = 9500 },
+	{ id = "combat knife", chance = 4000 },
+	{ id = "steel helmet", chance = 3230 },
+	{ id = "steel shield", chance = 970 },
+	{ id = "plate shield", chance = 1900 },
+	{ id = "battle shield", chance = 1600 },
+	{ id = "leopard armor", chance = 480 },
+	{ id = "horseman helmet", chance = 230 },
+	{ id = "viper star", chance = 4200, maxCount = 7 },
 }
 
 monster.attacks = {

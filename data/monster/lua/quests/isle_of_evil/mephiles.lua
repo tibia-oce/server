@@ -1,3 +1,6 @@
+-- Mephiles (Tibia Wiki: https://tibia.fandom.com/wiki/Mephiles)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Mephiles")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -90,7 +92,7 @@ monster.defenses = {
 	defense = 35,
 	armor = 30,
 	mitigation = 0.40,
-	{ name = "speed", interval = 1000, chance = 40, speedChange = 400, effect = CONST_ME_MAGIC_RED, target = false, duration = 40000 },
+	{ name = "speed", interval = 1000, chance = 40, effect = CONST_ME_MAGIC_RED, speed = 300},
 	{ name = "invisible", interval = 4000, chance = 50, effect = CONST_ME_MAGIC_RED },
 }
 

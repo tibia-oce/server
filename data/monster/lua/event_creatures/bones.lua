@@ -1,3 +1,6 @@
+-- Bones (Tibia Wiki: https://tibia.fandom.com/wiki/Bones)
+-- Version: 7.92
+
 local mType = Game.createMonsterType("Bones")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -67,19 +69,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 90 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 90 },
 	{ id = 3091, chance = 10000 }, -- sword ring
-	{ name = "broadsword", chance = 4000 },
-	{ name = "magic plate armor", chance = 2000 },
-	{ name = "spectral stone", chance = 800 },
-	{ name = "skull helmet", chance = 50000 },
-	{ name = "soul orb", chance = 10000 },
+	{ id = "broadsword", chance = 4000 },
+	{ id = "magic plate armor", chance = 2000 },
+	{ id = "spectral stone", chance = 800 },
+	{ id = "skull helmet", chance = 50000 },
+	{ id = "soul orb", chance = 10000 },
 	{ id = 6299, chance = 4000 }, -- death ring
-	{ name = "demonic essence", chance = 1538 },
+	{ id = "demonic essence", chance = 1538 },
 	{ id = 6570, chance = 5538, maxCount = 3 }, -- surprise bag
 	{ id = 6571, chance = 1538 }, -- surprise bag
-	{ name = "dragonbone staff", chance = 50000 },
+	{ id = "dragonbone staff", chance = 50000 },
 }
 
 monster.attacks = {

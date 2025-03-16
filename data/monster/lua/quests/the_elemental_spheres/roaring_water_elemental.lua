@@ -1,3 +1,6 @@
+-- Roaring Water Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Roaring_Water_Elemental)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Roaring Water Elemental")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -65,11 +67,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small sapphire", chance = 4125, maxCount = 2 },
-	{ name = "gold coin", chance = 27000, maxCount = 90 },
-	{ name = "gold coin", chance = 27000, maxCount = 87 },
-	{ name = "iced soil", chance = 9000 },
-	{ name = "northwind rod", chance = 750 },
+	{ id = "small sapphire", chance = 4125, maxCount = 2 },
+	{ id = "gold coin", chance = 27000, maxCount = 90 },
+	{ id = "gold coin", chance = 27000, maxCount = 87 },
+	{ id = "iced soil", chance = 9000 },
+	{ id = "northwind rod", chance = 750 },
 }
 
 monster.attacks = {

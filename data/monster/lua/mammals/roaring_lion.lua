@@ -1,3 +1,6 @@
+-- Roaring Lion (Tibia Wiki: https://tibia.fandom.com/wiki/Roaring_Lion)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Roaring Lion")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 981
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Lion's Rock a few floors down.",
-}
 
 monster.health = 1000
 monster.maxHealth = 1000
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

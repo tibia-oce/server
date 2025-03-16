@@ -1,3 +1,6 @@
+-- Vampire Viscount (Tibia Wiki: https://tibia.fandom.com/wiki/Vampire_Viscount)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("Vampire Viscount")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 958
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Drefia, Edron Vampire Crypt.",
-}
 
 monster.health = 1200
 monster.maxHealth = 1200
@@ -61,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,19 +69,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "black pearl", chance = 2500 },
-	{ name = "small ruby", chance = 3040, maxCount = 2 },
-	{ name = "gold coin", chance = 83000, maxCount = 50 },
+	{ id = "black pearl", chance = 2500 },
+	{ id = "small ruby", chance = 3040, maxCount = 2 },
+	{ id = "gold coin", chance = 83000, maxCount = 50 },
 	{ id = 3039, chance = 540 }, -- red gem
-	{ name = "ice rapier", chance = 810 },
-	{ name = "vampire shield", chance = 200 },
-	{ name = "red piece of cloth", chance = 70 },
-	{ name = "strong health potion", chance = 7100 },
-	{ name = "strong mana potion", chance = 8180 },
-	{ name = "vampire teeth", chance = 7200 },
-	{ name = "blood preservation", chance = 2910 },
-	{ name = "tooth file", chance = 6560 },
-	{ name = "vampire's cape chain", chance = 4460 },
+	{ id = "ice rapier", chance = 810 },
+	{ id = "vampire shield", chance = 200 },
+	{ id = "red piece of cloth", chance = 70 },
+	{ id = "strong health potion", chance = 7100 },
+	{ id = "strong mana potion", chance = 8180 },
+	{ id = "vampire teeth", chance = 7200 },
+	{ id = "blood preservation", chance = 2910 },
+	{ id = "tooth file", chance = 6560 },
+	{ id = "vampire's cape chain", chance = 4460 },
 }
 
 monster.attacks = {
@@ -106,7 +96,7 @@ monster.defenses = {
 	armor = 42,
 	mitigation = 1.18,
 	{ name = "outfit", interval = 2000, chance = 10, target = false, duration = 4000, outfitMonster = "Vicious Manbat" },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 300, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 220},
 }
 
 monster.elements = {

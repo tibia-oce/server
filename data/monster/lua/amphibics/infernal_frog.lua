@@ -1,3 +1,6 @@
+-- Infernal Frog (Tibia Wiki: https://tibia.fandom.com/wiki/Infernal_Frog)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Infernal Frog")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 563
-monster.Bestiary = {
-	class = "Amphibic",
-	race = BESTY_RACE_AMPHIBIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 1,
-	Locations = "Isle of Evil, Drefia.",
-}
 
 monster.health = 655
 monster.maxHealth = 655
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,7 +66,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 73330, maxCount = 65 },
+	{ id = "gold coin", chance = 73330, maxCount = 65 },
 }
 
 monster.attacks = {
@@ -89,7 +78,7 @@ monster.defenses = {
 	defense = 5,
 	armor = 18,
 	mitigation = 0.91,
-	{ name = "speed", interval = 2000, chance = 20, speedChange = 400, effect = CONST_ME_MAGIC_RED, target = false, duration = 8000 },
+	{ name = "speed", interval = 2000, chance = 20, effect = CONST_ME_MAGIC_RED, speed = 200},
 }
 
 monster.elements = {

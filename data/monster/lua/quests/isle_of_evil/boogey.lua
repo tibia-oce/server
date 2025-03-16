@@ -1,3 +1,6 @@
+-- Boogey (Tibia Wiki: https://tibia.fandom.com/wiki/Boogey)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Boogey")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

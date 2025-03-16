@@ -1,3 +1,6 @@
+-- Goblin Assassin (Tibia Wiki: https://tibia.fandom.com/wiki/Goblin_Assassin)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Goblin Assassin")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 463
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Femor Hills, Edron Goblin Cave and Fenrock.",
-}
 
 monster.health = 75
 monster.maxHealth = 75
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,16 +68,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small stone", chance = 9900, maxCount = 3 },
-	{ name = "gold coin", chance = 50000, maxCount = 9 },
+	{ id = "small stone", chance = 9900, maxCount = 3 },
+	{ id = "gold coin", chance = 50000, maxCount = 9 },
 	{ id = 3115, chance = 13000 }, -- bone
-	{ name = "mouldy cheese", chance = 6610 },
-	{ name = "dagger", chance = 17000 },
-	{ name = "short sword", chance = 8820 },
-	{ name = "bone club", chance = 4770 },
-	{ name = "leather helmet", chance = 13000 },
-	{ name = "leather armor", chance = 7240 },
-	{ name = "small axe", chance = 9800 },
+	{ id = "mouldy cheese", chance = 6610 },
+	{ id = "dagger", chance = 17000 },
+	{ id = "short sword", chance = 8820 },
+	{ id = "bone club", chance = 4770 },
+	{ id = "leather helmet", chance = 13000 },
+	{ id = "leather armor", chance = 7240 },
+	{ id = "small axe", chance = 9800 },
 	{ id = 3578, chance = 12400 }, -- fish
 }
 
@@ -102,7 +92,7 @@ monster.defenses = {
 	armor = 6,
 	mitigation = 0.15,
 	{ name = "invisible", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_BLUE },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 100, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 140},
 }
 
 monster.elements = {

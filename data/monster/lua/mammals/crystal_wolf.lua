@@ -1,3 +1,6 @@
+-- Crystal Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Crystal_Wolf)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Crystal Wolf")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 740
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Shadowthorn",
-}
 
 monster.health = 750
 monster.maxHealth = 750
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 5,
@@ -76,12 +65,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 56000, maxCount = 52 },
-	{ name = "hailstorm rod", chance = 7400 },
-	{ name = "meat", chance = 52000, maxCount = 4 },
-	{ name = "wolf paw", chance = 3700 },
-	{ name = "shiver arrow", chance = 11000, maxCount = 10 },
-	{ name = "crystalline armor", chance = 3700 },
+	{ id = "gold coin", chance = 56000, maxCount = 52 },
+	{ id = "hailstorm rod", chance = 7400 },
+	{ id = "meat", chance = 52000, maxCount = 4 },
+	{ id = "wolf paw", chance = 3700 },
+	{ id = "shiver arrow", chance = 11000, maxCount = 10 },
+	{ id = "crystalline armor", chance = 3700 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Lizard Noble (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Noble)
+-- Version: 8.60
+
 local mType = Game.createMonsterType("Lizard Noble")
 local monster = {}
 
@@ -17,18 +20,6 @@ monster.events = {
 	"LizardNobleDeath",
 }
 
-monster.raceId = 656
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Razzachai.",
-}
 
 monster.health = 7000
 monster.maxHealth = 7000
@@ -63,9 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,13 +68,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 7100, maxCount = 5 },
-	{ name = "gold coin", chance = 91300, maxCount = 100 },
-	{ name = "platinum coin", chance = 10000, maxCount = 20 },
-	{ name = "lizard leather", chance = 220 },
-	{ name = "lizard scale", chance = 650 },
-	{ name = "strong health potion", chance = 2550 },
-	{ name = "great health potion", chance = 2900 },
+	{ id = "small ruby", chance = 7100, maxCount = 5 },
+	{ id = "gold coin", chance = 91300, maxCount = 100 },
+	{ id = "platinum coin", chance = 10000, maxCount = 20 },
+	{ id = "lizard leather", chance = 220 },
+	{ id = "lizard scale", chance = 650 },
+	{ id = "strong health potion", chance = 2550 },
+	{ id = "great health potion", chance = 2900 },
 }
 
 monster.attacks = {

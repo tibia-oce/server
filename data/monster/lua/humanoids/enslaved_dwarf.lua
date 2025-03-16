@@ -1,3 +1,6 @@
+-- Enslaved Dwarf (Tibia Wiki: https://tibia.fandom.com/wiki/Enslaved_Dwarf)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Enslaved Dwarf")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 886
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Caves of the Lost and Lower Spike.",
-}
 
 monster.health = 3800
 monster.maxHealth = 3800
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,32 +68,32 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 99 },
-	{ name = "gold coin", chance = 50000, maxCount = 50 },
-	{ name = "small emerald", chance = 10290, maxCount = 2 },
-	{ name = "small amethyst", chance = 10680, maxCount = 2 },
-	{ name = "platinum coin", chance = 100000, maxCount = 6 },
+	{ id = "gold coin", chance = 50000, maxCount = 99 },
+	{ id = "gold coin", chance = 50000, maxCount = 50 },
+	{ id = "small emerald", chance = 10290, maxCount = 2 },
+	{ id = "small amethyst", chance = 10680, maxCount = 2 },
+	{ id = "platinum coin", chance = 100000, maxCount = 6 },
 	{ id = 3092, chance = 1550 }, -- axe ring
-	{ name = "war hammer", chance = 5050 },
-	{ name = "warrior helmet", chance = 580 },
-	{ name = "guardian shield", chance = 2300 },
-	{ name = "tower shield", chance = 190 },
-	{ name = "ancient shield", chance = 3690 },
-	{ name = "brown mushroom", chance = 15150, maxCount = 2 },
-	{ name = "iron ore", chance = 11070 },
-	{ name = "titan axe", chance = 1170 },
-	{ name = "sapphire hammer", chance = 80 },
-	{ name = "spiked squelcher", chance = 80 },
-	{ name = "glorious axe", chance = 1940 },
-	{ name = "great mana potion", chance = 6660, maxCount = 2 },
-	{ name = "great health potion", chance = 7960 },
-	{ name = "shiny stone", chance = 4660 },
+	{ id = "war hammer", chance = 5050 },
+	{ id = "warrior helmet", chance = 580 },
+	{ id = "guardian shield", chance = 2300 },
+	{ id = "tower shield", chance = 190 },
+	{ id = "ancient shield", chance = 3690 },
+	{ id = "brown mushroom", chance = 15150, maxCount = 2 },
+	{ id = "iron ore", chance = 11070 },
+	{ id = "titan axe", chance = 1170 },
+	{ id = "sapphire hammer", chance = 80 },
+	{ id = "spiked squelcher", chance = 80 },
+	{ id = "glorious axe", chance = 1940 },
+	{ id = "great mana potion", chance = 6660, maxCount = 2 },
+	{ id = "great health potion", chance = 7960 },
+	{ id = "shiny stone", chance = 4660 },
 	{ id = 12600, chance = 780 }, -- coal
-	{ name = "green crystal shard", chance = 1750 },
-	{ name = "green crystal splinter", chance = 3110 },
-	{ name = "brown crystal splinter", chance = 5630, maxCount = 2 },
-	{ name = "red crystal fragment", chance = 3690 },
-	{ name = "drill bolt", chance = 3690, maxCount = 5 },
+	{ id = "green crystal shard", chance = 1750 },
+	{ id = "green crystal splinter", chance = 3110 },
+	{ id = "brown crystal splinter", chance = 5630, maxCount = 2 },
+	{ id = "red crystal fragment", chance = 3690 },
+	{ id = "drill bolt", chance = 3690, maxCount = 5 },
 }
 
 monster.attacks = {

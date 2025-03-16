@@ -1,3 +1,6 @@
+-- Blood Beast (Tibia Wiki: https://tibia.fandom.com/wiki/Blood_Beast)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Blood Beast")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1040
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Oramond/Southern Plains, Lower Rathleton, Oramond/Western Plains, \z
-		Underground Glooth Factory, Jaccus Maxxen's Dungeon.",
-}
 
 monster.health = 1600
 monster.maxHealth = 1600
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -103,7 +92,7 @@ monster.defenses = {
 	defense = 36,
 	armor = 32,
 	mitigation = 1.18,
-	{ name = "speed", interval = 2000, chance = 8, speedChange = 314, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 8, effect = CONST_ME_MAGIC_RED, speed = 220},
 	{ name = "combat", interval = 2000, chance = 7, type = COMBAT_HEALING, minDamage = 80, maxDamage = 120, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

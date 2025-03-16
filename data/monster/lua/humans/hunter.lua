@@ -1,3 +1,6 @@
+-- Hunter (Tibia Wiki: https://tibia.fandom.com/wiki/Hunter)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Hunter")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 11
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "North of Mount Sternum, Plains of Havoc, Outlaw Camp, Dark Cathedral, Femor Hills, \z
-		Maze of Lost Souls, north of the Amazon Camp, at the entrance and in the Hero Cave, \z
-		a castle tower at Elvenbane, Trade Quarter, Smuggler camp on Tyrsung, Formorgar Mines.",
-}
 
 monster.health = 150
 monster.maxHealth = 150
@@ -61,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,22 +68,22 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 3300 }, -- torch
-	{ name = "small ruby", chance = 150 },
-	{ name = "dragon necklace", chance = 3000 },
-	{ name = "bow", chance = 5770 },
-	{ name = "brass helmet", chance = 5050 },
-	{ name = "brass armor", chance = 5070 },
-	{ name = "arrow", chance = 82000, maxCount = 22 },
-	{ name = "poison arrow", chance = 4500, maxCount = 4 },
+	{ id = "small ruby", chance = 150 },
+	{ id = "dragon necklace", chance = 3000 },
+	{ id = "bow", chance = 5770 },
+	{ id = "brass helmet", chance = 5050 },
+	{ id = "brass armor", chance = 5070 },
+	{ id = "arrow", chance = 82000, maxCount = 22 },
+	{ id = "poison arrow", chance = 4500, maxCount = 4 },
 	{ id = 3449, chance = 5360, maxCount = 3 }, -- burst arrow
-	{ name = "orange", chance = 20300, maxCount = 2 },
-	{ name = "roll", chance = 11370, maxCount = 2 },
-	{ name = "sniper gloves", chance = 540 },
-	{ name = "slingshot", chance = 120 },
+	{ id = "orange", chance = 20300, maxCount = 2 },
+	{ id = "roll", chance = 11370, maxCount = 2 },
+	{ id = "sniper gloves", chance = 540 },
+	{ id = "slingshot", chance = 120 },
 	{ id = 7394, chance = 190 }, -- wolf trophy
 	{ id = 7397, chance = 520 }, -- deer trophy
 	{ id = 7400, chance = 70 }, -- lion trophy
-	{ name = "hunter's quiver", chance = 10240 },
+	{ id = "hunter's quiver", chance = 10240 },
 }
 
 monster.attacks = {

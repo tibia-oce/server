@@ -1,3 +1,6 @@
+-- Askarak Prince (Tibia Wiki: https://tibia.fandom.com/wiki/Askarak_Prince)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Askarak Prince")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 729
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Demonwar Crypt.",
-}
 
 monster.health = 2600
 monster.maxHealth = 2600
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,20 +71,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 86 },
-	{ name = "small emerald", chance = 12500, maxCount = 5 },
-	{ name = "platinum coin", chance = 35333, maxCount = 4 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 86 },
+	{ id = "small emerald", chance = 12500, maxCount = 5 },
+	{ id = "platinum coin", chance = 35333, maxCount = 4 },
 	{ id = 3049, chance = 4545 }, -- stealth ring
-	{ name = "giant sword", chance = 320 },
-	{ name = "brown mushroom", chance = 6666, maxCount = 5 },
-	{ name = "magic sulphur", chance = 740 },
-	{ name = "mastermind potion", chance = 1315 },
-	{ name = "strong health potion", chance = 14285 },
-	{ name = "strong mana potion", chance = 14285 },
-	{ name = "terra mantle", chance = 840 },
-	{ name = "springsprout rod", chance = 950 },
-	{ name = "demonic finger", chance = 420 },
+	{ id = "giant sword", chance = 320 },
+	{ id = "brown mushroom", chance = 6666, maxCount = 5 },
+	{ id = "magic sulphur", chance = 740 },
+	{ id = "mastermind potion", chance = 1315 },
+	{ id = "strong health potion", chance = 14285 },
+	{ id = "strong mana potion", chance = 14285 },
+	{ id = "terra mantle", chance = 840 },
+	{ id = "springsprout rod", chance = 950 },
+	{ id = "demonic finger", chance = 420 },
 }
 
 monster.attacks = {
@@ -103,7 +92,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_EARTHDAMAGE, minDamage = -70, maxDamage = -250, range = 7, radius = 6, shootEffect = CONST_ANI_POISON, effect = CONST_ME_GREEN_RINGS, target = false },
 	{ name = "askarak wave", interval = 2000, chance = 15, minDamage = -100, maxDamage = -200, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -100, maxDamage = -200, length = 4, spread = 0, effect = CONST_ME_GREEN_RINGS, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -700, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -700, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 15000 },
 }
 
 monster.defenses = {

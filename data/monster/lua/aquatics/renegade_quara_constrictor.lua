@@ -1,3 +1,6 @@
+-- Renegade Quara Constrictor (Tibia Wiki: https://tibia.fandom.com/wiki/Renegade_Quara_Constrictor)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Renegade Quara Constrictor")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1097
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Seacrest Grounds when Seacrest Serpents are not spawning.",
-}
 
 monster.health = 1500
 monster.maxHealth = 1500
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -77,20 +66,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 79280, maxCount = 3 },
-	{ name = "quara tentacle", chance = 15240 },
-	{ name = "mind stone", chance = 6880 },
+	{ id = "platinum coin", chance = 79280, maxCount = 3 },
+	{ id = "quara tentacle", chance = 15240 },
+	{ id = "mind stone", chance = 6880 },
 	{ id = 3098, chance = 5580 }, -- ring of healing
-	{ name = "great mana potion", chance = 5390, maxCount = 5 },
-	{ name = "shrimp", chance = 5300, maxCount = 4 },
-	{ name = "small amethyst", chance = 5200, maxCount = 2 },
-	{ name = "small ruby", chance = 4650, maxCount = 2 },
-	{ name = "assassin star", chance = 4460, maxCount = 7 },
-	{ name = "vortex bolt", chance = 3720, maxCount = 10 },
-	{ name = "violet crystal shard", chance = 1210 },
-	{ name = "northwind rod", chance = 740 },
-	{ name = "fish fin", chance = 370 },
-	{ name = "piggy bank", chance = 190 },
+	{ id = "great mana potion", chance = 5390, maxCount = 5 },
+	{ id = "shrimp", chance = 5300, maxCount = 4 },
+	{ id = "small amethyst", chance = 5200, maxCount = 2 },
+	{ id = "small ruby", chance = 4650, maxCount = 2 },
+	{ id = "assassin star", chance = 4460, maxCount = 7 },
+	{ id = "vortex bolt", chance = 3720, maxCount = 10 },
+	{ id = "violet crystal shard", chance = 1210 },
+	{ id = "northwind rod", chance = 740 },
+	{ id = "fish fin", chance = 370 },
+	{ id = "piggy bank", chance = 190 },
 }
 
 monster.attacks = {

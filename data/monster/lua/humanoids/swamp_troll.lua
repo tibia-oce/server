@@ -1,3 +1,6 @@
+-- Swamp Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Swamp_Troll)
+-- Version: 7.1
+
 local mType = Game.createMonsterType("Swamp Troll")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 76
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Port Hope Swamp Trolls, Venore Swamp Troll Cave, all around north area of Port Hope, \z
-		small spawn north-west of Venore and in cave south-east of Thais, also one in Foreigner Quarter.",
-}
 
 monster.health = 55
 monster.maxHealth = 55
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,16 +67,16 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 15000 }, -- torch
-	{ name = "gold coin", chance = 50300, maxCount = 5 },
-	{ name = "mouldy cheese", chance = 10000 },
-	{ name = "spear", chance = 13000 },
-	{ name = "fishing rod", chance = 60 },
-	{ name = "leather boots", chance = 9500 },
+	{ id = "gold coin", chance = 50300, maxCount = 5 },
+	{ id = "mouldy cheese", chance = 10000 },
+	{ id = "spear", chance = 13000 },
+	{ id = "fishing rod", chance = 60 },
+	{ id = "leather boots", chance = 9500 },
 	{ id = 3578, chance = 60000 }, -- fish
-	{ name = "troll green", chance = 1200 },
+	{ id = "troll green", chance = 1200 },
 	{ id = 5901, chance = 2140 }, -- wood
-	{ name = "swamp grass", chance = 3100 },
-	{ name = "medicine pouch", chance = 2160 },
+	{ id = "swamp grass", chance = 3100 },
+	{ id = "medicine pouch", chance = 2160 },
 }
 
 monster.attacks = {

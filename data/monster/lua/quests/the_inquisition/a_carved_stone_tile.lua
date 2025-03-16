@@ -1,3 +1,6 @@
+-- a carved stone tile (Tibia Wiki: https://tibia.fandom.com/wiki/a_carved_stone_tile)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("a carved stone tile")
 local monster = {}
 
@@ -40,8 +43,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

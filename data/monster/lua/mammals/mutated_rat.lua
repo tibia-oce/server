@@ -1,3 +1,6 @@
+-- Mutated Rat (Tibia Wiki: https://tibia.fandom.com/wiki/Mutated_Rat)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Mutated Rat")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 502
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Alchemist Quarter, Arena and Zoo Quarter (Inside the arena with other mutated creatures), \z
-		Razzachai, Vampire Castle on Vengoth, Robson's Isle, Mushroom Gardens, Souleater Mountains, \z
-		Northern Zao Plantations, Middle Spike.",
-}
 
 monster.health = 550
 monster.maxHealth = 550
@@ -61,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,18 +65,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 78500, maxCount = 130 },
+	{ id = "gold coin", chance = 78500, maxCount = 130 },
 	{ id = 3049, chance = 540 }, -- stealth ring
 	{ id = 3114, chance = 20240 }, -- skull
-	{ name = "mouldy cheese", chance = 950 },
-	{ name = "halberd", chance = 2990 },
-	{ name = "plate shield", chance = 3750 },
-	{ name = "tower shield", chance = 50 },
-	{ name = "green mushroom", chance = 1390 },
-	{ name = "stone herb", chance = 4920 },
-	{ name = "health potion", chance = 560 },
-	{ name = "spellbook of enlightenment", chance = 300 },
-	{ name = "mutated rat tail", chance = 3800 },
+	{ id = "mouldy cheese", chance = 950 },
+	{ id = "halberd", chance = 2990 },
+	{ id = "plate shield", chance = 3750 },
+	{ id = "tower shield", chance = 50 },
+	{ id = "green mushroom", chance = 1390 },
+	{ id = "stone herb", chance = 4920 },
+	{ id = "health potion", chance = 560 },
+	{ id = "spellbook of enlightenment", chance = 300 },
+	{ id = "mutated rat tail", chance = 3800 },
 }
 
 monster.attacks = {
@@ -96,7 +84,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -45, maxDamage = -85, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = false },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -80, maxDamage = -100, length = 5, spread = 3, effect = CONST_ME_POISONAREA, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -600, range = 7, effect = CONST_ME_MAGIC_RED, target = true, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -600, range = 7, effect = CONST_ME_MAGIC_RED, target = true, duration = 30000 },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -30, maxDamage = -70, range = 7, radius = 3, effect = CONST_ME_MAGIC_RED, target = false },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, range = 7, radius = 3, effect = CONST_ME_POISONAREA, target = false },

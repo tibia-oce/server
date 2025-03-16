@@ -1,3 +1,6 @@
+-- The Bloodweb (Tibia Wiki: https://tibia.fandom.com/wiki/The_Bloodweb)
+-- Version: 9.20
+
 local mType = Game.createMonsterType("The Bloodweb")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,7 +82,7 @@ monster.loot = {
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = -0, maxDamage = -280 },
 	{ name = "melee", interval = 2000, chance = 100, skill = 40, attack = 100, condition = { type = CONDITION_POISON, totalDamage = 8, interval = 4000 } },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -850, range = 7, radius = 7, effect = CONST_ME_POFF, target = false, duration = 8000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -850, range = 7, radius = 7, effect = CONST_ME_POFF, target = false, duration = 8000 },
 	{ name = "combat", interval = 1000, chance = 25, type = COMBAT_ENERGYDAMAGE, minDamage = -60, maxDamage = -150, range = 7, shootEffect = CONST_ANI_ENERGY, effect = CONST_ME_ENERGYHIT, target = true },
 }
 
@@ -88,7 +90,7 @@ monster.defenses = {
 	defense = 20,
 	armor = 25,
 	mitigation = 1.80,
-	{ name = "speed", interval = 3000, chance = 40, speedChange = 380, effect = CONST_ME_MAGIC_RED, target = false, duration = 80000 },
+	{ name = "speed", interval = 3000, chance = 40, effect = CONST_ME_MAGIC_RED, speed = 340},
 }
 
 monster.elements = {

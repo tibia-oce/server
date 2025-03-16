@@ -1,3 +1,6 @@
+-- Troll Legionnaire (Tibia Wiki: https://tibia.fandom.com/wiki/Troll_Legionnaire)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Troll Legionnaire")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 541
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Old Beregar mines. In group with Furious Trolls almost all the time.",
-}
 
 monster.health = 210
 monster.maxHealth = 210
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,10 +65,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 92000, maxCount = 155 },
+	{ id = "gold coin", chance = 92000, maxCount = 155 },
 	{ id = 3049, chance = 560 }, -- stealth ring
-	{ name = "throwing star", chance = 28000, maxCount = 10 },
-	{ name = "frosty ear of a troll", chance = 5120 },
+	{ id = "throwing star", chance = 28000, maxCount = 10 },
+	{ id = "frosty ear of a troll", chance = 5120 },
 }
 
 monster.attacks = {

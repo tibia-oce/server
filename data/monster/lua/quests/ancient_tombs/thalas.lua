@@ -1,3 +1,6 @@
+-- Thalas (Tibia Wiki: https://tibia.fandom.com/wiki/Thalas)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Thalas")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,24 +77,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 80 },
-	{ name = "gold coin", chance = 50000, maxCount = 80 },
-	{ name = "small emerald", chance = 7000, maxCount = 3 },
-	{ name = "green gem", chance = 500 },
+	{ id = "gold coin", chance = 50000, maxCount = 80 },
+	{ id = "gold coin", chance = 50000, maxCount = 80 },
+	{ id = "small emerald", chance = 7000, maxCount = 3 },
+	{ id = "green gem", chance = 500 },
 	{ id = 3049, chance = 1500 }, -- stealth ring
 	{ id = 3053, chance = 7000 }, -- time ring
-	{ name = "cobrafang dagger", chance = 100000 },
-	{ name = "serpent sword", chance = 500 },
-	{ name = "poison dagger", chance = 7000 },
-	{ name = "djinn blade", chance = 200 },
-	{ name = "great health potion", chance = 1500 },
+	{ id = "cobrafang dagger", chance = 100000 },
+	{ id = "serpent sword", chance = 500 },
+	{ id = "poison dagger", chance = 7000 },
+	{ id = "djinn blade", chance = 200 },
+	{ id = "great health potion", chance = 1500 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -900 },
 	{ name = "combat", interval = 2000, chance = 25, type = COMBAT_EARTHDAMAGE, minDamage = -150, maxDamage = -650, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = false },
 	{ name = "melee", interval = 3000, chance = 20, minDamage = -150, maxDamage = -650 },
-	{ name = "speed", interval = 1000, chance = 6, speedChange = -800, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
+	{ name = "speed", interval = 1000, chance = 6, speed = -800, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 1000, chance = 15, minDamage = -34, maxDamage = -35, radius = 5, effect = CONST_ME_POISONAREA, target = false },
 	{ name = "combat", interval = 3000, chance = 17, type = COMBAT_EARTHDAMAGE, minDamage = -55, maxDamage = -550, length = 8, spread = 3, effect = CONST_ME_POISONAREA, target = false },

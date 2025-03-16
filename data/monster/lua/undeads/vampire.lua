@@ -1,3 +1,6 @@
+-- Vampire (Tibia Wiki: https://tibia.fandom.com/wiki/Vampire)
+-- Version: 6.61-6.97
+
 local mType = Game.createMonsterType("Vampire")
 local monster = {}
 
@@ -13,21 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 68
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Drefia, Ghost Ship between Venore and Darashia, some Ankrahmun Tombs, Lich Hell, \z
-		Serpentine Tower (unreachable), Ghostlands (unreachable). House between Plains of Havoc and Dark Cathedral, \z
-		Hellgate (only during Zevelon Duskbringer raid), Edron Undead Cave, Vengoth Castle (and mountains before door), \z
-		Edron Vampire Crypt.",
-}
 
 monster.health = 475
 monster.maxHealth = 475
@@ -63,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -81,26 +68,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "emerald bangle", chance = 230 },
-	{ name = "black pearl", chance = 1800 },
-	{ name = "gold coin", chance = 90230, maxCount = 60 },
-	{ name = "bronze amulet", chance = 220 },
+	{ id = "emerald bangle", chance = 230 },
+	{ id = "black pearl", chance = 1800 },
+	{ id = "gold coin", chance = 90230, maxCount = 60 },
+	{ id = "bronze amulet", chance = 220 },
 	{ id = 3114, chance = 1000 }, -- skull
-	{ name = "spike sword", chance = 1000 },
-	{ name = "ice rapier", chance = 420 },
-	{ name = "katana", chance = 1560 },
-	{ name = "strange helmet", chance = 420 },
-	{ name = "vampire shield", chance = 230 },
-	{ name = "grave flower", chance = 1910 },
-	{ name = "strong health potion", chance = 1500 },
-	{ name = "vampire teeth", chance = 7600 },
-	{ name = "blood preservation", chance = 5100 },
+	{ id = "spike sword", chance = 1000 },
+	{ id = "ice rapier", chance = 420 },
+	{ id = "katana", chance = 1560 },
+	{ id = "strange helmet", chance = 420 },
+	{ id = "vampire shield", chance = 230 },
+	{ id = "grave flower", chance = 1910 },
+	{ id = "strong health potion", chance = 1500 },
+	{ id = "vampire teeth", chance = 7600 },
+	{ id = "blood preservation", chance = 5100 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -150 },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_LIFEDRAIN, minDamage = -50, maxDamage = -200, range = 1, effect = CONST_ME_SMALLCLOUDS, target = true },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -400, range = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 60000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -400, range = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 60000 },
 }
 
 monster.defenses = {
@@ -108,7 +95,7 @@ monster.defenses = {
 	armor = 28,
 	mitigation = 1.04,
 	{ name = "outfit", interval = 4000, chance = 10, effect = CONST_ME_GROUNDSHAKER, target = false, duration = 5000, outfitMonster = "bat" },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 300, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 238},
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 15, maxDamage = 25, target = false },
 }
 

@@ -1,3 +1,6 @@
+-- Medusa (Tibia Wiki: https://tibia.fandom.com/wiki/Medusa)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Medusa")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 570
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Vandura Mountain (single spawn), Talahu (Medusa Cave), Deeper Banuta, Medusa Tower.",
-}
 
 monster.health = 4500
 monster.maxHealth = 4500
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,20 +70,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 190 },
-	{ name = "small emerald", chance = 3770, maxCount = 4 },
-	{ name = "platinum coin", chance = 74810, maxCount = 6 },
-	{ name = "knight armor", chance = 1840 },
-	{ name = "medusa shield", chance = 3040 },
-	{ name = "titan axe", chance = 1160 },
-	{ name = "great mana potion", chance = 10000, maxCount = 2 },
-	{ name = "terra mantle", chance = 870 },
-	{ name = "terra legs", chance = 420 },
-	{ name = "terra amulet", chance = 4060 },
-	{ name = "ultimate health potion", chance = 9290, maxCount = 2 },
+	{ id = "gold coin", chance = 50000, maxCount = 190 },
+	{ id = "small emerald", chance = 3770, maxCount = 4 },
+	{ id = "platinum coin", chance = 74810, maxCount = 6 },
+	{ id = "knight armor", chance = 1840 },
+	{ id = "medusa shield", chance = 3040 },
+	{ id = "titan axe", chance = 1160 },
+	{ id = "great mana potion", chance = 10000, maxCount = 2 },
+	{ id = "terra mantle", chance = 870 },
+	{ id = "terra legs", chance = 420 },
+	{ id = "terra amulet", chance = 4060 },
+	{ id = "ultimate health potion", chance = 9290, maxCount = 2 },
 	{ id = 8896, chance = 500 }, -- slightly rusted armor
-	{ name = "sacred tree amulet", chance = 850 },
-	{ name = "strand of medusa hair", chance = 9900 },
+	{ id = "sacred tree amulet", chance = 850 },
+	{ id = "strand of medusa hair", chance = 9900 },
 }
 
 monster.attacks = {

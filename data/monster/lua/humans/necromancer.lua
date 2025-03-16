@@ -1,3 +1,6 @@
+-- Necromancer (Tibia Wiki: https://tibia.fandom.com/wiki/Necromancer)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Necromancer")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 9
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "All the Tombs, Lich Hell, Drefia, Medusa Shield Quest room, Old Fortress, Old Masonry, \z
-		beneath Fenrock, Cemetery Quarter and Magician Quarter.",
-}
 
 monster.health = 580
 monster.maxHealth = 580
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -85,18 +74,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 30050, maxCount = 90 },
-	{ name = "boots of haste", chance = 210 },
-	{ name = "clerical mace", chance = 390 },
-	{ name = "skull staff", chance = 100 },
-	{ name = "poison arrow", chance = 15000, maxCount = 5 },
-	{ name = "mystic turban", chance = 500 },
-	{ name = "green mushroom", chance = 1470 },
-	{ name = "noble axe", chance = 10 },
-	{ name = "strong mana potion", chance = 300 },
-	{ name = "spellbook of warding", chance = 130 },
-	{ name = "book of necromantic rituals", chance = 10130 },
-	{ name = "necromantic robe", chance = 1001 },
+	{ id = "gold coin", chance = 30050, maxCount = 90 },
+	{ id = "boots of haste", chance = 210 },
+	{ id = "clerical mace", chance = 390 },
+	{ id = "skull staff", chance = 100 },
+	{ id = "poison arrow", chance = 15000, maxCount = 5 },
+	{ id = "mystic turban", chance = 500 },
+	{ id = "green mushroom", chance = 1470 },
+	{ id = "noble axe", chance = 10 },
+	{ id = "strong mana potion", chance = 300 },
+	{ id = "spellbook of warding", chance = 130 },
+	{ id = "book of necromantic rituals", chance = 10130 },
+	{ id = "necromantic robe", chance = 1001 },
 }
 
 monster.attacks = {

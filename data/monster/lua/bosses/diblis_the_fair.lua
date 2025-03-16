@@ -1,3 +1,6 @@
+-- Diblis the Fair (Tibia Wiki: https://tibia.fandom.com/wiki/Diblis_the_Fair)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Diblis the Fair")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,15 +81,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000 },
-	{ name = "vampire lord token", chance = 100000 },
-	{ name = "blood preservation", chance = 94000 },
-	{ name = "vampire shield", chance = 22000 },
-	{ name = "strong health potion", chance = 18000 },
-	{ name = "platinum coin", chance = 12000, maxCount = 5 },
+	{ id = "gold coin", chance = 100000 },
+	{ id = "vampire lord token", chance = 100000 },
+	{ id = "blood preservation", chance = 94000 },
+	{ id = "vampire shield", chance = 22000 },
+	{ id = "strong health potion", chance = 18000 },
+	{ id = "platinum coin", chance = 12000, maxCount = 5 },
 	{ id = 3098, chance = 12000 }, -- ring of healing
 	{ id = 3114, chance = 12000 }, -- skull
-	{ name = "spellbook of lost souls", chance = 2000 },
+	{ id = "spellbook of lost souls", chance = 2000 },
 }
 
 monster.attacks = {

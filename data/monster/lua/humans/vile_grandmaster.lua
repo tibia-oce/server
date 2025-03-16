@@ -1,3 +1,6 @@
+-- Vile Grandmaster (Tibia Wiki: https://tibia.fandom.com/wiki/Vile_Grandmaster)
+-- Version: 10.80
+
 local mType = Game.createMonsterType("Vile Grandmaster")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1147
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Old Fortress (north of Edron), Old Masonry, Forbidden Temple (Carlin).",
-}
 
 monster.health = 1700
 monster.maxHealth = 1700
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

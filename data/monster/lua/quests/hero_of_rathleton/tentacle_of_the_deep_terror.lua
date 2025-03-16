@@ -1,3 +1,6 @@
+-- Tentacle of the Deep Terror (Tibia Wiki: https://tibia.fandom.com/wiki/Tentacle_of_the_Deep_Terror)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Tentacle of the Deep Terror")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"TentacleDeep",

@@ -1,3 +1,6 @@
+-- Corym Vanguard (Tibia Wiki: https://tibia.fandom.com/wiki/Corym_Vanguard)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Corym Vanguard")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 918
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Venore Corym Cave, Tiquanda Corym Cave, Corym Black Market, \z
-		Carlin Corym Cave/Dwarf Mines Diggers Depths Mine, Upper Spike.",
-}
 
 monster.health = 700
 monster.maxHealth = 700
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,20 +67,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 120 },
+	{ id = "gold coin", chance = 100000, maxCount = 120 },
 	{ id = 3607, chance = 20000 }, -- cheese
-	{ name = "bola", chance = 10000 },
-	{ name = "spike shield", chance = 4761 },
-	{ name = "ratana", chance = 5000 },
-	{ name = "life preserver", chance = 5000 },
-	{ name = "cheese cutter", chance = 16666 },
-	{ name = "cheesy figurine", chance = 3846 },
-	{ name = "earflap", chance = 11111 },
-	{ name = "soft cheese", chance = 14285 },
-	{ name = "rat cheese", chance = 14285 },
-	{ name = "rat god doll", chance = 14 },
-	{ name = "leather harness", chance = 1612 },
-	{ name = "spiky club", chance = 3225 },
+	{ id = "bola", chance = 10000 },
+	{ id = "spike shield", chance = 4761 },
+	{ id = "ratana", chance = 5000 },
+	{ id = "life preserver", chance = 5000 },
+	{ id = "cheese cutter", chance = 16666 },
+	{ id = "cheesy figurine", chance = 3846 },
+	{ id = "earflap", chance = 11111 },
+	{ id = "soft cheese", chance = 14285 },
+	{ id = "rat cheese", chance = 14285 },
+	{ id = "rat god doll", chance = 14 },
+	{ id = "leather harness", chance = 1612 },
+	{ id = "spiky club", chance = 3225 },
 }
 
 monster.attacks = {

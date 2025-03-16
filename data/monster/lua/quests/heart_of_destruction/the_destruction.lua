@@ -1,3 +1,6 @@
+-- The Destruction (Tibia Wiki: https://tibia.fandom.com/wiki/The_Destruction)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("The Destruction")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"HeartMinionDeath",

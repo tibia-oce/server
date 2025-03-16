@@ -1,3 +1,6 @@
+-- Nightfiend (Tibia Wiki: https://tibia.fandom.com/wiki/Nightfiend)
+-- Version: 10.20
+
 local mType = Game.createMonsterType("Nightfiend")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 973
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Deep under Drefia.",
-}
 
 monster.health = 2700
 monster.maxHealth = 2700
@@ -61,9 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,16 +65,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 50000, maxCount = 1 },
-	{ name = "gold coin", chance = 50000, maxCount = 148 },
+	{ id = "platinum coin", chance = 50000, maxCount = 1 },
+	{ id = "gold coin", chance = 50000, maxCount = 148 },
 	{ id = 3030, chance = 1052, maxCount = 3 },
-	{ name = "tooth file", chance = 564 },
-	{ name = "blood preservation", chance = 1000 },
-	{ name = "emerald bangle", chance = 120 },
-	{ name = "vampire teeth", chance = 10000 },
-	{ name = "vampire shield", chance = 50 },
-	{ name = "strong health potion", chance = 4761 },
-	{ name = "strong mana potion", chance = 5000 },
+	{ id = "tooth file", chance = 564 },
+	{ id = "blood preservation", chance = 1000 },
+	{ id = "emerald bangle", chance = 120 },
+	{ id = "vampire teeth", chance = 10000 },
+	{ id = "vampire shield", chance = 50 },
+	{ id = "strong health potion", chance = 4761 },
+	{ id = "strong mana potion", chance = 5000 },
 	{ id = 3039, chance = 55 }, -- red gem
 	{ id = 3098, chance = 1000 }, -- ring of healing
 }

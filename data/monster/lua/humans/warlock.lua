@@ -1,3 +1,6 @@
+-- Warlock (Tibia Wiki: https://tibia.fandom.com/wiki/Warlock)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Warlock")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 10
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Demona, Ghostland (Banshee Quest area), Temple of Xayepocax, Oasis Tomb, Kharos, Magician Quarter, \z
-		beneath Fenrock, The Arcanum.",
-}
 
 monster.health = 3500
 monster.maxHealth = 3500
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -84,31 +73,31 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "red tome", chance = 300 },
-	{ name = "candlestick", chance = 1500 },
-	{ name = "piggy bank", chance = 60 },
-	{ name = "ring of the sky", chance = 430 },
+	{ id = "red tome", chance = 300 },
+	{ id = "candlestick", chance = 1500 },
+	{ id = "piggy bank", chance = 60 },
+	{ id = "ring of the sky", chance = 430 },
 	{ id = 3007, chance = 700 }, -- crystal ring
-	{ name = "small sapphire", chance = 1190 },
-	{ name = "gold coin", chance = 29340, maxCount = 80 },
-	{ name = "talon", chance = 1150 },
+	{ id = "small sapphire", chance = 1190 },
+	{ id = "gold coin", chance = 29340, maxCount = 80 },
+	{ id = "talon", chance = 1150 },
 	{ id = 3051, chance = 2200 }, -- energy ring
-	{ name = "mind stone", chance = 2000 },
-	{ name = "stone skin amulet", chance = 330 },
-	{ name = "poison dagger", chance = 7600 },
-	{ name = "skull staff", chance = 6370 },
-	{ name = "golden armor", chance = 240 },
+	{ id = "mind stone", chance = 2000 },
+	{ id = "stone skin amulet", chance = 330 },
+	{ id = "poison dagger", chance = 7600 },
+	{ id = "skull staff", chance = 6370 },
+	{ id = "golden armor", chance = 240 },
 	{ id = 3509, chance = 1000 }, -- inkwell
-	{ name = "blue robe", chance = 1410 },
-	{ name = "cherry", chance = 19000, maxCount = 4 },
-	{ name = "bread", chance = 9000 },
-	{ name = "dark mushroom", chance = 3000 },
-	{ name = "assassin star", chance = 3500, maxCount = 4 },
-	{ name = "assassin star", chance = 3470, maxCount = 4 },
-	{ name = "great mana potion", chance = 4760 },
-	{ name = "great health potion", chance = 5190 },
-	{ name = "lightning robe", chance = 1000 },
-	{ name = "luminous orb", chance = 510 },
+	{ id = "blue robe", chance = 1410 },
+	{ id = "cherry", chance = 19000, maxCount = 4 },
+	{ id = "bread", chance = 9000 },
+	{ id = "dark mushroom", chance = 3000 },
+	{ id = "assassin star", chance = 3500, maxCount = 4 },
+	{ id = "assassin star", chance = 3470, maxCount = 4 },
+	{ id = "great mana potion", chance = 4760 },
+	{ id = "great health potion", chance = 5190 },
+	{ id = "lightning robe", chance = 1000 },
+	{ id = "luminous orb", chance = 510 },
 }
 
 monster.attacks = {
@@ -119,7 +108,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -50, maxDamage = -180, range = 7, radius = 3, shootEffect = CONST_ANI_BURSTARROW, effect = CONST_ME_FIREAREA, target = true },
 	{ name = "firefield", interval = 2000, chance = 10, range = 7, radius = 2, shootEffect = CONST_ANI_FIRE, target = true },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_ENERGYDAMAGE, minDamage = -150, maxDamage = -230, length = 8, spread = 0, effect = CONST_ME_BIGCLOUDS, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -600, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -600, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
 }
 
 monster.defenses = {

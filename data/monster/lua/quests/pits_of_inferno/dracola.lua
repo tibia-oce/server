@@ -1,3 +1,6 @@
+-- Dracola (Tibia Wiki: https://tibia.fandom.com/wiki/Dracola)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Dracola")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

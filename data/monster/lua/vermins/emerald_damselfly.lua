@@ -1,3 +1,6 @@
+-- Emerald Damselfly (Tibia Wiki: https://tibia.fandom.com/wiki/Emerald_Damselfly)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Emerald Damselfly")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 912
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Venore Salamander Cave, Dryad Gardens.",
-}
 
 monster.health = 90
 monster.maxHealth = 90
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,10 +65,10 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3003, chance = 4300 }, -- rope
-	{ name = "gold coin", chance = 90000, maxCount = 18 },
-	{ name = "arrow", chance = 7570, maxCount = 5 },
-	{ name = "health potion", chance = 3580 },
-	{ name = "mana potion", chance = 3550 },
+	{ id = "gold coin", chance = 90000, maxCount = 18 },
+	{ id = "arrow", chance = 7570, maxCount = 5 },
+	{ id = "health potion", chance = 3580 },
+	{ id = "mana potion", chance = 3550 },
 	{ id = 17458, chance = 11830 }, -- damselfly wing
 	{ id = 17463, chance = 9970 }, -- damselfly eye
 }

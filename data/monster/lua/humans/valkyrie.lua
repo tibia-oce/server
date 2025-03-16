@@ -1,3 +1,6 @@
+-- Valkyrie (Tibia Wiki: https://tibia.fandom.com/wiki/Valkyrie)
+-- Version: 7.1
+
 local mType = Game.createMonsterType("Valkyrie")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 12
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Amazon Camp (Venore), Amazon Camp (Carlin), Amazonia, \z
-		single respawn to the north west of Thais, Foreigner Quarter in Yalahar.",
-}
 
 monster.health = 190
 monster.maxHealth = 190
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,20 +68,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "spear", chance = 55000, maxCount = 3 },
-	{ name = "gold coin", chance = 32000, maxCount = 12 },
-	{ name = "meat", chance = 30000 },
-	{ name = "chain armor", chance = 10000 },
-	{ name = "red apple", chance = 7500, maxCount = 2 },
-	{ name = "girlish hair decoration", chance = 5900 },
-	{ name = "hunting spear", chance = 5155 },
-	{ name = "protective charm", chance = 3200 },
-	{ name = "protection amulet", chance = 1100 },
-	{ name = "plate armor", chance = 830 },
+	{ id = "spear", chance = 55000, maxCount = 3 },
+	{ id = "gold coin", chance = 32000, maxCount = 12 },
+	{ id = "meat", chance = 30000 },
+	{ id = "chain armor", chance = 10000 },
+	{ id = "red apple", chance = 7500, maxCount = 2 },
+	{ id = "girlish hair decoration", chance = 5900 },
+	{ id = "hunting spear", chance = 5155 },
+	{ id = "protective charm", chance = 3200 },
+	{ id = "protection amulet", chance = 1100 },
+	{ id = "plate armor", chance = 830 },
 	{ id = 3114, chance = 760 }, -- skull
-	{ name = "health potion", chance = 500 },
-	{ name = "double axe", chance = 430 },
-	{ name = "small diamond", chance = 130 },
+	{ id = "health potion", chance = 500 },
+	{ id = "double axe", chance = 430 },
+	{ id = "small diamond", chance = 130 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Duskbringer (Tibia Wiki: https://tibia.fandom.com/wiki/Duskbringer)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Duskbringer")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 581
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Magician Quarter (Yalahar) one floor down around the the lightbringer's basin",
-}
 
 monster.health = 3550
 monster.maxHealth = 3550
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,7 +66,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "midnight shard", chance = 10000 },
+	{ id = "midnight shard", chance = 10000 },
 }
 
 monster.attacks = {
@@ -93,7 +82,7 @@ monster.defenses = {
 	armor = 42,
 	mitigation = 1.04,
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 130, maxDamage = 205, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 450, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 370},
 }
 
 monster.elements = {

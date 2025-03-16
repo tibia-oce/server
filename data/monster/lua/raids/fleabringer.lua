@@ -1,3 +1,6 @@
+-- Fleabringer (Tibia Wiki: https://tibia.fandom.com/wiki/Fleabringer)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Fleabringer")
 local monster = {}
 
@@ -51,8 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -65,9 +67,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 25000, maxCount = 3 },
-	{ name = "worm", chance = 75000, maxCount = 3 },
-	{ name = "shaggy tail", chance = 99990 },
+	{ id = "meat", chance = 25000, maxCount = 3 },
+	{ id = "worm", chance = 75000, maxCount = 3 },
+	{ id = "shaggy tail", chance = 99990 },
 }
 
 monster.attacks = {

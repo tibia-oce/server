@@ -1,3 +1,6 @@
+-- Rabbit (Tibia Wiki: https://tibia.fandom.com/wiki/Rabbit)
+-- Version: 7.1
+
 local mType = Game.createMonsterType("Rabbit")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 74
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "In most grass areas of Tibia, for example on Tutorial Island.",
-}
 
 monster.health = 15
 monster.maxHealth = 15
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,7 +63,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 85620, maxCount = 2 },
+	{ id = "meat", chance = 85620, maxCount = 2 },
 	{ id = 3595, chance = 10000, maxCount = 2 }, -- carrot
 }
 

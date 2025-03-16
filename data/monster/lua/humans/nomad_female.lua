@@ -1,3 +1,6 @@
+-- Nomad Female (Tibia Wiki: https://tibia.fandom.com/wiki/Nomad_Female)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Nomad Female")
 local monster = {}
 
@@ -18,18 +21,6 @@ monster.events = {
 	"NomadDeath",
 }
 
-monster.raceId = 777
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 1,
-	Locations = "Drefia, Ankrahmun.",
-}
 
 monster.health = 160
 monster.maxHealth = 160
@@ -64,8 +55,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

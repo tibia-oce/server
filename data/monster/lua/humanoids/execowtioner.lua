@@ -1,3 +1,6 @@
+-- Execowtioner (Tibia Wiki: https://tibia.fandom.com/wiki/Execowtioner)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Execowtioner")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1046
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Oramond Mountain Hideout, Oramond Minotaur Camp (northern camp), \z
-		Underground Glooth Factory, Oramond Dungeon.",
-}
 
 monster.health = 3500
 monster.maxHealth = 3500
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

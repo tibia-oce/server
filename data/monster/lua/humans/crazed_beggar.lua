@@ -1,3 +1,6 @@
+-- Crazed Beggar (Tibia Wiki: https://tibia.fandom.com/wiki/Crazed_Beggar)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Crazed Beggar")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 525
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Factory, Foreigner, and Trade Quarters in Yalahar.",
-}
 
 monster.health = 100
 monster.maxHealth = 100
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,19 +70,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small blue pillow", chance = 420 },
+	{ id = "small blue pillow", chance = 420 },
 	{ id = 2950, chance = 360 }, -- lute
-	{ name = "gold coin", chance = 99000, maxCount = 9 },
+	{ id = "gold coin", chance = 99000, maxCount = 9 },
 	{ id = 3097, chance = 120 }, -- dwarven ring
 	{ id = 3122, chance = 55000 }, -- dirty cape
-	{ name = "wooden hammer", chance = 6500 },
-	{ name = "wooden spoon", chance = 9750 },
+	{ id = "wooden hammer", chance = 6500 },
+	{ id = "wooden spoon", chance = 9750 },
 	{ id = 3473, chance = 5650 }, -- rolling pin
-	{ name = "meat", chance = 9500 },
-	{ name = "roll", chance = 22500 },
-	{ name = "red rose", chance = 4700 },
-	{ name = "sling herb", chance = 420 },
-	{ name = "rum flask", chance = 420 },
+	{ id = "meat", chance = 9500 },
+	{ id = "roll", chance = 22500 },
+	{ id = "red rose", chance = 4700 },
+	{ id = "sling herb", chance = 420 },
+	{ id = "rum flask", chance = 420 },
 	{ id = 6091, chance = 300 }, -- very noble-looking watch
 	{ id = 8894, chance = 80 }, -- heavily rusted armor
 }

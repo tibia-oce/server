@@ -1,3 +1,6 @@
+-- Shadow Pupil (Tibia Wiki: https://tibia.fandom.com/wiki/Shadow_Pupil)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("Shadow Pupil")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 960
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Drefia.",
-}
 
 monster.health = 450
 monster.maxHealth = 450
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -85,17 +75,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 64 },
-	{ name = "boots of haste", chance = 60 },
-	{ name = "clerical mace", chance = 290 },
-	{ name = "mystic turban", chance = 580 },
-	{ name = "brown mushroom", chance = 5170 },
-	{ name = "strong mana potion", chance = 470 },
-	{ name = "spellbook of enlightenment", chance = 290 },
-	{ name = "book of necromantic rituals", chance = 6920 },
-	{ name = "horoscope", chance = 15000 },
-	{ name = "incantation notes", chance = 9130 },
-	{ name = "pieces of magic chalk", chance = 4300 },
+	{ id = "gold coin", chance = 100000, maxCount = 64 },
+	{ id = "boots of haste", chance = 60 },
+	{ id = "clerical mace", chance = 290 },
+	{ id = "mystic turban", chance = 580 },
+	{ id = "brown mushroom", chance = 5170 },
+	{ id = "strong mana potion", chance = 470 },
+	{ id = "spellbook of enlightenment", chance = 290 },
+	{ id = "book of necromantic rituals", chance = 6920 },
+	{ id = "horoscope", chance = 15000 },
+	{ id = "incantation notes", chance = 9130 },
+	{ id = "pieces of magic chalk", chance = 4300 },
 }
 
 monster.attacks = {

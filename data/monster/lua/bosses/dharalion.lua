@@ -1,3 +1,6 @@
+-- Dharalion (Tibia Wiki: https://tibia.fandom.com/wiki/Dharalion)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Dharalion")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,21 +82,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "holy orchid", chance = 100000 },
-	{ name = "elvish talisman", chance = 88000 },
-	{ name = "elven astral observer", chance = 82000 },
-	{ name = "yellow gem", chance = 41790 },
-	{ name = "blank rune", chance = 25370, maxCount = 1 },
-	{ name = "melon", chance = 22390 },
-	{ name = "bread", chance = 16420 },
-	{ name = "elven amulet", chance = 14930 },
-	{ name = "great mana potion", chance = 13430 },
-	{ name = "life crystal", chance = 13430 },
-	{ name = "sling herb", chance = 8960 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "holy orchid", chance = 100000 },
+	{ id = "elvish talisman", chance = 88000 },
+	{ id = "elven astral observer", chance = 82000 },
+	{ id = "yellow gem", chance = 41790 },
+	{ id = "blank rune", chance = 25370, maxCount = 1 },
+	{ id = "melon", chance = 22390 },
+	{ id = "bread", chance = 16420 },
+	{ id = "elven amulet", chance = 14930 },
+	{ id = "great mana potion", chance = 13430 },
+	{ id = "life crystal", chance = 13430 },
+	{ id = "sling herb", chance = 8960 },
 	{ id = 3257, chance = 7460 }, -- cornucopia
-	{ name = "green tunic", chance = 4480 },
-	{ name = "royal spear", chance = 1490, maxCount = 2 },
+	{ id = "green tunic", chance = 4480 },
+	{ id = "royal spear", chance = 1490, maxCount = 2 },
 }
 
 monster.attacks = {
@@ -110,7 +112,7 @@ monster.defenses = {
 	armor = 15,
 	--	mitigation = ???,
 	{ name = "combat", interval = 1000, chance = 20, type = COMBAT_HEALING, minDamage = 90, maxDamage = 120, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 1000, chance = 7, speedChange = 300, effect = CONST_ME_MAGIC_RED, target = false, duration = 10000 },
+	{ name = "speed", interval = 1000, chance = 7, effect = CONST_ME_MAGIC_RED, speed = 240},
 }
 
 monster.elements = {

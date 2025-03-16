@@ -1,3 +1,6 @@
+-- Spectre (Tibia Wiki: https://tibia.fandom.com/wiki/Spectre)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Spectre")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 286
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Pits of Inferno, The Crystal Caves and The Soul Well in The Inquisition Quest, \z
-		Drefia Grim Reaper Dungeons, as well in Vengoth.",
-}
 
 monster.health = 1350
 monster.maxHealth = 1350
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,23 +68,23 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2949, chance = 9620 }, -- lyre
-	{ name = "silver brooch", chance = 850 },
-	{ name = "silver brooch", chance = 110 },
+	{ id = "silver brooch", chance = 850 },
+	{ id = "silver brooch", chance = 110 },
 	{ id = 3019, chance = 110 }, -- demonbone amulet
-	{ name = "gold coin", chance = 33000, maxCount = 100 },
-	{ name = "gold coin", chance = 33000, maxCount = 100 },
-	{ name = "gold coin", chance = 33000, maxCount = 97 },
-	{ name = "platinum coin", chance = 3850, maxCount = 7 },
+	{ id = "gold coin", chance = 33000, maxCount = 100 },
+	{ id = "gold coin", chance = 33000, maxCount = 100 },
+	{ id = "gold coin", chance = 33000, maxCount = 97 },
+	{ id = "platinum coin", chance = 3850, maxCount = 7 },
 	{ id = 3049, chance = 190 }, -- stealth ring
-	{ name = "wand of cosmic energy", chance = 9800 },
-	{ name = "blank rune", chance = 30310, maxCount = 2 },
-	{ name = "white piece of cloth", chance = 3800 },
-	{ name = "soul orb", chance = 6005 },
+	{ id = "wand of cosmic energy", chance = 9800 },
+	{ id = "blank rune", chance = 30310, maxCount = 2 },
+	{ id = "white piece of cloth", chance = 3800 },
+	{ id = "soul orb", chance = 6005 },
 	{ id = 6299, chance = 280 }, -- death ring
-	{ name = "demonic essence", chance = 6270 },
-	{ name = "relic sword", chance = 700 },
-	{ name = "great mana potion", chance = 920 },
-	{ name = "shiny stone", chance = 1000 },
+	{ id = "demonic essence", chance = 6270 },
+	{ id = "relic sword", chance = 700 },
+	{ id = "great mana potion", chance = 920 },
+	{ id = "shiny stone", chance = 1000 },
 }
 
 monster.attacks = {
@@ -111,7 +100,7 @@ monster.defenses = {
 	armor = 40,
 	mitigation = 1.04,
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_HEALING, minDamage = 100, maxDamage = 700, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 290, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 280},
 }
 
 monster.elements = {

@@ -1,3 +1,6 @@
+-- Wisp (Tibia Wiki: https://tibia.fandom.com/wiki/Wisp)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Wisp")
 local monster = {}
 
@@ -13,21 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 462
-monster.Bestiary = {
-	class = "Fey",
-	race = BESTY_RACE_FEY,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "All around Tiquanda and Feyrist. Several groups of Wisps can be found in and around \z
-		the forests north of Edron. West of Hardek. Inside the Cyclops Camp. North of the triple \z
-		Wyvern spawn outside Kazordoon. West of Ab'Dendriel. West of Venore Amazon Camp. \z
-		A few spawns around Venore, 2 spawn on the Formorgar Glacier, and on Krimhorn.",
-}
 
 monster.health = 115
 monster.maxHealth = 115
@@ -62,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 4,
@@ -79,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "moon backpack", chance = 220 },
+	{ id = "moon backpack", chance = 220 },
 }
 
 monster.attacks = {
@@ -91,7 +77,7 @@ monster.defenses = {
 	defense = 10,
 	armor = 7,
 	mitigation = 0.43,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 162},
 	{ name = "combat", interval = 2000, chance = 5, type = COMBAT_HEALING, minDamage = 15, maxDamage = 25, effect = CONST_ME_MAGIC_GREEN, target = false },
 	{ name = "invisible", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 3000 },
 }

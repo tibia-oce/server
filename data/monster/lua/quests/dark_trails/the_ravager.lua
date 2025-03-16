@@ -1,3 +1,6 @@
+-- The Ravager (Tibia Wiki: https://tibia.fandom.com/wiki/The_Ravager)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("The Ravager")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"TheRavagerDeath",

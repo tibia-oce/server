@@ -1,3 +1,6 @@
+-- Travelling Merchant (Tibia Wiki: https://tibia.fandom.com/wiki/Travelling_Merchant)
+-- Version: 8.70
+
 local mType = Game.createMonsterType("Travelling Merchant")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

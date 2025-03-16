@@ -1,3 +1,6 @@
+-- Troll Marauder (Tibia Wiki: https://tibia.fandom.com/wiki/Troll_Marauder)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Troll Marauder")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

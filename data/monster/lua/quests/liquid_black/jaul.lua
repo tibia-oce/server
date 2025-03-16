@@ -1,3 +1,6 @@
+-- Jaul (Tibia Wiki: https://tibia.fandom.com/wiki/Jaul)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Jaul")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,14 +76,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "deepling axe", chance = 1500 },
-	{ name = "depth calcei", chance = 1100 },
+	{ id = "deepling axe", chance = 1500 },
+	{ id = "depth calcei", chance = 1100 },
 	{ id = 13995, chance = 1400 }, -- depth galea
-	{ name = "depth lorica", chance = 800 },
-	{ name = "ornate chestplate", chance = 650, unique = true },
-	{ name = "ornate legs", chance = 740 },
-	{ name = "ornate mace", chance = 1500 },
-	{ name = "ornate shield", chance = 1400 },
+	{ id = "depth lorica", chance = 800 },
+	{ id = "ornate chestplate", chance = 650, unique = true },
+	{ id = "ornate legs", chance = 740 },
+	{ id = "ornate mace", chance = 1500 },
+	{ id = "ornate shield", chance = 1400 },
 }
 
 monster.attacks = {
@@ -93,7 +95,7 @@ monster.attacks = {
 	{ name = "combat", interval = 1000, chance = 5, type = COMBAT_FIREDAMAGE, minDamage = -500, maxDamage = -1000, length = 8, spread = 3, effect = CONST_ME_HITBYFIRE, target = false },
 	{ name = "combat", interval = 1000, chance = 5, type = COMBAT_ICEDAMAGE, minDamage = -1000, maxDamage = -2000, length = 8, spread = 3, effect = CONST_ME_ICEAREA, target = false },
 	{ name = "combat", interval = 4000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -500, maxDamage = -1000, length = 8, spread = 3, effect = CONST_ME_WATERSPLASH, target = false },
-	{ name = "speed", interval = 1900, chance = 14, speedChange = -700, range = 7, radius = 1, target = true, duration = 15000 },
+	{ name = "speed", interval = 1900, chance = 14, speed = -700, range = 7, radius = 1, target = true, duration = 15000 },
 }
 
 monster.defenses = {

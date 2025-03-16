@@ -1,3 +1,6 @@
+-- Thornfire Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Thornfire_Wolf)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Thornfire Wolf")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 739
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Shadowthorn.",
-}
 
 monster.health = 600
 monster.maxHealth = 600
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 5,
@@ -77,11 +66,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 64000, maxCount = 53 },
-	{ name = "meat", chance = 34000 },
-	{ name = "wolf paw", chance = 7900 },
-	{ name = "flaming arrow", chance = 15000, maxCount = 8 },
-	{ name = "fiery heart", chance = 7900 },
+	{ id = "gold coin", chance = 64000, maxCount = 53 },
+	{ id = "meat", chance = 34000 },
+	{ id = "wolf paw", chance = 7900 },
+	{ id = "flaming arrow", chance = 15000, maxCount = 8 },
+	{ id = "fiery heart", chance = 7900 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Dragon Lord (Tibia Wiki: https://tibia.fandom.com/wiki/Dragon_Lord)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Dragon Lord")
 local monster = {}
 
@@ -17,24 +20,6 @@ monster.events = {
 	"TheGreatDragonHuntDeath",
 }
 
-monster.raceId = 39
-monster.Bestiary = {
-	class = "Dragon",
-	race = BESTY_RACE_DRAGON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Ankrahmun Dragon Lairs, Banshee Quest final room (level 60+ to open the door), \z
-	Deeper Cyclopolis past the Dragon Spawn (level 30+ to open the door), Draconia, Edron Dragon Lair, \z
-	Fibula Dungeon (level 50+ to open the door), Maze of Lost Souls (level 30+ to open the door), \z
-	Pits of Inferno Dragon Lair, Dragon Lord hole in Plains of Havoc, Carlin Dragon Lair, \z
-	Thais Dragon Lair, Goroma Dragon Lairs, Hot Spot, Venore Dragon Lair, Arena and Zoo Quarter(Yalahar), \z
-	beneath Fenrock, Darashia Dragon Lair, Razachai, Dragonblaze Peaks, Ferumbras Citadel, Fury Dungeon, \z
-	Lower Spike, Krailos Steppe.",
-}
 
 monster.health = 1900
 monster.maxHealth = 1900
@@ -72,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -88,26 +72,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 95300, maxCount = 237 },
-	{ name = "dragon ham", chance = 79790, maxCount = 2 },
-	{ name = "green mushroom", chance = 12030 },
+	{ id = "gold coin", chance = 95300, maxCount = 237 },
+	{ id = "dragon ham", chance = 79790, maxCount = 2 },
+	{ id = "green mushroom", chance = 12030 },
 	{ id = 2842, chance = 9590 }, -- gemmed book
-	{ name = "royal spear", chance = 9380, maxCount = 3 },
-	{ name = "power bolt", chance = 5920, maxCount = 7 },
-	{ name = "small sapphire", chance = 5590 },
+	{ id = "royal spear", chance = 9380, maxCount = 3 },
+	{ id = "power bolt", chance = 5920, maxCount = 7 },
+	{ id = "small sapphire", chance = 5590 },
 	{ id = 3051, chance = 4550 }, -- energy ring
-	{ name = "golden mug", chance = 3310 },
-	{ name = "red dragon scale", chance = 1940 },
-	{ name = "red dragon leather", chance = 1150 },
-	{ name = "strong health potion", chance = 800 },
-	{ name = "life crystal", chance = 650 },
-	{ name = "strange helmet", chance = 520 },
-	{ name = "tower shield", chance = 410 },
-	{ name = "fire sword", chance = 350 },
-	{ name = "royal helmet", chance = 260 },
-	{ name = "dragon slayer", chance = 220 },
-	{ name = "dragon lord trophy", chance = 130 },
-	{ name = "dragon scale mail", chance = 90 },
+	{ id = "golden mug", chance = 3310 },
+	{ id = "red dragon scale", chance = 1940 },
+	{ id = "red dragon leather", chance = 1150 },
+	{ id = "strong health potion", chance = 800 },
+	{ id = "life crystal", chance = 650 },
+	{ id = "strange helmet", chance = 520 },
+	{ id = "tower shield", chance = 410 },
+	{ id = "fire sword", chance = 350 },
+	{ id = "royal helmet", chance = 260 },
+	{ id = "dragon slayer", chance = 220 },
+	{ id = "dragon lord trophy", chance = 130 },
+	{ id = "dragon scale mail", chance = 90 },
 }
 
 monster.attacks = {

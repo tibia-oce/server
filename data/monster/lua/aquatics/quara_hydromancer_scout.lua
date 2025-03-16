@@ -1,3 +1,6 @@
+-- Quara Hydromancer Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Hydromancer_Scout)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Quara Hydromancer Scout")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 244
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Malada, Hrodmir Quara Scout Caves, Quara Grotto, Oramond.",
-}
 
 monster.health = 1100
 monster.maxHealth = 1100
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -79,19 +69,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 40000, maxCount = 90 },
-	{ name = "gold coin", chance = 49000, maxCount = 50 },
+	{ id = "gold coin", chance = 40000, maxCount = 90 },
+	{ id = "gold coin", chance = 49000, maxCount = 50 },
 	{ id = 3578, chance = 18930, maxCount = 3 }, -- fish
-	{ name = "quara eye", chance = 12720 },
-	{ name = "shrimp", chance = 9980, maxCount = 4 },
-	{ name = "small emerald", chance = 6000, maxCount = 2 },
-	{ name = "white pearl", chance = 2900 },
-	{ name = "black pearl", chance = 2650 },
-	{ name = "fish fin", chance = 2090 },
-	{ name = "obsidian lance", chance = 1530 },
+	{ id = "quara eye", chance = 12720 },
+	{ id = "shrimp", chance = 9980, maxCount = 4 },
+	{ id = "small emerald", chance = 6000, maxCount = 2 },
+	{ id = "white pearl", chance = 2900 },
+	{ id = "black pearl", chance = 2650 },
+	{ id = "fish fin", chance = 2090 },
+	{ id = "obsidian lance", chance = 1530 },
 	{ id = 3098, chance = 940 }, -- ring of healing
-	{ name = "wand of cosmic energy", chance = 910 },
-	{ name = "knight armor", chance = 520 },
+	{ id = "wand of cosmic energy", chance = 910 },
+	{ id = "knight armor", chance = 520 },
 }
 
 monster.attacks = {
@@ -100,7 +90,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_ICEDAMAGE, minDamage = -90, maxDamage = -150, radius = 3, effect = CONST_ME_BUBBLES, target = false },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -170, maxDamage = -240, length = 8, spread = 0, effect = CONST_ME_BUBBLES, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_LIFEDRAIN, minDamage = 0, maxDamage = -170, range = 7, effect = CONST_ME_MAGIC_RED, target = true },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -600, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -600, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
 }
 
 monster.defenses = {

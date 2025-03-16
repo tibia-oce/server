@@ -1,3 +1,6 @@
+-- Skeleton Warrior (Tibia Wiki: https://tibia.fandom.com/wiki/Skeleton_Warrior)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Skeleton Warrior")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 446
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Island of Destiny, Drefia, Ghostland and beneath Fenrock.",
-}
 
 monster.health = 65
 monster.maxHealth = 65
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -73,13 +63,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 43500, maxCount = 10 },
+	{ id = "gold coin", chance = 43500, maxCount = 10 },
 	{ id = 3115, chance = 50000 }, -- bone
 	{ id = 3264, chance = 1500 }, -- sword
-	{ name = "mace", chance = 2000 },
-	{ name = "white mushroom", chance = 24000, maxCount = 3 },
-	{ name = "brown mushroom", chance = 1700 },
-	{ name = "pelvis bone", chance = 10630 },
+	{ id = "mace", chance = 2000 },
+	{ id = "white mushroom", chance = 24000, maxCount = 3 },
+	{ id = "brown mushroom", chance = 1700 },
+	{ id = "pelvis bone", chance = 10630 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Hacker (Tibia Wiki: https://tibia.fandom.com/wiki/Hacker)
+-- Version: 7.92
+
 local mType = Game.createMonsterType("Hacker")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,12 +76,12 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2914, chance = 6666 }, -- lamp
-	{ name = "gold coin", chance = 100000, maxCount = 12 },
-	{ name = "battle axe", chance = 5000 },
-	{ name = "halberd", chance = 10000 },
-	{ name = "axe", chance = 10000 },
-	{ name = "war hammer", chance = 5000 },
-	{ name = "ham", chance = 50000 },
+	{ id = "gold coin", chance = 100000, maxCount = 12 },
+	{ id = "battle axe", chance = 5000 },
+	{ id = "halberd", chance = 10000 },
+	{ id = "axe", chance = 10000 },
+	{ id = "war hammer", chance = 5000 },
+	{ id = "ham", chance = 50000 },
 	{ id = 6570, chance = 5538 }, -- surprise bag
 	{ id = 6571, chance = 1538 }, -- surprise bag
 }
@@ -92,7 +94,7 @@ monster.defenses = {
 	defense = 12,
 	armor = 15,
 	mitigation = 0.36,
-	{ name = "speed", interval = 1000, chance = 15, speedChange = 290, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 1000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 250},
 	{ name = "outfit", interval = 10000, chance = 15, effect = CONST_ME_MAGIC_RED, target = false, duration = 500, outfitMonster = "pig" },
 }
 

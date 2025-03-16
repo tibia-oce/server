@@ -1,3 +1,6 @@
+-- Sabretooth (Tibia Wiki: https://tibia.fandom.com/wiki/Sabretooth)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Sabretooth")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 2267
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 5000,
-	FirstUnlock = 200,
-	SecondUnlock = 2000,
-	CharmsPoints = 100,
-	Stars = 5,
-	Occurrence = 0,
-	Locations = "Sparkling Pools",
-}
 
 monster.health = 17300
 monster.maxHealth = 17300
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -73,16 +63,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "Sabretooth Fur", chance = 23640 },
-	{ name = "Crystal Coin", chance = 23350, minCount = 1, maxCount = 2 },
-	{ name = "Elven Amulet", chance = 5010 },
-	{ name = "Wand of Inferno", chance = 4720 },
-	{ name = "Dragon Necklace", chance = 3850 },
-	{ name = "Magma Coat", chance = 3820 },
-	{ name = "Sacred Tree Amulet", chance = 2730 },
-	{ name = "Fire Sword", chance = 2650 },
-	{ name = "Wand of Dragonbreath", chance = 2330 },
-	{ name = "Metal Spats", chance = 2260 },
+	{ id = "Sabretooth Fur", chance = 23640 },
+	{ id = "Crystal Coin", chance = 23350, minCount = 1, maxCount = 2 },
+	{ id = "Elven Amulet", chance = 5010 },
+	{ id = "Wand of Inferno", chance = 4720 },
+	{ id = "Dragon Necklace", chance = 3850 },
+	{ id = "Magma Coat", chance = 3820 },
+	{ id = "Sacred Tree Amulet", chance = 2730 },
+	{ id = "Fire Sword", chance = 2650 },
+	{ id = "Wand of Dragonbreath", chance = 2330 },
+	{ id = "Metal Spats", chance = 2260 },
 }
 
 monster.attacks = {

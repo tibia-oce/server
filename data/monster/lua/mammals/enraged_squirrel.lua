@@ -1,3 +1,6 @@
+-- Enraged Squirrel (Tibia Wiki: https://tibia.fandom.com/wiki/Enraged_Squirrel)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Enraged Squirrel")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

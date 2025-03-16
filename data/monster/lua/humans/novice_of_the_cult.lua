@@ -1,3 +1,6 @@
+-- Novice of the Cult (Tibia Wiki: https://tibia.fandom.com/wiki/Novice_of_the_Cult)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Novice of the Cult")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 255
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Liberty Bay Cult Cave, Formorgar Mines, Yalahar Magician Quarter, \z
-		in the caves on top of the Hrodmir mountains.",
-}
 
 monster.health = 285
 monster.maxHealth = 285
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -88,16 +77,16 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2828, chance = 700 }, -- book
-	{ name = "small diamond", chance = 210 },
-	{ name = "gold coin", chance = 43380, maxCount = 40 },
-	{ name = "wand of vortex", chance = 450 },
-	{ name = "garlic necklace", chance = 420 },
+	{ id = "small diamond", chance = 210 },
+	{ id = "gold coin", chance = 43380, maxCount = 40 },
+	{ id = "wand of vortex", chance = 450 },
+	{ id = "garlic necklace", chance = 420 },
 	{ id = 3097, chance = 500 }, -- dwarven ring
-	{ name = "scarf", chance = 2900 },
-	{ name = "pirate voodoo doll", chance = 520 },
+	{ id = "scarf", chance = 2900 },
+	{ id = "pirate voodoo doll", chance = 520 },
 	{ id = 6087, chance = 970 }, -- music sheet
-	{ name = "cultish robe", chance = 1030 },
-	{ name = "rope belt", chance = 5910 },
+	{ id = "cultish robe", chance = 1030 },
+	{ id = "rope belt", chance = 5910 },
 }
 
 monster.attacks = {

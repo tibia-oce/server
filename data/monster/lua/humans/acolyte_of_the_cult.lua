@@ -1,3 +1,6 @@
+-- Acolyte of the Cult (Tibia Wiki: https://tibia.fandom.com/wiki/Acolyte_of_the_Cult)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Acolyte of the Cult")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 253
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Goroma, Deeper Cult Cave, Formorgar Mines, Magician Quarter, Forbidden Temple.",
-}
 
 monster.health = 390
 monster.maxHealth = 390
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -87,18 +77,18 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2828, chance = 730 }, -- book
-	{ name = "gold coin", chance = 66940, maxCount = 40 },
-	{ name = "small emerald", chance = 550 },
+	{ id = "gold coin", chance = 66940, maxCount = 40 },
+	{ id = "small emerald", chance = 550 },
 	{ id = 3052, chance = 560 }, -- life ring
-	{ name = "terra rod", chance = 250 },
-	{ name = "dragon necklace", chance = 1050 },
-	{ name = "morning star", chance = 4990 },
-	{ name = "pirate voodoo doll", chance = 1060 },
+	{ id = "terra rod", chance = 250 },
+	{ id = "dragon necklace", chance = 1050 },
+	{ id = "morning star", chance = 4990 },
+	{ id = "pirate voodoo doll", chance = 1060 },
 	{ id = 6088, chance = 480 }, -- music sheet
-	{ name = "cultish robe", chance = 8070 },
-	{ name = "cultish symbol", chance = 40 },
-	{ name = "rope belt", chance = 10420 },
-	{ name = "broken key ring", chance = 60 },
+	{ id = "cultish robe", chance = 8070 },
+	{ id = "cultish symbol", chance = 40 },
+	{ id = "rope belt", chance = 10420 },
+	{ id = "broken key ring", chance = 60 },
 }
 
 monster.attacks = {

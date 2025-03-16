@@ -1,3 +1,6 @@
+-- Drillworm (Tibia Wiki: https://tibia.fandom.com/wiki/Drillworm)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Drillworm")
 local monster = {}
 
@@ -17,18 +20,6 @@ monster.events = {
 	"LowerSpikeDeath",
 }
 
-monster.raceId = 878
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Drillworm Caves, Lower Spike, Lost Dwarf version of the Forsaken Mine, Oramond Factory Raids and Warzone 4.",
-}
 
 monster.health = 1500
 monster.maxHealth = 1500
@@ -63,8 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,27 +69,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 50 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 50 },
 	{ id = 3456, chance = 5280 }, -- pick
-	{ name = "worm", chance = 4580, maxCount = 5 },
-	{ name = "iron ore", chance = 1750 },
-	{ name = "spiked squelcher", chance = 540 },
-	{ name = "terra amulet", chance = 2360 },
-	{ name = "lump of earth", chance = 15000 },
-	{ name = "clay lump", chance = 700 },
+	{ id = "worm", chance = 4580, maxCount = 5 },
+	{ id = "iron ore", chance = 1750 },
+	{ id = "spiked squelcher", chance = 540 },
+	{ id = "terra amulet", chance = 2360 },
+	{ id = "lump of earth", chance = 15000 },
+	{ id = "clay lump", chance = 700 },
 	{ id = 12600, chance = 12130 }, -- coal
-	{ name = "green crystal splinter", chance = 9780 },
-	{ name = "brown crystal splinter", chance = 9260 },
-	{ name = "blue crystal splinter", chance = 9610 },
-	{ name = "pulverized ore", chance = 5400 },
-	{ name = "vein of ore", chance = 7280 },
-	{ name = "drill bolt", chance = 4870, maxCount = 2 },
+	{ id = "green crystal splinter", chance = 9780 },
+	{ id = "brown crystal splinter", chance = 9260 },
+	{ id = "blue crystal splinter", chance = 9610 },
+	{ id = "pulverized ore", chance = 5400 },
+	{ id = "vein of ore", chance = 7280 },
+	{ id = "drill bolt", chance = 4870, maxCount = 2 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -300, condition = { type = CONDITION_POISON, totalDamage = 100, interval = 4000 } },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -600, length = 8, spread = 3, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -600, length = 8, spread = 3, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -150, maxDamage = -300, length = 8, spread = 3, effect = CONST_ME_HITBYPOISON, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -100, maxDamage = -150, radius = 3, effect = CONST_ME_POISONAREA, target = true },
 }

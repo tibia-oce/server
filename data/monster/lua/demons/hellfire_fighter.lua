@@ -1,3 +1,6 @@
+-- Hellfire Fighter (Tibia Wiki: https://tibia.fandom.com/wiki/Hellfire_Fighter)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Hellfire Fighter")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 295
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Pits of Inferno, Demon Forge, Fury Dungeon.",
-}
 
 monster.health = 3800
 monster.maxHealth = 3800
@@ -60,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 5,
@@ -74,25 +64,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "emerald bangle", chance = 2200 },
+	{ id = "emerald bangle", chance = 2200 },
 	{ id = 3019, chance = 190 }, -- demonbone amulet
-	{ name = "small diamond", chance = 1400 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 40000, maxCount = 100 },
-	{ name = "gold coin", chance = 10000, maxCount = 46 },
-	{ name = "wand of inferno", chance = 9450 },
-	{ name = "burnt scroll", chance = 50000 },
-	{ name = "blank rune", chance = 30000, maxCount = 2 },
-	{ name = "fire sword", chance = 4140 },
-	{ name = "fire axe", chance = 440 },
-	{ name = "soul orb", chance = 12150 },
-	{ name = "demonic essence", chance = 14500 },
-	{ name = "magma legs", chance = 682 },
-	{ name = "magma coat", chance = 380 },
-	{ name = "fiery heart", chance = 9570 },
-	{ name = "piece of hellfire armor", chance = 5060 },
+	{ id = "small diamond", chance = 1400 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 40000, maxCount = 100 },
+	{ id = "gold coin", chance = 10000, maxCount = 46 },
+	{ id = "wand of inferno", chance = 9450 },
+	{ id = "burnt scroll", chance = 50000 },
+	{ id = "blank rune", chance = 30000, maxCount = 2 },
+	{ id = "fire sword", chance = 4140 },
+	{ id = "fire axe", chance = 440 },
+	{ id = "soul orb", chance = 12150 },
+	{ id = "demonic essence", chance = 14500 },
+	{ id = "magma legs", chance = 682 },
+	{ id = "magma coat", chance = 380 },
+	{ id = "fiery heart", chance = 9570 },
+	{ id = "piece of hellfire armor", chance = 5060 },
 	{ id = 12600, chance = 670 }, -- coal
-	{ name = "eternal flames", chance = 380 },
+	{ id = "eternal flames", chance = 380 },
 }
 
 monster.attacks = {

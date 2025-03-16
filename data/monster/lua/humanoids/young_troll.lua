@@ -1,3 +1,6 @@
+-- Young Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Young_Troll)
+-- Version: 9.62
+
 local mType = Game.createMonsterType("Young Troll")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -63,8 +65,8 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3003, chance = 10000 }, -- rope
-	{ name = "gold coin", chance = 58000, maxCount = 12 },
-	{ name = "meat", chance = 14000 },
+	{ id = "gold coin", chance = 58000, maxCount = 12 },
+	{ id = "meat", chance = 14000 },
 }
 
 monster.attacks = {

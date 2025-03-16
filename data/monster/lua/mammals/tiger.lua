@@ -1,3 +1,6 @@
+-- Tiger (Tibia Wiki: https://tibia.fandom.com/wiki/Tiger)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Tiger")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 125
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Tiquanda, Meriana, Arena and Zoo Quarter. Three unreachable ones are found in the Rookgaard Academy, \z
-		below Ankrahmun (during the Nomads Land Quest), and on Charles's ship.",
-}
 
 monster.health = 75
 monster.maxHealth = 75
@@ -61,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,8 +64,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 35190, maxCount = 4 },
-	{ name = "striped fur", chance = 10830 },
+	{ id = "meat", chance = 35190, maxCount = 4 },
+	{ id = "striped fur", chance = 10830 },
 }
 
 monster.attacks = {
@@ -87,7 +76,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 5,
 	mitigation = 0.38,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 200},
 }
 
 monster.elements = {

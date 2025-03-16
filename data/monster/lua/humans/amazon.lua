@@ -1,3 +1,6 @@
+-- Amazon (Tibia Wiki: https://tibia.fandom.com/wiki/Amazon)
+-- Version: 7.1
+
 local mType = Game.createMonsterType("Amazon")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 77
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Venore Amazon Camp, Carlin Amazon Camp, Amazon Tower, east of Carlin, underneath the Fields of Glory, west of Venore, Oasis Tomb, on the smallest of the Laguna Islands, Foreigner Quarter and Trade Quarter.",
-}
 
 monster.health = 110
 monster.maxHealth = 110
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,16 +66,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "dagger", chance = 80000 },
+	{ id = "dagger", chance = 80000 },
 	{ id = 3114, chance = 80000, maxCount = 2 }, -- skull
-	{ name = "gold coin", chance = 40000, maxCount = 20 },
-	{ name = "brown bread", chance = 30000 },
-	{ name = "sabre", chance = 23000 },
-	{ name = "girlish hair decoration", chance = 10000 },
-	{ name = "protective charm", chance = 5200 },
+	{ id = "gold coin", chance = 40000, maxCount = 20 },
+	{ id = "brown bread", chance = 30000 },
+	{ id = "sabre", chance = 23000 },
+	{ id = "girlish hair decoration", chance = 10000 },
+	{ id = "protective charm", chance = 5200 },
 	{ id = 2920, chance = 1000 }, -- torch
-	{ name = "crystal necklace", chance = 260 },
-	{ name = "small ruby", chance = 130 },
+	{ id = "crystal necklace", chance = 260 },
+	{ id = "small ruby", chance = 130 },
 }
 
 monster.attacks = {

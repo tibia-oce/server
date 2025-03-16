@@ -1,3 +1,6 @@
+-- Wyvern (Tibia Wiki: https://tibia.fandom.com/wiki/Wyvern)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Wyvern")
 local monster = {}
 
@@ -13,22 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 290
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Beregar, Black Knight's Villa, Chor, Ghostlands, Chyllfroest, Crystal Gardens, \z
-		Crystal Grounds, Dragon Lair (Edron), Drillworm Cave, Folda, Hero Fortress, Kazordoon, \z
-		Green Djinn Tower, Mushroom Fields,Paradox Tower, Plains of Havoc, Plague Spike, \z
-		Poachers' Camp (Ferngrims Gate), Stonehome, Tiquanda, Truffels Garden, \z
-		Vandura Mountain, Vega, Venore, Wyvern Cave (Ferngrims Gate), Wyvern Hill and Wyvern Ulderek's Rock Cave.",
-}
 
 monster.health = 795
 monster.maxHealth = 795
@@ -63,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,15 +64,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "emerald bangle", chance = 540 },
-	{ name = "small sapphire", chance = 5000 },
-	{ name = "gold coin", chance = 100000, maxCount = 90 },
-	{ name = "wand of inferno", chance = 810 },
-	{ name = "power bolt", chance = 3400, maxCount = 2 },
-	{ name = "dragon ham", chance = 60500, maxCount = 3 },
-	{ name = "wyvern fang", chance = 410 },
-	{ name = "strong health potion", chance = 2500 },
-	{ name = "wyvern talisman", chance = 12300 },
+	{ id = "emerald bangle", chance = 540 },
+	{ id = "small sapphire", chance = 5000 },
+	{ id = "gold coin", chance = 100000, maxCount = 90 },
+	{ id = "wand of inferno", chance = 810 },
+	{ id = "power bolt", chance = 3400, maxCount = 2 },
+	{ id = "dragon ham", chance = 60500, maxCount = 3 },
+	{ id = "wyvern fang", chance = 410 },
+	{ id = "strong health potion", chance = 2500 },
+	{ id = "wyvern talisman", chance = 12300 },
 }
 
 monster.attacks = {
@@ -101,7 +87,7 @@ monster.defenses = {
 	armor = 19,
 	mitigation = 1.21,
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 45, maxDamage = 65, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 300, effect = CONST_ME_MAGIC_GREEN, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_GREEN, speed = 186},
 }
 
 monster.elements = {

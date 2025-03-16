@@ -1,3 +1,6 @@
+-- Diseased Bill (Tibia Wiki: https://tibia.fandom.com/wiki/Diseased_Bill)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Diseased Bill")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 4,
@@ -76,21 +78,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 28000, maxCount = 20 },
+	{ id = "gold coin", chance = 28000, maxCount = 20 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -207, condition = { type = CONDITION_POISON, totalDamage = 4, interval = 4000 } },
 	{ name = "combat", interval = 2000, chance = 100, type = COMBAT_LIFEDRAIN, minDamage = -90, maxDamage = -140, effect = CONST_ME_MAGIC_RED, target = true },
 	{ name = "combat", interval = 1000, chance = 40, type = COMBAT_PHYSICALDAMAGE, minDamage = -100, maxDamage = -175, radius = 2, shootEffect = CONST_ANI_SMALLEARTH, effect = CONST_ME_HITBYPOISON, target = false },
-	{ name = "speed", interval = 3000, chance = 40, speedChange = -900, effect = CONST_ME_MAGIC_RED, target = true, duration = 20000 },
+	{ name = "speed", interval = 3000, chance = 40, speed = -900, effect = CONST_ME_MAGIC_RED, target = true, duration = 20000 },
 }
 
 monster.defenses = {
 	defense = 15,
 	armor = 10,
 	--	mitigation = ???,
-	{ name = "speed", interval = 10000, chance = 40, speedChange = 310, effect = CONST_ME_MAGIC_GREEN, target = false, duration = 20000 },
+	{ name = "speed", interval = 10000, chance = 40, effect = CONST_ME_MAGIC_GREEN, speed = 150},
 	{ name = "combat", interval = 5000, chance = 60, type = COMBAT_HEALING, minDamage = 50, maxDamage = 80, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

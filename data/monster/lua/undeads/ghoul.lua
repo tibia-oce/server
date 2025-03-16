@@ -1,3 +1,6 @@
+-- Ghoul (Tibia Wiki: https://tibia.fandom.com/wiki/Ghoul)
+-- Version: 4.0
+
 local mType = Game.createMonsterType("Ghoul")
 local monster = {}
 
@@ -13,25 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 18
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Ancient Temple in the Skeleton area, way to Mintwallin, Old Mintwallin Quest, \z
-		Alatar Lake, Magician Tower, Mount Sternum Undead Cave, Ghostlands, Hellgate, \z
-		Maze of Lost Souls, below Point of No Return in Outlaw Camp, Plains of Havoc in Necromant House, \z
-		Drefia and Drefia's underground caves, Edron ghoul hill, Venore Amazon Camp underground, \z
-		Venore Swamp Troll cave, Ghostship between Venore and Darashia, Triangle Tower, Dark Cathedral, \z
-		Ankrahmun tombs, Isle of the Kings, Treasure Island, Nargor Undead Cave, Helheim, Lion's Rock, \z
-		The Witches' Cliff (only accessible during a quest) and a cave northeast of Ab'Dendriel. \z
-		Also found behind a wall in both Rookgaard and Paradox Tower, although they cannot be reached.",
-}
 
 monster.health = 100
 monster.maxHealth = 100
@@ -66,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,16 +64,16 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 5000 }, -- torch
-	{ name = "gold coin", chance = 68000, maxCount = 30 },
+	{ id = "gold coin", chance = 68000, maxCount = 30 },
 	{ id = 3052, chance = 180 }, -- life ring
 	{ id = 3114, chance = 240 }, -- skull
-	{ name = "viking helmet", chance = 990 },
-	{ name = "scale armor", chance = 1000 },
-	{ name = "worm", chance = 9600, maxCount = 2 },
-	{ name = "brown piece of cloth", chance = 1000 },
-	{ name = "rotten piece of cloth", chance = 14470 },
-	{ name = "ghoul snack", chance = 5130 },
-	{ name = "pile of grave earth", chance = 950 },
+	{ id = "viking helmet", chance = 990 },
+	{ id = "scale armor", chance = 1000 },
+	{ id = "worm", chance = 9600, maxCount = 2 },
+	{ id = "brown piece of cloth", chance = 1000 },
+	{ id = "rotten piece of cloth", chance = 14470 },
+	{ id = "ghoul snack", chance = 5130 },
+	{ id = "pile of grave earth", chance = 950 },
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 

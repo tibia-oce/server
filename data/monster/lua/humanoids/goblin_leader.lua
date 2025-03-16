@@ -1,3 +1,6 @@
+-- Goblin Leader (Tibia Wiki: https://tibia.fandom.com/wiki/Goblin_Leader)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Goblin Leader")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 377
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 30,
-	Stars = 2,
-	Occurrence = 3,
-	Locations = "Way to Beregar, below Femor Hills (Tower Defence Quest), near Femor Hills during Goblin raid.",
-}
 
 monster.health = 50
 monster.maxHealth = 50
@@ -63,9 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -82,15 +71,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 40000, maxCount = 10 },
+	{ id = "gold coin", chance = 40000, maxCount = 10 },
 	{ id = 3115, chance = 11500 }, -- bone
-	{ name = "mouldy cheese", chance = 9000 },
-	{ name = "dagger", chance = 10300 },
-	{ name = "short sword", chance = 15400 },
-	{ name = "bone club", chance = 1300 },
-	{ name = "leather helmet", chance = 16670 },
-	{ name = "leather armor", chance = 5000 },
-	{ name = "small axe", chance = 12800 },
+	{ id = "mouldy cheese", chance = 9000 },
+	{ id = "dagger", chance = 10300 },
+	{ id = "short sword", chance = 15400 },
+	{ id = "bone club", chance = 1300 },
+	{ id = "leather helmet", chance = 16670 },
+	{ id = "leather armor", chance = 5000 },
+	{ id = "small axe", chance = 12800 },
 	{ id = 3578, chance = 15000 }, -- fish
 }
 

@@ -1,3 +1,6 @@
+-- Infernatil (Tibia Wiki: https://tibia.fandom.com/wiki/Infernatil)
+-- Version: --
+
 local mType = Game.createMonsterType("Infernatil")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -153,7 +155,7 @@ monster.defenses = {
 	--	mitigation = ???,
 	{ name = "combat", interval = 1000, chance = 15, type = COMBAT_HEALING, minDamage = 5000, maxDamage = 10000, effect = CONST_ME_MAGIC_BLUE, target = false },
 	{ name = "combat", interval = 1000, chance = 25, type = COMBAT_HEALING, minDamage = 2000, maxDamage = 3000, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 1000, chance = 10, speedChange = 1800, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 1000, chance = 10, effect = CONST_ME_MAGIC_RED, speed = 660},
 }
 
 monster.elements = {

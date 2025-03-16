@@ -1,3 +1,6 @@
+-- Spidris (Tibia Wiki: https://tibia.fandom.com/wiki/Spidris)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Spidris")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 787
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Hive, Hive Outpost.",
-}
 
 monster.health = 3700
 monster.maxHealth = 3700
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,21 +65,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 11900, maxCount = 5 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "platinum coin", chance = 45000, maxCount = 4 },
-	{ name = "violet gem", chance = 770 },
+	{ id = "small ruby", chance = 11900, maxCount = 5 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "platinum coin", chance = 45000, maxCount = 4 },
+	{ id = "violet gem", chance = 770 },
 	{ id = 6299, chance = 2700 }, -- death ring
-	{ name = "titan axe", chance = 920 },
-	{ name = "great mana potion", chance = 11500, maxCount = 2 },
+	{ id = "titan axe", chance = 920 },
+	{ id = "great mana potion", chance = 11500, maxCount = 2 },
 	{ id = 281, chance = 1700 }, -- giant shimmering pearl (green)
-	{ name = "ultimate health potion", chance = 6250, maxCount = 2 },
-	{ name = "spidris mandible", chance = 14960 },
-	{ name = "compound eye", chance = 12500 },
-	{ name = "calopteryx cape", chance = 370 },
-	{ name = "carapace shield", chance = 720 },
-	{ name = "hive scythe", chance = 690 },
+	{ id = "ultimate health potion", chance = 6250, maxCount = 2 },
+	{ id = "spidris mandible", chance = 14960 },
+	{ id = "compound eye", chance = 12500 },
+	{ id = "calopteryx cape", chance = 370 },
+	{ id = "carapace shield", chance = 720 },
+	{ id = "hive scythe", chance = 690 },
 }
 
 monster.attacks = {
@@ -101,7 +91,7 @@ monster.defenses = {
 	defense = 30,
 	armor = 53,
 	mitigation = 1.62,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 450, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 390},
 }
 
 monster.elements = {

@@ -1,3 +1,6 @@
+-- Blue Djinn (Tibia Wiki: https://tibia.fandom.com/wiki/Blue_Djinn)
+-- Version: 7.0
+
 local mType = Game.createMonsterType("Blue Djinn")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 80
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Kha'zeel, Magician Quarter, Forgotten Tomb.",
-}
 
 monster.health = 330
 monster.maxHealth = 330
@@ -33,8 +24,6 @@ monster.corpse = 6020
 monster.speed = 110
 monster.manaCost = 0
 
-monster.faction = FACTION_MARID
-monster.enemyFactions = { FACTION_PLAYER, FACTION_EFREET }
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,17 +69,17 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2829, chance = 2350 }, -- book
-	{ name = "small oil lamp", chance = 690 },
-	{ name = "small sapphire", chance = 2560, maxCount = 4 },
-	{ name = "gold coin", chance = 60000, maxCount = 70 },
-	{ name = "gold coin", chance = 70000, maxCount = 45 },
-	{ name = "mystic turban", chance = 70 },
+	{ id = "small oil lamp", chance = 690 },
+	{ id = "small sapphire", chance = 2560, maxCount = 4 },
+	{ id = "gold coin", chance = 60000, maxCount = 70 },
+	{ id = "gold coin", chance = 70000, maxCount = 45 },
+	{ id = "mystic turban", chance = 70 },
 	{ id = 3595, chance = 23480 }, -- carrot
-	{ name = "blue rose", chance = 440 },
-	{ name = "blue piece of cloth", chance = 1920 },
-	{ name = "royal spear", chance = 4500, maxCount = 2 },
-	{ name = "mana potion", chance = 860 },
-	{ name = "dirty turban", chance = 1890 },
+	{ id = "blue rose", chance = 440 },
+	{ id = "blue piece of cloth", chance = 1920 },
+	{ id = "royal spear", chance = 4500, maxCount = 2 },
+	{ id = "mana potion", chance = 860 },
+	{ id = "dirty turban", chance = 1890 },
 }
 
 monster.attacks = {

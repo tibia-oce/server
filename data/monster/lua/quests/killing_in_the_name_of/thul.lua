@@ -1,3 +1,6 @@
+-- Thul (Tibia Wiki: https://tibia.fandom.com/wiki/Thul)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Thul")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 2,
@@ -87,7 +89,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 7, type = COMBAT_ICEDAMAGE, minDamage = -108, maxDamage = -137, radius = 4, effect = CONST_ME_ICEAREA, target = false },
 	{ name = "combat", interval = 2000, chance = 25, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -170, radius = 3, effect = CONST_ME_HITAREA, target = false },
 	{ name = "poisonfield", interval = 2000, chance = 19, radius = 3, shootEffect = CONST_ANI_POISON, target = false },
-	{ name = "speed", interval = 2000, chance = 18, speedChange = -360, range = 7, shootEffect = CONST_ANI_SNOWBALL, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 18, speed = -360, range = 7, shootEffect = CONST_ANI_SNOWBALL, target = false, duration = 5000 },
 }
 
 monster.defenses = {

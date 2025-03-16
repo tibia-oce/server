@@ -1,3 +1,6 @@
+-- Lethal Lissy (Tibia Wiki: https://tibia.fandom.com/wiki/Lethal_Lissy)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Lethal Lissy")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -70,15 +72,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 12500 },
-	{ name = "meat", chance = 18750, maxCount = 3 },
-	{ name = "gold coin", chance = 50000, maxCount = 60 },
-	{ name = "gold coin", chance = 50000, maxCount = 61 },
+	{ id = "small diamond", chance = 12500 },
+	{ id = "meat", chance = 18750, maxCount = 3 },
+	{ id = "gold coin", chance = 50000, maxCount = 60 },
+	{ id = "gold coin", chance = 50000, maxCount = 61 },
 	{ id = 3114, chance = 81250, maxCount = 2 }, -- skull
-	{ name = "pirate backpack", chance = 6250 },
-	{ name = "plate armor", chance = 56250 },
-	{ name = "knight armor", chance = 12500 },
-	{ name = "very old piece of paper", chance = 25000 },
+	{ id = "pirate backpack", chance = 6250 },
+	{ id = "plate armor", chance = 56250 },
+	{ id = "knight armor", chance = 12500 },
+	{ id = "very old piece of paper", chance = 25000 },
 	{ id = 6100, chance = 100000 }, -- lethal lissy's shirt
 }
 

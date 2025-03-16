@@ -1,3 +1,6 @@
+-- Lost Berserker (Tibia Wiki: https://tibia.fandom.com/wiki/Lost_Berserker)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Lost Berserker")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 888
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Warzones 2 and 3.",
-}
 
 monster.health = 5900
 monster.maxHealth = 5900
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,33 +68,33 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "piggy bank", chance = 3920 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "platinum coin", chance = 100000, maxCount = 9 },
+	{ id = "piggy bank", chance = 3920 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "platinum coin", chance = 100000, maxCount = 9 },
 	{ id = 3097, chance = 2280 }, -- dwarven ring
-	{ name = "knight axe", chance = 2070 },
-	{ name = "fire axe", chance = 380 },
-	{ name = "royal helmet", chance = 150 },
-	{ name = "guardian shield", chance = 1400 },
-	{ name = "tower shield", chance = 1002 },
-	{ name = "black shield", chance = 640 },
-	{ name = "brown mushroom", chance = 15190, maxCount = 2 },
-	{ name = "iron ore", chance = 8490 },
-	{ name = "magic sulphur", chance = 720 },
-	{ name = "chaos mace", chance = 550 },
-	{ name = "spiked squelcher", chance = 810 },
-	{ name = "great mana potion", chance = 13650 },
-	{ name = "great health potion", chance = 13650 },
-	{ name = "terra boots", chance = 640 },
-	{ name = "small topaz", chance = 7970, maxCount = 2 },
-	{ name = "clay lump", chance = 930 },
+	{ id = "knight axe", chance = 2070 },
+	{ id = "fire axe", chance = 380 },
+	{ id = "royal helmet", chance = 150 },
+	{ id = "guardian shield", chance = 1400 },
+	{ id = "tower shield", chance = 1002 },
+	{ id = "black shield", chance = 640 },
+	{ id = "brown mushroom", chance = 15190, maxCount = 2 },
+	{ id = "iron ore", chance = 8490 },
+	{ id = "magic sulphur", chance = 720 },
+	{ id = "chaos mace", chance = 550 },
+	{ id = "spiked squelcher", chance = 810 },
+	{ id = "great mana potion", chance = 13650 },
+	{ id = "great health potion", chance = 13650 },
+	{ id = "terra boots", chance = 640 },
+	{ id = "small topaz", chance = 7970, maxCount = 2 },
+	{ id = "clay lump", chance = 930 },
 	{ id = 12600, chance = 2050 }, -- coal
-	{ name = "violet crystal shard", chance = 3500 },
-	{ name = "brown crystal splinter", chance = 7540, maxCount = 2 },
-	{ name = "blue crystal splinter", chance = 4610 },
-	{ name = "green crystal fragment", chance = 6870 },
-	{ name = "drill bolt", chance = 8210, maxCount = 10 },
+	{ id = "violet crystal shard", chance = 3500 },
+	{ id = "brown crystal splinter", chance = 7540, maxCount = 2 },
+	{ id = "blue crystal splinter", chance = 4610 },
+	{ id = "green crystal fragment", chance = 6870 },
+	{ id = "drill bolt", chance = 8210, maxCount = 10 },
 }
 
 monster.attacks = {
@@ -112,7 +102,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -300, range = 7, shootEffect = CONST_ANI_WHIRLWINDAXE, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -250, range = 7, radius = 3, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_EXPLOSIONAREA, target = true },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_MANADRAIN, minDamage = -50, maxDamage = -100, radius = 5, effect = CONST_ME_MAGIC_RED, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -800, radius = 2, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -800, radius = 2, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
 }
 
 monster.defenses = {

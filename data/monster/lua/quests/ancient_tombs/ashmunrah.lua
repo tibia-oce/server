@@ -1,3 +1,6 @@
+-- Ashmunrah (Tibia Wiki: https://tibia.fandom.com/wiki/Ashmunrah)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Ashmunrah")
 local monster = {}
 
@@ -52,8 +55,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,13 +83,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "silver brooch", chance = 7000 },
-	{ name = "holy scarab", chance = 400 },
-	{ name = "gold coin", chance = 50000, maxCount = 80 },
-	{ name = "gold coin", chance = 50000, maxCount = 60 },
-	{ name = "might ring", chance = 1000 },
-	{ name = "crown armor", chance = 80000 },
-	{ name = "great mana potion", chance = 1500 },
+	{ id = "silver brooch", chance = 7000 },
+	{ id = "holy scarab", chance = 400 },
+	{ id = "gold coin", chance = 50000, maxCount = 80 },
+	{ id = "gold coin", chance = 50000, maxCount = 60 },
+	{ id = "might ring", chance = 1000 },
+	{ id = "crown armor", chance = 80000 },
+	{ id = "great mana potion", chance = 1500 },
 }
 
 monster.attacks = {
@@ -95,7 +97,7 @@ monster.attacks = {
 	{ name = "combat", interval = 3000, chance = 7, type = COMBAT_LIFEDRAIN, minDamage = -100, maxDamage = -700, range = 1, target = false },
 	{ name = "combat", interval = 2000, chance = 12, type = COMBAT_EARTHDAMAGE, minDamage = -100, maxDamage = -500, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = false },
 	{ name = "combat", interval = 3000, chance = 12, type = COMBAT_PHYSICALDAMAGE, minDamage = -120, maxDamage = -750, range = 7, shootEffect = CONST_ANI_ENERGY, effect = CONST_ME_MORTAREA, target = false },
-	{ name = "speed", interval = 3000, chance = 25, speedChange = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 50000 },
+	{ name = "speed", interval = 3000, chance = 25, speed = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 50000 },
 	{ name = "combat", interval = 2000, chance = 18, type = COMBAT_LIFEDRAIN, minDamage = -50, maxDamage = -550, length = 8, spread = 3, effect = CONST_ME_YELLOW_RINGS, target = false },
 }
 

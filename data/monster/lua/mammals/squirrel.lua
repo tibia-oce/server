@@ -1,3 +1,6 @@
+-- Squirrel (Tibia Wiki: https://tibia.fandom.com/wiki/Squirrel)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Squirrel")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 384
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "North of Carlin, Northwest of Thais, East of Kazordoon, Yalahar, Dawnport, Edron Hunters Camp, Plains of Havoc and other Tibian woods.",
-}
 
 monster.health = 20
 monster.maxHealth = 20
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,9 +64,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "walnut", chance = 1140 },
-	{ name = "peanut", chance = 980 },
-	{ name = "acorn", chance = 50410 },
+	{ id = "walnut", chance = 1140 },
+	{ id = "peanut", chance = 980 },
+	{ id = "acorn", chance = 50410 },
 }
 monster.defenses = {
 	defense = 5,

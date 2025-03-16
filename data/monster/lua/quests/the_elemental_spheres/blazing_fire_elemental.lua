@@ -1,3 +1,6 @@
+-- Blazing Fire Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Blazing_Fire_Elemental)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Blazing Fire Elemental")
 local monster = {}
 
@@ -47,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -61,10 +63,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 10000, maxCount = 40 },
-	{ name = "flaming arrow", chance = 5000, maxCount = 4 },
-	{ name = "glimmering soil", chance = 2500 },
-	{ name = "fiery heart", chance = 5475 },
+	{ id = "gold coin", chance = 10000, maxCount = 40 },
+	{ id = "flaming arrow", chance = 5000, maxCount = 4 },
+	{ id = "glimmering soil", chance = 2500 },
+	{ id = "fiery heart", chance = 5475 },
 }
 
 monster.attacks = {

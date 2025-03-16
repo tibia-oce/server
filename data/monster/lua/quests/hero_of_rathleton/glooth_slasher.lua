@@ -1,3 +1,6 @@
+-- Glooth Slasher (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Slasher)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Glooth Slasher")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -73,7 +75,7 @@ monster.defenses = {
 	defense = 45,
 	armor = 40,
 	--	mitigation = ???,
-	{ name = "speed", interval = 2000, chance = 13, speedChange = 404, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 13, effect = CONST_ME_MAGIC_RED, speed = 260},
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_HEALING, minDamage = 200, maxDamage = 250, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

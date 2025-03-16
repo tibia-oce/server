@@ -1,3 +1,6 @@
+-- Arachir the Ancient One (Tibia Wiki: https://tibia.fandom.com/wiki/Arachir_the_Ancient_One)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Arachir the Ancient One")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

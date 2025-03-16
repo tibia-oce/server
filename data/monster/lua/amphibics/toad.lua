@@ -1,3 +1,6 @@
+-- Toad (Tibia Wiki: https://tibia.fandom.com/wiki/Toad)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Toad")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 262
-monster.Bestiary = {
-	class = "Amphibic",
-	race = BESTY_RACE_AMPHIBIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "The Laguna Islands, Arena and Zoo Quarter, TiquandaTarantula Caves, Shadowthorn Bog God Temple, Northern Zao Plantations, Northern Brimstone Bug CavesBrimstone Bug Cave, Tainted Caves.",
-}
 
 monster.health = 135
 monster.maxHealth = 135
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,11 +65,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 80000, maxCount = 20 },
-	{ name = "war hammer", chance = 148 },
-	{ name = "mace", chance = 2854 },
+	{ id = "gold coin", chance = 80000, maxCount = 20 },
+	{ id = "war hammer", chance = 148 },
+	{ id = "mace", chance = 2854 },
 	{ id = 3578, chance = 20000 }, -- fish
-	{ name = "poisonous slime", chance = 4761 },
+	{ id = "poisonous slime", chance = 4761 },
 }
 
 monster.attacks = {
@@ -91,7 +81,7 @@ monster.defenses = {
 	defense = 6,
 	armor = 6,
 	mitigation = 0.36,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 210},
 }
 
 monster.elements = {

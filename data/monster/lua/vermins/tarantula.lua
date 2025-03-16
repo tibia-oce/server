@@ -1,3 +1,6 @@
+-- Tarantula (Tibia Wiki: https://tibia.fandom.com/wiki/Tarantula)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Tarantula")
 local monster = {}
 
@@ -13,22 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 219
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Tiquanda Tarantula Caves, Spider Caves, Trapwood ground level and underground, \z
-		in 2 small caves South of Thais, Dark Cathedral, single spawn on top of Crocodile den north of Port Hope, \z
-		Plains of Havoc, underground Liberty Bay, Nargor Undead Cave and other constituents of the Shattered Isles, \z
-		Green Claw Swamp, first floor up in the big building in the Cemetery Quarter, Robson Isle, Vengoth. \z
-		After the summer update of 2876, tarantulas can be seen on the beginner's island of Rookgaard.",
-}
 
 monster.health = 225
 monster.maxHealth = 225
@@ -64,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,13 +64,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 79000, maxCount = 40 },
+	{ id = "gold coin", chance = 79000, maxCount = 40 },
 	{ id = 3053, chance = 120 }, -- time ring
-	{ name = "steel helmet", chance = 990 },
-	{ name = "brass legs", chance = 3050 },
-	{ name = "plate shield", chance = 2000 },
-	{ name = "spider fangs", chance = 4820 },
-	{ name = "tarantula egg", chance = 10000 },
+	{ id = "steel helmet", chance = 990 },
+	{ id = "brass legs", chance = 3050 },
+	{ id = "plate shield", chance = 2000 },
+	{ id = "spider fangs", chance = 4820 },
+	{ id = "tarantula egg", chance = 10000 },
 }
 
 monster.attacks = {
@@ -96,7 +82,7 @@ monster.defenses = {
 	defense = 10,
 	armor = 20,
 	mitigation = 0.51,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 220, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 214},
 }
 
 monster.elements = {

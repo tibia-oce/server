@@ -1,3 +1,6 @@
+-- Dark Torturer (Tibia Wiki: https://tibia.fandom.com/wiki/Dark_Torturer)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Dark Torturer")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 285
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Pits of Inferno, Vengoth, The Inquisition Quest's Blood Halls, Oramond Dungeon, \z
-	Oramond Fury Dungeon, Roshamuul Prison, Grounds of Damnation and Halls of Ascension.",
-}
 
 monster.health = 7350
 monster.maxHealth = 7350
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,26 +71,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 40000, maxCount = 99 },
-	{ name = "platinum coin", chance = 55000, maxCount = 8 },
-	{ name = "golden legs", chance = 30 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 40000, maxCount = 99 },
+	{ id = "platinum coin", chance = 55000, maxCount = 8 },
+	{ id = "golden legs", chance = 30 },
 	{ id = 3461, chance = 5250 }, -- saw
-	{ name = "steel boots", chance = 5050 },
-	{ name = "ham", chance = 60000, maxCount = 2 },
-	{ name = "orichalcum pearl", chance = 2760, maxCount = 2 },
-	{ name = "cat's paw", chance = 2222 },
-	{ name = "jewelled backpack", chance = 1192 },
-	{ name = "soul orb", chance = 23000 },
+	{ id = "steel boots", chance = 5050 },
+	{ id = "ham", chance = 60000, maxCount = 2 },
+	{ id = "orichalcum pearl", chance = 2760, maxCount = 2 },
+	{ id = "cat's paw", chance = 2222 },
+	{ id = "jewelled backpack", chance = 1192 },
+	{ id = "soul orb", chance = 23000 },
 	{ id = 6299, chance = 2008 }, -- death ring
-	{ name = "demonic essence", chance = 8520 },
-	{ name = "flask of demonic blood", chance = 33333, maxCount = 3 },
-	{ name = "assassin star", chance = 2222, maxCount = 5 },
-	{ name = "vile axe", chance = 480 },
-	{ name = "butcher's axe", chance = 850 },
-	{ name = "great mana potion", chance = 14830, maxCount = 2 },
-	{ name = "great health potion", chance = 10000, maxCount = 2 },
-	{ name = "gold ingot", chance = 3140 },
+	{ id = "demonic essence", chance = 8520 },
+	{ id = "flask of demonic blood", chance = 33333, maxCount = 3 },
+	{ id = "assassin star", chance = 2222, maxCount = 5 },
+	{ id = "vile axe", chance = 480 },
+	{ id = "butcher's axe", chance = 850 },
+	{ id = "great mana potion", chance = 14830, maxCount = 2 },
+	{ id = "great health potion", chance = 10000, maxCount = 2 },
+	{ id = "gold ingot", chance = 3140 },
 }
 
 monster.attacks = {

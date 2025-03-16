@@ -1,3 +1,6 @@
+-- Souleater (Tibia Wiki: https://tibia.fandom.com/wiki/Souleater)
+-- Version: 8.60
+
 local mType = Game.createMonsterType("Souleater")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 675
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Razzachai, Northern Zao Plantations, Souleater Mountains, Deeper Banuta.",
-}
 
 monster.health = 1100
 monster.maxHealth = 1100
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 3,
@@ -78,18 +68,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 33400, maxCount = 100 },
-	{ name = "gold coin", chance = 33400, maxCount = 100 },
-	{ name = "platinum coin", chance = 49610, maxCount = 6 },
-	{ name = "necrotic rod", chance = 980 },
-	{ name = "wand of cosmic energy", chance = 910 },
+	{ id = "gold coin", chance = 33400, maxCount = 100 },
+	{ id = "gold coin", chance = 33400, maxCount = 100 },
+	{ id = "platinum coin", chance = 49610, maxCount = 6 },
+	{ id = "necrotic rod", chance = 980 },
+	{ id = "wand of cosmic energy", chance = 910 },
 	{ id = 5884, chance = 140 }, -- spirit container
 	{ id = 6299, chance = 300 }, -- death ring
-	{ name = "great mana potion", chance = 8000 },
-	{ name = "ultimate health potion", chance = 9400 },
-	{ name = "souleater trophy", chance = 20 },
-	{ name = "lizard essence", chance = 15250 },
-	{ name = "ectoplasmic sushi", chance = 2000 },
+	{ id = "great mana potion", chance = 8000 },
+	{ id = "ultimate health potion", chance = 9400 },
+	{ id = "souleater trophy", chance = 20 },
+	{ id = "lizard essence", chance = 15250 },
+	{ id = "ectoplasmic sushi", chance = 2000 },
 }
 
 monster.attacks = {

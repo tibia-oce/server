@@ -1,3 +1,6 @@
+-- Merikh the Slaughterer (Tibia Wiki: https://tibia.fandom.com/wiki/Merikh_the_Slaughterer)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Merikh the Slaughterer")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -68,21 +70,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 97250, maxCount = 120 },
-	{ name = "green piece of cloth", chance = 100000, maxCount = 4 },
-	{ name = "noble turban", chance = 63900 },
-	{ name = "heavy machete", chance = 41650 },
-	{ name = "magma monocle", chance = 8400 },
-	{ name = "seeds", chance = 100 },
-	{ name = "jewelled belt", chance = 100000 },
-	{ name = "shiny stone", chance = 58300 },
-	{ name = "strong mana potion", chance = 41650, maxCount = 3 },
-	{ name = "small emerald", chance = 2800, maxCount = 2 },
-	{ name = "small oil lamp", chance = 100 },
-	{ name = "royal spear", chance = 55550, maxCount = 3 },
-	{ name = "mystic turban", chance = 36100 },
-	{ name = "green gem", chance = 2800 },
-	{ name = "pear", chance = 100, maxCount = 8 },
+	{ id = "gold coin", chance = 97250, maxCount = 120 },
+	{ id = "green piece of cloth", chance = 100000, maxCount = 4 },
+	{ id = "noble turban", chance = 63900 },
+	{ id = "heavy machete", chance = 41650 },
+	{ id = "magma monocle", chance = 8400 },
+	{ id = "seeds", chance = 100 },
+	{ id = "jewelled belt", chance = 100000 },
+	{ id = "shiny stone", chance = 58300 },
+	{ id = "strong mana potion", chance = 41650, maxCount = 3 },
+	{ id = "small emerald", chance = 2800, maxCount = 2 },
+	{ id = "small oil lamp", chance = 100 },
+	{ id = "royal spear", chance = 55550, maxCount = 3 },
+	{ id = "mystic turban", chance = 36100 },
+	{ id = "green gem", chance = 2800 },
+	{ id = "pear", chance = 100, maxCount = 8 },
 }
 
 monster.attacks = {

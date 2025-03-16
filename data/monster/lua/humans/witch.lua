@@ -1,3 +1,6 @@
+-- Witch (Tibia Wiki: https://tibia.fandom.com/wiki/Witch)
+-- Version: 6.0
+
 local mType = Game.createMonsterType("Witch")
 local monster = {}
 
@@ -13,21 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 54
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Vandura, west of the Dwarf Mines in a small house, Amazon Tower north of Carlin, \z
-		Triangle Tower, Temple of Xayepocax, Green Claw Swamp and Amazon Camp (Venore), \z
-		Dark Cathedral (2 levels underground), Goroma Volcano (underground), west from Necromant House, \z
-		Mammoth Shearing Factory, Trade Quarter in Yalahar, The Witches' Cliff (only accessible during a quest).",
-}
 
 monster.health = 300
 monster.maxHealth = 300
@@ -62,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,20 +67,20 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3012, chance = 10120 }, -- wolf tooth chain
-	{ name = "gold coin", chance = 64000, maxCount = 40 },
-	{ name = "necrotic rod", chance = 1140 },
-	{ name = "garlic necklace", chance = 1000 },
-	{ name = "silver dagger", chance = 500 },
-	{ name = "sickle", chance = 3910 },
-	{ name = "leather boots", chance = 4950 },
-	{ name = "coat", chance = 2010 },
-	{ name = "cape", chance = 4870 },
-	{ name = "cookie", chance = 29750, maxCount = 8 },
-	{ name = "star herb", chance = 8950 },
-	{ name = "witch broom", chance = 10000 },
-	{ name = "witch hat", chance = 80 },
-	{ name = "stuffed toad", chance = 10 },
-	{ name = "bag of apple slices", chance = 920 },
+	{ id = "gold coin", chance = 64000, maxCount = 40 },
+	{ id = "necrotic rod", chance = 1140 },
+	{ id = "garlic necklace", chance = 1000 },
+	{ id = "silver dagger", chance = 500 },
+	{ id = "sickle", chance = 3910 },
+	{ id = "leather boots", chance = 4950 },
+	{ id = "coat", chance = 2010 },
+	{ id = "cape", chance = 4870 },
+	{ id = "cookie", chance = 29750, maxCount = 8 },
+	{ id = "star herb", chance = 8950 },
+	{ id = "witch broom", chance = 10000 },
+	{ id = "witch hat", chance = 80 },
+	{ id = "stuffed toad", chance = 10 },
+	{ id = "bag of apple slices", chance = 920 },
 }
 
 monster.attacks = {

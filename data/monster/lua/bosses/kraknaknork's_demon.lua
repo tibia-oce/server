@@ -1,3 +1,6 @@
+-- Kraknaknork's Demon (Tibia Wiki: https://tibia.fandom.com/wiki/Kraknaknork's_Demon)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Kraknaknork's Demon")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

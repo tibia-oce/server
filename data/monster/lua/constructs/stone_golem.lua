@@ -1,3 +1,6 @@
+-- Stone Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Stone_Golem)
+-- Version: 6.4
+
 local mType = Game.createMonsterType("Stone Golem")
 local monster = {}
 
@@ -13,21 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 67
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Maze of Lost Souls, in and around Ashta daramai, Formorgar Mines, \z
-		Mad Technomancer room, Dark Cathedral, Demona, Goroma, Tarpit Tomb, Peninsula Tomb, \z
-		Deeper Banuta, Forbidden Lands, Beregar Mines, Farmine Mines, Drillworm Caves, 2 caves on Hrodmir, \z
-		Orc Fortress (single spawn) and Medusa Tower.",
-}
 
 monster.health = 270
 monster.maxHealth = 270
@@ -62,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,17 +63,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small stone", chance = 13890, maxCount = 4 },
+	{ id = "small stone", chance = 13890, maxCount = 4 },
 	{ id = 3007, chance = 120 }, -- crystal ring
-	{ name = "gold coin", chance = 90000, maxCount = 40 },
+	{ id = "gold coin", chance = 90000, maxCount = 40 },
 	{ id = 3039, chance = 30 }, -- red gem
 	{ id = 3050, chance = 5070 }, -- power ring
-	{ name = "carlin sword", chance = 2500 },
-	{ name = "iron ore", chance = 1980 },
-	{ name = "ancient stone", chance = 1020 },
-	{ name = "shiny stone", chance = 760 },
-	{ name = "sulphurous stone", chance = 10370 },
-	{ name = "piece of marble rock", chance = 380 },
+	{ id = "carlin sword", chance = 2500 },
+	{ id = "iron ore", chance = 1980 },
+	{ id = "ancient stone", chance = 1020 },
+	{ id = "shiny stone", chance = 760 },
+	{ id = "sulphurous stone", chance = 10370 },
+	{ id = "piece of marble rock", chance = 380 },
 	{ id = 12600, chance = 550 }, -- coal
 }
 

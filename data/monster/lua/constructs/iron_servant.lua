@@ -1,3 +1,6 @@
+-- Iron Servant (Tibia Wiki: https://tibia.fandom.com/wiki/Iron_Servant)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Iron Servant")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 700
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 30,
-	Stars = 2,
-	Occurrence = 3,
-	Locations = "Edron.",
-}
 
 monster.health = 350
 monster.maxHealth = 350
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,11 +68,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 82000, maxCount = 55 },
-	{ name = "halberd", chance = 1000 },
-	{ name = "gear wheel", chance = 4840 },
+	{ id = "gold coin", chance = 82000, maxCount = 55 },
+	{ id = "halberd", chance = 1000 },
+	{ id = "gear wheel", chance = 4840 },
 	{ id = 8894, chance = 200 }, -- heavily rusted armor
-	{ name = "slime mould", chance = 310 },
+	{ id = "slime mould", chance = 310 },
 }
 
 monster.attacks = {

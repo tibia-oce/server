@@ -1,3 +1,6 @@
+-- Grynch Clan Goblin (Tibia Wiki: https://tibia.fandom.com/wiki/Grynch_Clan_Goblin)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Grynch Clan Goblin")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 393
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 10,
-	Stars = 1,
-	Occurrence = 3,
-	Locations = "They do not have a set respawn spot. They are announced to be stealing presents from a \z
-			random Tibian city and spawn in the aforetold city. \z
-			There are two or three messages that appear on each raid and three massive spawns of goblins.",
-}
 
 monster.health = 80
 monster.maxHealth = 80
@@ -64,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -108,32 +95,32 @@ monster.loot = {
 	{ id = 2950, chance = 5000 }, -- lute
 	{ id = 2983, chance = 500 }, -- flower bowl
 	{ id = 2992, chance = 7000, maxCount = 5 }, -- snowball
-	{ name = "piggy bank", chance = 1000 },
-	{ name = "gold coin", chance = 22500, maxCount = 22 },
-	{ name = "scarab coin", chance = 500, maxCount = 2 },
+	{ id = "piggy bank", chance = 1000 },
+	{ id = "gold coin", chance = 22500, maxCount = 22 },
+	{ id = "scarab coin", chance = 500, maxCount = 2 },
 	{ id = 3047, chance = 4000 }, -- magic light wand
-	{ name = "blank rune", chance = 5000 },
+	{ id = "blank rune", chance = 5000 },
 	{ id = 3211, chance = 1500 }, -- witchesbroom
 	{ id = 3463, chance = 1000 }, -- mirror
-	{ name = "scarf", chance = 4000 },
-	{ name = "red apple", chance = 700, maxCount = 3 },
-	{ name = "orange", chance = 7000, maxCount = 3 },
-	{ name = "cherry", chance = 7000, maxCount = 4 },
-	{ name = "cookie", chance = 7000, maxCount = 5 },
-	{ name = "candy cane", chance = 5000, maxCount = 3 },
+	{ id = "scarf", chance = 4000 },
+	{ id = "red apple", chance = 700, maxCount = 3 },
+	{ id = "orange", chance = 7000, maxCount = 3 },
+	{ id = "cherry", chance = 7000, maxCount = 4 },
+	{ id = "cookie", chance = 7000, maxCount = 5 },
+	{ id = "candy cane", chance = 5000, maxCount = 3 },
 	{ id = 3606, chance = 5000, maxCount = 2 }, -- egg
-	{ name = "explorer brooch", chance = 4000 },
-	{ name = "orichalcum pearl", chance = 500, maxCount = 2 },
+	{ id = "explorer brooch", chance = 4000 },
+	{ id = "orichalcum pearl", chance = 500, maxCount = 2 },
 	{ id = 5792, chance = 1000 }, -- die
-	{ name = "chicken feather", chance = 4000, maxCount = 5 },
-	{ name = "bat wing", chance = 4000, maxCount = 3 },
-	{ name = "honeycomb", chance = 4000 },
-	{ name = "lump of cake dough", chance = 7000, maxCount = 3 },
-	{ name = "valentine's cake", chance = 1500 },
-	{ name = "christmas present bag", chance = 7000 },
-	{ name = "gingerbreadman", chance = 4000, maxCount = 2 },
-	{ name = "walnut", chance = 3500, maxCount = 5 },
-	{ name = "peanut", chance = 3500, maxCount = 100 },
+	{ id = "chicken feather", chance = 4000, maxCount = 5 },
+	{ id = "bat wing", chance = 4000, maxCount = 3 },
+	{ id = "honeycomb", chance = 4000 },
+	{ id = "lump of cake dough", chance = 7000, maxCount = 3 },
+	{ id = "valentine's cake", chance = 1500 },
+	{ id = "christmas present bag", chance = 7000 },
+	{ id = "gingerbreadman", chance = 4000, maxCount = 2 },
+	{ id = "walnut", chance = 3500, maxCount = 5 },
+	{ id = "peanut", chance = 3500, maxCount = 100 },
 }
 
 monster.attacks = {}
@@ -142,7 +129,7 @@ monster.defenses = {
 	defense = 12,
 	armor = 5,
 	mitigation = 0.25,
-	{ name = "speed", interval = 1000, chance = 15, speedChange = 500, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 1000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 200},
 }
 
 monster.elements = {

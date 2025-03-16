@@ -1,3 +1,6 @@
+-- Draken Warmaster (Tibia Wiki: https://tibia.fandom.com/wiki/Draken_Warmaster)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Draken Warmaster")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 617
-monster.Bestiary = {
-	class = "Dragon",
-	race = BESTY_RACE_DRAGON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Zao Palace, Chazorai, Razzachai, and Zzaion.",
-}
 
 monster.health = 4150
 monster.maxHealth = 4150
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,21 +65,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 97490, maxCount = 197 },
-	{ name = "platinum coin", chance = 47640, maxCount = 5 },
-	{ name = "meat", chance = 30390 },
-	{ name = "bone shoulderplate", chance = 12840 },
-	{ name = "zaoan halberd", chance = 8930 },
-	{ name = "warmaster's wristguards", chance = 7020 },
-	{ name = "great health potion", chance = 3710, maxCount = 3 },
-	{ name = "ultimate health potion", chance = 3410 },
-	{ name = "zaoan shoes", chance = 2610 },
-	{ name = "tower shield", chance = 2310 },
-	{ name = "small ruby", chance = 1810, maxCount = 5 },
-	{ name = "zaoan legs", chance = 1300 },
-	{ name = "zaoan armor", chance = 600 },
-	{ name = "drakinata", chance = 600 },
-	{ name = "ring of the sky", chance = 220 },
+	{ id = "gold coin", chance = 97490, maxCount = 197 },
+	{ id = "platinum coin", chance = 47640, maxCount = 5 },
+	{ id = "meat", chance = 30390 },
+	{ id = "bone shoulderplate", chance = 12840 },
+	{ id = "zaoan halberd", chance = 8930 },
+	{ id = "warmaster's wristguards", chance = 7020 },
+	{ id = "great health potion", chance = 3710, maxCount = 3 },
+	{ id = "ultimate health potion", chance = 3410 },
+	{ id = "zaoan shoes", chance = 2610 },
+	{ id = "tower shield", chance = 2310 },
+	{ id = "small ruby", chance = 1810, maxCount = 5 },
+	{ id = "zaoan legs", chance = 1300 },
+	{ id = "zaoan armor", chance = 600 },
+	{ id = "drakinata", chance = 600 },
+	{ id = "ring of the sky", chance = 220 },
 }
 
 monster.attacks = {

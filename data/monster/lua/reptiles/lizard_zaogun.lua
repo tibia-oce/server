@@ -1,3 +1,6 @@
+-- Lizard Zaogun (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Zaogun)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Lizard Zaogun")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 616
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Zzaion, Zao Palace, Muggy Plains, Zao Orc Land (in fort), Razzachai, Temple of Equilibrium.",
-}
 
 monster.health = 2955
 monster.maxHealth = 2955
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,22 +67,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 31500, maxCount = 100 },
-	{ name = "gold coin", chance = 31500, maxCount = 100 },
-	{ name = "gold coin", chance = 31000, maxCount = 68 },
-	{ name = "small emerald", chance = 4830, maxCount = 5 },
-	{ name = "platinum coin", chance = 48900, maxCount = 2 },
-	{ name = "tower shield", chance = 1000 },
-	{ name = "lizard leather", chance = 14360 },
-	{ name = "lizard scale", chance = 12520 },
-	{ name = "strong health potion", chance = 1900 },
-	{ name = "great health potion", chance = 7000, maxCount = 3 },
-	{ name = "red lantern", chance = 2170 },
-	{ name = "zaoan armor", chance = 530 },
-	{ name = "zaoan shoes", chance = 1000 },
-	{ name = "zaoan legs", chance = 1001 },
-	{ name = "zaogun flag", chance = 8280 },
-	{ name = "zaogun shoulderplates", chance = 14980 },
+	{ id = "gold coin", chance = 31500, maxCount = 100 },
+	{ id = "gold coin", chance = 31500, maxCount = 100 },
+	{ id = "gold coin", chance = 31000, maxCount = 68 },
+	{ id = "small emerald", chance = 4830, maxCount = 5 },
+	{ id = "platinum coin", chance = 48900, maxCount = 2 },
+	{ id = "tower shield", chance = 1000 },
+	{ id = "lizard leather", chance = 14360 },
+	{ id = "lizard scale", chance = 12520 },
+	{ id = "strong health potion", chance = 1900 },
+	{ id = "great health potion", chance = 7000, maxCount = 3 },
+	{ id = "red lantern", chance = 2170 },
+	{ id = "zaoan armor", chance = 530 },
+	{ id = "zaoan shoes", chance = 1000 },
+	{ id = "zaoan legs", chance = 1001 },
+	{ id = "zaogun flag", chance = 8280 },
+	{ id = "zaogun shoulderplates", chance = 14980 },
 }
 
 monster.attacks = {

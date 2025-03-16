@@ -1,3 +1,6 @@
+-- Metal Gargoyle (Tibia Wiki: https://tibia.fandom.com/wiki/Metal_Gargoyle)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Metal Gargoyle")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1039
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Workshop Quarter, Glooth Factory, Underground Glooth Factory, Abandoned Sewers, \z
-		Oramond Dungeon (depending on Magistrate votes), Jaccus Maxxens Dungeon.",
-}
 
 monster.health = 2100
 monster.maxHealth = 2100
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Ghastly Dragon (Tibia Wiki: https://tibia.fandom.com/wiki/Ghastly_Dragon)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Ghastly Dragon")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 643
-monster.Bestiary = {
-	class = "Dragon",
-	race = BESTY_RACE_DRAGON,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Ghastly Dragon Lair, Corruption Hole, Razachai including the Inner Sanctum, Zao Palace, Deeper Banuta single spawn, Chyllfroest.",
-}
 
 monster.health = 7800
 monster.maxHealth = 7800
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 4,
@@ -78,33 +68,33 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 99500, maxCount = 238 },
-	{ name = "plate legs", chance = 53270 },
-	{ name = "small emerald", chance = 41210, maxCount = 5 },
-	{ name = "platinum coin", chance = 33170, maxCount = 2 },
-	{ name = "great spirit potion", chance = 32659, maxCount = 2 },
-	{ name = "dark armor", chance = 30650 },
-	{ name = "great mana potion", chance = 27140, maxCount = 2 },
-	{ name = "ultimate health potion", chance = 24120 },
-	{ name = "undead heart", chance = 21610 },
-	{ name = "zaoan halberd", chance = 16580 },
+	{ id = "gold coin", chance = 99500, maxCount = 238 },
+	{ id = "plate legs", chance = 53270 },
+	{ id = "small emerald", chance = 41210, maxCount = 5 },
+	{ id = "platinum coin", chance = 33170, maxCount = 2 },
+	{ id = "great spirit potion", chance = 32659, maxCount = 2 },
+	{ id = "dark armor", chance = 30650 },
+	{ id = "great mana potion", chance = 27140, maxCount = 2 },
+	{ id = "ultimate health potion", chance = 24120 },
+	{ id = "undead heart", chance = 21610 },
+	{ id = "zaoan halberd", chance = 16580 },
 	{ id = 8896, chance = 15080 }, -- slightly rusted armor
-	{ name = "demonic essence", chance = 10550 },
-	{ name = "terra boots", chance = 10050 },
-	{ name = "twin hooks", chance = 9550 },
-	{ name = "ghastly dragon head", chance = 7540 },
-	{ name = "soul orb", chance = 7040 },
-	{ name = "terra legs", chance = 4520 },
-	{ name = "jade hat", chance = 1010 },
-	{ name = "zaoan armor", chance = 1010 },
-	{ name = "guardian boots", chance = 1010 },
-	{ name = "drakinata", chance = 1010 },
-	{ name = "spellweaver's robe", chance = 500 },
-	{ name = "zaoan shoes", chance = 980 },
-	{ name = "zaoan legs", chance = 970 },
-	{ name = "shiny stone", chance = 830 },
-	{ name = "zaoan helmet", chance = 230 },
-	{ name = "zaoan sword", chance = 120 },
+	{ id = "demonic essence", chance = 10550 },
+	{ id = "terra boots", chance = 10050 },
+	{ id = "twin hooks", chance = 9550 },
+	{ id = "ghastly dragon head", chance = 7540 },
+	{ id = "soul orb", chance = 7040 },
+	{ id = "terra legs", chance = 4520 },
+	{ id = "jade hat", chance = 1010 },
+	{ id = "zaoan armor", chance = 1010 },
+	{ id = "guardian boots", chance = 1010 },
+	{ id = "drakinata", chance = 1010 },
+	{ id = "spellweaver's robe", chance = 500 },
+	{ id = "zaoan shoes", chance = 980 },
+	{ id = "zaoan legs", chance = 970 },
+	{ id = "shiny stone", chance = 830 },
+	{ id = "zaoan helmet", chance = 230 },
+	{ id = "zaoan sword", chance = 120 },
 }
 
 monster.attacks = {
@@ -115,7 +105,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_LIFEDRAIN, minDamage = -80, maxDamage = -230, range = 7, effect = CONST_ME_MAGIC_RED, target = true },
 	{ name = "ghastly dragon wave", interval = 2000, chance = 10, minDamage = -120, maxDamage = -250, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_DEATHDAMAGE, minDamage = -110, maxDamage = -180, radius = 4, effect = CONST_ME_MORTAREA, target = false },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -800, range = 7, effect = CONST_ME_SMALLCLOUDS, target = true, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -800, range = 7, effect = CONST_ME_SMALLCLOUDS, target = true, duration = 30000 },
 }
 
 monster.defenses = {

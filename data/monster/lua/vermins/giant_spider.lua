@@ -1,3 +1,6 @@
+-- Giant Spider (Tibia Wiki: https://tibia.fandom.com/wiki/Giant_Spider)
+-- Version: 5.0
+
 local mType = Game.createMonsterType("Giant Spider")
 local monster = {}
 
@@ -13,24 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 38
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Plains of Havoc, Point of no Return in Outlaw Camp, Ghostlands, Hellgate, \z
-	Mintwallin Secret Laboratory, Mad Mage Room deep below Ancient Temple, Mount Sternum Undead Cave, \z
-	Green Claw Swamp, Maze of Lost Souls, Crusader Helmet Quest in the Dwarf Mines, Mushroom Gardens, \z
-	west Drillworm Caves, Edron Hero Cave, Edron Orc Cave, on a hill near Drefia, \z
-	on a hill north-west of Ankrahmun (inaccessible), Forbidden Lands, Deeper Banuta, Malada, Ramoa, \z
-	 Arena and Zoo Quarter, second floor up of Cemetery Quarter, beneath Fenrock, Vengoth Castle, \z
-	 Vandura Mountain, in a cave in Robson Isle, Chyllfroest, Spider Caves, second floor of Krailos Spider Lair, Caverna Exanima.",
-}
 
 monster.health = 1300
 monster.maxHealth = 1300
@@ -67,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -88,19 +72,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 99990, maxCount = 195 },
+	{ id = "gold coin", chance = 99990, maxCount = 195 },
 	{ id = 3053, chance = 710 }, -- time ring
-	{ name = "platinum amulet", chance = 280 },
-	{ name = "two handed sword", chance = 5100 },
-	{ name = "steel helmet", chance = 4980 },
-	{ name = "plate armor", chance = 9980 },
-	{ name = "knight armor", chance = 500 },
-	{ name = "knight legs", chance = 840 },
-	{ name = "poison arrow", chance = 11950, maxCount = 12 },
-	{ name = "plate legs", chance = 8333 },
-	{ name = "spider silk", chance = 1990 },
-	{ name = "strong health potion", chance = 3550 },
-	{ name = "lightning headband", chance = 270 },
+	{ id = "platinum amulet", chance = 280 },
+	{ id = "two handed sword", chance = 5100 },
+	{ id = "steel helmet", chance = 4980 },
+	{ id = "plate armor", chance = 9980 },
+	{ id = "knight armor", chance = 500 },
+	{ id = "knight legs", chance = 840 },
+	{ id = "poison arrow", chance = 11950, maxCount = 12 },
+	{ id = "plate legs", chance = 8333 },
+	{ id = "spider silk", chance = 1990 },
+	{ id = "strong health potion", chance = 3550 },
+	{ id = "lightning headband", chance = 270 },
 }
 
 monster.attacks = {
@@ -113,7 +97,7 @@ monster.defenses = {
 	defense = 0,
 	armor = 30,
 	mitigation = 1.04,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 390, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 240},
 }
 
 monster.elements = {

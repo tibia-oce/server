@@ -1,3 +1,6 @@
+-- Vexclaw (Tibia Wiki: https://tibia.fandom.com/wiki/Vexclaw)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Vexclaw")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1197
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "The Dungeons of The Ruthless Seven.",
-}
 
 monster.health = 8500
 monster.maxHealth = 8500
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,41 +68,41 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 200 },
-	{ name = "platinum coin", chance = 100000, maxCount = 6 },
-	{ name = "great spirit potion", chance = 26010, maxCount = 5 },
-	{ name = "great mana potion", chance = 25210, maxCount = 5 },
-	{ name = "vexclaw talon", chance = 21500 },
-	{ name = "demonic essence", chance = 20730 },
-	{ name = "ultimate health potion", chance = 19960, maxCount = 5 },
-	{ name = "fire mushroom", chance = 19940, maxCount = 6 },
-	{ name = "golden sickle", chance = 18940 },
-	{ name = "purple tome", chance = 18450 },
-	{ name = "small amethyst", chance = 10090, maxCount = 5 },
-	{ name = "small topaz", chance = 9790, maxCount = 5 },
-	{ name = "small emerald", chance = 9770, maxCount = 5 },
-	{ name = "small ruby", chance = 9590, maxCount = 5 },
-	{ name = "talon", chance = 5400 },
-	{ name = "yellow gem", chance = 5090 },
-	{ name = "wand of voodoo", chance = 4940 },
+	{ id = "gold coin", chance = 100000, maxCount = 200 },
+	{ id = "platinum coin", chance = 100000, maxCount = 6 },
+	{ id = "great spirit potion", chance = 26010, maxCount = 5 },
+	{ id = "great mana potion", chance = 25210, maxCount = 5 },
+	{ id = "vexclaw talon", chance = 21500 },
+	{ id = "demonic essence", chance = 20730 },
+	{ id = "ultimate health potion", chance = 19960, maxCount = 5 },
+	{ id = "fire mushroom", chance = 19940, maxCount = 6 },
+	{ id = "golden sickle", chance = 18940 },
+	{ id = "purple tome", chance = 18450 },
+	{ id = "small amethyst", chance = 10090, maxCount = 5 },
+	{ id = "small topaz", chance = 9790, maxCount = 5 },
+	{ id = "small emerald", chance = 9770, maxCount = 5 },
+	{ id = "small ruby", chance = 9590, maxCount = 5 },
+	{ id = "talon", chance = 5400 },
+	{ id = "yellow gem", chance = 5090 },
+	{ id = "wand of voodoo", chance = 4940 },
 	{ id = 3039, chance = 4730 }, -- red gem
-	{ name = "ice rapier", chance = 4730 },
-	{ name = "fire axe", chance = 3520 },
-	{ name = "might ring", chance = 2250 },
-	{ name = "giant sword", chance = 1880 },
+	{ id = "ice rapier", chance = 4730 },
+	{ id = "fire axe", chance = 3520 },
+	{ id = "might ring", chance = 2250 },
+	{ id = "giant sword", chance = 1880 },
 	{ id = 3049, chance = 1790 }, -- stealth ring
 	{ id = 3051, chance = 1790 }, -- energy ring
-	{ name = "rift lance", chance = 1360 },
+	{ id = "rift lance", chance = 1360 },
 	{ id = 3098, chance = 1320 }, -- ring of healing
-	{ name = "platinum amulet", chance = 940 },
-	{ name = "devil helmet", chance = 520 },
-	{ name = "rift crossbow", chance = 370 },
-	{ name = "rift bow", chance = 370 },
-	{ name = "rift shield", chance = 370 },
-	{ name = "demon shield", chance = 370 },
-	{ name = "magic plate armor", chance = 70 },
-	{ name = "golden legs", chance = 50 },
-	{ name = "demonrage sword", chance = 30 },
+	{ id = "platinum amulet", chance = 940 },
+	{ id = "devil helmet", chance = 520 },
+	{ id = "rift crossbow", chance = 370 },
+	{ id = "rift bow", chance = 370 },
+	{ id = "rift shield", chance = 370 },
+	{ id = "demon shield", chance = 370 },
+	{ id = "magic plate armor", chance = 70 },
+	{ id = "golden legs", chance = 50 },
+	{ id = "demonrage sword", chance = 30 },
 }
 
 monster.attacks = {
@@ -125,14 +115,14 @@ monster.attacks = {
 	{ name = "firefield", interval = 2000, chance = 10, range = 7, radius = 1, shootEffect = CONST_ANI_FIRE, target = true },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -300, maxDamage = -490, length = 8, spread = 0, effect = CONST_ME_PURPLEENERGY, target = false },
 	{ name = "energy strike", interval = 2000, chance = 10, minDamage = -210, maxDamage = -300, range = 1, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -300, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -300, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 30000 },
 }
 
 monster.defenses = {
 	defense = 55,
 	armor = 55,
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 180, maxDamage = 250, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 320, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 270},
 }
 
 monster.elements = {

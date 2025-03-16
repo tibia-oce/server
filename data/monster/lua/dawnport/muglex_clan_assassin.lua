@@ -1,3 +1,6 @@
+-- Muglex Clan Assassin (Tibia Wiki: https://tibia.fandom.com/wiki/Muglex_Clan_Assassin)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Muglex Clan Assassin")
 local monster = {}
 
@@ -40,8 +43,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,7 +80,7 @@ monster.defenses = {
 	defense = 5,
 	armor = 3,
 	{ name = "invisible", interval = 2000, chance = 11, effect = CONST_ME_MAGIC_BLUE },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 145, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_RED, speed = 140},
 }
 
 monster.elements = {

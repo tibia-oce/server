@@ -1,3 +1,6 @@
+-- Minotaur Guard (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Guard)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Minotaur Guard")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 29
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Ancient Temple, Mintwallin, Minotaur Pyramid, Maze of Lost Souls, Folda, Cyclopolis, \z
-		Deeper Fibula Dungeon (level 50+ to open the door), Hero Cave, underground of Elvenbane, \z
-		Plains of Havoc, Kazordoon Minotaur Cave, Foreigner Quarter.",
-}
 
 monster.health = 185
 monster.maxHealth = 185
@@ -63,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,17 +67,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 59640, maxCount = 20 },
-	{ name = "double axe", chance = 400 },
-	{ name = "chain armor", chance = 2980 },
-	{ name = "brass armor", chance = 4390 },
-	{ name = "battle shield", chance = 2150 },
-	{ name = "fishing rod", chance = 480 },
-	{ name = "minotaur leather", chance = 1000 },
+	{ id = "gold coin", chance = 59640, maxCount = 20 },
+	{ id = "double axe", chance = 400 },
+	{ id = "chain armor", chance = 2980 },
+	{ id = "brass armor", chance = 4390 },
+	{ id = "battle shield", chance = 2150 },
+	{ id = "fishing rod", chance = 480 },
+	{ id = "minotaur leather", chance = 1000 },
 	{ id = 7401, chance = 80 }, -- minotaur trophy
-	{ name = "health potion", chance = 400 },
-	{ name = "minotaur horn", chance = 8330, maxCount = 2 },
-	{ name = "piece of warrior armor", chance = 5040 },
+	{ id = "health potion", chance = 400 },
+	{ id = "minotaur horn", chance = 8330, maxCount = 2 },
+	{ id = "piece of warrior armor", chance = 5040 },
 }
 
 monster.attacks = {

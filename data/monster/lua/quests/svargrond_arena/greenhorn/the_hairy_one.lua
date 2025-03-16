@@ -1,3 +1,6 @@
+-- The Hairy One (Tibia Wiki: https://tibia.fandom.com/wiki/The_Hairy_One)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("The Hairy One")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

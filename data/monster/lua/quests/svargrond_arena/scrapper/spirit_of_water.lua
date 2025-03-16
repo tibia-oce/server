@@ -1,3 +1,6 @@
+-- Spirit of Water (Tibia Wiki: https://tibia.fandom.com/wiki/Spirit_of_Water)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Spirit of Water")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 4,

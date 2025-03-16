@@ -1,3 +1,6 @@
+-- Zanakeph (Tibia Wiki: https://tibia.fandom.com/wiki/Zanakeph)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Zanakeph")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

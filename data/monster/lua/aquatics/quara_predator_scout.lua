@@ -1,3 +1,6 @@
+-- Quara Predator Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Predator_Scout)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Quara Predator Scout")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 238
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Malada, Hrodmir Quara Scout Caves, Quara Grotto, Oramond.",
-}
 
 monster.health = 890
 monster.maxHealth = 890
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -77,16 +67,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 60 },
-	{ name = "gold coin", chance = 48000, maxCount = 72 },
-	{ name = "quara bone", chance = 10150 },
-	{ name = "scale armor", chance = 8960 },
-	{ name = "double axe", chance = 5770 },
-	{ name = "shrimp", chance = 5050, maxCount = 5 },
-	{ name = "small diamond", chance = 5020, maxCount = 2 },
-	{ name = "two handed sword", chance = 3010 },
-	{ name = "fish fin", chance = 1080 },
-	{ name = "northwind rod", chance = 960 },
+	{ id = "gold coin", chance = 50000, maxCount = 60 },
+	{ id = "gold coin", chance = 48000, maxCount = 72 },
+	{ id = "quara bone", chance = 10150 },
+	{ id = "scale armor", chance = 8960 },
+	{ id = "double axe", chance = 5770 },
+	{ id = "shrimp", chance = 5050, maxCount = 5 },
+	{ id = "small diamond", chance = 5020, maxCount = 2 },
+	{ id = "two handed sword", chance = 3010 },
+	{ id = "fish fin", chance = 1080 },
+	{ id = "northwind rod", chance = 960 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Deathspawn (Tibia Wiki: https://tibia.fandom.com/wiki/Deathspawn)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Deathspawn")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

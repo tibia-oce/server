@@ -1,3 +1,6 @@
+-- Barbarian Bloodwalker (Tibia Wiki: https://tibia.fandom.com/wiki/Barbarian_Bloodwalker)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Barbarian Bloodwalker")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 323
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Krimhorn, Bittermor, Ragnir, Arena and Zoo Quarter inside the Arena.",
-}
 
 monster.health = 305
 monster.maxHealth = 305
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,17 +71,17 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2914, chance = 8280 }, -- lamp
-	{ name = "gold coin", chance = 55310, maxCount = 12 },
-	{ name = "battle axe", chance = 5910 },
-	{ name = "halberd", chance = 6740 },
-	{ name = "chain helmet", chance = 10520 },
-	{ name = "chain armor", chance = 10420 },
-	{ name = "ham", chance = 4900 },
-	{ name = "beastslayer axe", chance = 380 },
-	{ name = "red piece of cloth", chance = 540 },
-	{ name = "shard", chance = 300 },
-	{ name = "fur boots", chance = 100 },
-	{ name = "health potion", chance = 980 },
+	{ id = "gold coin", chance = 55310, maxCount = 12 },
+	{ id = "battle axe", chance = 5910 },
+	{ id = "halberd", chance = 6740 },
+	{ id = "chain helmet", chance = 10520 },
+	{ id = "chain armor", chance = 10420 },
+	{ id = "ham", chance = 4900 },
+	{ id = "beastslayer axe", chance = 380 },
+	{ id = "red piece of cloth", chance = 540 },
+	{ id = "shard", chance = 300 },
+	{ id = "fur boots", chance = 100 },
+	{ id = "health potion", chance = 980 },
 }
 
 monster.attacks = {
@@ -102,7 +92,7 @@ monster.defenses = {
 	defense = 0,
 	armor = 9,
 	mitigation = 0.25,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 240, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 236},
 }
 
 monster.elements = {

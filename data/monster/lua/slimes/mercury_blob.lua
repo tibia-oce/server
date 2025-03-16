@@ -1,3 +1,6 @@
+-- Mercury Blob (Tibia Wiki: https://tibia.fandom.com/wiki/Mercury_Blob)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Mercury Blob")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 515
-monster.Bestiary = {
-	class = "Slime",
-	race = BESTY_RACE_SLIME,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Alchemist Quarter.",
-}
 
 monster.health = 150
 monster.maxHealth = 150
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -84,7 +74,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "glob of mercury", chance = 18750 },
+	{ id = "glob of mercury", chance = 18750 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Warlord Ruzad (Tibia Wiki: https://tibia.fandom.com/wiki/Warlord_Ruzad)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Warlord Ruzad")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

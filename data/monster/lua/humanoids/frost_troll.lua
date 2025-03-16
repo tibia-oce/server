@@ -1,3 +1,6 @@
+-- Frost Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Frost_Troll)
+-- Version: 6.2
+
 local mType = Game.createMonsterType("Frost Troll")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 53
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Ice Islands, Svargrond and Edron.",
-}
 
 monster.health = 55
 monster.maxHealth = 55
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,14 +65,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50840, maxCount = 12 },
+	{ id = "gold coin", chance = 50840, maxCount = 12 },
 	{ id = 3130, chance = 8300 }, -- twigs
-	{ name = "rapier", chance = 15500 },
-	{ name = "spear", chance = 21500 },
+	{ id = "rapier", chance = 15500 },
+	{ id = "spear", chance = 21500 },
 	{ id = 3412, chance = 15850 }, -- wooden shield
-	{ name = "coat", chance = 1200 },
+	{ id = "coat", chance = 1200 },
 	{ id = 3578, chance = 18000 }, -- fish
-	{ name = "frosty ear of a troll", chance = 2000 },
+	{ id = "frosty ear of a troll", chance = 2000 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Charged Energy Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Charged_Energy_Elemental)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Charged Energy Elemental")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -63,10 +65,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 22 },
-	{ name = "flash arrow", chance = 6250, maxCount = 3 },
-	{ name = "energy soil", chance = 2063 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 22 },
+	{ id = "flash arrow", chance = 6250, maxCount = 3 },
+	{ id = "energy soil", chance = 2063 },
 }
 
 monster.attacks = {

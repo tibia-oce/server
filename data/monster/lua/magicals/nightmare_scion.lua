@@ -1,3 +1,6 @@
+-- Nightmare Scion (Tibia Wiki: https://tibia.fandom.com/wiki/Nightmare_Scion)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Nightmare Scion")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 518
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Cemetery Quarter, Alchemist Quarter and in the Arena and Zoo Quarter (unreachable), \z
-		Vengoth Castle, Formorgar Mines, Lower Spike, Robson Isle (single respawn), Krailos Ruins.",
-}
 
 monster.health = 1400
 monster.maxHealth = 1400
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,19 +69,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 53 },
-	{ name = "platinum coin", chance = 961, maxCount = 3 },
-	{ name = "crown helmet", chance = 666 },
-	{ name = "meat", chance = 50000, maxCount = 4 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 53 },
+	{ id = "platinum coin", chance = 961, maxCount = 3 },
+	{ id = "crown helmet", chance = 666 },
+	{ id = "meat", chance = 50000, maxCount = 4 },
 	{ id = 6299, chance = 250 }, -- death ring
-	{ name = "bar of chocolate", chance = 280 },
-	{ name = "diamond sceptre", chance = 340 },
-	{ name = "shadow sceptre", chance = 270 },
-	{ name = "focus cape", chance = 340 },
-	{ name = "crystal of focus", chance = 100 },
-	{ name = "essence of a bad dream", chance = 7692 },
-	{ name = "scythe leg", chance = 4761 },
+	{ id = "bar of chocolate", chance = 280 },
+	{ id = "diamond sceptre", chance = 340 },
+	{ id = "shadow sceptre", chance = 270 },
+	{ id = "focus cape", chance = 340 },
+	{ id = "crystal of focus", chance = 100 },
+	{ id = "essence of a bad dream", chance = 7692 },
+	{ id = "scythe leg", chance = 4761 },
 }
 
 monster.attacks = {

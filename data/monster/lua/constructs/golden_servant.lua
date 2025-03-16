@@ -1,3 +1,6 @@
+-- Golden Servant (Tibia Wiki: https://tibia.fandom.com/wiki/Golden_Servant)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Golden Servant")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 701
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Edron.",
-}
 
 monster.health = 550
 monster.maxHealth = 550
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,19 +68,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 40000, maxCount = 100 },
-	{ name = "gold coin", chance = 45000, maxCount = 40 },
+	{ id = "gold coin", chance = 40000, maxCount = 100 },
+	{ id = "gold coin", chance = 45000, maxCount = 40 },
 	{ id = 3049, chance = 450 }, -- stealth ring
-	{ name = "gold ring", chance = 10 },
-	{ name = "halberd", chance = 3003 },
-	{ name = "golden armor", chance = 10 },
-	{ name = "green mushroom", chance = 1450 },
-	{ name = "health potion", chance = 4930 },
-	{ name = "mana potion", chance = 4950 },
-	{ name = "spellbook of enlightenment", chance = 520 },
-	{ name = "gear wheel", chance = 940 },
-	{ name = "slime mould", chance = 340 },
-	{ name = "golden can of oil", chance = 40 },
+	{ id = "gold ring", chance = 10 },
+	{ id = "halberd", chance = 3003 },
+	{ id = "golden armor", chance = 10 },
+	{ id = "green mushroom", chance = 1450 },
+	{ id = "health potion", chance = 4930 },
+	{ id = "mana potion", chance = 4950 },
+	{ id = "spellbook of enlightenment", chance = 520 },
+	{ id = "gear wheel", chance = 940 },
+	{ id = "slime mould", chance = 340 },
+	{ id = "golden can of oil", chance = 40 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Mahrdis (Tibia Wiki: https://tibia.fandom.com/wiki/Mahrdis)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Mahrdis")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,24 +82,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "holy falcon", chance = 500 },
-	{ name = "small ruby", chance = 7000, maxCount = 3 },
-	{ name = "gold coin", chance = 50000, maxCount = 80 },
-	{ name = "gold coin", chance = 50000, maxCount = 70 },
-	{ name = "gold coin", chance = 50000, maxCount = 64 },
+	{ id = "holy falcon", chance = 500 },
+	{ id = "small ruby", chance = 7000, maxCount = 3 },
+	{ id = "gold coin", chance = 50000, maxCount = 80 },
+	{ id = "gold coin", chance = 50000, maxCount = 70 },
+	{ id = "gold coin", chance = 50000, maxCount = 64 },
 	{ id = 3039, chance = 1500 }, -- red gem
 	{ id = 3052, chance = 1500 }, -- life ring
-	{ name = "burning heart", chance = 100000 },
-	{ name = "fire axe", chance = 750 },
-	{ name = "phoenix shield", chance = 300 },
-	{ name = "great health potion", chance = 1500 },
+	{ id = "burning heart", chance = 100000 },
+	{ id = "fire axe", chance = 750 },
+	{ id = "phoenix shield", chance = 300 },
+	{ id = "great health potion", chance = 1500 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -400, condition = { type = CONDITION_POISON, totalDamage = 65, interval = 4000 } },
 	{ name = "combat", interval = 1600, chance = 7, type = COMBAT_PHYSICALDAMAGE, minDamage = -60, maxDamage = -600, range = 1, effect = CONST_ME_MAGIC_RED, target = false },
 	{ name = "combat", interval = 1000, chance = 7, type = COMBAT_FIREDAMAGE, minDamage = -60, maxDamage = -600, range = 7, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = false },
-	{ name = "speed", interval = 2000, chance = 13, speedChange = -850, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 50000 },
+	{ name = "speed", interval = 2000, chance = 13, speed = -850, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 50000 },
 	{ name = "combat", interval = 2000, chance = 34, type = COMBAT_FIREDAMAGE, minDamage = -80, maxDamage = -800, radius = 3, effect = CONST_ME_EXPLOSIONAREA, target = false },
 	{ name = "firefield", interval = 1000, chance = 12, radius = 4, effect = CONST_ME_BLOCKHIT, target = false },
 	-- fire

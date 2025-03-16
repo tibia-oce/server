@@ -1,3 +1,6 @@
+-- Insect Swarm (Tibia Wiki: https://tibia.fandom.com/wiki/Insect_Swarm)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Insect Swarm")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 621
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Zao Steppe, Northern Zao Plantations and the Horestis Tomb \z
-		(only when the curse of Horestis is not active).",
-}
 
 monster.health = 50
 monster.maxHealth = 50
@@ -60,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

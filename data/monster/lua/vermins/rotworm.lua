@@ -1,3 +1,6 @@
+-- Rotworm (Tibia Wiki: https://tibia.fandom.com/wiki/Rotworm)
+-- Version: 4.0
+
 local mType = Game.createMonsterType("Rotworm")
 local monster = {}
 
@@ -13,22 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 26
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Almost everywhere, like Ancient Temple, Vandura, Folda dungeon, Fibula Dungeon, \z
-		caves connecting Edron and Cormaya, Venore Swamp Troll cave, Thais Troll cave, Ferngrims Gate, \z
-		Dwarf Mines, Hellgate, below the graves in eastern Rookgaard, spider cave in western Rookgaard, \z
-		cave northeast of Ab'Dendriel, Darashia Rotworm Caves, Liberty Bay, Fenrock, \z
-		below Green Claw Swamp and some other places.",
-}
 
 monster.health = 65
 monster.maxHealth = 65
@@ -63,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,14 +63,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 71760, maxCount = 17 },
+	{ id = "gold coin", chance = 71760, maxCount = 17 },
 	{ id = 3264, chance = 3000 }, -- sword
-	{ name = "mace", chance = 4500 },
-	{ name = "meat", chance = 20000 },
-	{ name = "ham", chance = 20120 },
-	{ name = "worm", chance = 3000, maxCount = 3 },
-	{ name = "lump of dirt", chance = 10000 },
-	{ name = "legion helmet", chance = 1890 },
+	{ id = "mace", chance = 4500 },
+	{ id = "meat", chance = 20000 },
+	{ id = "ham", chance = 20120 },
+	{ id = "worm", chance = 3000, maxCount = 3 },
+	{ id = "lump of dirt", chance = 10000 },
+	{ id = "legion helmet", chance = 1890 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Panda (Tibia Wiki: https://tibia.fandom.com/wiki/Panda)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Panda")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 123
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "South of Port Hope around Trapwood, as well as a lone specimen in the Arena Quarter.",
-}
 
 monster.health = 80
 monster.maxHealth = 80
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,9 +65,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 70500, maxCount = 4 },
-	{ name = "ham", chance = 39000, maxCount = 2 },
-	{ name = "bamboo stick", chance = 10000 },
+	{ id = "meat", chance = 70500, maxCount = 4 },
+	{ id = "ham", chance = 39000, maxCount = 2 },
+	{ id = "bamboo stick", chance = 10000 },
 }
 
 monster.attacks = {

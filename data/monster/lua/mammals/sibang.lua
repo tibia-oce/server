@@ -1,3 +1,6 @@
+-- Sibang (Tibia Wiki: https://tibia.fandom.com/wiki/Sibang)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Sibang")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 118
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "In Banuta, north-east of Port Hope.",
-}
 
 monster.health = 225
 monster.maxHealth = 225
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,14 +66,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small stone", chance = 30060, maxCount = 3 },
-	{ name = "gold coin", chance = 56000, maxCount = 35 },
-	{ name = "orange", chance = 19840, maxCount = 5 },
-	{ name = "banana", chance = 30000, maxCount = 12 },
-	{ name = "coconut", chance = 1960, maxCount = 3 },
-	{ name = "melon", chance = 1000 },
-	{ name = "ape fur", chance = 1000 },
-	{ name = "banana sash", chance = 5000 },
+	{ id = "small stone", chance = 30060, maxCount = 3 },
+	{ id = "gold coin", chance = 56000, maxCount = 35 },
+	{ id = "orange", chance = 19840, maxCount = 5 },
+	{ id = "banana", chance = 30000, maxCount = 12 },
+	{ id = "coconut", chance = 1960, maxCount = 3 },
+	{ id = "melon", chance = 1000 },
+	{ id = "ape fur", chance = 1000 },
+	{ id = "banana sash", chance = 5000 },
 }
 
 monster.attacks = {
@@ -95,7 +85,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 15,
 	mitigation = 0.83,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 380, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 214},
 }
 
 monster.elements = {

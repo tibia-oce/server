@@ -1,3 +1,6 @@
+-- Tarnished Spirit (Tibia Wiki: https://tibia.fandom.com/wiki/Tarnished_Spirit)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("Tarnished Spirit")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 976
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Drefia.",
-}
 
 monster.health = 150
 monster.maxHealth = 150
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,13 +66,13 @@ monster.voices = {
 monster.loot = {
 	{ id = 2828, chance = 1310 }, -- book
 	{ id = 3049, chance = 180 }, -- stealth ring
-	{ name = "morning star", chance = 10610 },
-	{ name = "combat knife", chance = 7002 },
-	{ name = "ancient shield", chance = 860 },
-	{ name = "cape", chance = 8800 },
-	{ name = "shadow herb", chance = 14400 },
-	{ name = "white piece of cloth", chance = 1940 },
-	{ name = "ghostly tissue", chance = 1870 },
+	{ id = "morning star", chance = 10610 },
+	{ id = "combat knife", chance = 7002 },
+	{ id = "ancient shield", chance = 860 },
+	{ id = "cape", chance = 8800 },
+	{ id = "shadow herb", chance = 14400 },
+	{ id = "white piece of cloth", chance = 1940 },
+	{ id = "ghostly tissue", chance = 1870 },
 }
 
 monster.attacks = {

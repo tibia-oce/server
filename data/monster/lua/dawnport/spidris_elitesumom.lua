@@ -1,3 +1,6 @@
+-- Spidris Elite Summon (Tibia Wiki: https://tibia.fandom.com/wiki/Spidris_Elite)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Spidris Elite Summon")
 local monster = {}
 
@@ -47,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

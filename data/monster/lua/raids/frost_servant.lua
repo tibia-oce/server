@@ -1,3 +1,6 @@
+-- Frost Servant (Tibia Wiki: https://tibia.fandom.com/wiki/Frost_Servant)
+-- Version: 10.20
+
 local mType = Game.createMonsterType("Frost Servant")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Marsh Stalker (Tibia Wiki: https://tibia.fandom.com/wiki/Marsh_Stalker)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Marsh Stalker")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 914
-monster.Bestiary = {
-	class = "Bird",
-	race = BESTY_RACE_BIRD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Venore swamp surface, Venore Salamander Cave, Dryad Gardens.",
-}
 
 monster.health = 100
 monster.maxHealth = 100
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,15 +64,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 64090, maxCount = 23 },
-	{ name = "meat", chance = 19950, maxCount = 2 },
+	{ id = "gold coin", chance = 64090, maxCount = 23 },
+	{ id = "meat", chance = 19950, maxCount = 2 },
 	{ id = 3578, chance = 20320, maxCount = 2 }, -- fish
-	{ name = "worm", chance = 14730, maxCount = 2 },
-	{ name = "marsh stalker feather", chance = 8650 },
-	{ name = "longsword", chance = 7560 },
-	{ name = "marsh stalker beak", chance = 6080 },
+	{ id = "worm", chance = 14730, maxCount = 2 },
+	{ id = "marsh stalker feather", chance = 8650 },
+	{ id = "longsword", chance = 7560 },
+	{ id = "marsh stalker beak", chance = 6080 },
 	{ id = 3003, chance = 4830 }, -- rope
-	{ name = "seeds", chance = 110 },
+	{ id = "seeds", chance = 110 },
 }
 
 monster.attacks = {

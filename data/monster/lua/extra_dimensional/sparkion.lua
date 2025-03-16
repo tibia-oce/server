@@ -1,3 +1,6 @@
+-- Sparkion (Tibia Wiki: https://tibia.fandom.com/wiki/Sparkion)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Sparkion")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1234
-monster.Bestiary = {
-	class = "Extra Dimensional",
-	race = BESTY_RACE_EXTRA_DIMENSIONAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Otherworld",
-}
 
 monster.health = 2700
 monster.maxHealth = 2700
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -115,7 +105,7 @@ monster.defenses = {
 	defense = 40,
 	armor = 40,
 	mitigation = 1.32,
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 400, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_RED, speed = 302},
 	{ name = "combat", interval = 2000, chance = 5, type = COMBAT_HEALING, minDamage = 50, maxDamage = 180, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

@@ -1,3 +1,6 @@
+-- The Axeorcist (Tibia Wiki: https://tibia.fandom.com/wiki/The_Axeorcist)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("The Axeorcist")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,7 +77,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 15,
 	armor = 15,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 290, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 250},
 }
 
 monster.elements = {

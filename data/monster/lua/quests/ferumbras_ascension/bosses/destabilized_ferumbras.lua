@@ -1,3 +1,6 @@
+-- Destabilized Ferumbras (Tibia Wiki: https://tibia.fandom.com/wiki/Destabilized_Ferumbras)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Destabilized Ferumbras")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"FerumbrasMortalShell",
@@ -92,7 +94,7 @@ monster.defenses = {
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 23, type = COMBAT_HEALING, minDamage = 600, maxDamage = 2490, effect = CONST_ME_MAGIC_GREEN, target = false },
 	{ name = "combat", interval = 2000, chance = 3, type = COMBAT_HEALING, minDamage = 20000, maxDamage = 35000, effect = CONST_ME_MAGIC_GREEN, target = false },
-	{ name = "speed", interval = 2000, chance = 14, speedChange = 700, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 7000 },
+	{ name = "speed", interval = 2000, chance = 14, effect = CONST_ME_MAGIC_BLUE, speed = 0},
 }
 
 monster.elements = {

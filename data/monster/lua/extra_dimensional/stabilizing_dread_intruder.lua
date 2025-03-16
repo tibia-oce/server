@@ -1,3 +1,6 @@
+-- Stabilizing Dread Intruder (Tibia Wiki: https://tibia.fandom.com/wiki/Stabilizing_Dread_Intruder)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Stabilizing Dread Intruder")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1267
-monster.Bestiary = {
-	class = "Extra Dimensional",
-	race = BESTY_RACE_EXTRA_DIMENSIONAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Otherworld (Edron)",
-}
 
 monster.health = 2800
 monster.maxHealth = 2800
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

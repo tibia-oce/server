@@ -1,3 +1,6 @@
+-- Dwarf Henchman (Tibia Wiki: https://tibia.fandom.com/wiki/Dwarf_Henchman)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Dwarf Henchman")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 379
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Kazordoon Underground",
-}
 
 monster.health = 350
 monster.maxHealth = 350
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

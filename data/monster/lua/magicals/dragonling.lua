@@ -1,3 +1,6 @@
+-- Dragonling (Tibia Wiki: https://tibia.fandom.com/wiki/Dragonling)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Dragonling")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 894
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 1,
-	Locations = "Fury Dungeon and Goroma volcano (surface floor, inner volcano) only during the \z
-		Fire from the Earth Mini World Change.",
-}
 
 monster.health = 2600
 monster.maxHealth = 2600
@@ -63,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,12 +70,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 37500, maxCount = 100 },
-	{ name = "gold coin", chance = 37500, maxCount = 100 },
-	{ name = "gold coin", chance = 37500, maxCount = 27 },
-	{ name = "strong health potion", chance = 24480, maxCount = 2 },
-	{ name = "strong mana potion", chance = 16900, maxCount = 2 },
-	{ name = "blazing bone", chance = 12410 },
+	{ id = "gold coin", chance = 37500, maxCount = 100 },
+	{ id = "gold coin", chance = 37500, maxCount = 100 },
+	{ id = "gold coin", chance = 37500, maxCount = 27 },
+	{ id = "strong health potion", chance = 24480, maxCount = 2 },
+	{ id = "strong mana potion", chance = 16900, maxCount = 2 },
+	{ id = "blazing bone", chance = 12410 },
 }
 
 monster.attacks = {
@@ -95,7 +83,7 @@ monster.attacks = {
 	{ name = "dragonling wave", interval = 2000, chance = 10, minDamage = -120, maxDamage = -250, target = false },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_ENERGYDAMAGE, minDamage = -115, maxDamage = -180, radius = 3, effect = CONST_ME_PURPLEENERGY, target = false },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -95, maxDamage = -150, radius = 3, effect = CONST_ME_EXPLOSIONHIT, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -700, radius = 1, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_STUN, target = true, duration = 16000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -700, radius = 1, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_STUN, target = true, duration = 16000 },
 }
 
 monster.defenses = {

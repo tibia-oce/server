@@ -1,3 +1,6 @@
+-- Dire Penguin (Tibia Wiki: https://tibia.fandom.com/wiki/Dire_Penguin)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Dire Penguin")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 335
-monster.Bestiary = {
-	class = "Bird",
-	race = BESTY_RACE_BIRD,
-	toKill = 5,
-	FirstUnlock = 1,
-	SecondUnlock = 3,
-	CharmsPoints = 30,
-	Stars = 2,
-	Occurrence = 3,
-	Locations = "Any place with penguins like, Formorgar Glacier, Helheim, Tyrsung or Svargrond. \z
-		Known spawn locations: west of Svargrond, up the Formorgar Glacier.",
-}
 
 monster.health = 173
 monster.maxHealth = 173
@@ -60,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,24 +64,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 78260, maxCount = 10 },
+	{ id = "gold coin", chance = 78260, maxCount = 10 },
 	{ id = 3578, chance = 11040, maxCount = 3 }, -- fish
-	{ name = "rainbow trout", chance = 4800 },
+	{ id = "rainbow trout", chance = 4800 },
 	{ id = 3580, chance = 5900 }, -- northern pike
-	{ name = "green perch", chance = 6200 },
+	{ id = "green perch", chance = 6200 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -80 },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -35, range = 7, radius = 1, shootEffect = CONST_ANI_SMALLSTONE, effect = CONST_ME_EXPLOSIONAREA, target = true },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -600, range = 7, radius = 4, effect = CONST_ME_POFF, target = false, duration = 9000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -600, range = 7, radius = 4, effect = CONST_ME_POFF, target = false, duration = 9000 },
 }
 
 monster.defenses = {
 	defense = 16,
 	armor = 16,
 	mitigation = 0.59,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 310, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
+	{ name = "speed", interval = 2000, chance = 15, range = 7, effect = CONST_ME_MAGIC_RED, speed = 174},
 }
 
 monster.elements = {

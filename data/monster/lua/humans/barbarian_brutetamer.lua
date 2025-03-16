@@ -1,3 +1,6 @@
+-- Barbarian Brutetamer (Tibia Wiki: https://tibia.fandom.com/wiki/Barbarian_Brutetamer)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Barbarian Brutetamer")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 332
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Krimhorn, Bittermor, Ragnir, and Fenrock.",
-}
 
 monster.health = 145
 monster.maxHealth = 145
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -87,17 +77,17 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2824, chance = 4750 }, -- book
-	{ name = "gold coin", chance = 90230, maxCount = 15 },
+	{ id = "gold coin", chance = 90230, maxCount = 15 },
 	{ id = 3289, chance = 6550 }, -- staff
-	{ name = "chain armor", chance = 9300 },
-	{ name = "corncob", chance = 10940, maxCount = 2 },
-	{ name = "hunting spear", chance = 5200 },
-	{ name = "fur bag", chance = 7590 },
-	{ name = "brutetamer's staff", chance = 340 },
-	{ name = "fur boots", chance = 170 },
-	{ name = "mammoth fur cape", chance = 150 },
-	{ name = "mammoth fur shorts", chance = 90 },
-	{ name = "mana potion", chance = 580 },
+	{ id = "chain armor", chance = 9300 },
+	{ id = "corncob", chance = 10940, maxCount = 2 },
+	{ id = "hunting spear", chance = 5200 },
+	{ id = "fur bag", chance = 7590 },
+	{ id = "brutetamer's staff", chance = 340 },
+	{ id = "fur boots", chance = 170 },
+	{ id = "mammoth fur cape", chance = 150 },
+	{ id = "mammoth fur shorts", chance = 90 },
+	{ id = "mana potion", chance = 580 },
 }
 
 monster.attacks = {

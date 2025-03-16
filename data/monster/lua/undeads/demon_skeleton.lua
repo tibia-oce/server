@@ -1,3 +1,6 @@
+-- Demon Skeleton (Tibia Wiki: https://tibia.fandom.com/wiki/Demon_Skeleton)
+-- Version: 5.0
+
 local mType = Game.createMonsterType("Demon Skeleton")
 local monster = {}
 
@@ -17,21 +20,6 @@ monster.events = {
 	"UpperSpikeDeath",
 }
 
-monster.raceId = 37
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Triangle Tower, Hellgate, Draconia, Plains of Havoc, Pits of Inferno, Thais Ancient Temple, \z
-		Fibula Dungeon, Mintwallin, Mount Sternum hidden cave, Drefia, Ghost Ship, Edron Hero Cave, Shadowthorn, \z
-		Elvenbane, Ghostlands, Femor Hills, White Flower Temple, Isle of the Kings, Dark Cathedral, Ankrahmun Tombs, \z
-		Ramoa, Helheim, Vengoth, Upper Spike, Lion's Rock.",
-}
 
 monster.health = 400
 monster.maxHealth = 400
@@ -67,8 +55,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -82,20 +69,20 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 5270 }, -- torch
-	{ name = "black pearl", chance = 2900 },
-	{ name = "small ruby", chance = 1400 },
-	{ name = "gold coin", chance = 97000, maxCount = 75 },
-	{ name = "mind stone", chance = 520 },
-	{ name = "mysterious fetish", chance = 690 },
-	{ name = "throwing star", chance = 10000, maxCount = 3 },
-	{ name = "battle hammer", chance = 4000 },
-	{ name = "iron helmet", chance = 3450 },
-	{ name = "battle shield", chance = 5000 },
-	{ name = "guardian shield", chance = 100 },
-	{ name = "health potion", chance = 10120, maxCount = 2 },
-	{ name = "health potion", chance = 10000, maxCount = 2 },
-	{ name = "mana potion", chance = 5300 },
-	{ name = "demonic skeletal hand", chance = 12600 },
+	{ id = "black pearl", chance = 2900 },
+	{ id = "small ruby", chance = 1400 },
+	{ id = "gold coin", chance = 97000, maxCount = 75 },
+	{ id = "mind stone", chance = 520 },
+	{ id = "mysterious fetish", chance = 690 },
+	{ id = "throwing star", chance = 10000, maxCount = 3 },
+	{ id = "battle hammer", chance = 4000 },
+	{ id = "iron helmet", chance = 3450 },
+	{ id = "battle shield", chance = 5000 },
+	{ id = "guardian shield", chance = 100 },
+	{ id = "health potion", chance = 10120, maxCount = 2 },
+	{ id = "health potion", chance = 10000, maxCount = 2 },
+	{ id = "mana potion", chance = 5300 },
+	{ id = "demonic skeletal hand", chance = 12600 },
 }
 
 monster.attacks = {

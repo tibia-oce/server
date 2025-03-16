@@ -1,3 +1,6 @@
+-- Bane Bringer (Tibia Wiki: https://tibia.fandom.com/wiki/Bane_Bringer)
+-- Version: 8.70
+
 local mType = Game.createMonsterType("Bane Bringer")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 679
-monster.Bestiary = {
-	class = "Plant",
-	race = BESTY_RACE_PLANT,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Green Claw Swamp underground, near the big witches' cauldron.",
-}
 
 monster.health = 2500
 monster.maxHealth = 2500
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,7 +69,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3135, chance = 15220, maxCount = 96 }, -- wooden trash
-	{ name = "dry piece of wood", chance = 100000 },
+	{ id = "dry piece of wood", chance = 100000 },
 }
 
 monster.attacks = {

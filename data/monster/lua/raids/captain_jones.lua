@@ -1,3 +1,6 @@
+-- Captain Jones (Tibia Wiki: https://tibia.fandom.com/wiki/Captain_Jones)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Captain Jones")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Rupture (Tibia Wiki: https://tibia.fandom.com/wiki/Rupture)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Rupture")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"RuptureResonance",

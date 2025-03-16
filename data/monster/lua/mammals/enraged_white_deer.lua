@@ -1,3 +1,6 @@
+-- Enraged White Deer (Tibia Wiki: https://tibia.fandom.com/wiki/Enraged_White_Deer)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Enraged White Deer")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.events = {
 	"WhiteDeerScoutsDeath",
@@ -68,9 +70,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "ham", chance = 19850, maxCount = 3 },
-	{ name = "white deer antlers", chance = 19520 },
-	{ name = "white deer skin", chance = 20280 },
+	{ id = "ham", chance = 19850, maxCount = 3 },
+	{ id = "white deer antlers", chance = 19520 },
+	{ id = "white deer skin", chance = 20280 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Betrayed Wraith (Tibia Wiki: https://tibia.fandom.com/wiki/Betrayed_Wraith)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Betrayed Wraith")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 284
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Pits of Inferno, Helheim, The Inquisition Quest, Roshamuul Prison, Oramond Fury Dungeon",
-}
 
 monster.health = 4200
 monster.maxHealth = 4200
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,29 +66,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 11800, maxCount = 4 },
-	{ name = "gold coin", chance = 100000, maxCount = 200 },
-	{ name = "platinum coin", chance = 100000, maxCount = 8 },
-	{ name = "power bolt", chance = 50000, maxCount = 5 },
-	{ name = "orichalcum pearl", chance = 8000, maxCount = 2 },
-	{ name = "skull helmet", chance = 390 },
-	{ name = "golden figurine", chance = 160 },
-	{ name = "soul orb", chance = 10000 },
+	{ id = "small diamond", chance = 11800, maxCount = 4 },
+	{ id = "gold coin", chance = 100000, maxCount = 200 },
+	{ id = "platinum coin", chance = 100000, maxCount = 8 },
+	{ id = "power bolt", chance = 50000, maxCount = 5 },
+	{ id = "orichalcum pearl", chance = 8000, maxCount = 2 },
+	{ id = "skull helmet", chance = 390 },
+	{ id = "golden figurine", chance = 160 },
+	{ id = "soul orb", chance = 10000 },
 	{ id = 6299, chance = 390 }, -- death ring
-	{ name = "demonic essence", chance = 19430 },
-	{ name = "flask of demonic blood", chance = 65250 },
-	{ name = "assassin star", chance = 10780, maxCount = 5 },
-	{ name = "mercenary sword", chance = 1890 },
-	{ name = "bloody edge", chance = 80 },
-	{ name = "great mana potion", chance = 15000, maxCount = 3 },
-	{ name = "ultimate health potion", chance = 15410 },
-	{ name = "unholy bone", chance = 18410 },
+	{ id = "demonic essence", chance = 19430 },
+	{ id = "flask of demonic blood", chance = 65250 },
+	{ id = "assassin star", chance = 10780, maxCount = 5 },
+	{ id = "mercenary sword", chance = 1890 },
+	{ id = "bloody edge", chance = 80 },
+	{ id = "great mana potion", chance = 15000, maxCount = 3 },
+	{ id = "ultimate health potion", chance = 15410 },
+	{ id = "unholy bone", chance = 18410 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -450 },
 	{ name = "betrayed wraith skill reducer", interval = 2000, chance = 10, target = false },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -600, range = 7, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_SMALLCLOUDS, target = true, duration = 3000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -600, range = 7, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_SMALLCLOUDS, target = true, duration = 3000 },
 }
 
 monster.defenses = {
@@ -107,7 +97,7 @@ monster.defenses = {
 	mitigation = 1.46,
 	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 350, maxDamage = 600, effect = CONST_ME_MAGIC_BLUE, target = false },
 	{ name = "invisible", interval = 2000, chance = 10 },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 460, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 346},
 }
 
 monster.elements = {

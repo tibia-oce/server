@@ -1,3 +1,6 @@
+-- The Pit Lord (Tibia Wiki: https://tibia.fandom.com/wiki/The_Pit_Lord)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("The Pit Lord")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,7 +78,7 @@ monster.defenses = {
 	defense = 44,
 	armor = 46,
 	--	mitigation = ???,
-	{ name = "speed", interval = 5000, chance = 100, speedChange = 500, effect = CONST_ME_MAGIC_RED, target = false, duration = 2500 },
+	{ name = "speed", interval = 5000, chance = 100, effect = CONST_ME_MAGIC_RED, speed = 270},
 	{ name = "combat", interval = 6000, chance = 65, type = COMBAT_HEALING, minDamage = 20, maxDamage = 50, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

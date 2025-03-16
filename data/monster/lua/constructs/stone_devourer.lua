@@ -1,3 +1,6 @@
+-- Stone Devourer (Tibia Wiki: https://tibia.fandom.com/wiki/Stone_Devourer)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Stone Devourer")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 879
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 1,
-	Locations = "Warzone 1.",
-}
 
 monster.health = 4200
 monster.maxHealth = 4200
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,28 +67,28 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "platinum coin", chance = 92000, maxCount = 7 },
-	{ name = "stone skin amulet", chance = 2270 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "platinum coin", chance = 92000, maxCount = 7 },
+	{ id = "stone skin amulet", chance = 2270 },
 	{ id = 3097, chance = 2840 }, -- dwarven ring
-	{ name = "giant sword", chance = 570 },
-	{ name = "crystal mace", chance = 850 },
-	{ name = "war axe", chance = 920 },
-	{ name = "sapphire hammer", chance = 1490 },
-	{ name = "spiked squelcher", chance = 1490 },
-	{ name = "glorious axe", chance = 3340 },
-	{ name = "strong health potion", chance = 13840, maxCount = 2 },
-	{ name = "strong mana potion", chance = 14900, maxCount = 2 },
-	{ name = "great mana potion", chance = 15610, maxCount = 2 },
-	{ name = "mana potion", chance = 15050, maxCount = 2 },
-	{ name = "ultimate health potion", chance = 14410 },
+	{ id = "giant sword", chance = 570 },
+	{ id = "crystal mace", chance = 850 },
+	{ id = "war axe", chance = 920 },
+	{ id = "sapphire hammer", chance = 1490 },
+	{ id = "spiked squelcher", chance = 1490 },
+	{ id = "glorious axe", chance = 3340 },
+	{ id = "strong health potion", chance = 13840, maxCount = 2 },
+	{ id = "strong mana potion", chance = 14900, maxCount = 2 },
+	{ id = "great mana potion", chance = 15610, maxCount = 2 },
+	{ id = "mana potion", chance = 15050, maxCount = 2 },
+	{ id = "ultimate health potion", chance = 14410 },
 	{ id = 12600, chance = 11360 }, -- coal
-	{ name = "ancient stone", chance = 12850 },
-	{ name = "crystalline arrow", chance = 9940, maxCount = 10 },
-	{ name = "green crystal splinter", chance = 6960 },
-	{ name = "cyan crystal fragment", chance = 6810 },
-	{ name = "stone nose", chance = 18679 },
-	{ name = "crystalline spikes", chance = 16320 },
+	{ id = "ancient stone", chance = 12850 },
+	{ id = "crystalline arrow", chance = 9940, maxCount = 10 },
+	{ id = "green crystal splinter", chance = 6960 },
+	{ id = "cyan crystal fragment", chance = 6810 },
+	{ id = "stone nose", chance = 18679 },
+	{ id = "crystalline spikes", chance = 16320 },
 }
 
 monster.attacks = {

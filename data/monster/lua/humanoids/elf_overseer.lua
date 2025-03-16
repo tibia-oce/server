@@ -1,3 +1,6 @@
+-- Elf Overseer (Tibia Wiki: https://tibia.fandom.com/wiki/Elf_Overseer)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Elf Overseer")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 741
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Shadowthorn",
-}
 
 monster.health = 220
 monster.maxHealth = 220
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,26 +69,26 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2815, chance = 31000 }, -- scroll
-	{ name = "candlestick", chance = 2100 },
-	{ name = "gold coin", chance = 37000, maxCount = 47 },
-	{ name = "yellow gem", chance = 50 },
-	{ name = "life crystal", chance = 970 },
-	{ name = "wand of cosmic energy", chance = 1160 },
-	{ name = "elven amulet", chance = 1999 },
-	{ name = "blank rune", chance = 18000 },
-	{ name = "arrow", chance = 6000, maxCount = 3 },
+	{ id = "candlestick", chance = 2100 },
+	{ id = "gold coin", chance = 37000, maxCount = 47 },
+	{ id = "yellow gem", chance = 50 },
+	{ id = "life crystal", chance = 970 },
+	{ id = "wand of cosmic energy", chance = 1160 },
+	{ id = "elven amulet", chance = 1999 },
+	{ id = "blank rune", chance = 18000 },
+	{ id = "arrow", chance = 6000, maxCount = 3 },
 	{ id = 3509, chance = 1000 }, -- inkwell
-	{ name = "sandals", chance = 950 },
-	{ name = "green tunic", chance = 7000 },
-	{ name = "melon", chance = 22000 },
-	{ name = "bread", chance = 14000 },
-	{ name = "grave flower", chance = 880 },
-	{ name = "sling herb", chance = 5000 },
-	{ name = "holy orchid", chance = 2100 },
-	{ name = "strong mana potion", chance = 3000 },
-	{ name = "health potion", chance = 4000 },
-	{ name = "elvish talisman", chance = 10000 },
-	{ name = "elven astral observer", chance = 7710 },
+	{ id = "sandals", chance = 950 },
+	{ id = "green tunic", chance = 7000 },
+	{ id = "melon", chance = 22000 },
+	{ id = "bread", chance = 14000 },
+	{ id = "grave flower", chance = 880 },
+	{ id = "sling herb", chance = 5000 },
+	{ id = "holy orchid", chance = 2100 },
+	{ id = "strong mana potion", chance = 3000 },
+	{ id = "health potion", chance = 4000 },
+	{ id = "elvish talisman", chance = 10000 },
+	{ id = "elven astral observer", chance = 7710 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Mornenion (Tibia Wiki: https://tibia.fandom.com/wiki/Mornenion)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Mornenion")
 local monster = {}
 
@@ -51,8 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -69,8 +71,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "bag with stolen gold", chance = 100000 },
-	{ name = "platinum coin", chance = 75000, maxCount = 100 },
+	{ id = "bag with stolen gold", chance = 100000 },
+	{ id = "platinum coin", chance = 75000, maxCount = 100 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Deathbringer (Tibia Wiki: https://tibia.fandom.com/wiki/Deathbringer)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Deathbringer")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

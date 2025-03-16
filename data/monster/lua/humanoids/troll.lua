@@ -1,3 +1,6 @@
+-- Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Troll)
+-- Version: 2.0
+
 local mType = Game.createMonsterType("Troll")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 15
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "In many dungeons around Tibia like the troll cave in Thais, south of Carlin (out the east \z
-		exit and down the hole), Island of Destiny, Edron Troll Cave, and in Ab'Dendriel. Also found in Rookgaard.",
-}
 
 monster.health = 50
 monster.maxHealth = 50
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,16 +69,16 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3003, chance = 7950 }, -- rope
-	{ name = "gold coin", chance = 65300, maxCount = 12 },
-	{ name = "silver amulet", chance = 80 },
-	{ name = "hand axe", chance = 18000 },
-	{ name = "spear", chance = 13000 },
-	{ name = "studded club", chance = 5000 },
-	{ name = "leather helmet", chance = 12000 },
+	{ id = "gold coin", chance = 65300, maxCount = 12 },
+	{ id = "silver amulet", chance = 80 },
+	{ id = "hand axe", chance = 18000 },
+	{ id = "spear", chance = 13000 },
+	{ id = "studded club", chance = 5000 },
+	{ id = "leather helmet", chance = 12000 },
 	{ id = 3412, chance = 4730 }, -- wooden shield
-	{ name = "leather boots", chance = 10000 },
-	{ name = "meat", chance = 15000 },
-	{ name = "bunch of troll hair", chance = 1000 },
+	{ id = "leather boots", chance = 10000 },
+	{ id = "meat", chance = 15000 },
+	{ id = "bunch of troll hair", chance = 1000 },
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 

@@ -1,3 +1,6 @@
+-- Thornback Tortoise (Tibia Wiki: https://tibia.fandom.com/wiki/Thornback_Tortoise)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Thornback Tortoise")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 259
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Laguna Islands, Meriana Gargoyle Cave and one on Nargor.",
-}
 
 monster.health = 300
 monster.maxHealth = 300
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -73,17 +63,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "white pearl", chance = 1600 },
-	{ name = "black pearl", chance = 800 },
-	{ name = "gold coin", chance = 89500, maxCount = 48 },
-	{ name = "war hammer", chance = 260 },
+	{ id = "white pearl", chance = 1600 },
+	{ id = "black pearl", chance = 800 },
+	{ id = "gold coin", chance = 89500, maxCount = 48 },
+	{ id = "war hammer", chance = 260 },
 	{ id = 3578, chance = 10800, maxCount = 2 }, -- fish
-	{ name = "white mushroom", chance = 1200 },
-	{ name = "brown mushroom", chance = 700 },
-	{ name = "tortoise egg", chance = 790, maxCount = 3 },
+	{ id = "white mushroom", chance = 1200 },
+	{ id = "brown mushroom", chance = 700 },
+	{ id = "tortoise egg", chance = 790, maxCount = 3 },
 	{ id = 5899, chance = 800 }, -- turtle shell
-	{ name = "health potion", chance = 1600 },
-	{ name = "thorn", chance = 15980 },
+	{ id = "health potion", chance = 1600 },
+	{ id = "thorn", chance = 15980 },
 }
 
 monster.attacks = {

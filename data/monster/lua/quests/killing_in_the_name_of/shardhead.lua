@@ -1,3 +1,6 @@
+-- Shardhead (Tibia Wiki: https://tibia.fandom.com/wiki/Shardhead)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Shardhead")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -73,7 +75,7 @@ monster.loot = {
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = -0, maxDamage = -271 },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_ICEDAMAGE, minDamage = 0, maxDamage = -90, range = 7, shootEffect = CONST_ANI_ICE, effect = CONST_ME_ICEATTACK, target = true },
-	{ name = "speed", interval = 2000, chance = 12, speedChange = -360, length = 8, spread = 3, effect = CONST_ME_ICEAREA, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 12, speed = -360, length = 8, spread = 3, effect = CONST_ME_ICEAREA, target = false, duration = 5000 },
 }
 
 monster.defenses = {

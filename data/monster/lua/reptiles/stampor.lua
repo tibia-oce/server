@@ -1,3 +1,6 @@
+-- Stampor (Tibia Wiki: https://tibia.fandom.com/wiki/Stampor)
+-- Version: 8.70
+
 local mType = Game.createMonsterType("Stampor")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 694
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Stampor Cave on the Muggy Plains, Chyllfroest.",
-}
 
 monster.health = 1200
 monster.maxHealth = 1200
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,17 +64,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 30000, maxCount = 242 },
-	{ name = "platinum coin", chance = 9920, maxCount = 2 },
-	{ name = "war hammer", chance = 1010 },
-	{ name = "knight armor", chance = 870 },
-	{ name = "spiked squelcher", chance = 160 },
-	{ name = "strong health potion", chance = 5000, maxCount = 2 },
-	{ name = "strong mana potion", chance = 5000, maxCount = 2 },
-	{ name = "small topaz", chance = 7940, maxCount = 2 },
-	{ name = "stampor horn", chance = 4920 },
-	{ name = "stampor talons", chance = 9950, maxCount = 2 },
-	{ name = "hollow stampor hoof", chance = 3020 },
+	{ id = "gold coin", chance = 30000, maxCount = 242 },
+	{ id = "platinum coin", chance = 9920, maxCount = 2 },
+	{ id = "war hammer", chance = 1010 },
+	{ id = "knight armor", chance = 870 },
+	{ id = "spiked squelcher", chance = 160 },
+	{ id = "strong health potion", chance = 5000, maxCount = 2 },
+	{ id = "strong mana potion", chance = 5000, maxCount = 2 },
+	{ id = "small topaz", chance = 7940, maxCount = 2 },
+	{ id = "stampor horn", chance = 4920 },
+	{ id = "stampor talons", chance = 9950, maxCount = 2 },
+	{ id = "hollow stampor hoof", chance = 3020 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Lesser Fire Devil (Tibia Wiki: https://tibia.fandom.com/wiki/Lesser_Fire_Devil)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Lesser Fire Devil")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

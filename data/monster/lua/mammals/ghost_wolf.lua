@@ -1,3 +1,6 @@
+-- Ghost Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Ghost_Wolf)
+-- Version: 10.80
+
 local mType = Game.createMonsterType("Ghost Wolf")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1148
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 2,
-	Locations = "Poacher Caves/Gloomy.",
-}
 
 monster.health = 160
 monster.maxHealth = 160
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,7 +63,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 65000, maxCount = 20 },
+	{ id = "gold coin", chance = 65000, maxCount = 20 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Polar Bear (Tibia Wiki: https://tibia.fandom.com/wiki/Polar_Bear)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Polar Bear")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 42
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Ice Islands.",
-}
 
 monster.health = 85
 monster.maxHealth = 85
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,9 +64,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 50500, maxCount = 4 },
-	{ name = "ham", chance = 50320, maxCount = 2 },
-	{ name = "polar bear paw", chance = 980 },
+	{ id = "meat", chance = 50500, maxCount = 4 },
+	{ id = "ham", chance = 50320, maxCount = 2 },
+	{ id = "polar bear paw", chance = 980 },
 }
 
 monster.attacks = {

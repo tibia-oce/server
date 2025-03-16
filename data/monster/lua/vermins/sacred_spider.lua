@@ -1,3 +1,6 @@
+-- Sacred Spider (Tibia Wiki: https://tibia.fandom.com/wiki/Sacred_Spider)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Sacred Spider")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 709
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Horestis Tomb (third floor and lower).",
-}
 
 monster.health = 550
 monster.maxHealth = 550
@@ -61,9 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,12 +65,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 89790, maxCount = 100 },
-	{ name = "gold coin", chance = 89790, maxCount = 19 },
-	{ name = "scarab coin", chance = 6710, maxCount = 4 },
-	{ name = "plate armor", chance = 5050 },
-	{ name = "spider fangs", chance = 25380 },
-	{ name = "gold ingot", chance = 60 },
+	{ id = "gold coin", chance = 89790, maxCount = 100 },
+	{ id = "gold coin", chance = 89790, maxCount = 19 },
+	{ id = "scarab coin", chance = 6710, maxCount = 4 },
+	{ id = "plate armor", chance = 5050 },
+	{ id = "spider fangs", chance = 25380 },
+	{ id = "gold ingot", chance = 60 },
 }
 
 monster.attacks = {

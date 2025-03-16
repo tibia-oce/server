@@ -1,3 +1,6 @@
+-- Ice Overlord (Tibia Wiki: https://tibia.fandom.com/wiki/Ice_Overlord)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Ice Overlord")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 4,
@@ -67,14 +69,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 38 },
-	{ name = "platinum coin", chance = 50000, maxCount = 3 },
-	{ name = "flawless ice crystal", chance = 100000 },
+	{ id = "gold coin", chance = 50000, maxCount = 38 },
+	{ id = "platinum coin", chance = 50000, maxCount = 3 },
+	{ id = "flawless ice crystal", chance = 100000 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -400 },
-	{ name = "speed", interval = 2000, chance = 18, speedChange = -800, radius = 6, effect = CONST_ME_ICETORNADO, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 18, speed = -800, radius = 6, effect = CONST_ME_ICETORNADO, target = false, duration = 5000 },
 	{ name = "combat", interval = 1000, chance = 9, type = COMBAT_ICEDAMAGE, minDamage = -50, maxDamage = -400, range = 7, shootEffect = CONST_ANI_SMALLICE, effect = CONST_ME_ICEATTACK, target = true },
 }
 

@@ -1,3 +1,6 @@
+-- Chakoya Tribewarden (Tibia Wiki: https://tibia.fandom.com/wiki/Chakoya_Tribewarden)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Chakoya Tribewarden")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 319
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Inukaya, Chyllfroest, Chakoya Iceberg, Nibelor (during a quest).",
-}
 
 monster.health = 68
 monster.maxHealth = 68
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,15 +67,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 79590, maxCount = 20 },
-	{ name = "short sword", chance = 4810 },
-	{ name = "bone shield", chance = 1030 },
+	{ id = "gold coin", chance = 79590, maxCount = 20 },
+	{ id = "short sword", chance = 4810 },
+	{ id = "bone shield", chance = 1030 },
 	{ id = 3578, chance = 19370 }, -- fish
-	{ name = "northern pike", chance = 60 },
-	{ name = "rainbow trout", chance = 50 },
-	{ name = "green perch", chance = 100 },
-	{ name = "mammoth whopper", chance = 130 },
-	{ name = "fireproof horn", chance = 350 },
+	{ id = "northern pike", chance = 60 },
+	{ id = "rainbow trout", chance = 50 },
+	{ id = "green perch", chance = 100 },
+	{ id = "mammoth whopper", chance = 130 },
+	{ id = "fireproof horn", chance = 350 },
 }
 
 monster.attacks = {

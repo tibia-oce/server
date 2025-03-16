@@ -1,3 +1,6 @@
+-- Tyrn (Tibia Wiki: https://tibia.fandom.com/wiki/Tyrn)
+-- Version: 10.20
+
 local mType = Game.createMonsterType("Tyrn")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

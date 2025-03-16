@@ -1,3 +1,6 @@
+-- Raging mage (Tibia Wiki: https://tibia.fandom.com/wiki/Raging_Mage)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Raging mage")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

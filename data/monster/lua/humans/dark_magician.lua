@@ -1,3 +1,6 @@
+-- Dark Magician (Tibia Wiki: https://tibia.fandom.com/wiki/Dark_Magician)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Dark Magician")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 371
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Hero Cave (Edron), Magician Tower, Dark Cathedral and Yalahar Academy of Magic in \z
-		Magician Quarter and a single one on The Witches' Cliff (only accessible during a quest).",
-}
 
 monster.health = 325
 monster.maxHealth = 325
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,13 +67,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 75100, maxCount = 55 },
-	{ name = "blank rune", chance = 10000 },
-	{ name = "strong health potion", chance = 3000 },
-	{ name = "strong mana potion", chance = 2860 },
-	{ name = "health potion", chance = 12000 },
-	{ name = "mana potion", chance = 11900 },
-	{ name = "reins", chance = 20 },
+	{ id = "gold coin", chance = 75100, maxCount = 55 },
+	{ id = "blank rune", chance = 10000 },
+	{ id = "strong health potion", chance = 3000 },
+	{ id = "strong mana potion", chance = 2860 },
+	{ id = "health potion", chance = 12000 },
+	{ id = "mana potion", chance = 11900 },
+	{ id = "reins", chance = 20 },
 }
 
 monster.attacks = {

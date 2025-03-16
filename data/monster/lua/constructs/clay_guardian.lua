@@ -1,3 +1,6 @@
+-- Clay Guardian (Tibia Wiki: https://tibia.fandom.com/wiki/Clay_Guardian)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Clay Guardian")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 706
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Horestis Tomb, Middle Spike, Medusa Tower.",
-}
 
 monster.health = 625
 monster.maxHealth = 625
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,14 +66,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small stone", chance = 10000, maxCount = 10 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 63 },
-	{ name = "blank rune", chance = 25000 },
-	{ name = "earth arrow", chance = 5555, maxCount = 8 },
-	{ name = "small topaz", chance = 320 },
-	{ name = "lump of earth", chance = 25000 },
-	{ name = "clay lump", chance = 1100 },
+	{ id = "small stone", chance = 10000, maxCount = 10 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 63 },
+	{ id = "blank rune", chance = 25000 },
+	{ id = "earth arrow", chance = 5555, maxCount = 8 },
+	{ id = "small topaz", chance = 320 },
+	{ id = "lump of earth", chance = 25000 },
+	{ id = "clay lump", chance = 1100 },
 }
 
 monster.attacks = {

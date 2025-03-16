@@ -1,3 +1,6 @@
+-- Guzzlemaw (Tibia Wiki: https://tibia.fandom.com/wiki/Guzzlemaw)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Guzzlemaw")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1013
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Guzzlemaw Valley, and a single spawn in a tower in Upper Roshamuul (south of the Depot and west of the entrance to Roshamuul Prison).",
-}
 
 monster.health = 6400
 monster.maxHealth = 6400
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,34 +66,34 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "platinum coin", chance = 100000, maxCount = 7 },
-	{ name = "banana skin", chance = 10700 },
-	{ name = "piece of iron", chance = 10500 },
-	{ name = "fishbone", chance = 9500 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "platinum coin", chance = 100000, maxCount = 7 },
+	{ id = "banana skin", chance = 10700 },
+	{ id = "piece of iron", chance = 10500 },
+	{ id = "fishbone", chance = 9500 },
 	{ id = 3114, chance = 10400 }, -- skull
 	{ id = 3115, chance = 9200 }, -- bone
 	{ id = 3116, chance = 4500 }, -- big bone
-	{ name = "two handed sword", chance = 2700 },
+	{ id = "two handed sword", chance = 2700 },
 	{ id = 3578, chance = 7000, maxCount = 3 }, -- fish
-	{ name = "ham", chance = 10000 },
-	{ name = "iron ore", chance = 3000 },
-	{ name = "fish fin", chance = 5000 },
-	{ name = "hardened bone", chance = 5700 },
+	{ id = "ham", chance = 10000 },
+	{ id = "iron ore", chance = 3000 },
+	{ id = "fish fin", chance = 5000 },
+	{ id = "hardened bone", chance = 5700 },
 	{ id = 5951, chance = 9400 }, -- fish tail
-	{ name = "assassin dagger", chance = 1000 },
-	{ name = "haunted blade", chance = 2000 },
-	{ name = "nightmare blade", chance = 380 },
-	{ name = "great mana potion", chance = 17000, maxCount = 3 },
-	{ name = "great health potion", chance = 18500, maxCount = 2 },
-	{ name = "sai", chance = 1200 },
-	{ name = "violet crystal shard", chance = 3000 },
-	{ name = "brown crystal splinter", chance = 12000, maxCount = 2 },
-	{ name = "red crystal fragment", chance = 7600 },
+	{ id = "assassin dagger", chance = 1000 },
+	{ id = "haunted blade", chance = 2000 },
+	{ id = "nightmare blade", chance = 380 },
+	{ id = "great mana potion", chance = 17000, maxCount = 3 },
+	{ id = "great health potion", chance = 18500, maxCount = 2 },
+	{ id = "sai", chance = 1200 },
+	{ id = "violet crystal shard", chance = 3000 },
+	{ id = "brown crystal splinter", chance = 12000, maxCount = 2 },
+	{ id = "red crystal fragment", chance = 7600 },
 	{ id = 16279, chance = 12000 }, -- crystal rubbish
-	{ name = "cluster of solace", chance = 8920 },
-	{ name = "frazzle tongue", chance = 15000 },
-	{ name = "frazzle skin", chance = 14000 },
+	{ id = "cluster of solace", chance = 8920 },
+	{ id = "frazzle tongue", chance = 15000 },
+	{ id = "frazzle skin", chance = 14000 },
 }
 
 monster.attacks = {
@@ -112,7 +102,7 @@ monster.attacks = {
 	{ name = "condition", type = CONDITION_BLEEDING, interval = 2000, chance = 10, minDamage = -500, maxDamage = -1000, radius = 3, effect = CONST_ME_DRAWBLOOD, target = false },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = 0, maxDamage = -900, length = 8, spread = 0, effect = CONST_ME_EXPLOSIONAREA, target = false },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -500, radius = 2, shootEffect = CONST_ANI_LARGEROCK, effect = CONST_ME_STONES, target = true },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -800, radius = 6, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -800, radius = 6, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = 0, maxDamage = -800, length = 8, spread = 0, effect = CONST_ME_MAGIC_RED, target = false },
 }
 

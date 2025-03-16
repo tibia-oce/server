@@ -1,3 +1,6 @@
+-- Rift Invader (Tibia Wiki: https://tibia.fandom.com/wiki/Rift_Invader)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Rift Invader")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"RiftInvaderDeath",
@@ -81,7 +83,7 @@ monster.defenses = {
 	armor = 35,
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 14, type = COMBAT_HEALING, minDamage = 150, maxDamage = 250, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 388, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_RED, speed = 256},
 }
 
 monster.elements = {

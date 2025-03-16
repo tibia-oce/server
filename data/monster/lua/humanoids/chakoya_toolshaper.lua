@@ -1,3 +1,6 @@
+-- Chakoya Toolshaper (Tibia Wiki: https://tibia.fandom.com/wiki/Chakoya_Toolshaper)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Chakoya Toolshaper")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 328
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Inukaya, Chyllfroest, Chakoya Iceberg.",
-}
 
 monster.health = 80
 monster.maxHealth = 80
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,17 +67,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 77810, maxCount = 20 },
-	{ name = "mace", chance = 5300 },
-	{ name = "bone shield", chance = 720 },
+	{ id = "gold coin", chance = 77810, maxCount = 20 },
+	{ id = "mace", chance = 5300 },
+	{ id = "bone shield", chance = 720 },
 	{ id = 3456, chance = 1100 }, -- pick
 	{ id = 3578, chance = 25060, maxCount = 2 }, -- fish
-	{ name = "northern pike", chance = 70 },
-	{ name = "rainbow trout", chance = 140 },
-	{ name = "green perch", chance = 70 },
-	{ name = "mammoth whopper", chance = 160 },
+	{ id = "northern pike", chance = 70 },
+	{ id = "rainbow trout", chance = 140 },
+	{ id = "green perch", chance = 70 },
+	{ id = "mammoth whopper", chance = 160 },
 	{ id = 7441, chance = 450 }, -- ice cube
-	{ name = "fireproof horn", chance = 390 },
+	{ id = "fireproof horn", chance = 390 },
 }
 
 monster.attacks = {

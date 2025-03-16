@@ -1,3 +1,6 @@
+-- Quara Pincher (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Pincher)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Quara Pincher")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 245
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Calassa, Frozen Trench, Yalahar (Sunken Quarter).",
-}
 
 monster.health = 1800
 monster.maxHealth = 1800
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -76,24 +66,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 50 },
-	{ name = "platinum coin", chance = 40000 },
-	{ name = "quara pincers", chance = 14285 },
-	{ name = "great health potion", chance = 10630 },
-	{ name = "small ruby", chance = 7761, maxCount = 2 },
-	{ name = "halberd", chance = 6861 },
-	{ name = "shrimp", chance = 5245, maxCount = 5 },
-	{ name = "fish fin", chance = 1600 },
-	{ name = "warrior helmet", chance = 1460 },
-	{ name = "crown armor", chance = 280 },
-	{ name = "glacier robe", chance = 120 },
-	{ name = "giant shrimp", chance = 40 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 50 },
+	{ id = "platinum coin", chance = 40000 },
+	{ id = "quara pincers", chance = 14285 },
+	{ id = "great health potion", chance = 10630 },
+	{ id = "small ruby", chance = 7761, maxCount = 2 },
+	{ id = "halberd", chance = 6861 },
+	{ id = "shrimp", chance = 5245, maxCount = 5 },
+	{ id = "fish fin", chance = 1600 },
+	{ id = "warrior helmet", chance = 1460 },
+	{ id = "crown armor", chance = 280 },
+	{ id = "glacier robe", chance = 120 },
+	{ id = "giant shrimp", chance = 40 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -342, effect = CONST_ME_DRAWBLOOD },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -600, range = 1, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -600, range = 1, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
 }
 
 monster.defenses = {

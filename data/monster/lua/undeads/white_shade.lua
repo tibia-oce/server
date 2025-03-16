@@ -1,3 +1,6 @@
+-- White Shade (Tibia Wiki: https://tibia.fandom.com/wiki/White_Shade)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("White Shade")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 962
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Drefia.",
-}
 
 monster.health = 260
 monster.maxHealth = 260
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,13 +66,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "white piece of cloth", chance = 3370 },
+	{ id = "white piece of cloth", chance = 3370 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -8 },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_LIFEDRAIN, minDamage = -4, maxDamage = -6, range = 7, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_YALAHARIGHOST, target = false },
-	{ name = "speed", interval = 2000, chance = 5, speedChange = -400, radius = 4, effect = CONST_ME_HITAREA, target = false, duration = 3000 },
+	{ name = "speed", interval = 2000, chance = 5, speed = -400, radius = 4, effect = CONST_ME_HITAREA, target = false, duration = 3000 },
 }
 
 monster.defenses = {

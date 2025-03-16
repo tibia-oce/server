@@ -1,3 +1,6 @@
+-- Werewolf (Tibia Wiki: https://tibia.fandom.com/wiki/Werewolf)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Werewolf")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 510
-monster.Bestiary = {
-	class = "Lycanthrope",
-	race = BESTY_RACE_LYCANTHROPE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Vengoth Castle, Vengoth Werewolf Cave, Grimvale, were-beasts cave south-west of Edron.",
-}
 
 monster.health = 1955
 monster.maxHealth = 1955
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -84,23 +74,23 @@ monster.voices = {
 monster.loot = {
 	{ id = 3031, chance = 98000, maxCount = 230 }, -- gold coin
 	{ id = 3053, chance = 800 }, -- time ring
-	{ name = "platinum amulet", chance = 870 },
-	{ name = "stone skin amulet", chance = 1000 },
-	{ name = "halberd", chance = 3000 },
-	{ name = "epee", chance = 560 },
-	{ name = "plate shield", chance = 10340 },
-	{ name = "brown mushroom", chance = 6940 },
-	{ name = "troll green", chance = 1900 },
-	{ name = "wolf paw", chance = 5200 },
-	{ name = "relic sword", chance = 480 },
-	{ name = "dreaded cleaver", chance = 160 },
-	{ name = "bonebreaker", chance = 400 },
-	{ name = "berserk potion", chance = 1200 },
-	{ name = "strong health potion", chance = 5000 },
-	{ name = "ultimate health potion", chance = 2400 },
+	{ id = "platinum amulet", chance = 870 },
+	{ id = "stone skin amulet", chance = 1000 },
+	{ id = "halberd", chance = 3000 },
+	{ id = "epee", chance = 560 },
+	{ id = "plate shield", chance = 10340 },
+	{ id = "brown mushroom", chance = 6940 },
+	{ id = "troll green", chance = 1900 },
+	{ id = "wolf paw", chance = 5200 },
+	{ id = "relic sword", chance = 480 },
+	{ id = "dreaded cleaver", chance = 160 },
+	{ id = "bonebreaker", chance = 400 },
+	{ id = "berserk potion", chance = 1200 },
+	{ id = "strong health potion", chance = 5000 },
+	{ id = "ultimate health potion", chance = 2400 },
 	{ id = 8895, chance = 210 }, -- rusted armor
 	{ id = 22052, chance = 15000 }, -- werewolf fangs
-	{ name = "werewolf fur", chance = 10650 },
+	{ id = "werewolf fur", chance = 10650 },
 }
 
 monster.attacks = {
@@ -117,7 +107,7 @@ monster.defenses = {
 	armor = 36,
 	mitigation = 0.83,
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 120, maxDamage = 225, effect = CONST_ME_MAGIC_GREEN, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 400, range = 7, effect = CONST_ME_SOUND_PURPLE, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, range = 7, effect = CONST_ME_SOUND_PURPLE, speed = 280},
 }
 
 monster.elements = {

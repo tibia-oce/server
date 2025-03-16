@@ -1,3 +1,6 @@
+-- Mawhawk (Tibia Wiki: https://tibia.fandom.com/wiki/Mawhawk)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Mawhawk")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

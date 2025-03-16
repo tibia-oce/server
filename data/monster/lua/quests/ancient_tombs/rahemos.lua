@@ -1,3 +1,6 @@
+-- Rahemos (Tibia Wiki: https://tibia.fandom.com/wiki/Rahemos)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Rahemos")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,18 +82,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 90 },
-	{ name = "gold coin", chance = 50000, maxCount = 80 },
-	{ name = "gold coin", chance = 50000, maxCount = 60 },
-	{ name = "small amethyst", chance = 7000, maxCount = 3 },
-	{ name = "violet gem", chance = 500 },
-	{ name = "orb", chance = 500 },
-	{ name = "crystal wand", chance = 500 },
+	{ id = "gold coin", chance = 50000, maxCount = 90 },
+	{ id = "gold coin", chance = 50000, maxCount = 80 },
+	{ id = "gold coin", chance = 50000, maxCount = 60 },
+	{ id = "small amethyst", chance = 7000, maxCount = 3 },
+	{ id = "violet gem", chance = 500 },
+	{ id = "orb", chance = 500 },
+	{ id = "crystal wand", chance = 500 },
 	{ id = 3098, chance = 7000 }, -- ring of healing
-	{ name = "ancient rune", chance = 100000 },
-	{ name = "twin axe", chance = 200 },
-	{ name = "magician hat", chance = 300 },
-	{ name = "great mana potion", chance = 7000 },
+	{ id = "ancient rune", chance = 100000 },
+	{ id = "twin axe", chance = 200 },
+	{ id = "magician hat", chance = 300 },
+	{ id = "great mana potion", chance = 7000 },
 }
 
 monster.attacks = {
@@ -99,7 +101,7 @@ monster.attacks = {
 	{ name = "combat", interval = 3000, chance = 7, type = COMBAT_LIFEDRAIN, minDamage = -75, maxDamage = -750, range = 1, target = false },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_ENERGYDAMAGE, minDamage = -60, maxDamage = -600, range = 7, shootEffect = CONST_ANI_ENERGY, effect = CONST_ME_ENERGYHIT, target = false },
 	{ name = "combat", interval = 3000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -60, maxDamage = -600, range = 7, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_MORTAREA, target = false },
-	{ name = "speed", interval = 1000, chance = 12, speedChange = -650, radius = 6, effect = CONST_ME_POISONAREA, target = false, duration = 60000 },
+	{ name = "speed", interval = 1000, chance = 12, speed = -650, radius = 6, effect = CONST_ME_POISONAREA, target = false, duration = 60000 },
 	{ name = "drunk", interval = 1000, chance = 8, range = 7, shootEffect = CONST_ANI_ENERGY, effect = CONST_ME_ENERGYAREA, target = false },
 	{ name = "outfit", interval = 1000, chance = 15, range = 7, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 12000, outfitMonster = "pig" },
 }

@@ -1,3 +1,6 @@
+-- Quara Pincher Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Pincher_Scout)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Quara Pincher Scout")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 246
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Malada, Hrodmir Quara Scout Caves, Quara Grotto, Oramond.",
-}
 
 monster.health = 775
 monster.maxHealth = 775
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -76,19 +66,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 49000, maxCount = 100 },
-	{ name = "gold coin", chance = 40000, maxCount = 29 },
-	{ name = "quara pincers", chance = 9940 },
-	{ name = "plate armor", chance = 4170 },
-	{ name = "small ruby", chance = 3440 },
-	{ name = "halberd", chance = 2070 },
-	{ name = "fish fin", chance = 800 },
-	{ name = "life crystal", chance = 790 },
+	{ id = "gold coin", chance = 49000, maxCount = 100 },
+	{ id = "gold coin", chance = 40000, maxCount = 29 },
+	{ id = "quara pincers", chance = 9940 },
+	{ id = "plate armor", chance = 4170 },
+	{ id = "small ruby", chance = 3440 },
+	{ id = "halberd", chance = 2070 },
+	{ id = "fish fin", chance = 800 },
+	{ id = "life crystal", chance = 790 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -240, effect = CONST_ME_DRAWBLOOD },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -600, range = 1, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -600, range = 1, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
 }
 
 monster.defenses = {

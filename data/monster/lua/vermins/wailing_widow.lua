@@ -1,3 +1,6 @@
+-- Wailing Widow (Tibia Wiki: https://tibia.fandom.com/wiki/Wailing_Widow)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Wailing Widow")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 632
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Zao Wailing Widow Cave, Northern Zao Plantations, Northern Brimstone Bug Cave, \z
-		Razzachai, Chyllfroest, Krailos Spider Lair.",
-}
 
 monster.health = 850
 monster.maxHealth = 850
@@ -61,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,16 +64,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 37 },
-	{ name = "halberd", chance = 4460 },
-	{ name = "plate shield", chance = 2854 },
-	{ name = "green mushroom", chance = 3208 },
-	{ name = "health potion", chance = 4761 },
-	{ name = "mana potion", chance = 4785 },
-	{ name = "zaoan halberd", chance = 2210 },
-	{ name = "widow's mandibles", chance = 20950 },
-	{ name = "wailing widow's necklace", chance = 900 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 37 },
+	{ id = "halberd", chance = 4460 },
+	{ id = "plate shield", chance = 2854 },
+	{ id = "green mushroom", chance = 3208 },
+	{ id = "health potion", chance = 4761 },
+	{ id = "mana potion", chance = 4785 },
+	{ id = "zaoan halberd", chance = 2210 },
+	{ id = "widow's mandibles", chance = 20950 },
+	{ id = "wailing widow's necklace", chance = 900 },
 }
 
 monster.attacks = {
@@ -98,7 +87,7 @@ monster.defenses = {
 	defense = 0,
 	armor = 0,
 	{ name = "combat", interval = 2000, chance = 5, type = COMBAT_HEALING, minDamage = 70, maxDamage = 100, effect = CONST_ME_SOUND_WHITE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 820, effect = CONST_ME_SOUND_YELLOW, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_SOUND_YELLOW, speed = 254},
 }
 
 monster.elements = {

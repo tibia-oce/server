@@ -1,3 +1,6 @@
+-- Sin Devourer (Tibia Wiki: https://tibia.fandom.com/wiki/Sin_Devourer)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Sin Devourer")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,7 +82,7 @@ monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, skill = 50, attack = 30, condition = { type = CONDITION_POISON, totalDamage = 80, interval = 4000 } },
 	{ name = "nightstalker paralyze", interval = 2000, chance = 19, range = 7, target = false },
 	{ name = "combat", interval = 2000, chance = 50, type = COMBAT_MANADRAIN, minDamage = -100, maxDamage = -200, range = 1, effect = CONST_ME_HOLYAREA, target = true },
-	{ name = "speed", interval = 2000, chance = 40, speedChange = -600, range = 6, shootEffect = CONST_ANI_SNOWBALL, effect = CONST_ME_ICEAREA, target = true, duration = 20000 },
+	{ name = "speed", interval = 2000, chance = 40, speed = -600, range = 6, shootEffect = CONST_ANI_SNOWBALL, effect = CONST_ME_ICEAREA, target = true, duration = 20000 },
 	{ name = "silencer skill reducer", interval = 2000, chance = 30, range = 4, effect = CONST_ME_POFF, target = false },
 }
 

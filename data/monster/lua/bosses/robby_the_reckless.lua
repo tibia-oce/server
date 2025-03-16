@@ -1,3 +1,6 @@
+-- Robby the Reckless (Tibia Wiki: https://tibia.fandom.com/wiki/Robby_the_Reckless)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Robby the Reckless")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

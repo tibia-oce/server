@@ -1,3 +1,6 @@
+-- Merlkin (Tibia Wiki: https://tibia.fandom.com/wiki/Merlkin)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Merlkin")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 117
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Banuta, north-east of Port Hope.",
-}
 
 monster.health = 235
 monster.maxHealth = 235
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,16 +66,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 69500, maxCount = 45 },
-	{ name = "small amethyst", chance = 260 },
+	{ id = "gold coin", chance = 69500, maxCount = 45 },
+	{ id = "small amethyst", chance = 260 },
 	{ id = 3046, chance = 3000 }, -- magic light wand
-	{ name = "wand of decay", chance = 1050 },
-	{ name = "orange", chance = 1000, maxCount = 5 },
-	{ name = "banana", chance = 30350, maxCount = 12 },
-	{ name = "banana staff", chance = 100 },
-	{ name = "ape fur", chance = 1000 },
-	{ name = "mana potion", chance = 660 },
-	{ name = "banana sash", chance = 1800 },
+	{ id = "wand of decay", chance = 1050 },
+	{ id = "orange", chance = 1000, maxCount = 5 },
+	{ id = "banana", chance = 30350, maxCount = 12 },
+	{ id = "banana staff", chance = 100 },
+	{ id = "ape fur", chance = 1000 },
+	{ id = "mana potion", chance = 660 },
+	{ id = "banana sash", chance = 1800 },
 }
 
 monster.attacks = {

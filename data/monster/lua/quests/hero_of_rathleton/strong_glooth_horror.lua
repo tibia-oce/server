@@ -1,3 +1,6 @@
+-- Strong Glooth Horror (Tibia Wiki: https://tibia.fandom.com/wiki/Strong_Glooth_Horror)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Strong Glooth Horror")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"GloothHorror",

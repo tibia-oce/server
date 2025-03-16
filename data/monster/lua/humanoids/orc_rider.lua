@@ -1,3 +1,6 @@
+-- Orc Rider (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Rider)
+-- Version: 7.0
+
 local mType = Game.createMonsterType("Orc Rider")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 4
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Orc Fort, Orc Peninsula, near Dark Cathedral, Zao Orc Land.",
-}
 
 monster.health = 180
 monster.maxHealth = 180
@@ -60,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,15 +68,15 @@ monster.voices = {
 monster.loot = {
 	{ id = 2920, chance = 980 }, -- torch
 	{ id = 3012, chance = 10210 }, -- wolf tooth chain
-	{ name = "gold coin", chance = 46000, maxCount = 81 },
-	{ name = "obsidian lance", chance = 1100 },
-	{ name = "orcish axe", chance = 6880 },
-	{ name = "scale armor", chance = 610 },
-	{ name = "battle shield", chance = 9900 },
-	{ name = "meat", chance = 24000, maxCount = 3 },
-	{ name = "orc tooth", chance = 2000 },
-	{ name = "warwolf fur", chance = 9410 },
-	{ name = "orc leather", chance = 9760 },
+	{ id = "gold coin", chance = 46000, maxCount = 81 },
+	{ id = "obsidian lance", chance = 1100 },
+	{ id = "orcish axe", chance = 6880 },
+	{ id = "scale armor", chance = 610 },
+	{ id = "battle shield", chance = 9900 },
+	{ id = "meat", chance = 24000, maxCount = 3 },
+	{ id = "orc tooth", chance = 2000 },
+	{ id = "warwolf fur", chance = 9410 },
+	{ id = "orc leather", chance = 9760 },
 }
 
 monster.attacks = {
@@ -97,7 +87,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 9,
 	mitigation = 0.51,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 260},
 }
 
 monster.elements = {

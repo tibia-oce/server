@@ -1,3 +1,6 @@
+-- Quara Mantassin Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Mantassin_Scout)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Quara Mantassin Scout")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 242
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Malada, Water Elemental Cave near Port Hope, Hrodmir Quara Scout Caves, Quara Grotto, Oramond.",
-}
 
 monster.health = 220
 monster.maxHealth = 220
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -75,14 +65,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 94000, maxCount = 30 },
-	{ name = "mantassin tail", chance = 7780 },
-	{ name = "chain armor", chance = 5061 },
+	{ id = "gold coin", chance = 94000, maxCount = 30 },
+	{ id = "mantassin tail", chance = 7780 },
+	{ id = "chain armor", chance = 5061 },
 	{ id = 3114, chance = 990 }, -- skull
-	{ name = "small sapphire", chance = 990 },
-	{ name = "two handed sword", chance = 810 },
+	{ id = "small sapphire", chance = 990 },
+	{ id = "two handed sword", chance = 810 },
 	{ id = 3049, chance = 710 }, -- stealth ring
-	{ name = "fish fin", chance = 360 },
+	{ id = "fish fin", chance = 360 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Death Priest (Tibia Wiki: https://tibia.fandom.com/wiki/Death_Priest)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Death Priest")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 710
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Horestis Tomb.",
-}
 
 monster.health = 800
 monster.maxHealth = 800
@@ -61,9 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,14 +65,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "white pearl", chance = 3000 },
-	{ name = "gold coin", chance = 70000, maxCount = 144 },
-	{ name = "scarab coin", chance = 10000, maxCount = 3 },
+	{ id = "white pearl", chance = 3000 },
+	{ id = "gold coin", chance = 70000, maxCount = 144 },
+	{ id = "scarab coin", chance = 10000, maxCount = 3 },
 	{ id = 3059, chance = 6800 }, -- spellbook
 	{ id = 3098, chance = 1000 }, -- ring of healing
-	{ name = "orichalcum pearl", chance = 6000, maxCount = 4 },
-	{ name = "health potion", chance = 15000 },
-	{ name = "mana potion", chance = 15000 },
+	{ id = "orichalcum pearl", chance = 6000, maxCount = 4 },
+	{ id = "health potion", chance = 15000 },
+	{ id = "mana potion", chance = 15000 },
 	{ id = 12482, chance = 27000 }, -- hieroglyph banner
 }
 

@@ -1,3 +1,6 @@
+-- Training Machine (Tibia Wiki: https://tibia.fandom.com/wiki/Training_Machine)
+-- Version: xxxx
+
 local mType = Game.createMonsterType("Training Machine")
 local monster = {}
 
@@ -27,8 +30,7 @@ monster.flags = {
 	canPushItems = true,
 	canPushCreatures = true,
 	targetDistance = 1,
-	staticAttackChance = 100,
-}
+	staticAttackChance = 100}
 
 monster.summons = {}
 

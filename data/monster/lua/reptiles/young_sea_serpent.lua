@@ -1,3 +1,6 @@
+-- Young Sea Serpent (Tibia Wiki: https://tibia.fandom.com/wiki/Young_Sea_Serpent)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Young Sea Serpent")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 439
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Sea Serpent Area.",
-}
 
 monster.health = 1050
 monster.maxHealth = 1050
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,19 +65,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small sapphire", chance = 1900, maxCount = 2 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 48000, maxCount = 74 },
+	{ id = "small sapphire", chance = 1900, maxCount = 2 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 48000, maxCount = 74 },
 	{ id = 3049, chance = 1000 }, -- stealth ring
-	{ name = "life crystal", chance = 300 },
-	{ name = "battle axe", chance = 8000 },
-	{ name = "morning star", chance = 40000 },
-	{ name = "battle hammer", chance = 5000 },
-	{ name = "strong health potion", chance = 5000 },
-	{ name = "strong mana potion", chance = 4000 },
+	{ id = "life crystal", chance = 300 },
+	{ id = "battle axe", chance = 8000 },
+	{ id = "morning star", chance = 40000 },
+	{ id = "battle hammer", chance = 5000 },
+	{ id = "strong health potion", chance = 5000 },
+	{ id = "strong mana potion", chance = 4000 },
 	{ id = 8894, chance = 7940 }, -- heavily rusted armor
 	{ id = 8895, chance = 7940 }, -- rusted armor
-	{ name = "sea serpent scale", chance = 5000 },
+	{ id = "sea serpent scale", chance = 5000 },
 }
 
 monster.attacks = {
@@ -102,7 +92,7 @@ monster.defenses = {
 	armor = 20,
 	mitigation = 0.78,
 	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 25, maxDamage = 175, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 400, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 480},
 }
 
 monster.elements = {

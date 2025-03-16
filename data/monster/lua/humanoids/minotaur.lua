@@ -1,3 +1,6 @@
+-- Minotaur (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur)
+-- Version: 4.0
+
 local mType = Game.createMonsterType("Minotaur")
 local monster = {}
 
@@ -13,21 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 25
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Mino Hell (Rookgaard), Two outside Bear Room Quest, (Rookgaard) and also 2x on the premium side, \z
-		Mintwallin, Folda, Minotaur Pyramid, Outlaw Camp, Kazordoon minotaur cave, Plains of Havoc, Elven Bane, \z
-		Deeper Fibula Dungeon (level 50+ to open the door), Ancient Temple, Maze of Lost Souls, \z
-		Thais Minotaur Camp, Foreigner Quarter.",
-}
 
 monster.health = 100
 monster.maxHealth = 100
@@ -62,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,18 +65,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 67500, maxCount = 25 },
-	{ name = "bronze amulet", chance = 110 },
+	{ id = "gold coin", chance = 67500, maxCount = 25 },
+	{ id = "bronze amulet", chance = 110 },
 	{ id = 3264, chance = 5000 }, -- sword
-	{ name = "axe", chance = 4000 },
-	{ name = "mace", chance = 12840 },
-	{ name = "brass helmet", chance = 7700 },
-	{ name = "chain armor", chance = 10000 },
-	{ name = "plate shield", chance = 20020 },
+	{ id = "axe", chance = 4000 },
+	{ id = "mace", chance = 12840 },
+	{ id = "brass helmet", chance = 7700 },
+	{ id = "chain armor", chance = 10000 },
+	{ id = "plate shield", chance = 20020 },
 	{ id = 3457, chance = 310 }, -- shovel
-	{ name = "meat", chance = 5000 },
-	{ name = "minotaur leather", chance = 990 },
-	{ name = "minotaur horn", chance = 2090, maxCount = 2 },
+	{ id = "meat", chance = 5000 },
+	{ id = "minotaur leather", chance = 990 },
+	{ id = "minotaur horn", chance = 2090, maxCount = 2 },
 }
 
 monster.attacks = {

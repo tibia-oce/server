@@ -1,3 +1,6 @@
+-- Man in the Cave (Tibia Wiki: https://tibia.fandom.com/wiki/Man_in_the_Cave)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Man in the Cave")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -97,7 +99,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 15,
 	mitigation = 1.00,
-	{ name = "speed", interval = 2000, chance = 12, speedChange = 250, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 12, effect = CONST_ME_MAGIC_RED, speed = 210},
 	{ name = "combat", interval = 2000, chance = 25, type = COMBAT_HEALING, minDamage = 10, maxDamage = 50, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

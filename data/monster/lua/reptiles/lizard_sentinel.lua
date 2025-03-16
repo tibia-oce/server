@@ -1,3 +1,6 @@
+-- Lizard Sentinel (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Sentinel)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Lizard Sentinel")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 114
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Chor, Zzaion and Foreigner Quarter.",
-}
 
 monster.health = 265
 monster.maxHealth = 265
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,18 +64,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 190 },
-	{ name = "gold coin", chance = 89000, maxCount = 80 },
-	{ name = "halberd", chance = 510 },
-	{ name = "spear", chance = 8750, maxCount = 3 },
-	{ name = "obsidian lance", chance = 1120 },
-	{ name = "chain armor", chance = 8560 },
-	{ name = "scale armor", chance = 7730 },
-	{ name = "hunting spear", chance = 4700 },
-	{ name = "sentinel shield", chance = 320 },
-	{ name = "lizard leather", chance = 990 },
-	{ name = "lizard scale", chance = 960 },
-	{ name = "health potion", chance = 590 },
+	{ id = "small diamond", chance = 190 },
+	{ id = "gold coin", chance = 89000, maxCount = 80 },
+	{ id = "halberd", chance = 510 },
+	{ id = "spear", chance = 8750, maxCount = 3 },
+	{ id = "obsidian lance", chance = 1120 },
+	{ id = "chain armor", chance = 8560 },
+	{ id = "scale armor", chance = 7730 },
+	{ id = "hunting spear", chance = 4700 },
+	{ id = "sentinel shield", chance = 320 },
+	{ id = "lizard leather", chance = 990 },
+	{ id = "lizard scale", chance = 960 },
+	{ id = "health potion", chance = 590 },
 }
 
 monster.attacks = {

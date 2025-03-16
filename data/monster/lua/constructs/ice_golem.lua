@@ -1,3 +1,6 @@
+-- Ice Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Ice_Golem)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Ice Golem")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 326
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Formorgar Glacier, Formorgar Mines, Nibelor Ice Cave, Ice Witch Temple, \z
-		Deeper Banuta, Crystal Caves, Chyllfroest.",
-}
 
 monster.health = 385
 monster.maxHealth = 385
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,24 +66,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "black pearl", chance = 1500 },
-	{ name = "small diamond", chance = 750 },
-	{ name = "small sapphire", chance = 578 },
-	{ name = "gold coin", chance = 100000, maxCount = 111 },
-	{ name = "ice rapier", chance = 350 },
-	{ name = "strange helmet", chance = 350 },
-	{ name = "shard", chance = 200 },
+	{ id = "black pearl", chance = 1500 },
+	{ id = "small diamond", chance = 750 },
+	{ id = "small sapphire", chance = 578 },
+	{ id = "gold coin", chance = 100000, maxCount = 111 },
+	{ id = "ice rapier", chance = 350 },
+	{ id = "strange helmet", chance = 350 },
+	{ id = "shard", chance = 200 },
 	{ id = 7441, chance = 5000 }, -- ice cube
-	{ name = "crystal sword", chance = 600 },
-	{ name = "strong health potion", chance = 2500 },
-	{ name = "strong mana potion", chance = 3000 },
-	{ name = "glacier mask", chance = 200 },
-	{ name = "frosty heart", chance = 14500 },
+	{ id = "crystal sword", chance = 600 },
+	{ id = "strong health potion", chance = 2500 },
+	{ id = "strong mana potion", chance = 3000 },
+	{ id = "glacier mask", chance = 200 },
+	{ id = "frosty heart", chance = 14500 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -220 },
-	{ name = "speed", interval = 1000, chance = 13, speedChange = -800, length = 8, spread = 0, effect = CONST_ME_ENERGYHIT, target = false, duration = 20000 },
+	{ name = "speed", interval = 1000, chance = 13, speed = -800, length = 8, spread = 0, effect = CONST_ME_ENERGYHIT, target = false, duration = 20000 },
 	{ name = "combat", interval = 1000, chance = 15, type = COMBAT_ICEDAMAGE, minDamage = -50, maxDamage = -85, range = 7, shootEffect = CONST_ANI_SMALLICE, effect = CONST_ME_ICEATTACK, target = false },
 	{ name = "ice golem skill reducer", interval = 2000, chance = 10, target = false },
 }

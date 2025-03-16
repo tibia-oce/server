@@ -1,3 +1,6 @@
+-- Void (Tibia Wiki: https://tibia.fandom.com/wiki/Void)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Void")
 local monster = {}
 
@@ -43,8 +46,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

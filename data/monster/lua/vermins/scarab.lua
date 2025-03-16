@@ -1,3 +1,6 @@
+-- Scarab (Tibia Wiki: https://tibia.fandom.com/wiki/Scarab)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Scarab")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 83
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Ankrahmun Tombs, the sand around Ankrahmun (use a shovel), deep in Larva caves, \z
-		the path leading to Chor, beneath Fenrock, Lion's Rock.",
-}
 
 monster.health = 320
 monster.maxHealth = 320
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,13 +63,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 86800, maxCount = 52 },
-	{ name = "small emerald", chance = 413 },
-	{ name = "small amethyst", chance = 540 },
-	{ name = "scarab coin", chance = 1098 },
-	{ name = "daramian mace", chance = 245 },
-	{ name = "meat", chance = 40000, maxCount = 2 },
-	{ name = "piece of scarab shell", chance = 4950 },
+	{ id = "gold coin", chance = 86800, maxCount = 52 },
+	{ id = "small emerald", chance = 413 },
+	{ id = "small amethyst", chance = 540 },
+	{ id = "scarab coin", chance = 1098 },
+	{ id = "daramian mace", chance = 245 },
+	{ id = "meat", chance = 40000, maxCount = 2 },
+	{ id = "piece of scarab shell", chance = 4950 },
 }
 
 monster.attacks = {
@@ -93,7 +82,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 21,
 	mitigation = 0.67,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 160},
 }
 
 monster.elements = {

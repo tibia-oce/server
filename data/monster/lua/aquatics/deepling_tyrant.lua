@@ -1,3 +1,6 @@
+-- Deepling Tyrant (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Tyrant)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Deepling Tyrant")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 861
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 2,
-	Locations = "Fiehonja.",
-}
 
 monster.health = 4500
 monster.maxHealth = 4500
@@ -33,8 +24,6 @@ monster.corpse = 13751
 monster.speed = 155
 monster.manaCost = 0
 
-monster.faction = FACTION_DEEPLING
-monster.enemyFactions = { FACTION_PLAYER, FACTION_DEATHLING }
 
 monster.changeTarget = {
 	interval = 4000,
@@ -65,9 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,22 +68,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "platinum coin", chance = 70000, maxCount = 4 },
-	{ name = "deepling breaktime snack", chance = 35520 },
-	{ name = "great mana potion", chance = 32640, maxCount = 3 },
-	{ name = "great health potion", chance = 33430, maxCount = 3 },
-	{ name = "deepling claw", chance = 29960 },
-	{ name = "eye of a deepling", chance = 29610 },
-	{ name = "deepling guard belt buckle", chance = 23700 },
-	{ name = "small sapphire", chance = 9410, maxCount = 5 },
-	{ name = "heavy trident", chance = 3530 },
-	{ name = "deepling squelcher", chance = 1440 },
-	{ name = "guardian axe", chance = 1340 },
-	{ name = "ornate crossbow", chance = 1190 },
-	{ name = "deepling backpack", chance = 410 },
-	{ name = "foxtail", chance = 30 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "platinum coin", chance = 70000, maxCount = 4 },
+	{ id = "deepling breaktime snack", chance = 35520 },
+	{ id = "great mana potion", chance = 32640, maxCount = 3 },
+	{ id = "great health potion", chance = 33430, maxCount = 3 },
+	{ id = "deepling claw", chance = 29960 },
+	{ id = "eye of a deepling", chance = 29610 },
+	{ id = "deepling guard belt buckle", chance = 23700 },
+	{ id = "small sapphire", chance = 9410, maxCount = 5 },
+	{ id = "heavy trident", chance = 3530 },
+	{ id = "deepling squelcher", chance = 1440 },
+	{ id = "guardian axe", chance = 1340 },
+	{ id = "ornate crossbow", chance = 1190 },
+	{ id = "deepling backpack", chance = 410 },
+	{ id = "foxtail", chance = 30 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Undead Gladiator (Tibia Wiki: https://tibia.fandom.com/wiki/Undead_Gladiator)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Undead Gladiator")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 508
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Arena and Zoo Quarter, Krailos.",
-}
 
 monster.health = 1000
 monster.maxHealth = 1000
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,25 +68,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 44000, maxCount = 100 },
-	{ name = "gold coin", chance = 50500, maxCount = 48 },
+	{ id = "gold coin", chance = 44000, maxCount = 100 },
+	{ id = "gold coin", chance = 50500, maxCount = 48 },
 	{ id = 3049, chance = 30 }, -- stealth ring
-	{ name = "protection amulet", chance = 2200 },
-	{ name = "two handed sword", chance = 1900 },
-	{ name = "throwing star", chance = 15700, maxCount = 18 },
+	{ id = "protection amulet", chance = 2200 },
+	{ id = "two handed sword", chance = 1900 },
+	{ id = "throwing star", chance = 15700, maxCount = 18 },
 	{ id = 3307, chance = 11280 }, -- scimitar
-	{ name = "knight axe", chance = 280 },
-	{ name = "plate armor", chance = 1700 },
-	{ name = "brass armor", chance = 4700 },
-	{ name = "brass legs", chance = 5500 },
-	{ name = "dark helmet", chance = 1460 },
-	{ name = "crusader helmet", chance = 100 },
-	{ name = "plate legs", chance = 2444 },
-	{ name = "hunting spear", chance = 4200 },
-	{ name = "flask of warrior's sweat", chance = 210 },
-	{ name = "health potion", chance = 350 },
-	{ name = "belted cape", chance = 5000 },
-	{ name = "broken gladiator shield", chance = 5200 },
+	{ id = "knight axe", chance = 280 },
+	{ id = "plate armor", chance = 1700 },
+	{ id = "brass armor", chance = 4700 },
+	{ id = "brass legs", chance = 5500 },
+	{ id = "dark helmet", chance = 1460 },
+	{ id = "crusader helmet", chance = 100 },
+	{ id = "plate legs", chance = 2444 },
+	{ id = "hunting spear", chance = 4200 },
+	{ id = "flask of warrior's sweat", chance = 210 },
+	{ id = "health potion", chance = 350 },
+	{ id = "belted cape", chance = 5000 },
+	{ id = "broken gladiator shield", chance = 5200 },
 }
 
 monster.attacks = {

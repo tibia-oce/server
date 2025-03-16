@@ -1,3 +1,6 @@
+-- Damaged Worker Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Damaged_Worker_Golem)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Damaged Worker Golem")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 524
-monster.Bestiary = {
-	class = "Construct",
-	race = BESTY_RACE_CONSTRUCT,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Factory Quarter.",
-}
 
 monster.health = 260
 monster.maxHealth = 260
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,
@@ -82,12 +71,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 68810, maxCount = 88 },
+	{ id = "gold coin", chance = 68810, maxCount = 88 },
 	{ id = 3091, chance = 570 }, -- sword ring
-	{ name = "iron ore", chance = 400 },
-	{ name = "nail", chance = 1460 },
-	{ name = "heavily rusted armor", chance = 790 },
-	{ name = "gear crystal", chance = 200 },
+	{ id = "iron ore", chance = 400 },
+	{ id = "nail", chance = 1460 },
+	{ id = "heavily rusted armor", chance = 790 },
+	{ id = "gear crystal", chance = 200 },
 }
 
 monster.attacks = {

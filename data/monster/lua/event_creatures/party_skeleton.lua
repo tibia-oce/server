@@ -1,3 +1,6 @@
+-- Party Skeleton (Tibia Wiki: https://tibia.fandom.com/wiki/Party_Skeleton)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Party Skeleton")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Ushuriel (Tibia Wiki: https://tibia.fandom.com/wiki/Ushuriel)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Ushuriel")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,41 +78,41 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 190 },
-	{ name = "platinum coin", chance = 20000, maxCount = 26 },
-	{ name = "orb", chance = 16666 },
-	{ name = "life crystal", chance = 16666 },
-	{ name = "mind stone", chance = 20000 },
-	{ name = "spike sword", chance = 9090 },
-	{ name = "fire sword", chance = 14285 },
-	{ name = "giant sword", chance = 7692 },
+	{ id = "gold coin", chance = 50000, maxCount = 190 },
+	{ id = "platinum coin", chance = 20000, maxCount = 26 },
+	{ id = "orb", chance = 16666 },
+	{ id = "life crystal", chance = 16666 },
+	{ id = "mind stone", chance = 20000 },
+	{ id = "spike sword", chance = 9090 },
+	{ id = "fire sword", chance = 14285 },
+	{ id = "giant sword", chance = 7692 },
 	{ id = 3307, chance = 11111 }, -- scimitar
-	{ name = "warrior helmet", chance = 20000 },
-	{ name = "strange helmet", chance = 8333 },
-	{ name = "crown helmet", chance = 6250 },
-	{ name = "royal helmet", chance = 20000 },
-	{ name = "brown mushroom", chance = 50000, maxCount = 30 },
-	{ name = "mysterious voodoo skull", chance = 12500 },
-	{ name = "skull helmet", chance = 20000 },
-	{ name = "iron ore", chance = 33333 },
+	{ id = "warrior helmet", chance = 20000 },
+	{ id = "strange helmet", chance = 8333 },
+	{ id = "crown helmet", chance = 6250 },
+	{ id = "royal helmet", chance = 20000 },
+	{ id = "brown mushroom", chance = 50000, maxCount = 30 },
+	{ id = "mysterious voodoo skull", chance = 12500 },
+	{ id = "skull helmet", chance = 20000 },
+	{ id = "iron ore", chance = 33333 },
 	{ id = 5884, chance = 4761 }, -- spirit container
-	{ name = "flask of warrior's sweat", chance = 5555 },
-	{ name = "enchanted chicken wing", chance = 7692 },
-	{ name = "huge chunk of crude iron", chance = 14285 },
-	{ name = "hardened bone", chance = 25000, maxCount = 20 },
-	{ name = "demon horn", chance = 8333, maxCount = 2 },
+	{ id = "flask of warrior's sweat", chance = 5555 },
+	{ id = "enchanted chicken wing", chance = 7692 },
+	{ id = "huge chunk of crude iron", chance = 14285 },
+	{ id = "hardened bone", chance = 25000, maxCount = 20 },
+	{ id = "demon horn", chance = 8333, maxCount = 2 },
 	{ id = 6103, chance = 2063 }, -- unholy book
-	{ name = "demonic essence", chance = 100000 },
+	{ id = "demonic essence", chance = 100000 },
 	{ id = 7385, chance = 10000 }, -- crimson sword
-	{ name = "thaian sword", chance = 25000 },
-	{ name = "dragon slayer", chance = 8333 },
-	{ name = "runed sword", chance = 6666 },
-	{ name = "great mana potion", chance = 20000 },
-	{ name = "great health potion", chance = 20000 },
-	{ name = "great spirit potion", chance = 20000 },
-	{ name = "ultimate health potion", chance = 20000 },
+	{ id = "thaian sword", chance = 25000 },
+	{ id = "dragon slayer", chance = 8333 },
+	{ id = "runed sword", chance = 6666 },
+	{ id = "great mana potion", chance = 20000 },
+	{ id = "great health potion", chance = 20000 },
+	{ id = "great spirit potion", chance = 20000 },
+	{ id = "ultimate health potion", chance = 20000 },
 	{ id = 8894, chance = 20000 }, -- heavily rusted armor
-	{ name = "gold ingot", chance = 16666 },
+	{ id = "gold ingot", chance = 16666 },
 }
 
 monster.attacks = {
@@ -128,7 +130,7 @@ monster.defenses = {
 	defense = 45,
 	armor = 50,
 	{ name = "combat", interval = 1000, chance = 12, type = COMBAT_HEALING, minDamage = 400, maxDamage = 600, effect = CONST_ME_MAGIC_GREEN, target = false },
-	{ name = "speed", interval = 1000, chance = 4, speedChange = 400, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 7000 },
+	{ name = "speed", interval = 1000, chance = 4, effect = CONST_ME_MAGIC_BLUE, speed = 440},
 }
 
 monster.elements = {

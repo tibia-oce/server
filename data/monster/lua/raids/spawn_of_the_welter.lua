@@ -1,3 +1,6 @@
+-- Spawn of the Welter (Tibia Wiki: https://tibia.fandom.com/wiki/Spawn_of_the_Welter)
+-- Version: 10.20
+
 local mType = Game.createMonsterType("Spawn of the Welter")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

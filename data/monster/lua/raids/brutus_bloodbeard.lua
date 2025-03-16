@@ -1,3 +1,6 @@
+-- Brutus Bloodbeard (Tibia Wiki: https://tibia.fandom.com/wiki/Brutus_Bloodbeard)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Brutus Bloodbeard")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

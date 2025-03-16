@@ -1,3 +1,6 @@
+-- Ron the Ripper (Tibia Wiki: https://tibia.fandom.com/wiki/Ron_the_Ripper)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Ron the Ripper")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

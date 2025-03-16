@@ -1,3 +1,6 @@
+-- Lizard Chosen (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Chosen)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Lizard Chosen")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 620
-monster.Bestiary = {
-	class = "Reptile",
-	race = BESTY_RACE_REPTILE,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Temple of Equilibrium (Zao) Hidden stairs, Fire Dragon Dojo, Corruption Hole, Razzachai.",
-}
 
 monster.health = 3050
 monster.maxHealth = 3050
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,23 +66,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small diamond", chance = 2550, maxCount = 5 },
-	{ name = "gold coin", chance = 33000, maxCount = 100 },
-	{ name = "gold coin", chance = 32000, maxCount = 100 },
-	{ name = "gold coin", chance = 32000, maxCount = 36 },
-	{ name = "platinum coin", chance = 2920, maxCount = 5 },
-	{ name = "tower shield", chance = 1100 },
-	{ name = "lizard leather", chance = 2000 },
-	{ name = "lizard scale", chance = 980, maxCount = 3 },
-	{ name = "great health potion", chance = 5350, maxCount = 3 },
-	{ name = "zaoan armor", chance = 980 },
-	{ name = "zaoan helmet", chance = 140 },
-	{ name = "zaoan shoes", chance = 810 },
-	{ name = "zaoan legs", chance = 940 },
-	{ name = "spiked iron ball", chance = 9890 },
-	{ name = "corrupted flag", chance = 3350 },
-	{ name = "cursed shoulder spikes", chance = 5800 },
-	{ name = "scale of corruption", chance = 2870 },
+	{ id = "small diamond", chance = 2550, maxCount = 5 },
+	{ id = "gold coin", chance = 33000, maxCount = 100 },
+	{ id = "gold coin", chance = 32000, maxCount = 100 },
+	{ id = "gold coin", chance = 32000, maxCount = 36 },
+	{ id = "platinum coin", chance = 2920, maxCount = 5 },
+	{ id = "tower shield", chance = 1100 },
+	{ id = "lizard leather", chance = 2000 },
+	{ id = "lizard scale", chance = 980, maxCount = 3 },
+	{ id = "great health potion", chance = 5350, maxCount = 3 },
+	{ id = "zaoan armor", chance = 980 },
+	{ id = "zaoan helmet", chance = 140 },
+	{ id = "zaoan shoes", chance = 810 },
+	{ id = "zaoan legs", chance = 940 },
+	{ id = "spiked iron ball", chance = 9890 },
+	{ id = "corrupted flag", chance = 3350 },
+	{ id = "cursed shoulder spikes", chance = 5800 },
+	{ id = "scale of corruption", chance = 2870 },
 }
 
 monster.attacks = {

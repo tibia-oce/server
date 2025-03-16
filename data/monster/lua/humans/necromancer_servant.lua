@@ -1,3 +1,6 @@
+-- Necromancer Servant (Tibia Wiki: https://tibia.fandom.com/wiki/Necromancer_Servant)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("Necromancer Servant")
 local monster = {}
 
@@ -50,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -64,12 +66,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 74230, maxCount = 70 },
-	{ name = "poison arrow", chance = 74230, maxCount = 5 },
-	{ name = "book of necromantic rituals", chance = 74230 },
-	{ name = "incantation fragment", chance = 100000 },
-	{ name = "necromantic robe", chance = 54230 },
-	{ name = "boots of haste", chance = 5000 },
+	{ id = "gold coin", chance = 74230, maxCount = 70 },
+	{ id = "poison arrow", chance = 74230, maxCount = 5 },
+	{ id = "book of necromantic rituals", chance = 74230 },
+	{ id = "incantation fragment", chance = 100000 },
+	{ id = "necromantic robe", chance = 54230 },
+	{ id = "boots of haste", chance = 5000 },
 }
 
 monster.attacks = {

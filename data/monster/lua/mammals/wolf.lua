@@ -1,3 +1,6 @@
+-- Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Wolf)
+-- Version: 4.0
+
 local mType = Game.createMonsterType("Wolf")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 27
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "In almost all grass areas in Tibia, also found in Rookgaard and Dawnport.",
-}
 
 monster.health = 25
 monster.maxHealth = 25
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,8 +65,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 55000, maxCount = 2 },
-	{ name = "wolf paw", chance = 980 },
+	{ id = "meat", chance = 55000, maxCount = 2 },
+	{ id = "wolf paw", chance = 980 },
 }
 
 monster.attacks = {

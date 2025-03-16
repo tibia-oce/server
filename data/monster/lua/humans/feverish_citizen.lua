@@ -1,3 +1,6 @@
+-- Feverish Citizen (Tibia Wiki: https://tibia.fandom.com/wiki/Feverish_Citizen)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Feverish Citizen")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 719
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 2,
-	Locations = "Venore.",
-}
 
 monster.health = 125
 monster.maxHealth = 125
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -84,15 +73,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 30300, maxCount = 35 },
+	{ id = "gold coin", chance = 30300, maxCount = 35 },
 	{ id = 3115, chance = 4920 }, -- bone
-	{ name = "worm", chance = 25730, maxCount = 3 },
-	{ name = "ominous piece of cloth", chance = 1660 },
-	{ name = "dubious piece of cloth", chance = 1720 },
-	{ name = "voluminous piece of cloth", chance = 2290 },
-	{ name = "obvious piece of cloth", chance = 2006 },
-	{ name = "ludicrous piece of cloth", chance = 2060 },
-	{ name = "luminous piece of cloth", chance = 2290 },
+	{ id = "worm", chance = 25730, maxCount = 3 },
+	{ id = "ominous piece of cloth", chance = 1660 },
+	{ id = "dubious piece of cloth", chance = 1720 },
+	{ id = "voluminous piece of cloth", chance = 2290 },
+	{ id = "obvious piece of cloth", chance = 2006 },
+	{ id = "ludicrous piece of cloth", chance = 2060 },
+	{ id = "luminous piece of cloth", chance = 2290 },
 }
 
 monster.attacks = {

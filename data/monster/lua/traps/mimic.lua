@@ -1,3 +1,6 @@
+-- Mimic (Tibia Wiki: https://tibia.fandom.com/wiki/Mimic)
+-- Version: 7.3
+
 local mType = Game.createMonsterType("Mimic")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

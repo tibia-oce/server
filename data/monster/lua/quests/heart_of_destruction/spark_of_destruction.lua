@@ -1,3 +1,6 @@
+-- Spark of Destruction (Tibia Wiki: https://tibia.fandom.com/wiki/Spark_of_Destruction)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Spark of Destruction")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

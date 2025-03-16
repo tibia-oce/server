@@ -1,3 +1,6 @@
+-- Smuggler Baron Silvertoe (Tibia Wiki: https://tibia.fandom.com/wiki/Smuggler_Baron_Silvertoe)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Smuggler Baron Silvertoe")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

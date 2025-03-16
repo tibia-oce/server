@@ -1,3 +1,6 @@
+-- Muglex Clan Scavenger (Tibia Wiki: https://tibia.fandom.com/wiki/Muglex_Clan_Scavenger)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Muglex Clan Scavenger")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -83,7 +85,7 @@ monster.defenses = {
 	defense = 4,
 	armor = 2,
 	{ name = "combat", interval = 2000, chance = 1, type = COMBAT_HEALING, minDamage = 10, maxDamage = 20, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 5, speedChange = 140, effect = CONST_ME_ENERGYHIT, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 5, effect = CONST_ME_ENERGYHIT, speed = 132},
 }
 
 monster.elements = {

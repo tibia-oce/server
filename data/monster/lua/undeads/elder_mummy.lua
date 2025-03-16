@@ -1,3 +1,6 @@
+-- Elder Mummy (Tibia Wiki: https://tibia.fandom.com/wiki/Elder_Mummy)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Elder Mummy")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 711
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Horestis Tomb.",
-}
 
 monster.health = 850
 monster.maxHealth = 850
@@ -61,9 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,23 +66,23 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3007, chance = 1650 }, -- crystal ring
-	{ name = "silver brooch", chance = 4000 },
-	{ name = "black pearl", chance = 1340 },
-	{ name = "gold coin", chance = 87000, maxCount = 160 },
-	{ name = "scarab coin", chance = 10000, maxCount = 3 },
-	{ name = "strange talisman", chance = 4500 },
+	{ id = "silver brooch", chance = 4000 },
+	{ id = "black pearl", chance = 1340 },
+	{ id = "gold coin", chance = 87000, maxCount = 160 },
+	{ id = "scarab coin", chance = 10000, maxCount = 3 },
+	{ id = "strange talisman", chance = 4500 },
 	{ id = 3046, chance = 6000 }, -- magic light wand
-	{ name = "poison dagger", chance = 380 },
-	{ name = "worm", chance = 20000, maxCount = 3 },
-	{ name = "gauze bandage", chance = 10000 },
-	{ name = "flask of embalming fluid", chance = 12600 },
+	{ id = "poison dagger", chance = 380 },
+	{ id = "worm", chance = 20000, maxCount = 3 },
+	{ id = "gauze bandage", chance = 10000 },
+	{ id = "flask of embalming fluid", chance = 12600 },
 	{ id = 12483, chance = 2400 }, -- pharaoh banner
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -120, condition = { type = CONDITION_POISON, totalDamage = 3, interval = 4000 } },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_DEATHDAMAGE, minDamage = 0, maxDamage = -130, range = 1, effect = CONST_ME_MORTAREA, target = true },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -300, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -300, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
 }
 
 monster.defenses = {

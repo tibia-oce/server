@@ -1,3 +1,6 @@
+-- Mad Mage (Tibia Wiki: https://tibia.fandom.com/wiki/Mad_Mage)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Mad Mage")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 4,

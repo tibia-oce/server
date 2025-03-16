@@ -1,3 +1,6 @@
+-- Carniphila (Tibia Wiki: https://tibia.fandom.com/wiki/Carniphila)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Carniphila")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 120
-monster.Bestiary = {
-	class = "Plant",
-	race = BESTY_RACE_PLANT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Deep inside the Tiquanda Jungle including Tiquanda Laboratory and a small cave, \z
-		Forbidden Lands, Deeper Banuta, Arena and Zoo quarter in Yalahar.",
-}
 
 monster.health = 255
 monster.maxHealth = 255
@@ -61,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,20 +64,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 90000, maxCount = 40 },
-	{ name = "corncob", chance = 890 },
-	{ name = "dark mushroom", chance = 7692 },
-	{ name = "sling herb", chance = 446, maxCount = 2 },
-	{ name = "shadow herb", chance = 880 },
-	{ name = "seeds", chance = 490 },
-	{ name = "carniphila seeds", chance = 4166 },
-	{ name = "carrot on a stick", chance = 170 },
+	{ id = "gold coin", chance = 90000, maxCount = 40 },
+	{ id = "corncob", chance = 890 },
+	{ id = "dark mushroom", chance = 7692 },
+	{ id = "sling herb", chance = 446, maxCount = 2 },
+	{ id = "shadow herb", chance = 880 },
+	{ id = "seeds", chance = 490 },
+	{ id = "carniphila seeds", chance = 4166 },
+	{ id = "carrot on a stick", chance = 170 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -100, condition = { type = CONDITION_POISON, totalDamage = 100, interval = 4000 } },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -60, maxDamage = -95, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_GREEN_RINGS, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -800, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_GREEN_RINGS, target = false, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -800, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_GREEN_RINGS, target = false, duration = 30000 },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -40, maxDamage = -130, radius = 3, effect = CONST_ME_POISONAREA, target = false },
 }
 

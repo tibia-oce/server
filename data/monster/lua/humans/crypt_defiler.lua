@@ -1,3 +1,6 @@
+-- Crypt Defiler (Tibia Wiki: https://tibia.fandom.com/wiki/Crypt_Defiler)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Crypt Defiler")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 868
-monster.Bestiary = {
-	class = "Human",
-	race = dafasdfasdfsadfasdfasd,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 2,
-	Locations = "Horestis Tomb.",
-}
 
 monster.health = 185
 monster.maxHealth = 185
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,16 +67,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50900, maxCount = 39 },
-	{ name = "axe", chance = 2730 },
-	{ name = "mace", chance = 1800 },
-	{ name = "iron helmet", chance = 450 },
-	{ name = "brass armor", chance = 2240 },
-	{ name = "steel shield", chance = 450 },
-	{ name = "nomad parchment", chance = 220 },
-	{ name = "potato", chance = 4840, maxCount = 3 },
-	{ name = "dirty turban", chance = 1570 },
-	{ name = "rope belt", chance = 4040 },
+	{ id = "gold coin", chance = 50900, maxCount = 39 },
+	{ id = "axe", chance = 2730 },
+	{ id = "mace", chance = 1800 },
+	{ id = "iron helmet", chance = 450 },
+	{ id = "brass armor", chance = 2240 },
+	{ id = "steel shield", chance = 450 },
+	{ id = "nomad parchment", chance = 220 },
+	{ id = "potato", chance = 4840, maxCount = 3 },
+	{ id = "dirty turban", chance = 1570 },
+	{ id = "rope belt", chance = 4040 },
 }
 
 monster.attacks = {

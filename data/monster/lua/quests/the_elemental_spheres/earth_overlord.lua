@@ -1,3 +1,6 @@
+-- Earth Overlord (Tibia Wiki: https://tibia.fandom.com/wiki/Earth_Overlord)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Earth Overlord")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -67,13 +69,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "gold coin", chance = 100000, maxCount = 68 },
-	{ name = "platinum coin", chance = 33333, maxCount = 3 },
-	{ name = "terra mantle", chance = 1923 },
-	{ name = "mother soil", chance = 100000 },
-	{ name = "lump of earth", chance = 33333 },
-	{ name = "shiny stone", chance = 8333 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "gold coin", chance = 100000, maxCount = 68 },
+	{ id = "platinum coin", chance = 33333, maxCount = 3 },
+	{ id = "terra mantle", chance = 1923 },
+	{ id = "mother soil", chance = 100000 },
+	{ id = "lump of earth", chance = 33333 },
+	{ id = "shiny stone", chance = 8333 },
 	{ id = 12600, chance = 552 }, -- coal
 }
 
@@ -81,7 +83,7 @@ monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -400 },
 	{ name = "combat", interval = 1000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = 0, maxDamage = -800, length = 7, spread = 0, effect = CONST_ME_STONES, target = false },
 	{ name = "combat", interval = 1000, chance = 9, type = COMBAT_EARTHDAMAGE, minDamage = 0, maxDamage = -490, radius = 6, effect = CONST_ME_BIGPLANTS, target = false },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -750, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -750, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 4000 },
 }
 
 monster.defenses = {

@@ -1,3 +1,6 @@
+-- Dawnfly (Tibia Wiki: https://tibia.fandom.com/wiki/Dawnfly)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Dawnfly")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,7 +81,7 @@ monster.defenses = {
 	defense = 2,
 	armor = 3,
 	mitigation = 0.25,
-	{ name = "speed", interval = 2000, chance = 11, speedChange = 238, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 11, effect = CONST_ME_MAGIC_RED, speed = 200},
 }
 
 monster.elements = {

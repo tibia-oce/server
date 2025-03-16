@@ -1,3 +1,6 @@
+-- Island Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Island_Troll)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Island Troll")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 277
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Goroma.",
-}
 
 monster.health = 50
 monster.maxHealth = 50
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,17 +69,17 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3003, chance = 8000 }, -- rope
-	{ name = "gold coin", chance = 60000, maxCount = 10 },
-	{ name = "silver amulet", chance = 70 },
-	{ name = "hand axe", chance = 18000 },
-	{ name = "spear", chance = 20000 },
-	{ name = "studded club", chance = 5000 },
-	{ name = "leather helmet", chance = 10000 },
+	{ id = "gold coin", chance = 60000, maxCount = 10 },
+	{ id = "silver amulet", chance = 70 },
+	{ id = "hand axe", chance = 18000 },
+	{ id = "spear", chance = 20000 },
+	{ id = "studded club", chance = 5000 },
+	{ id = "leather helmet", chance = 10000 },
 	{ id = 3412, chance = 16000 }, -- wooden shield
-	{ name = "leather boots", chance = 10500 },
-	{ name = "mango", chance = 5000 },
+	{ id = "leather boots", chance = 10500 },
+	{ id = "mango", chance = 5000 },
 	{ id = 5901, chance = 30000 }, -- wood
-	{ name = "marlin", chance = 40 },
+	{ id = "marlin", chance = 40 },
 }
 
 monster.attacks = {

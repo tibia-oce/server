@@ -1,3 +1,6 @@
+-- Furious Orc Berserker (Tibia Wiki: https://tibia.fandom.com/wiki/Furious_Orc_Berserker)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Furious Orc Berserker")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Minotaur Bruiser (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Bruiser)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Minotaur Bruiser")
 local monster = {}
 
@@ -50,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

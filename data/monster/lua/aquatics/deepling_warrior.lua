@@ -1,3 +1,6 @@
+-- Deepling Warrior (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Warrior)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Deepling Warrior")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 769
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Fiehonja.",
-}
 
 monster.health = 1600
 monster.maxHealth = 1600
@@ -33,8 +24,6 @@ monster.corpse = 13712
 monster.speed = 145
 monster.manaCost = 0
 
-monster.faction = FACTION_DEEPLING
-monster.enemyFactions = { FACTION_PLAYER, FACTION_DEATHLING }
 
 monster.changeTarget = {
 	interval = 4000,
@@ -65,8 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -80,22 +68,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 60000, maxCount = 100 },
-	{ name = "gold coin", chance = 60000, maxCount = 80 },
-	{ name = "deepling filet", chance = 15285 },
-	{ name = "deeptags", chance = 14975 },
-	{ name = "deepling ridge", chance = 11111 },
-	{ name = "great mana potion", chance = 10210 },
-	{ name = "deepling warts", chance = 10040 },
-	{ name = "great health potion", chance = 10030 },
-	{ name = "vortex bolt", chance = 3431, maxCount = 5 },
-	{ name = "small emerald", chance = 3104 },
+	{ id = "gold coin", chance = 60000, maxCount = 100 },
+	{ id = "gold coin", chance = 60000, maxCount = 80 },
+	{ id = "deepling filet", chance = 15285 },
+	{ id = "deeptags", chance = 14975 },
+	{ id = "deepling ridge", chance = 11111 },
+	{ id = "great mana potion", chance = 10210 },
+	{ id = "deepling warts", chance = 10040 },
+	{ id = "great health potion", chance = 10030 },
+	{ id = "vortex bolt", chance = 3431, maxCount = 5 },
+	{ id = "small emerald", chance = 3104 },
 	{ id = 3052, chance = 3001 }, -- life ring
-	{ name = "heavy trident", chance = 999 },
-	{ name = "fish fin", chance = 870 },
-	{ name = "warrior's shield", chance = 610 },
-	{ name = "eye of a deepling", chance = 610 },
-	{ name = "warrior's axe", chance = 510 },
+	{ id = "heavy trident", chance = 999 },
+	{ id = "fish fin", chance = 870 },
+	{ id = "warrior's shield", chance = 610 },
+	{ id = "eye of a deepling", chance = 610 },
+	{ id = "warrior's axe", chance = 510 },
 }
 
 monster.attacks = {

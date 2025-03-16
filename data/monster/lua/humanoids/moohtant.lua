@@ -1,3 +1,6 @@
+-- Moohtant (Tibia Wiki: https://tibia.fandom.com/wiki/Moohtant)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Moohtant")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1044
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Oramond Mountain Hideout, Oramond Minotaur Camp (northern camp), \z
-		Underground Glooth Factory, Oramond Dungeon.",
-}
 
 monster.health = 3200
 monster.maxHealth = 3200
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

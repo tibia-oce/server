@@ -1,3 +1,6 @@
+-- Azerus (Tibia Wiki: https://tibia.fandom.com/wiki/Azerus)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Azerus")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- The Lord of the Lice (Tibia Wiki: https://tibia.fandom.com/wiki/The_Lord_of_the_Lice)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("The Lord of the Lice")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

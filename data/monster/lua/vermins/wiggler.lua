@@ -1,3 +1,6 @@
+-- Wiggler (Tibia Wiki: https://tibia.fandom.com/wiki/Wiggler)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Wiggler")
 local monster = {}
 
@@ -17,18 +20,6 @@ monster.events = {
 	"WigglerDeath",
 }
 
-monster.raceId = 899
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Can be found in Truffels Garden as well as the Mushroom Gardens.",
-}
 
 monster.health = 1200
 monster.maxHealth = 1200
@@ -64,8 +55,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,20 +70,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "platinum coin", chance = 14790 },
-	{ name = "terra rod", chance = 850 },
-	{ name = "serpent sword", chance = 1360 },
-	{ name = "black shield", chance = 1320 },
-	{ name = "white mushroom", chance = 7142, maxCount = 5 },
-	{ name = "blue piece of cloth", chance = 2080 },
-	{ name = "yellow piece of cloth", chance = 2160 },
-	{ name = "strong health potion", chance = 4930 },
-	{ name = "strong mana potion", chance = 5250 },
-	{ name = "crystalline arrow", chance = 15540, maxCount = 5 },
-	{ name = "green crystal splinter", chance = 3600 },
-	{ name = "green crystal fragment", chance = 2070 },
-	{ name = "drill bolt", chance = 15260, maxCount = 5 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "platinum coin", chance = 14790 },
+	{ id = "terra rod", chance = 850 },
+	{ id = "serpent sword", chance = 1360 },
+	{ id = "black shield", chance = 1320 },
+	{ id = "white mushroom", chance = 7142, maxCount = 5 },
+	{ id = "blue piece of cloth", chance = 2080 },
+	{ id = "yellow piece of cloth", chance = 2160 },
+	{ id = "strong health potion", chance = 4930 },
+	{ id = "strong mana potion", chance = 5250 },
+	{ id = "crystalline arrow", chance = 15540, maxCount = 5 },
+	{ id = "green crystal splinter", chance = 3600 },
+	{ id = "green crystal fragment", chance = 2070 },
+	{ id = "drill bolt", chance = 15260, maxCount = 5 },
 }
 
 monster.attacks = {
@@ -101,13 +91,13 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -180, maxDamage = -270, length = 4, spread = 3, effect = CONST_ME_HITBYPOISON, target = false },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -160, maxDamage = -200, range = 7, shootEffect = CONST_ANI_POISONARROW, effect = CONST_ME_SMALLPLANTS, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -700, length = 3, spread = 2, effect = CONST_ME_HITAREA, target = false, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -700, length = 3, spread = 2, effect = CONST_ME_HITAREA, target = false, duration = 30000 },
 }
 
 monster.defenses = {
 	defense = 15,
 	armor = 15,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 510, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 360},
 }
 
 monster.elements = {

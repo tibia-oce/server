@@ -1,3 +1,6 @@
+-- Choking Fear (Tibia Wiki: https://tibia.fandom.com/wiki/Choking_Fear)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Choking Fear")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1015
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "All over the surface of Upper Roshamuul and Nightmare Isles.",
-}
 
 monster.health = 5800
 monster.maxHealth = 5800
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,28 +70,28 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "platinum coin", chance = 100000, maxCount = 8 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "platinum coin", chance = 100000, maxCount = 8 },
 	{ id = 3051, chance = 3000 }, -- energy ring
 	{ id = 3052, chance = 4200 }, -- life ring
 	{ id = 3098, chance = 3000 }, -- ring of healing
-	{ name = "guardian shield", chance = 1540 },
-	{ name = "beastslayer axe", chance = 3290 },
-	{ name = "brown piece of cloth", chance = 6000 },
-	{ name = "yellow piece of cloth", chance = 3500 },
-	{ name = "great mana potion", chance = 20000, maxCount = 3 },
-	{ name = "terra boots", chance = 720 },
-	{ name = "great spirit potion", chance = 20000, maxCount = 3 },
-	{ name = "ultimate health potion", chance = 19000, maxCount = 3 },
-	{ name = "spellbook of mind control", chance = 720 },
-	{ name = "underworld rod", chance = 720 },
-	{ name = "springsprout rod", chance = 510 },
-	{ name = "green crystal shard", chance = 1540 },
-	{ name = "brown crystal splinter", chance = 52500, maxCount = 2 },
-	{ name = "blue crystal splinter", chance = 10000, maxCount = 3 },
-	{ name = "cluster of solace", chance = 4620 },
-	{ name = "dead weight", chance = 14180 },
-	{ name = "hemp rope", chance = 14180 },
+	{ id = "guardian shield", chance = 1540 },
+	{ id = "beastslayer axe", chance = 3290 },
+	{ id = "brown piece of cloth", chance = 6000 },
+	{ id = "yellow piece of cloth", chance = 3500 },
+	{ id = "great mana potion", chance = 20000, maxCount = 3 },
+	{ id = "terra boots", chance = 720 },
+	{ id = "great spirit potion", chance = 20000, maxCount = 3 },
+	{ id = "ultimate health potion", chance = 19000, maxCount = 3 },
+	{ id = "spellbook of mind control", chance = 720 },
+	{ id = "underworld rod", chance = 720 },
+	{ id = "springsprout rod", chance = 510 },
+	{ id = "green crystal shard", chance = 1540 },
+	{ id = "brown crystal splinter", chance = 52500, maxCount = 2 },
+	{ id = "blue crystal splinter", chance = 10000, maxCount = 3 },
+	{ id = "cluster of solace", chance = 4620 },
+	{ id = "dead weight", chance = 14180 },
+	{ id = "hemp rope", chance = 14180 },
 }
 
 monster.attacks = {
@@ -109,7 +99,7 @@ monster.attacks = {
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -700, maxDamage = -900, length = 5, spread = 0, effect = CONST_ME_HITBYPOISON, target = false },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -300, radius = 1, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_SLEEP, target = true },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -800, radius = 1, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_SLEEP, target = true, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -800, radius = 1, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_SLEEP, target = true, duration = 15000 },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_MANADRAIN, minDamage = -130, maxDamage = -300, radius = 4, effect = CONST_ME_SOUND_RED, target = false },
 	{ name = "choking fear drown", interval = 2000, chance = 20, target = false },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_DEATHDAMAGE, minDamage = -250, maxDamage = -500, radius = 4, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_MORTAREA, target = true },

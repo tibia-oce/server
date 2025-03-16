@@ -1,3 +1,6 @@
+-- Spidris Elite (Tibia Wiki: https://tibia.fandom.com/wiki/Spidris_Elite)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Spidris Elite")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 797
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "The Hive: east tower (beyond gates), west tower (including beyond gates), \z
-		also anywhere Hive Overseers are found (as summons), Hive Outpost.",
-}
 
 monster.health = 5000
 monster.maxHealth = 5000
@@ -60,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,21 +63,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 23280, maxCount = 5 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "platinum coin", chance = 45000, maxCount = 6 },
-	{ name = "violet gem", chance = 1120 },
+	{ id = "small ruby", chance = 23280, maxCount = 5 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "platinum coin", chance = 45000, maxCount = 6 },
+	{ id = "violet gem", chance = 1120 },
 	{ id = 6299, chance = 4480 }, -- death ring
-	{ name = "titan axe", chance = 1440 },
-	{ name = "great mana potion", chance = 20400, maxCount = 2 },
+	{ id = "titan axe", chance = 1440 },
+	{ id = "great mana potion", chance = 20400, maxCount = 2 },
 	{ id = 281, chance = 3040 }, -- giant shimmering pearl (green)
-	{ name = "ultimate health potion", chance = 9250, maxCount = 2 },
-	{ name = "spidris mandible", chance = 27440 },
-	{ name = "compound eye", chance = 13210 },
-	{ name = "calopteryx cape", chance = 1280 },
-	{ name = "carapace shield", chance = 1170 },
-	{ name = "hive scythe", chance = 1390 },
+	{ id = "ultimate health potion", chance = 9250, maxCount = 2 },
+	{ id = "spidris mandible", chance = 27440 },
+	{ id = "compound eye", chance = 13210 },
+	{ id = "calopteryx cape", chance = 1280 },
+	{ id = "carapace shield", chance = 1170 },
+	{ id = "hive scythe", chance = 1390 },
 }
 
 monster.attacks = {

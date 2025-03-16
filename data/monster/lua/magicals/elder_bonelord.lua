@@ -1,3 +1,6 @@
+-- Elder Bonelord (Tibia Wiki: https://tibia.fandom.com/wiki/Elder_Bonelord)
+-- Version: 7.4
+
 local mType = Game.createMonsterType("Elder Bonelord")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 108
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Hellgate, near the Hellgate Library, Deeper Banuta, behind piano in Cult Cave to the \z
-		northeast of Liberty Bay, Vandura Bonelord Cave, Goroma, Helheim, \z
-		underground of Fenrock (on the way to Beregar), Vengoth.",
-}
 
 monster.health = 500
 monster.maxHealth = 500
@@ -64,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -90,18 +78,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 99290, maxCount = 86 },
-	{ name = "elder bonelord tentacle", chance = 20040 },
-	{ name = "small flask of eyedrops", chance = 9720 },
-	{ name = "sniper arrow", chance = 8780, maxCount = 5 },
-	{ name = "two handed sword", chance = 2980 },
-	{ name = "steel shield", chance = 2040 },
+	{ id = "gold coin", chance = 99290, maxCount = 86 },
+	{ id = "elder bonelord tentacle", chance = 20040 },
+	{ id = "small flask of eyedrops", chance = 9720 },
+	{ id = "sniper arrow", chance = 8780, maxCount = 5 },
+	{ id = "two handed sword", chance = 2980 },
+	{ id = "steel shield", chance = 2040 },
 	{ id = 3059, chance = 1030 }, -- spellbook
-	{ name = "strong mana potion", chance = 830 },
-	{ name = "giant eye", chance = 460 },
-	{ name = "bonelord shield", chance = 90 },
-	{ name = "bonelord helmet", chance = 90 },
-	{ name = "bonelord eye", chance = 1920 },
+	{ id = "strong mana potion", chance = 830 },
+	{ id = "giant eye", chance = 460 },
+	{ id = "bonelord shield", chance = 90 },
+	{ id = "bonelord helmet", chance = 90 },
+	{ id = "bonelord eye", chance = 1920 },
 }
 
 monster.attacks = {
@@ -112,7 +100,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -20, maxDamage = -40, range = 7, shootEffect = CONST_ANI_POISON, target = false },
 	{ name = "combat", interval = 2000, chance = 5, type = COMBAT_LIFEDRAIN, minDamage = -45, maxDamage = -85, range = 7, effect = CONST_ME_MAGIC_RED, target = false },
 	{ name = "combat", interval = 2000, chance = 5, type = COMBAT_MANADRAIN, minDamage = 0, maxDamage = -40, range = 7, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -600, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -600, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
 }
 
 monster.defenses = {

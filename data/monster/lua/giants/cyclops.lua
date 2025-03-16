@@ -1,3 +1,6 @@
+-- Cyclops (Tibia Wiki: https://tibia.fandom.com/wiki/Cyclops)
+-- Version: 2.0
+
 local mType = Game.createMonsterType("Cyclops")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 22
-monster.Bestiary = {
-	class = "Giant",
-	race = BESTY_RACE_GIANT,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Plains of Havoc, Mount Sternum, Femor Hills, Cyclops Camp, Cyclopolis, Ancient Temple, Shadowthorn, \z
-	Orc Fort, Mistrock, Foreigner Quarter, Outlaw Camp and in the Cyclops version of the Forsaken Mine. ",
-}
 
 monster.health = 260
 monster.maxHealth = 260
@@ -61,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,17 +70,17 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3012, chance = 190 }, -- wolf tooth chain
-	{ name = "gold coin", chance = 82000, maxCount = 47 },
+	{ id = "gold coin", chance = 82000, maxCount = 47 },
 	{ id = 3093, chance = 90 }, -- club ring
-	{ name = "halberd", chance = 1003 },
-	{ name = "short sword", chance = 8000 },
-	{ name = "dark helmet", chance = 220 },
-	{ name = "plate shield", chance = 2500 },
-	{ name = "battle shield", chance = 1400 },
-	{ name = "meat", chance = 30070 },
+	{ id = "halberd", chance = 1003 },
+	{ id = "short sword", chance = 8000 },
+	{ id = "dark helmet", chance = 220 },
+	{ id = "plate shield", chance = 2500 },
+	{ id = "battle shield", chance = 1400 },
+	{ id = "meat", chance = 30070 },
 	{ id = 7398, chance = 80 }, -- cyclops trophy
-	{ name = "health potion", chance = 210 },
-	{ name = "cyclops toe", chance = 4930 },
+	{ id = "health potion", chance = 210 },
+	{ id = "cyclops toe", chance = 4930 },
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 

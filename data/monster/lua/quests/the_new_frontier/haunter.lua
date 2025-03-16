@@ -1,3 +1,6 @@
+-- Haunter (Tibia Wiki: https://tibia.fandom.com/wiki/Haunter)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Haunter")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,7 +79,7 @@ monster.defenses = {
 	armor = 25,
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 16, type = COMBAT_HEALING, minDamage = 100, maxDamage = 155, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 16, speedChange = 360, effect = CONST_ME_MAGIC_RED, target = false, duration = 80000 },
+	{ name = "speed", interval = 2000, chance = 16, effect = CONST_ME_MAGIC_RED, speed = 270},
 }
 
 monster.elements = {

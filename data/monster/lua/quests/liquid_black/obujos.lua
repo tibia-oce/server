@@ -1,3 +1,6 @@
+-- Obujos (Tibia Wiki: https://tibia.fandom.com/wiki/Obujos)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Obujos")
 local monster = {}
 
@@ -58,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -74,9 +76,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "deepling axe", chance = 1300 },
-	{ name = "depth scutum", chance = 1185 },
-	{ name = "ornate legs", chance = 700, unique = true },
+	{ id = "deepling axe", chance = 1300 },
+	{ id = "depth scutum", chance = 1185 },
+	{ id = "ornate legs", chance = 700, unique = true },
 }
 
 monster.attacks = {

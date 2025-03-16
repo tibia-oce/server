@@ -1,3 +1,6 @@
+-- Barbarian Headsplitter (Tibia Wiki: https://tibia.fandom.com/wiki/Barbarian_Headsplitter)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Barbarian Headsplitter")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 333
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Krimhorn, Bittermor, Ragnir, and Fenrock.",
-}
 
 monster.health = 100
 monster.maxHealth = 100
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,17 +71,17 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 60300 }, -- torch
-	{ name = "gold coin", chance = 75600, maxCount = 30 },
+	{ id = "gold coin", chance = 75600, maxCount = 30 },
 	{ id = 3052, chance = 230 }, -- life ring
-	{ name = "knife", chance = 14890 },
-	{ name = "brass helmet", chance = 20140 },
-	{ name = "viking helmet", chance = 5020 },
+	{ id = "knife", chance = 14890 },
+	{ id = "brass helmet", chance = 20140 },
+	{ id = "viking helmet", chance = 5020 },
 	{ id = 3114, chance = 8000, maxCount = 2 }, -- skull
-	{ name = "scale armor", chance = 4060 },
-	{ name = "brown piece of cloth", chance = 980 },
-	{ name = "fur boots", chance = 90 },
-	{ name = "krimhorn helmet", chance = 110 },
-	{ name = "health potion", chance = 560 },
+	{ id = "scale armor", chance = 4060 },
+	{ id = "brown piece of cloth", chance = 980 },
+	{ id = "fur boots", chance = 90 },
+	{ id = "krimhorn helmet", chance = 110 },
+	{ id = "health potion", chance = 560 },
 }
 
 monster.attacks = {

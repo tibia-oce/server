@@ -1,3 +1,6 @@
+-- Zavarash (Tibia Wiki: https://tibia.fandom.com/wiki/Zavarash)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Zavarash")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -112,7 +114,7 @@ monster.defenses = {
 	armor = 55,
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 400, maxDamage = 600, radius = 8, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 18, speedChange = 784, effect = CONST_ME_MAGIC_GREEN, target = false, duration = 7000 },
+	{ name = "speed", interval = 2000, chance = 18, effect = CONST_ME_MAGIC_GREEN, speed = 440},
 	{ name = "invisible", interval = 2000, chance = 20, effect = CONST_ME_MAGIC_BLUE },
 }
 

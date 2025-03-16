@@ -1,3 +1,6 @@
+-- Scar Tribe Warrior (Tibia Wiki: https://tibia.fandom.com/wiki/Scar_Tribe_Warrior)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Scar Tribe Warrior")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

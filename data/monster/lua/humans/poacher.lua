@@ -1,3 +1,6 @@
+-- Poacher (Tibia Wiki: https://tibia.fandom.com/wiki/Poacher)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Poacher")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 376
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "South of Elvenbane and Ab'Dendriel, Ferngrims Gate, Northeast of Carlin, \z
-		Edron Hunter Camps, Yalahar - Trade Quarter and Foreigner Quarter.",
-}
 
 monster.health = 90
 monster.maxHealth = 90
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,13 +67,13 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 4180 }, -- torch
-	{ name = "bow", chance = 14930 },
-	{ name = "leather helmet", chance = 30600 },
-	{ name = "arrow", chance = 49500, maxCount = 17 },
-	{ name = "poison arrow", chance = 2930, maxCount = 3 },
+	{ id = "bow", chance = 14930 },
+	{ id = "leather helmet", chance = 30600 },
+	{ id = "arrow", chance = 49500, maxCount = 17 },
+	{ id = "poison arrow", chance = 2930, maxCount = 3 },
 	{ id = 3481, chance = 710 }, -- closed trap
-	{ name = "leather legs", chance = 26740 },
-	{ name = "roll", chance = 11110, maxCount = 2 },
+	{ id = "leather legs", chance = 26740 },
+	{ id = "roll", chance = 11110, maxCount = 2 },
 }
 
 monster.attacks = {

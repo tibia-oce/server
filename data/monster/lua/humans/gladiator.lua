@@ -1,3 +1,6 @@
+-- Gladiator (Tibia Wiki: https://tibia.fandom.com/wiki/Gladiator)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Gladiator")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 527
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Trade Quarter, Arena and Zoo Quarter.",
-}
 
 monster.health = 185
 monster.maxHealth = 185
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,16 +67,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 49500, maxCount = 30 },
+	{ id = "gold coin", chance = 49500, maxCount = 30 },
 	{ id = 3264, chance = 12620 }, -- sword
-	{ name = "mace", chance = 11160 },
-	{ name = "chain helmet", chance = 5200 },
-	{ name = "iron helmet", chance = 590 },
-	{ name = "brass armor", chance = 2750 },
-	{ name = "steel shield", chance = 840 },
-	{ name = "plate shield", chance = 9950 },
-	{ name = "meat", chance = 19000 },
-	{ name = "belted cape", chance = 340 },
+	{ id = "mace", chance = 11160 },
+	{ id = "chain helmet", chance = 5200 },
+	{ id = "iron helmet", chance = 590 },
+	{ id = "brass armor", chance = 2750 },
+	{ id = "steel shield", chance = 840 },
+	{ id = "plate shield", chance = 9950 },
+	{ id = "meat", chance = 19000 },
+	{ id = "belted cape", chance = 340 },
 }
 
 monster.attacks = {
@@ -97,7 +87,7 @@ monster.defenses = {
 	defense = 25,
 	armor = 14,
 	mitigation = 0.78,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 215, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 196},
 }
 
 monster.elements = {

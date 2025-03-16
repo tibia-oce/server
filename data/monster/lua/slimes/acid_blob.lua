@@ -1,3 +1,6 @@
+-- Acid Blob (Tibia Wiki: https://tibia.fandom.com/wiki/Acid_Blob)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Acid Blob")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 513
-monster.Bestiary = {
-	class = "Slime",
-	race = BESTY_RACE_SLIME,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Alchemist Quarter, Deeper Banuta.",
-}
 
 monster.health = 250
 monster.maxHealth = 250
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -85,7 +74,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "glob of acid slime", chance = 18520 },
+	{ id = "glob of acid slime", chance = 18520 },
 }
 
 monster.attacks = {

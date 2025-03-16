@@ -1,3 +1,6 @@
+-- Deepling Master Librarian (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Master_Librarian)
+-- Version: 9.50
+
 local mType = Game.createMonsterType("Deepling Master Librarian")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 860
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Fiehonja.",
-}
 
 monster.health = 1700
 monster.maxHealth = 1700
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,19 +66,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "platinum coin", chance = 89000, maxCount = 3 },
-	{ name = "spellsinger's seal", chance = 25000 },
-	{ name = "deepling filet", chance = 20000 },
-	{ name = "key to the Drowned Library", chance = 20000 },
-	{ name = "eye of a deepling", chance = 9380 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "platinum coin", chance = 89000, maxCount = 3 },
+	{ id = "spellsinger's seal", chance = 25000 },
+	{ id = "deepling filet", chance = 20000 },
+	{ id = "key to the Drowned Library", chance = 20000 },
+	{ id = "eye of a deepling", chance = 9380 },
 	{ id = 3578, chance = 9090, maxCount = 2 }, -- fish
-	{ name = "small sapphire", chance = 8440, maxCount = 3 },
-	{ name = "deepling staff", chance = 3130 },
+	{ id = "small sapphire", chance = 8440, maxCount = 3 },
+	{ id = "deepling staff", chance = 3130 },
 	{ id = 3052, chance = 3200 }, -- life ring
-	{ name = "fish fin", chance = 1800 },
-	{ name = "necklace of the deep", chance = 1250 },
-	{ name = "ornate crossbow", chance = 35 },
+	{ id = "fish fin", chance = 1800 },
+	{ id = "necklace of the deep", chance = 1250 },
+	{ id = "ornate crossbow", chance = 35 },
 }
 
 monster.attacks = {

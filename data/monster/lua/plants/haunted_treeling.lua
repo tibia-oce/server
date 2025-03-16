@@ -1,3 +1,6 @@
+-- Haunted Treeling (Tibia Wiki: https://tibia.fandom.com/wiki/Haunted_Treeling)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Haunted Treeling")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 511
-monster.Bestiary = {
-	class = "Plant",
-	race = BESTY_RACE_PLANT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Vengoth surface, Vengoth Castle (Boreth's tower), Northern Zao Plantations, Tiquanda Laboratory, \z
-		Dryad Gardens.",
-}
 
 monster.health = 450
 monster.maxHealth = 450
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,23 +69,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 91920, maxCount = 95 },
+	{ id = "gold coin", chance = 91920, maxCount = 95 },
 	{ id = 3139, chance = 29190 }, -- wooden trash
-	{ name = "red mushroom", chance = 7700 },
-	{ name = "health potion", chance = 5130 },
-	{ name = "white mushroom", chance = 5030, maxCount = 2 },
-	{ name = "haunted piece of wood", chance = 4950 },
-	{ name = "orange mushroom", chance = 1800 },
-	{ name = "strong health potion", chance = 1040 },
+	{ id = "red mushroom", chance = 7700 },
+	{ id = "health potion", chance = 5130 },
+	{ id = "white mushroom", chance = 5030, maxCount = 2 },
+	{ id = "haunted piece of wood", chance = 4950 },
+	{ id = "orange mushroom", chance = 1800 },
+	{ id = "strong health potion", chance = 1040 },
 	{ id = 3097, chance = 660 }, -- dwarven ring
-	{ name = "small emerald", chance = 620 },
-	{ name = "bullseye potion", chance = 100 },
+	{ id = "small emerald", chance = 620 },
+	{ id = "bullseye potion", chance = 100 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -150 },
 	{ name = "combat", interval = 2000, chance = 5, type = COMBAT_MANADRAIN, minDamage = -30, maxDamage = -100, radius = 4, effect = CONST_ME_GREEN_RINGS, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -700, length = 5, spread = 0, effect = CONST_ME_SMALLPLANTS, target = false, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -700, length = 5, spread = 0, effect = CONST_ME_SMALLPLANTS, target = false, duration = 15000 },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -100, range = 7, radius = 1, shootEffect = CONST_ANI_SMALLEARTH, effect = CONST_ME_CARNIPHILA, target = true },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -55, maxDamage = -100, radius = 4, effect = CONST_ME_HITBYPOISON, target = true },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, radius = 1, effect = CONST_ME_POISONAREA, target = false },

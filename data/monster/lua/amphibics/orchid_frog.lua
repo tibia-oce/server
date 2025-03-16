@@ -1,3 +1,6 @@
+-- Orchid Frog (Tibia Wiki: https://tibia.fandom.com/wiki/Orchid_Frog)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Orchid Frog")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 271
-monster.Bestiary = {
-	class = "Amphibic",
-	race = BESTY_RACE_AMPHIBIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Meriana, Laguna Islands, and other Shattered Isles.",
-}
 
 monster.health = 60
 monster.maxHealth = 60
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,8 +65,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 73230, maxCount = 10 },
-	{ name = "worm", chance = 8000 },
+	{ id = "gold coin", chance = 73230, maxCount = 10 },
+	{ id = "worm", chance = 8000 },
 }
 
 monster.attacks = {

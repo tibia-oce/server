@@ -1,3 +1,6 @@
+-- Rot Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Rot_Elemental)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Rot Elemental")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1055
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Rathleton Sewers, Glooth Factory, Lower Rathleton, Oramond/Western Plains, Jaccus Maxxen's Dungeon.",
-}
 
 monster.health = 850
 monster.maxHealth = 850
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,
@@ -107,7 +97,7 @@ monster.defenses = {
 	armor = 41,
 	mitigation = 1.07,
 	{ name = "combat", interval = 2000, chance = 7, type = COMBAT_HEALING, minDamage = 40, maxDamage = 60, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 9, speedChange = 470, effect = CONST_ME_SMOKE, target = false, duration = 7000 },
+	{ name = "speed", interval = 2000, chance = 9, effect = CONST_ME_SMOKE, speed = 230},
 }
 
 monster.elements = {

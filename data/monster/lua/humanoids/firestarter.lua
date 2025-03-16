@@ -1,3 +1,6 @@
+-- Firestarter (Tibia Wiki: https://tibia.fandom.com/wiki/Firestarter)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Firestarter")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 737
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 2,
-	Locations = "Shadowthorn, during the Thornfire World Change.",
-}
 
 monster.health = 180
 monster.maxHealth = 180
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,16 +70,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 79000, maxCount = 35 },
-	{ name = "longsword", chance = 6000 },
-	{ name = "bow", chance = 4000 },
-	{ name = "grapes", chance = 20000 },
+	{ id = "gold coin", chance = 79000, maxCount = 35 },
+	{ id = "longsword", chance = 6000 },
+	{ id = "bow", chance = 4000 },
+	{ id = "grapes", chance = 20000 },
 	{ id = 5921, chance = 930 }, -- heaven blossom
-	{ name = "elvish bow", chance = 100 },
-	{ name = "flaming arrow", chance = 30000, maxCount = 12 },
-	{ name = "elvish talisman", chance = 5000 },
+	{ id = "elvish bow", chance = 100 },
+	{ id = "flaming arrow", chance = 30000, maxCount = 12 },
+	{ id = "elvish talisman", chance = 5000 },
 	{ id = 12600, chance = 15280 }, -- coal
-	{ name = "flintstone", chance = 340 },
+	{ id = "flintstone", chance = 340 },
 }
 
 monster.attacks = {

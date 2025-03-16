@@ -1,3 +1,6 @@
+-- Dark Apprentice (Tibia Wiki: https://tibia.fandom.com/wiki/Dark_Apprentice)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Dark Apprentice")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 372
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Magician Tower, Dark Cathedral, Hero Cave, Magician Quarter.",
-}
 
 monster.health = 225
 monster.maxHealth = 225
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,13 +67,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 7500, maxCount = 45 },
-	{ name = "wand of decay", chance = 110 },
-	{ name = "wand of dragonbreath", chance = 1980 },
-	{ name = "blank rune", chance = 8125, maxCount = 3 },
-	{ name = "health potion", chance = 2900 },
-	{ name = "mana potion", chance = 2980 },
-	{ name = "reins", chance = 10 },
+	{ id = "gold coin", chance = 7500, maxCount = 45 },
+	{ id = "wand of decay", chance = 110 },
+	{ id = "wand of dragonbreath", chance = 1980 },
+	{ id = "blank rune", chance = 8125, maxCount = 3 },
+	{ id = "health potion", chance = 2900 },
+	{ id = "mana potion", chance = 2980 },
+	{ id = "reins", chance = 10 },
 }
 
 monster.attacks = {

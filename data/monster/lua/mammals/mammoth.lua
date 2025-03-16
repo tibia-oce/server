@@ -1,3 +1,6 @@
+-- Mammoth (Tibia Wiki: https://tibia.fandom.com/wiki/Mammoth)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Mammoth")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 260
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Formorgar Glacier, Tyrsung, around the Barbarian Settlements, Mammoth Shearing Factory, Chyllfroest.",
-}
 
 monster.health = 320
 monster.maxHealth = 320
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,14 +66,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 90000, maxCount = 40 },
-	{ name = "meat", chance = 39000 },
-	{ name = "ham", chance = 30000, maxCount = 3 },
-	{ name = "tusk shield", chance = 500 },
-	{ name = "mammoth whopper", chance = 2800 },
-	{ name = "furry club", chance = 500 },
-	{ name = "thick fur", chance = 7280 },
-	{ name = "mammoth tusk", chance = 7500, maxCount = 2 },
+	{ id = "gold coin", chance = 90000, maxCount = 40 },
+	{ id = "meat", chance = 39000 },
+	{ id = "ham", chance = 30000, maxCount = 3 },
+	{ id = "tusk shield", chance = 500 },
+	{ id = "mammoth whopper", chance = 2800 },
+	{ id = "furry club", chance = 500 },
+	{ id = "thick fur", chance = 7280 },
+	{ id = "mammoth tusk", chance = 7500, maxCount = 2 },
 }
 
 monster.attacks = {

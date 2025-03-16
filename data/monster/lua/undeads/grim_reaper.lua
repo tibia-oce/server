@@ -1,3 +1,6 @@
+-- Grim Reaper (Tibia Wiki: https://tibia.fandom.com/wiki/Grim_Reaper)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Grim Reaper")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 465
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Drefia Grim Reaper Dungeons, deep in Drefia Wyrm Lair (after the Medusa Shield Quest), \z
-		Edron (Hero Cave), Yalahar (Cemetery Quarter), Oramond Dungeon, \z
-		  Abandoned Sewers and optionally in the Demon Oak Quest.",
-}
 
 monster.health = 3900
 monster.maxHealth = 3900
@@ -63,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,23 +68,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 99000, maxCount = 263 },
-	{ name = "platinum coin", chance = 5200, maxCount = 4 },
+	{ id = "gold coin", chance = 99000, maxCount = 263 },
+	{ id = "platinum coin", chance = 5200, maxCount = 4 },
 	{ id = 3046, chance = 4850 }, -- magic light wand
-	{ name = "dark shield", chance = 3000 },
-	{ name = "scythe", chance = 9000 },
-	{ name = "orichalcum pearl", chance = 1400, maxCount = 4 },
+	{ id = "dark shield", chance = 3000 },
+	{ id = "scythe", chance = 9000 },
+	{ id = "orichalcum pearl", chance = 1400, maxCount = 4 },
 	{ id = 6299, chance = 330 }, -- death ring
-	{ name = "demonic essence", chance = 10600 },
-	{ name = "flask of demonic blood", chance = 35000 },
-	{ name = "nightmare blade", chance = 880 },
-	{ name = "great mana potion", chance = 10000 },
-	{ name = "glacier kilt", chance = 330 },
-	{ name = "ultimate health potion", chance = 9600 },
-	{ name = "skullcracker armor", chance = 270 },
-	{ name = "underworld rod", chance = 910 },
+	{ id = "demonic essence", chance = 10600 },
+	{ id = "flask of demonic blood", chance = 35000 },
+	{ id = "nightmare blade", chance = 880 },
+	{ id = "great mana potion", chance = 10000 },
+	{ id = "glacier kilt", chance = 330 },
+	{ id = "ultimate health potion", chance = 9600 },
+	{ id = "skullcracker armor", chance = 270 },
+	{ id = "underworld rod", chance = 910 },
 	{ id = 8896, chance = 2500 }, -- slightly rusted armor
-	{ name = "mystical hourglass", chance = 5300 },
+	{ id = "mystical hourglass", chance = 5300 },
 }
 
 monster.attacks = {
@@ -112,7 +100,7 @@ monster.defenses = {
 	armor = 30,
 	mitigation = 0.64,
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 130, maxDamage = 205, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 450, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 320},
 }
 
 monster.elements = {

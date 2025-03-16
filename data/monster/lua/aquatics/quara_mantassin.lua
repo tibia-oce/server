@@ -1,3 +1,6 @@
+-- Quara Mantassin (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Mantassin)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Quara Mantassin")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 241
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Calassa, Frozen Trench, Yalahar (Sunken Quarter).",
-}
 
 monster.health = 800
 monster.maxHealth = 800
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 2,
@@ -75,18 +65,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 5000, maxCount = 100 },
-	{ name = "gold coin", chance = 29000, maxCount = 29 },
-	{ name = "mantassin tail", chance = 12600 },
-	{ name = "shrimp", chance = 5170, maxCount = 5 },
-	{ name = "halberd", chance = 4970 },
-	{ name = "small sapphire", chance = 1130 },
-	{ name = "cape", chance = 1090 },
+	{ id = "gold coin", chance = 5000, maxCount = 100 },
+	{ id = "gold coin", chance = 29000, maxCount = 29 },
+	{ id = "mantassin tail", chance = 12600 },
+	{ id = "shrimp", chance = 5170, maxCount = 5 },
+	{ id = "halberd", chance = 4970 },
+	{ id = "small sapphire", chance = 1130 },
+	{ id = "cape", chance = 1090 },
 	{ id = 3049, chance = 1050 }, -- stealth ring
-	{ name = "two handed sword", chance = 990 },
-	{ name = "fish fin", chance = 610 },
-	{ name = "strange helmet", chance = 100 },
-	{ name = "blue robe", chance = 60 },
+	{ id = "two handed sword", chance = 990 },
+	{ id = "fish fin", chance = 610 },
+	{ id = "strange helmet", chance = 100 },
+	{ id = "blue robe", chance = 60 },
 }
 
 monster.attacks = {
@@ -98,7 +88,7 @@ monster.defenses = {
 	armor = 16,
 	mitigation = 0.70,
 	{ name = "invisible", interval = 2000, chance = 20, effect = CONST_ME_MAGIC_BLUE },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 400, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 590},
 }
 
 monster.elements = {

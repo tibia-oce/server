@@ -1,3 +1,6 @@
+-- Countess Sorrow (Tibia Wiki: https://tibia.fandom.com/wiki/Countess_Sorrow)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Countess Sorrow")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 3,
@@ -108,7 +110,7 @@ monster.defenses = {
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 26, type = COMBAT_HEALING, minDamage = 415, maxDamage = 625, effect = CONST_ME_MAGIC_BLUE, target = false },
 	{ name = "invisible", interval = 2000, chance = 15, effect = CONST_ME_POFF },
-	{ name = "speed", interval = 2000, chance = 11, speedChange = 736, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 11, effect = CONST_ME_MAGIC_RED, speed = 400},
 }
 
 monster.elements = {

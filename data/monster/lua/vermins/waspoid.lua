@@ -1,3 +1,6 @@
+-- Waspoid (Tibia Wiki: https://tibia.fandom.com/wiki/Waspoid)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Waspoid")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 792
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "The Hive, Hive Outpost.",
-}
 
 monster.health = 1100
 monster.maxHealth = 1100
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,18 +65,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "emerald bangle", chance = 2040 },
-	{ name = "black pearl", chance = 4230 },
-	{ name = "gold coin", chance = 40000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 35 },
-	{ name = "platinum coin", chance = 40430 },
-	{ name = "yellow gem", chance = 1040 },
-	{ name = "waspoid claw", chance = 9096 },
-	{ name = "waspoid wing", chance = 13890 },
-	{ name = "compound eye", chance = 6060 },
-	{ name = "grasshopper legs", chance = 230 },
-	{ name = "carapace shield", chance = 120 },
-	{ name = "hive scythe", chance = 330 },
+	{ id = "emerald bangle", chance = 2040 },
+	{ id = "black pearl", chance = 4230 },
+	{ id = "gold coin", chance = 40000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 35 },
+	{ id = "platinum coin", chance = 40430 },
+	{ id = "yellow gem", chance = 1040 },
+	{ id = "waspoid claw", chance = 9096 },
+	{ id = "waspoid wing", chance = 13890 },
+	{ id = "compound eye", chance = 6060 },
+	{ id = "grasshopper legs", chance = 230 },
+	{ id = "carapace shield", chance = 120 },
+	{ id = "hive scythe", chance = 330 },
 }
 
 monster.attacks = {

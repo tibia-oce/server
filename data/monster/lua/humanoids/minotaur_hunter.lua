@@ -1,3 +1,6 @@
+-- Minotaur Hunter (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Hunter)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Minotaur Hunter")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1052
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Oramond/Southern Plains, Minotaur Hills, \z
-		Oramond Dungeon (depending on Magistrate votes), Underground Glooth Factory.",
-}
 
 monster.health = 1400
 monster.maxHealth = 1400
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -116,7 +105,7 @@ monster.defenses = {
 	armor = 36,
 	mitigation = 1.71,
 	{ name = "combat", interval = 2000, chance = 7, type = COMBAT_HEALING, minDamage = 95, maxDamage = 180, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 520, effect = CONST_ME_POFF, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_POFF, speed = 230},
 }
 
 monster.elements = {

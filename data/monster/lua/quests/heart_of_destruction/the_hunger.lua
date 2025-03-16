@@ -1,3 +1,6 @@
+-- The Hunger (Tibia Wiki: https://tibia.fandom.com/wiki/The_Hunger)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("The Hunger")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"HeartMinionDeath",

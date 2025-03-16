@@ -1,3 +1,6 @@
+-- Shard of Corruption (Tibia Wiki: https://tibia.fandom.com/wiki/Shard_of_Corruption)
+-- Version: 8.54
+
 local mType = Game.createMonsterType("Shard of Corruption")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Draken Abomination (Tibia Wiki: https://tibia.fandom.com/wiki/Draken_Abomination)
+-- Version: 8.60
+
 local mType = Game.createMonsterType("Draken Abomination")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 673
-monster.Bestiary = {
-	class = "Dragon",
-	race = BESTY_RACE_DRAGON,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Razachai including the Inner Sanctum.",
-}
 
 monster.health = 6250
 monster.maxHealth = 6250
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -84,26 +74,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 47000, maxCount = 98 },
-	{ name = "platinum coin", chance = 50590, maxCount = 8 },
-	{ name = "meat", chance = 50450, maxCount = 4 },
-	{ name = "great mana potion", chance = 9950, maxCount = 3 },
-	{ name = "terra hood", chance = 8730 },
-	{ name = "great spirit potion", chance = 4905, maxCount = 3 },
-	{ name = "ultimate health potion", chance = 9400, maxCount = 3 },
-	{ name = "wand of voodoo", chance = 1020 },
-	{ name = "small topaz", chance = 2900, maxCount = 4 },
-	{ name = "zaoan armor", chance = 470 },
-	{ name = "zaoan helmet", chance = 560 },
-	{ name = "zaoan legs", chance = 780 },
-	{ name = "eye of corruption", chance = 12110 },
-	{ name = "tail of corruption", chance = 6240 },
-	{ name = "scale of corruption", chance = 10940 },
-	{ name = "shield of corruption", chance = 10 },
-	{ name = "draken boots", chance = 540 },
-	{ name = "snake god's wristguard", chance = 10 },
-	{ name = "bamboo leaves", chance = 360 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 47000, maxCount = 98 },
+	{ id = "platinum coin", chance = 50590, maxCount = 8 },
+	{ id = "meat", chance = 50450, maxCount = 4 },
+	{ id = "great mana potion", chance = 9950, maxCount = 3 },
+	{ id = "terra hood", chance = 8730 },
+	{ id = "great spirit potion", chance = 4905, maxCount = 3 },
+	{ id = "ultimate health potion", chance = 9400, maxCount = 3 },
+	{ id = "wand of voodoo", chance = 1020 },
+	{ id = "small topaz", chance = 2900, maxCount = 4 },
+	{ id = "zaoan armor", chance = 470 },
+	{ id = "zaoan helmet", chance = 560 },
+	{ id = "zaoan legs", chance = 780 },
+	{ id = "eye of corruption", chance = 12110 },
+	{ id = "tail of corruption", chance = 6240 },
+	{ id = "scale of corruption", chance = 10940 },
+	{ id = "shield of corruption", chance = 10 },
+	{ id = "draken boots", chance = 540 },
+	{ id = "snake god's wristguard", chance = 10 },
+	{ id = "bamboo leaves", chance = 360 },
 }
 
 monster.attacks = {

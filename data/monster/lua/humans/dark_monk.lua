@@ -1,3 +1,6 @@
+-- Dark Monk (Tibia Wiki: https://tibia.fandom.com/wiki/Dark_Monk)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("Dark Monk")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 225
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Dark Cathedral, Vandura (Cult Cave), Foreigner Quarter.",
-}
 
 monster.health = 190
 monster.maxHealth = 190
@@ -61,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,19 +69,19 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2815, chance = 1790 }, -- scroll
-	{ name = "brown flask", chance = 380 },
+	{ id = "brown flask", chance = 380 },
 	{ id = 2914, chance = 550 }, -- lamp
-	{ name = "gold coin", chance = 14600, maxCount = 18 },
+	{ id = "gold coin", chance = 14600, maxCount = 18 },
 	{ id = 3050, chance = 120 }, -- power ring
-	{ name = "life crystal", chance = 990 },
-	{ name = "ankh", chance = 900 },
-	{ name = "sandals", chance = 890 },
-	{ name = "bread", chance = 20550 },
-	{ name = "mana potion", chance = 790 },
-	{ name = "book of prayers", chance = 1900 },
-	{ name = "dark rosary", chance = 10500 },
-	{ name = "rope belt", chance = 6666 },
-	{ name = "safety pin", chance = 990 },
+	{ id = "life crystal", chance = 990 },
+	{ id = "ankh", chance = 900 },
+	{ id = "sandals", chance = 890 },
+	{ id = "bread", chance = 20550 },
+	{ id = "mana potion", chance = 790 },
+	{ id = "book of prayers", chance = 1900 },
+	{ id = "dark rosary", chance = 10500 },
+	{ id = "rope belt", chance = 6666 },
+	{ id = "safety pin", chance = 990 },
 }
 
 monster.attacks = {
@@ -104,7 +94,7 @@ monster.defenses = {
 	armor = 22,
 	mitigation = 1.13,
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 25, maxDamage = 49, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 300, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 230},
 }
 
 monster.elements = {

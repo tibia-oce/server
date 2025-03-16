@@ -1,3 +1,6 @@
+-- Blistering Fire Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Blistering_Fire_Elemental)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Blistering Fire Elemental")
 local monster = {}
 
@@ -47,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -62,11 +64,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 3200, maxCount = 3 },
-	{ name = "gold coin", chance = 12500, maxCount = 65 },
-	{ name = "gold coin", chance = 12500, maxCount = 60 },
-	{ name = "glimmering soil", chance = 2500 },
-	{ name = "wand of draconia", chance = 1250 },
+	{ id = "small ruby", chance = 3200, maxCount = 3 },
+	{ id = "gold coin", chance = 12500, maxCount = 65 },
+	{ id = "gold coin", chance = 12500, maxCount = 60 },
+	{ id = "glimmering soil", chance = 2500 },
+	{ id = "wand of draconia", chance = 1250 },
 }
 
 monster.attacks = {

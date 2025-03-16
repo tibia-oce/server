@@ -1,3 +1,6 @@
+-- Efreet (Tibia Wiki: https://tibia.fandom.com/wiki/Efreet)
+-- Version: 7.4
+
 local mType = Game.createMonsterType("Efreet")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 103
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Mal'ouquah, Deeper Banuta, Goromas Cult Cave (in the classroom), Magician Quarter.",
-}
 
 monster.health = 550
 monster.maxHealth = 550
@@ -33,8 +24,6 @@ monster.corpse = 6032
 monster.speed = 117
 monster.manaCost = 0
 
-monster.faction = FACTION_EFREET
-monster.enemyFactions = { FACTION_PLAYER, FACTION_MARID }
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -89,21 +77,21 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2647, chance = 2200 }, -- green tapestry
-	{ name = "small oil lamp", chance = 160 },
-	{ name = "gold coin", chance = 50000, maxCount = 75 },
-	{ name = "gold coin", chance = 60000, maxCount = 50 },
-	{ name = "small emerald", chance = 7000 },
-	{ name = "green gem", chance = 200 },
-	{ name = "wand of inferno", chance = 390 },
-	{ name = "heavy machete", chance = 5000 },
-	{ name = "mystic turban", chance = 160 },
-	{ name = "pear", chance = 9390, maxCount = 5 },
-	{ name = "green piece of cloth", chance = 3000 },
-	{ name = "royal spear", chance = 15570, maxCount = 3 },
-	{ name = "strong mana potion", chance = 3500 },
-	{ name = "magma monocle", chance = 360 },
-	{ name = "jewelled belt", chance = 8540 },
-	{ name = "noble turban", chance = 1130 },
+	{ id = "small oil lamp", chance = 160 },
+	{ id = "gold coin", chance = 50000, maxCount = 75 },
+	{ id = "gold coin", chance = 60000, maxCount = 50 },
+	{ id = "small emerald", chance = 7000 },
+	{ id = "green gem", chance = 200 },
+	{ id = "wand of inferno", chance = 390 },
+	{ id = "heavy machete", chance = 5000 },
+	{ id = "mystic turban", chance = 160 },
+	{ id = "pear", chance = 9390, maxCount = 5 },
+	{ id = "green piece of cloth", chance = 3000 },
+	{ id = "royal spear", chance = 15570, maxCount = 3 },
+	{ id = "strong mana potion", chance = 3500 },
+	{ id = "magma monocle", chance = 360 },
+	{ id = "jewelled belt", chance = 8540 },
+	{ id = "noble turban", chance = 1130 },
 }
 
 monster.attacks = {
@@ -111,7 +99,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_FIREDAMAGE, minDamage = -40, maxDamage = -110, range = 7, shootEffect = CONST_ANI_FIRE, target = false },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_ENERGYDAMAGE, minDamage = -30, maxDamage = -90, radius = 3, effect = CONST_ME_ENERGYHIT, target = false },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_ENERGYDAMAGE, minDamage = -65, maxDamage = -120, range = 7, shootEffect = CONST_ANI_ENERGY, effect = CONST_ME_ENERGYHIT, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -650, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
 	{ name = "drunk", interval = 2000, chance = 10, range = 7, shootEffect = CONST_ANI_ENERGY, target = false, duration = 6000 },
 	{ name = "outfit", interval = 2000, chance = 1, range = 7, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 4000, outfitMonster = "rat" },
 	{ name = "djinn electrify", interval = 2000, chance = 15, range = 5, target = false },

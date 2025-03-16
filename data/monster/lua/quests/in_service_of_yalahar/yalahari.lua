@@ -1,3 +1,6 @@
+-- Yalahari (Tibia Wiki: https://tibia.fandom.com/wiki/Yalahari)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Yalahari")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

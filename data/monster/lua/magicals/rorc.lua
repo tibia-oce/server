@@ -1,3 +1,6 @@
+-- Rorc (Tibia Wiki: https://tibia.fandom.com/wiki/Rorc)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("Rorc")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 978
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "South-west of Ulderek's Rock and in the Rorc version of the Forsaken Mine.",
-}
 
 monster.health = 260
 monster.maxHealth = 260
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,13 +67,13 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3012, chance = 7410 }, -- wolf tooth chain
-	{ name = "gold coin", chance = 73640, maxCount = 25 },
-	{ name = "obsidian lance", chance = 930 },
-	{ name = "orcish axe", chance = 2040 },
-	{ name = "plate shield", chance = 6700 },
-	{ name = "rorc feather", chance = 12520 },
-	{ name = "rorc egg", chance = 790 },
-	{ name = "hatched rorc egg", chance = 12670 },
+	{ id = "gold coin", chance = 73640, maxCount = 25 },
+	{ id = "obsidian lance", chance = 930 },
+	{ id = "orcish axe", chance = 2040 },
+	{ id = "plate shield", chance = 6700 },
+	{ id = "rorc feather", chance = 12520 },
+	{ id = "rorc egg", chance = 790 },
+	{ id = "hatched rorc egg", chance = 12670 },
 }
 
 monster.attacks = {
@@ -94,7 +84,7 @@ monster.defenses = {
 	defense = 25,
 	armor = 25,
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 40, maxDamage = 55, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 300, effect = CONST_ME_MAGIC_RED, target = false, duration = 3000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 176},
 }
 
 monster.elements = {

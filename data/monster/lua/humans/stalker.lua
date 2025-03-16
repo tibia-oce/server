@@ -1,3 +1,6 @@
+-- Stalker (Tibia Wiki: https://tibia.fandom.com/wiki/Stalker)
+-- Version: 6.4
+
 local mType = Game.createMonsterType("Stalker")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 72
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Triangle Tower, Drefia, Edron Hero Cave in the Warlock room, White Flower Temple, \z
-		Ghostlands, Shadow Tomb, Ancient Ruins Tomb, Tarpit Tomb, Stone Tomb, Mountain Tomb, Peninsula Tomb, \z
-		Oasis Tomb, Yalahar Trade Quarter and Isle of the Kings.",
-}
 
 monster.health = 120
 monster.maxHealth = 120
@@ -62,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,14 +64,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 13000, maxCount = 8 },
-	{ name = "blank rune", chance = 8670 },
-	{ name = "throwing knife", chance = 11170, maxCount = 2 },
-	{ name = "katana", chance = 530 },
-	{ name = "obsidian lance", chance = 1210 },
-	{ name = "brass legs", chance = 3500 },
-	{ name = "brass shield", chance = 5510 },
-	{ name = "miraculum", chance = 1550 },
+	{ id = "gold coin", chance = 13000, maxCount = 8 },
+	{ id = "blank rune", chance = 8670 },
+	{ id = "throwing knife", chance = 11170, maxCount = 2 },
+	{ id = "katana", chance = 530 },
+	{ id = "obsidian lance", chance = 1210 },
+	{ id = "brass legs", chance = 3500 },
+	{ id = "brass shield", chance = 5510 },
+	{ id = "miraculum", chance = 1550 },
 }
 
 monster.attacks = {

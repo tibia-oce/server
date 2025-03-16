@@ -1,3 +1,6 @@
+-- Orc Berserker (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Berserker)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Orc Berserker")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 8
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Orc Fort, Dwacatra, Orc Peninsula, Elvenbane, Edron Orc Cave, Plains of Havoc, below Point of No Return in Outlaw Camp, Maze of Lost Souls, Cyclopolis, Desert Dungeon, Ancient Temple, Foreigner Quarter, Zao Orc Land.",
-}
 
 monster.health = 210
 monster.maxHealth = 210
@@ -60,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,15 +66,15 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2914, chance = 830 }, -- lamp
-	{ name = "gold coin", chance = 54000, maxCount = 12 },
-	{ name = "battle axe", chance = 6110 },
-	{ name = "halberd", chance = 7280 },
-	{ name = "chain armor", chance = 890 },
-	{ name = "ham", chance = 10400 },
-	{ name = "hunting spear", chance = 5000 },
-	{ name = "orc tooth", chance = 3000 },
-	{ name = "orcish gear", chance = 9400 },
-	{ name = "orc leather", chance = 4000 },
+	{ id = "gold coin", chance = 54000, maxCount = 12 },
+	{ id = "battle axe", chance = 6110 },
+	{ id = "halberd", chance = 7280 },
+	{ id = "chain armor", chance = 890 },
+	{ id = "ham", chance = 10400 },
+	{ id = "hunting spear", chance = 5000 },
+	{ id = "orc tooth", chance = 3000 },
+	{ id = "orcish gear", chance = 9400 },
+	{ id = "orc leather", chance = 4000 },
 }
 
 monster.attacks = {
@@ -95,7 +85,7 @@ monster.defenses = {
 	defense = 15,
 	armor = 12,
 	mitigation = 0.30,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 290, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 250},
 }
 
 monster.elements = {

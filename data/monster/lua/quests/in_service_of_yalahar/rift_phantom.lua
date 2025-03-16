@@ -1,3 +1,6 @@
+-- Rift Phantom (Tibia Wiki: https://tibia.fandom.com/wiki/Rift_Phantom)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Rift Phantom")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

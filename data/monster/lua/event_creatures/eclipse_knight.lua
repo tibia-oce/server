@@ -1,3 +1,6 @@
+-- Eclipse Knight (Tibia Wiki: https://tibia.fandom.com/wiki/Eclipse_Knight)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Eclipse Knight")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -62,7 +64,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "midnight shard", chance = 25000 },
+	{ id = "midnight shard", chance = 25000 },
 }
 
 monster.attacks = {

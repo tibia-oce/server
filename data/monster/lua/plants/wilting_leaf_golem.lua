@@ -1,3 +1,6 @@
+-- Wilting Leaf Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Wilting_Leaf_Golem)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("Wilting Leaf Golem")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 982
-monster.Bestiary = {
-	class = "Plant",
-	race = BESTY_RACE_PLANT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Forest Fury Camp, Lair of the Treeling Witch and in the Forest Fury version of the Forsaken Mine.",
-}
 
 monster.health = 380
 monster.maxHealth = 380
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,12 +68,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 97540, maxCount = 45 },
-	{ name = "fir cone", chance = 14950 },
-	{ name = "dowser", chance = 11880 },
-	{ name = "small emerald", chance = 1050 },
-	{ name = "white mushroom", chance = 5040, maxCount = 3 },
-	{ name = "swampling club", chance = 4890 },
+	{ id = "gold coin", chance = 97540, maxCount = 45 },
+	{ id = "fir cone", chance = 14950 },
+	{ id = "dowser", chance = 11880 },
+	{ id = "small emerald", chance = 1050 },
+	{ id = "white mushroom", chance = 5040, maxCount = 3 },
+	{ id = "swampling club", chance = 4890 },
 }
 
 monster.attacks = {
@@ -91,7 +81,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -50, range = 7, radius = 1, shootEffect = CONST_ANI_LARGEROCK, effect = CONST_ME_EXPLOSIONHIT, target = true },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 15, minDamage = -150, maxDamage = -200, radius = 4, effect = CONST_ME_GREEN_RINGS, target = false },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -600, radius = 3, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 20, speed = -600, radius = 3, effect = CONST_ME_MAGIC_RED, target = false, duration = 15000 },
 }
 
 monster.defenses = {

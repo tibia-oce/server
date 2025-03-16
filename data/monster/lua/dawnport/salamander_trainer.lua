@@ -1,3 +1,6 @@
+-- Salamander Trainer (Tibia Wiki: https://tibia.fandom.com/wiki/Salamander_Trainer)
+-- Version: 10.55
+
 local mType = Game.createMonsterType("Salamander Trainer")
 local monster = {}
 
@@ -46,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Orc Warrior (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Warrior)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Orc Warrior")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 7
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Ancient Temple in Thais, Orc Fort, below Point of No Return in Outlaw Camp and inside a \z
-		mountain north of it, Orc Peninsula, Folda, Edron Orc cave, Maze of Lost Souls, Elvenbane Castle, \z
-		Foreigner Quarter, Zao Orc Land.",
-}
 
 monster.health = 125
 monster.maxHealth = 125
@@ -61,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,15 +66,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 65000, maxCount = 15 },
-	{ name = "poison dagger", chance = 120 },
-	{ name = "chain armor", chance = 7360 },
-	{ name = "copper shield", chance = 560 },
-	{ name = "meat", chance = 15000 },
-	{ name = "orc tooth", chance = 700 },
-	{ name = "broken helmet", chance = 10800 },
-	{ name = "orc leather", chance = 4000 },
-	{ name = "skull belt", chance = 980 },
+	{ id = "gold coin", chance = 65000, maxCount = 15 },
+	{ id = "poison dagger", chance = 120 },
+	{ id = "chain armor", chance = 7360 },
+	{ id = "copper shield", chance = 560 },
+	{ id = "meat", chance = 15000 },
+	{ id = "orc tooth", chance = 700 },
+	{ id = "broken helmet", chance = 10800 },
+	{ id = "orc leather", chance = 4000 },
+	{ id = "skull belt", chance = 980 },
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 

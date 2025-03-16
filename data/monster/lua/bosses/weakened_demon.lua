@@ -1,3 +1,6 @@
+-- Weakened Demon (Tibia Wiki: https://tibia.fandom.com/wiki/Weakened_Demon)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Weakened Demon")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

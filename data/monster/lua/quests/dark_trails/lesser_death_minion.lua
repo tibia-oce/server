@@ -1,3 +1,6 @@
+-- Lesser Death Minion (Tibia Wiki: https://tibia.fandom.com/wiki/Lesser_Death_Minion)
+-- Version: 10.50
+
 local mType = Game.createMonsterType("Lesser Death Minion")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

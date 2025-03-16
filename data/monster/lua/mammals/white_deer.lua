@@ -1,3 +1,6 @@
+-- White Deer (Tibia Wiki: https://tibia.fandom.com/wiki/White_Deer)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("White Deer")
 local monster = {}
 
@@ -17,18 +20,6 @@ monster.events = {
 	"WhiteDeerDeath",
 }
 
-monster.raceId = 720
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 2,
-	Locations = "Around AbDendriel, Carlin east from Lothar, Femor Hills and Ferngrims Gate, usually in pairs. They will appear when they're not overhunted.",
-}
 
 monster.health = 195
 monster.maxHealth = 195
@@ -63,9 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

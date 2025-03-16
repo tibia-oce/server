@@ -1,3 +1,6 @@
+-- Vampire Pig (Tibia Wiki: https://tibia.fandom.com/wiki/Vampire_Pig)
+-- Version: 8.50
+
 local mType = Game.createMonsterType("Vampire Pig")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 558
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 1,
-	Locations = "Isle of Evil on the surface.",
-}
 
 monster.health = 305
 monster.maxHealth = 305
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -76,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 90000, maxCount = 40 },
+	{ id = "gold coin", chance = 90000, maxCount = 40 },
 }
 
 monster.attacks = {

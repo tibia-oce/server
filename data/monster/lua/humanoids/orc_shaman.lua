@@ -1,3 +1,6 @@
+-- Orc Shaman (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Shaman)
+-- Version: 5.1
+
 local mType = Game.createMonsterType("Orc Shaman")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 6
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Edron Orc Cave, Temple of Xayepocax, below Point of No Return in Outlaw Camp, Venore Orc Cave, \z
-		Maze of Lost Souls, Orc Fort, north west of Thais, Elvenbane, Plains Of Havoc, Foreigner Quarter, Zao Orc Land.",
-}
 
 monster.health = 115
 monster.maxHealth = 115
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -84,15 +73,15 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2824, chance = 520 }, -- book
-	{ name = "gold coin", chance = 90000, maxCount = 5 },
-	{ name = "wand of decay", chance = 1000 },
-	{ name = "spear", chance = 4850 },
-	{ name = "chain armor", chance = 8750 },
-	{ name = "corncob", chance = 10600, maxCount = 2 },
-	{ name = "orc tooth", chance = 2100 },
-	{ name = "broken shamanic staff", chance = 10300 },
-	{ name = "shamanic hood", chance = 6860 },
-	{ name = "orc leather", chance = 4300 },
+	{ id = "gold coin", chance = 90000, maxCount = 5 },
+	{ id = "wand of decay", chance = 1000 },
+	{ id = "spear", chance = 4850 },
+	{ id = "chain armor", chance = 8750 },
+	{ id = "corncob", chance = 10600, maxCount = 2 },
+	{ id = "orc tooth", chance = 2100 },
+	{ id = "broken shamanic staff", chance = 10300 },
+	{ id = "shamanic hood", chance = 6860 },
+	{ id = "orc leather", chance = 4300 },
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 

@@ -1,3 +1,6 @@
+-- Deepling Spellsinger (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Spellsinger)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Deepling Spellsinger")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 772
-monster.Bestiary = {
-	class = "Aquatic",
-	race = BESTY_RACE_AQUATIC,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Fiehonja.",
-}
 
 monster.health = 850
 monster.maxHealth = 850
@@ -33,8 +24,6 @@ monster.corpse = 13771
 monster.speed = 95
 monster.manaCost = 0
 
-monster.faction = FACTION_DEEPLING
-monster.enemyFactions = { FACTION_PLAYER, FACTION_DEATHLING }
 
 monster.changeTarget = {
 	interval = 4000,
@@ -65,8 +54,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -81,19 +69,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 80120 },
-	{ name = "gold coin", chance = 75110, maxCount = 60 },
-	{ name = "spellsinger's seal", chance = 15185 },
-	{ name = "deepling filet", chance = 14995 },
-	{ name = "key to the drowned library", chance = 10740 },
+	{ id = "platinum coin", chance = 80120 },
+	{ id = "gold coin", chance = 75110, maxCount = 60 },
+	{ id = "spellsinger's seal", chance = 15185 },
+	{ id = "deepling filet", chance = 14995 },
+	{ id = "key to the drowned library", chance = 10740 },
 	{ id = 3578, chance = 3448 }, -- fish
-	{ name = "small sapphire", chance = 2934 },
-	{ name = "eye of a deepling", chance = 2540 },
+	{ id = "small sapphire", chance = 2934 },
+	{ id = "eye of a deepling", chance = 2540 },
 	{ id = 3052, chance = 2459 }, -- life ring
-	{ name = "deepling staff", chance = 2020 },
-	{ name = "necklace of the deep", chance = 790 },
-	{ name = "fish fin", chance = 520 },
-	{ name = "ornate crossbow", chance = 220 },
+	{ id = "deepling staff", chance = 2020 },
+	{ id = "necklace of the deep", chance = 790 },
+	{ id = "fish fin", chance = 520 },
+	{ id = "ornate crossbow", chance = 220 },
 }
 
 monster.attacks = {

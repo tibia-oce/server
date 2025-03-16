@@ -1,3 +1,6 @@
+-- Energy Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Energy_Elemental)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Energy Elemental")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 457
-monster.Bestiary = {
-	class = "Elemental",
-	race = BESTY_RACE_ELEMENTAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Khazeel, Energy Elemental Lair, Vandura Mountain, Vengoths mountain.",
-}
 
 monster.health = 500
 monster.maxHealth = 500
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 4,
@@ -77,18 +67,18 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3007, chance = 2000 }, -- crystal ring
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 70 },
-	{ name = "small amethyst", chance = 5000, maxCount = 2 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 70 },
+	{ id = "small amethyst", chance = 5000, maxCount = 2 },
 	{ id = 3051, chance = 892 }, -- energy ring
-	{ name = "silver amulet", chance = 1020 },
-	{ name = "wand of cosmic energy", chance = 636 },
-	{ name = "throwing star", chance = 9900, maxCount = 5 },
-	{ name = "obsidian lance", chance = 3571 },
-	{ name = "guardian shield", chance = 243 },
-	{ name = "crystal sword", chance = 5882 },
-	{ name = "strong mana potion", chance = 7692 },
-	{ name = "mana potion", chance = 11711 },
+	{ id = "silver amulet", chance = 1020 },
+	{ id = "wand of cosmic energy", chance = 636 },
+	{ id = "throwing star", chance = 9900, maxCount = 5 },
+	{ id = "obsidian lance", chance = 3571 },
+	{ id = "guardian shield", chance = 243 },
+	{ id = "crystal sword", chance = 5882 },
+	{ id = "strong mana potion", chance = 7692 },
+	{ id = "mana potion", chance = 11711 },
 	{ id = 761, chance = 10000, maxCount = 10 }, -- flash arrow
 }
 

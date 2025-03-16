@@ -1,3 +1,6 @@
+-- Winter Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Winter_Wolf)
+-- Version: 6.2
+
 local mType = Game.createMonsterType("Winter Wolf")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 52
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Ice Islands.",
-}
 
 monster.health = 30
 monster.maxHealth = 30
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -74,8 +64,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 30000, maxCount = 2 },
-	{ name = "winter wolf fur", chance = 10000 },
+	{ id = "meat", chance = 30000, maxCount = 2 },
+	{ id = "winter wolf fur", chance = 10000 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- General Murius (Tibia Wiki: https://tibia.fandom.com/wiki/General_Murius)
+-- Version: 7.5
+
 local mType = Game.createMonsterType("General Murius")
 local monster = {}
 
@@ -53,8 +56,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -79,20 +81,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "minotaur horn", chance = 100000, maxCount = 2 },
-	{ name = "minotaur leather", chance = 100000 },
-	{ name = "gold coin", chance = 92310, maxCount = 97 },
-	{ name = "platinum coin", chance = 92310, maxCount = 3 },
-	{ name = "brass armor", chance = 76920 },
-	{ name = "double axe", chance = 76920 },
-	{ name = "piercing bolt", chance = 38460, maxCount = 11 },
-	{ name = "meat", chance = 30770 },
-	{ name = "battle shield", chance = 23080 },
-	{ name = "chain legs", chance = 23080 },
+	{ id = "minotaur horn", chance = 100000, maxCount = 2 },
+	{ id = "minotaur leather", chance = 100000 },
+	{ id = "gold coin", chance = 92310, maxCount = 97 },
+	{ id = "platinum coin", chance = 92310, maxCount = 3 },
+	{ id = "brass armor", chance = 76920 },
+	{ id = "double axe", chance = 76920 },
+	{ id = "piercing bolt", chance = 38460, maxCount = 11 },
+	{ id = "meat", chance = 30770 },
+	{ id = "battle shield", chance = 23080 },
+	{ id = "chain legs", chance = 23080 },
 	{ id = 7401, chance = 23080 }, -- minotaur trophy
-	{ name = "power bolt", chance = 23080, maxCount = 7 },
-	{ name = "fishing rod", chance = 7690 },
-	{ name = "strong health potion", chance = 7690 },
+	{ id = "power bolt", chance = 23080, maxCount = 7 },
+	{ id = "fishing rod", chance = 7690 },
+	{ id = "strong health potion", chance = 7690 },
 }
 
 monster.attacks = {
@@ -106,7 +108,7 @@ monster.defenses = {
 	armor = 16,
 	--	mitigation = ???,
 	{ name = "combat", interval = 1000, chance = 15, type = COMBAT_HEALING, minDamage = 50, maxDamage = 100, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 275, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 250},
 }
 
 monster.elements = {

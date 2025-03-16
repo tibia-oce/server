@@ -1,3 +1,6 @@
+-- Midnight Panther (Tibia Wiki: https://tibia.fandom.com/wiki/Midnight_Panther)
+-- Version: 8.70
+
 local mType = Game.createMonsterType("Midnight Panther")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 698
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Tiquanda.",
-}
 
 monster.health = 1200
 monster.maxHealth = 1200
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -78,11 +67,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 57 },
+	{ id = "gold coin", chance = 100000, maxCount = 57 },
 	{ id = 3052, chance = 12500 }, -- life ring
-	{ name = "meat", chance = 25000, maxCount = 4 },
-	{ name = "panther head", chance = 12500 },
-	{ name = "panther paw", chance = 100000 },
+	{ id = "meat", chance = 25000, maxCount = 4 },
+	{ id = "panther head", chance = 12500 },
+	{ id = "panther paw", chance = 100000 },
 }
 
 monster.attacks = {
@@ -94,7 +83,7 @@ monster.defenses = {
 	defense = 30,
 	armor = 30,
 	mitigation = 0.99,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 370, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 580},
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 50, maxDamage = 125, effect = CONST_ME_MAGIC_BLUE, target = false },
 	{ name = "invisible", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_BLUE },
 }

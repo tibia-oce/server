@@ -1,3 +1,6 @@
+-- World Devourer (Tibia Wiki: https://tibia.fandom.com/wiki/World_Devourer)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("World Devourer")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.events = {
 	"HeartBossDeath",

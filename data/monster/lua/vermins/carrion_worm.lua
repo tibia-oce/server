@@ -1,3 +1,6 @@
+-- Carrion Worm (Tibia Wiki: https://tibia.fandom.com/wiki/Carrion_Worm)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Carrion Worm")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 251
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Edron, Cormaya, Drillworm Caves, Venore Swamps, Liberty Bay, Vandura, Hellgate, \z
-	Fibula Dungeon, Stonehome, Kazordoon, Darashia Rotworm Caves, Port Hope, Ancient Temple, \z
-	Fenrock, Arena and Zoo Quarter.",
-}
 
 monster.health = 145
 monster.maxHealth = 145
@@ -61,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,10 +63,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 45 },
-	{ name = "meat", chance = 9460, maxCount = 2 },
-	{ name = "worm", chance = 2100, maxCount = 2 },
-	{ name = "carrion worm fang", chance = 10000 },
+	{ id = "gold coin", chance = 50000, maxCount = 45 },
+	{ id = "meat", chance = 9460, maxCount = 2 },
+	{ id = "worm", chance = 2100, maxCount = 2 },
+	{ id = "carrion worm fang", chance = 10000 },
 	{ id = 12600, chance = 210 }, -- coal
 }
 

@@ -1,3 +1,6 @@
+-- Honour Guard (Tibia Wiki: https://tibia.fandom.com/wiki/Honour_Guard)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Honour Guard")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 712
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 2,
-	Locations = "Desert north of Ankrahmun.",
-}
 
 monster.health = 85
 monster.maxHealth = 85
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -78,12 +67,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 15 },
-	{ name = "scarab coin", chance = 2600 },
-	{ name = "mace", chance = 3760 },
+	{ id = "gold coin", chance = 50000, maxCount = 15 },
+	{ id = "scarab coin", chance = 2600 },
+	{ id = "mace", chance = 3760 },
 	{ id = 3307, chance = 1640 }, -- scimitar
-	{ name = "brown mushroom", chance = 6120, maxCount = 2 },
-	{ name = "pelvis bone", chance = 8700 },
+	{ id = "brown mushroom", chance = 6120, maxCount = 2 },
+	{ id = "pelvis bone", chance = 8700 },
 }
 
 monster.attacks = {

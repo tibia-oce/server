@@ -1,3 +1,6 @@
+-- Noble Lion (Tibia Wiki: https://tibia.fandom.com/wiki/Noble_Lion)
+-- Version: 10.70
+
 local mType = Game.createMonsterType("Noble Lion")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1118
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 1,
-	Locations = "Lion's Rock temple.",
-}
 
 monster.health = 1000
 monster.maxHealth = 1000
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -92,7 +81,7 @@ monster.defenses = {
 	defense = 26,
 	armor = 27,
 	mitigation = 1.02,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 250, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 230},
 }
 
 monster.elements = {

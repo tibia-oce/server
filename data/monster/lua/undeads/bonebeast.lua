@@ -1,3 +1,6 @@
+-- Bonebeast (Tibia Wiki: https://tibia.fandom.com/wiki/Bonebeast)
+-- Version: 7.4
+
 local mType = Game.createMonsterType("Bonebeast")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 101
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Old Fortress, Ankrahmun Tombs, Helheim, Ramoa, Lich Hell, beneath Fenrock, Deeper Banuta, \z
-		Vengoth Castle, Vandura Mountain, Robson's Isle, Middle Spike, Lion's Rock, Mother of Scarabs Lair, Caverna Exanima.",
-}
 
 monster.health = 515
 monster.maxHealth = 515
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,17 +65,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 90 },
+	{ id = "gold coin", chance = 50000, maxCount = 90 },
 	{ id = 3114, chance = 20000 }, -- skull
 	{ id = 3115, chance = 47750 }, -- bone
-	{ name = "bone club", chance = 4950 },
-	{ name = "plate armor", chance = 8000 },
-	{ name = "bone shield", chance = 2000 },
-	{ name = "green mushroom", chance = 1350 },
-	{ name = "hardened bone", chance = 960 },
-	{ name = "health potion", chance = 540 },
-	{ name = "bonebeast trophy", chance = 120 },
-	{ name = "bony tail", chance = 9780 },
+	{ id = "bone club", chance = 4950 },
+	{ id = "plate armor", chance = 8000 },
+	{ id = "bone shield", chance = 2000 },
+	{ id = "green mushroom", chance = 1350 },
+	{ id = "hardened bone", chance = 960 },
+	{ id = "health potion", chance = 540 },
+	{ id = "bonebeast trophy", chance = 120 },
+	{ id = "bony tail", chance = 9780 },
 }
 
 monster.attacks = {
@@ -97,7 +86,7 @@ monster.attacks = {
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -50, maxDamage = -60, radius = 3, effect = CONST_ME_POISONAREA, target = false },
 	-- poison
 	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -70, maxDamage = -80, length = 6, spread = 0, effect = CONST_ME_POISONAREA, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -600, target = true, duration = 13000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -600, target = true, duration = 13000 },
 }
 
 monster.defenses = {

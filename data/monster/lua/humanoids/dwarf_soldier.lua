@@ -1,3 +1,6 @@
+-- Dwarf Soldier (Tibia Wiki: https://tibia.fandom.com/wiki/Dwarf_Soldier)
+-- Version: 6.1
+
 local mType = Game.createMonsterType("Dwarf Soldier")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 71
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Kazordoon Dwarf Mines, Cyclopolis, Dwacatra, Ferngrims Gate, Dwarf Bridge, \z
-		Mount Sternum Undead Cave, Beregar, Tiquanda Dwarf Cave, Cormaya Dwarf Cave.",
-}
 
 monster.health = 135
 monster.maxHealth = 135
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,18 +64,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 28000, maxCount = 12 },
+	{ id = "gold coin", chance = 28000, maxCount = 12 },
 	{ id = 3092, chance = 120 }, -- axe ring
-	{ name = "battle axe", chance = 2500 },
-	{ name = "crossbow", chance = 3000 },
-	{ name = "chain armor", chance = 8000 },
-	{ name = "soldier helmet", chance = 12000 },
-	{ name = "dwarven shield", chance = 3000 },
-	{ name = "bolt", chance = 40000, maxCount = 7 },
+	{ id = "battle axe", chance = 2500 },
+	{ id = "crossbow", chance = 3000 },
+	{ id = "chain armor", chance = 8000 },
+	{ id = "soldier helmet", chance = 12000 },
+	{ id = "dwarven shield", chance = 3000 },
+	{ id = "bolt", chance = 40000, maxCount = 7 },
 	{ id = 3457, chance = 10000 }, -- shovel
-	{ name = "white mushroom", chance = 40000, maxCount = 3 },
-	{ name = "iron ore", chance = 300 },
-	{ name = "piercing bolt", chance = 4000, maxCount = 3 },
+	{ id = "white mushroom", chance = 40000, maxCount = 3 },
+	{ id = "iron ore", chance = 300 },
+	{ id = "piercing bolt", chance = 4000, maxCount = 3 },
 }
 
 monster.attacks = {

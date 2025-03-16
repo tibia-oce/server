@@ -1,3 +1,6 @@
+-- Hive Overseer (Tibia Wiki: https://tibia.fandom.com/wiki/Hive_Overseer)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Hive Overseer")
 local monster = {}
 
@@ -13,21 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 801
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 2,
-	Locations = "The Hive towers: on the highest floor of each tower, \z
-		and in many of the closed rooms accessed with pheromones; \z
-		many in the large underground room of the west tower. \z
-	Liberty Bay Hive Outpost: one spawn on the second floor underground.",
-}
 
 monster.health = 7500
 monster.maxHealth = 7500
@@ -62,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -86,22 +72,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 16000, maxCount = 2 },
-	{ name = "gold coin", chance = 40000, maxCount = 100 },
-	{ name = "gold coin", chance = 58000, maxCount = 98 },
-	{ name = "platinum coin", chance = 84000, maxCount = 6 },
-	{ name = "steel boots", chance = 550 },
-	{ name = "great mana potion", chance = 18000 },
+	{ id = "small ruby", chance = 16000, maxCount = 2 },
+	{ id = "gold coin", chance = 40000, maxCount = 100 },
+	{ id = "gold coin", chance = 58000, maxCount = 98 },
+	{ id = "platinum coin", chance = 84000, maxCount = 6 },
+	{ id = "steel boots", chance = 550 },
+	{ id = "great mana potion", chance = 18000 },
 	{ id = 281, chance = 6000 }, -- giant shimmering pearl (green)
-	{ name = "ultimate health potion", chance = 12000 },
-	{ name = "gold ingot", chance = 29000 },
-	{ name = "kollos shell", chance = 28000 },
-	{ name = "compound eye", chance = 16000 },
-	{ name = "calopteryx cape", chance = 830 },
-	{ name = "carapace shield", chance = 920 },
-	{ name = "hive scythe", chance = 1650 },
-	{ name = "gooey mass", chance = 13000, maxCount = 2 },
-	{ name = "hive bow", chance = 830 },
+	{ id = "ultimate health potion", chance = 12000 },
+	{ id = "gold ingot", chance = 29000 },
+	{ id = "kollos shell", chance = 28000 },
+	{ id = "compound eye", chance = 16000 },
+	{ id = "calopteryx cape", chance = 830 },
+	{ id = "carapace shield", chance = 920 },
+	{ id = "hive scythe", chance = 1650 },
+	{ id = "gooey mass", chance = 13000, maxCount = 2 },
+	{ id = "hive bow", chance = 830 },
 }
 
 monster.attacks = {

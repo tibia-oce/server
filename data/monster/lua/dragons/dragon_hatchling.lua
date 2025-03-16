@@ -1,3 +1,6 @@
+-- Dragon Hatchling (Tibia Wiki: https://tibia.fandom.com/wiki/Dragon_Hatchling)
+-- Version: 8.10
+
 local mType = Game.createMonsterType("Dragon Hatchling")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 385
-monster.Bestiary = {
-	class = "Dragon",
-	race = BESTY_RACE_DRAGON,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Thais Dragon Lair, beneath Fenrock, Darashia Dragon Lair, Venore Dragon Lair, \z
-	Edron Dragon Lair, Dragonblaze Peaks, Krailos Steppe. Also summoned by Lizard Dragon Priests.",
-}
 
 monster.health = 380
 monster.maxHealth = 380
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,10 +68,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 95540, maxCount = 50 },
-	{ name = "dragon ham", chance = 83040 },
-	{ name = "dragon's tail", chance = 3570 },
-	{ name = "health potion", chance = 470 },
+	{ id = "gold coin", chance = 95540, maxCount = 50 },
+	{ id = "dragon ham", chance = 83040 },
+	{ id = "dragon's tail", chance = 3570 },
+	{ id = "health potion", chance = 470 },
 }
 
 monster.attacks = {

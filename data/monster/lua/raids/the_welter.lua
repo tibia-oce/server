@@ -1,3 +1,6 @@
+-- The Welter (Tibia Wiki: https://tibia.fandom.com/wiki/The_Welter)
+-- Version: 10.20
+
 local mType = Game.createMonsterType("The Welter")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

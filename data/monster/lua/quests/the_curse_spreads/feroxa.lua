@@ -1,3 +1,6 @@
+-- Feroxa (Tibia Wiki: https://tibia.fandom.com/wiki/Feroxa)
+-- Version: 10.80
+
 local mType = Game.createMonsterType("Feroxa")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.events = {
 	"FeroxaTransform",
@@ -83,7 +85,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 55,
 	armor = 50,
-	{ name = "speed", interval = 2000, chance = 12, speedChange = 1250, effect = CONST_ME_THUNDER, target = false, duration = 10000 },
+	{ name = "speed", interval = 2000, chance = 12, effect = CONST_ME_THUNDER, speed = 350},
 	{ name = "feroxa summon", interval = 2000, chance = 20, target = false },
 }
 

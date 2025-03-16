@@ -1,3 +1,6 @@
+-- Zoralurk (Tibia Wiki: https://tibia.fandom.com/wiki/Zoralurk)
+-- Version: --
+
 local mType = Game.createMonsterType("Zoralurk")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -72,15 +74,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "white pearl", chance = 10000, maxCount = 5 },
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 90 },
-	{ name = "boots of haste", chance = 16033 },
-	{ name = "giant sword", chance = 60000 },
-	{ name = "bright sword", chance = 20000 },
-	{ name = "bright sword", chance = 20000 },
-	{ name = "warlord sword", chance = 6000 },
-	{ name = "patched boots", chance = 7000 },
+	{ id = "white pearl", chance = 10000, maxCount = 5 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 90 },
+	{ id = "boots of haste", chance = 16033 },
+	{ id = "giant sword", chance = 60000 },
+	{ id = "bright sword", chance = 20000 },
+	{ id = "bright sword", chance = 20000 },
+	{ id = "warlord sword", chance = 6000 },
+	{ id = "patched boots", chance = 7000 },
 	{ id = 3123, chance = 16000 }, -- worn leather boots
 }
 
@@ -97,7 +99,7 @@ monster.defenses = {
 	armor = 55,
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 35, type = COMBAT_HEALING, minDamage = 300, maxDamage = 800, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 4000, chance = 80, speedChange = 440, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 4000, chance = 80, effect = CONST_ME_MAGIC_RED, speed = 400},
 	{ name = "outfit", interval = 2000, chance = 10, effect = CONST_ME_CRAPS, target = false, duration = 10000, outfitMonster = "behemoth" },
 	{ name = "outfit", interval = 2000, chance = 10, effect = CONST_ME_CRAPS, target = false, duration = 10000, outfitMonster = "fire devil" },
 	{ name = "outfit", interval = 2000, chance = 10, effect = CONST_ME_CRAPS, target = false, duration = 10000, outfitMonster = "giant spider" },

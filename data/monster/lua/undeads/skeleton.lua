@@ -1,3 +1,6 @@
+-- Skeleton (Tibia Wiki: https://tibia.fandom.com/wiki/Skeleton)
+-- Version: 4.0
+
 local mType = Game.createMonsterType("Skeleton")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 33
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "In many dungeons around Tibia, like the Ancient Temple and Ghostlands. \z
-		Also found in Rookgaard tombs and north east of Port Hope, in the jungle of Tiquanda, \z
-		beneath Fenrock and in the desert Tombs, Vengoth Castle.",
-}
 
 monster.health = 50
 monster.maxHealth = 50
@@ -61,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,14 +65,14 @@ monster.voices = {
 monster.loot = {
 	{ id = 2920, chance = 10000 }, -- torch
 	{ id = 2920, chance = 9880 }, -- torch
-	{ name = "gold coin", chance = 43900, maxCount = 10 },
+	{ id = "gold coin", chance = 43900, maxCount = 10 },
 	{ id = 3115, chance = 49100 }, -- bone
 	{ id = 3264, chance = 1940 }, -- sword
-	{ name = "hatchet", chance = 4850 },
-	{ name = "mace", chance = 4850 },
-	{ name = "viking helmet", chance = 7520 },
-	{ name = "brass shield", chance = 2090 },
-	{ name = "pelvis bone", chance = 9940 },
+	{ id = "hatchet", chance = 4850 },
+	{ id = "mace", chance = 4850 },
+	{ id = "viking helmet", chance = 7520 },
+	{ id = "brass shield", chance = 2090 },
+	{ id = "pelvis bone", chance = 9940 },
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 

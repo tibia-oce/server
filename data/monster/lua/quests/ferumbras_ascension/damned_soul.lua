@@ -1,3 +1,6 @@
+-- Damned Soul (Tibia Wiki: https://tibia.fandom.com/wiki/Damned_Soul)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Damned Soul")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

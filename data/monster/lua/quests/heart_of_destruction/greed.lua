@@ -1,3 +1,6 @@
+-- Greed (Tibia Wiki: https://tibia.fandom.com/wiki/Greed)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Greed")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

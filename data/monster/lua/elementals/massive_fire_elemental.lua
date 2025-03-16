@@ -1,3 +1,6 @@
+-- Massive Fire Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Massive_Fire_Elemental)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Massive Fire Elemental")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 313
-monster.Bestiary = {
-	class = "Elemental",
-	race = BESTY_RACE_ELEMENTAL,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Demon Forge, Deeper Banuta, Hero Cave, Hot Spot, Fury Dungeon.",
-}
 
 monster.health = 1800
 monster.maxHealth = 1800
@@ -60,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 5,
@@ -74,15 +64,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 6100, maxCount = 2 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 25000, maxCount = 100 },
-	{ name = "gold coin", chance = 25000, maxCount = 12 },
-	{ name = "wand of inferno", chance = 2240 },
-	{ name = "fire sword", chance = 530 },
-	{ name = "magma amulet", chance = 1300 },
-	{ name = "magma boots", chance = 560 },
-	{ name = "magma legs", chance = 210 },
+	{ id = "small ruby", chance = 6100, maxCount = 2 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 25000, maxCount = 100 },
+	{ id = "gold coin", chance = 25000, maxCount = 12 },
+	{ id = "wand of inferno", chance = 2240 },
+	{ id = "fire sword", chance = 530 },
+	{ id = "magma amulet", chance = 1300 },
+	{ id = "magma boots", chance = 560 },
+	{ id = "magma legs", chance = 210 },
 	{ id = 8895, chance = 1330 }, -- rusted armor
 }
 

@@ -1,3 +1,6 @@
+-- Pigeon (Tibia Wiki: https://tibia.fandom.com/wiki/Pigeon)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Pigeon")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 915
-monster.Bestiary = {
-	class = "Bird",
-	race = BESTY_RACE_BIRD,
-	toKill = 25,
-	FirstUnlock = 5,
-	SecondUnlock = 10,
-	CharmsPoints = 1,
-	Stars = 0,
-	Occurrence = 1,
-	Locations = "Streets of Venore, Gardens of Night.",
-}
 
 monster.health = 30
 monster.maxHealth = 30
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

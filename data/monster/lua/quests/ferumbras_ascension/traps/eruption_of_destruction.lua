@@ -1,3 +1,6 @@
+-- Eruption of Destruction (Tibia Wiki: https://tibia.fandom.com/wiki/Eruption_of_Destruction)
+-- Version: 10.90
+
 local mType = Game.createMonsterType("Eruption of Destruction")
 local monster = {}
 
@@ -43,8 +46,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -59,7 +61,7 @@ monster.voices = {
 monster.loot = {}
 
 monster.attacks = {
-	{ name = "speed", interval = 2000, chance = 25, speedChange = -600, radius = 7, effect = CONST_ME_LOSEENERGY, target = false, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 25, speed = -600, radius = 7, effect = CONST_ME_LOSEENERGY, target = false, duration = 15000 },
 	{ name = "eruption of destruction explosion", interval = 10000, chance = 100, minDamage = -1800, maxDamage = -2200, target = false },
 }
 

@@ -1,3 +1,6 @@
+-- Mad Scientist (Tibia Wiki: https://tibia.fandom.com/wiki/Mad_Scientist)
+-- Version: 8.40
+
 local mType = Game.createMonsterType("Mad Scientist")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 528
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Magician Quarter, Trade Quarter, Factory Quarter,Isle of Evil, Tiquanda Laboratory.",
-}
 
 monster.health = 325
 monster.maxHealth = 325
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,23 +67,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 30000, maxCount = 65 },
-	{ name = "gold coin", chance = 30000, maxCount = 50 },
+	{ id = "gold coin", chance = 30000, maxCount = 65 },
+	{ id = "gold coin", chance = 30000, maxCount = 50 },
 	{ id = 3046, chance = 2000 }, -- magic light wand
-	{ name = "life crystal", chance = 2000 },
-	{ name = "cookie", chance = 1200, maxCount = 5 },
-	{ name = "white mushroom", chance = 8000, maxCount = 3 },
-	{ name = "mastermind potion", chance = 130 },
-	{ name = "health potion", chance = 19000 },
-	{ name = "mana potion", chance = 19000 },
-	{ name = "small enchanted amethyst", chance = 470 },
+	{ id = "life crystal", chance = 2000 },
+	{ id = "cookie", chance = 1200, maxCount = 5 },
+	{ id = "white mushroom", chance = 8000, maxCount = 3 },
+	{ id = "mastermind potion", chance = 130 },
+	{ id = "health potion", chance = 19000 },
+	{ id = "mana potion", chance = 19000 },
+	{ id = "small enchanted amethyst", chance = 470 },
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -35 },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_DROWNDAMAGE, minDamage = -20, maxDamage = -56, range = 7, radius = 3, shootEffect = CONST_ANI_SMALLEARTH, effect = CONST_ME_POFF, target = true },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -20, maxDamage = -36, shootEffect = CONST_ANI_POISON, effect = CONST_ME_ENERGYHIT, target = false },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = -300, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_SMALLPLANTS, target = true, duration = 2000 },
+	{ name = "speed", interval = 2000, chance = 10, speed = -300, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_SMALLPLANTS, target = true, duration = 2000 },
 }
 
 monster.defenses = {

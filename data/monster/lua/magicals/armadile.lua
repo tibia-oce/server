@@ -1,3 +1,6 @@
+-- Armadile (Tibia Wiki: https://tibia.fandom.com/wiki/Armadile)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Armadile")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 880
-monster.Bestiary = {
-	class = "Magical",
-	race = BESTY_RACE_MAGICAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 1,
-	Locations = "Warzone 1.",
-}
 
 monster.health = 3800
 monster.maxHealth = 3800
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -77,27 +67,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "gold coin", chance = 100000, maxCount = 98 },
-	{ name = "platinum coin", chance = 95000, maxCount = 7 },
+	{ id = "gold coin", chance = 100000, maxCount = 100 },
+	{ id = "gold coin", chance = 100000, maxCount = 98 },
+	{ id = "platinum coin", chance = 95000, maxCount = 7 },
 	{ id = 3053, chance = 1000 }, -- time ring
-	{ name = "tower shield", chance = 620 },
-	{ name = "titan axe", chance = 1540 },
-	{ name = "bonebreaker", chance = 1150 },
-	{ name = "strong health potion", chance = 14285, maxCount = 2 },
-	{ name = "strong mana potion", chance = 15000, maxCount = 2 },
-	{ name = "great mana potion", chance = 15920, maxCount = 2 },
-	{ name = "great health potion", chance = 15000, maxCount = 2 },
-	{ name = "mana potion", chance = 14285, maxCount = 3 },
-	{ name = "terra boots", chance = 2850 },
-	{ name = "crystalline armor", chance = 230 },
-	{ name = "battle stone", chance = 12460 },
+	{ id = "tower shield", chance = 620 },
+	{ id = "titan axe", chance = 1540 },
+	{ id = "bonebreaker", chance = 1150 },
+	{ id = "strong health potion", chance = 14285, maxCount = 2 },
+	{ id = "strong mana potion", chance = 15000, maxCount = 2 },
+	{ id = "great mana potion", chance = 15920, maxCount = 2 },
+	{ id = "great health potion", chance = 15000, maxCount = 2 },
+	{ id = "mana potion", chance = 14285, maxCount = 3 },
+	{ id = "terra boots", chance = 2850 },
+	{ id = "crystalline armor", chance = 230 },
+	{ id = "battle stone", chance = 12460 },
 	{ id = 12600, chance = 6000 }, -- coal
-	{ name = "green crystal splinter", chance = 3920, maxCount = 2 },
-	{ name = "green crystal fragment", chance = 5690, maxCount = 2 },
-	{ name = "crystalline spikes", chance = 14540 },
-	{ name = "drill bolt", chance = 7692, maxCount = 5 },
-	{ name = "envenomed arrow", chance = 10230, maxCount = 10 },
+	{ id = "green crystal splinter", chance = 3920, maxCount = 2 },
+	{ id = "green crystal fragment", chance = 5690, maxCount = 2 },
+	{ id = "crystalline spikes", chance = 14540 },
+	{ id = "drill bolt", chance = 7692, maxCount = 5 },
+	{ id = "envenomed arrow", chance = 10230, maxCount = 10 },
 }
 
 monster.attacks = {

@@ -1,3 +1,6 @@
+-- Fury (Tibia Wiki: https://tibia.fandom.com/wiki/Fury)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Fury")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 291
-monster.Bestiary = {
-	class = "Demon",
-	race = BESTY_RACE_DEMON,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Pits of Inferno (Apocalypse's Throne Room), The Inquisition Quest (The Shadow Nexus, Battlefield), \z
-	Vengoth, Fury Dungeon, Oramond Fury Dungeon, The Extension Site, Grounds of Destruction and Halls of Ascension.",
-}
 
 monster.health = 4100
 monster.maxHealth = 4100
@@ -60,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,24 +68,24 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3007, chance = 410 }, -- crystal ring
-	{ name = "gold coin", chance = 30000, maxCount = 100 },
-	{ name = "gold coin", chance = 30000, maxCount = 100 },
-	{ name = "gold coin", chance = 38000, maxCount = 69 },
-	{ name = "platinum coin", chance = 2800, maxCount = 4 },
-	{ name = "terra rod", chance = 20000 },
-	{ name = "golden legs", chance = 130 },
-	{ name = "steel boots", chance = 790 },
-	{ name = "orichalcum pearl", chance = 1500, maxCount = 4 },
-	{ name = "red piece of cloth", chance = 4000 },
-	{ name = "soul orb", chance = 21500 },
-	{ name = "soul orb", chance = 50 },
+	{ id = "gold coin", chance = 30000, maxCount = 100 },
+	{ id = "gold coin", chance = 30000, maxCount = 100 },
+	{ id = "gold coin", chance = 38000, maxCount = 69 },
+	{ id = "platinum coin", chance = 2800, maxCount = 4 },
+	{ id = "terra rod", chance = 20000 },
+	{ id = "golden legs", chance = 130 },
+	{ id = "steel boots", chance = 790 },
+	{ id = "orichalcum pearl", chance = 1500, maxCount = 4 },
+	{ id = "red piece of cloth", chance = 4000 },
+	{ id = "soul orb", chance = 21500 },
+	{ id = "soul orb", chance = 50 },
 	{ id = 6300, chance = 60 }, -- death ring
-	{ name = "demonic essence", chance = 22500 },
-	{ name = "flask of demonic blood", chance = 35000, maxCount = 3 },
-	{ name = "assassin dagger", chance = 660 },
-	{ name = "noble axe", chance = 2000 },
-	{ name = "great health potion", chance = 10500 },
-	{ name = "jalapeno pepper", chance = 29280, maxCount = 4 },
+	{ id = "demonic essence", chance = 22500 },
+	{ id = "flask of demonic blood", chance = 35000, maxCount = 3 },
+	{ id = "assassin dagger", chance = 660 },
+	{ id = "noble axe", chance = 2000 },
+	{ id = "great health potion", chance = 10500 },
+	{ id = "jalapeno pepper", chance = 29280, maxCount = 4 },
 }
 
 monster.attacks = {
@@ -107,14 +96,14 @@ monster.attacks = {
 	{ name = "fury skill reducer", interval = 2000, chance = 5, target = false },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -120, maxDamage = -300, radius = 3, effect = CONST_ME_HITAREA, target = false },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_DEATHDAMAGE, minDamage = -125, maxDamage = -250, range = 7, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_SMALLCLOUDS, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -800, range = 7, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_SMALLCLOUDS, target = false, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 15, speed = -800, range = 7, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_SMALLCLOUDS, target = false, duration = 30000 },
 }
 
 monster.defenses = {
 	defense = 20,
 	armor = 35,
 	mitigation = 1.32,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 800, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 400},
 }
 
 monster.elements = {

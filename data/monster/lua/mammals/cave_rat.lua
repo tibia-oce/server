@@ -1,3 +1,6 @@
+-- Cave Rat (Tibia Wiki: https://tibia.fandom.com/wiki/Cave_Rat)
+-- Version: 7.1
+
 local mType = Game.createMonsterType("Cave Rat")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 56
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Almost everywhere in tibia, they seem to have a nest-like place in Greenshore, \z
-		a semi-large spawn at the entrance to the Port Hope troll cave and in cave near Ankrahmun ship. \z
-		Also appears in Rat Plague in Thais and Rat Plague in Rookgaard.",
-}
 
 monster.health = 30
 monster.maxHealth = 30
@@ -61,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -77,10 +65,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 85000, maxCount = 2 },
-	{ name = "cookie", chance = 750 },
+	{ id = "gold coin", chance = 85000, maxCount = 2 },
+	{ id = "cookie", chance = 750 },
 	{ id = 3607, chance = 30000 }, -- cheese
-	{ name = "worm", chance = 9700, maxCount = 2 },
+	{ id = "worm", chance = 9700, maxCount = 2 },
 }
 
 monster.attacks = {

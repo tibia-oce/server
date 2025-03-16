@@ -1,3 +1,6 @@
+-- Overcharged Energy Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Overcharged_Energy_Element)
+-- Version: 8.20
+
 local mType = Game.createMonsterType("Overcharged Energy Elemental")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -64,12 +66,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 56 },
-	{ name = "small amethyst", chance = 10000, maxCount = 2 },
-	{ name = "berserk potion", chance = 2173 },
-	{ name = "great health potion", chance = 10000 },
-	{ name = "energy soil", chance = 14285 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 56 },
+	{ id = "small amethyst", chance = 10000, maxCount = 2 },
+	{ id = "berserk potion", chance = 2173 },
+	{ id = "great health potion", chance = 10000 },
+	{ id = "energy soil", chance = 14285 },
 }
 
 monster.attacks = {

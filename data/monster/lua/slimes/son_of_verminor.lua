@@ -1,3 +1,6 @@
+-- Son of Verminor (Tibia Wiki: https://tibia.fandom.com/wiki/Son_of_Verminor)
+-- Version: 7.9
+
 local mType = Game.createMonsterType("Son of Verminor")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 265
-monster.Bestiary = {
-	class = "Slime",
-	race = BESTY_RACE_SLIME,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Deep in the Pits of Inferno, in Verminor's throne room. Also in the Demon Forge (The Vats and The Hive).",
-}
 
 monster.health = 8500
 monster.maxHealth = 8500
@@ -62,9 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Humorless Fungus (Tibia Wiki: https://tibia.fandom.com/wiki/Humorless_Fungus)
+-- Version: 9.60
+
 local mType = Game.createMonsterType("Humorless Fungus")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

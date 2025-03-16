@@ -1,3 +1,6 @@
+-- Kraknaknork (Tibia Wiki: https://tibia.fandom.com/wiki/Kraknaknork)
+-- Version: 9.10
+
 local mType = Game.createMonsterType("Kraknaknork")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -73,8 +75,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 95000, maxCount = 15 },
-	{ name = "orc leather", chance = 4300 },
+	{ id = "gold coin", chance = 95000, maxCount = 15 },
+	{ id = "orc leather", chance = 4300 },
 }
 
 monster.attacks = {
@@ -83,7 +85,7 @@ monster.attacks = {
 	{ name = "kraknaknork poison wave", interval = 2000, chance = 10, minDamage = -1, maxDamage = -10, target = false },
 	{ name = "kraknaknork explosion wave", interval = 2000, chance = 10, minDamage = 0, maxDamage = -12, target = false },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -8, range = 7, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_MORTAREA, target = false },
-	{ name = "speed", interval = 1000, chance = 6, speedChange = -100, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
+	{ name = "speed", interval = 1000, chance = 6, speed = -100, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 20000 },
 	{ name = "outfit", interval = 2000, chance = 10, range = 7, target = false, duration = 3000, outfitMonster = "Sheep" },
 }
 

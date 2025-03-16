@@ -1,3 +1,6 @@
+-- Blood Priest (Tibia Wiki: https://tibia.fandom.com/wiki/Blood_Priest)
+-- Version: 10.10
+
 local mType = Game.createMonsterType("Blood Priest")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 961
-monster.Bestiary = {
-	class = "Human",
-	race = BESTY_RACE_HUMAN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Drefia and Old Fortress.",
-}
 
 monster.health = 820
 monster.maxHealth = 820
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,25 +65,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 3510, maxCount = 2 },
-	{ name = "gold coin", chance = 50000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 71 },
-	{ name = "boots of haste", chance = 120 },
-	{ name = "skull staff", chance = 180 },
-	{ name = "mystic turban", chance = 2170 },
-	{ name = "white piece of cloth", chance = 3040 },
-	{ name = "red piece of cloth", chance = 640 },
-	{ name = "strong mana potion", chance = 6000 },
-	{ name = "spellbook of warding", chance = 290 },
-	{ name = "spellbook of mind control", chance = 180 },
-	{ name = "underworld rod", chance = 470 },
-	{ name = "book of necromantic rituals", chance = 13550 },
+	{ id = "small ruby", chance = 3510, maxCount = 2 },
+	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 71 },
+	{ id = "boots of haste", chance = 120 },
+	{ id = "skull staff", chance = 180 },
+	{ id = "mystic turban", chance = 2170 },
+	{ id = "white piece of cloth", chance = 3040 },
+	{ id = "red piece of cloth", chance = 640 },
+	{ id = "strong mana potion", chance = 6000 },
+	{ id = "spellbook of warding", chance = 290 },
+	{ id = "spellbook of mind control", chance = 180 },
+	{ id = "underworld rod", chance = 470 },
+	{ id = "book of necromantic rituals", chance = 13550 },
 	{ id = 3039, chance = 880 }, -- red gem
-	{ name = "lancet", chance = 14410 },
-	{ name = "horoscope", chance = 9270 },
-	{ name = "blood tincture in a vial", chance = 14460 },
-	{ name = "incantation notes", chance = 14660 },
-	{ name = "pieces of magic chalk", chance = 7770 },
+	{ id = "lancet", chance = 14410 },
+	{ id = "horoscope", chance = 9270 },
+	{ id = "blood tincture in a vial", chance = 14460 },
+	{ id = "incantation notes", chance = 14660 },
+	{ id = "pieces of magic chalk", chance = 7770 },
 }
 
 monster.attacks = {

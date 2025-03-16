@@ -1,3 +1,6 @@
+-- Undead Cavebear (Tibia Wiki: https://tibia.fandom.com/wiki/Undead_Cavebear)
+-- Version: 8.70
+
 local mType = Game.createMonsterType("Undead Cavebear")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 696
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 5,
-	FirstUnlock = 2,
-	SecondUnlock = 3,
-	CharmsPoints = 50,
-	Stars = 3,
-	Occurrence = 3,
-	Locations = "Lich Hell.",
-}
 
 monster.health = 450
 monster.maxHealth = 450
@@ -59,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -76,10 +65,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 31820, maxCount = 80 },
-	{ name = "maxilla", chance = 13640 },
-	{ name = "cavebear skull", chance = 2600 },
-	{ name = "health potion", chance = 1300 },
+	{ id = "gold coin", chance = 31820, maxCount = 80 },
+	{ id = "maxilla", chance = 13640 },
+	{ id = "cavebear skull", chance = 2600 },
+	{ id = "health potion", chance = 1300 },
 }
 
 monster.attacks = {

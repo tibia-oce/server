@@ -1,3 +1,6 @@
+-- Kollos (Tibia Wiki: https://tibia.fandom.com/wiki/Kollos)
+-- Version: 9.40
+
 local mType = Game.createMonsterType("Kollos")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 788
-monster.Bestiary = {
-	class = "Vermin",
-	race = BESTY_RACE_VERMIN,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 2,
-	Locations = "Hive, Hive Outpost.",
-}
 
 monster.health = 3800
 monster.maxHealth = 3800
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -75,23 +65,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "small ruby", chance = 8180, maxCount = 2 },
-	{ name = "gold coin", chance = 49000, maxCount = 100 },
-	{ name = "gold coin", chance = 50000, maxCount = 97 },
-	{ name = "platinum coin", chance = 66000, maxCount = 3 },
+	{ id = "small ruby", chance = 8180, maxCount = 2 },
+	{ id = "gold coin", chance = 49000, maxCount = 100 },
+	{ id = "gold coin", chance = 50000, maxCount = 97 },
+	{ id = "platinum coin", chance = 66000, maxCount = 3 },
 	{ id = 3098, chance = 3270 }, -- ring of healing
-	{ name = "steel boots", chance = 130 },
-	{ name = "great mana potion", chance = 8950, maxCount = 4 },
+	{ id = "steel boots", chance = 130 },
+	{ id = "great mana potion", chance = 8950, maxCount = 4 },
 	{ id = 281, chance = 2600 }, -- giant shimmering pearl (green)
-	{ name = "ultimate health potion", chance = 4000, maxCount = 3 },
-	{ name = "gold ingot", chance = 5160 },
-	{ name = "kollos shell", chance = 15390 },
-	{ name = "compound eye", chance = 15720 },
-	{ name = "calopteryx cape", chance = 360 },
-	{ name = "carapace shield", chance = 310 },
-	{ name = "hive scythe", chance = 700 },
-	{ name = "buggy backpack", chance = 460 },
-	{ name = "tarsal arrow", chance = 10210, maxCount = 5 },
+	{ id = "ultimate health potion", chance = 4000, maxCount = 3 },
+	{ id = "gold ingot", chance = 5160 },
+	{ id = "kollos shell", chance = 15390 },
+	{ id = "compound eye", chance = 15720 },
+	{ id = "calopteryx cape", chance = 360 },
+	{ id = "carapace shield", chance = 310 },
+	{ id = "hive scythe", chance = 700 },
+	{ id = "buggy backpack", chance = 460 },
+	{ id = "tarsal arrow", chance = 10210, maxCount = 5 },
 }
 
 monster.attacks = {

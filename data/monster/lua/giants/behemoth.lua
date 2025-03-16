@@ -1,3 +1,6 @@
+-- Behemoth (Tibia Wiki: https://tibia.fandom.com/wiki/Behemoth)
+-- Version: 6.4
+
 local mType = Game.createMonsterType("Behemoth")
 local monster = {}
 
@@ -13,20 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 55
-monster.Bestiary = {
-	class = "Giant",
-	race = BESTY_RACE_GIANT,
-	toKill = 1000,
-	FirstUnlock = 50,
-	SecondUnlock = 500,
-	CharmsPoints = 25,
-	Stars = 3,
-	Occurrence = 0,
-	Locations = "Cyclopolis, deepest part of Tarpit Tomb after the flame, Forbidden Lands, Vandura Mountain, \z
-		Deeper Banuta, Serpentine Tower (unreachable), deep into the Formorgar Mines, Arena and Zoo Quarter, \z
-		The Dark Path, Lower Spike, Chyllfroest, Medusa Tower and Underground Glooth Factory (west side).",
-}
 
 monster.health = 4000
 monster.maxHealth = 4000
@@ -62,8 +51,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,
@@ -80,29 +68,29 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2893, chance = 100 }, -- amphora
-	{ name = "crystal necklace", chance = 2530 },
-	{ name = "gold coin", chance = 100000, maxCount = 200 },
-	{ name = "small amethyst", chance = 6380, maxCount = 5 },
-	{ name = "platinum coin", chance = 59800, maxCount = 5 },
-	{ name = "strange symbol", chance = 750 },
+	{ id = "crystal necklace", chance = 2530 },
+	{ id = "gold coin", chance = 100000, maxCount = 200 },
+	{ id = "small amethyst", chance = 6380, maxCount = 5 },
+	{ id = "platinum coin", chance = 59800, maxCount = 5 },
+	{ id = "strange symbol", chance = 750 },
 	{ id = 3116, chance = 670 }, -- big bone
-	{ name = "two handed sword", chance = 5980 },
-	{ name = "double axe", chance = 10510 },
-	{ name = "giant sword", chance = 1006 },
-	{ name = "crowbar", chance = 100 },
-	{ name = "war axe", chance = 50 },
-	{ name = "plate armor", chance = 3930 },
-	{ name = "dark armor", chance = 4370 },
+	{ id = "two handed sword", chance = 5980 },
+	{ id = "double axe", chance = 10510 },
+	{ id = "giant sword", chance = 1006 },
+	{ id = "crowbar", chance = 100 },
+	{ id = "war axe", chance = 50 },
+	{ id = "plate armor", chance = 3930 },
+	{ id = "dark armor", chance = 4370 },
 	{ id = 3456, chance = 650 }, -- pick
-	{ name = "steel boots", chance = 380 },
-	{ name = "meat", chance = 30000, maxCount = 6 },
-	{ name = "perfect behemoth fang", chance = 1090 },
-	{ name = "behemoth claw", chance = 860 },
-	{ name = "assassin star", chance = 9750, maxCount = 5 },
+	{ id = "steel boots", chance = 380 },
+	{ id = "meat", chance = 30000, maxCount = 6 },
+	{ id = "perfect behemoth fang", chance = 1090 },
+	{ id = "behemoth claw", chance = 860 },
+	{ id = "assassin star", chance = 9750, maxCount = 5 },
 	{ id = 7396, chance = 170 }, -- behemoth trophy
-	{ name = "titan axe", chance = 90 },
-	{ name = "great health potion", chance = 5120 },
-	{ name = "battle stone", chance = 14000 },
+	{ id = "titan axe", chance = 90 },
+	{ id = "great health potion", chance = 5120 },
+	{ id = "battle stone", chance = 14000 },
 }
 
 monster.attacks = {
@@ -114,7 +102,7 @@ monster.defenses = {
 	defense = 45,
 	armor = 50,
 	mitigation = 1.74,
-	{ name = "speed", interval = 2000, chance = 15, speedChange = 300, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
+	{ name = "speed", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_RED, speed = 340},
 }
 
 monster.elements = {

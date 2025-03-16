@@ -1,3 +1,6 @@
+-- Gnorre Chyllson (Tibia Wiki: https://tibia.fandom.com/wiki/Gnorre_Chyllson)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Gnorre Chyllson")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

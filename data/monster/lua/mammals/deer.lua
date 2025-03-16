@@ -1,3 +1,6 @@
+-- Deer (Tibia Wiki: https://tibia.fandom.com/wiki/Deer)
+-- Version: 4.0
+
 local mType = Game.createMonsterType("Deer")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 31
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Darama (Devourer, Kha'labal), in most grassy areas of Tibia, also found in \z
-		Rookgaard and on Tutorial Island. There are also 2 unreachable Deer found near Fiehonja's protection zone.",
-}
 
 monster.health = 25
 monster.maxHealth = 25
@@ -60,9 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	isPreyExclusive = true,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -75,8 +63,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 80000, maxCount = 4 },
-	{ name = "ham", chance = 50000, maxCount = 2 },
+	{ id = "meat", chance = 80000, maxCount = 4 },
+	{ id = "ham", chance = 50000, maxCount = 2 },
 	{ id = 10297, chance = 870 }, -- antlers
 }
 

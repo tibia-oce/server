@@ -1,3 +1,6 @@
+-- Gaz'Haragoth (Tibia Wiki: https://tibia.fandom.com/wiki/Gaz%27haragoth)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Gaz'Haragoth")
 local monster = {}
 
@@ -54,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.events = {
 	"GazHaragothHeal",
@@ -156,7 +158,7 @@ monster.defenses = {
 	defense = 65,
 	armor = 55,
 	{ name = "combat", interval = 3000, chance = 35, type = COMBAT_HEALING, minDamage = 2500, maxDamage = 3500, effect = CONST_ME_MAGIC_BLUE, target = false },
-	{ name = "speed", interval = 4000, chance = 80, speedChange = 700, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000 },
+	{ name = "speed", interval = 4000, chance = 80, effect = CONST_ME_MAGIC_RED, speed = 500},
 }
 
 monster.elements = {

@@ -1,3 +1,6 @@
+-- Fallen Mooh'tah Master Ghar (Tibia Wiki: https://tibia.fandom.com/wiki/Fallen_Mooh%27Tah_Master_Ghar)
+-- Version: 8.00
+
 local mType = Game.createMonsterType("Fallen Mooh'tah Master Ghar")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,

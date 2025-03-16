@@ -1,3 +1,6 @@
+-- Corym Charlatan (Tibia Wiki: https://tibia.fandom.com/wiki/Corym_Charlatan)
+-- Version: 9.80
+
 local mType = Game.createMonsterType("Corym Charlatan")
 local monster = {}
 
@@ -13,19 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 916
-monster.Bestiary = {
-	class = "Humanoid",
-	race = BESTY_RACE_HUMANOID,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Venore Corym Cave, Tiquanda Corym Cave, Corym Black Market, \z
-		Carlin Corym Cave/Dwarf Mines Diggers Depths Mine, Upper Spike.",
-}
 
 monster.health = 250
 monster.maxHealth = 250
@@ -63,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -79,18 +68,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 35 },
+	{ id = "gold coin", chance = 50000, maxCount = 35 },
 	{ id = 3607, chance = 10000 }, -- cheese
-	{ name = "bola", chance = 7692 },
-	{ name = "spike shield", chance = 492 },
-	{ name = "ratana", chance = 909 },
-	{ name = "life preserver", chance = 854 },
-	{ name = "cheese cutter", chance = 5882 },
-	{ name = "cheesy figurine", chance = 518 },
-	{ name = "earflap", chance = 7142 },
-	{ name = "soft cheese", chance = 12500 },
-	{ name = "rat cheese", chance = 14285 },
-	{ name = "leather harness", chance = 537 },
+	{ id = "bola", chance = 7692 },
+	{ id = "spike shield", chance = 492 },
+	{ id = "ratana", chance = 909 },
+	{ id = "life preserver", chance = 854 },
+	{ id = "cheese cutter", chance = 5882 },
+	{ id = "cheesy figurine", chance = 518 },
+	{ id = "earflap", chance = 7142 },
+	{ id = "soft cheese", chance = 12500 },
+	{ id = "rat cheese", chance = 14285 },
+	{ id = "leather harness", chance = 537 },
 }
 
 monster.attacks = {

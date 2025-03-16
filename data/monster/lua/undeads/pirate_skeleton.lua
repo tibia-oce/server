@@ -1,3 +1,6 @@
+-- Pirate Skeleton (Tibia Wiki: https://tibia.fandom.com/wiki/Pirate_Skeleton)
+-- Version: 7.8
+
 local mType = Game.createMonsterType("Pirate Skeleton")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 256
-monster.Bestiary = {
-	class = "Undead",
-	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
-	Occurrence = 0,
-	Locations = "Nargor Undead Cave, Goroma, Treasure Island, Drefia, The Cave, Chyllfroest.",
-}
 
 monster.health = 190
 monster.maxHealth = 190
@@ -59,8 +50,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -73,14 +63,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 48000, maxCount = 25 },
+	{ id = "gold coin", chance = 48000, maxCount = 25 },
 	{ id = 3114, chance = 4460 }, -- skull
 	{ id = 3115, chance = 4250 }, -- bone
 	{ id = 3116, chance = 5140 }, -- big bone
 	{ id = 3264, chance = 550 }, -- sword
-	{ name = "short sword", chance = 1003 },
-	{ name = "bone club", chance = 960 },
-	{ name = "spooky blue eye", chance = 4730 },
+	{ id = "short sword", chance = 1003 },
+	{ id = "bone club", chance = 960 },
+	{ id = "spooky blue eye", chance = 4730 },
 }
 
 monster.attacks = {

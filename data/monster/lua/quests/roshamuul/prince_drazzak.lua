@@ -1,3 +1,6 @@
+-- Prince Drazzak (Tibia Wiki: https://tibia.fandom.com/wiki/Prince_Drazzak)
+-- Version: 10.30
+
 local mType = Game.createMonsterType("Prince Drazzak")
 local monster = {}
 
@@ -49,8 +52,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-}
+	canWalkOnPoison = true}
 
 monster.light = {
 	level = 0,

@@ -1,3 +1,6 @@
+-- Reality Reaver (Tibia Wiki: https://tibia.fandom.com/wiki/Reality_Reaver)
+-- Version: 10.94
+
 local mType = Game.createMonsterType("Reality Reaver")
 local monster = {}
 
@@ -13,18 +16,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 1224
-monster.Bestiary = {
-	class = "Extra Dimensional",
-	race = BESTY_RACE_EXTRA_DIMENSIONAL,
-	toKill = 2500,
-	FirstUnlock = 100,
-	SecondUnlock = 1000,
-	CharmsPoints = 50,
-	Stars = 4,
-	Occurrence = 0,
-	Locations = "Otherworld",
-}
 
 monster.health = 3900
 monster.maxHealth = 3900
@@ -62,8 +53,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-}
+	canWalkOnPoison = false}
 
 monster.light = {
 	level = 0,
@@ -114,7 +104,7 @@ monster.defenses = {
 	armor = 51,
 	mitigation = 1.76,
 	{ name = "invisible", interval = 2000, chance = 15, effect = CONST_ME_POFF },
-	{ name = "speed", interval = 2000, chance = 10, speedChange = 380, effect = CONST_ME_HITAREA, target = false, duration = 8000 },
+	{ name = "speed", interval = 2000, chance = 10, effect = CONST_ME_HITAREA, speed = 340},
 }
 
 monster.elements = {
