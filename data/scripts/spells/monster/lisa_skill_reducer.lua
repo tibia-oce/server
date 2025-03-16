@@ -56,11 +56,11 @@ for i = 60, 75 do
 					local player = Player(creatureTable[r])
 					if player then
 						local vocationClientId = player:getVocation():getBaseId()
-						if table.contains({ VOCATION.BASE_ID.SORCERER, VOCATION.BASE_ID.DRUID }, vocationClientId) then
+						if table.contains({ VOCATION.ID.SORCERER, VOCATION.ID.DRUID }, vocationClientId) then
 							player:addCondition(condition2)
-						elseif table.contains({ VOCATION.BASE_ID.PALADIN }, vocationClientId) then
+						elseif table.contains({ VOCATION.ID.PALADIN }, vocationClientId) then
 							player:addCondition(condition3)
-						elseif table.contains({ VOCATION.BASE_ID.KNIGHT }, vocationClientId) then
+						elseif table.contains({ VOCATION.ID.KNIGHT }, vocationClientId) then
 							player:addCondition(condition1)
 						end
 					end
