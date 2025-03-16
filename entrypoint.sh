@@ -48,7 +48,7 @@ download_and_extract "world"
 download_and_extract "dungeons"
 download_and_extract "items"
 download_and_extract "npc"
-download_and_extract "monster/monsters"
+# download_and_extract "monster/monsters"
 
 if [ -x "./Black-Tek-Server" ]; then
     exec ./Black-Tek-Server
