@@ -5528,6 +5528,24 @@ void Player::addItemImbuements(Item* item) {
 					case ImbuementType::IMBUEMENT_TYPE_MAGIC_LEVEL:
 						setVarSkill(SKILL_MAGLEVEL, static_cast<int32_t>(imbue->value));
 						break;
+					case ImbuementType::IMBUEMENT_TYPE_MINING_SKILL:
+                        setVarSkill(SKILL_MINING, static_cast<int32_t>(imbue->value));
+                        break;
+                    case ImbuementType::IMBUEMENT_TYPE_WOODCUTTING_SKILL:
+                        setVarSkill(SKILL_WOODCUTTING, static_cast<int32_t>(imbue->value));
+                        break;
+                    case ImbuementType::IMBUEMENT_TYPE_HERBALISM_SKILL:
+                        setVarSkill(SKILL_HERBALISM, static_cast<int32_t>(imbue->value));
+                        break;
+                    case ImbuementType::IMBUEMENT_TYPE_CRAFTING_SKILL:
+                        setVarSkill(SKILL_CRAFTING, static_cast<int32_t>(imbue->value));
+                        break;
+                    case ImbuementType::IMBUEMENT_TYPE_ENCHANTING_SKILL:
+                        setVarSkill(SKILL_ENCHANTING, static_cast<int32_t>(imbue->value));
+                        break;
+                    case ImbuementType::IMBUEMENT_TYPE_DISENCHANTING_SKILL:
+                        setVarSkill(SKILL_DISENCHANTING, static_cast<int32_t>(imbue->value));
+                        break;
 				}
 			}
 

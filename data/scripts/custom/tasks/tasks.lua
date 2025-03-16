@@ -48,11 +48,9 @@ local Config = {
         [250] = "Silver",
         [470] = "Gold",
         [770] = "Platinum",
-        [1220] = "Diamond",
-
+        [1220] = "Diamond"
     },
-    Tasks = {
-        --[[
+    Tasks = { --[[
         {
           RaceName = "Trolls", -- Name of the task
           Level = 8, -- Recommended level for this task (see RecommendedLevelRange)
@@ -75,65 +73,51 @@ local Config = {
                 {Type = RewardType.Points, BaseValue = 1},
                 {Type = RewardType.Ranking, BaseValue = 2},
                 {Type = RewardType.Experience, BaseValue = 80000},
-                {Type = RewardType.Gold, BaseValue = 500}
-                -- {Type = RewardType.Item, Id = 8855, Amount = 1}, 
+                {Type = RewardType.Gold, BaseValue = 20000}
+            }
+        }, {
+            RaceName = "Cyclops",
+            Level = 15,
+            Monsters = {"Cyclops", "Cyclops Drone", "Cyclops Smith"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 2},
+                {Type = RewardType.Ranking, BaseValue = 3},
+                {Type = RewardType.Experience, BaseValue = 240000},
+                {Type = RewardType.Gold, BaseValue = 30000}
             }
         }, {
             RaceName = "Tarantulas",
-            Level = 8,
+            Level = 15,
             Monsters = {"Tarantula"},
             Rewards = {
-                {Type = RewardType.Points, BaseValue = 1},
-                {Type = RewardType.Ranking, BaseValue = 2},
+                {Type = RewardType.Points, BaseValue = 2},
+                {Type = RewardType.Ranking, BaseValue = 3},
                 {Type = RewardType.Experience, BaseValue = 240000},
-                {Type = RewardType.Gold, BaseValue = 600}
+                {Type = RewardType.Gold, BaseValue = 30000}
             }
         }, {
-            RaceName = "Mutated rat",
-            Level = 50,
-            Monsters = {"Mutated Rat"},
+            RaceName = "Tortoises",
+            Level = 15,
+            Monsters = {"Tortoise", "Thornback Tortoise"},
             Rewards = {
                 {Type = RewardType.Points, BaseValue = 2},
                 {Type = RewardType.Ranking, BaseValue = 3},
-                {Type = RewardType.Experience, BaseValue = 1230000},
-                {Type = RewardType.Gold, BaseValue = 4800}
+                {Type = RewardType.Experience, BaseValue = 240000},
+                {Type = RewardType.Gold, BaseValue = 30000}
             }
         }, {
-            RaceName = "Ancient Scarabs",
-            Level = 50,
-            Monsters = {"Ancient Scarab"},
+            RaceName = "Dryad Fortress",
+            Level = 25,
+            Monsters = {"Elf Arcanist", "Elder Forest Fury", "Elf Overseer"},
             Rewards = {
                 {Type = RewardType.Points, BaseValue = 2},
                 {Type = RewardType.Ranking, BaseValue = 3},
-                {Type = RewardType.Experience, BaseValue = 1440000},
-                {Type = RewardType.Gold, BaseValue = 8000}
-            }
-        }, {
-            RaceName = "Bonebeasts",
-            Level = 50,
-            Monsters = {"Bonebeast"},
-            Rewards = {
-                {Type = RewardType.Points, BaseValue = 2},
-                {Type = RewardType.Ranking, BaseValue = 3},
-                {Type = RewardType.Experience, BaseValue = 1160000},
-                {Type = RewardType.Gold, BaseValue = 4500}
-            }
-        }, {
-            RaceName = "Underwater Quara",
-            Level = 50,
-            Monsters = {
-                "Quara Hydromancer", "Quara Predator", "Quara Constrictor",
-                "Quara Mantassin", "Quara Pincher"
-            },
-            Rewards = {
-                {Type = RewardType.Points, BaseValue = 2},
-                {Type = RewardType.Ranking, BaseValue = 4},
-                {Type = RewardType.Experience, BaseValue = 1600000},
-                {Type = RewardType.Gold, BaseValue = 8000}
+                {Type = RewardType.Experience, BaseValue = 600000},
+                {Type = RewardType.Gold, BaseValue = 35000}
             }
         }, {
             RaceName = "Giant Spiders",
-            Level = 80,
+            Level = 40,
             Monsters = {"Giant Spider"},
             Rewards = {
                 {Type = RewardType.Points, BaseValue = 3},
@@ -142,29 +126,51 @@ local Config = {
                 {Type = RewardType.Gold, BaseValue = 12500}
             }
         }, {
-            RaceName = "Werewolves",
-            Level = 80,
-            Monsters = {"Werewolf"},
+            RaceName = "Echo Caverns",
+            Level = 40,
+            Monsters = {"Crypt Shambler", "Demon Skeleton", "Gargoyle"},
             Rewards = {
                 {Type = RewardType.Points, BaseValue = 3},
                 {Type = RewardType.Ranking, BaseValue = 4},
-                {Type = RewardType.Experience, BaseValue = 3800000},
-                {Type = RewardType.Gold, BaseValue = 15000}
+                {Type = RewardType.Experience, BaseValue = 2400000},
+                {Type = RewardType.Gold, BaseValue = 35000}
             }
         }, {
-            RaceName = "Nightmares",
-            Level = 80,
-            Monsters = {"Nightmare", "Nightmare Scion"},
+            RaceName = "Water Elementals",
+            Level = 40,
+            Monsters = {"Water Elemental"},
             Rewards = {
                 {Type = RewardType.Points, BaseValue = 3},
                 {Type = RewardType.Ranking, BaseValue = 4},
-                {Type = RewardType.Experience, BaseValue = 3800000},
-                {Type = RewardType.Gold, BaseValue = 15000}
+                {Type = RewardType.Experience, BaseValue = 2800000},
+                {Type = RewardType.Gold, BaseValue = 38000}
             }
         }, {
-            RaceName = "Dragon Lords",
-            Level = 80,
-            Monsters = {"Dragon Lord"},
+            RaceName = "Forbidden Temple",
+            Level = 40,
+            Monsters = {"Vicious Squire", "Necromancer", "Renegade Knight", "Vile Grandmaster"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 3},
+                {Type = RewardType.Ranking, BaseValue = 4},
+                {Type = RewardType.Experience, BaseValue = 3200000},
+                {Type = RewardType.Gold, BaseValue = 42000}
+            }
+        }, {
+            RaceName = "Lycanthropes",
+            Level = 60,
+            Monsters = {"Werewolf", "Werebear", "Wereboar"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 3},
+                {Type = RewardType.Ranking, BaseValue = 4},
+                {Type = RewardType.Experience, BaseValue = 4200000},
+                {Type = RewardType.Gold, BaseValue = 25000},
+                {Type = RewardType.Storage, Key = 35700, Value = 1, Description = "Access to Feroxa."}
+            }
+        },
+        {
+            RaceName = "Dragons",
+            Level = 60,
+            Monsters = {"Dragon", "Dragon Lord"},
             Rewards = {
                 {Type = RewardType.Points, BaseValue = 3},
                 {Type = RewardType.Ranking, BaseValue = 4},
@@ -172,39 +178,91 @@ local Config = {
                 {Type = RewardType.Gold, BaseValue = 25000}
             }
         }, {
-            RaceName = "Hellspawns",
-            Level = 80,
-            Monsters = {"Hellspawn"},
+            RaceName = "Hive",
+            Level = 75,
+            Monsters = {"Spidris", "Hive Overseer", "Giant Spider"},
             Rewards = {
-                {Type = RewardType.Points, BaseValue = 3},
-                {Type = RewardType.Ranking, BaseValue = 4},
-                {Type = RewardType.Experience, BaseValue = 5100000},
-                {Type = RewardType.Gold, BaseValue = 25000}
-            }
-        }, {
-            RaceName = "High Class Lizards",
-            Level = 100,
-            Monsters = {
-                "Lizard Chosen", "Lizard Dragon Priest", "Lizard High Guard",
-                "Lizard Legionnaire"
-            },
-            Rewards = {
-                {Type = RewardType.Points, BaseValue = 3},
+                {Type = RewardType.Points, BaseValue = 4},
                 {Type = RewardType.Ranking, BaseValue = 5},
-                {Type = RewardType.Experience, BaseValue = 4400000},
-                {Type = RewardType.Gold, BaseValue = 30000}
+                {Type = RewardType.Experience, BaseValue = 4800000},
+                {Type = RewardType.Gold, BaseValue = 50000}
             }
         }, {
             RaceName = "Wyrms",
-            Level = 100,
+            Level = 75,
             Monsters = {"Wyrm", "Elder Wyrm"},
             Rewards = {
-                {Type = RewardType.Points, BaseValue = 3},
-                {Type = RewardType.Ranking, BaseValue = 4},
-                {Type = RewardType.Experience, BaseValue = 4000000},
-                {Type = RewardType.Gold, BaseValue = 30000},
-                {Type = RewardType.Item, Id = 8855, Amount = 1},
-                {Type = RewardType.Item, Id = 7451, Amount = 1}
+                {Type = RewardType.Points, BaseValue = 4},
+                {Type = RewardType.Ranking, BaseValue = 5},
+                {Type = RewardType.Experience, BaseValue = 4800000},
+                {Type = RewardType.Gold, BaseValue = 48000}
+            }
+        }, {
+            RaceName = "Serpent Lair",
+            Level = 90,
+            Monsters = {"Sea Serpent", "Medusa", "Serpent Spawn"},
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 5},
+                {Type = RewardType.Ranking, BaseValue = 6},
+                {Type = RewardType.Experience, BaseValue = 5500000},
+                {Type = RewardType.Gold, BaseValue = 55000}
+            }
+        }, {
+            RaceName = "Warlocks",
+            Level = 90,
+            Monsters = {
+                "Warlock",
+            },
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 5},
+                {Type = RewardType.Ranking, BaseValue = 6},
+                {Type = RewardType.Experience, BaseValue = 5800000},
+                {Type = RewardType.Gold, BaseValue = 58000},
+                {Type = RewardType.Item, Id = 2323, Amount = 1}, -- Hat of the Mad
+            }
+        }, {
+            RaceName = "Nightmare Depths",
+            Level = 110,
+            Monsters = {
+                "Nightmare",
+                "Destroyer"
+            },
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 6},
+                {Type = RewardType.Ranking, BaseValue = 7},
+                {Type = RewardType.Experience, BaseValue = 7200000},
+                {Type = RewardType.Gold, BaseValue = 72000},
+            }
+        }, {
+            RaceName = "Plague Sanctum",
+            Level = 130,
+            Monsters = {
+                "Hellspawn",
+                "Plaguesmith"
+            },
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 6},
+                {Type = RewardType.Ranking, BaseValue = 7},
+                {Type = RewardType.Experience, BaseValue = 8000000},
+                {Type = RewardType.Gold, BaseValue = 80000},
+            }
+        }, {
+            RaceName = "Abandoned Sewers",
+            Level = 300,
+            Monsters = {
+                "Hellhound",
+                "Demon",
+                "Destroyer",
+                "Grim Reaper",
+                "Hellspawn",
+                "Juggernaut",
+                "Dark Torturer"
+            },
+            Rewards = {
+                {Type = RewardType.Points, BaseValue = 8},
+                {Type = RewardType.Ranking, BaseValue = 10},
+                {Type = RewardType.Experience, BaseValue = 25000000},
+                {Type = RewardType.Gold, BaseValue = 250000},
             }
         }
     }
@@ -615,7 +673,7 @@ local ranks_task = {
     [{101, 250}] = "Silver",
     [{251, 470}] = "Gold",
     [{471, 770}] = "Platinum",
-    [{771, math.huge}] = "Diamond",
+    [{771, math.huge}] = "Diamond"
 }
 
 function Player:addTaskRankAncestral(count)

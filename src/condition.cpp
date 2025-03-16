@@ -660,6 +660,66 @@ bool ConditionAttributes::setParam(ConditionParam_t param, int32_t value)
 			return true;
 		}
 
+		case CONDITION_PARAM_SKILL_MINING: {
+            skills[SKILL_MINING] = value;
+            return true;
+        }
+        
+		case CONDITION_PARAM_SKILL_MININGPERCENT: {
+            skillsPercent[SKILL_MINING] = value;
+            return true;
+        }
+        
+		case CONDITION_PARAM_SKILL_WOODCUTTING: {
+            skills[SKILL_WOODCUTTING] = value;
+            return true;
+        }
+        
+		case CONDITION_PARAM_SKILL_WOODCUTTINGPERCENT: {
+            skillsPercent[SKILL_WOODCUTTING] = value;
+            return true;
+        }
+        
+		case CONDITION_PARAM_SKILL_HERBALISM: {
+            skills[SKILL_HERBALISM] = value;
+            return true;
+        }
+        
+		case CONDITION_PARAM_SKILL_HERBALISPERCENT: {
+            skillsPercent[SKILL_HERBALISM] = value;
+            return true;
+        }
+        
+		case CONDITION_PARAM_SKILL_CRAFTING: {
+            skills[SKILL_CRAFTING] = value;
+            return true;
+        }
+        
+		case CONDITION_PARAM_SKILL_CRAFTINGPERCENT: {
+            skillsPercent[SKILL_CRAFTING] = value;
+            return true;
+        }
+        
+		case CONDITION_PARAM_SKILL_ENCHANTING: {
+            skills[SKILL_ENCHANTING] = value;
+            return true;
+        }
+        
+		case CONDITION_PARAM_SKILL_ENCHANTINGPERCENT: {
+            skillsPercent[SKILL_ENCHANTING] = value;
+            return true;
+        }
+        
+		case CONDITION_PARAM_SKILL_DISENCHANTING: {
+            skills[SKILL_DISENCHANTING] = value;
+            return true;
+        }
+        
+		case CONDITION_PARAM_SKILL_DISENCHANTINGPERCENT: {
+            skillsPercent[SKILL_DISENCHANTING] = value;
+            return true;
+        }
+
 		case CONDITION_PARAM_STAT_MAXHITPOINTS: {
 			stats[STAT_MAXHITPOINTS] = value;
 			return true;
@@ -779,6 +839,42 @@ int32_t ConditionAttributes::getParam(ConditionParam_t param)
 
 		case CONDITION_PARAM_SKILL_FISHINGPERCENT: 
 			return skillsPercent[SKILL_FISHING];
+		
+		case CONDITION_PARAM_SKILL_MINING:
+            return skills[SKILL_MINING];
+        
+		case CONDITION_PARAM_SKILL_MININGPERCENT:
+            return skillsPercent[SKILL_MINING];
+        
+		case CONDITION_PARAM_SKILL_WOODCUTTING:
+            return skills[SKILL_WOODCUTTING];
+        
+		case CONDITION_PARAM_SKILL_WOODCUTTINGPERCENT:
+            return skillsPercent[SKILL_WOODCUTTING];
+        
+		case CONDITION_PARAM_SKILL_HERBALISM:
+            return skills[SKILL_HERBALISM];
+        
+		case CONDITION_PARAM_SKILL_HERBALISPERCENT:
+            return skillsPercent[SKILL_HERBALISM];
+        
+		case CONDITION_PARAM_SKILL_CRAFTING:
+            return skills[SKILL_CRAFTING];
+        
+		case CONDITION_PARAM_SKILL_CRAFTINGPERCENT:
+            return skillsPercent[SKILL_CRAFTING];
+        
+		case CONDITION_PARAM_SKILL_ENCHANTING:
+            return skills[SKILL_ENCHANTING];
+        
+		case CONDITION_PARAM_SKILL_ENCHANTINGPERCENT:
+            return skillsPercent[SKILL_ENCHANTING];
+        
+		case CONDITION_PARAM_SKILL_DISENCHANTING:
+            return skills[SKILL_DISENCHANTING];
+        
+		case CONDITION_PARAM_SKILL_DISENCHANTINGPERCENT:
+            return skillsPercent[SKILL_DISENCHANTING];
 
 		case CONDITION_PARAM_STAT_MAXHITPOINTS:
 			return stats[STAT_MAXHITPOINTS];

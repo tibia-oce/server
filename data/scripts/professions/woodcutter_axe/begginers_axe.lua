@@ -79,6 +79,7 @@ function woodcutterSystem.onUse(cid, item, fromPosition, itemEx, toPosition)
             if rand_multiple == 15 then
                 multiple = math.random(2, 3)
             end
+            player:addSkillTries(SKILL_WOODCUTTING, 1)
             for i = 1, multiple do
                 local loot_table = object.normal_loot_table
                 local rand_loot = math.random(100)
