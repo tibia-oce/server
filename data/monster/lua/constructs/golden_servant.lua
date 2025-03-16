@@ -78,7 +78,7 @@ monster.loot = {
 	{ id = "health potion", chance = 4930 },
 	{ id = "mana potion", chance = 4950 },
 	{ id = "spellbook of enlightenment", chance = 520 },
-	{ id = "gear wheel", chance = 940 },
+	{ id = 9690, chance = 940 } -- "gear wheel",
 	{ id = "slime mould", chance = 340 },
 	{ id = "golden can of oil", chance = 40 },
 }

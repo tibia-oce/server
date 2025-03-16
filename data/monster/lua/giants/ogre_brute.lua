@@ -85,7 +85,7 @@ monster.loot = {
 	{ id = 7428, chance = 500 }, -- bonebreaker
 	{ id = 22171, chance = 800 }, -- ogre klubba
 	{ id = 3465, chance = 500 }, -- pot
-	{ id = "rusted helmet", chance = 220 },
+	-- { id = "rusted helmet", chance = 220 },
 	{ id = 22192, chance = 300 }, -- shamanic mask
 }
 

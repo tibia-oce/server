@@ -78,7 +78,7 @@ monster.loot = {
 	{ id = "katana", chance = 1560 },
 	{ id = "strange helmet", chance = 420 },
 	{ id = "vampire shield", chance = 230 },
-	{ id = "grave flower", chance = 1910 },
+	{ id = 2747, chance = 1910 } -- "grave flower",
 	{ id = "strong health potion", chance = 1500 },
 	{ id = "vampire teeth", chance = 7600 },
 	{ id = "blood preservation", chance = 5100 },

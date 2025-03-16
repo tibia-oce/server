@@ -76,7 +76,7 @@ monster.loot = {
 	{ id = "orichalcum pearl", chance = 1400, maxCount = 4 },
 	{ id = 6299, chance = 330 }, -- death ring
 	{ id = "demonic essence", chance = 10600 },
-	{ id = "flask of demonic blood", chance = 35000 },
+	{ id = 6558, chance = 35000 }, -- "flask of demonic blood"
 	{ id = "nightmare blade", chance = 880 },
 	{ id = "great mana potion", chance = 10000 },
 	{ id = "glacier kilt", chance = 330 },

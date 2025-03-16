@@ -90,7 +90,7 @@ monster.loot = {
 	{ id = "fire sword", chance = 350 },
 	{ id = "royal helmet", chance = 260 },
 	{ id = "dragon slayer", chance = 220 },
-	{ id = "dragon lord trophy", chance = 130 },
+	{ id = 7399, chance = 130 }, -- "dragon lord trophy"
 	{ id = "dragon scale mail", chance = 90 },
 }
 

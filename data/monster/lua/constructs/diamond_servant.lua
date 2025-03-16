@@ -81,7 +81,7 @@ monster.loot = {
 	{ id = "strong mana potion", chance = 5980 },
 	{ id = "lightning pendant", chance = 710 },
 	{ id = "crystalline armor", chance = 20 },
-	{ id = "gear wheel", chance = 5000 },
+	{ id = 9690, chance = 5000 } -- "gear wheel",
 	{ id = 9063, chance = 5320 }, -- crystal pedestal
 	{ id = "shockwave amulet", chance = 110 },
 	{ id = "gear crystal", chance = 5000 },

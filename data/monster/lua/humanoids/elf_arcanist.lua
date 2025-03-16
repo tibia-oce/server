@@ -82,7 +82,7 @@ monster.loot = {
 	{ id = "green tunic", chance = 7000 },
 	{ id = "melon", chance = 22000 },
 	{ id = "bread", chance = 14000 },
-	{ id = "grave flower", chance = 880 },
+	{ id = 2747, chance = 880 } -- "grave flower",
 	{ id = "sling herb", chance = 5000 },
 	{ id = "holy orchid", chance = 2100 },
 	{ id = "strong mana potion", chance = 3000 },

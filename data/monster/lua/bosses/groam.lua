@@ -76,7 +76,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 50 },
 	{ id = "hunting spear", chance = 31250, maxCount = 4 },
 	{ id = 3052, chance = 25000 }, -- life ring
-	{ id = "rusted armor", chance = 6250 },
+	-- { id = "rusted armor", chance = 6250 },
 	{ id = "fish fin", chance = 1500 },
 }
 

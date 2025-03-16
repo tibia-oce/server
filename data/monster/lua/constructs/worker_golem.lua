@@ -85,7 +85,7 @@ monster.loot = {
 	{ id = "great health potion", chance = 2100 },
 	{ id = "nail", chance = 5000, maxCount = 5 },
 	{ id = "great spirit potion", chance = 830 },
-	{ id = "gear wheel", chance = 1007 },
+	{ id = 9690, chance = 1007 } -- "gear wheel",
 	{ id = 8895, chance = 200 }, -- rusted armor
 	{ id = 8898, chance = 50 }, -- rusted legs
 	{ id = 9066, chance = 2270 }, -- crystal pedestal
