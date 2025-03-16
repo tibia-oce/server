@@ -28,7 +28,6 @@ end
 rune:id(5)
 rune:group("healing")
 rune:name("ultimate healing rune")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_ULTIMATE_HEALING_RUNE)
 rune:runeId(3160)
 rune:allowFarUse(true)
 rune:charges(1)

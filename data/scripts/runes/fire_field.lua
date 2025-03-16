@@ -13,7 +13,6 @@ end
 rune:id(25)
 rune:group("attack")
 rune:name("fire field rune")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_FIRE_FIELD_RUNE)
 rune:runeId(3188)
 rune:allowFarUse(true)
 rune:setPzLocked(true)

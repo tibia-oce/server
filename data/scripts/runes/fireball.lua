@@ -20,7 +20,6 @@ end
 rune:id(15)
 rune:group("attack")
 rune:name("fireball rune")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_FIREBALL_RUNE)
 rune:runeId(3189)
 rune:allowFarUse(true)
 rune:charges(5)

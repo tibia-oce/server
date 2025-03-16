@@ -14,7 +14,6 @@ end
 rune:id(17)
 rune:group("attack")
 rune:name("firebomb rune")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_FIRE_BOMB_RUNE)
 rune:runeId(3192)
 rune:allowFarUse(true)
 rune:setPzLocked(true)

@@ -38,7 +38,6 @@ end
 rune:id(94)
 rune:name("Wild Growth Rune")
 rune:group("attack")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_WILD_GROWTH_RUNE)
 rune:cooldown(2 * 1000)
 rune:groupCooldown(2 * 1000)
 rune:level(27)

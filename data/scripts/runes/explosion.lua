@@ -22,7 +22,6 @@ end
 rune:id(18)
 rune:group("attack")
 rune:name("explosion rune")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_EXPLOSION_RUNE)
 rune:runeId(3200)
 rune:allowFarUse(true)
 rune:charges(6)

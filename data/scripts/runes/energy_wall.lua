@@ -14,7 +14,6 @@ end
 rune:id(33)
 rune:group("attack")
 rune:name("energy wall rune")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_ENERGY_WALL_RUNE)
 rune:runeId(3166)
 rune:allowFarUse(true)
 rune:setPzLocked(true)

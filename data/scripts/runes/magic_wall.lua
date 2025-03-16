@@ -38,7 +38,6 @@ end
 rune:id(86)
 rune:name("Magic Wall Rune")
 rune:group("attack")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_MAGIC_WALL_RUNE)
 rune:cooldown(2 * 1000)
 rune:groupCooldown(2 * 1000)
 rune:level(32)

@@ -20,7 +20,6 @@ end
 rune:id(114)
 rune:group("attack")
 rune:name("icicle rune")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_ICICLE_RUNE)
 rune:runeId(3158)
 rune:allowFarUse(true)
 rune:charges(5)

@@ -49,5 +49,4 @@ rune:cooldown(2 * 1000)
 rune:groupCooldown(2 * 1000)
 rune:needTarget(true)
 rune:isBlocking(true) -- True = Solid / False = Creature
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_CONVINCE_CREATURE_RUNE)
 rune:register()

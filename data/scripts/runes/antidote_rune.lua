@@ -11,7 +11,6 @@ end
 
 rune:group("healing")
 rune:name("antidote rune")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_CURE_POISON_RUNE)
 rune:runeId(3153)
 rune:allowFarUse(true)
 rune:charges(1)

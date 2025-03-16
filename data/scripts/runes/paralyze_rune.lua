@@ -21,7 +21,6 @@ end
 rune:id(54)
 rune:group("support")
 rune:name("paralyze rune")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_PARALYSE_RUNE)
 rune:runeId(3165)
 rune:allowFarUse(true)
 rune:charges(1)

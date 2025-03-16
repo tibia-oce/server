@@ -20,7 +20,6 @@ end
 rune:id(7)
 rune:group("attack")
 rune:name("lightest missile rune")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_LIGHTEST_MISSILE_RUNE)
 rune:runeId(21352)
 rune:allowFarUse(true)
 rune:charges(10)

@@ -16,7 +16,6 @@ end
 
 rune:group("attack")
 rune:name("soulfire rune")
-rune:impactSound(SOUND_EFFECT_TYPE_SPELL_SOUL_FIRE_RUNE)
 rune:runeId(3195)
 rune:allowFarUse(true)
 rune:charges(3)
