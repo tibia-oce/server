@@ -34,7 +34,7 @@ function spell.onCastSpell(creature, var)
 	return player:instantSkillWOD("Beam Mastery") and combatWOD:execute(creature, var) or combat:execute(creature, var)
 end
 
-spell:group("attack", "greatbeams")
+spell:group("attack")
 spell:id(23)
 spell:name("Great Energy Beam")
 spell:words("exevo gran vis lux")

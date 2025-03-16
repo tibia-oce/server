@@ -17,7 +17,7 @@ function spell.onCastSpell(creature, var)
 	return combat:execute(creature, var)
 end
 
-spell:group("attack", "focus")
+spell:group("attack")
 spell:id(119)
 spell:name("Rage of the Skies")
 spell:words("exevo gran mas vis")

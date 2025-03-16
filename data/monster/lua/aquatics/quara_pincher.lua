@@ -72,7 +72,7 @@ monster.loot = {
 	{ id = "quara pincers", chance = 14285 },
 	{ id = "great health potion", chance = 10630 },
 	{ id = "small ruby", chance = 7761, maxCount = 2 },
-	{ id = "halberd", chance = 6861 },
+	{ id = 2381, chance = 6861 },
 	{ id = "shrimp", chance = 5245, maxCount = 5 },
 	{ id = "fish fin", chance = 1600 },
 	{ id = "warrior helmet", chance = 1460 },

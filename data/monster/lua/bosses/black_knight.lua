@@ -84,7 +84,7 @@ monster.loot = {
 	{ id = "brown bread", chance = 21600, maxCount = 2 },
 	{ id = 3003, chance = 16020 }, -- rope
 	{ id = "brass legs", chance = 12200 },
-	{ id = "halberd", chance = 11850 },
+	{ id = 2381, chance = 11850 },
 	{ id = "plate armor", chance = 10370 },
 	{ id = "steel helmet", chance = 11220 },
 	{ id = "two handed sword", chance = 8470 },

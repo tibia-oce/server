@@ -72,7 +72,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 45000, maxCount = 40 },
 	{ id = 3049, chance = 450 }, -- stealth ring
 	{ id = "gold ring", chance = 10 },
-	{ id = "halberd", chance = 3003 },
+	{ id = 2381, chance = 3003 },
 	{ id = "golden armor", chance = 10 },
 	{ id = "green mushroom", chance = 1450 },
 	{ id = "health potion", chance = 4930 },

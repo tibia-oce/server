@@ -76,7 +76,7 @@ monster.loot = {
 	{ id = 3053, chance = 800 }, -- time ring
 	{ id = "platinum amulet", chance = 870 },
 	{ id = "stone skin amulet", chance = 1000 },
-	{ id = "halberd", chance = 3000 },
+	{ id = 2381, chance = 3000 },
 	{ id = "epee", chance = 560 },
 	{ id = "plate shield", chance = 10340 },
 	{ id = "brown mushroom", chance = 6940 },

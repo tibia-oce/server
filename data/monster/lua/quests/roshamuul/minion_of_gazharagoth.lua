@@ -54,10 +54,6 @@ monster.flags = {
 	canWalkOnFire = false,
 	canWalkOnPoison = false}
 
-monster.events = {
-	"MinionGazDeath",
-}
-
 monster.light = {
 	level = 0,
 	color = 0,

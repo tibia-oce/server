@@ -69,7 +69,7 @@ monster.loot = {
 	{ id = 3049, chance = 540 }, -- stealth ring
 	{ id = 3114, chance = 20240 }, -- skull
 	{ id = "mouldy cheese", chance = 950 },
-	{ id = "halberd", chance = 2990 },
+	{ id = 2381, chance = 2990 },
 	{ id = "plate shield", chance = 3750 },
 	{ id = "tower shield", chance = 50 },
 	{ id = "green mushroom", chance = 1390 },

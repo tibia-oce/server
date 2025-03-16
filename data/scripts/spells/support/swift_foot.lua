@@ -55,7 +55,7 @@ end
 
 spell:name("Swift Foot")
 spell:words("utamo tempo san")
-spell:group("support", "focus")
+spell:group("support")
 spell:vocation("paladin;true", "royal paladin;true")
 spell:id(134)
 spell:cooldown(10 * 1000)

@@ -6,10 +6,10 @@
 # Debug targets for handling high-volume logging
 quick-debug:
 	@echo "Starting server in debug mode..."
-	@mkdir -p debug_logs
+	@mkdir -p logs
 	@TIMESTAMP=$$(date +%Y%m%d-%H%M%S) && \
-	LOG_FILE="debug_logs/server-$${TIMESTAMP}.log" && \
-	HIGHLIGHT_FILE="debug_logs/server-$${TIMESTAMP}-highlights.log" && \
+	LOG_FILE="logs/server-$${TIMESTAMP}.log" && \
+	HIGHLIGHT_FILE="logs/server-$${TIMESTAMP}-highlights.log" && \
 	echo "Log will be saved to $${LOG_FILE}" && \
 	docker-compose up -d server && \
 	echo "Collecting first 1000 lines of logs (5 second timeout)..." && \
@@ -24,15 +24,6 @@ quick-debug:
 	echo "To view logs: less $${LOG_FILE}" && \
 	echo "To view just errors: less $${HIGHLIGHT_FILE}" && \
 	echo "--------------------------------------------"
-
-# Get just the beginning of logs
-debug-log-dump:
-	@mkdir -p debug_logs
-	@TIMESTAMP=$$(date +%Y%m%d-%H%M%S) && \
-	LOG_FILE="debug_logs/server-$${TIMESTAMP}-start.log" && \
-	echo "Getting first 200 lines of logs to $${LOG_FILE}..." && \
-	docker logs server 2>&1 | head -n 200 > "$${LOG_FILE}" && \
-	echo "Log saved. To view: less $${LOG_FILE}"
 
 # Emergency stop server
 emergency-stop:

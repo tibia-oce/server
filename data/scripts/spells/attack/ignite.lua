@@ -15,7 +15,7 @@ end
 
 spell:group("attack")
 spell:id(138)
-spell:name("Ignite")
+spell:name("ignite")
 spell:words("utori flam")
 spell:level(26)
 spell:mana(30)

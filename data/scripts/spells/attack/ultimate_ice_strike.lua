@@ -17,7 +17,7 @@ function spell.onCastSpell(creature, var)
 	return combat:execute(creature, var)
 end
 
-spell:group("attack", "ultimatestrikes")
+spell:group("attack")
 spell:id(156)
 spell:name("Ultimate Ice Strike")
 spell:words("exori max frigo")

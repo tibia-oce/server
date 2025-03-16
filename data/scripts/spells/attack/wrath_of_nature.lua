@@ -17,7 +17,7 @@ function spell.onCastSpell(creature, var)
 	return combat:execute(creature, var)
 end
 
-spell:group("attack", "focus")
+spell:group("attack")
 spell:id(56)
 spell:name("Wrath of Nature")
 spell:words("exevo gran mas tera")

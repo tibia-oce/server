@@ -22,7 +22,7 @@ end
 
 spell:name("Protector")
 spell:words("utamo tempo")
-spell:group("support", "focus")
+spell:group("support")
 spell:vocation("knight;true", "elite knight;true")
 spell:id(132)
 spell:cooldown(2 * 1000)

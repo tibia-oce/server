@@ -78,7 +78,7 @@ monster.loot = {
 	{ id = 2914, chance = 6666 }, -- lamp
 	{ id = "gold coin", chance = 100000, maxCount = 12 },
 	{ id = "battle axe", chance = 5000 },
-	{ id = "halberd", chance = 10000 },
+	{ id = 2381, chance = 10000 },
 	{ id = "axe", chance = 10000 },
 	{ id = "war hammer", chance = 5000 },
 	{ id = "ham", chance = 50000 },

@@ -43,7 +43,7 @@ end
 
 spell:name("Sharpshooter")
 spell:words("utito tempo san")
-spell:group("support", "focus")
+spell:group("support")
 spell:vocation("paladin;true", "royal paladin;true")
 spell:id(135)
 spell:cooldown(10 * 1000)

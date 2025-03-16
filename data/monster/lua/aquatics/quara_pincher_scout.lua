@@ -71,7 +71,7 @@ monster.loot = {
 	{ id = "quara pincers", chance = 9940 },
 	{ id = "plate armor", chance = 4170 },
 	{ id = "small ruby", chance = 3440 },
-	{ id = "halberd", chance = 2070 },
+	{ id = 2381, chance = 2070 },
 	{ id = "fish fin", chance = 800 },
 	{ id = "life crystal", chance = 790 },
 }

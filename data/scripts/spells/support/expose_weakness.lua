@@ -37,7 +37,7 @@ function spell.onCastSpell(creature, var, isHotkey)
 	return combat:execute(creature, var)
 end
 
-spell:group("support", "crippling")
+spell:group("support")
 spell:id(243)
 spell:name("Expose Weakness")
 spell:words("exori moe")

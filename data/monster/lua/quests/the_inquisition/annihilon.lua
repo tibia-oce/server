@@ -85,7 +85,7 @@ monster.loot = {
 	{ id = "green gem", chance = 12500 },
 	{ id = 3039, chance = 20000 }, -- red gem
 	{ id = "blue gem", chance = 20000 },
-	{ id = "halberd", chance = 20000 },
+	{ id = 2381, chance = 20000 },
 	{ id = "guardian halberd", chance = 20000 },
 	{ id = "heavy mace", chance = 25000 },
 	{ id = "mastermind shield", chance = 4166 },

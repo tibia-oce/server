@@ -69,7 +69,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 29000, maxCount = 29 },
 	{ id = "mantassin tail", chance = 12600 },
 	{ id = "shrimp", chance = 5170, maxCount = 5 },
-	{ id = "halberd", chance = 4970 },
+	{ id = 2381, chance = 4970 },
 	{ id = "small sapphire", chance = 1130 },
 	{ id = "cape", chance = 1090 },
 	{ id = 3049, chance = 1050 }, -- stealth ring

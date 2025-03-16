@@ -17,7 +17,7 @@ function spell.onCastSpell(creature, variant)
 	return combat:execute(creature, variant)
 end
 
-spell:group("attack", "focus")
+spell:group("attack")
 spell:id(24)
 spell:name("Hell's Core")
 spell:words("exevo gran mas flam")

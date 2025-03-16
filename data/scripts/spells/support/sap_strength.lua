@@ -66,7 +66,7 @@ function spell.onCastSpell(creature, var, isHotkey)
 	return combat:execute(creature, var)
 end
 
-spell:group("support", "crippling")
+spell:group("support")
 spell:id(244)
 spell:name("Sap Strength")
 spell:words("exori kor")
