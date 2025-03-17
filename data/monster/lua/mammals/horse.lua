@@ -1,5 +1,4 @@
--- Horse (Tibia Wiki: https://tibia.fandom.com/wiki/Horse)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Horse")
 local monster = {}

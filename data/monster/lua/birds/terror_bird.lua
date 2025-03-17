@@ -1,5 +1,4 @@
--- Terror Bird (Tibia Wiki: https://tibia.fandom.com/wiki/Terror_Bird)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Terror Bird")
 local monster = {}

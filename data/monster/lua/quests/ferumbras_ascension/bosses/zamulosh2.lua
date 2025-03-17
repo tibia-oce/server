@@ -1,5 +1,4 @@
--- Zamulosh2 (Tibia Wiki: https://tibia.fandom.com/wiki/Zamulosh2)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Zamulosh2")
 local monster = {}

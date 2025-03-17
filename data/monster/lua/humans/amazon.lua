@@ -1,5 +1,4 @@
--- Amazon (Tibia Wiki: https://tibia.fandom.com/wiki/Amazon)
--- Version: 7.1
+
 
 local mType = Game.createMonsterType("Amazon")
 local monster = {}

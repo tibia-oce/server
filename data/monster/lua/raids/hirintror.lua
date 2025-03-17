@@ -1,5 +1,4 @@
--- Hirintror (Tibia Wiki: https://tibia.fandom.com/wiki/Hirintror)
--- Version: 10.20
+
 
 local mType = Game.createMonsterType("Hirintror")
 local monster = {}
@@ -76,14 +75,14 @@ monster.voices = {
 monster.loot = {
 	{ id = 19363, chance = 200 }, -- runic ice shield
 	{ id = 3031, chance = 70000, maxCount = 100 }, -- gold coin
-	{ id = 19083, chance = 200 }, -- silver raid token
-	{ id = 19362, chance = 200 }, -- icicle bow
+	{ id = "silver raid token", chance = 200 }, -- silver raid token
+	{ id = "icicle bow", chance = 200 }, -- icicle bow
 	{ id = 3373, chance = 1200 }, -- strange helmet
 	{ id = 3284, chance = 2200 }, -- ice rapier
 	{ id = 7290, chance = 4200 }, -- shard
-	{ id = 7441, chance = 2200 }, -- ice cube
+	{ id = "ice cube", chance = 2200 }, -- ice cube
 	{ id = 819, chance = 3200 }, -- glacier shoes
-	{ id = 829, chance = 1200 }, -- glacier mask
+	{ id = "glacier mask", chance = 1200 }, -- glacier mask
 	{ id = 7449, chance = 900 }, -- crystal sword
 	{ id = 5912, chance = 900 }, -- blue piece of cloth
 	{ id = 237, chance = 20000, maxCount = 5 }, -- strong mana potion

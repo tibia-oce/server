@@ -1,5 +1,4 @@
--- Fish (Tibia Wiki: https://tibia.fandom.com/wiki/Fish)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Fish")
 local monster = {}

@@ -1,5 +1,4 @@
--- Rahemos (Tibia Wiki: https://tibia.fandom.com/wiki/Rahemos)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Rahemos")
 local monster = {}
@@ -89,7 +88,7 @@ monster.loot = {
 	{ id = "violet gem", chance = 500 },
 	{ id = "orb", chance = 500 },
 	{ id = "crystal wand", chance = 500 },
-	{ id = 3098, chance = 7000 }, -- ring of healing
+	{ id = "ring of healing", chance = 7000 }, -- ring of healing
 	{ id = "ancient rune", chance = 100000 },
 	{ id = "twin axe", chance = 200 },
 	{ id = "magician hat", chance = 300 },

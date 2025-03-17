@@ -1,5 +1,4 @@
--- Haunted Treeling (Tibia Wiki: https://tibia.fandom.com/wiki/Haunted_Treeling)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Haunted Treeling")
 local monster = {}
@@ -77,7 +76,7 @@ monster.loot = {
 	{ id = "haunted piece of wood", chance = 4950 },
 	{ id = "orange mushroom", chance = 1800 },
 	{ id = "strong health potion", chance = 1040 },
-	{ id = 3097, chance = 660 }, -- dwarven ring
+	{ id = "dwarven ring", chance = 660 }, -- dwarven ring
 	{ id = "small emerald", chance = 620 },
 	{ id = "bullseye potion", chance = 100 },
 }

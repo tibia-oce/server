@@ -1,5 +1,4 @@
--- Quara Constrictor (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Constrictor)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Quara Constrictor")
 local monster = {}

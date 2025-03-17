@@ -1,5 +1,4 @@
--- Braindeath (Tibia Wiki: https://tibia.fandom.com/wiki/Braindeath)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Braindeath")
 local monster = {}
@@ -85,7 +84,7 @@ monster.loot = {
 	{ id = "bonelord eye", chance = 2960 },
 	{ id = "clerical mace", chance = 1970 },
 	{ id = "haunted blade", chance = 1440 },
-	{ id = 3059, chance = 930 }, -- spellbook
+	{ id = "spellbook", chance = 930 }, -- spellbook
 	{ id = "spiked squelcher", chance = 180 },
 	{ id = "bonelord shield", chance = 100 },
 	{ id = "bonelord helmet", chance = 100 },

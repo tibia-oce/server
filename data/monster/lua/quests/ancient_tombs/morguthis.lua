@@ -1,5 +1,4 @@
--- Morguthis (Tibia Wiki: https://tibia.fandom.com/wiki/Morguthis)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Morguthis")
 local monster = {}

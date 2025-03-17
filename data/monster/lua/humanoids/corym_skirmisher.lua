@@ -1,5 +1,4 @@
--- Corym Skirmisher (Tibia Wiki: https://tibia.fandom.com/wiki/Corym_Skirmisher)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Corym Skirmisher")
 local monster = {}

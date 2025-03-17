@@ -1,5 +1,4 @@
--- Tirecz (Tibia Wiki: https://tibia.fandom.com/wiki/Tirecz)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Tirecz")
 local monster = {}

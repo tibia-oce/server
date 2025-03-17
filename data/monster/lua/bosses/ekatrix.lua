@@ -1,5 +1,4 @@
--- Ekatrix (Tibia Wiki: https://tibia.fandom.com/wiki/Ekatrix)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("Ekatrix")
 local monster = {}
@@ -73,7 +72,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 60 },
 	{ id = "witch broom", chance = 100000 },
 	{ id = "cape", chance = 64500 },
-	{ id = 3012, chance = 41670 }, -- wolf tooth chain
+	{ id = "wolf tooth chain", chance = 41670 }, -- wolf tooth chain
 	{ id = "broom", chance = 37500 },
 	{ id = "coat", chance = 37500 },
 	{ id = "cookie", chance = 25000, maxCount = 10 },

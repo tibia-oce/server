@@ -1,5 +1,4 @@
--- Carniphila (Tibia Wiki: https://tibia.fandom.com/wiki/Carniphila)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Carniphila")
 local monster = {}

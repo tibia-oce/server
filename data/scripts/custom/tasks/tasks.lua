@@ -108,7 +108,7 @@ local Config = {
         }, {
             RaceName = "Dryad Fortress",
             Level = 25,
-            Monsters = {"Elf Arcanist", "Elder Forest Fury", "Elf Overseer"},
+            Monsters = {"Elf Arcanist", "Forest Fury", "Elf Overseer"},
             Rewards = {
                 {Type = RewardType.Points, BaseValue = 2},
                 {Type = RewardType.Ranking, BaseValue = 3},

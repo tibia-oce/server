@@ -1,5 +1,4 @@
--- The Hag (Tibia Wiki: https://tibia.fandom.com/wiki/The_Hag)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("The Hag")
 local monster = {}

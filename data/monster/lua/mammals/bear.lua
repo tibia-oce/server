@@ -1,5 +1,4 @@
--- Bear (Tibia Wiki: https://tibia.fandom.com/wiki/Bear)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Bear")
 local monster = {}

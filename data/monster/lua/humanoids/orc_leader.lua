@@ -1,5 +1,4 @@
--- Orc Leader (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Leader)
--- Version: 6.0
+
 
 local mType = Game.createMonsterType("Orc Leader")
 local monster = {}
@@ -67,17 +66,17 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 28000, maxCount = 35 },
-	{ id = 3091, chance = 3920 }, -- sword ring
+	{ id = "sword ring", chance = 3920 }, -- sword ring
 	{ id = "longsword", chance = 2800 },
 	{ id = "throwing knife", chance = 9950, maxCount = 4 },
 	{ id = "broadsword", chance = 610 },
-	{ id = 3307, chance = 1860 }, -- scimitar
+	{ id = "scimitar", chance = 1860 }, -- scimitar
 	{ id = "plate armor", chance = 1650 },
 	{ id = "warrior helmet", chance = 180 },
 	{ id = "brass legs", chance = 3100 },
 	{ id = "plate shield", chance = 1650 },
 	{ id = "plate legs", chance = 440 },
-	{ id = 3578, chance = 29400 }, -- fish
+	{ id = "fish", chance = 29400 }, -- fish
 	{ id = "brown mushroom", chance = 9650 },
 	{ id = "royal spear", chance = 2400 },
 	{ id = "health potion", chance = 550 },

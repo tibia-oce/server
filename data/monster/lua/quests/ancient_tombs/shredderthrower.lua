@@ -1,5 +1,4 @@
--- Shredderthrower (Tibia Wiki: https://tibia.fandom.com/wiki/Shredderthrower)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Shredderthrower")
 local monster = {}

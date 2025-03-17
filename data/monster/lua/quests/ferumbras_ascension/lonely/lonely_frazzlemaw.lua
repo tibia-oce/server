@@ -1,5 +1,4 @@
--- Lonely Frazzlemaw (Tibia Wiki: https://tibia.fandom.com/wiki/Lonely_Frazzlemaw)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Lonely Frazzlemaw")
 local monster = {}
@@ -80,20 +79,20 @@ monster.loot = {
 	{ id = 3114, chance = 12380 }, -- skull
 	{ id = 3115, chance = 9510 }, -- bone
 	{ id = 3116, chance = 5360 }, -- big bone
-	{ id = 3578, chance = 6780, maxCount = 3 }, -- fish
+	{ id = "fish", chance = 6780, maxCount = 3 }, -- fish
 	{ id = 3582, chance = 5960, maxCount = 2 }, -- ham
 	{ id = 5880, chance = 3000 }, -- iron ore
 	{ id = 5895, chance = 4650 }, -- fish fin
-	{ id = 5925, chance = 5190 }, -- hardened bone
+	{ id = "hardened bone", chance = 5190 }, -- hardened bone
 	{ id = 5951, chance = 10670 }, -- fish tail
 	{ id = 7404, chance = 990 }, -- assassin dagger
 	{ id = 7407, chance = 2110 }, -- haunted blade
 	{ id = 3265, chance = 3170 }, -- two handed sword
-	{ id = 7418, chance = 1030 }, -- nightmare blade
+	{ id = "nightmare blade", chance = 1030 }, -- nightmare blade
 	{ id = 9058, chance = 2330 }, -- gold ingot
 	{ id = 10389, chance = 1600 }, -- sai
 	{ id = 16120, chance = 3000 }, -- violet crystal shard
-	{ id = 16123, chance = 15640 }, -- brown crystal splinter
+	{ id = "brown crystal splinter", chance = 15640 }, -- brown crystal splinter
 	{ id = 16126, chance = 5230 }, -- red crystal fragment
 	{ id = 20131, chance = 9640 }, -- remains of a crude dream
 	{ id = 20199, chance = 15990 }, -- frazzle skin

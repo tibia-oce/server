@@ -1,5 +1,4 @@
--- Wasp (Tibia Wiki: https://tibia.fandom.com/wiki/Wasp)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Wasp")
 local monster = {}

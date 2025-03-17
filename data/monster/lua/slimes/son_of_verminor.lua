@@ -1,5 +1,4 @@
--- Son of Verminor (Tibia Wiki: https://tibia.fandom.com/wiki/Son_of_Verminor)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Son of Verminor")
 local monster = {}

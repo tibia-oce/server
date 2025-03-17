@@ -1,5 +1,4 @@
--- Shaburak Demon (Tibia Wiki: https://tibia.fandom.com/wiki/Shaburak_Demon)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Shaburak Demon")
 local monster = {}
@@ -75,7 +74,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "gold coin", chance = 50000, maxCount = 50 },
-	{ id = 3051, chance = 1052 }, -- energy ring
+	{ id = "energy ring", chance = 1052 }, -- energy ring
 	{ id = "wand of inferno", chance = 564 },
 	{ id = "brown mushroom", chance = 3846 },
 	{ id = "magic sulphur", chance = 81 },

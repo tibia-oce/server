@@ -1,5 +1,4 @@
--- Black Sheep (Tibia Wiki: https://tibia.fandom.com/wiki/Black_Sheep)
--- Version: 6.1
+
 
 local mType = Game.createMonsterType("Black Sheep")
 local monster = {}

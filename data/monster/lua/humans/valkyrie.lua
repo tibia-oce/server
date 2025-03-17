@@ -1,5 +1,4 @@
--- Valkyrie (Tibia Wiki: https://tibia.fandom.com/wiki/Valkyrie)
--- Version: 7.1
+
 
 local mType = Game.createMonsterType("Valkyrie")
 local monster = {}

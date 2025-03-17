@@ -1,5 +1,4 @@
--- Tarantula (Tibia Wiki: https://tibia.fandom.com/wiki/Tarantula)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Tarantula")
 local monster = {}

@@ -1,5 +1,4 @@
--- Overcharged Disruption (Tibia Wiki: https://tibia.fandom.com/wiki/Overcharged_Disruption)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Overcharged Disruption")
 local monster = {}

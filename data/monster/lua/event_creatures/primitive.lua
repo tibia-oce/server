@@ -1,5 +1,4 @@
--- Primitive (Tibia Wiki: https://tibia.fandom.com/wiki/Primitive)
--- Version: 7.92
+
 
 local mType = Game.createMonsterType("Primitive")
 local monster = {}
@@ -92,7 +91,7 @@ monster.loot = {
 	{ id = "studded armor", chance = 7000 },
 	{ id = "studded shield", chance = 1200 },
 	{ id = 6570, chance = 500 }, -- surprise bag
-	{ id = 6571, chance = 500 }, -- surprise bag
+	{ id = "surprise bag", chance = 500 }, -- surprise bag
 }
 
 monster.attacks = {

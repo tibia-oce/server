@@ -1,5 +1,4 @@
--- Rabbit (Tibia Wiki: https://tibia.fandom.com/wiki/Rabbit)
--- Version: 7.1
+
 
 local mType = Game.createMonsterType("Rabbit")
 local monster = {}

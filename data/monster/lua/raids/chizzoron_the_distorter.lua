@@ -1,5 +1,4 @@
--- Chizzoron the Distorter (Tibia Wiki: https://tibia.fandom.com/wiki/Chizzoron_the_Distorter)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Chizzoron the Distorter")
 local monster = {}
@@ -84,11 +83,11 @@ monster.loot = {
 	{ id = 3031, chance = 69825, maxCount = 100 }, -- gold coin
 	{ id = 3031, chance = 69825, maxCount = 10 }, -- gold coin
 	{ id = 3032, chance = 5750 }, -- small emerald
-	{ id = 5881, chance = 100000 }, -- lizard scale
+	{ id = "lizard scale", chance = 100000 }, -- lizard scale
 	{ id = 3038, chance = 16300 }, -- green gem
 	{ id = 3053, chance = 11025 }, -- time ring
-	{ id = 239, chance = 5750 }, -- great health potion
-	{ id = 3386, chance = 5750 }, -- dragon scale mail
+	{ id = "great health potion", chance = 5750 }, -- great health potion
+	{ id = "dragon scale mail", chance = 5750 }, -- dragon scale mail
 }
 
 monster.attacks = {

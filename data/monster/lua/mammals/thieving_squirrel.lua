@@ -1,5 +1,4 @@
--- Thieving Squirrel (Tibia Wiki: https://tibia.fandom.com/wiki/Thieving_Squirrel)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Thieving Squirrel")
 local monster = {}
@@ -63,8 +62,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 9843, chance = 100000 }, -- flask with beaver bait
-	{ id = 841, chance = 4550 }, -- peanut
+	{ id = "flask with beaver bait", chance = 100000 }, -- flask with beaver bait
+	{ id = "peanut", chance = 4550 }, -- peanut
 }
 
 monster.attacks = {}

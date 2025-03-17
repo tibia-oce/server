@@ -1,5 +1,4 @@
--- Midnight Panther (Tibia Wiki: https://tibia.fandom.com/wiki/Midnight_Panther)
--- Version: 8.70
+
 
 local mType = Game.createMonsterType("Midnight Panther")
 local monster = {}
@@ -68,7 +67,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 57 },
-	{ id = 3052, chance = 12500 }, -- life ring
+	{ id = "life ring", chance = 12500 }, -- life ring
 	{ id = "meat", chance = 25000, maxCount = 4 },
 	{ id = "panther head", chance = 12500 },
 	{ id = "panther paw", chance = 100000 },

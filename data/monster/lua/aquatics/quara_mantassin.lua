@@ -1,5 +1,4 @@
--- Quara Mantassin (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Mantassin)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Quara Mantassin")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = 2381, chance = 4970 },
 	{ id = "small sapphire", chance = 1130 },
 	{ id = "cape", chance = 1090 },
-	{ id = 3049, chance = 1050 }, -- stealth ring
+	{ id = "stealth ring", chance = 1050 }, -- stealth ring
 	{ id = "two handed sword", chance = 990 },
 	{ id = "fish fin", chance = 610 },
 	{ id = "strange helmet", chance = 100 },

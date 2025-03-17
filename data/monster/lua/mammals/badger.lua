@@ -1,5 +1,4 @@
--- Badger (Tibia Wiki: https://tibia.fandom.com/wiki/Badger)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Badger")
 local monster = {}
@@ -63,7 +62,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 10299, chance = 10230 }, -- badger fur
+	{ id = "badger fur", chance = 10230 }, -- badger fur
 	{ id = "beetroot", chance = 40710 },
 	{ id = "acorn", chance = 5130 },
 }

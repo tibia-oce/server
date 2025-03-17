@@ -1,5 +1,4 @@
--- The Lord of the Lice (Tibia Wiki: https://tibia.fandom.com/wiki/The_Lord_of_the_Lice)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("The Lord of the Lice")
 local monster = {}
@@ -84,10 +83,10 @@ monster.loot = {
 	{ id = 3035, chance = 94830, maxCount = 10 }, -- platinum coin
 	{ id = 7643, chance = 94830, maxCount = 10 }, -- ultimate health potion
 	{ id = 238, chance = 94830, maxCount = 10 }, -- great mana potion
-	{ id = 239, chance = 94830, maxCount = 10 }, -- great health potion
-	{ id = 3098, chance = 100000 }, -- ring of healing
+	{ id = "great health potion", chance = 94830, maxCount = 10 }, -- great health potion
+	{ id = "ring of healing", chance = 100000 }, -- ring of healing
 	{ id = 3326, chance = 25860 }, -- epee
-	{ id = 811, chance = 86200 }, -- terra mantle
+	{ id = "terra mantle", chance = 86200 }, -- terra mantle
 }
 
 monster.attacks = {

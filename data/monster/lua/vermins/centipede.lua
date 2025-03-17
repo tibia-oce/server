@@ -1,5 +1,4 @@
--- Centipede (Tibia Wiki: https://tibia.fandom.com/wiki/Centipede)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Centipede")
 local monster = {}

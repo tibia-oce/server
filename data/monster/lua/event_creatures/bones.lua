@@ -1,5 +1,4 @@
--- Bones (Tibia Wiki: https://tibia.fandom.com/wiki/Bones)
--- Version: 7.92
+
 
 local mType = Game.createMonsterType("Bones")
 local monster = {}
@@ -71,7 +70,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 100 },
 	{ id = "gold coin", chance = 50000, maxCount = 90 },
-	{ id = 3091, chance = 10000 }, -- sword ring
+	{ id = "sword ring", chance = 10000 }, -- sword ring
 	{ id = "broadsword", chance = 4000 },
 	{ id = "magic plate armor", chance = 2000 },
 	{ id = "spectral stone", chance = 800 },
@@ -80,7 +79,7 @@ monster.loot = {
 	{ id = 6299, chance = 4000 }, -- death ring
 	{ id = "demonic essence", chance = 1538 },
 	{ id = 6570, chance = 5538, maxCount = 3 }, -- surprise bag
-	{ id = 6571, chance = 1538 }, -- surprise bag
+	{ id = "surprise bag", chance = 1538 }, -- surprise bag
 	{ id = "dragonbone staff", chance = 50000 },
 }
 

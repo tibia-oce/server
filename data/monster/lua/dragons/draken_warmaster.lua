@@ -1,5 +1,4 @@
--- Draken Warmaster (Tibia Wiki: https://tibia.fandom.com/wiki/Draken_Warmaster)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Draken Warmaster")
 local monster = {}

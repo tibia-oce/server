@@ -1,5 +1,4 @@
--- Glooth Trasher (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Trasher)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Glooth Trasher")
 local monster = {}

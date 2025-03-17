@@ -1,5 +1,4 @@
--- Dworc Venomsniper (Tibia Wiki: https://tibia.fandom.com/wiki/Dworc_Venomsniper)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Dworc Venomsniper")
 local monster = {}

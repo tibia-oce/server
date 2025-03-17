@@ -1,5 +1,4 @@
--- Aftershock (Tibia Wiki: https://tibia.fandom.com/wiki/Aftershock)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Aftershock")
 local monster = {}

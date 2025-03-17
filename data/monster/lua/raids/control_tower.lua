@@ -1,5 +1,4 @@
--- Control Tower (Tibia Wiki: https://tibia.fandom.com/wiki/Control_Tower)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Control Tower")
 local monster = {}
@@ -59,9 +58,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3035, chance = 100000, maxCount = 5 }, -- platinum coin
-	{ id = 238, chance = 14285 }, -- great mana potion
-	{ id = 239, chance = 14285 }, -- great health potion
+	{ id = "platinum coin", chance = 100000, maxCount = 5 }, -- platinum coin
+	{ id = "great mana potion", chance = 14285 }, -- great mana potion
+	{ id = "great health potion", chance = 14285 }, -- great health potion
 }
 
 monster.defenses = {

@@ -1,5 +1,4 @@
--- Greater Death Minion (Tibia Wiki: https://tibia.fandom.com/wiki/Greater_Death_Minion)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Greater Death Minion")
 local monster = {}

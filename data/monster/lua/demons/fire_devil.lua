@@ -1,5 +1,4 @@
--- Fire Devil (Tibia Wiki: https://tibia.fandom.com/wiki/Fire_Devil)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Fire Devil")
 local monster = {}
@@ -71,7 +70,7 @@ monster.loot = {
 	{ id = "necrotic rod", chance = 460 },
 	{ id = "blank rune", chance = 10950 },
 	{ id = "double axe", chance = 1500 },
-	{ id = 3307, chance = 3000 }, -- scimitar
+	{ id = "scimitar", chance = 3000 }, -- scimitar
 	{ id = "guardian shield", chance = 210 },
 	{ id = "cleaver", chance = 1100 },
 	{ id = "small pitchfork", chance = 19770 },

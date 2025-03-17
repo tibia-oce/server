@@ -1,5 +1,4 @@
--- Husky (Tibia Wiki: https://tibia.fandom.com/wiki/Husky)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Husky")
 local monster = {}

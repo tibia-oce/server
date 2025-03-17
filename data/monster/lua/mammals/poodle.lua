@@ -1,5 +1,4 @@
--- Poodle (Tibia Wiki: https://tibia.fandom.com/wiki/Poodle)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Poodle")
 local monster = {}

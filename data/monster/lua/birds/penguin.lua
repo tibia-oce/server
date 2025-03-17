@@ -1,5 +1,4 @@
--- Penguin (Tibia Wiki: https://tibia.fandom.com/wiki/Penguin)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Penguin")
 local monster = {}
@@ -63,7 +62,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3578, chance = 7830, maxCount = 2 }, -- fish
+	{ id = "fish", chance = 7830, maxCount = 2 }, -- fish
 	{ id = "rainbow trout", chance = 70 },
 	{ id = "green perch", chance = 130 },
 }

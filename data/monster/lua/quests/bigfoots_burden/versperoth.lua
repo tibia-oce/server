@@ -1,5 +1,4 @@
--- Versperoth (Tibia Wiki: https://tibia.fandom.com/wiki/Versperoth)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Versperoth")
 local monster = {}

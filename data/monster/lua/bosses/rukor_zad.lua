@@ -1,5 +1,4 @@
--- Rukor Zad (Tibia Wiki: https://tibia.fandom.com/wiki/Rukor_Zad)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Rukor Zad")
 local monster = {}
@@ -75,11 +74,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 93210, maxCount = 50 }, -- gold coin
+	{ id = "gold coin", chance = 93210, maxCount = 50 }, -- gold coin
 	{ id = 3287, chance = 9210, maxCount = 14 }, -- throwing star
 	{ id = 7366, chance = 6200, maxCount = 7 }, -- viper star
-	{ id = 3351, chance = 4190 }, -- steel helmet
-	{ id = 3409, chance = 1940 }, -- steel shield
+	{ id = "steel helmet", chance = 4190 }, -- steel helmet
+	{ id = "steel shield", chance = 1940 }, -- steel shield
 }
 
 monster.attacks = {

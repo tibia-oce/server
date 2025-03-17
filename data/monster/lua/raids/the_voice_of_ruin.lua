@@ -1,5 +1,4 @@
--- The Voice of Ruin (Tibia Wiki: https://tibia.fandom.com/wiki/The_Voice_of_Ruin)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("The Voice of Ruin")
 local monster = {}
@@ -73,11 +72,11 @@ monster.loot = {
 	{ id = 3031, chance = 33000, maxCount = 100 }, -- gold coin
 	{ id = 3031, chance = 32000, maxCount = 100 }, -- gold coin
 	{ id = 3031, chance = 32000, maxCount = 36 }, -- gold coin
-	{ id = 10409, chance = 5800 }, -- corrupted flag
+	{ id = "corrupted flag", chance = 5800 }, -- corrupted flag
 	{ id = 3035, chance = 2920, maxCount = 5 }, -- platinum coin
 	{ id = 10410, chance = 3800 }, -- cursed shoulder spikes
-	{ id = 9058, chance = 3800 }, -- gold ingot
-	{ id = 10408, chance = 3800 }, -- spiked iron ball
+	{ id = "gold ingot", chance = 3800 }, -- gold ingot
+	{ id = "spiked iron ball", chance = 3800 }, -- spiked iron ball
 	{ id = 10386, chance = 3800 }, -- zaoan shoes
 }
 

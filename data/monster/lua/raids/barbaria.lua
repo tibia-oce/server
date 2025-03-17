@@ -1,5 +1,4 @@
--- Barbaria (Tibia Wiki: https://tibia.fandom.com/wiki/Barbaria)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Barbaria")
 local monster = {}
@@ -82,11 +81,11 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 48000, maxCount = 35 }, -- gold coin
-	{ id = 3358, chance = 11000 }, -- chain armor
-	{ id = 3347, chance = 12500 }, -- hunting spear
-	{ id = 7343, chance = 1000 }, -- fur bag
+	{ id = "chain armor", chance = 11000 }, -- chain armor
+	{ id = "hunting spear", chance = 12500 }, -- hunting spear
+	{ id = "fur bag", chance = 1000 }, -- fur bag
 	{ id = 2920, chance = 25000 }, -- torch
-	{ id = 2824, chance = 15000 }, -- book
+	{ id = "book", chance = 15000 }, -- book
 }
 
 monster.attacks = {

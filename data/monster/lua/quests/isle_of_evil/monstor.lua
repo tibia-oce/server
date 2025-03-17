@@ -1,5 +1,4 @@
--- Monstor (Tibia Wiki: https://tibia.fandom.com/wiki/Monstor)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Monstor")
 local monster = {}
@@ -81,9 +80,9 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 9381, chance = 1000 }, -- helmet of ultimate terror
-	{ id = 9386, chance = 1000 }, -- farmer's avenger
-	{ id = 9380, chance = 1000 }, -- shield of care
-	{ id = 9396, chance = 1000 }, -- incredible mumpiz slayer
+	{ id = "farmer's avenger", chance = 1000 }, -- farmer's avenger
+	{ id = "shield of care", chance = 1000 }, -- shield of care
+	{ id = "incredible mumpiz slayer", chance = 1000 }, -- incredible mumpiz slayer
 }
 
 monster.attacks = {

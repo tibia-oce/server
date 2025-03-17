@@ -1,5 +1,4 @@
--- Goblin Scavenger (Tibia Wiki: https://tibia.fandom.com/wiki/Goblin_Scavenger)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Goblin Scavenger")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "leather helmet", chance = 10180 },
 	{ id = "leather armor", chance = 7700 },
 	{ id = "small axe", chance = 9790 },
-	{ id = 3578, chance = 13640 }, -- fish
+	{ id = "fish", chance = 13640 }, -- fish
 }
 
 monster.attacks = {

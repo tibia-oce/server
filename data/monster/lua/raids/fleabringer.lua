@@ -1,5 +1,4 @@
--- Fleabringer (Tibia Wiki: https://tibia.fandom.com/wiki/Fleabringer)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Fleabringer")
 local monster = {}

@@ -1,5 +1,4 @@
--- Dark Apprentice (Tibia Wiki: https://tibia.fandom.com/wiki/Dark_Apprentice)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Dark Apprentice")
 local monster = {}

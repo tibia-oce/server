@@ -1,5 +1,4 @@
--- Hunter (Tibia Wiki: https://tibia.fandom.com/wiki/Hunter)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Hunter")
 local monster = {}
@@ -80,9 +79,9 @@ monster.loot = {
 	{ id = "roll", chance = 11370, maxCount = 2 },
 	{ id = "sniper gloves", chance = 540 },
 	{ id = "slingshot", chance = 120 },
-	{ id = 7394, chance = 190 }, -- wolf trophy
-	{ id = 7397, chance = 520 }, -- deer trophy
-	{ id = 7400, chance = 70 }, -- lion trophy
+	{ id = "wolf trophy", chance = 190 }, -- wolf trophy
+	{ id = "deer trophy", chance = 520 }, -- deer trophy
+	{ id = "lion trophy", chance = 70 }, -- lion trophy
 	{ id = "hunter's quiver", chance = 10240 },
 }
 

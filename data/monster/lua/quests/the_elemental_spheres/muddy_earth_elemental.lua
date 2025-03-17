@@ -1,5 +1,4 @@
--- Muddy Earth Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Muddy_Earth_Elemental)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Muddy Earth Elemental")
 local monster = {}

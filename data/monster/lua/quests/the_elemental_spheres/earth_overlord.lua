@@ -1,5 +1,4 @@
--- Earth Overlord (Tibia Wiki: https://tibia.fandom.com/wiki/Earth_Overlord)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Earth Overlord")
 local monster = {}
@@ -76,7 +75,7 @@ monster.loot = {
 	{ id = "mother soil", chance = 100000 },
 	{ id = "lump of earth", chance = 33333 },
 	{ id = "shiny stone", chance = 8333 },
-	{ id = 12600, chance = 552 }, -- coal
+	{ id = "coal", chance = 552 }, -- coal
 }
 
 monster.attacks = {

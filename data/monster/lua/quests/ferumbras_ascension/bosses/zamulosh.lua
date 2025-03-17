@@ -1,5 +1,4 @@
--- Zamulosh (Tibia Wiki: https://tibia.fandom.com/wiki/Zamulosh)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Zamulosh")
 local monster = {}
@@ -93,8 +92,8 @@ monster.loot = {
 	{ id = 3035, chance = 8000, maxCount = 58 }, -- platinum coin
 	{ id = 6499, chance = 11000 }, -- demonic essence
 	{ id = 16122, chance = 10000, maxCount = 6 }, -- green crystal splinter
-	{ id = 16123, chance = 10000, maxCount = 6 }, -- brown crystal splinter
-	{ id = 16124, chance = 10000, maxCount = 6 }, -- blue crystal splinter
+	{ id = "brown crystal splinter", chance = 10000, maxCount = 6 }, -- brown crystal splinter
+	{ id = "blue crystal splinter", chance = 10000, maxCount = 6 }, -- blue crystal splinter
 	{ id = 3039, chance = 1000 }, -- red gem
 	{ id = 3037, chance = 1000 }, -- yellow gem
 	{ id = 3038, chance = 1000 }, -- green gem
@@ -102,7 +101,7 @@ monster.loot = {
 	{ id = 3053, chance = 6000 }, -- time ring
 	{ id = 3098, chance = 6000 }, -- ring of healing
 	{ id = 22867, chance = 770 }, -- rift crossbow
-	{ id = 8050, chance = 770 }, -- crystalline armor
+	{ id = "crystalline armor", chance = 770 }, -- crystalline armor
 	{ id = 22726, chance = 670 }, -- rift shield
 	{ id = 22762, chance = 500, unique = true }, -- maimer
 	{ id = 22555, chance = 500, unique = true }, -- stone wall

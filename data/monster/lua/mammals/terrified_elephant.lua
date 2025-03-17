@@ -1,5 +1,4 @@
--- Terrified Elephant (Tibia Wiki: https://tibia.fandom.com/wiki/Terrified_Elephant)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Terrified Elephant")
 local monster = {}

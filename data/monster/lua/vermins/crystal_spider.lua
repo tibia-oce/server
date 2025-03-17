@@ -1,5 +1,4 @@
--- Crystal Spider (Tibia Wiki: https://tibia.fandom.com/wiki/Crystal_Spider)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Crystal Spider")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = 3053, chance = 1480 }, -- time ring
 	{ id = "platinum amulet", chance = 130 },
 	{ id = "steel helmet", chance = 5200 },
-	{ id = 7441, chance = 5000 }, -- ice cube
+	{ id = "ice cube", chance = 5000 }, -- ice cube
 	{ id = "plate armor", chance = 9993 },
 	{ id = "knight armor", chance = 560 },
 	{ id = "knight legs", chance = 760 },

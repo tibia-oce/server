@@ -1,5 +1,4 @@
--- Dragon Lord (Tibia Wiki: https://tibia.fandom.com/wiki/Dragon_Lord)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Dragon Lord")
 local monster = {}
@@ -79,7 +78,7 @@ monster.loot = {
 	{ id = "royal spear", chance = 9380, maxCount = 3 },
 	{ id = "power bolt", chance = 5920, maxCount = 7 },
 	{ id = "small sapphire", chance = 5590 },
-	{ id = 3051, chance = 4550 }, -- energy ring
+	{ id = "energy ring", chance = 4550 }, -- energy ring
 	{ id = "golden mug", chance = 3310 },
 	{ id = "red dragon scale", chance = 1940 },
 	{ id = "red dragon leather", chance = 1150 },

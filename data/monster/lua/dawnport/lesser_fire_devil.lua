@@ -1,5 +1,4 @@
--- Lesser Fire Devil (Tibia Wiki: https://tibia.fandom.com/wiki/Lesser_Fire_Devil)
--- Version: 10.55
+
 
 local mType = Game.createMonsterType("Lesser Fire Devil")
 local monster = {}
@@ -62,9 +61,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3147, chance = 21050 }, -- blank rune
-	{ id = 3031, chance = 100000, maxCount = 10 }, -- gold coin
-	{ id = 11513, chance = 22810 }, -- small pitchfork
+	{ id = "blank rune", chance = 21050 }, -- blank rune
+	{ id = "gold coin", chance = 100000, maxCount = 10 }, -- gold coin
+	{ id = "small pitchfork", chance = 22810 }, -- small pitchfork
 	{ id = 2920, chance = 1750 }, -- torch
 	{ id = 2920, chance = 1750 }, -- torch
 }

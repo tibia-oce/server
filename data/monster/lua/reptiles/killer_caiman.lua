@@ -1,5 +1,4 @@
--- Killer Caiman (Tibia Wiki: https://tibia.fandom.com/wiki/Killer_Caiman)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Killer Caiman")
 local monster = {}

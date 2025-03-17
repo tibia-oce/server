@@ -1,5 +1,4 @@
--- Jagged Earth Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Jagged_Earth_Elemental)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Jagged Earth Elemental")
 local monster = {}
@@ -70,7 +69,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 27000, maxCount = 90 },
 	{ id = "gold coin", chance = 1500, maxCount = 10 },
 	{ id = "small emerald", chance = 3750, maxCount = 2 },
-	{ id = 3130, chance = 18000 }, -- twigs
+	{ id = "twigs", chance = 18000 }, -- twigs
 	{ id = "iron ore", chance = 800, maxCount = 2 },
 	{ id = "seeds", chance = 1600 },
 	{ id = "natural soil", chance = 9000 },

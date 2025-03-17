@@ -1,5 +1,4 @@
--- Efreet (Tibia Wiki: https://tibia.fandom.com/wiki/Efreet)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Efreet")
 local monster = {}
@@ -76,7 +75,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2647, chance = 2200 }, -- green tapestry
+	{ id = "green tapestry", chance = 2200 }, -- green tapestry
 	{ id = "small oil lamp", chance = 160 },
 	{ id = "gold coin", chance = 50000, maxCount = 75 },
 	{ id = "gold coin", chance = 60000, maxCount = 50 },

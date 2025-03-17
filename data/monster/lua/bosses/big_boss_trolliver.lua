@@ -1,5 +1,4 @@
--- Big Boss Trolliver (Tibia Wiki: https://tibia.fandom.com/wiki/Big_Boss_Trolliver)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Big Boss Trolliver")
 local monster = {}

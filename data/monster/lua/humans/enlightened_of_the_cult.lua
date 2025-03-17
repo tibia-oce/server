@@ -1,5 +1,4 @@
--- Enlightened of the Cult (Tibia Wiki: https://tibia.fandom.com/wiki/Enlightened_of_the_Cult)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Enlightened of the Cult")
 local monster = {}
@@ -78,11 +77,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2828, chance = 910 }, -- book
+	{ id = "book", chance = 910 }, -- book
 	{ id = "piggy bank", chance = 130 },
 	{ id = "small sapphire", chance = 550 },
 	{ id = "gold coin", chance = 64550, maxCount = 70 },
-	{ id = 3051, chance = 450 }, -- energy ring
+	{ id = "energy ring", chance = 450 }, -- energy ring
 	{ id = "platinum amulet", chance = 200 },
 	{ id = "wand of inferno", chance = 180 },
 	{ id = "protection amulet", chance = 790 },

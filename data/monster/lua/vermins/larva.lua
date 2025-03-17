@@ -1,5 +1,4 @@
--- Larva (Tibia Wiki: https://tibia.fandom.com/wiki/Larva)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Larva")
 local monster = {}

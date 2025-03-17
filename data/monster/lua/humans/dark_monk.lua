@@ -1,5 +1,4 @@
--- Dark Monk (Tibia Wiki: https://tibia.fandom.com/wiki/Dark_Monk)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Dark Monk")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "brown flask", chance = 380 },
 	{ id = 2914, chance = 550 }, -- lamp
 	{ id = "gold coin", chance = 14600, maxCount = 18 },
-	{ id = 3050, chance = 120 }, -- power ring
+	{ id = "power ring", chance = 120 }, -- power ring
 	{ id = "life crystal", chance = 990 },
 	{ id = "ankh", chance = 900 },
 	{ id = "sandals", chance = 890 },

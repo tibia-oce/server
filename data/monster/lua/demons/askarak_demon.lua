@@ -1,5 +1,4 @@
--- Askarak Demon (Tibia Wiki: https://tibia.fandom.com/wiki/Askarak_Demon)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Askarak Demon")
 local monster = {}
@@ -76,7 +75,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "gold coin", chance = 40000, maxCount = 35 },
 	{ id = "small emerald", chance = 6250, maxCount = 4 },
-	{ id = 3051, chance = 961 }, -- energy ring
+	{ id = "energy ring", chance = 961 }, -- energy ring
 	{ id = "brown mushroom", chance = 3846, maxCount = 5 },
 	{ id = "magic sulphur", chance = 102 },
 	{ id = "assassin star", chance = 4761, maxCount = 5 },

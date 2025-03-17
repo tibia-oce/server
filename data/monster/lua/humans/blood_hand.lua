@@ -1,5 +1,4 @@
--- Blood Hand (Tibia Wiki: https://tibia.fandom.com/wiki/Blood_Hand)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Blood Hand")
 local monster = {}
@@ -77,7 +76,7 @@ monster.loot = {
 	{ id = "strong mana potion", chance = 5590 },
 	{ id = "spellbook of enlightenment", chance = 790 },
 	{ id = "book of necromantic rituals", chance = 9340 },
-	{ id = 3039, chance = 710 }, -- red gem
+	{ id = "red gem", chance = 710 }, -- red gem
 	{ id = "lancet", chance = 10680 },
 	{ id = "horoscope", chance = 7950 },
 	{ id = "blood tincture in a vial", chance = 15460 },

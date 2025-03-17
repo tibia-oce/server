@@ -1,5 +1,4 @@
--- Wilting Leaf Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Wilting_Leaf_Golem)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Wilting Leaf Golem")
 local monster = {}

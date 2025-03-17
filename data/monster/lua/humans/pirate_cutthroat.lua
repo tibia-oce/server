@@ -1,5 +1,4 @@
--- Pirate Cutthroat (Tibia Wiki: https://tibia.fandom.com/wiki/Pirate_Cutthroat)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Pirate Cutthroat")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = 5090, chance = 1000 }, -- treasure map
 	{ id = "rum flask", chance = 90 },
 	{ id = "light shovel", chance = 2000 },
-	{ id = 5792, chance = 110 }, -- die
+	{ id = "die", chance = 110 }, -- die
 	{ id = "pirate knee breeches", chance = 980 },
 	{ id = "pirate bag", chance = 1000 },
 	{ id = "hook", chance = 550 },

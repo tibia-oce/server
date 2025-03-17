@@ -1,5 +1,4 @@
--- Nightmare (Tibia Wiki: https://tibia.fandom.com/wiki/Nightmare)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Nightmare")
 local monster = {}
@@ -86,7 +85,7 @@ monster.loot = {
 	{ id = 6299, chance = 1298 }, -- death ring
 	{ id = "demonic essence", chance = 10000 },
 	{ id = "skeleton decoration", chance = 337 },
-	{ id = "flask of demonic blood", chance = 19666, maxCount = 2 },
+	{ id = 6558, chance = 19666, maxCount = 2}, -- "flask of demonic blood"
 	{ id = "essence of a bad dream", chance = 15240 },
 	{ id = "scythe leg", chance = 9090 },
 }

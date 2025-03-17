@@ -1,5 +1,4 @@
--- Serpent Spawn (Tibia Wiki: https://tibia.fandom.com/wiki/Serpent_Spawn)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Serpent Spawn")
 local monster = {}
@@ -71,8 +70,8 @@ monster.loot = {
 	{ id = "golden mug", chance = 2870 },
 	{ id = "small sapphire", chance = 12000 },
 	{ id = "gold coin", chance = 97250, maxCount = 239 },
-	{ id = 3051, chance = 590 }, -- energy ring
-	{ id = 3052, chance = 6250 }, -- life ring
+	{ id = "energy ring", chance = 590 }, -- energy ring
+	{ id = "life ring", chance = 6250 }, -- life ring
 	{ id = "life crystal", chance = 800 },
 	{ id = "snakebite rod", chance = 930 },
 	{ id = "warrior helmet", chance = 560 },

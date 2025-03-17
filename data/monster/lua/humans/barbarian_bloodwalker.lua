@@ -1,5 +1,4 @@
--- Barbarian Bloodwalker (Tibia Wiki: https://tibia.fandom.com/wiki/Barbarian_Bloodwalker)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Barbarian Bloodwalker")
 local monster = {}

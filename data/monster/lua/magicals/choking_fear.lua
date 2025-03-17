@@ -1,5 +1,4 @@
--- Choking Fear (Tibia Wiki: https://tibia.fandom.com/wiki/Choking_Fear)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Choking Fear")
 local monster = {}
@@ -72,9 +71,9 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 100 },
 	{ id = "platinum coin", chance = 100000, maxCount = 8 },
-	{ id = 3051, chance = 3000 }, -- energy ring
-	{ id = 3052, chance = 4200 }, -- life ring
-	{ id = 3098, chance = 3000 }, -- ring of healing
+	{ id = "energy ring", chance = 3000 }, -- energy ring
+	{ id = "life ring", chance = 4200 }, -- life ring
+	{ id = "ring of healing", chance = 3000 }, -- ring of healing
 	{ id = "guardian shield", chance = 1540 },
 	{ id = "beastslayer axe", chance = 3290 },
 	{ id = "brown piece of cloth", chance = 6000 },

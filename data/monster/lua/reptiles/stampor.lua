@@ -1,5 +1,4 @@
--- Stampor (Tibia Wiki: https://tibia.fandom.com/wiki/Stampor)
--- Version: 8.70
+
 
 local mType = Game.createMonsterType("Stampor")
 local monster = {}

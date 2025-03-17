@@ -1,5 +1,4 @@
--- Zomba (Tibia Wiki: https://tibia.fandom.com/wiki/Zomba)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Zomba")
 local monster = {}
@@ -71,9 +70,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 25 }, -- gold coin
-	{ id = 9691, chance = 100000, maxCount = 2 }, -- lion's mane
-	{ id = 3035, chance = 25000 }, -- platinum coin
+	{ id = "gold coin", chance = 100000, maxCount = 25 }, -- gold coin
+	{ id = "lion's mane", chance = 100000, maxCount = 2 }, -- lion's mane
+	{ id = "platinum coin", chance = 25000 }, -- platinum coin
 	{ id = 3052, chance = 12500 }, -- life ring
 }
 

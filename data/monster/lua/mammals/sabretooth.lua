@@ -1,5 +1,4 @@
--- Sabretooth (Tibia Wiki: https://tibia.fandom.com/wiki/Sabretooth)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Sabretooth")
 local monster = {}
@@ -63,7 +62,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "Sabretooth Fur", chance = 23640 },
+	{ id = 11210, chance = 23640 }, -- "Sabretooth Fur",
 	{ id = "Crystal Coin", chance = 23350, minCount = 1, maxCount = 2 },
 	{ id = "Elven Amulet", chance = 5010 },
 	{ id = "Wand of Inferno", chance = 4720 },
@@ -109,5 +108,3 @@ monster.immunities = {
 }
 
 mType:register(monster)
-
-RegisterPrimalPackBeast(monster)

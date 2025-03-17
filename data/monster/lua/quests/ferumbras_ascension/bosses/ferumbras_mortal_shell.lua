@@ -1,5 +1,4 @@
--- Ferumbras Mortal Shell (Tibia Wiki: https://tibia.fandom.com/wiki/Ferumbras_Mortal_Shell)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Ferumbras Mortal Shell")
 local monster = {}
@@ -90,7 +89,7 @@ monster.loot = {
 	{ id = 8041, chance = 400 }, -- greenwood coat
 	{ id = 3029, chance = 10000, maxCount = 10 }, -- small sapphire
 	{ id = 7416, chance = 800 }, -- bloody edge
-	{ id = 7427, chance = 800 }, -- chaos mace
+	{ id = "chaos mace", chance = 800 }, -- chaos mace
 	{ id = 3360, chance = 800 }, -- golden armor
 	{ id = 8102, chance = 400 }, -- emerald sword
 	{ id = 22773, chance = 800 }, -- boots of homecoming
@@ -105,14 +104,14 @@ monster.loot = {
 	{ id = 22764, chance = 800 }, -- ferumbras' staff
 	{ id = 7422, chance = 800 }, -- jade hammer
 	{ id = 3026, chance = 10000, maxCount = 5 }, -- white pearl
-	{ id = 7418, chance = 600 }, -- nightmare blade
+	{ id = "nightmare blade", chance = 600 }, -- nightmare blade
 	{ id = 3439, chance = 800 }, -- phoenix shield
 	{ id = 3420, chance = 800 }, -- demon shield
 	{ id = 30146, chance = 150 }, -- elven parchment
 	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
 	{ id = 823, chance = 800 }, -- glacier kilt
 	{ id = 3366, chance = 400 }, -- magic plate armor
-	{ id = 22758, chance = 100, unique = true }, -- death gaze
+	{ id = "death gaze", chance = 100, unique = true }, -- death gaze
 	{ id = 7403, chance = 800 }, -- berserker
 	{ id = 22866, chance = 500 }, -- rift bow
 	{ id = 8098, chance = 300 }, -- demonwing axe

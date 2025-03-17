@@ -1,5 +1,4 @@
--- Jellyfish (Tibia Wiki: https://tibia.fandom.com/wiki/Jellyfish)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Jellyfish")
 local monster = {}

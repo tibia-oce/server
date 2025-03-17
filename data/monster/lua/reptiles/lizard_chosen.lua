@@ -1,5 +1,4 @@
--- Lizard Chosen (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Chosen)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Lizard Chosen")
 local monster = {}

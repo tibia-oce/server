@@ -1,5 +1,4 @@
--- Squirrel (Tibia Wiki: https://tibia.fandom.com/wiki/Squirrel)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Squirrel")
 local monster = {}

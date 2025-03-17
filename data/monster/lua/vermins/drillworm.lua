@@ -1,5 +1,4 @@
--- Drillworm (Tibia Wiki: https://tibia.fandom.com/wiki/Drillworm)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Drillworm")
 local monster = {}
@@ -71,14 +70,14 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "gold coin", chance = 50000, maxCount = 50 },
-	{ id = 3456, chance = 5280 }, -- pick
+	{ id = "pick", chance = 5280 }, -- pick
 	{ id = "worm", chance = 4580, maxCount = 5 },
 	{ id = "iron ore", chance = 1750 },
 	{ id = "spiked squelcher", chance = 540 },
 	{ id = "terra amulet", chance = 2360 },
 	{ id = "lump of earth", chance = 15000 },
 	{ id = "clay lump", chance = 700 },
-	{ id = 12600, chance = 12130 }, -- coal
+	{ id = "coal", chance = 12130 }, -- coal
 	{ id = "green crystal splinter", chance = 9780 },
 	{ id = "brown crystal splinter", chance = 9260 },
 	{ id = "blue crystal splinter", chance = 9610 },

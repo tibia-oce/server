@@ -1,5 +1,4 @@
--- Crystal Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Crystal_Wolf)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Crystal Wolf")
 local monster = {}

@@ -1,5 +1,4 @@
--- Poacher (Tibia Wiki: https://tibia.fandom.com/wiki/Poacher)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Poacher")
 local monster = {}
@@ -71,7 +70,7 @@ monster.loot = {
 	{ id = "leather helmet", chance = 30600 },
 	{ id = "arrow", chance = 49500, maxCount = 17 },
 	{ id = "poison arrow", chance = 2930, maxCount = 3 },
-	{ id = 3481, chance = 710 }, -- closed trap
+	{ id = "closed trap", chance = 710 }, -- closed trap
 	{ id = "leather legs", chance = 26740 },
 	{ id = "roll", chance = 11110, maxCount = 2 },
 }

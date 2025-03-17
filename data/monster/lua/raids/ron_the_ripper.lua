@@ -1,5 +1,4 @@
--- Ron the Ripper (Tibia Wiki: https://tibia.fandom.com/wiki/Ron_the_Ripper)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Ron the Ripper")
 local monster = {}
@@ -71,10 +70,10 @@ monster.loot = {
 	{ id = 3114, chance = 81000, maxCount = 2 }, -- skull
 	{ id = 3357, chance = 63000 }, -- plate armor
 	{ id = 3267, chance = 45000 }, -- dagger
-	{ id = 239, chance = 18000 }, -- great health potion
-	{ id = 3370, chance = 18000 }, -- knight armor
+	{ id = "great health potion", chance = 18000 }, -- great health potion
+	{ id = "knight armor", chance = 18000 }, -- knight armor
 	{ id = 3577, chance = 18000 }, -- meat
-	{ id = 5926, chance = 18000 }, -- pirate backpack
+	{ id = "pirate backpack", chance = 18000 }, -- pirate backpack
 	{ id = 3028, chance = 9000 }, -- small diamond
 }
 

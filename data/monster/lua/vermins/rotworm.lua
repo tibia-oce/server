@@ -1,5 +1,4 @@
--- Rotworm (Tibia Wiki: https://tibia.fandom.com/wiki/Rotworm)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Rotworm")
 local monster = {}
@@ -64,7 +63,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 71760, maxCount = 17 },
-	{ id = 3264, chance = 3000 }, -- sword
+	{ id = "sword", chance = 3000 }, -- sword
 	{ id = "mace", chance = 4500 },
 	{ id = "meat", chance = 20000 },
 	{ id = "ham", chance = 20120 },

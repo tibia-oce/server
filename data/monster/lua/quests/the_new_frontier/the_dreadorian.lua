@@ -1,5 +1,4 @@
--- The Dreadorian (Tibia Wiki: https://tibia.fandom.com/wiki/The_Dreadorian)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("The Dreadorian")
 local monster = {}

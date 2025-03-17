@@ -1,5 +1,4 @@
--- Bane Bringer (Tibia Wiki: https://tibia.fandom.com/wiki/Bane_Bringer)
--- Version: 8.70
+
 
 local mType = Game.createMonsterType("Bane Bringer")
 local monster = {}

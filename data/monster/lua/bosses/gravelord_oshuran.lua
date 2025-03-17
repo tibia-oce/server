@@ -1,5 +1,4 @@
--- Gravelord Oshuran (Tibia Wiki: https://tibia.fandom.com/wiki/Gravelord_Oshuran)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Gravelord Oshuran")
 local monster = {}
@@ -79,14 +78,14 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 115 }, -- gold coin
-	{ id = 237, chance = 17500 }, -- strong mana potion
+	{ id = "strong mana potion", chance = 17500 }, -- strong mana potion
 	{ id = 3027, chance = 15960 }, -- black pearl
 	{ id = 3026, chance = 15000 }, -- white pearl
-	{ id = 3098, chance = 15040 }, -- ring of healing
+	{ id = "ring of healing", chance = 15040 }, -- ring of healing
 	{ id = 3567, chance = 500 }, -- blue robe
 	{ id = 820, chance = 900 }, -- lightning boots
-	{ id = 8076, chance = 300 }, -- spellscroll of prophecies
-	{ id = 3059, chance = 4650 }, -- spellbook
+	{ id = "spellscroll of prophecies", chance = 300 }, -- spellscroll of prophecies
+	{ id = "spellbook", chance = 4650 }, -- spellbook
 }
 
 monster.attacks = {

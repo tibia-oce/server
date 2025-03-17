@@ -1,5 +1,4 @@
--- Dawnfly (Tibia Wiki: https://tibia.fandom.com/wiki/Dawnfly)
--- Version: 10.55
+
 
 local mType = Game.createMonsterType("Dawnfly")
 local monster = {}
@@ -63,12 +62,12 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 21470, chance = 21360, maxCount = 16 }, -- simple arrow
-	{ id = 3379, chance = 4140 }, -- doublet
-	{ id = 17458, chance = 11940 }, -- damselfly wing
+	{ id = "doublet", chance = 4140 }, -- doublet
+	{ id = "damselfly wing", chance = 11940 }, -- damselfly wing
 	{ id = 17463, chance = 10130 }, -- damselfly eye
 	{ id = 3031, chance = 100000, maxCount = 12 }, -- gold coin
 	{ id = 266, chance = 3630 }, -- health potion
-	{ id = 268, chance = 3800 }, -- mana potion
+	{ id = "mana potion", chance = 3800 }, -- mana potion
 	{ id = 3448, chance = 14500, maxCount = 8 }, -- poison arrow
 }
 

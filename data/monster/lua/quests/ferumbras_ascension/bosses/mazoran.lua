@@ -1,5 +1,4 @@
--- Mazoran (Tibia Wiki: https://tibia.fandom.com/wiki/Mazoran)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Mazoran")
 local monster = {}
@@ -90,9 +89,9 @@ monster.loot = {
 	{ id = 22760, chance = 500 }, -- impaler of the igniter
 	{ id = 3442, chance = 500, unique = true }, -- tempest shield
 	{ id = 22866, chance = 500 }, -- rift bow
-	{ id = 22867, chance = 500 }, -- rift crossbow
+	{ id = "rift crossbow", chance = 500 }, -- rift crossbow
 	{ id = 6499, chance = 11000 }, -- demonic essence
-	{ id = 7382, chance = 1000 }, -- demonrage sword
+	{ id = "demonrage sword", chance = 1000 }, -- demonrage sword
 	{ id = 238, chance = 23000, maxCount = 5 }, -- great mana potion
 	{ id = 281, chance = 14000, maxCount = 5 }, -- giant shimmering pearl (green)
 	{ id = 282, chance = 14000, maxCount = 5 }, -- giant shimmering pearl (brown)
@@ -100,7 +99,7 @@ monster.loot = {
 	{ id = 821, chance = 1000 }, -- magma legs
 	{ id = 826, chance = 1000 }, -- magma coat
 	{ id = 7642, chance = 46100, maxCount = 5 }, -- great spirit potion
-	{ id = 7643, chance = 23000, maxCount = 5 }, -- ultimate health potion
+	{ id = "ultimate health potion", chance = 23000, maxCount = 5 }, -- ultimate health potion
 	{ id = 9057, chance = 10000, maxCount = 8 }, -- small topaz
 	{ id = 9058, chance = 3000 }, -- gold ingot
 }

@@ -1,5 +1,4 @@
--- War Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/War_Wolf)
--- Version: 7.0
+
 
 local mType = Game.createMonsterType("War Wolf")
 local monster = {}

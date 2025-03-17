@@ -1,5 +1,4 @@
--- Flame of Omrafir (Tibia Wiki: https://tibia.fandom.com/wiki/Flame_of_Omrafir)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Flame of Omrafir")
 local monster = {}

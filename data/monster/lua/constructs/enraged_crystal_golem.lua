@@ -1,5 +1,4 @@
--- Enraged Crystal Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Enraged_Crystal_Golem)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Enraged Crystal Golem")
 local monster = {}

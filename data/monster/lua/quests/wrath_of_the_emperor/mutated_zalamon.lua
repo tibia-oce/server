@@ -1,5 +1,4 @@
--- Mutated Zalamon (Tibia Wiki: https://tibia.fandom.com/wiki/Mutated_Zalamon)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("Mutated Zalamon")
 local monster = {}

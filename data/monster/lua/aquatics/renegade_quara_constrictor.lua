@@ -1,5 +1,4 @@
--- Renegade Quara Constrictor (Tibia Wiki: https://tibia.fandom.com/wiki/Renegade_Quara_Constrictor)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Renegade Quara Constrictor")
 local monster = {}
@@ -69,7 +68,7 @@ monster.loot = {
 	{ id = "platinum coin", chance = 79280, maxCount = 3 },
 	{ id = "quara tentacle", chance = 15240 },
 	{ id = "mind stone", chance = 6880 },
-	{ id = 3098, chance = 5580 }, -- ring of healing
+	{ id = "ring of healing", chance = 5580 }, -- ring of healing
 	{ id = "great mana potion", chance = 5390, maxCount = 5 },
 	{ id = "shrimp", chance = 5300, maxCount = 4 },
 	{ id = "small amethyst", chance = 5200, maxCount = 2 },

@@ -1,5 +1,4 @@
--- Glooth Masher (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Masher)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Glooth Masher")
 local monster = {}

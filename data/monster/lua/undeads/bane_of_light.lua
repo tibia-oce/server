@@ -1,5 +1,4 @@
--- Bane of Light (Tibia Wiki: https://tibia.fandom.com/wiki/Bane_of_Light)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Bane of Light")
 local monster = {}

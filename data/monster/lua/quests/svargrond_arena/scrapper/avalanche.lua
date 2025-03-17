@@ -1,5 +1,4 @@
--- Avalanche (Tibia Wiki: https://tibia.fandom.com/wiki/Avalanche)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Avalanche")
 local monster = {}

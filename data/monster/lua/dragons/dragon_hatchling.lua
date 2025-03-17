@@ -1,5 +1,4 @@
--- Dragon Hatchling (Tibia Wiki: https://tibia.fandom.com/wiki/Dragon_Hatchling)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Dragon Hatchling")
 local monster = {}

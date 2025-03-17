@@ -1,5 +1,4 @@
--- Omrafir (Tibia Wiki: https://tibia.fandom.com/wiki/Omrafir)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Omrafir")
 local monster = {}
@@ -90,7 +89,7 @@ monster.loot = {
 	{ id = 281, chance = 43750 }, -- giant shimmering pearl (green)
 	{ id = 282, chance = 43750 }, -- giant shimmering pearl (brown)
 	{ id = 3031, chance = 18750, maxCount = 100 }, -- gold coin
-	{ id = 238, chance = 6250, maxCount = 8 }, -- great mana potion
+	{ id = "great mana potion", chance = 6250, maxCount = 8 }, -- great mana potion
 	{ id = 7642, chance = 56250, maxCount = 8 }, -- great spirit potion
 	{ id = 16127, chance = 37500, maxCount = 3 }, -- green crystal fragment
 	{ id = 16121, chance = 18750, maxCount = 5 }, -- green crystal shard
@@ -98,12 +97,12 @@ monster.loot = {
 	{ id = 820, chance = 12500 }, -- lightning boots
 	{ id = 825, chance = 18750 }, -- lightning robe
 	{ id = 20282, chance = 12500 }, -- nightmare hook
-	{ id = 20274, chance = 100000, unique = true }, -- nightmare horn
+	{ id = "nightmare horn", chance = 100000, unique = true }, -- nightmare horn
 	{ id = 3035, chance = 93750, maxCount = 20 }, -- platinum coin
 	{ id = 20277, chance = 6250 }, -- psychedelic tapestry
 	{ id = 16126, chance = 6250, maxCount = 3 }, -- red crystal fragment
 	{ id = 3098, chance = 6250 }, -- ring of healing
-	{ id = 5741, chance = 6250 }, -- skull helmet
+	{ id = "skull helmet", chance = 6250 }, -- skull helmet
 	{ id = 3554, chance = 6250 }, -- steel boots
 	{ id = 7643, chance = 31250, maxCount = 8 }, -- ultimate health potion
 	{ id = 20264, chance = 81250, maxCount = 3 }, -- unrealized dream

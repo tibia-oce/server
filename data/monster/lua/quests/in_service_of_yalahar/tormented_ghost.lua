@@ -1,5 +1,4 @@
--- Tormented Ghost (Tibia Wiki: https://tibia.fandom.com/wiki/Tormented_Ghost)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Tormented Ghost")
 local monster = {}

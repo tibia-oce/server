@@ -1,5 +1,4 @@
--- Wild Fire Magic (Tibia Wiki: https://tibia.fandom.com/wiki/Wild_Fire_Magic)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Wild Fire Magic")
 local monster = {}

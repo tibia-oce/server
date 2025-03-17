@@ -1,5 +1,4 @@
--- Gravedigger (Tibia Wiki: https://tibia.fandom.com/wiki/Gravedigger)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Gravedigger")
 local monster = {}

@@ -1,5 +1,4 @@
--- Rocky (Tibia Wiki: https://tibia.fandom.com/wiki/Rocky)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Rocky")
 local monster = {}

@@ -1,5 +1,4 @@
--- Dwarf Miner (Tibia Wiki: https://tibia.fandom.com/wiki/Dwarf_Miner)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Dwarf Miner")
 local monster = {}
@@ -69,10 +68,10 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 33333, maxCount = 10 },
-	{ id = 3097, chance = 793 }, -- dwarven ring
+	{ id = "dwarven ring", chance = 793 }, -- dwarven ring
 	{ id = "axe", chance = 14285 },
 	{ id = "studded armor", chance = 6666 },
-	{ id = 3456, chance = 11111 }, -- pick
+	{ id = "pick", chance = 11111 }, -- pick
 	{ id = "leather legs", chance = 9090 },
 	{ id = "meat", chance = 3846 },
 	{ id = "iron ore", chance = 793 },

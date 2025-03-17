@@ -1,5 +1,4 @@
--- Novice of the Cult (Tibia Wiki: https://tibia.fandom.com/wiki/Novice_of_the_Cult)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Novice of the Cult")
 local monster = {}
@@ -76,12 +75,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2828, chance = 700 }, -- book
+	{ id = "book", chance = 700 }, -- book
 	{ id = "small diamond", chance = 210 },
 	{ id = "gold coin", chance = 43380, maxCount = 40 },
 	{ id = "wand of vortex", chance = 450 },
 	{ id = "garlic necklace", chance = 420 },
-	{ id = 3097, chance = 500 }, -- dwarven ring
+	{ id = "dwarven ring", chance = 500 }, -- dwarven ring
 	{ id = "scarf", chance = 2900 },
 	{ id = "pirate voodoo doll", chance = 520 },
 	{ id = 6087, chance = 970 }, -- music sheet

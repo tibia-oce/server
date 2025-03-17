@@ -1,5 +1,4 @@
--- Crustacea Gigantica (Tibia Wiki: https://tibia.fandom.com/wiki/Crustacea_Gigantica)
--- Version: 8.70
+
 
 local mType = Game.createMonsterType("Crustacea Gigantica")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "strong mana potion", chance = 8885 },
 	{ id = "strong health potion", chance = 3880 },
 	{ id = "giant crab pincer", chance = 5000, maxCount = 2 },
-	{ id = 3098, chance = 3000 }, -- ring of healing
+	{ id = "ring of healing", chance = 3000 }, -- ring of healing
 	{ id = "great mana potion", chance = 1220 },
 }
 

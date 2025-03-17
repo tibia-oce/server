@@ -1,5 +1,4 @@
--- Vexclaw (Tibia Wiki: https://tibia.fandom.com/wiki/Vexclaw)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Vexclaw")
 local monster = {}
@@ -90,10 +89,10 @@ monster.loot = {
 	{ id = "fire axe", chance = 3520 },
 	{ id = "might ring", chance = 2250 },
 	{ id = "giant sword", chance = 1880 },
-	{ id = 3049, chance = 1790 }, -- stealth ring
-	{ id = 3051, chance = 1790 }, -- energy ring
+	{ id = "stealth ring", chance = 1790 }, -- stealth ring
+	{ id = "energy ring", chance = 1790 }, -- energy ring
 	{ id = "rift lance", chance = 1360 },
-	{ id = 3098, chance = 1320 }, -- ring of healing
+	{ id = "ring of healing", chance = 1320 }, -- ring of healing
 	{ id = "platinum amulet", chance = 940 },
 	{ id = "devil helmet", chance = 520 },
 	{ id = "rift crossbow", chance = 370 },

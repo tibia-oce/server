@@ -1,5 +1,4 @@
--- Menace (Tibia Wiki: https://tibia.fandom.com/wiki/Menace)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Menace")
 local monster = {}

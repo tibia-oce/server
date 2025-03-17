@@ -1,5 +1,4 @@
--- Cat (Tibia Wiki: https://tibia.fandom.com/wiki/Cat)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Cat")
 local monster = {}

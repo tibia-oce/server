@@ -1,5 +1,4 @@
--- Grave Robber (Tibia Wiki: https://tibia.fandom.com/wiki/Grave_Robber)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Grave Robber")
 local monster = {}

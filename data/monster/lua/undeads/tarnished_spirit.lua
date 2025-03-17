@@ -1,5 +1,4 @@
--- Tarnished Spirit (Tibia Wiki: https://tibia.fandom.com/wiki/Tarnished_Spirit)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Tarnished Spirit")
 local monster = {}
@@ -64,8 +63,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2828, chance = 1310 }, -- book
-	{ id = 3049, chance = 180 }, -- stealth ring
+	{ id = "book", chance = 1310 }, -- book
+	{ id = "stealth ring", chance = 180 }, -- stealth ring
 	{ id = "morning star", chance = 10610 },
 	{ id = "combat knife", chance = 7002 },
 	{ id = "ancient shield", chance = 860 },

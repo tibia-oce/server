@@ -1,5 +1,4 @@
--- Chakoya Toolshaper (Tibia Wiki: https://tibia.fandom.com/wiki/Chakoya_Toolshaper)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Chakoya Toolshaper")
 local monster = {}
@@ -70,7 +69,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 77810, maxCount = 20 },
 	{ id = "mace", chance = 5300 },
 	{ id = "bone shield", chance = 720 },
-	{ id = 3456, chance = 1100 }, -- pick
+	{ id = "pick", chance = 1100 }, -- pick
 	{ id = 3578, chance = 25060, maxCount = 2 }, -- fish
 	{ id = "northern pike", chance = 70 },
 	{ id = "rainbow trout", chance = 140 },

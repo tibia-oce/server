@@ -1,5 +1,4 @@
--- Terofar (Tibia Wiki: https://tibia.fandom.com/wiki/Terofar)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Terofar")
 local monster = {}
@@ -77,7 +76,7 @@ monster.loot = {
 	{ id = 20276, chance = 3560 }, -- dream warden mask
 	{ id = 3031, chance = 100000, maxCount = 200 }, -- gold coin
 	{ id = 3035, chance = 100000, maxCount = 50 }, -- platinum coin
-	{ id = 238, chance = 33330, maxCount = 10 }, -- great mana potion
+	{ id = "great mana potion", chance = 33330, maxCount = 10 }, -- great mana potion
 	{ id = 7643, chance = 3890, maxCount = 10 }, -- ultimate health potion
 	{ id = 7642, chance = 2780, maxCount = 5 }, -- great spirit potion
 	{ id = 16119, chance = 22220, maxCount = 8 }, -- blue crystal shard
@@ -98,10 +97,10 @@ monster.loot = {
 	{ id = 8054, chance = 410 }, -- earthborn titan armor
 	{ id = 3366, chance = 610 }, -- magic plate armor
 	{ id = 3554, chance = 910 }, -- steel boots
-	{ id = 3392, chance = 910 }, -- royal helmet
+	{ id = "royal helmet", chance = 910 }, -- royal helmet
 	{ id = 813, chance = 2910 }, -- terra boots
 	{ id = 3079, chance = 1910 }, -- boots of haste
-	{ id = 5741, chance = 1910 }, -- skull helmet
+	{ id = "skull helmet", chance = 1910 }, -- skull helmet
 }
 
 monster.attacks = {

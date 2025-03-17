@@ -1,5 +1,4 @@
--- Worker Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Worker_Golem)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Worker Golem")
 local monster = {}
@@ -85,7 +84,7 @@ monster.loot = {
 	{ id = "great health potion", chance = 2100 },
 	{ id = "nail", chance = 5000, maxCount = 5 },
 	{ id = "great spirit potion", chance = 830 },
-	{ id = 9690, chance = 1007 } -- "gear wheel",
+	{ id = 9690, chance = 1007}, -- "gear wheel"
 	{ id = 8895, chance = 200 }, -- rusted armor
 	{ id = 8898, chance = 50 }, -- rusted legs
 	{ id = 9066, chance = 2270 }, -- crystal pedestal

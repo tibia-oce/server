@@ -1,5 +1,4 @@
--- Undead Gladiator (Tibia Wiki: https://tibia.fandom.com/wiki/Undead_Gladiator)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Undead Gladiator")
 local monster = {}
@@ -70,11 +69,11 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 44000, maxCount = 100 },
 	{ id = "gold coin", chance = 50500, maxCount = 48 },
-	{ id = 3049, chance = 30 }, -- stealth ring
+	{ id = "stealth ring", chance = 30 }, -- stealth ring
 	{ id = "protection amulet", chance = 2200 },
 	{ id = "two handed sword", chance = 1900 },
 	{ id = "throwing star", chance = 15700, maxCount = 18 },
-	{ id = 3307, chance = 11280 }, -- scimitar
+	{ id = "scimitar", chance = 11280 }, -- scimitar
 	{ id = "knight axe", chance = 280 },
 	{ id = "plate armor", chance = 1700 },
 	{ id = "brass armor", chance = 4700 },

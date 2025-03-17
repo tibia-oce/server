@@ -1,5 +1,4 @@
--- Execowtioner (Tibia Wiki: https://tibia.fandom.com/wiki/Execowtioner)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Execowtioner")
 local monster = {}
@@ -71,9 +70,9 @@ monster.voices = {
 monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 198 }, -- gold coin
 	{ id = 3035, chance = 67610, maxCount = 3 }, -- platinum coin
-	{ id = 9058, chance = 390 }, -- gold ingot
+	{ id = "gold ingot", chance = 390 }, -- gold ingot
 	{ id = 5911, chance = 3230 }, -- red piece of cloth
-	{ id = 5878, chance = 14710 }, -- minotaur leather
+	{ id = "minotaur leather", chance = 14710 }, -- minotaur leather
 	{ id = 11472, chance = 6580, maxCount = 2 }, -- minotaur horn
 	{ id = 21201, chance = 13160 }, -- execowtioner mask
 	{ id = 239, chance = 11480 }, -- great health potion
@@ -84,9 +83,9 @@ monster.loot = {
 	{ id = 7412, chance = 900 }, -- butcher's axe
 	{ id = 3381, chance = 770 }, -- crown armor
 	{ id = 21176, chance = 1420 }, -- execowtioner axe
-	{ id = 3318, chance = 770 }, -- knight axe
+	{ id = "knight axe", chance = 770 }, -- knight axe
 	{ id = 7413, chance = 390 }, -- titan axe
-	{ id = 7401, chance = 520 }, -- minotaur trophy
+	{ id = "minotaur trophy", chance = 520 }, -- minotaur trophy
 }
 
 monster.attacks = {

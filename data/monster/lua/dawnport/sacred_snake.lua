@@ -1,5 +1,4 @@
--- Sacred Snake (Tibia Wiki: https://tibia.fandom.com/wiki/Sacred_Snake)
--- Version: 10.55
+
 
 local mType = Game.createMonsterType("Sacred Snake")
 local monster = {}

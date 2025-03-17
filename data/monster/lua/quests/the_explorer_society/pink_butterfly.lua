@@ -1,5 +1,4 @@
--- Pink Butterfly (Tibia Wiki: https://tibia.fandom.com/wiki/Pink_Butterfly)
--- Version: 7.50
+
 
 local mType = Game.createMonsterType("Pink Butterfly")
 local monster = {}

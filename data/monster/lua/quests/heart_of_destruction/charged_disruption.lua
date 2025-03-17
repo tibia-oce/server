@@ -1,5 +1,4 @@
--- Charged Disruption (Tibia Wiki: https://tibia.fandom.com/wiki/Charged_Disruption)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Charged Disruption")
 local monster = {}

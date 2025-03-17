@@ -1,5 +1,4 @@
--- Energy Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Energy_Elemental)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Energy Elemental")
 local monster = {}
@@ -70,7 +69,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "gold coin", chance = 50000, maxCount = 70 },
 	{ id = "small amethyst", chance = 5000, maxCount = 2 },
-	{ id = 3051, chance = 892 }, -- energy ring
+	{ id = "energy ring", chance = 892 }, -- energy ring
 	{ id = "silver amulet", chance = 1020 },
 	{ id = "wand of cosmic energy", chance = 636 },
 	{ id = "throwing star", chance = 9900, maxCount = 5 },
@@ -79,7 +78,7 @@ monster.loot = {
 	{ id = "crystal sword", chance = 5882 },
 	{ id = "strong mana potion", chance = 7692 },
 	{ id = "mana potion", chance = 11711 },
-	{ id = 761, chance = 10000, maxCount = 10 }, -- flash arrow
+	{ id = "flash arrow", chance = 10000, maxCount = 10 }, -- flash arrow
 }
 
 monster.attacks = {

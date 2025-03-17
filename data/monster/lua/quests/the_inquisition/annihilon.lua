@@ -1,5 +1,4 @@
--- Annihilon (Tibia Wiki: https://tibia.fandom.com/wiki/Annihilon)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Annihilon")
 local monster = {}
@@ -83,7 +82,7 @@ monster.loot = {
 	{ id = "violet gem", chance = 16666 },
 	{ id = "yellow gem", chance = 20000 },
 	{ id = "green gem", chance = 12500 },
-	{ id = 3039, chance = 20000 }, -- red gem
+	{ id = "red gem", chance = 20000 }, -- red gem
 	{ id = "blue gem", chance = 20000 },
 	{ id = 2381, chance = 20000 },
 	{ id = "guardian halberd", chance = 20000 },

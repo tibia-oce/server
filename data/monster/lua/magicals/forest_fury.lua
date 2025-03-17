@@ -1,5 +1,4 @@
--- Forest Fury (Tibia Wiki: https://tibia.fandom.com/wiki/Forest_Fury)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Forest Fury")
 local monster = {}

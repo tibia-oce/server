@@ -1,5 +1,4 @@
--- Dawn Scorpion (Tibia Wiki: https://tibia.fandom.com/wiki/Dawn_Scorpion)
--- Version: 10.55
+
 
 local mType = Game.createMonsterType("Dawn Scorpion")
 local monster = {}
@@ -62,7 +61,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 4 }, -- gold coin
+	{ id = "gold coin", chance = 100000, maxCount = 4 }, -- gold coin
 }
 
 monster.attacks = {

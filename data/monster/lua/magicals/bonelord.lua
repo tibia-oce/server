@@ -1,5 +1,4 @@
--- Bonelord (Tibia Wiki: https://tibia.fandom.com/wiki/Bonelord)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Bonelord")
 local monster = {}
@@ -79,7 +78,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 99400, maxCount = 48 },
-	{ id = 3059, chance = 4990 }, -- spellbook
+	{ id = "spellbook", chance = 4990 }, -- spellbook
 	{ id = "terra rod", chance = 510 },
 	{ id = "two handed sword", chance = 3950 },
 	{ id = "morning star", chance = 7020 },

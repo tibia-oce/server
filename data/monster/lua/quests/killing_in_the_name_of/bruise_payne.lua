@@ -1,5 +1,4 @@
--- Bruise Payne (Tibia Wiki: https://tibia.fandom.com/wiki/Bruise_Payne)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Bruise Payne")
 local monster = {}
@@ -69,11 +68,11 @@ monster.loot = {
 	{ id = 3051, chance = 100000 }, -- energy ring
 	{ id = 3031, chance = 100000, maxCount = 99 }, -- gold coin
 	{ id = 9662, chance = 100000 }, -- mutated bat ear
-	{ id = 3033, chance = 100000, maxCount = 5 }, -- small amethyst
-	{ id = 3736, chance = 100000 }, -- star herb
+	{ id = "small amethyst", chance = 100000, maxCount = 5 }, -- small amethyst
+	{ id = "star herb", chance = 100000 }, -- star herb
 	{ id = 3429, chance = 92000 }, -- black shield
 	{ id = 3027, chance = 85000, maxCount = 5 }, -- black pearl
-	{ id = 7386, chance = 25000 }, -- mercenary sword
+	{ id = "mercenary sword", chance = 25000 }, -- mercenary sword
 	{ id = 9103, chance = 16000 }, -- batwing hat
 }
 

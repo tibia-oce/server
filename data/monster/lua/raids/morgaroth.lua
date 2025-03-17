@@ -1,5 +1,4 @@
--- Morgaroth (Tibia Wiki: https://tibia.fandom.com/wiki/Morgaroth)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Morgaroth")
 local monster = {}
@@ -86,7 +85,7 @@ monster.loot = {
 	{ id = "green gem", chance = 50000 },
 	{ id = "great mana potion", chance = 45000 },
 	{ id = "small amethyst", chance = 36000, maxCount = 18 },
-	{ id = "devileye", chance = 36000 },
+	{ id = "the devileye", chance = 36000 },
 	{ id = "small emerald", chance = 27000, maxCount = 7 },
 	{ id = "small sapphire", chance = 27000, maxCount = 9 },
 	{ id = "red tome", chance = 27000 },
@@ -94,16 +93,16 @@ monster.loot = {
 	{ id = "talon", chance = 22000, maxCount = 7 },
 	{ id = "demon horn", chance = 22000, maxCount = 2 },
 	{ id = 6299, chance = 22000 }, -- death ring
-	{ id = 3098, chance = 22000 }, -- ring of healing
+	{ id = "ring of healing", chance = 22000 }, -- ring of healing
 	{ id = "chain bolter", chance = 22000 },
 	{ id = "dark lord's cape", chance = 22000 },
-	{ id = "ironworker", chance = 25000 },
+	{ id = "the ironworker", chance = 25000 },
 	{ id = "double axe", chance = 18000 },
 	{ id = "great spirit potion", chance = 18000 },
 	{ id = "magic plate armor", chance = 18000 },
 	{ id = "might ring", chance = 18000 },
 	{ id = "mind stone", chance = 18000 },
-	{ id = 3049, chance = 18000 }, -- stealth ring
+	{ id = "stealth ring", chance = 18000 }, -- stealth ring
 	{ id = "fireborn giant armor", chance = 18000 },
 	{ id = "royal crossbow", chance = 18000 },
 	{ id = "teddy bear", chance = 18000 },
@@ -114,11 +113,11 @@ monster.loot = {
 	{ id = "golden mug", chance = 13000 },
 	{ id = "Morgaroth's heart", chance = 13000 },
 	{ id = "obsidian truncheon", chance = 13000 },
-	{ id = "stomper", chance = 13000 },
+	{ id = "the stomper", chance = 13000 },
 	{ id = "blue gem", chance = 9000 },
 	{ id = "gold ring", chance = 9000 },
 	{ id = "demon shield", chance = 9000 },
-	{ id = 3051, chance = 9000 }, -- energy ring
+	{ id = "energy ring", chance = 9000 }, -- energy ring
 	{ id = "giant sword", chance = 9000 },
 	{ id = "golden legs", chance = 9000 },
 	{ id = "life crystal", chance = 9000 },

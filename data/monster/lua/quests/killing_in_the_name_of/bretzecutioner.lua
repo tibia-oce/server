@@ -1,5 +1,4 @@
--- Bretzecutioner (Tibia Wiki: https://tibia.fandom.com/wiki/Bretzecutioner)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Bretzecutioner")
 local monster = {}
@@ -69,7 +68,7 @@ monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 98 }, -- gold coin
 	{ id = 3577, chance = 100000 }, -- meat
 	{ id = 6499, chance = 64000 }, -- demonic essence
-	{ id = 7368, chance = 100000, maxCount = 10 }, -- assassin star
+	{ id = "assassin star", chance = 100000, maxCount = 10 }, -- assassin star
 	{ id = 3383, chance = 68000 }, -- dark armor
 	{ id = 3033, chance = 28000, maxCount = 5 }, -- small amethyst
 	{ id = 3029, chance = 40000, maxCount = 5 }, -- small sapphire
@@ -84,8 +83,8 @@ monster.loot = {
 	{ id = 281, chance = 48000 }, -- giant shimmering pearl (green)
 	{ id = 282, chance = 48000 }, -- giant shimmering pearl (brown)
 	{ id = 3554, chance = 4000 }, -- steel boots
-	{ id = 7427, chance = 24000 }, -- chaos mace
-	{ id = 7419, chance = 12000 }, -- dreaded cleaver
+	{ id = "chaos mace", chance = 24000 }, -- chaos mace
+	{ id = "dreaded cleaver", chance = 12000 }, -- dreaded cleaver
 	{ id = 3008, chance = 24000 }, -- crystal necklace
 	{ id = 3421, chance = 16000 }, -- dark shield
 	{ id = 6299, chance = 100000 }, -- death ring

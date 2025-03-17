@@ -1,5 +1,4 @@
--- Barbarian Headsplitter (Tibia Wiki: https://tibia.fandom.com/wiki/Barbarian_Headsplitter)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Barbarian Headsplitter")
 local monster = {}
@@ -72,7 +71,7 @@ monster.voices = {
 monster.loot = {
 	{ id = 2920, chance = 60300 }, -- torch
 	{ id = "gold coin", chance = 75600, maxCount = 30 },
-	{ id = 3052, chance = 230 }, -- life ring
+	{ id = "life ring", chance = 230 }, -- life ring
 	{ id = "knife", chance = 14890 },
 	{ id = "brass helmet", chance = 20140 },
 	{ id = "viking helmet", chance = 5020 },

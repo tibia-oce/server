@@ -1,5 +1,4 @@
--- Minotaur Archer (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Archer)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Minotaur Archer")
 local monster = {}

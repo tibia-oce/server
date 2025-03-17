@@ -1,5 +1,4 @@
--- Lisa (Tibia Wiki: https://tibia.fandom.com/wiki/Lisa)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Lisa")
 local monster = {}
@@ -88,7 +87,7 @@ monster.loot = {
 	{ id = "glooth axe", chance = 8000 },
 	{ id = "glooth blade", chance = 7000 },
 	{ id = "glooth cape", chance = 6000 },
-	{ id = 3039, chance = 2600 }, -- red gem
+	{ id = "red gem", chance = 2600 }, -- red gem
 	{ id = "yellow gem", chance = 2500 },
 	{ id = "lisa's doll", chance = 300 },
 }

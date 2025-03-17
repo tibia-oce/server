@@ -1,5 +1,4 @@
--- Nightstalker (Tibia Wiki: https://tibia.fandom.com/wiki/Nightstalker)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Nightstalker")
 local monster = {}

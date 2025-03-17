@@ -1,5 +1,4 @@
--- Sheep (Tibia Wiki: https://tibia.fandom.com/wiki/Sheep)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Sheep")
 local monster = {}

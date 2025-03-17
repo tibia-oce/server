@@ -1,5 +1,4 @@
--- Evil Sheep Lord (Tibia Wiki: https://tibia.fandom.com/wiki/Evil_Sheep_Lord)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Evil Sheep Lord")
 local monster = {}

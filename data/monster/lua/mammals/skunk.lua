@@ -1,5 +1,4 @@
--- Skunk (Tibia Wiki: https://tibia.fandom.com/wiki/Skunk)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Skunk")
 local monster = {}

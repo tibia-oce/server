@@ -1,5 +1,4 @@
--- Evil Mastermind (Tibia Wiki: https://tibia.fandom.com/wiki/Evil_Mastermind)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Evil Mastermind")
 local monster = {}
@@ -81,9 +80,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 9391, chance = 10000 }, -- fan club membership card
-	{ id = 3031, chance = 100000, maxCount = 95 }, -- gold coin
-	{ id = 3035, chance = 93000, maxCount = 3 }, -- platinum coin
+	{ id = "fan club membership card", chance = 10000 }, -- fan club membership card
+	{ id = "gold coin", chance = 100000, maxCount = 95 }, -- gold coin
+	{ id = "platinum coin", chance = 93000, maxCount = 3 }, -- platinum coin
 }
 
 monster.attacks = {

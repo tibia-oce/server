@@ -1,5 +1,4 @@
--- Realityquake (Tibia Wiki: https://tibia.fandom.com/wiki/Realityquake)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Realityquake")
 local monster = {}
@@ -79,15 +78,15 @@ monster.loot = {
 	{ id = 3030, chance = 8000, maxCount = 5 }, -- small ruby
 	{ id = 16120, chance = 8000, maxCount = 3 }, -- violet crystal shard
 	{ id = 23507, chance = 8000 }, -- crystallized anger
-	{ id = 23508, chance = 8000 }, -- energy vein
+	{ id = "energy vein", chance = 8000 }, -- energy vein
 	{ id = 3039, chance = 8000 }, -- red gem
 	{ id = 22721, chance = 100000 }, -- gold token
 	{ id = 23509, chance = 100000 }, -- mysterious remains
-	{ id = 23510, chance = 100000 }, -- odd organ
+	{ id = "odd organ", chance = 100000 }, -- odd organ
 	{ id = 281, chance = 4000 }, -- giant shimmering pearl (green)
 	{ id = 282, chance = 4000 }, -- giant shimmering pearl (brown)
 	{ id = 3073, chance = 8000 }, -- wand of cosmic energy
-	{ id = 23531, chance = 6000 }, -- ring of green plasma
+	{ id = "ring of green plasma", chance = 6000 }, -- ring of green plasma
 	{ id = 23533, chance = 6000 }, -- ring of red plasma
 }
 

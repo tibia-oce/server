@@ -1,5 +1,4 @@
--- Shaburak Prince (Tibia Wiki: https://tibia.fandom.com/wiki/Shaburak_Prince)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Shaburak Prince")
 local monster = {}
@@ -75,7 +74,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "gold coin", chance = 50000, maxCount = 78 },
 	{ id = "platinum coin", chance = 33333, maxCount = 4 },
-	{ id = 3049, chance = 5000 }, -- stealth ring
+	{ id = "stealth ring", chance = 5000 }, -- stealth ring
 	{ id = "wand of inferno", chance = 892 },
 	{ id = "steel boots", chance = 89 },
 	{ id = "brown mushroom", chance = 4545 },

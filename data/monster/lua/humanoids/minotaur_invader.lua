@@ -1,5 +1,4 @@
--- Minotaur Invader (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Invader)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Minotaur Invader")
 local monster = {}
@@ -65,11 +64,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 59640, maxCount = 160 }, -- gold coin
+	{ id = "gold coin", chance = 59640, maxCount = 160 }, -- gold coin
 	{ id = 11472, chance = 8330, maxCount = 2 }, -- minotaur horn
-	{ id = 11482, chance = 5040 }, -- piece of warrior armor
-	{ id = 5878, chance = 1000 }, -- minotaur leather
-	{ id = 7401, chance = 90 }, -- minotaur trophy
+	{ id = "piece of warrior armor", chance = 5040 }, -- piece of warrior armor
+	{ id = "minotaur leather", chance = 1000 }, -- minotaur leather
+	{ id = "minotaur trophy", chance = 90 }, -- minotaur trophy
 }
 
 monster.attacks = {

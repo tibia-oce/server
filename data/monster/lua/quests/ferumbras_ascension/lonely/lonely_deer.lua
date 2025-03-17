@@ -1,5 +1,4 @@
--- Lonely Deer (Tibia Wiki: https://tibia.fandom.com/wiki/Lonely_Deer)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Lonely Deer")
 local monster = {}
@@ -65,9 +64,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 10297, chance = 850 }, -- antlers
+	{ id = "antlers", chance = 850 }, -- antlers
 	{ id = 3577, chance = 79550, maxCount = 4 }, -- meat
-	{ id = 3582, chance = 51330, maxCount = 2 }, -- ham
+	{ id = "ham", chance = 51330, maxCount = 2 }, -- ham
 }
 
 monster.attacks = {

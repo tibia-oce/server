@@ -1,5 +1,4 @@
--- Elf Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Elf_Scout)
--- Version: 6.2
+
 
 local mType = Game.createMonsterType("Elf Scout")
 local monster = {}
@@ -75,7 +74,7 @@ monster.loot = {
 	{ id = "poison arrow", chance = 15400, maxCount = 4 },
 	{ id = "sandals", chance = 1180 },
 	{ id = "grapes", chance = 17750 },
-	{ id = 5921, chance = 1130 }, -- heaven blossom
+	{ id = "heaven blossom", chance = 1130 }, -- heaven blossom
 	{ id = "elvish bow", chance = 140 },
 	{ id = "elvish talisman", chance = 5200 },
 	{ id = "elven scouting glass", chance = 9750 },

@@ -1,5 +1,4 @@
--- Renegade Knight (Tibia Wiki: https://tibia.fandom.com/wiki/Renegade_Knight)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("Renegade Knight")
 local monster = {}
@@ -74,12 +73,12 @@ monster.loot = {
 	{ id = 3447, chance = 90450, maxCount = 10 }, -- arrow
 	{ id = 3031, chance = 75410, maxCount = 30 }, -- gold coin
 	{ id = 3592, chance = 1210 }, -- grapes
-	{ id = 239, chance = 1210 }, -- great health potion
+	{ id = "great health potion", chance = 1210 }, -- great health potion
 	{ id = 3577, chance = 1210, maxCount = 2 }, -- meat
 	{ id = 7364, chance = 1210, maxCount = 4 }, -- sniper arrow
 	{ id = 3381, chance = 210 }, -- crown armor
-	{ id = 3385, chance = 310 }, -- crown helmet
-	{ id = 3419, chance = 210 }, -- crown shield
+	{ id = "crown helmet", chance = 310 }, -- crown helmet
+	{ id = "crown shield", chance = 210 }, -- crown shield
 	{ id = 3382, chance = 110 }, -- crown legs
 	{ id = 3280, chance = 310 }, -- fire sword
 	{ id = 3269, chance = 1610 }, -- halberd

@@ -1,5 +1,4 @@
--- Diblis the Fair (Tibia Wiki: https://tibia.fandom.com/wiki/Diblis_the_Fair)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Diblis the Fair")
 local monster = {}
@@ -87,7 +86,7 @@ monster.loot = {
 	{ id = "vampire shield", chance = 22000 },
 	{ id = "strong health potion", chance = 18000 },
 	{ id = "platinum coin", chance = 12000, maxCount = 5 },
-	{ id = 3098, chance = 12000 }, -- ring of healing
+	{ id = "ring of healing", chance = 12000 }, -- ring of healing
 	{ id = 3114, chance = 12000 }, -- skull
 	{ id = "spellbook of lost souls", chance = 2000 },
 }

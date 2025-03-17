@@ -1,5 +1,4 @@
--- Lost Soul (Tibia Wiki: https://tibia.fandom.com/wiki/Lost_Soul)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Lost Soul")
 local monster = {}
@@ -71,7 +70,7 @@ monster.loot = {
 	{ id = "black pearl", chance = 12000, maxCount = 3 },
 	{ id = "gold coin", chance = 100000, maxCount = 198 },
 	{ id = "platinum coin", chance = 100000, maxCount = 7 },
-	{ id = 3039, chance = 15000 }, -- red gem
+	{ id = "red gem", chance = 15000 }, -- red gem
 	{ id = "stone skin amulet", chance = 2780 },
 	{ id = "blank rune", chance = 35250, maxCount = 3 },
 	{ id = "skull staff", chance = 850 },

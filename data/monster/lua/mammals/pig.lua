@@ -1,5 +1,4 @@
--- Pig (Tibia Wiki: https://tibia.fandom.com/wiki/Pig)
--- Version: 6.0
+
 
 local mType = Game.createMonsterType("Pig")
 local monster = {}

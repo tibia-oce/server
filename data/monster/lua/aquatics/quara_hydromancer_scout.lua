@@ -1,5 +1,4 @@
--- Quara Hydromancer Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Hydromancer_Scout)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Quara Hydromancer Scout")
 local monster = {}
@@ -71,7 +70,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 40000, maxCount = 90 },
 	{ id = "gold coin", chance = 49000, maxCount = 50 },
-	{ id = 3578, chance = 18930, maxCount = 3 }, -- fish
+	{ id = "fish", chance = 18930, maxCount = 3 }, -- fish
 	{ id = "quara eye", chance = 12720 },
 	{ id = "shrimp", chance = 9980, maxCount = 4 },
 	{ id = "small emerald", chance = 6000, maxCount = 2 },
@@ -79,7 +78,7 @@ monster.loot = {
 	{ id = "black pearl", chance = 2650 },
 	{ id = "fish fin", chance = 2090 },
 	{ id = "obsidian lance", chance = 1530 },
-	{ id = 3098, chance = 940 }, -- ring of healing
+	{ id = "ring of healing", chance = 940 }, -- ring of healing
 	{ id = "wand of cosmic energy", chance = 910 },
 	{ id = "knight armor", chance = 520 },
 }

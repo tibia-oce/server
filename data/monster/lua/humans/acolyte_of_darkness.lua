@@ -1,5 +1,4 @@
--- Acolyte of Darkness (Tibia Wiki: https://tibia.fandom.com/wiki/Acolyte_of_Darkness)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Acolyte of Darkness")
 local monster = {}

@@ -1,5 +1,4 @@
--- Warlock (Tibia Wiki: https://tibia.fandom.com/wiki/Warlock)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Warlock")
 local monster = {}
@@ -81,15 +80,15 @@ monster.loot = {
 	{ id = "small sapphire", chance = 1190 },
 	{ id = "gold coin", chance = 29340, maxCount = 80 },
 	{ id = "talon", chance = 1150 },
-	{ id = 3051, chance = 2200 }, -- energy ring
+	{ id = "energy ring", chance = 2200 }, -- energy ring
 	{ id = "mind stone", chance = 2000 },
 	{ id = "stone skin amulet", chance = 330 },
 	{ id = "poison dagger", chance = 7600 },
 	{ id = "skull staff", chance = 6370 },
 	{ id = "golden armor", chance = 240 },
-	{ id = 3509, chance = 1000 }, -- inkwell
+	{ id = "inkwell", chance = 1000 }, -- inkwell
 	{ id = "blue robe", chance = 1410 },
-	{ id = 2679, chance = 19000, maxCount = 4 } -- "cherry",
+	{ id = 2679, chance = 19000, maxCount = 4}, -- "cherry"
 	{ id = "bread", chance = 9000 },
 	{ id = "dark mushroom", chance = 3000 },
 	{ id = "assassin star", chance = 3500, maxCount = 4 },

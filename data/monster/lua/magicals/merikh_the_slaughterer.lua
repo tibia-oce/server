@@ -1,5 +1,4 @@
--- Merikh the Slaughterer (Tibia Wiki: https://tibia.fandom.com/wiki/Merikh_the_Slaughterer)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Merikh the Slaughterer")
 local monster = {}

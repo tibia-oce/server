@@ -1,5 +1,4 @@
--- Destabilized Ferumbras (Tibia Wiki: https://tibia.fandom.com/wiki/Destabilized_Ferumbras)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Destabilized Ferumbras")
 local monster = {}
@@ -94,7 +93,7 @@ monster.defenses = {
 	--	mitigation = ???,
 	{ name = "combat", interval = 2000, chance = 23, type = COMBAT_HEALING, minDamage = 600, maxDamage = 2490, effect = CONST_ME_MAGIC_GREEN, target = false },
 	{ name = "combat", interval = 2000, chance = 3, type = COMBAT_HEALING, minDamage = 20000, maxDamage = 35000, effect = CONST_ME_MAGIC_GREEN, target = false },
-	{ name = "speed", interval = 2000, chance = 14, effect = CONST_ME_MAGIC_BLUE, speed = 0},
+	{ name = "speed", speed = 200, interval = 2000, chance = 14, effect = CONST_ME_MAGIC_BLUE},
 }
 
 monster.elements = {

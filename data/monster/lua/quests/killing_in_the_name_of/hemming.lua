@@ -1,5 +1,4 @@
--- Hemming (Tibia Wiki: https://tibia.fandom.com/wiki/Hemming)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Hemming")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = 10317, chance = 100000 }, -- werewolf fur
 	{ id = 5897, chance = 100000 }, -- wolf paw
 	{ id = 7643, chance = 98000 }, -- ultimate health potion
-	{ id = 3725, chance = 94000, maxCount = 5 }, -- brown mushroom
+	{ id = "brown mushroom", chance = 94000, maxCount = 5 }, -- brown mushroom
 	{ id = 3035, chance = 94000, maxCount = 10 }, -- platinum coin
 	{ id = 7439, chance = 82000 }, -- berserk potion
 	{ id = 3081, chance = 70000 }, -- stone skin amulet
@@ -86,9 +85,9 @@ monster.loot = {
 	{ id = 5479, chance = 31000 }, -- cat's paw
 	{ id = 3741, chance = 21000 }, -- troll green
 	{ id = 10389, chance = 15000 }, -- sai
-	{ id = 7419, chance = 9800 }, -- dreaded cleaver
+	{ id = "dreaded cleaver", chance = 9800 }, -- dreaded cleaver
 	{ id = 3053, chance = 6000 }, -- time ring
-	{ id = 7428, chance = 2000 }, -- bonebreaker
+	{ id = "bonebreaker", chance = 2000 }, -- bonebreaker
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Slick Water Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Slick_Water_Elemental)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Slick Water Elemental")
 local monster = {}

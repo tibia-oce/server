@@ -1,5 +1,4 @@
--- Kollos (Tibia Wiki: https://tibia.fandom.com/wiki/Kollos)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Kollos")
 local monster = {}
@@ -69,7 +68,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 49000, maxCount = 100 },
 	{ id = "gold coin", chance = 50000, maxCount = 97 },
 	{ id = "platinum coin", chance = 66000, maxCount = 3 },
-	{ id = 3098, chance = 3270 }, -- ring of healing
+	{ id = "ring of healing", chance = 3270 }, -- ring of healing
 	{ id = "steel boots", chance = 130 },
 	{ id = "great mana potion", chance = 8950, maxCount = 4 },
 	{ id = 281, chance = 2600 }, -- giant shimmering pearl (green)

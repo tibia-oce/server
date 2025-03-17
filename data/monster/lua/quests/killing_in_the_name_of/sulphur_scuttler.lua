@@ -1,5 +1,4 @@
--- Sulphur Scuttler (Tibia Wiki: https://tibia.fandom.com/wiki/Sulphur_Scuttler)
--- Version: 9.20
+
 
 local mType = Game.createMonsterType("Sulphur Scuttler")
 local monster = {}
@@ -68,9 +67,9 @@ monster.loot = {
 	{ id = 3035, chance = 98330, maxCount = 10 }, -- platinum coin
 	{ id = 9640, chance = 50000 }, -- poisonous slime
 	{ id = 10305, chance = 75000 }, -- lump of earth
-	{ id = 10315, chance = 96670 }, -- sulphurous stone
-	{ id = 11703, chance = 100000 }, -- brimstone shell
-	{ id = 237, chance = 71670 }, -- strong mana potion
+	{ id = "sulphurous stone", chance = 96670 }, -- sulphurous stone
+	{ id = "brimstone shell", chance = 100000 }, -- brimstone shell
+	{ id = "strong mana potion", chance = 71670 }, -- strong mana potion
 	{ id = 236, chance = 75000 }, -- strong health potion
 	{ id = 11702, chance = 100000 }, -- brimstone fangs
 	{ id = 3032, chance = 65000, maxCount = 4 }, -- small emerald

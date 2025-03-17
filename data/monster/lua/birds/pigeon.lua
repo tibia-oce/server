@@ -1,5 +1,4 @@
--- Pigeon (Tibia Wiki: https://tibia.fandom.com/wiki/Pigeon)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Pigeon")
 local monster = {}

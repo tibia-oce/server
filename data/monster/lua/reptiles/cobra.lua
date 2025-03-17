@@ -1,5 +1,4 @@
--- Cobra (Tibia Wiki: https://tibia.fandom.com/wiki/Cobra)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Cobra")
 local monster = {}

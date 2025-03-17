@@ -1,5 +1,4 @@
--- Dread Intruder (Tibia Wiki: https://tibia.fandom.com/wiki/Dread_Intruder)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Dread Intruder")
 local monster = {}
@@ -70,16 +69,16 @@ monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
 	{ id = 3031, chance = 100000, maxCount = 89 }, -- gold coin
 	{ id = 3035, chance = 100000, maxCount = 8 }, -- platinum coin
-	{ id = 23545, chance = 15000 }, -- energy drink
+	{ id = "energy drink", chance = 15000 }, -- energy drink
 	{ id = 23535, chance = 15000 }, -- energy bar
 	{ id = 23519, chance = 15000 }, -- frozen lightning
 	{ id = 23516, chance = 8000 }, -- instable proto matter
 	{ id = 7642, chance = 14000 }, -- great spirit potion
 	{ id = 7643, chance = 13500 }, -- ultimate health potion
 	{ id = 238, chance = 12700 }, -- great mana potion
-	{ id = 23523, chance = 11800 }, -- energy ball
+	{ id = "energy ball", chance = 11800 }, -- energy ball
 	{ id = 23510, chance = 9600 }, -- odd organ
-	{ id = 16124, chance = 9500 }, -- blue crystal splinter
+	{ id = "blue crystal splinter", chance = 9500 }, -- blue crystal splinter
 	{ id = 16125, chance = 6200 }, -- cyan crystal fragment
 	{ id = 3030, chance = 5400, maxCount = 2 }, -- small ruby
 	{ id = 3029, chance = 5400, maxCount = 2 }, -- small sapphire

@@ -1,5 +1,4 @@
--- Brown Horse (Tibia Wiki: https://tibia.fandom.com/wiki/Brown_Horse)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Brown Horse")
 local monster = {}

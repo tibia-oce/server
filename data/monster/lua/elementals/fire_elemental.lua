@@ -1,5 +1,4 @@
--- Fire Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Fire_Elemental)
--- Version: 6.4
+
 
 local mType = Game.createMonsterType("Fire Elemental")
 local monster = {}

@@ -1,5 +1,4 @@
--- Achad (Tibia Wiki: https://tibia.fandom.com/wiki/Achad)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Achad")
 local monster = {}

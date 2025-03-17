@@ -1,5 +1,4 @@
--- Damaged Worker Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Damaged_Worker_Golem)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Damaged Worker Golem")
 local monster = {}
@@ -72,7 +71,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 68810, maxCount = 88 },
-	{ id = 3091, chance = 570 }, -- sword ring
+	{ id = "sword ring", chance = 570 }, -- sword ring
 	{ id = "iron ore", chance = 400 },
 	{ id = "nail", chance = 1460 },
 	-- { id = "heavily rusted armor", chance = 790 },

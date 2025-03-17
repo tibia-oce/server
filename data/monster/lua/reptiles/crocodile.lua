@@ -1,5 +1,4 @@
--- Crocodile (Tibia Wiki: https://tibia.fandom.com/wiki/Crocodile)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Crocodile")
 local monster = {}

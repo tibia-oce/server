@@ -1,5 +1,4 @@
--- Paiz the Pauperizer (Tibia Wiki: https://tibia.fandom.com/wiki/Paiz_the_Pauperizer)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Paiz the Pauperizer")
 local monster = {}
@@ -69,14 +68,14 @@ monster.voices = {
 monster.loot = {
 	{ id = 11660, chance = 100000 }, -- broken draken mail
 	{ id = 11661, chance = 100000 }, -- broken slicer
-	{ id = 11658, chance = 100000 }, -- draken sulphur
+	{ id = "draken sulphur", chance = 100000 }, -- draken sulphur
 	{ id = 11659, chance = 100000 }, -- draken wristbands
 	{ id = 3031, chance = 100000, maxCount = 99 }, -- gold coin
 	{ id = 5881, chance = 100000 }, -- lizard scale
 	{ id = 3577, chance = 100000, maxCount = 5 }, -- meat
 	{ id = 3035, chance = 100000, maxCount = 10 }, -- platinum coin
 	{ id = 5904, chance = 43000 }, -- magic sulphur
-	{ id = 239, chance = 36960, maxCount = 3 }, -- great health potion
+	{ id = "great health potion", chance = 36960, maxCount = 3 }, -- great health potion
 	{ id = 3037, chance = 36960 }, -- yellow gem
 	{ id = 7642, chance = 32610, maxCount = 3 }, -- great spirit potion
 	{ id = 238, chance = 30430, maxCount = 3 }, -- great mana potion
@@ -85,7 +84,7 @@ monster.loot = {
 	{ id = 3038, chance = 21740 }, -- green gem
 	{ id = 10390, chance = 19570 }, -- zaoan sword
 	{ id = 10384, chance = 15220 }, -- zaoan armor
-	{ id = 3386, chance = 13040 }, -- dragon scale mail
+	{ id = "dragon scale mail", chance = 13040 }, -- dragon scale mail
 	{ id = 8052, chance = 10870 }, -- swamplair armor
 	{ id = 11657, chance = 10870 }, -- twiceslicer
 	{ id = 3041, chance = 8700 }, -- blue gem

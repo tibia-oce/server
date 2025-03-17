@@ -1,5 +1,4 @@
--- Rage of Mazoran (Tibia Wiki: https://tibia.fandom.com/wiki/Rage_of_Mazoran)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Rage of Mazoran")
 local monster = {}

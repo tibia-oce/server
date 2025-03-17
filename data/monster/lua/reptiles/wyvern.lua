@@ -1,5 +1,4 @@
--- Wyvern (Tibia Wiki: https://tibia.fandom.com/wiki/Wyvern)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Wyvern")
 local monster = {}

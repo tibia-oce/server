@@ -1,5 +1,4 @@
--- Robby the Reckless (Tibia Wiki: https://tibia.fandom.com/wiki/Robby_the_Reckless)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Robby the Reckless")
 local monster = {}
@@ -74,8 +73,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3035, chance = 100000, maxCount = 85 }, -- platinum coin
-	{ id = 13429, chance = 100000 }, -- bag with stolen gold
+	{ id = "platinum coin", chance = 100000, maxCount = 85 }, -- platinum coin
+	{ id = "bag with stolen gold", chance = 100000 }, -- bag with stolen gold
 }
 
 monster.attacks = {

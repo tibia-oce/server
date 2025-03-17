@@ -1,5 +1,4 @@
--- Draptor (Tibia Wiki: https://tibia.fandom.com/wiki/Draptor)
--- Version: 8.70
+
 
 local mType = Game.createMonsterType("Draptor")
 local monster = {}

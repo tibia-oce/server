@@ -1,5 +1,4 @@
--- Necromancer Servant (Tibia Wiki: https://tibia.fandom.com/wiki/Necromancer_Servant)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Necromancer Servant")
 local monster = {}

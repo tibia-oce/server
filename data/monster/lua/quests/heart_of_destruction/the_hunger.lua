@@ -1,5 +1,4 @@
--- The Hunger (Tibia Wiki: https://tibia.fandom.com/wiki/The_Hunger)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("The Hunger")
 local monster = {}

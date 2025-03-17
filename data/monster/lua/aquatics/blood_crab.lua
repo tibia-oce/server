@@ -1,5 +1,4 @@
--- Blood Crab (Tibia Wiki: https://tibia.fandom.com/wiki/Blood_Crab)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Blood Crab")
 local monster = {}
@@ -64,7 +63,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 85750, maxCount = 20 },
-	{ id = 3578, chance = 14300 }, -- fish
+	{ id = "fish", chance = 14300 }, -- fish
 	{ id = "bloody pincers", chance = 6190 },
 	{ id = "chain armor", chance = 5240 },
 	{ id = "brass legs", chance = 2120 },

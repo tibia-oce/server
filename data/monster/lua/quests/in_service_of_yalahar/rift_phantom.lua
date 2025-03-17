@@ -1,5 +1,4 @@
--- Rift Phantom (Tibia Wiki: https://tibia.fandom.com/wiki/Rift_Phantom)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Rift Phantom")
 local monster = {}

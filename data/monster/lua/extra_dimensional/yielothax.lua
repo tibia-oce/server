@@ -1,5 +1,4 @@
--- Yielothax (Tibia Wiki: https://tibia.fandom.com/wiki/Yielothax)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Yielothax")
 local monster = {}

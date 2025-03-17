@@ -1,5 +1,4 @@
--- Zavarash (Tibia Wiki: https://tibia.fandom.com/wiki/Zavarash)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Zavarash")
 local monster = {}
@@ -91,9 +90,9 @@ monster.loot = {
 	{ id = 3315, chance = 15030 }, -- guardian halberd
 	{ id = 3041, chance = 15030 }, -- blue gem
 	{ id = 9058, chance = 15030 }, -- gold ingot
-	{ id = 7428, chance = 15030 }, -- bonebreaker
-	{ id = 3340, chance = 12940 }, -- heavy mace
-	{ id = 3419, chance = 11540 }, -- crown shield
+	{ id = "bonebreaker", chance = 15030 }, -- bonebreaker
+	{ id = "heavy mace", chance = 12940 }, -- heavy mace
+	{ id = "crown shield", chance = 11540 }, -- crown shield
 	{ id = 20276, chance = 10000 }, -- dream warden mask
 	{ id = 8063, chance = 9620 }, -- paladin armor
 	{ id = 7387, chance = 8390 }, -- diamond sceptre

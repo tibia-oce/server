@@ -1,5 +1,4 @@
--- Glooth Bandit (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Bandit)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Glooth Bandit")
 local monster = {}
@@ -72,11 +71,11 @@ monster.loot = {
 	{ id = 238, chance = 7142 }, -- great mana potion
 	{ id = 21203, chance = 5555 }, -- glooth bag
 	{ id = 9057, chance = 5555, maxCount = 2 }, -- small topaz
-	{ id = 7642, chance = 5000 }, -- great spirit potion
+	{ id = "great spirit potion", chance = 5000 }, -- great spirit potion
 	{ id = 239, chance = 4545 }, -- great health potion
 	{ id = 21143, chance = 4000 }, -- glooth sandwich
 	{ id = 21814, chance = 3030 }, -- glooth capsule
-	{ id = 21179, chance = 2500 }, -- glooth blade
+	{ id = "glooth blade", chance = 2500 }, -- glooth blade
 	{ id = 21178, chance = 2500 }, -- glooth club
 	{ id = 21165, chance = 2000 }, -- rubber cap
 	{ id = 3032, chance = 1492, maxCount = 2 }, -- small emerald
@@ -88,7 +87,7 @@ monster.loot = {
 	{ id = 3038, chance = 1000 }, -- green gem
 	{ id = 21180, chance = 1000 }, -- glooth axe
 	{ id = 3342, chance = 1000 }, -- war axe
-	{ id = 811, chance = 1000 }, -- terra mantle
+	{ id = "terra mantle", chance = 1000 }, -- terra mantle
 	{ id = 3344, chance = 1000 }, -- beastslayer axe
 	{ id = 21183, chance = 500 }, -- glooth amulet
 	{ id = 813, chance = 500 }, -- terra boots

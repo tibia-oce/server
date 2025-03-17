@@ -1,5 +1,4 @@
--- Electric Sparks (Tibia Wiki: https://tibia.fandom.com/wiki/Electric_Sparks)
--- Version: 7.6
+
 
 local mType = Game.createMonsterType("Electric Sparks")
 local monster = {}

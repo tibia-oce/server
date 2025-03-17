@@ -1,5 +1,4 @@
--- Hot Dog (Tibia Wiki: https://tibia.fandom.com/wiki/Hot_Dog)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Hot Dog")
 local monster = {}

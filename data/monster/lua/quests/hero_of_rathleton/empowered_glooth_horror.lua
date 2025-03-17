@@ -1,5 +1,4 @@
--- Empowered Glooth Horror (Tibia Wiki: https://tibia.fandom.com/wiki/Empowered_Glooth_Horror)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Empowered Glooth Horror")
 local monster = {}
@@ -70,7 +69,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 21905, chance = 10000 }, -- glooth glider hinge
+	{ id = "glooth glider hinge", chance = 10000 }, -- glooth glider hinge
 }
 
 monster.attacks = {

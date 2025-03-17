@@ -1,5 +1,4 @@
--- Energy Pulse (Tibia Wiki: https://tibia.fandom.com/wiki/Energy_Pulse)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Energy Pulse")
 local monster = {}

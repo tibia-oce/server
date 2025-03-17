@@ -1,5 +1,4 @@
--- Dragon Lord Hatchling (Tibia Wiki: https://tibia.fandom.com/wiki/Dragon_Lord_Hatchling)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Dragon Lord Hatchling")
 local monster = {}

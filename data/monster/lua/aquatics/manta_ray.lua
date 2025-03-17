@@ -1,5 +1,4 @@
--- Manta Ray (Tibia Wiki: https://tibia.fandom.com/wiki/Manta_Ray)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Manta Ray")
 local monster = {}

@@ -1,5 +1,4 @@
--- Ferumbras (Tibia Wiki: https://tibia.fandom.com/wiki/Ferumbras)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Ferumbras")
 local monster = {}
@@ -86,10 +85,10 @@ monster.loot = {
 	{ id = 3031, chance = 98000, maxCount = 184 }, -- gold coin
 	{ id = 9058, chance = 75000, maxCount = 2 }, -- gold ingot
 	{ id = 3422, chance = 26000, unique = true }, -- great shield
-	{ id = 8075, chance = 26000 }, -- spellbook of lost souls
+	{ id = "spellbook of lost souls", chance = 26000 }, -- spellbook of lost souls
 	{ id = 3360, chance = 24000 }, -- golden armor
 	{ id = 3364, chance = 22000 }, -- golden legs
-	{ id = 8074, chance = 22000 }, -- spellbook of mind control
+	{ id = "spellbook of mind control", chance = 22000 }, -- spellbook of mind control
 	{ id = 8040, chance = 22000 }, -- velvet mantle
 	{ id = 3420, chance = 20000 }, -- demon shield
 	{ id = 8057, chance = 20000 }, -- divine plate
@@ -116,7 +115,7 @@ monster.loot = {
 	{ id = 8041, chance = 12000 }, -- greenwood coat
 	{ id = 3029, chance = 12000, maxCount = 98 }, -- small sapphire
 	{ id = 3026, chance = 12000, maxCount = 88 }, -- white pearl
-	{ id = 7407, chance = 10000 }, -- haunted blade
+	{ id = "haunted blade", chance = 10000 }, -- haunted blade
 	{ id = 8096, chance = 10000 }, -- hellforged axe
 	{ id = 7411, chance = 10000 }, -- ornamented axe
 	{ id = 3033, chance = 10000, maxCount = 54 }, -- small amethyst

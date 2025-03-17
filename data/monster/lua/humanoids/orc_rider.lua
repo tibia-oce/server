@@ -1,5 +1,4 @@
--- Orc Rider (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Rider)
--- Version: 7.0
+
 
 local mType = Game.createMonsterType("Orc Rider")
 local monster = {}
@@ -67,7 +66,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 980 }, -- torch
-	{ id = 3012, chance = 10210 }, -- wolf tooth chain
+	{ id = "wolf tooth chain", chance = 10210 }, -- wolf tooth chain
 	{ id = "gold coin", chance = 46000, maxCount = 81 },
 	{ id = "obsidian lance", chance = 1100 },
 	{ id = "orcish axe", chance = 6880 },

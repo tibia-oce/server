@@ -1,5 +1,4 @@
--- Humorless Fungus (Tibia Wiki: https://tibia.fandom.com/wiki/Humorless_Fungus)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Humorless Fungus")
 local monster = {}

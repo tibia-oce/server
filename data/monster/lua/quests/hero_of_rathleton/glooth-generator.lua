@@ -1,5 +1,4 @@
--- Glooth-Generator (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth-Generator)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Glooth-Generator")
 local monster = {}

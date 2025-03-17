@@ -1,5 +1,4 @@
--- Pirate Ghost (Tibia Wiki: https://tibia.fandom.com/wiki/Pirate_Ghost)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Pirate Ghost")
 local monster = {}
@@ -68,9 +67,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2817, chance = 910 }, -- blank parchment
+	{ id = "blank parchment", chance = 910 }, -- blank parchment
 	{ id = "gold coin", chance = 48000, maxCount = 67 },
-	{ id = 3049, chance = 650 }, -- stealth ring
+	{ id = "stealth ring", chance = 650 }, -- stealth ring
 	{ id = "spike sword", chance = 130 },
 	{ id = "red robe", chance = 130 },
 	{ id = "tattered piece of robe", chance = 4300 },

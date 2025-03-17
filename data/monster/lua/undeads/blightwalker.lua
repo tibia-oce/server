@@ -1,5 +1,4 @@
--- Blightwalker (Tibia Wiki: https://tibia.fandom.com/wiki/Blightwalker)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Blightwalker")
 local monster = {}

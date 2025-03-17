@@ -1,5 +1,4 @@
--- Deepling Warrior (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Warrior)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Deepling Warrior")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "great health potion", chance = 10030 },
 	{ id = "vortex bolt", chance = 3431, maxCount = 5 },
 	{ id = "small emerald", chance = 3104 },
-	{ id = 3052, chance = 3001 }, -- life ring
+	{ id = "life ring", chance = 3001 }, -- life ring
 	{ id = "heavy trident", chance = 999 },
 	{ id = "fish fin", chance = 870 },
 	{ id = "warrior's shield", chance = 610 },

@@ -1,5 +1,4 @@
--- Lost Thrower (Tibia Wiki: https://tibia.fandom.com/wiki/Lost_Thrower)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Lost Thrower")
 local monster = {}
@@ -73,7 +72,7 @@ monster.loot = {
 	{ id = "iron ore", chance = 9470 },
 	{ id = "great mana potion", chance = 13470 },
 	{ id = "great health potion", chance = 14730 },
-	{ id = 12600, chance = 12180 }, -- coal
+	{ id = "coal", chance = 12180 }, -- coal
 	{ id = "buckle", chance = 850 },
 	{ id = "broken throwing axe", chance = 1390 },
 	{ id = "helmet of the lost", chance = 13560 },

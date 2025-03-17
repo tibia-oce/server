@@ -1,5 +1,4 @@
--- Witch (Tibia Wiki: https://tibia.fandom.com/wiki/Witch)
--- Version: 6.0
+
 
 local mType = Game.createMonsterType("Witch")
 local monster = {}
@@ -66,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3012, chance = 10120 }, -- wolf tooth chain
+	{ id = "wolf tooth chain", chance = 10120 }, -- wolf tooth chain
 	{ id = "gold coin", chance = 64000, maxCount = 40 },
 	{ id = "necrotic rod", chance = 1140 },
 	{ id = "garlic necklace", chance = 1000 },

@@ -1,5 +1,4 @@
--- Blistering Fire Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Blistering_Fire_Elemental)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Blistering Fire Elemental")
 local monster = {}

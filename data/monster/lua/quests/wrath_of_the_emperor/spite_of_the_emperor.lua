@@ -1,5 +1,4 @@
--- Spite of the Emperor (Tibia Wiki: https://tibia.fandom.com/wiki/Spite_of_the_Emperor)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("Spite of the Emperor")
 local monster = {}

@@ -1,5 +1,4 @@
--- Werebadger (Tibia Wiki: https://tibia.fandom.com/wiki/Werebadger)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("Werebadger")
 local monster = {}
@@ -71,12 +70,12 @@ monster.loot = {
 	{ id = 3031, chance = 97000, maxCount = 242 }, -- gold coin
 	{ id = 3035, chance = 18200, maxCount = 5 }, -- platinum coin
 	{ id = 8017, chance = 2000 }, -- beetroot
-	{ id = 3725, chance = 2000 }, -- brown mushroom
+	{ id = "brown mushroom", chance = 2000 }, -- brown mushroom
 	{ id = 268, chance = 2210 }, -- mana potion
 	{ id = 237, chance = 1200 }, -- strong mana potion
 	{ id = 3741, chance = 1900 }, -- troll green
 	{ id = 22051, chance = 950 }, -- werebadger claws
-	{ id = 22055, chance = 780 }, -- werebadger skull
+	{ id = "werebadger skull", chance = 780 }, -- werebadger skull
 	{ id = 22086, chance = 200 }, -- badger boots
 	{ id = 3055, chance = 160 }, -- platinum amulet
 	{ id = 3098, chance = 430 }, -- ring of healing
@@ -84,7 +83,7 @@ monster.loot = {
 	{ id = 8094, chance = 200 }, -- wand of voodoo
 	{ id = 22083, chance = 150 }, -- moonlight crystals
 	{ id = 22060, chance = 200 }, -- werewolf amulet
-	{ id = 22101, chance = 100 }, -- werebadger trophy
+	{ id = "werebadger trophy", chance = 100 }, -- werebadger trophy
 }
 
 monster.attacks = {

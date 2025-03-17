@@ -1,5 +1,4 @@
--- Guzzlemaw (Tibia Wiki: https://tibia.fandom.com/wiki/Guzzlemaw)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Guzzlemaw")
 local monster = {}
@@ -75,7 +74,7 @@ monster.loot = {
 	{ id = 3115, chance = 9200 }, -- bone
 	{ id = 3116, chance = 4500 }, -- big bone
 	{ id = "two handed sword", chance = 2700 },
-	{ id = 3578, chance = 7000, maxCount = 3 }, -- fish
+	{ id = "fish", chance = 7000, maxCount = 3 }, -- fish
 	{ id = "ham", chance = 10000 },
 	{ id = "iron ore", chance = 3000 },
 	{ id = "fish fin", chance = 5000 },
@@ -90,7 +89,7 @@ monster.loot = {
 	{ id = "violet crystal shard", chance = 3000 },
 	{ id = "brown crystal splinter", chance = 12000, maxCount = 2 },
 	{ id = "red crystal fragment", chance = 7600 },
-	{ id = 16279, chance = 12000 }, -- crystal rubbish
+	{ id = "crystal rubbish", chance = 12000 }, -- crystal rubbish
 	{ id = "cluster of solace", chance = 8920 },
 	{ id = "frazzle tongue", chance = 15000 },
 	{ id = "frazzle skin", chance = 14000 },

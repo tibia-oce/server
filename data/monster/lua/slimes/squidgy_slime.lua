@@ -1,5 +1,4 @@
--- Squidgy Slime (Tibia Wiki: https://tibia.fandom.com/wiki/Squidgy_Slime)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Squidgy Slime")
 local monster = {}

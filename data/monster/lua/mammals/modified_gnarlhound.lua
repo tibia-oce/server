@@ -1,5 +1,4 @@
--- Modified Gnarlhound (Tibia Wiki: https://tibia.fandom.com/wiki/Modified_Gnarlhound)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Modified Gnarlhound")
 local monster = {}

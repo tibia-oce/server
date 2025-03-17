@@ -1,5 +1,4 @@
--- Eternal Guardian (Tibia Wiki: https://tibia.fandom.com/wiki/Eternal_Guardian)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Eternal Guardian")
 local monster = {}
@@ -81,7 +80,7 @@ monster.loot = {
 	{ id = "spiked iron ball", chance = 9960 },
 	{ id = "clay lump", chance = 720 },
 	{ id = "piece of marble rock", chance = 430 },
-	{ id = 12600, chance = 400 }, -- coal
+	{ id = "coal", chance = 400 }, -- coal
 }
 
 monster.attacks = {

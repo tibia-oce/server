@@ -1,5 +1,4 @@
--- Retching Horror (Tibia Wiki: https://tibia.fandom.com/wiki/Retching_Horror)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Retching Horror")
 local monster = {}
@@ -82,7 +81,7 @@ monster.loot = {
 	{ id = "great health potion", chance = 15000 },
 	{ id = "underworld rod", chance = 1800 },
 	{ id = "wand of starstorm", chance = 960 },
-	{ id = 20029, chance = 3700 }, -- broken dream
+	{ id = "broken dream", chance = 3700 }, -- broken dream
 	{ id = "goosebump leather", chance = 16400 },
 	{ id = "pool of chitinous glue", chance = 14000 },
 }

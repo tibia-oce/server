@@ -1,5 +1,4 @@
--- Demon (Tibia Wiki: https://tibia.fandom.com/wiki/Demon)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Demon")
 local monster = {}
@@ -85,16 +84,16 @@ monster.loot = {
 	{ id = "small amethyst", chance = 7250, maxCount = 5 },
 	{ id = "small ruby", chance = 7430, maxCount = 5 },
 	{ id = "small topaz", chance = 7470, maxCount = 5 },
-	{ id = 3039, chance = 2220 }, -- red gem
+	{ id = "red gem", chance = 2220 }, -- red gem
 	{ id = "demonic essence", chance = 14630 },
 	{ id = "talon", chance = 3430 },
 	{ id = "platinum coin", chance = 90540, maxCount = 8 },
 	{ id = "might ring", chance = 1890 },
-	{ id = 3049, chance = 2170 }, -- stealth ring
+	{ id = "stealth ring", chance = 2170 }, -- stealth ring
 	{ id = "platinum amulet", chance = 680 },
 	{ id = "orb", chance = 2854 },
 	{ id = "gold ring", chance = 1050 },
-	{ id = 3098, chance = 1990 }, -- ring of healing
+	{ id = "ring of healing", chance = 1990 }, -- ring of healing
 	{ id = "giant sword", chance = 1980 },
 	{ id = "ice rapier", chance = 1550 },
 	{ id = "golden sickle", chance = 1440 },

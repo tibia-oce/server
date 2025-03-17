@@ -1,5 +1,4 @@
--- Gozzler (Tibia Wiki: https://tibia.fandom.com/wiki/Gozzler)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Gozzler")
 local monster = {}
@@ -74,7 +73,7 @@ monster.loot = {
 	{ id = "brown flask", chance = 8750 },
 	{ id = "small sapphire", chance = 360 },
 	{ id = "gold coin", chance = 52500, maxCount = 70 },
-	{ id = 3097, chance = 190 }, -- dwarven ring
+	{ id = "dwarven ring", chance = 190 }, -- dwarven ring
 	{ id = "battle axe", chance = 3100 },
 	{ id = "sabre", chance = 8250 },
 	{ id = "morning star", chance = 5000 },

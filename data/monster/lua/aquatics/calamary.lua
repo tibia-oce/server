@@ -1,5 +1,4 @@
--- Calamary (Tibia Wiki: https://tibia.fandom.com/wiki/Calamary)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Calamary")
 local monster = {}
@@ -64,9 +63,7 @@ monster.voices = {
 	{ text = "Bobble!", yell = false },
 }
 
-monster.loot = {
-	{ id = "shrimp", chance = 12270, maxCount = 2 },
-}
+monster.loot = { }
 
 monster.defenses = {
 	defense = 5,

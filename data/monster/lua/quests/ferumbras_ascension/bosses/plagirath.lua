@@ -1,5 +1,4 @@
--- Plagirath (Tibia Wiki: https://tibia.fandom.com/wiki/Plagirath)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Plagirath")
 local monster = {}
@@ -89,10 +88,10 @@ monster.loot = {
 	{ id = 3031, chance = 98000, maxCount = 200 }, -- gold coin
 	{ id = 3033, chance = 10000, maxCount = 5 }, -- small amethyst
 	{ id = 3035, chance = 8000, maxCount = 58 }, -- platinum coin
-	{ id = 22727, chance = 800 }, -- rift lance
-	{ id = 22759, chance = 500, unique = true }, -- plague bite
+	{ id = "rift lance", chance = 800 }, -- rift lance
+	{ id = "plague bite", chance = 500, unique = true }, -- plague bite
 	{ id = 22866, chance = 800 }, -- rift bow
-	{ id = 22867, chance = 800 }, -- rift crossbow
+	{ id = "rift crossbow", chance = 800 }, -- rift crossbow
 	{ id = 6499, chance = 11000 }, -- demonic essence
 	{ id = 7386, chance = 5000 }, -- mercenary sword
 	{ id = 281, chance = 14000, maxCount = 5 }, -- giant shimmering pearl (green)

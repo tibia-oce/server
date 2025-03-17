@@ -1,5 +1,4 @@
--- Draken Abomination (Tibia Wiki: https://tibia.fandom.com/wiki/Draken_Abomination)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("Draken Abomination")
 local monster = {}

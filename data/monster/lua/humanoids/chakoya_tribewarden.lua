@@ -1,5 +1,4 @@
--- Chakoya Tribewarden (Tibia Wiki: https://tibia.fandom.com/wiki/Chakoya_Tribewarden)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Chakoya Tribewarden")
 local monster = {}
@@ -70,7 +69,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 79590, maxCount = 20 },
 	{ id = "short sword", chance = 4810 },
 	{ id = "bone shield", chance = 1030 },
-	{ id = 3578, chance = 19370 }, -- fish
+	{ id = "fish", chance = 19370 }, -- fish
 	{ id = "northern pike", chance = 60 },
 	{ id = "rainbow trout", chance = 50 },
 	{ id = "green perch", chance = 100 },

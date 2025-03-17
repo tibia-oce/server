@@ -1,5 +1,4 @@
--- Eruption of Destruction (Tibia Wiki: https://tibia.fandom.com/wiki/Eruption_of_Destruction)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Eruption of Destruction")
 local monster = {}

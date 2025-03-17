@@ -1,5 +1,4 @@
--- Swampling (Tibia Wiki: https://tibia.fandom.com/wiki/Swampling)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Swampling")
 local monster = {}

@@ -1,5 +1,4 @@
--- Lavahole (Tibia Wiki: https://tibia.fandom.com/wiki/Lavahole)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Lavahole")
 local monster = {}

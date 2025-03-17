@@ -1,5 +1,4 @@
--- Plaguesmith (Tibia Wiki: https://tibia.fandom.com/wiki/Plaguesmith)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Plaguesmith")
 local monster = {}
@@ -77,11 +76,11 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 65 },
 	{ id = "small amethyst", chance = 5000, maxCount = 3 },
 	{ id = "platinum coin", chance = 7142, maxCount = 2 },
-	{ id = 3092, chance = 4347 }, -- axe ring
-	{ id = 3093, chance = 4761 }, -- club ring
+	{ id = "axe ring", chance = 4347 }, -- axe ring
+	{ id = "club ring", chance = 4761 }, -- club ring
 	{ id = "piece of iron", chance = 20000 },
 	{ id = "mouldy cheese", chance = 50000 },
-	{ id = 3122, chance = 60000 }, -- dirty cape
+	{ id = "dirty cape", chance = 60000 }, -- dirty cape
 	{ id = "two handed sword", chance = 20000 },
 	{ id = "war hammer", chance = 2127 },
 	{ id = "morning star", chance = 29000 },

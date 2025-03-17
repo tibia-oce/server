@@ -1,5 +1,4 @@
--- World Devourer (Tibia Wiki: https://tibia.fandom.com/wiki/World_Devourer)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("World Devourer")
 local monster = {}
@@ -83,14 +82,14 @@ monster.loot = {
 	{ id = 7643, chance = 10000, maxCount = 5 }, -- ultimate health potion
 	{ id = 16120, chance = 10000, maxCount = 3 }, -- violet crystal shard
 	{ id = 23507, chance = 10000 }, -- crystallized anger
-	{ id = 23508, chance = 10000 }, -- energy vein
+	{ id = "energy vein", chance = 10000 }, -- energy vein
 	{ id = 281, chance = 5000 }, -- giant shimmering pearl (green)
 	{ id = 282, chance = 5000 }, -- giant shimmering pearl (brown)
-	{ id = 23510, chance = 10000 }, -- odd organ
+	{ id = "odd organ", chance = 10000 }, -- odd organ
 	{ id = 23520, chance = 10000 }, -- plasmatic lightning
 	{ id = 3038, chance = 10000 }, -- green gem
 	{ id = 22721, chance = 100000 }, -- gold token
-	{ id = 7426, chance = 10000 }, -- amber staff
+	{ id = "amber staff", chance = 10000 }, -- amber staff
 	{ id = 828, chance = 8000 }, -- lightning headband
 	{ id = 23533, chance = 8000 }, -- ring of red plasma
 	{ id = 3036, chance = 8000 }, -- violet gem

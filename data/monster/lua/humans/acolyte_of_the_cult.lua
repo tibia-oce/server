@@ -1,5 +1,4 @@
--- Acolyte of the Cult (Tibia Wiki: https://tibia.fandom.com/wiki/Acolyte_of_the_Cult)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Acolyte of the Cult")
 local monster = {}
@@ -76,10 +75,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2828, chance = 730 }, -- book
+	{ id = "book", chance = 730 }, -- book
 	{ id = "gold coin", chance = 66940, maxCount = 40 },
 	{ id = "small emerald", chance = 550 },
-	{ id = 3052, chance = 560 }, -- life ring
+	{ id = "life ring", chance = 560 }, -- life ring
 	{ id = "terra rod", chance = 250 },
 	{ id = "dragon necklace", chance = 1050 },
 	{ id = "morning star", chance = 4990 },

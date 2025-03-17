@@ -1,5 +1,4 @@
--- Rift Worm (Tibia Wiki: https://tibia.fandom.com/wiki/Rift_Worm)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Rift Worm")
 local monster = {}

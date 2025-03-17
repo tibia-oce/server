@@ -1,5 +1,4 @@
--- Norgle Glacierbeard (Tibia Wiki: https://tibia.fandom.com/wiki/Norgle_Glacierbeard)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Norgle Glacierbeard")
 local monster = {}

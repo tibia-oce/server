@@ -1,5 +1,4 @@
--- Deepling Master Librarian (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Master_Librarian)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Deepling Master Librarian")
 local monster = {}
@@ -72,10 +71,10 @@ monster.loot = {
 	{ id = "deepling filet", chance = 20000 },
 	{ id = "key to the Drowned Library", chance = 20000 },
 	{ id = "eye of a deepling", chance = 9380 },
-	{ id = 3578, chance = 9090, maxCount = 2 }, -- fish
+	{ id = "fish", chance = 9090, maxCount = 2 }, -- fish
 	{ id = "small sapphire", chance = 8440, maxCount = 3 },
 	{ id = "deepling staff", chance = 3130 },
-	{ id = 3052, chance = 3200 }, -- life ring
+	{ id = "life ring", chance = 3200 }, -- life ring
 	{ id = "fish fin", chance = 1800 },
 	{ id = "necklace of the deep", chance = 1250 },
 	{ id = "ornate crossbow", chance = 35 },

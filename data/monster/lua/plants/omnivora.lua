@@ -1,5 +1,4 @@
--- Omnivora (Tibia Wiki: https://tibia.fandom.com/wiki/Omnivora)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("Omnivora")
 local monster = {}
@@ -67,12 +66,12 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 97000, maxCount = 242 }, -- gold coin
-	{ id = 3578, chance = 18200, maxCount = 2 }, -- fish
-	{ id = 16124, chance = 2000 }, -- blue crystal splinter
-	{ id = 16123, chance = 2000 }, -- brown crystal splinter
+	{ id = "fish", chance = 18200, maxCount = 2 }, -- fish
+	{ id = "blue crystal splinter", chance = 2000 }, -- blue crystal splinter
+	{ id = "brown crystal splinter", chance = 2000 }, -- brown crystal splinter
 	{ id = 16122, chance = 2210 }, -- green crystal splinter
 	{ id = 3582, chance = 1200 }, -- ham
-	{ id = 3723, chance = 1900 }, -- white mushroom
+	{ id = "white mushroom", chance = 1900 }, -- white mushroom
 	{ id = 3052, chance = 950 }, -- life ring
 	{ id = 3297, chance = 780 }, -- serpent sword
 	{ id = 814, chance = 700 }, -- terra amulet

@@ -1,5 +1,4 @@
--- Crypt Shambler (Tibia Wiki: https://tibia.fandom.com/wiki/Crypt_Shambler)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Crypt Shambler")
 local monster = {}

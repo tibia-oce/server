@@ -1,5 +1,4 @@
--- Priestess (Tibia Wiki: https://tibia.fandom.com/wiki/Priestess)
--- Version: 6.4
+
 
 local mType = Game.createMonsterType("Priestess")
 local monster = {}
@@ -73,7 +72,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2828, chance = 890 }, -- book
+	{ id = "book", chance = 890 }, -- book
 	{ id = 2948, chance = 1410 }, -- wooden flute
 	{ id = "piggy bank", chance = 90 },
 	{ id = "crystal necklace", chance = 640 },

@@ -1,5 +1,4 @@
--- Gnomevil (Tibia Wiki: https://tibia.fandom.com/wiki/Gnomevil)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Gnomevil")
 local monster = {}
@@ -78,12 +77,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 16161, chance = 7030 }, -- crystalline axe
+	{ id = "crystalline axe", chance = 7030 }, -- crystalline axe
 	{ id = 16163, chance = 9120 }, -- crystal crossbow
 	{ id = 16205, chance = 99150 }, -- gnomevil's hat
 	{ id = 16175, chance = 6690 }, -- shiny blade
-	{ id = 16164, chance = 8400 }, -- mycological bow
-	{ id = 16162, chance = 7120 }, -- mycological mace
+	{ id = "mycological bow", chance = 8400 }, -- mycological bow
+	{ id = "mycological mace", chance = 7120 }, -- mycological mace
 	{ id = 16160, chance = 14100 }, -- crystalline sword
 	{ id = 16155, chance = 3710 }, -- decorative ribbon
 }

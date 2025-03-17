@@ -1,5 +1,4 @@
--- Roaring Water Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Roaring_Water_Elemental)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Roaring Water Elemental")
 local monster = {}

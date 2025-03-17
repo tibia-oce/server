@@ -1,5 +1,4 @@
--- Canopic Jar (Tibia Wiki: https://tibia.fandom.com/wiki/Canopic_Jar)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Canopic Jar")
 local monster = {}

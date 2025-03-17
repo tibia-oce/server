@@ -1,5 +1,4 @@
--- Draken Spellweaver (Tibia Wiki: https://tibia.fandom.com/wiki/Draken_Spellweaver)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Draken Spellweaver")
 local monster = {}

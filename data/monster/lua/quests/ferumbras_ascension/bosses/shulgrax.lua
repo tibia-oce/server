@@ -1,5 +1,4 @@
--- Shulgrax (Tibia Wiki: https://tibia.fandom.com/wiki/Shulgrax)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Shulgrax")
 local monster = {}
@@ -95,11 +94,11 @@ monster.loot = {
 	{ id = 3039, chance = 1000 }, -- red gem
 	{ id = 3366, chance = 700 }, -- magic plate armor
 	{ id = 22193, chance = 46100, maxCount = 5 }, -- onyx chip
-	{ id = 22194, chance = 46100, maxCount = 5 }, -- opal
+	{ id = "opal", chance = 46100, maxCount = 5 }, -- opal
 	{ id = 22726, chance = 700 }, -- rift shield
-	{ id = 22727, chance = 700 }, -- rift lance
+	{ id = "rift lance", chance = 700 }, -- rift lance
 	{ id = 22756, chance = 500, unique = true }, -- treader of torment
-	{ id = 22867, chance = 700 }, -- rift crossbow
+	{ id = "rift crossbow", chance = 700 }, -- rift crossbow
 	{ id = 5021, chance = 46100, maxCount = 5 }, -- orichalcum pearl
 	{ id = 6299, chance = 1300 }, -- death ring
 	{ id = 6499, chance = 11000 }, -- demonic essence

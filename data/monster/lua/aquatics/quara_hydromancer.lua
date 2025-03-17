@@ -1,5 +1,4 @@
--- Quara Hydromancer (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Hydromancer)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Quara Hydromancer")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "black pearl", chance = 3150 },
 	{ id = "great mana potion", chance = 2880 },
 	{ id = "fish fin", chance = 1410 },
-	{ id = 3098, chance = 1218 }, -- ring of healing
+	{ id = "ring of healing", chance = 1218 }, -- ring of healing
 	{ id = "wand of cosmic energy", chance = 980 },
 	{ id = "knight armor", chance = 230 },
 }

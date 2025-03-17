@@ -1,5 +1,4 @@
--- Vile Grandmaster (Tibia Wiki: https://tibia.fandom.com/wiki/Vile_Grandmaster)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("Vile Grandmaster")
 local monster = {}
@@ -76,7 +75,7 @@ monster.loot = {
 	{ id = 3035, chance = 75410, maxCount = 2 }, -- platinum coin
 	{ id = 3592, chance = 1210 }, -- grapes
 	{ id = 3577, chance = 1210, maxCount = 2 }, -- meat
-	{ id = 239, chance = 1210 }, -- great health potion
+	{ id = "great health potion", chance = 1210 }, -- great health potion
 	{ id = 3269, chance = 1610 }, -- halberd
 	{ id = 3658, chance = 510 }, -- red rose
 	{ id = 3003, chance = 1510 }, -- rope
@@ -89,8 +88,8 @@ monster.loot = {
 	{ id = 3279, chance = 210 }, -- war hammer
 	{ id = 3381, chance = 310 }, -- crown armor
 	{ id = 3280, chance = 210 }, -- fire sword
-	{ id = 3385, chance = 310 }, -- crown helmet
-	{ id = 3419, chance = 210 }, -- crown shield
+	{ id = "crown helmet", chance = 310 }, -- crown helmet
+	{ id = "crown shield", chance = 210 }, -- crown shield
 	{ id = 3382, chance = 110 }, -- crown legs
 	{ id = 3055, chance = 210 }, -- platinum amulet
 }

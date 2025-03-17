@@ -1,5 +1,4 @@
--- Eradicator (Tibia Wiki: https://tibia.fandom.com/wiki/Eradicator)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Eradicator")
 local monster = {}
@@ -90,16 +89,16 @@ monster.loot = {
 	{ id = 23516, chance = 8000 }, -- instable proto matter
 	{ id = 22721, chance = 100000 }, -- gold token
 	{ id = 23509, chance = 100000 }, -- mysterious remains
-	{ id = 23510, chance = 100000 }, -- odd organ
+	{ id = "odd organ", chance = 100000 }, -- odd organ
 	{ id = 3041, chance = 6000 }, -- blue gem
 	{ id = 3038, chance = 6000 }, -- green gem
 	{ id = 8073, chance = 6000 }, -- spellbook of warding
 	{ id = 3333, chance = 4000 }, -- crystal mace
 	{ id = 23529, chance = 3500 }, -- ring of blue plasma
-	{ id = 23531, chance = 3500 }, -- ring of green plasma
+	{ id = "ring of green plasma", chance = 3500 }, -- ring of green plasma
 	{ id = 23533, chance = 3500 }, -- ring of red plasma
 	{ id = 3554, chance = 5000, unique = true }, -- steel boots
-	{ id = 8075, chance = 3000, unique = true }, -- spellbook of lost souls
+	{ id = "spellbook of lost souls", chance = 3000, unique = true }, -- spellbook of lost souls
 	{ id = "spark sphere", chance = 100000 },
 }
 

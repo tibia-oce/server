@@ -1,5 +1,4 @@
--- Mutated Bat (Tibia Wiki: https://tibia.fandom.com/wiki/Mutated_Bat)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Mutated Bat")
 local monster = {}
@@ -67,7 +66,7 @@ monster.loot = {
 	{ id = "black pearl", chance = 720, maxCount = 3 },
 	{ id = "gold coin", chance = 92500, maxCount = 130 },
 	{ id = "small amethyst", chance = 500, maxCount = 2 },
-	{ id = 3051, chance = 990 }, -- energy ring
+	{ id = "energy ring", chance = 990 }, -- energy ring
 	{ id = "battle shield", chance = 7760 },
 	{ id = "black shield", chance = 70 },
 	{ id = "obsidian lance", chance = 7260 },

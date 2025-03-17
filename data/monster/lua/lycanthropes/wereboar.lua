@@ -1,5 +1,4 @@
--- Wereboar (Tibia Wiki: https://tibia.fandom.com/wiki/Wereboar)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("Wereboar")
 local monster = {}
@@ -70,7 +69,7 @@ monster.loot = {
 	{ id = 3031, chance = 97000, maxCount = 242 }, -- gold coin
 	{ id = 3035, chance = 18200, maxCount = 5 }, -- platinum coin
 	{ id = 676, chance = 5000, maxCount = 2 }, -- small enchanted ruby
-	{ id = 3725, chance = 2000 }, -- brown mushroom
+	{ id = "brown mushroom", chance = 2000 }, -- brown mushroom
 	{ id = 7643, chance = 2210 }, -- ultimate health potion
 	{ id = 236, chance = 1200 }, -- strong health potion
 	{ id = 22053, chance = 1900 }, -- wereboar hooves
@@ -79,17 +78,17 @@ monster.loot = {
 	{ id = 7439, chance = 700 }, -- berserk potion
 	{ id = 7432, chance = 360 }, -- furry club
 	{ id = 3081, chance = 430 }, -- stone skin amulet
-	{ id = 7419, chance = 320 }, -- dreaded cleaver
+	{ id = "dreaded cleaver", chance = 320 }, -- dreaded cleaver
 	{ id = 22085, chance = 200 }, -- fur armor
-	{ id = 22102, chance = 200 }, -- wereboar trophy
-	{ id = 22060, chance = 200 }, -- werewolf amulet
+	{ id = "wereboar trophy", chance = 200 }, -- wereboar trophy
+	{ id = "werewolf amulet", chance = 200 }, -- werewolf amulet
 	{ id = 22083, chance = 200 }, -- moonlight crystals
 }
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, skill = 50, attack = 60, condition = { type = CONDITION_POISON, totalDamage = 140, interval = 4000 } },
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -385 },
-	{ name = "speed", interval = 4000, chance = 20, radius = 7, effect = CONST_ME_POFF, target = true },
+	{ name = "speed", interval = 4000, speed = -200, chance = 20, radius = 7, effect = CONST_ME_POFF, target = true },
 }
 
 monster.defenses = {

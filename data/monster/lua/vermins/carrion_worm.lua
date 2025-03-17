@@ -1,5 +1,4 @@
--- Carrion Worm (Tibia Wiki: https://tibia.fandom.com/wiki/Carrion_Worm)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Carrion Worm")
 local monster = {}
@@ -67,7 +66,7 @@ monster.loot = {
 	{ id = "meat", chance = 9460, maxCount = 2 },
 	{ id = "worm", chance = 2100, maxCount = 2 },
 	{ id = "carrion worm fang", chance = 10000 },
-	{ id = 12600, chance = 210 }, -- coal
+	{ id = "coal", chance = 210 }, -- coal
 }
 
 monster.attacks = {

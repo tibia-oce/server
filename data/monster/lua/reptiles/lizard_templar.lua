@@ -1,5 +1,4 @@
--- Lizard Templar (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Templar)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Lizard Templar")
 local monster = {}
@@ -66,7 +65,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 84000, maxCount = 60 },
 	{ id = "small emerald", chance = 250 },
-	{ id = 3264, chance = 4000 }, -- sword
+	{ id = "sword", chance = 4000 }, -- sword
 	{ id = "morning star", chance = 1990 },
 	{ id = "short sword", chance = 9500 },
 	{ id = "steel helmet", chance = 2000 },

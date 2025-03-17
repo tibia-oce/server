@@ -1,5 +1,4 @@
--- Rift Invader (Tibia Wiki: https://tibia.fandom.com/wiki/Rift_Invader)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Rift Invader")
 local monster = {}

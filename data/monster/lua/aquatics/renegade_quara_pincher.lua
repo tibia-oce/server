@@ -1,5 +1,4 @@
--- Renegade Quara Pincher (Tibia Wiki: https://tibia.fandom.com/wiki/Renegade_Quara_Pincher)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Renegade Quara Pincher")
 local monster = {}
@@ -73,7 +72,7 @@ monster.loot = {
 	{ id = "small ruby", chance = 9010, maxCount = 2 },
 	{ id = "small diamond", chance = 7060, maxCount = 2 },
 	{ id = "mind stone", chance = 6140 },
-	{ id = 3039, chance = 5120 }, -- red gem
+	{ id = "red gem", chance = 5120 }, -- red gem
 	{ id = "shrimp", chance = 4810, maxCount = 5 },
 	{ id = "vortex bolt", chance = 3790, maxCount = 5 },
 	{ id = 281, chance = 1430 }, -- giant shimmering pearl (green)

@@ -1,5 +1,4 @@
--- Charging Outburst (Tibia Wiki: https://tibia.fandom.com/wiki/Charging_Outburst)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Charging Outburst")
 local monster = {}

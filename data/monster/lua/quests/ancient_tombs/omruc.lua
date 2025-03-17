@@ -1,5 +1,4 @@
--- Omruc (Tibia Wiki: https://tibia.fandom.com/wiki/Omruc)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Omruc")
 local monster = {}
@@ -85,12 +84,12 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 90 },
 	{ id = "gold coin", chance = 50000, maxCount = 70 },
 	{ id = "yellow gem", chance = 5000 },
-	{ id = 3049, chance = 5000 }, -- stealth ring
+	{ id = "stealth ring", chance = 5000 }, -- stealth ring
 	{ id = "boots of haste", chance = 1500 },
 	{ id = "crystal arrow", chance = 100000 },
 	{ id = "arrow", chance = 10000, maxCount = 21 },
 	{ id = "poison arrow", chance = 10000, maxCount = 20 },
-	{ id = 3449, chance = 10000, maxCount = 15 }, -- burst arrow
+	{ id = "burst arrow", chance = 10000, maxCount = 15 }, -- burst arrow
 	{ id = "power bolt", chance = 10000, maxCount = 3 },
 	{ id = "onyx arrow", chance = 10000, maxCount = 2 },
 	{ id = "great health potion", chance = 7000 },

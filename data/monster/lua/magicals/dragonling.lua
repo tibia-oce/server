@@ -1,5 +1,4 @@
--- Dragonling (Tibia Wiki: https://tibia.fandom.com/wiki/Dragonling)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Dragonling")
 local monster = {}

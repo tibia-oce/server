@@ -1,5 +1,4 @@
--- Apprentice Sheng (Tibia Wiki: https://tibia.fandom.com/wiki/Apprentice_Sheng)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Apprentice Sheng")
 local monster = {}

@@ -1,5 +1,4 @@
--- Lethal Lissy (Tibia Wiki: https://tibia.fandom.com/wiki/Lethal_Lissy)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Lethal Lissy")
 local monster = {}

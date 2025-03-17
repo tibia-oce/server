@@ -1,5 +1,4 @@
--- Dreadbeast (Tibia Wiki: https://tibia.fandom.com/wiki/Dreadbeast)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Dreadbeast")
 local monster = {}

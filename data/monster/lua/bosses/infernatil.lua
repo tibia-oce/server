@@ -101,7 +101,7 @@ monster.loot = {
 	{ id = 3364, chance = 5000 }, -- golden legs
 	{ id = 2903, chance = 7500 }, -- golden mug
 	{ id = 3306, chance = 4500 }, -- golden sickle
-	{ id = 3038, chance = 1500 }, -- green gem
+	{ id = "green gem", chance = 1500 }, -- green gem
 	{ id = 3284, chance = 7500 }, -- ice rapier
 	{ id = 3061, chance = 1000 }, -- life crystal
 	{ id = 3046, chance = 11500 }, -- magic light wand
@@ -109,7 +109,7 @@ monster.loot = {
 	{ id = 3414, chance = 7500 }, -- mastermind shield
 	{ id = 3048, chance = 5000 }, -- might ring
 	{ id = 3062, chance = 4000 }, -- mind stone
-	{ id = 3070, chance = 3500 }, -- moonlight rod
+	{ id = "moonlight rod", chance = 3500 }, -- moonlight rod
 	{ id = 3060, chance = 12000 }, -- orb
 	{ id = 3055, chance = 4500 }, -- platinum amulet
 	{ id = 3084, chance = 4500 }, -- protection amulet
@@ -128,7 +128,7 @@ monster.loot = {
 	{ id = 3081, chance = 4000 }, -- stone skin amulet
 	{ id = 3058, chance = 2500 }, -- strange symbol
 	{ id = 3034, chance = 14000, maxCount = 7 }, -- talon
-	{ id = 2993, chance = 14500 }, -- teddy bear
+	{ id = "teddy bear", chance = 14500 }, -- teddy bear
 	{ id = 3309, chance = 13500 }, -- thunder hammer
 	{ id = 3265, chance = 20000 }, -- two handed sword
 	{ id = 3069, chance = 3500 }, -- necrotic rod

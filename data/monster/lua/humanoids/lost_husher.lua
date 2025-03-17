@@ -1,5 +1,4 @@
--- Lost Husher (Tibia Wiki: https://tibia.fandom.com/wiki/Lost_Husher)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Lost Husher")
 local monster = {}
@@ -81,7 +80,7 @@ monster.loot = {
 	{ id = "terra boots", chance = 880 },
 	{ id = "small topaz", chance = 9780 },
 	{ id = "clay lump", chance = 500 },
-	{ id = 12600, chance = 10930 }, -- coal
+	{ id = "coal", chance = 10930 }, -- coal
 	{ id = "buckle", chance = 8180 },
 	{ id = "buckle", chance = 770 },
 	{ id = "bonecarving knife", chance = 8510 },

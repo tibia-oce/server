@@ -1,5 +1,4 @@
--- Rot Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Rot_Elemental)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Rot Elemental")
 local monster = {}
@@ -71,16 +70,16 @@ monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 80 }, -- gold coin
 	{ id = 3035, chance = 10390 }, -- platinum coin
 	{ id = 236, chance = 10310 }, -- strong health potion
-	{ id = 237, chance = 9990 }, -- strong mana potion
+	{ id = "strong mana potion", chance = 9990 }, -- strong mana potion
 	{ id = 21182, chance = 4320 }, -- glob of glooth
 	{ id = 3052, chance = 1630 }, -- life ring
 	{ id = 3029, chance = 1110 }, -- small sapphire
 	{ id = 9057, chance = 1140, maxCount = 2 }, -- small topaz
 	{ id = 3032, chance = 940, maxCount = 2 }, -- small emerald
-	{ id = 3038, chance = 80 }, -- green gem
+	{ id = "green gem", chance = 80 }, -- green gem
 	{ id = 21183, chance = 130 }, -- glooth amulet
 	{ id = 21180, chance = 60 }, -- glooth axe
-	{ id = 21158, chance = 460 }, -- glooth spear
+	{ id = "glooth spear", chance = 460 }, -- glooth spear
 }
 
 monster.attacks = {

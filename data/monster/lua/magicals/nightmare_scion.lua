@@ -1,5 +1,4 @@
--- Nightmare Scion (Tibia Wiki: https://tibia.fandom.com/wiki/Nightmare_Scion)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Nightmare Scion")
 local monster = {}

@@ -1,5 +1,4 @@
--- Mornenion (Tibia Wiki: https://tibia.fandom.com/wiki/Mornenion)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Mornenion")
 local monster = {}

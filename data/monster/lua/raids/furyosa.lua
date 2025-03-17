@@ -1,5 +1,4 @@
--- Furyosa (Tibia Wiki: https://tibia.fandom.com/wiki/Furyosa)
--- Version: 10.20
+
 
 local mType = Game.createMonsterType("Furyosa")
 local monster = {}
@@ -84,13 +83,13 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 200 }, -- gold coin
-	{ id = 8016, chance = 100000, maxCount = 5 }, -- jalapeno pepper
-	{ id = 19083, chance = 45000 }, -- silver raid token
+	{ id = "jalapeno pepper", chance = 100000, maxCount = 5 }, -- jalapeno pepper
+	{ id = "silver raid token", chance = 45000 }, -- silver raid token
 	{ id = 3035, chance = 85000, maxCount = 25 }, -- platinum coin
 	{ id = 6558, chance = 35000, maxCount = 3 }, -- flask of demonic blood
 	{ id = 6499, chance = 22500 }, -- demonic essence
 	{ id = 5911, chance = 4000 }, -- red piece of cloth
-	{ id = 5944, chance = 21500 }, -- soul orb
+	{ id = "soul orb", chance = 21500 }, -- soul orb
 	{ id = 5944, chance = 50 }, -- soul orb
 	{ id = 3007, chance = 410 }, -- crystal ring
 	{ id = 6300, chance = 60 }, -- death ring

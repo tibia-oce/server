@@ -1,5 +1,4 @@
--- Mooh'Tah Warrior (Tibia Wiki: https://tibia.fandom.com/wiki/Mooh'Tah_Warrior)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Mooh'Tah Warrior")
 local monster = {}
@@ -67,7 +66,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 119 },
 	{ id = "platinum coin", chance = 45450, maxCount = 3 },
-	{ id = 21202, chance = 18970 }, -- mooh'tah shell
+	{ id = "mooh'tah shell", chance = 18970 }, -- mooh'tah shell
 	{ id = "strong mana potion", chance = 9290 },
 	{ id = "strong health potion", chance = 8500 },
 	{ id = "small ruby", chance = 7710 },
@@ -76,14 +75,14 @@ monster.loot = {
 	{ id = "minotaur leather", chance = 5340 },
 	{ id = "minotaur horn", chance = 4550, maxCount = 2 },
 	{ id = "small topaz", chance = 4350 },
-	{ id = 3094, chance = 1580 }, -- sword ring
+	{ id = "sword ring", chance = 1580 }, -- sword ring
 	{ id = "cowtana", chance = 1380 },
-	{ id = 21166, chance = 1380 }, -- mooh'tah plate
+	{ id = "mooh'tah plate", chance = 1380 }, -- mooh'tah plate
 	{ id = "knight armor", chance = 990 },
 	{ id = "red piece of cloth", chance = 790 },
 	{ id = "knight legs", chance = 590 },
 	{ id = "guardian shield", chance = 590 },
-	{ id = 7401, chance = 160 }, -- minotaur trophy
+	{ id = "minotaur trophy", chance = 160 }, -- minotaur trophy
 }
 
 monster.attacks = {

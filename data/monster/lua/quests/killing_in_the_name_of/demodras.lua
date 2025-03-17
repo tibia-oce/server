@@ -1,5 +1,4 @@
--- Demodras (Tibia Wiki: https://tibia.fandom.com/wiki/Demodras)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Demodras")
 local monster = {}
@@ -83,13 +82,13 @@ monster.loot = {
 	{ id = 3061, chance = 850 }, -- life crystal
 	{ id = 3450, chance = 19650, maxCount = 10 }, -- power bolt
 	{ id = 3051, chance = 10250 }, -- energy ring
-	{ id = 239, chance = 9500 }, -- great health potion
+	{ id = "great health potion", chance = 9500 }, -- great health potion
 	{ id = 3386, chance = 1700 }, -- dragon scale mail
-	{ id = 3583, chance = 75200, maxCount = 10 }, -- dragon ham
+	{ id = "dragon ham", chance = 75200, maxCount = 10 }, -- dragon ham
 	{ id = 5948, chance = 13700 }, -- red dragon leather
 	{ id = 2842, chance = 10250 }, -- book (gemmed)
 	{ id = 2903, chance = 6000 }, -- golden mug
-	{ id = 3280, chance = 1700 }, -- fire sword
+	{ id = "fire sword", chance = 1700 }, -- fire sword
 }
 
 monster.attacks = {

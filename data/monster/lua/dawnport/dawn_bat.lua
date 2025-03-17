@@ -1,5 +1,4 @@
--- Dawn Bat (Tibia Wiki: https://tibia.fandom.com/wiki/Dawn_Bat)
--- Version: 10.96
+
 
 local mType = Game.createMonsterType("Dawn Bat")
 local monster = {}

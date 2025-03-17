@@ -1,5 +1,4 @@
--- The Imperor (Tibia Wiki: https://tibia.fandom.com/wiki/The_Imperor)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("The Imperor")
 local monster = {}
@@ -80,12 +79,12 @@ monster.loot = {
 	{ id = 3320, chance = 11000 }, -- fire axe
 	{ id = 3035, chance = 46150, maxCount = 3 }, -- platinum coin
 	{ id = 5944, chance = 100000 }, -- soul orb
-	{ id = 3382, chance = 30770 }, -- crown legs
-	{ id = 3364, chance = 7690 }, -- golden legs
+	{ id = "crown legs", chance = 30770 }, -- crown legs
+	{ id = "golden legs", chance = 7690 }, -- golden legs
 	{ id = 3019, chance = 15380 }, -- demonbone amulet
 	{ id = 3442, chance = 7690 }, -- tempest shield
 	{ id = 3415, chance = 15400 }, -- guardian shield
-	{ id = 826, chance = 15380 }, -- magma coat
+	{ id = "magma coat", chance = 15380 }, -- magma coat
 	{ id = 3033, chance = 30770, maxCount = 4 }, -- small amethyst
 	{ id = 3030, chance = 7690, maxCount = 4 }, -- small ruby
 }

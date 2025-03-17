@@ -1,5 +1,4 @@
--- Party Skeleton (Tibia Wiki: https://tibia.fandom.com/wiki/Party_Skeleton)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Party Skeleton")
 local monster = {}

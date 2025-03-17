@@ -1,5 +1,4 @@
--- Young Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Young_Troll)
--- Version: 9.62
+
 
 local mType = Game.createMonsterType("Young Troll")
 local monster = {}

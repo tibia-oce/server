@@ -1,5 +1,4 @@
--- Shadow Hound (Tibia Wiki: https://tibia.fandom.com/wiki/Shadow_Hound)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Shadow Hound")
 local monster = {}

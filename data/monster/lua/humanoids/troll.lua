@@ -1,5 +1,4 @@
--- Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Troll)
--- Version: 2.0
+
 
 local mType = Game.createMonsterType("Troll")
 local monster = {}

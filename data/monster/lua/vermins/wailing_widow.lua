@@ -1,5 +1,4 @@
--- Wailing Widow (Tibia Wiki: https://tibia.fandom.com/wiki/Wailing_Widow)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Wailing Widow")
 local monster = {}

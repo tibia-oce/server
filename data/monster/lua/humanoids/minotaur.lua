@@ -1,5 +1,4 @@
--- Minotaur (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Minotaur")
 local monster = {}
@@ -67,13 +66,13 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 67500, maxCount = 25 },
 	{ id = "bronze amulet", chance = 110 },
-	{ id = 3264, chance = 5000 }, -- sword
+	{ id = "sword", chance = 5000 }, -- sword
 	{ id = "axe", chance = 4000 },
 	{ id = "mace", chance = 12840 },
 	{ id = "brass helmet", chance = 7700 },
 	{ id = "chain armor", chance = 10000 },
 	{ id = "plate shield", chance = 20020 },
-	{ id = 3457, chance = 310 }, -- shovel
+	{ id = "shovel", chance = 310 }, -- shovel
 	{ id = "meat", chance = 5000 },
 	{ id = "minotaur leather", chance = 990 },
 	{ id = "minotaur horn", chance = 2090, maxCount = 2 },

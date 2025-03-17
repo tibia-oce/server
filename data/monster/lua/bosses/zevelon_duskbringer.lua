@@ -1,5 +1,4 @@
--- Zevelon Duskbringer (Tibia Wiki: https://tibia.fandom.com/wiki/Zevelon_Duskbringer)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Zevelon Duskbringer")
 local monster = {}
@@ -86,10 +85,10 @@ monster.voices = {
 monster.loot = {
 	{ id = 236, chance = 4000 }, -- strong health potion
 	{ id = 3027, chance = 8000 }, -- black pearl
-	{ id = 8192, chance = 100000 }, -- vampire lord token
+	{ id = "vampire lord token", chance = 100000 }, -- vampire lord token
 	{ id = 3035, chance = 50000, maxCount = 5 }, -- platinum coin
-	{ id = 3031, chance = 100000, maxCount = 75 }, -- gold coin
-	{ id = 3434, chance = 4500 }, -- vampire shield
+	{ id = "gold coin", chance = 100000, maxCount = 75 }, -- gold coin
+	{ id = "vampire shield", chance = 4500 }, -- vampire shield
 }
 
 monster.attacks = {

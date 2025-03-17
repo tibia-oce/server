@@ -1,5 +1,4 @@
--- Diseased Bill (Tibia Wiki: https://tibia.fandom.com/wiki/Diseased_Bill)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Diseased Bill")
 local monster = {}

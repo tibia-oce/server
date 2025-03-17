@@ -1,5 +1,4 @@
--- Flamethrower (Tibia Wiki: https://tibia.fandom.com/wiki/Flamethrower)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Flamethrower")
 local monster = {}

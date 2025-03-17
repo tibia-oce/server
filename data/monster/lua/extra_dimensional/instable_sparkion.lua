@@ -1,5 +1,4 @@
--- Instable Sparkion (Tibia Wiki: https://tibia.fandom.com/wiki/Instable_Sparkion)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Instable Sparkion")
 local monster = {}
@@ -70,16 +69,16 @@ monster.voices = {
 monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
 	{ id = 3035, chance = 20000 }, -- platinum coin
-	{ id = 23502, chance = 6000 }, -- sparkion claw
+	{ id = "sparkion claw", chance = 6000 }, -- sparkion claw
 	{ id = 23545, chance = 4900 }, -- energy drink
 	{ id = 7642, chance = 4800 }, -- great spirit potion
 	{ id = 238, chance = 4400 }, -- great mana potion
-	{ id = 239, chance = 4200 }, -- great health potion
+	{ id = "great health potion", chance = 4200 }, -- great health potion
 	{ id = 23535, chance = 4200 }, -- energy bar
 	{ id = 23503, chance = 4000 }, -- sparkion tail
 	{ id = 23504, chance = 4000 }, -- sparkion legs
 	{ id = 23505, chance = 3500 }, -- sparkion stings
-	{ id = 16124, chance = 2600 }, -- blue crystal splinter
+	{ id = "blue crystal splinter", chance = 2600 }, -- blue crystal splinter
 	{ id = 16119, chance = 2100 }, -- blue crystal shard
 }
 

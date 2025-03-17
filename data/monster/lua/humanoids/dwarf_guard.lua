@@ -1,5 +1,4 @@
--- Dwarf Guard (Tibia Wiki: https://tibia.fandom.com/wiki/Dwarf_Guard)
--- Version: 6.1
+
 
 local mType = Game.createMonsterType("Dwarf Guard")
 local monster = {}
@@ -68,7 +67,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 40000, maxCount = 30 },
 	{ id = "small amethyst", chance = 140 },
-	{ id = 3092, chance = 190 }, -- axe ring
+	{ id = "axe ring", chance = 190 }, -- axe ring
 	{ id = "double axe", chance = 600 },
 	{ id = "battle hammer", chance = 4000 },
 	{ id = "steel helmet", chance = 1600 },
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "white mushroom", chance = 55000, maxCount = 2 },
 	{ id = "iron ore", chance = 510 },
 	{ id = "health potion", chance = 380 },
-	{ id = 12600, chance = 280 }, -- coal
+	{ id = "coal", chance = 280 }, -- coal
 }
 
 monster.attacks = {

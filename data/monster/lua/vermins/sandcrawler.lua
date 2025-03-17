@@ -1,5 +1,4 @@
--- Sandcrawler (Tibia Wiki: https://tibia.fandom.com/wiki/Sandcrawler)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Sandcrawler")
 local monster = {}

@@ -1,5 +1,4 @@
--- Boar (Tibia Wiki: https://tibia.fandom.com/wiki/Boar)
--- Version: 8.70
+
 
 local mType = Game.createMonsterType("Boar")
 local monster = {}

@@ -1,5 +1,4 @@
--- Orc Warrior (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Warrior)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Orc Warrior")
 local monster = {}

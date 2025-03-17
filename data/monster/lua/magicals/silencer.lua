@@ -1,5 +1,4 @@
--- Silencer (Tibia Wiki: https://tibia.fandom.com/wiki/Silencer)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Silencer")
 local monster = {}
@@ -76,7 +75,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 100 },
 	{ id = "platinum coin", chance = 100000, maxCount = 8 },
-	{ id = 3049, chance = 1200 }, -- stealth ring
+	{ id = "stealth ring", chance = 1200 }, -- stealth ring
 	{ id = "boots of haste", chance = 360 },
 	{ id = "dark shield", chance = 2000 },
 	{ id = "assassin star", chance = 7600, maxCount = 10 },

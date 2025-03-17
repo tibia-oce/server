@@ -1,5 +1,4 @@
--- Ogre Savage (Tibia Wiki: https://tibia.fandom.com/wiki/Ogre_Savage)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Ogre Savage")
 local monster = {}
@@ -70,10 +69,10 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 92000, maxCount = 130 }, -- gold coin
-	{ id = 22193, chance = 3200, maxCount = 2 }, -- onyx chip
-	{ id = 22194, chance = 3200, maxCount = 3 }, -- opal
+	{ id = "onyx chip", chance = 3200, maxCount = 2 }, -- onyx chip
+	{ id = "opal", chance = 3200, maxCount = 3 }, -- opal
 	{ id = 3598, chance = 2200, maxCount = 7 }, -- cookie
-	{ id = 8016, chance = 1200, maxCount = 2 }, -- jalapeno pepper
+	{ id = "jalapeno pepper", chance = 1200, maxCount = 2 }, -- jalapeno pepper
 	{ id = 9057, chance = 1200, maxCount = 2 }, -- small topaz
 	{ id = 3030, chance = 1200, maxCount = 2 }, -- small ruby
 	{ id = 7439, chance = 1200 }, -- berserk potion

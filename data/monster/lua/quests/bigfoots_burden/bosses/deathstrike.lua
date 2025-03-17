@@ -1,5 +1,4 @@
--- Deathstrike (Tibia Wiki: https://tibia.fandom.com/wiki/Deathstrike)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Deathstrike")
 local monster = {}
@@ -80,12 +79,12 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 16175, chance = 8430 }, -- shiny blade
-	{ id = 16162, chance = 6570 }, -- mycological mace
+	{ id = "mycological mace", chance = 6570 }, -- mycological mace
 	{ id = 16160, chance = 10480 }, -- crystalline sword
 	{ id = 16136, chance = 100000 }, -- deathstrike's snippet
 	{ id = 16163, chance = 12380 }, -- crystal crossbow
-	{ id = 16161, chance = 7430 }, -- crystalline axe
-	{ id = 16164, chance = 11430 }, -- mycological bow
+	{ id = "crystalline axe", chance = 7430 }, -- crystalline axe
+	{ id = "mycological bow", chance = 11430 }, -- mycological bow
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Enslaved Dwarf (Tibia Wiki: https://tibia.fandom.com/wiki/Enslaved_Dwarf)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Enslaved Dwarf")
 local monster = {}
@@ -73,7 +72,7 @@ monster.loot = {
 	{ id = "small emerald", chance = 10290, maxCount = 2 },
 	{ id = "small amethyst", chance = 10680, maxCount = 2 },
 	{ id = "platinum coin", chance = 100000, maxCount = 6 },
-	{ id = 3092, chance = 1550 }, -- axe ring
+	{ id = "axe ring", chance = 1550 }, -- axe ring
 	{ id = "war hammer", chance = 5050 },
 	{ id = "warrior helmet", chance = 580 },
 	{ id = "guardian shield", chance = 2300 },
@@ -88,7 +87,7 @@ monster.loot = {
 	{ id = "great mana potion", chance = 6660, maxCount = 2 },
 	{ id = "great health potion", chance = 7960 },
 	{ id = "shiny stone", chance = 4660 },
-	{ id = 12600, chance = 780 }, -- coal
+	{ id = "coal", chance = 780 }, -- coal
 	{ id = "green crystal shard", chance = 1750 },
 	{ id = "green crystal splinter", chance = 3110 },
 	{ id = "brown crystal splinter", chance = 5630, maxCount = 2 },

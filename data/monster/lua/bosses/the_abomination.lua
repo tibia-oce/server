@@ -1,5 +1,4 @@
--- The Abomination (Tibia Wiki: https://tibia.fandom.com/wiki/The_Abomination)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("The Abomination")
 local monster = {}
@@ -87,9 +86,9 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
-	{ id = 3035, chance = 10000, maxCount = 3 }, -- platinum coin
-	{ id = 6499, chance = 2857 }, -- demonic essence
-	{ id = 5944, chance = 2500 }, -- soul orb
+	{ id = "platinum coin", chance = 10000, maxCount = 3 }, -- platinum coin
+	{ id = "demonic essence", chance = 2857 }, -- demonic essence
+	{ id = "soul orb", chance = 2500 }, -- soul orb
 }
 
 monster.attacks = {

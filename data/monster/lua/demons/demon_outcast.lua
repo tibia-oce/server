@@ -1,5 +1,4 @@
--- Demon Outcast (Tibia Wiki: https://tibia.fandom.com/wiki/Demon_Outcast)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Demon Outcast")
 local monster = {}
@@ -84,9 +83,9 @@ monster.loot = {
 	{ id = "small emerald", chance = 10000, maxCount = 5 },
 	{ id = "platinum coin", chance = 100000, maxCount = 6 },
 	{ id = "might ring", chance = 910 },
-	{ id = 3049, chance = 1300 }, -- stealth ring
+	{ id = "stealth ring", chance = 1300 }, -- stealth ring
 	{ id = "platinum amulet", chance = 1000 },
-	{ id = 3098, chance = 3000 }, -- ring of healing
+	{ id = "ring of healing", chance = 3000 }, -- ring of healing
 	{ id = "giant sword", chance = 2000 },
 	{ id = "ice rapier", chance = 660 },
 	{ id = "devil helmet", chance = 910 },

@@ -1,5 +1,4 @@
--- Barbarian Brutetamer (Tibia Wiki: https://tibia.fandom.com/wiki/Barbarian_Brutetamer)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Barbarian Brutetamer")
 local monster = {}
@@ -76,7 +75,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2824, chance = 4750 }, -- book
+	{ id = "book", chance = 4750 }, -- book
 	{ id = "gold coin", chance = 90230, maxCount = 15 },
 	{ id = 3289, chance = 6550 }, -- staff
 	{ id = "chain armor", chance = 9300 },

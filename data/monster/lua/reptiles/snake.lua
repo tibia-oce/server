@@ -1,5 +1,4 @@
--- Snake (Tibia Wiki: https://tibia.fandom.com/wiki/Snake)
--- Version: 3.0
+
 
 local mType = Game.createMonsterType("Snake")
 local monster = {}

@@ -1,5 +1,4 @@
--- Death Priest (Tibia Wiki: https://tibia.fandom.com/wiki/Death_Priest)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Death Priest")
 local monster = {}
@@ -68,12 +67,12 @@ monster.loot = {
 	{ id = "white pearl", chance = 3000 },
 	{ id = "gold coin", chance = 70000, maxCount = 144 },
 	{ id = "scarab coin", chance = 10000, maxCount = 3 },
-	{ id = 3059, chance = 6800 }, -- spellbook
-	{ id = 3098, chance = 1000 }, -- ring of healing
+	{ id = "spellbook", chance = 6800 }, -- spellbook
+	{ id = "ring of healing", chance = 1000 }, -- ring of healing
 	{ id = "orichalcum pearl", chance = 6000, maxCount = 4 },
 	{ id = "health potion", chance = 15000 },
 	{ id = "mana potion", chance = 15000 },
-	{ id = 12482, chance = 27000 }, -- hieroglyph banner
+	{ id = "hieroglyph banner", chance = 27000 }, -- hieroglyph banner
 }
 
 monster.attacks = {

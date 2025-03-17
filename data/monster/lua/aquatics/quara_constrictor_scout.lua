@@ -1,5 +1,4 @@
--- Quara Constrictor Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Constrictor_Scout)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Quara Constrictor Scout")
 local monster = {}

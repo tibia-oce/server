@@ -1,5 +1,4 @@
--- Gang Member (Tibia Wiki: https://tibia.fandom.com/wiki/Gang_Member)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Gang Member")
 local monster = {}
@@ -69,7 +68,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 50110, maxCount = 30 },
-	{ id = 3093, chance = 740 }, -- club ring
+	{ id = "club ring", chance = 740 }, -- club ring
 	{ id = "studded legs", chance = 5220 },
 	{ id = "leather legs", chance = 15330 },
 }

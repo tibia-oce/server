@@ -1,5 +1,4 @@
--- Vampire Pig (Tibia Wiki: https://tibia.fandom.com/wiki/Vampire_Pig)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Vampire Pig")
 local monster = {}

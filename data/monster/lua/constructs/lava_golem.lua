@@ -1,5 +1,4 @@
--- Lava Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Lava_Golem)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Lava Golem")
 local monster = {}
@@ -68,7 +67,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 199 },
 	{ id = "platinum coin", chance = 100000, maxCount = 11 },
 	{ id = "yellow gem", chance = 6480 },
-	{ id = 3039, chance = 1180 }, -- red gem
+	{ id = "red gem", chance = 1180 }, -- red gem
 	{ id = "wand of inferno", chance = 2950 },
 	{ id = "fire sword", chance = 1710 },
 	{ id = "fire axe", chance = 1560 },

@@ -1,5 +1,4 @@
--- Demon Skeleton (Tibia Wiki: https://tibia.fandom.com/wiki/Demon_Skeleton)
--- Version: 5.0
+
 
 local mType = Game.createMonsterType("Demon Skeleton")
 local monster = {}

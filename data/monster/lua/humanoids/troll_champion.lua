@@ -1,5 +1,4 @@
--- Troll Champion (Tibia Wiki: https://tibia.fandom.com/wiki/Troll_Champion)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Troll Champion")
 local monster = {}

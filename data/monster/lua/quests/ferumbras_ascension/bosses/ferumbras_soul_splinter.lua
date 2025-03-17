@@ -1,5 +1,4 @@
--- Ferumbras Soul Splinter (Tibia Wiki: https://tibia.fandom.com/wiki/Ferumbras_Soul_Splinter)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Ferumbras Soul Splinter")
 local monster = {}

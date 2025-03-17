@@ -1,5 +1,4 @@
--- Juggernaut (Tibia Wiki: https://tibia.fandom.com/wiki/Juggernaut)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Juggernaut")
 local monster = {}
@@ -79,7 +78,7 @@ monster.loot = {
 	{ id = "platinum coin", chance = 100000, maxCount = 15 },
 	{ id = "violet gem", chance = 830 },
 	{ id = "green gem", chance = 869 },
-	{ id = 3039, chance = 13850 }, -- red gem
+	{ id = "red gem", chance = 13850 }, -- red gem
 	{ id = "dragon hammer", chance = 9000 },
 	{ id = "heavy mace", chance = 400 },
 	{ id = "war axe", chance = 400 },
@@ -87,11 +86,11 @@ monster.loot = {
 	{ id = "golden legs", chance = 500 },
 	{ id = "knight armor", chance = 4990 },
 	{ id = "mastermind shield", chance = 800 },
-	{ id = 3481, chance = 280 }, -- closed trap
+	{ id = "closed trap", chance = 280 }, -- closed trap
 	{ id = "ham", chance = 60000, maxCount = 8 },
 	{ id = "soul orb", chance = 33333 },
 	{ id = "demonic essence", chance = 45333 },
-	{ id = "flask of demonic blood", chance = 25000, maxCount = 4 },
+	{ id = 6558, chance = 25000, maxCount = 4}, -- "flask of demonic blood"
 	{ id = "onyx arrow", chance = 11111, maxCount = 15 },
 	{ id = "assassin star", chance = 25000, maxCount = 10 },
 	{ id = "titan axe", chance = 4430 },

@@ -1,5 +1,4 @@
--- Purple Butterfly (Tibia Wiki: https://tibia.fandom.com/wiki/Purple_Butterfly)
--- Version: 7.50
+
 
 local mType = Game.createMonsterType("Purple Butterfly")
 local monster = {}

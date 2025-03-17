@@ -1,5 +1,4 @@
--- Grandfather Tridian (Tibia Wiki: https://tibia.fandom.com/wiki/Grandfather_Tridian)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Grandfather Tridian")
 local monster = {}

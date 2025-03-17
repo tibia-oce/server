@@ -1,5 +1,4 @@
--- Shardhead (Tibia Wiki: https://tibia.fandom.com/wiki/Shardhead)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Shardhead")
 local monster = {}
@@ -65,11 +64,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 99700, maxCount = 87 }, -- gold coin
-	{ id = 7290, chance = 40000 }, -- shard
+	{ id = "gold coin", chance = 99700, maxCount = 87 }, -- gold coin
+	{ id = "shard", chance = 40000 }, -- shard
 	{ id = 236, chance = 100000 }, -- strong health potion
-	{ id = 9661, chance = 40000 }, -- frosty heart
-	{ id = 7441, chance = 80000 }, -- ice cube
+	{ id = "frosty heart", chance = 40000 }, -- frosty heart
+	{ id = "ice cube", chance = 80000 }, -- ice cube
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Phantasm (Tibia Wiki: https://tibia.fandom.com/wiki/Phantasm)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Phantasm")
 local monster = {}
@@ -82,7 +81,7 @@ monster.loot = {
 	{ id = "small emerald", chance = 10190, maxCount = 3 },
 	{ id = "small amethyst", chance = 14570, maxCount = 3 },
 	{ id = "platinum coin", chance = 87730, maxCount = 4 },
-	{ id = 3049, chance = 550 }, -- stealth ring
+	{ id = "stealth ring", chance = 550 }, -- stealth ring
 	{ id = "blank rune", chance = 22500, maxCount = 2 },
 	{ id = "crown armor", chance = 660 },
 	{ id = "shadow herb", chance = 26930, maxCount = 2 },

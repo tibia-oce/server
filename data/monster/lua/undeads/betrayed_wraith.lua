@@ -1,5 +1,4 @@
--- Betrayed Wraith (Tibia Wiki: https://tibia.fandom.com/wiki/Betrayed_Wraith)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Betrayed Wraith")
 local monster = {}

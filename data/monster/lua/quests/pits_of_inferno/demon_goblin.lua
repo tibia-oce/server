@@ -1,5 +1,4 @@
--- Demon Goblin (Tibia Wiki: https://tibia.fandom.com/wiki/Demon_Goblin)
--- Version: 7.40
+
 
 local mType = Game.createMonsterType("Demon Goblin")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "leather helmet", chance = 1940 },
 	{ id = "leather armor", chance = 2510 },
 	{ id = "small axe", chance = 9700 },
-	{ id = 3578, chance = 12750 }, -- fish
+	{ id = "fish", chance = 12750 }, -- fish
 	{ id = "goblin ear", chance = 910 },
 }
 

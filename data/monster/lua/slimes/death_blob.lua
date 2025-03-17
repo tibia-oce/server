@@ -1,5 +1,4 @@
--- Death Blob (Tibia Wiki: https://tibia.fandom.com/wiki/Death_Blob)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Death Blob")
 local monster = {}

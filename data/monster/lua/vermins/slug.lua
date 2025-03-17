@@ -1,5 +1,4 @@
--- Slug (Tibia Wiki: https://tibia.fandom.com/wiki/Slug)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Slug")
 local monster = {}

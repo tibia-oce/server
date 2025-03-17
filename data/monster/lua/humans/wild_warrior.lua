@@ -1,5 +1,4 @@
--- Wild Warrior (Tibia Wiki: https://tibia.fandom.com/wiki/Wild_Warrior)
--- Version: 5.0
+
 
 local mType = Game.createMonsterType("Wild Warrior")
 local monster = {}

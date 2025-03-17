@@ -1,5 +1,4 @@
--- Sandstone Scorpion (Tibia Wiki: https://tibia.fandom.com/wiki/Sandstone_Scorpion)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Sandstone Scorpion")
 local monster = {}

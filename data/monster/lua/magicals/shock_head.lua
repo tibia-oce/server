@@ -1,5 +1,4 @@
--- Shock Head (Tibia Wiki: https://tibia.fandom.com/wiki/Shock_Head)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Shock Head")
 local monster = {}
@@ -69,7 +68,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "small sapphire", chance = 5000 },
-	{ id = 3031, chance = 92000, maxCount = 200 }, -- gold coin
+	{ id = "gold coin", chance = 92000, maxCount = 200 }, -- gold coin
 	{ id = "royal helmet", chance = 270 },
 }
 

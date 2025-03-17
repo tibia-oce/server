@@ -1,5 +1,4 @@
--- Cyclops Drone (Tibia Wiki: https://tibia.fandom.com/wiki/Cyclops_Drone)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Cyclops Drone")
 local monster = {}
@@ -69,14 +68,14 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 82000, maxCount = 30 },
-	{ id = 3093, chance = 90 }, -- club ring
+	{ id = "club ring", chance = 90 }, -- club ring
 	{ id = 2381, chance = 680 },
 	{ id = "short sword", chance = 8000 },
 	{ id = "dark helmet", chance = 190 },
 	{ id = "plate shield", chance = 2000 },
 	{ id = "battle shield", chance = 1600 },
 	{ id = "meat", chance = 50430, maxCount = 2 },
-	{ id = 7398, chance = 120 }, -- cyclops trophy
+	{ id = "cyclops trophy", chance = 120 }, -- cyclops trophy
 	{ id = "strong health potion", chance = 520 },
 	{ id = "cyclops toe", chance = 6750 },
 }

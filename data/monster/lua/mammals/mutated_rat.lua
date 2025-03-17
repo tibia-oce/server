@@ -1,5 +1,4 @@
--- Mutated Rat (Tibia Wiki: https://tibia.fandom.com/wiki/Mutated_Rat)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Mutated Rat")
 local monster = {}
@@ -66,7 +65,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 78500, maxCount = 130 },
-	{ id = 3049, chance = 540 }, -- stealth ring
+	{ id = "stealth ring", chance = 540 }, -- stealth ring
 	{ id = 3114, chance = 20240 }, -- skull
 	{ id = "mouldy cheese", chance = 950 },
 	{ id = 2381, chance = 2990 },

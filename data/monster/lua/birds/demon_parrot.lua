@@ -1,5 +1,4 @@
--- Demon Parrot (Tibia Wiki: https://tibia.fandom.com/wiki/Demon_Parrot)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Demon Parrot")
 local monster = {}

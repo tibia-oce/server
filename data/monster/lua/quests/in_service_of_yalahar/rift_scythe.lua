@@ -1,5 +1,4 @@
--- Rift Scythe (Tibia Wiki: https://tibia.fandom.com/wiki/Rift_Scythe)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Rift Scythe")
 local monster = {}

@@ -1,5 +1,4 @@
--- Rocko (Tibia Wiki: https://tibia.fandom.com/wiki/Rocko)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Rocko")
 local monster = {}

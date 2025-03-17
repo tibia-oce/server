@@ -1,5 +1,4 @@
--- Lonely Souleater (Tibia Wiki: https://tibia.fandom.com/wiki/Lonely_Souleater)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Lonely Souleater")
 local monster = {}
@@ -71,10 +70,10 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 11681, chance = 1990 }, -- ectoplasmic sushi
-	{ id = 11679, chance = 20 }, -- souleater trophy
+	{ id = "souleater trophy", chance = 20 }, -- souleater trophy
 	{ id = 3031, chance = 88060, maxCount = 200 }, -- gold coin
-	{ id = 11680, chance = 15060 }, -- lizard essence
-	{ id = 238, chance = 7960 }, -- great mana potion
+	{ id = "lizard essence", chance = 15060 }, -- lizard essence
+	{ id = "great mana potion", chance = 7960 }, -- great mana potion
 	{ id = 7643, chance = 9400 }, -- ultimate health potion
 	{ id = 3035, chance = 49610, maxCount = 6 }, -- platinum coin
 	{ id = 3073, chance = 910 }, -- wand of cosmic energy

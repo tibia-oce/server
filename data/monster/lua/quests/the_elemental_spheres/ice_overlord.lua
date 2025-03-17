@@ -1,5 +1,4 @@
--- Ice Overlord (Tibia Wiki: https://tibia.fandom.com/wiki/Ice_Overlord)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Ice Overlord")
 local monster = {}

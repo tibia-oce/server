@@ -1,5 +1,4 @@
--- Minotaur Amazon (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Amazon)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Minotaur Amazon")
 local monster = {}
@@ -66,14 +65,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 7368, chance = 3040, maxCount = 5 }, -- assassin star
+	{ id = "assassin star", chance = 3040, maxCount = 5 }, -- assassin star
 	{ id = 21204, chance = 19830 }, -- cowbell
 	{ id = 3031, chance = 100000, maxCount = 196 }, -- gold coin
 	{ id = 3582, chance = 60780 }, -- ham
 	{ id = 3577, chance = 4920 }, -- meat
 	{ id = 3035, chance = 62080, maxCount = 3 }, -- platinum coin
-	{ id = 9058, chance = 290 }, -- gold ingot
-	{ id = 5878, chance = 17950 }, -- minotaur leather
+	{ id = "gold ingot", chance = 290 }, -- gold ingot
+	{ id = "minotaur leather", chance = 17950 }, -- minotaur leather
 	{ id = 239, chance = 7670 }, -- great health potion
 	{ id = 238, chance = 7380 }, -- great mana potion
 	{ id = 11472, chance = 6800, maxCount = 2 }, -- minotaur horn

@@ -1,5 +1,4 @@
--- Askarak Prince (Tibia Wiki: https://tibia.fandom.com/wiki/Askarak_Prince)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Askarak Prince")
 local monster = {}
@@ -75,7 +74,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 86 },
 	{ id = "small emerald", chance = 12500, maxCount = 5 },
 	{ id = "platinum coin", chance = 35333, maxCount = 4 },
-	{ id = 3049, chance = 4545 }, -- stealth ring
+	{ id = "stealth ring", chance = 4545 }, -- stealth ring
 	{ id = "giant sword", chance = 320 },
 	{ id = "brown mushroom", chance = 6666, maxCount = 5 },
 	{ id = "magic sulphur", chance = 740 },

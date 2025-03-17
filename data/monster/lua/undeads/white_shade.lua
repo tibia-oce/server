@@ -1,5 +1,4 @@
--- White Shade (Tibia Wiki: https://tibia.fandom.com/wiki/White_Shade)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("White Shade")
 local monster = {}

@@ -1,5 +1,4 @@
--- Lizard Legionnaire (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Legionnaire)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Lizard Legionnaire")
 local monster = {}

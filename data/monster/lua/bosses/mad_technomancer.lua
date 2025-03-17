@@ -1,5 +1,4 @@
--- Mad Technomancer (Tibia Wiki: https://tibia.fandom.com/wiki/Mad_Technomancer)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Mad Technomancer")
 local monster = {}
@@ -69,7 +68,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 396, chance = 1000000 }, -- technomancer beard
+	{ id = "technomancer beard", chance = 1000000 }, -- technomancer beard
 }
 
 monster.attacks = {

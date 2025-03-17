@@ -1,5 +1,4 @@
--- Corym Charlatan (Tibia Wiki: https://tibia.fandom.com/wiki/Corym_Charlatan)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Corym Charlatan")
 local monster = {}

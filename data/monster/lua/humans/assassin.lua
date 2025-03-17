@@ -1,5 +1,4 @@
--- Assassin (Tibia Wiki: https://tibia.fandom.com/wiki/Assassin)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Assassin")
 local monster = {}

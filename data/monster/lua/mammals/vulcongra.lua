@@ -1,5 +1,4 @@
--- Vulcongra (Tibia Wiki: https://tibia.fandom.com/wiki/Vulcongra)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Vulcongra")
 local monster = {}
@@ -73,7 +72,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 7 },
 	{ id = "platinum coin", chance = 14780 },
 	{ id = "wand of inferno", chance = 1000 },
-	{ id = 3091, chance = 2920 }, -- sword ring
+	{ id = "sword ring", chance = 2920 }, -- sword ring
 	{ id = "fire sword", chance = 260 },
 	{ id = "banana", chance = 10420, maxCount = 10 },
 	{ id = "strong health potion", chance = 7100 },
@@ -81,7 +80,7 @@ monster.loot = {
 	{ id = "magma amulet", chance = 970 },
 	{ id = "magma coat", chance = 140 },
 	{ id = "fiery heart", chance = 9380 },
-	{ id = 12600, chance = 940 }, -- coal
+	{ id = "coal", chance = 940 }, -- coal
 	{ id = "brown crystal splinter", chance = 4850 },
 	{ id = "red crystal fragment", chance = 2280 },
 	{ id = "magma clump", chance = 12440 },

@@ -1,5 +1,4 @@
--- Midnight Spawn (Tibia Wiki: https://tibia.fandom.com/wiki/Midnight_Spawn)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Midnight Spawn")
 local monster = {}

@@ -1,5 +1,4 @@
--- Renegade Quara Predator (Tibia Wiki: https://tibia.fandom.com/wiki/Renegade_Quara_Predator)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Renegade Quara Predator")
 local monster = {}

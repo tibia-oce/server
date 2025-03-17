@@ -1,5 +1,4 @@
--- Undead Cavebear (Tibia Wiki: https://tibia.fandom.com/wiki/Undead_Cavebear)
--- Version: 8.70
+
 
 local mType = Game.createMonsterType("Undead Cavebear")
 local monster = {}

@@ -1,5 +1,4 @@
--- Smuggler Baron Silvertoe (Tibia Wiki: https://tibia.fandom.com/wiki/Smuggler_Baron_Silvertoe)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Smuggler Baron Silvertoe")
 local monster = {}
@@ -82,8 +81,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 80000, maxCount = 30 }, -- gold coin
-	{ id = 3294, chance = 10000 }, -- short sword
+	{ id = "gold coin", chance = 80000, maxCount = 30 }, -- gold coin
+	{ id = "short sword", chance = 10000 }, -- short sword
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Inky (Tibia Wiki: https://tibia.fandom.com/wiki/Inky)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Inky")
 local monster = {}
@@ -73,7 +72,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 12000, maxCount = 13 }, -- gold coin
+	{ id = "gold coin", chance = 12000, maxCount = 13 }, -- gold coin
 }
 
 monster.attacks = {

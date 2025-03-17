@@ -1,5 +1,4 @@
--- Thornback Tortoise (Tibia Wiki: https://tibia.fandom.com/wiki/Thornback_Tortoise)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Thornback Tortoise")
 local monster = {}
@@ -67,11 +66,11 @@ monster.loot = {
 	{ id = "black pearl", chance = 800 },
 	{ id = "gold coin", chance = 89500, maxCount = 48 },
 	{ id = "war hammer", chance = 260 },
-	{ id = 3578, chance = 10800, maxCount = 2 }, -- fish
+	{ id = "fish", chance = 10800, maxCount = 2 }, -- fish
 	{ id = "white mushroom", chance = 1200 },
 	{ id = "brown mushroom", chance = 700 },
 	{ id = "tortoise egg", chance = 790, maxCount = 3 },
-	{ id = 5899, chance = 800 }, -- turtle shell
+	{ id = "turtle shell", chance = 800 }, -- turtle shell
 	{ id = "health potion", chance = 1600 },
 	{ id = "thorn", chance = 15980 },
 }

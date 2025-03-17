@@ -1,5 +1,4 @@
--- Coral Frog (Tibia Wiki: https://tibia.fandom.com/wiki/Coral_Frog)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Coral Frog")
 local monster = {}

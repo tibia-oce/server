@@ -1,5 +1,4 @@
--- Stabilizing Dread Intruder (Tibia Wiki: https://tibia.fandom.com/wiki/Stabilizing_Dread_Intruder)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Stabilizing Dread Intruder")
 local monster = {}
@@ -71,14 +70,14 @@ monster.loot = {
 	{ id = 3035, chance = 20000, maxCount = 5 }, -- platinum coin
 	{ id = 23535, chance = 12200 }, -- energy bar
 	{ id = 238, chance = 10800 }, -- great mana potion
-	{ id = 23513, chance = 9800 }, -- strange proto matter
+	{ id = "strange proto matter", chance = 9800 }, -- strange proto matter
 	{ id = 23517, chance = 9400 }, -- solid rage
 	{ id = 23522, chance = 9000 }, -- glistening bone
 	{ id = 7643, chance = 8700 }, -- ultimate health potion
-	{ id = 23545, chance = 8700 }, -- energy drink
+	{ id = "energy drink", chance = 8700 }, -- energy drink
 	{ id = 7642, chance = 8700 }, -- great spirit potion
 	{ id = 3033, chance = 5000, maxCount = 2 }, -- small amethyst
-	{ id = 16124, chance = 4800 }, -- blue crystal splinter
+	{ id = "blue crystal splinter", chance = 4800 }, -- blue crystal splinter
 	{ id = 3029, chance = 4400, maxCount = 2 }, -- small sapphire
 	{ id = 16120, chance = 4200 }, -- violet crystal shard
 	{ id = 3030, chance = 3400, maxCount = 2 }, -- small ruby

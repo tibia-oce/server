@@ -1,5 +1,4 @@
--- Wisp (Tibia Wiki: https://tibia.fandom.com/wiki/Wisp)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Wisp")
 local monster = {}

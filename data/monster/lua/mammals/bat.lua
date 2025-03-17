@@ -1,5 +1,4 @@
--- Bat (Tibia Wiki: https://tibia.fandom.com/wiki/Bat)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Bat")
 local monster = {}

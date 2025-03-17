@@ -1,5 +1,4 @@
--- Polar Bear (Tibia Wiki: https://tibia.fandom.com/wiki/Polar_Bear)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Polar Bear")
 local monster = {}

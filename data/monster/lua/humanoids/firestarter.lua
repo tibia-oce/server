@@ -1,5 +1,4 @@
--- Firestarter (Tibia Wiki: https://tibia.fandom.com/wiki/Firestarter)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Firestarter")
 local monster = {}
@@ -74,11 +73,11 @@ monster.loot = {
 	{ id = "longsword", chance = 6000 },
 	{ id = "bow", chance = 4000 },
 	{ id = "grapes", chance = 20000 },
-	{ id = 5921, chance = 930 }, -- heaven blossom
+	{ id = "heaven blossom", chance = 930 }, -- heaven blossom
 	{ id = "elvish bow", chance = 100 },
 	{ id = "flaming arrow", chance = 30000, maxCount = 12 },
 	{ id = "elvish talisman", chance = 5000 },
-	{ id = 12600, chance = 15280 }, -- coal
+	{ id = "coal", chance = 15280 }, -- coal
 	{ id = "flintstone", chance = 340 },
 }
 

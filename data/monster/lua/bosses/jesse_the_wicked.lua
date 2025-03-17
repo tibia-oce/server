@@ -1,5 +1,4 @@
--- Jesse the Wicked (Tibia Wiki: https://tibia.fandom.com/wiki/Jesse_the_Wicked)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Jesse the Wicked")
 local monster = {}

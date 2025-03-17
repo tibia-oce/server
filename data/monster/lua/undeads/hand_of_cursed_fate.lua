@@ -1,5 +1,4 @@
--- Hand of Cursed Fate (Tibia Wiki: https://tibia.fandom.com/wiki/Hand_of_Cursed_Fate)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Hand of Cursed Fate")
 local monster = {}
@@ -74,7 +73,7 @@ monster.loot = {
 	{ id = "platinum coin", chance = 100000, maxCount = 7 },
 	{ id = "violet gem", chance = 700 },
 	{ id = "yellow gem", chance = 5940 },
-	{ id = 3051, chance = 3150 }, -- energy ring
+	{ id = "energy ring", chance = 3150 }, -- energy ring
 	{ id = "platinum amulet", chance = 1005 },
 	{ id = "mind stone", chance = 9090 },
 	{ id = "wand of inferno", chance = 5590 },
@@ -88,7 +87,7 @@ monster.loot = {
 	{ id = "soul orb", chance = 31111 },
 	{ id = 6299, chance = 1750 }, -- death ring
 	{ id = "demonic essence", chance = 12000 },
-	{ id = "flask of demonic blood", chance = 30000, maxCount = 4 },
+	{ id = 6558, chance = 30000, maxCount = 4}, -- "flask of demonic blood"
 	{ id = "assassin star", chance = 7692, maxCount = 5 },
 	{ id = "abyss hammer", chance = 495 },
 	{ id = "great mana potion", chance = 19990, maxCount = 2 },

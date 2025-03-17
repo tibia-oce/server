@@ -1,5 +1,4 @@
--- Rupture (Tibia Wiki: https://tibia.fandom.com/wiki/Rupture)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Rupture")
 local monster = {}
@@ -86,12 +85,12 @@ monster.loot = {
 	{ id = 16120, chance = 8000, maxCount = 3 }, -- violet crystal shard
 	{ id = 23535, chance = 8000, maxCount = 5 }, -- energy bar
 	{ id = 23506, chance = 8000 }, -- plasma pearls
-	{ id = 23510, chance = 100000 }, -- odd organ
+	{ id = "odd organ", chance = 100000 }, -- odd organ
 	{ id = 22721, chance = 100000 }, -- gold token
 	{ id = 23509, chance = 100000 }, -- mysterious remains
 	{ id = 3038, chance = 6000 }, -- green gem
-	{ id = 7427, chance = 6000 }, -- chaos mace
-	{ id = 23531, chance = 4000 }, -- ring of green plasma
+	{ id = "chaos mace", chance = 6000 }, -- chaos mace
+	{ id = "ring of green plasma", chance = 4000 }, -- ring of green plasma
 	{ id = 23533, chance = 4000 }, -- ring of red plasma
 	{ id = 23474, chance = 2000, unique = true }, -- tiara of power
 	{ id = 23477, chance = 2000, unique = true }, -- void boots

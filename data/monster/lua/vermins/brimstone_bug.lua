@@ -1,5 +1,4 @@
--- Brimstone Bug (Tibia Wiki: https://tibia.fandom.com/wiki/Brimstone_Bug)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("Brimstone Bug")
 local monster = {}
@@ -66,7 +65,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 200 },
 	{ id = "small emerald", chance = 2702, maxCount = 4 },
-	{ id = 3049, chance = 892 }, -- stealth ring
+	{ id = "stealth ring", chance = 892 }, -- stealth ring
 	{ id = "platinum amulet", chance = 110 },
 	{ id = "magic sulphur", chance = 1639 },
 	{ id = "strong health potion", chance = 9003 },

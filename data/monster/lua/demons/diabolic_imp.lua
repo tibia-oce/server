@@ -1,5 +1,4 @@
--- Diabolic Imp (Tibia Wiki: https://tibia.fandom.com/wiki/Diabolic_Imp)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Diabolic Imp")
 local monster = {}
@@ -72,18 +71,18 @@ monster.loot = {
 	{ id = "gold coin", chance = 40000, maxCount = 97 },
 	{ id = "gold coin", chance = 3390, maxCount = 7 },
 	{ id = "small amethyst", chance = 2250, maxCount = 3 },
-	{ id = 3049, chance = 2702 }, -- stealth ring
+	{ id = "stealth ring", chance = 2702 }, -- stealth ring
 	{ id = "necrotic rod", chance = 830 },
 	{ id = "blank rune", chance = 16666, maxCount = 2 },
 	{ id = "double axe", chance = 1994 },
-	{ id = 3307, chance = 5660 }, -- scimitar
+	{ id = "scimitar", chance = 5660 }, -- scimitar
 	{ id = "guardian shield", chance = 8130 },
 	{ id = "pitchfork", chance = 50000 },
 	{ id = "cleaver", chance = 8830 },
 	{ id = "soul orb", chance = 7230 },
 	{ id = 6299, chance = 120 }, -- death ring
 	{ id = "demonic essence", chance = 8000 },
-	{ id = "flask of demonic blood", chance = 25000, maxCount = 2 },
+	{ id = 6558, chance = 25000, maxCount = 2}, -- "flask of demonic blood"
 	{ id = "magma coat", chance = 250 },
 	{ id = "magma monocle", chance = 430 },
 }

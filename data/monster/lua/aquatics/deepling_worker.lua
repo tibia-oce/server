@@ -1,5 +1,4 @@
--- Deepling Worker (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Worker)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Deepling Worker")
 local monster = {}
@@ -69,7 +68,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 75000, maxCount = 25 },
-	{ id = 3578, chance = 12020, maxCount = 3 }, -- fish
+	{ id = "fish", chance = 12020, maxCount = 3 }, -- fish
 	{ id = "deepling scales", chance = 6950 },
 	{ id = "heavy trident", chance = 510 },
 	{ id = "fish fin", chance = 350 },

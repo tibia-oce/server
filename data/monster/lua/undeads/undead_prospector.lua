@@ -1,5 +1,4 @@
--- Undead Prospector (Tibia Wiki: https://tibia.fandom.com/wiki/Undead_Prospector)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Undead Prospector")
 local monster = {}
@@ -70,7 +69,7 @@ monster.voices = {
 monster.loot = {
 	{ id = 2920, chance = 46150 }, -- torch
 	{ id = "gold coin", chance = 53850, maxCount = 30 },
-	{ id = 3052, chance = 200 }, -- life ring
+	{ id = "life ring", chance = 200 }, -- life ring
 	{ id = 3114, chance = 240 }, -- skull
 	{ id = "knife", chance = 15380 },
 	{ id = "brass helmet", chance = 23000 },

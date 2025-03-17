@@ -1,5 +1,4 @@
--- Gaz'Haragoth (Tibia Wiki: https://tibia.fandom.com/wiki/Gaz%27haragoth)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Gaz'Haragoth")
 local monster = {}
@@ -100,7 +99,7 @@ monster.loot = {
 	{ id = 20276, chance = 1100 }, -- dream warden mask
 	{ id = 281, chance = 6000 }, -- giant shimmering pearl (green)
 	{ id = 5954, chance = 6000 }, -- demon horn
-	{ id = 20274, chance = 6000, unique = true }, -- nightmare horn
+	{ id = "nightmare horn", chance = 6000, unique = true }, -- nightmare horn
 	{ id = 3052, chance = 6000 }, -- life ring
 	{ id = 20280, chance = 6000 }, -- nightmare beacon
 	{ id = 20279, chance = 6000 }, -- eye pod
@@ -121,7 +120,7 @@ monster.loot = {
 	{ id = 20080, chance = 1000 }, -- umbral hammer
 	{ id = 20077, chance = 500 }, -- umbral mace
 	{ id = 20083, chance = 250 }, -- umbral bow
-	{ id = 20086, chance = 400 }, -- umbral crossbow
+	{ id = "umbral crossbow", chance = 400 }, -- umbral crossbow
 	{ id = 20089, chance = 200 }, -- umbral spellbook
 	{ id = 20066, chance = 300 }, -- umbral masterblade
 	{ id = 20069, chance = 700 }, -- umbral master slayer
@@ -134,7 +133,7 @@ monster.loot = {
 	{ id = 20090, chance = 140 }, -- umbral master spellbook
 	{ id = 10345, chance = 6000 }, -- solitude charm
 	{ id = 10344, chance = 6000 }, -- twin sun charm
-	{ id = 10343, chance = 6000 }, -- spiritual charm
+	{ id = "spiritual charm", chance = 6000 }, -- spiritual charm
 	{ id = 10342, chance = 6000 }, -- unity charm
 	{ id = 10341, chance = 6000 }, -- phoenix charm
 }

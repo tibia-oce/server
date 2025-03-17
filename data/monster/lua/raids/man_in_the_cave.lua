@@ -1,5 +1,4 @@
--- Man in the Cave (Tibia Wiki: https://tibia.fandom.com/wiki/Man_in_the_Cave)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Man in the Cave")
 local monster = {}
@@ -83,10 +82,10 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3003, chance = 100000, maxCount = 3 }, -- rope
-	{ id = 7386, chance = 38000 }, -- mercenary sword
+	{ id = "mercenary sword", chance = 38000 }, -- mercenary sword
 	{ id = 5913, chance = 30000 }, -- brown piece of cloth
-	{ id = 3031, chance = 30000, maxCount = 39 }, -- gold coin
-	{ id = 7458, chance = 15000 }, -- fur cap
+	{ id = "gold coin", chance = 30000, maxCount = 39 }, -- gold coin
+	{ id = "fur cap", chance = 15000 }, -- fur cap
 	{ id = 7290, chance = 8000 }, -- shard
 }
 

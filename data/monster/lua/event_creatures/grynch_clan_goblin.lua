@@ -1,5 +1,4 @@
--- Grynch Clan Goblin (Tibia Wiki: https://tibia.fandom.com/wiki/Grynch_Clan_Goblin)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Grynch Clan Goblin")
 local monster = {}
@@ -94,18 +93,18 @@ monster.loot = {
 	{ id = 2639, chance = 4000 }, -- picture
 	{ id = 2950, chance = 5000 }, -- lute
 	{ id = 2983, chance = 500 }, -- flower bowl
-	{ id = 2992, chance = 7000, maxCount = 5 }, -- snowball
+	{ id = "snowball", chance = 7000, maxCount = 5 }, -- snowball
 	{ id = "piggy bank", chance = 1000 },
 	{ id = "gold coin", chance = 22500, maxCount = 22 },
 	{ id = "scarab coin", chance = 500, maxCount = 2 },
 	{ id = 3047, chance = 4000 }, -- magic light wand
 	{ id = "blank rune", chance = 5000 },
-	{ id = 3211, chance = 1500 }, -- witchesbroom
-	{ id = 3463, chance = 1000 }, -- mirror
+	{ id = "witchesbroom", chance = 1500 }, -- witchesbroom
+	{ id = "mirror", chance = 1000 }, -- mirror
 	{ id = "scarf", chance = 4000 },
 	{ id = "red apple", chance = 700, maxCount = 3 },
 	{ id = "orange", chance = 7000, maxCount = 3 },
-	{ id = 2679, chance = 7000, maxCount = 4 } -- "cherry",
+	{ id = 2679, chance = 7000, maxCount = 4}, -- "cherry"
 	{ id = "cookie", chance = 7000, maxCount = 5 },
 	{ id = "candy cane", chance = 5000, maxCount = 3 },
 	{ id = 3606, chance = 5000, maxCount = 2 }, -- egg

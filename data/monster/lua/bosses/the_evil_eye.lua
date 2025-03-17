@@ -1,5 +1,4 @@
--- The Evil Eye (Tibia Wiki: https://tibia.fandom.com/wiki/The_Evil_Eye)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("The Evil Eye")
 local monster = {}
@@ -77,7 +76,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 5898, chance = 100000 }, -- bonelord eye
+	{ id = "bonelord eye", chance = 100000 }, -- bonelord eye
 	{ id = "gold coin", chance = 100000, maxCount = 100 },
 	{ id = "gold coin", chance = 100000, maxCount = 100 },
 	{ id = "gold coin", chance = 100000, maxCount = 29 },

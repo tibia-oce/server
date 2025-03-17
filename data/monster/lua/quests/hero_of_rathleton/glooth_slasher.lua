@@ -1,5 +1,4 @@
--- Glooth Slasher (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Slasher)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Glooth Slasher")
 local monster = {}

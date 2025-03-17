@@ -1,5 +1,4 @@
--- Slim (Tibia Wiki: https://tibia.fandom.com/wiki/Slim)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Slim")
 local monster = {}

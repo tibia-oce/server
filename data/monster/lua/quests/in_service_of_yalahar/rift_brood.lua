@@ -1,5 +1,4 @@
--- Rift Brood (Tibia Wiki: https://tibia.fandom.com/wiki/Rift_Brood)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Rift Brood")
 local monster = {}

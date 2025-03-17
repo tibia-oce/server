@@ -79,7 +79,7 @@ monster.loot = {
 	{ id = "demon shield", chance = 15500 },
 	{ id = "devil helmet", chance = 11000 },
 	{ id = "dragon hammer", chance = 34500 },
-	{ id = 3051, chance = 13500 }, -- energy ring
+	{ id = "energy ring", chance = 13500 }, -- energy ring
 	{ id = "fire axe", chance = 17000 },
 	{ id = "giant sword", chance = 12500 },
 	{ id = "platinum coin", chance = 69900, maxCount = 100 },

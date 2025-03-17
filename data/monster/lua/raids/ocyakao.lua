@@ -1,5 +1,4 @@
--- Ocyakao (Tibia Wiki: https://tibia.fandom.com/wiki/Ocyakao)
--- Version: 10.20
+
 
 local mType = Game.createMonsterType("Ocyakao")
 local monster = {}
@@ -73,12 +72,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 19083, chance = 200 }, -- silver raid token
+	{ id = "silver raid token", chance = 200 }, -- silver raid token
 	{ id = 3031, chance = 100000, maxCount = 20 }, -- gold coin
-	{ id = 3578, chance = 100000, maxCount = 5 }, -- fish
+	{ id = "fish", chance = 100000, maxCount = 5 }, -- fish
 	{ id = 3026, chance = 100000 }, -- white pearl
-	{ id = 5909, chance = 100000 }, -- white piece of cloth
-	{ id = 3286, chance = 37500 }, -- mace
+	{ id = "white piece of cloth", chance = 100000 }, -- white piece of cloth
+	{ id = "mace", chance = 37500 }, -- mace
 	{ id = 19369, chance = 200, unique = true }, -- eye of the storm
 	{ id = 3441, chance = 37570 }, -- bone shield
 	{ id = 7381, chance = 25050 }, -- mammoth whopper

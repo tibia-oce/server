@@ -1,5 +1,4 @@
--- Infernalist (Tibia Wiki: https://tibia.fandom.com/wiki/Infernalist)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Infernalist")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "piggy bank", chance = 220 },
 	{ id = "gold coin", chance = 56500, maxCount = 100 },
 	{ id = "gold coin", chance = 40000, maxCount = 47 },
-	{ id = 3051, chance = 1800 }, -- energy ring
+	{ id = "energy ring", chance = 1800 }, -- energy ring
 	{ id = "skull staff", chance = 6500 },
 	{ id = "magic sulphur", chance = 600 },
 	{ id = "red piece of cloth", chance = 1420 },
@@ -89,7 +88,7 @@ monster.loot = {
 	{ id = "raspberry", chance = 8500, maxCount = 5 },
 	{ id = "spellbook of mind control", chance = 370 },
 	{ id = "royal tapestry", chance = 520 },
-	{ id = 9056, chance = 820 }, -- black skull
+	{ id = "black skull", chance = 820 }, -- black skull
 	{ id = "gold ingot", chance = 70 },
 	{ id = "crystal of power", chance = 220 },
 }

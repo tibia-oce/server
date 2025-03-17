@@ -1,5 +1,4 @@
--- Elvira Hammerthrust (Tibia Wiki: https://tibia.fandom.com/wiki/Elvira_Hammerthrust)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Elvira Hammerthrust")
 local monster = {}

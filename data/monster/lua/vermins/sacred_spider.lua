@@ -1,5 +1,4 @@
--- Sacred Spider (Tibia Wiki: https://tibia.fandom.com/wiki/Sacred_Spider)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Sacred Spider")
 local monster = {}

@@ -1,5 +1,4 @@
--- Mushroom Sniffer (Tibia Wiki: https://tibia.fandom.com/wiki/Mushroom_Sniffer)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Mushroom Sniffer")
 local monster = {}

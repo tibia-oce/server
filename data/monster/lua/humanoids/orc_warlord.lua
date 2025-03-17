@@ -1,5 +1,4 @@
--- Orc Warlord (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Warlord)
--- Version: 7.0
+
 
 local mType = Game.createMonsterType("Orc Warlord")
 local monster = {}
@@ -70,12 +69,12 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 18000, maxCount = 45 },
-	{ id = 3049, chance = 90 }, -- stealth ring
+	{ id = "stealth ring", chance = 90 }, -- stealth ring
 	{ id = "gold ring", chance = 30 },
 	{ id = "protection amulet", chance = 2190 },
 	{ id = "two handed sword", chance = 1680 },
 	{ id = "throwing star", chance = 13920, maxCount = 18 },
-	{ id = 3307, chance = 3450 }, -- scimitar
+	{ id = "scimitar", chance = 3450 }, -- scimitar
 	{ id = "orcish axe", chance = 5400 },
 	{ id = "dragon hammer", chance = 320 },
 	{ id = "plate armor", chance = 5210 },
@@ -83,7 +82,7 @@ monster.loot = {
 	{ id = "dark helmet", chance = 1260 },
 	{ id = "crusader helmet", chance = 280 },
 	{ id = "plate legs", chance = 4280 },
-	{ id = 3578, chance = 10800, maxCount = 2 }, -- fish
+	{ id = "fish", chance = 10800, maxCount = 2 }, -- fish
 	{ id = "hunting spear", chance = 5260 },
 	{ id = 7395, chance = 50 }, -- orc trophy
 	{ id = "health potion", chance = 470 },

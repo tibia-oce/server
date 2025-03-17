@@ -1,5 +1,4 @@
--- Wiggler (Tibia Wiki: https://tibia.fandom.com/wiki/Wiggler)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Wiggler")
 local monster = {}

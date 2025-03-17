@@ -1,5 +1,4 @@
--- Foreshock (Tibia Wiki: https://tibia.fandom.com/wiki/Foreshock)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Foreshock")
 local monster = {}

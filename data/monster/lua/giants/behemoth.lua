@@ -1,5 +1,4 @@
--- Behemoth (Tibia Wiki: https://tibia.fandom.com/wiki/Behemoth)
--- Version: 6.4
+
 
 local mType = Game.createMonsterType("Behemoth")
 local monster = {}
@@ -67,7 +66,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2893, chance = 100 }, -- amphora
+	{ id = "amphora", chance = 100 }, -- amphora
 	{ id = "crystal necklace", chance = 2530 },
 	{ id = "gold coin", chance = 100000, maxCount = 200 },
 	{ id = "small amethyst", chance = 6380, maxCount = 5 },
@@ -81,13 +80,13 @@ monster.loot = {
 	{ id = "war axe", chance = 50 },
 	{ id = "plate armor", chance = 3930 },
 	{ id = "dark armor", chance = 4370 },
-	{ id = 3456, chance = 650 }, -- pick
+	{ id = "pick", chance = 650 }, -- pick
 	{ id = "steel boots", chance = 380 },
 	{ id = "meat", chance = 30000, maxCount = 6 },
 	{ id = "perfect behemoth fang", chance = 1090 },
 	{ id = "behemoth claw", chance = 860 },
 	{ id = "assassin star", chance = 9750, maxCount = 5 },
-	{ id = 7396, chance = 170 }, -- behemoth trophy
+	{ id = "behemoth trophy", chance = 170 }, -- behemoth trophy
 	{ id = "titan axe", chance = 90 },
 	{ id = "great health potion", chance = 5120 },
 	{ id = "battle stone", chance = 14000 },

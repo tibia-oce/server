@@ -1,5 +1,4 @@
--- Cyclops (Tibia Wiki: https://tibia.fandom.com/wiki/Cyclops)
--- Version: 2.0
+
 
 local mType = Game.createMonsterType("Cyclops")
 local monster = {}
@@ -69,16 +68,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3012, chance = 190 }, -- wolf tooth chain
+	{ id = "wolf tooth chain", chance = 190 }, -- wolf tooth chain
 	{ id = "gold coin", chance = 82000, maxCount = 47 },
-	{ id = 3093, chance = 90 }, -- club ring
+	{ id = "club ring", chance = 90 }, -- club ring
 	{ id = 2381, chance = 1003 },
 	{ id = "short sword", chance = 8000 },
 	{ id = "dark helmet", chance = 220 },
 	{ id = "plate shield", chance = 2500 },
 	{ id = "battle shield", chance = 1400 },
 	{ id = "meat", chance = 30070 },
-	{ id = 7398, chance = 80 }, -- cyclops trophy
+	{ id = "cyclops trophy", chance = 80 }, -- cyclops trophy
 	{ id = "health potion", chance = 210 },
 	{ id = "cyclops toe", chance = 4930 },
 	{ id = 23986, chance = 1000 }, -- heavy old tome

@@ -1,5 +1,4 @@
--- Hero (Tibia Wiki: https://tibia.fandom.com/wiki/Hero)
--- Version: 6.4
+
 
 local mType = Game.createMonsterType("Hero")
 local monster = {}

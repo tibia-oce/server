@@ -1,5 +1,4 @@
--- Deepling Brawler (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Brawler)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Deepling Brawler")
 local monster = {}
@@ -69,7 +68,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 96000, maxCount = 44 },
-	{ id = 3578, chance = 19730, maxCount = 3 }, -- fish
+	{ id = "fish", chance = 19730, maxCount = 3 }, -- fish
 	{ id = "deepling scales", chance = 14500 },
 	{ id = "eye of a deepling", chance = 6500 },
 	{ id = "heavy trident", chance = 2720 },

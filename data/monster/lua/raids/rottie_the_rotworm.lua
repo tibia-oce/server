@@ -1,5 +1,4 @@
--- Rottie the Rotworm (Tibia Wiki: https://tibia.fandom.com/wiki/Rottie_the_Rotworm)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Rottie the Rotworm")
 local monster = {}
@@ -66,13 +65,13 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 6230, maxCount = 30 }, -- gold coin
-	{ id = 3430, chance = 2850 }, -- copper shield
+	{ id = "copper shield", chance = 2850 }, -- copper shield
 	{ id = 3577, chance = 3260, maxCount = 2 }, -- meat
 	{ id = 3492, chance = 32500, maxCount = 5 }, -- worm
-	{ id = 3286, chance = 3335 }, -- mace
+	{ id = "mace", chance = 3335 }, -- mace
 	{ id = 3582, chance = 3160, maxCount = 2 }, -- ham
-	{ id = 3264, chance = 3335 }, -- sword
-	{ id = 3300, chance = 900 }, -- katana
+	{ id = "sword", chance = 3335 }, -- sword
+	{ id = "katana", chance = 900 }, -- katana
 	{ id = 3374, chance = 1250 }, -- legion helmet
 }
 

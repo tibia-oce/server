@@ -1,5 +1,4 @@
--- Crab (Tibia Wiki: https://tibia.fandom.com/wiki/Crab)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Crab")
 local monster = {}
@@ -64,7 +63,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 80000, maxCount = 10 },
-	{ id = 3578, chance = 20000 }, -- fish
+	{ id = "fish", chance = 20000 }, -- fish
 	{ id = "crab pincers", chance = 20000 },
 }
 

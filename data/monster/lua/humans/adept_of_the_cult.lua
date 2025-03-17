@@ -1,5 +1,4 @@
--- Adept of the Cult (Tibia Wiki: https://tibia.fandom.com/wiki/Adept_of_the_Cult)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Adept of the Cult")
 local monster = {}
@@ -76,7 +75,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2828, chance = 940 }, -- book
+	{ id = "book", chance = 940 }, -- book
 	{ id = "small ruby", chance = 320 },
 	{ id = "gold coin", chance = 65520, maxCount = 60 },
 	{ id = 3053, chance = 420 }, -- time ring

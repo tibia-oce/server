@@ -1,5 +1,4 @@
--- Metal Gargoyle (Tibia Wiki: https://tibia.fandom.com/wiki/Metal_Gargoyle)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Metal Gargoyle")
 local monster = {}
@@ -69,13 +68,13 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 200 }, -- gold coin
-	{ id = 21755, chance = 1490 }, -- bronze gear wheel
+	{ id = "bronze gear wheel", chance = 1490 }, -- bronze gear wheel
 	{ id = 21193, chance = 17160 }, -- metal jaw
 	{ id = 3035, chance = 43280, maxCount = 2 }, -- platinum coin
 	{ id = 236, chance = 9700, maxCount = 2 }, -- strong health potion
-	{ id = 237, chance = 9700, maxCount = 2 }, -- strong mana potion
+	{ id = "strong mana potion", chance = 9700, maxCount = 2 }, -- strong mana potion
 	{ id = 21171, chance = 1490 }, -- metal bat
-	{ id = 8082, chance = 1490 }, -- underworld rod
+	{ id = "underworld rod", chance = 1490 }, -- underworld rod
 	{ id = 3051, chance = 2240 }, -- energy ring
 	{ id = 3052, chance = 750 }, -- life ring
 	{ id = 10310, chance = 2240 }, -- shiny stone

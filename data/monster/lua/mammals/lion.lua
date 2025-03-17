@@ -1,5 +1,4 @@
--- Lion (Tibia Wiki: https://tibia.fandom.com/wiki/Lion)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Lion")
 local monster = {}

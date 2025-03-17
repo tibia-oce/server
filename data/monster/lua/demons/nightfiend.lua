@@ -1,5 +1,4 @@
--- Nightfiend (Tibia Wiki: https://tibia.fandom.com/wiki/Nightfiend)
--- Version: 10.20
+
 
 local mType = Game.createMonsterType("Nightfiend")
 local monster = {}
@@ -75,8 +74,8 @@ monster.loot = {
 	{ id = "vampire shield", chance = 50 },
 	{ id = "strong health potion", chance = 4761 },
 	{ id = "strong mana potion", chance = 5000 },
-	{ id = 3039, chance = 55 }, -- red gem
-	{ id = 3098, chance = 1000 }, -- ring of healing
+	{ id = "red gem", chance = 55 }, -- red gem
+	{ id = "ring of healing", chance = 1000 }, -- ring of healing
 }
 
 monster.attacks = {

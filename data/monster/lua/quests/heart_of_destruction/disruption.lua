@@ -1,5 +1,4 @@
--- Disruption (Tibia Wiki: https://tibia.fandom.com/wiki/Disruption)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Disruption")
 local monster = {}

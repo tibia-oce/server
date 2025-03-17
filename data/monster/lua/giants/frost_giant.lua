@@ -1,5 +1,4 @@
--- Frost Giant (Tibia Wiki: https://tibia.fandom.com/wiki/Frost_Giant)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Frost Giant")
 local monster = {}
@@ -71,14 +70,14 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 82000, maxCount = 40 },
-	{ id = 3093, chance = 130 }, -- club ring
+	{ id = "club ring", chance = 130 }, -- club ring
 	{ id = 2381, chance = 560 },
 	{ id = "short sword", chance = 8140 },
 	{ id = "dark helmet", chance = 180 },
 	{ id = "battle shield", chance = 1350 },
 	{ id = "meat", chance = 4970, maxCount = 2 },
 	{ id = "shard", chance = 60 },
-	{ id = 7441, chance = 2180 }, -- ice cube
+	{ id = "ice cube", chance = 2180 }, -- ice cube
 	{ id = "norse shield", chance = 250 },
 	{ id = "health potion", chance = 819 },
 	{ id = "frost giant pelt", chance = 5000 },

@@ -1,5 +1,4 @@
--- Lost Berserker (Tibia Wiki: https://tibia.fandom.com/wiki/Lost_Berserker)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Lost Berserker")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "platinum coin", chance = 100000, maxCount = 9 },
-	{ id = 3097, chance = 2280 }, -- dwarven ring
+	{ id = "dwarven ring", chance = 2280 }, -- dwarven ring
 	{ id = "knight axe", chance = 2070 },
 	{ id = "fire axe", chance = 380 },
 	{ id = "royal helmet", chance = 150 },
@@ -89,7 +88,7 @@ monster.loot = {
 	{ id = "terra boots", chance = 640 },
 	{ id = "small topaz", chance = 7970, maxCount = 2 },
 	{ id = "clay lump", chance = 930 },
-	{ id = 12600, chance = 2050 }, -- coal
+	{ id = "coal", chance = 2050 }, -- coal
 	{ id = "violet crystal shard", chance = 3500 },
 	{ id = "brown crystal splinter", chance = 7540, maxCount = 2 },
 	{ id = "blue crystal splinter", chance = 4610 },

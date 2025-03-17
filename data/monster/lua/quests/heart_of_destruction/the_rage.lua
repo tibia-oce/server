@@ -1,5 +1,4 @@
--- The Rage (Tibia Wiki: https://tibia.fandom.com/wiki/The_Rage)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("The Rage")
 local monster = {}

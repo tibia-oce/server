@@ -1,5 +1,4 @@
--- Rotworm Queen (Tibia Wiki: https://tibia.fandom.com/wiki/Rotworm_Queen)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Rotworm Queen")
 local monster = {}
@@ -70,9 +69,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 47 }, -- gold coin
-	{ id = 8143, chance = 3333 }, -- gland
-	{ id = 3492, chance = 20000, maxCount = 45 }, -- worm
+	{ id = "gold coin", chance = 100000, maxCount = 47 }, -- gold coin
+	{ id = "gland", chance = 3333 }, -- gland
+	{ id = "worm", chance = 20000, maxCount = 45 }, -- worm
 }
 
 monster.attacks = {

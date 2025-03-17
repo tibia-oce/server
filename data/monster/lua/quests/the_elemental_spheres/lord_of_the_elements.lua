@@ -1,5 +1,4 @@
--- Lord of the Elements (Tibia Wiki: https://tibia.fandom.com/wiki/Lord_of_the_Elements)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Lord of the Elements")
 local monster = {}

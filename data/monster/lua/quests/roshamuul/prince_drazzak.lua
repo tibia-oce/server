@@ -1,5 +1,4 @@
--- Prince Drazzak (Tibia Wiki: https://tibia.fandom.com/wiki/Prince_Drazzak)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Prince Drazzak")
 local monster = {}
@@ -84,13 +83,13 @@ monster.loot = {
 	{ id = 7642, chance = 100000, maxCount = 100 }, -- great spirit potion
 	{ id = 238, chance = 100000, maxCount = 100 }, -- great mana potion
 	{ id = 20279, chance = 25000 }, -- eye pod
-	{ id = 20274, chance = 2500 }, -- nightmare horn
+	{ id = "nightmare horn", chance = 2500 }, -- nightmare horn
 	{ id = 20277, chance = 25000 }, -- psychedelic tapestry
 	{ id = 20278, chance = 25000 }, -- demonic tapestry
 	{ id = 5741, chance = 2500 }, -- skull helmet
-	{ id = 7417, chance = 2500, unique = true }, -- runed sword
+	{ id = "runed sword", chance = 2500, unique = true }, -- runed sword
 	{ id = 20276, chance = 7000, unique = true }, -- dream warden mask
-	{ id = 7418, chance = 1000 }, -- nightmare blade
+	{ id = "nightmare blade", chance = 1000 }, -- nightmare blade
 	{ id = 820, chance = 1000 }, -- lightning boots
 	{ id = 281, chance = 5000 }, -- giant shimmering pearl (green)
 	{ id = 282, chance = 5000 }, -- giant shimmering pearl (brown)

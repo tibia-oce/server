@@ -1,5 +1,4 @@
--- Bug (Tibia Wiki: https://tibia.fandom.com/wiki/Bug)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Bug")
 local monster = {}
@@ -64,7 +63,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 51170, maxCount = 6 },
-	{ id = 2679, chance = 2590, maxCount = 3 } -- "cherry",
+	{ id = 2679, chance = 2590, maxCount = 3}, -- "cherry"
 }
 
 monster.attacks = {

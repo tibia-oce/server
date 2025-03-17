@@ -1,5 +1,4 @@
--- Destroyer (Tibia Wiki: https://tibia.fandom.com/wiki/Destroyer)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Destroyer")
 local monster = {}
@@ -79,7 +78,7 @@ monster.loot = {
 	{ id = "plate armor", chance = 3400 },
 	{ id = "dark armor", chance = 6250 },
 	{ id = 3449, chance = 8350, maxCount = 12 }, -- burst arrow
-	{ id = 3456, chance = 4850 }, -- pick
+	{ id = "pick", chance = 4850 }, -- pick
 	{ id = "steel boots", chance = 300 },
 	{ id = "meat", chance = 40000, maxCount = 6 },
 	{ id = "skull helmet", chance = 10 },

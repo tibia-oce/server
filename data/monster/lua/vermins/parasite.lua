@@ -1,5 +1,4 @@
--- Parasite (Tibia Wiki: https://tibia.fandom.com/wiki/Parasite)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Parasite")
 local monster = {}

@@ -1,5 +1,4 @@
--- Ladybug (Tibia Wiki: https://tibia.fandom.com/wiki/Ladybug)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Ladybug")
 local monster = {}

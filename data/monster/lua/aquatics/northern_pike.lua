@@ -1,5 +1,4 @@
--- Northern Pike (Tibia Wiki: https://tibia.fandom.com/wiki/Northern_Pike)
--- Version: 7.2
+
 
 local mType = Game.createMonsterType("Northern Pike")
 local monster = {}

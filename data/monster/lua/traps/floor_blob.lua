@@ -1,5 +1,4 @@
--- Floor Blob (Tibia Wiki: https://tibia.fandom.com/wiki/Floor_Blob)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Floor Blob")
 local monster = {}

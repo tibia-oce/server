@@ -1,5 +1,4 @@
--- Spectre (Tibia Wiki: https://tibia.fandom.com/wiki/Spectre)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Spectre")
 local monster = {}
@@ -75,7 +74,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 33000, maxCount = 100 },
 	{ id = "gold coin", chance = 33000, maxCount = 97 },
 	{ id = "platinum coin", chance = 3850, maxCount = 7 },
-	{ id = 3049, chance = 190 }, -- stealth ring
+	{ id = "stealth ring", chance = 190 }, -- stealth ring
 	{ id = "wand of cosmic energy", chance = 9800 },
 	{ id = "blank rune", chance = 30310, maxCount = 2 },
 	{ id = "white piece of cloth", chance = 3800 },

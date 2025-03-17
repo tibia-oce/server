@@ -1,5 +1,4 @@
--- Elder Bonelord (Tibia Wiki: https://tibia.fandom.com/wiki/Elder_Bonelord)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Elder Bonelord")
 local monster = {}
@@ -84,7 +83,7 @@ monster.loot = {
 	{ id = "sniper arrow", chance = 8780, maxCount = 5 },
 	{ id = "two handed sword", chance = 2980 },
 	{ id = "steel shield", chance = 2040 },
-	{ id = 3059, chance = 1030 }, -- spellbook
+	{ id = "spellbook", chance = 1030 }, -- spellbook
 	{ id = "strong mana potion", chance = 830 },
 	{ id = "giant eye", chance = 460 },
 	{ id = "bonelord shield", chance = 90 },

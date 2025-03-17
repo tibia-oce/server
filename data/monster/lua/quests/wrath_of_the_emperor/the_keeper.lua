@@ -1,5 +1,4 @@
--- The Keeper (Tibia Wiki: https://tibia.fandom.com/wiki/The_Keeper)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("The Keeper")
 local monster = {}

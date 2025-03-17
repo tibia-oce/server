@@ -1,5 +1,4 @@
--- Orc Shaman (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Shaman)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Orc Shaman")
 local monster = {}
@@ -72,7 +71,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2824, chance = 520 }, -- book
+	{ id = "book", chance = 520 }, -- book
 	{ id = "gold coin", chance = 90000, maxCount = 5 },
 	{ id = "wand of decay", chance = 1000 },
 	{ id = "spear", chance = 4850 },

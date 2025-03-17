@@ -1,5 +1,4 @@
--- The Pit Lord (Tibia Wiki: https://tibia.fandom.com/wiki/The_Pit_Lord)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("The Pit Lord")
 local monster = {}

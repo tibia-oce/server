@@ -1,5 +1,4 @@
--- Tremorak (Tibia Wiki: https://tibia.fandom.com/wiki/Tremorak)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Tremorak")
 local monster = {}

@@ -1,5 +1,4 @@
--- Charged Energy Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Charged_Energy_Elemental)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Charged Energy Elemental")
 local monster = {}

@@ -1,5 +1,4 @@
--- Madareth (Tibia Wiki: https://tibia.fandom.com/wiki/Madareth)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Madareth")
 local monster = {}
@@ -98,9 +97,9 @@ monster.loot = {
 	{ id = 8082, chance = 16000 }, -- underworld rod
 	{ id = 3093, chance = 14000 }, -- club ring
 	{ id = 6499, chance = 14000 }, -- demonic essence
-	{ id = 7407, chance = 14000 }, -- haunted blade
+	{ id = "haunted blade", chance = 14000 }, -- haunted blade
 	{ id = 2949, chance = 14000 }, -- lyre
-	{ id = 7418, chance = 14000 }, -- nightmare blade
+	{ id = "nightmare blade", chance = 14000 }, -- nightmare blade
 	{ id = 8084, chance = 14000 }, -- springsprout rod
 	{ id = 2966, chance = 14000 }, -- war drum
 	{ id = 3071, chance = 11000 }, -- wand of inferno
@@ -116,7 +115,7 @@ monster.loot = {
 	{ id = 2958, chance = 7000 }, -- war horn
 	{ id = 2948, chance = 7000 }, -- wooden flute
 	{ id = 2965, chance = 4700 }, -- didgeridoo
-	{ id = 3097, chance = 4700 }, -- dwarven ring
+	{ id = "dwarven ring", chance = 4700 }, -- dwarven ring
 	{ id = 3284, chance = 4700 }, -- ice rapier
 	{ id = 7386, chance = 4700 }, -- mercenary sword
 	{ id = 3091, chance = 4700 }, -- sword ring

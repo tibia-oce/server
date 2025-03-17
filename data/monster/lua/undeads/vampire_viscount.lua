@@ -1,5 +1,4 @@
--- Vampire Viscount (Tibia Wiki: https://tibia.fandom.com/wiki/Vampire_Viscount)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Vampire Viscount")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "black pearl", chance = 2500 },
 	{ id = "small ruby", chance = 3040, maxCount = 2 },
 	{ id = "gold coin", chance = 83000, maxCount = 50 },
-	{ id = 3039, chance = 540 }, -- red gem
+	{ id = "red gem", chance = 540 }, -- red gem
 	{ id = "ice rapier", chance = 810 },
 	{ id = "vampire shield", chance = 200 },
 	{ id = "red piece of cloth", chance = 70 },

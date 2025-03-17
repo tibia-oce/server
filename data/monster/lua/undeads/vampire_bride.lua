@@ -1,5 +1,4 @@
--- Vampire Bride (Tibia Wiki: https://tibia.fandom.com/wiki/Vampire_Bride)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Vampire Bride")
 local monster = {}
@@ -83,7 +82,7 @@ monster.loot = {
 	{ id = "hibiscus dress", chance = 1030 },
 	{ id = "blood goblet", chance = 60 },
 	{ id = 8895, chance = 1010 }, -- rusted armor
-	{ id = 8923, chance = 970 }, -- velvet tapestry
+	{ id = "velvet tapestry", chance = 970 }, -- velvet tapestry
 	{ id = "vampire teeth", chance = 10000 },
 	{ id = "blood preservation", chance = 4950 },
 	{ id = "leather whip", chance = 20 },

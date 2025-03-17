@@ -1,5 +1,4 @@
--- Grim Reaper (Tibia Wiki: https://tibia.fandom.com/wiki/Grim_Reaper)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Grim Reaper")
 local monster = {}

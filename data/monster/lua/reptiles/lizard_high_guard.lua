@@ -1,5 +1,4 @@
--- Lizard High Guard (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_High_Guard)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Lizard High Guard")
 local monster = {}

@@ -1,5 +1,4 @@
--- Boogey (Tibia Wiki: https://tibia.fandom.com/wiki/Boogey)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Boogey")
 local monster = {}
@@ -82,10 +81,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 9379, chance = 1000 }, -- heavy metal t-shirt
+	{ id = "heavy metal t-shirt", chance = 1000 }, -- heavy metal t-shirt
 	{ id = 9385, chance = 1000 }, -- club of the fury
-	{ id = 9384, chance = 1000 }, -- scythe of the reaper
-	{ id = 9378, chance = 1000 }, -- musician's bow
+	{ id = "scythe of the reaper", chance = 1000 }, -- scythe of the reaper
+	{ id = "musician's bow", chance = 1000 }, -- musician's bow
 }
 
 monster.attacks = {

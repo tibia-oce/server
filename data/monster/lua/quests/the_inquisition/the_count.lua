@@ -1,5 +1,4 @@
--- The Count (Tibia Wiki: https://tibia.fandom.com/wiki/The_Count)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("The Count")
 local monster = {}
@@ -72,9 +71,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 40000, maxCount = 98 }, -- gold coin
+	{ id = "gold coin", chance = 40000, maxCount = 98 }, -- gold coin
 	{ id = 7924, chance = 100000 }, -- ring of the count
-	{ id = 3279, chance = 2300 }, -- war hammer
+	{ id = "war hammer", chance = 2300 }, -- war hammer
 }
 
 monster.attacks = {

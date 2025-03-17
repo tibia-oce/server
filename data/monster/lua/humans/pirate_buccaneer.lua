@@ -1,5 +1,4 @@
--- Pirate Buccaneer (Tibia Wiki: https://tibia.fandom.com/wiki/Pirate_Buccaneer)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Pirate Buccaneer")
 local monster = {}
@@ -68,14 +67,14 @@ monster.voices = {
 monster.loot = {
 	{ id = 2920, chance = 10190 }, -- torch
 	{ id = "gold coin", chance = 67740, maxCount = 59 },
-	{ id = 2238, chance = 9900 } -- "worn leather boots",
+	{ id = 2238, chance = 9900}, -- "worn leather boots"
 	{ id = "sabre", chance = 10100 },
 	{ id = "throwing knife", chance = 9000, maxCount = 5 },
 	{ id = "plate armor", chance = 1130 },
 	{ id = "battle shield", chance = 3850 },
 	{ id = 5090, chance = 1000 }, -- treasure map
 	{ id = "rum flask", chance = 120 },
-	{ id = 5792, chance = 40 }, -- die
+	{ id = "die", chance = 40 }, -- die
 	{ id = "pirate backpack", chance = 430 },
 	{ id = "pirate shirt", chance = 1200 },
 	{ id = "hook", chance = 450 },

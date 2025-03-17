@@ -1,5 +1,4 @@
--- Glooth Bomb (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Bomb)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Glooth Bomb")
 local monster = {}
@@ -66,12 +65,12 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 21170, chance = 5000 }, -- gearwheel chain
-	{ id = 21906, chance = 10000 }, -- glooth glider gear wheel
+	{ id = "glooth glider gear wheel", chance = 10000 }, -- glooth glider gear wheel
 	{ id = 3031, chance = 100000, maxCount = 50 }, -- gold coin
 	{ id = 239, chance = 100000, maxCount = 13 }, -- great health potion
 	{ id = 238, chance = 100000, maxCount = 13 }, -- great mana potion
-	{ id = 7642, chance = 100000, maxCount = 13 }, -- great spirit potion
-	{ id = 21200, chance = 83300, maxCount = 2 }, -- moohtant horn
+	{ id = "great spirit potion", chance = 100000, maxCount = 13 }, -- great spirit potion
+	{ id = "moohtant horn", chance = 83300, maxCount = 2 }, -- moohtant horn
 	{ id = 3035, chance = 100000, maxCount = 30 }, -- platinum coin
 	{ id = 5911, chance = 16670 }, -- red piece of cloth
 	{ id = 3098, chance = 16670 }, -- ring of healing

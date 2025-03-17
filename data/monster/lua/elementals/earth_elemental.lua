@@ -1,5 +1,4 @@
--- Earth Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Earth_Elemental)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Earth Elemental")
 local monster = {}
@@ -77,7 +76,7 @@ monster.loot = {
 	{ id = "small topaz", chance = 620 },
 	{ id = "lump of earth", chance = 20460 },
 	{ id = "clay lump", chance = 570 },
-	{ id = 12600, chance = 470 }, -- coal
+	{ id = "coal", chance = 470 }, -- coal
 }
 
 monster.attacks = {

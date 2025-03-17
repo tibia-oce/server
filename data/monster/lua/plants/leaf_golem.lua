@@ -1,5 +1,4 @@
--- Leaf Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Leaf_Golem)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Leaf Golem")
 local monster = {}

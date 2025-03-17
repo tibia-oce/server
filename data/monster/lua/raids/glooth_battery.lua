@@ -1,5 +1,4 @@
--- Glooth Battery (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Battery)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Glooth Battery")
 local monster = {}
@@ -59,10 +58,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3035, chance = 33000, maxCount = 5 }, -- platinum coin
-	{ id = 239, chance = 10000 }, -- great health potion
+	{ id = "platinum coin", chance = 33000, maxCount = 5 }, -- platinum coin
+	{ id = "great health potion", chance = 10000 }, -- great health potion
 	{ id = 9064, chance = 1500 }, -- crystal pedestal
-	{ id = 21169, chance = 1000 }, -- metal spats
+	{ id = "metal spats", chance = 1000 }, -- metal spats
 }
 
 monster.attacks = {

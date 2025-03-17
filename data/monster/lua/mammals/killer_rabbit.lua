@@ -1,5 +1,4 @@
--- Killer Rabbit (Tibia Wiki: https://tibia.fandom.com/wiki/Killer_Rabbit)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Killer Rabbit")
 local monster = {}

@@ -1,5 +1,4 @@
--- Xenia (Tibia Wiki: https://tibia.fandom.com/wiki/Xenia)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Xenia")
 local monster = {}

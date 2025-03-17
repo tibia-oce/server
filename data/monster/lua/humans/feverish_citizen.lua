@@ -1,5 +1,4 @@
--- Feverish Citizen (Tibia Wiki: https://tibia.fandom.com/wiki/Feverish_Citizen)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Feverish Citizen")
 local monster = {}

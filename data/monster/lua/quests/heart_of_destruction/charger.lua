@@ -1,5 +1,4 @@
--- Charger (Tibia Wiki: https://tibia.fandom.com/wiki/Charger)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Charger")
 local monster = {}

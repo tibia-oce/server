@@ -1,5 +1,4 @@
--- Kongra (Tibia Wiki: https://tibia.fandom.com/wiki/Kongra)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Kongra")
 local monster = {}
@@ -67,9 +66,9 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 69000, maxCount = 40 },
-	{ id = 3050, chance = 300 }, -- power ring
+	{ id = "power ring", chance = 300 }, -- power ring
 	{ id = "protection amulet", chance = 990 },
-	{ id = 3093, chance = 230 }, -- club ring
+	{ id = "club ring", chance = 230 }, -- club ring
 	{ id = "plate armor", chance = 950 },
 	{ id = "banana", chance = 30000, maxCount = 12 },
 	{ id = "ape fur", chance = 980 },

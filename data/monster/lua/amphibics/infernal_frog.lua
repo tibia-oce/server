@@ -1,5 +1,4 @@
--- Infernal Frog (Tibia Wiki: https://tibia.fandom.com/wiki/Infernal_Frog)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Infernal Frog")
 local monster = {}

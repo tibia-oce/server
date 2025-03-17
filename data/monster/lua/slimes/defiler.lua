@@ -1,5 +1,4 @@
--- Defiler (Tibia Wiki: https://tibia.fandom.com/wiki/Defiler)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Defiler")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "platinum coin", chance = 95000, maxCount = 6 },
 	{ id = "yellow gem", chance = 1219 },
 	{ id = "green gem", chance = 613 },
-	{ id = 3039, chance = 1538 }, -- red gem
+	{ id = "red gem", chance = 1538 }, -- red gem
 	{ id = "blue gem", chance = 300 },
 	{ id = "soul orb", chance = 20000 },
 	{ id = 6299, chance = 3030 }, -- death ring

@@ -1,5 +1,4 @@
--- Spidris Elite (Tibia Wiki: https://tibia.fandom.com/wiki/Spidris_Elite)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Spidris Elite")
 local monster = {}

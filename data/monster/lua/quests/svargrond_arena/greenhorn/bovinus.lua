@@ -1,5 +1,4 @@
--- Bovinus (Tibia Wiki: https://tibia.fandom.com/wiki/Bovinus)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Bovinus")
 local monster = {}

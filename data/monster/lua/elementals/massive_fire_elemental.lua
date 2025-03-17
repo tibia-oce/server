@@ -1,5 +1,4 @@
--- Massive Fire Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Massive_Fire_Elemental)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Massive Fire Elemental")
 local monster = {}

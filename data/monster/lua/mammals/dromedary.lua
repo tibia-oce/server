@@ -1,5 +1,4 @@
--- Dromedary (Tibia Wiki: https://tibia.fandom.com/wiki/Dromedary)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Dromedary")
 local monster = {}

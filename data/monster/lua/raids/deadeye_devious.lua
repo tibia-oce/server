@@ -1,5 +1,4 @@
--- Deadeye Devious (Tibia Wiki: https://tibia.fandom.com/wiki/Deadeye_Devious)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Deadeye Devious")
 local monster = {}
@@ -75,11 +74,11 @@ monster.loot = {
 	{ id = 3114, chance = 85000, maxCount = 2 }, -- skull
 	{ id = 3357, chance = 78000 }, -- plate armor
 	{ id = 3577, chance = 42000, maxCount = 3 }, -- meat
-	{ id = 3370, chance = 28000 }, -- knight armor
+	{ id = "knight armor", chance = 28000 }, -- knight armor
 	{ id = 3267, chance = 21000 }, -- dagger
-	{ id = 3028, chance = 14000 }, -- small diamond
+	{ id = "small diamond", chance = 14000 }, -- small diamond
 	{ id = 3275, chance = 7000 }, -- double axe
-	{ id = 5926, chance = 7000 }, -- pirate backpack
+	{ id = "pirate backpack", chance = 7000 }, -- pirate backpack
 }
 
 monster.attacks = {

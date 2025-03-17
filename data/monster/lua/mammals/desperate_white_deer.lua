@@ -1,5 +1,4 @@
--- Desperate White Deer (Tibia Wiki: https://tibia.fandom.com/wiki/Desperate_White_Deer)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Desperate White Deer")
 local monster = {}

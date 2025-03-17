@@ -1,5 +1,4 @@
--- Raging mage (Tibia Wiki: https://tibia.fandom.com/wiki/Raging_Mage)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Raging mage")
 local monster = {}
@@ -93,9 +92,9 @@ monster.loot = {
 	{ id = 7443, chance = 6710, maxCount = 2 }, -- bullseye potion
 	{ id = 8043, chance = 4880 }, -- focus cape
 	{ id = 3049, chance = 4880 }, -- stealth ring
-	{ id = 11454, chance = 4270 }, -- luminous orb
-	{ id = 3728, chance = 3600, maxCount = 4 }, -- dark mushroom
-	{ id = 7368, chance = 1830, maxCount = 7 }, -- assassin star
+	{ id = "luminous orb", chance = 4270 }, -- luminous orb
+	{ id = "dark mushroom", chance = 3600, maxCount = 4 }, -- dark mushroom
+	{ id = "assassin star", chance = 1830, maxCount = 7 }, -- assassin star
 	{ id = 3007, chance = 1830 }, -- crystal ring
 	{ id = 3006, chance = 1830 }, -- ring of the sky
 	{ id = 3029, chance = 1830, maxCount = 5 }, -- small sapphire

@@ -1,5 +1,4 @@
--- Glooth Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Golem)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Glooth Golem")
 local monster = {}
@@ -73,15 +72,15 @@ monster.loot = {
 	{ id = 21170, chance = 1720 }, -- gearwheel chain
 	{ id = 21165, chance = 370 }, -- rubber cap
 	{ id = 3031, chance = 100000, maxCount = 200 }, -- gold coin
-	{ id = 21755, chance = 1470 }, -- bronze gear wheel
-	{ id = 8775, chance = 690 }, -- gear wheel
+	{ id = "bronze gear wheel", chance = 1470 }, -- bronze gear wheel
+	{ id = "gear wheel", chance = 690 }, -- gear wheel
 	{ id = 21143, chance = 1970 }, -- glooth sandwich
 	{ id = 3035, chance = 6010, maxCount = 4 }, -- platinum coin
 	{ id = 21103, chance = 2840 }, -- glooth injection tube
-	{ id = 7643, chance = 4470 }, -- ultimate health potion
+	{ id = "ultimate health potion", chance = 4470 }, -- ultimate health potion
 	{ id = 238, chance = 9280 }, -- great mana potion
 	{ id = 21167, chance = 690 }, -- heat core
-	{ id = 21179, chance = 440 }, -- glooth blade
+	{ id = "glooth blade", chance = 440 }, -- glooth blade
 	{ id = 21178, chance = 230 }, -- glooth club
 	{ id = 21180, chance = 290 }, -- glooth axe
 	{ id = 3037, chance = 730 }, -- yellow gem

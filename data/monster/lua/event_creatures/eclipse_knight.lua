@@ -1,5 +1,4 @@
--- Eclipse Knight (Tibia Wiki: https://tibia.fandom.com/wiki/Eclipse_Knight)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Eclipse Knight")
 local monster = {}

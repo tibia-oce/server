@@ -1,5 +1,4 @@
--- Golden Servant (Tibia Wiki: https://tibia.fandom.com/wiki/Golden_Servant)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Golden Servant")
 local monster = {}
@@ -70,7 +69,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 40000, maxCount = 100 },
 	{ id = "gold coin", chance = 45000, maxCount = 40 },
-	{ id = 3049, chance = 450 }, -- stealth ring
+	{ id = "stealth ring", chance = 450 }, -- stealth ring
 	{ id = "gold ring", chance = 10 },
 	{ id = 2381, chance = 3003 },
 	{ id = "golden armor", chance = 10 },
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "health potion", chance = 4930 },
 	{ id = "mana potion", chance = 4950 },
 	{ id = "spellbook of enlightenment", chance = 520 },
-	{ id = 9690, chance = 940 } -- "gear wheel",
+	{ id = 9690, chance = 940}, -- "gear wheel"
 	{ id = "slime mould", chance = 340 },
 	{ id = "golden can of oil", chance = 40 },
 }

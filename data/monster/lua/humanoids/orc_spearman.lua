@@ -1,5 +1,4 @@
--- Orc Spearman (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Spearman)
--- Version: 6.0
+
 
 local mType = Game.createMonsterType("Orc Spearman")
 local monster = {}

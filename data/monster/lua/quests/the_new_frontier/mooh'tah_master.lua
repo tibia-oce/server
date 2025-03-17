@@ -1,5 +1,4 @@
--- Mooh'Tah Master (Tibia Wiki: https://tibia.fandom.com/wiki/Mooh'Tah_Master)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Mooh'Tah Master")
 local monster = {}

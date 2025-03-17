@@ -1,5 +1,4 @@
--- Spitter (Tibia Wiki: https://tibia.fandom.com/wiki/Spitter)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Spitter")
 local monster = {}

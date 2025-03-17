@@ -1,5 +1,4 @@
--- Marsh Stalker (Tibia Wiki: https://tibia.fandom.com/wiki/Marsh_Stalker)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Marsh Stalker")
 local monster = {}
@@ -66,7 +65,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 64090, maxCount = 23 },
 	{ id = "meat", chance = 19950, maxCount = 2 },
-	{ id = 3578, chance = 20320, maxCount = 2 }, -- fish
+	{ id = "fish", chance = 20320, maxCount = 2 }, -- fish
 	{ id = "worm", chance = 14730, maxCount = 2 },
 	{ id = "marsh stalker feather", chance = 8650 },
 	{ id = "longsword", chance = 7560 },

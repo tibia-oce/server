@@ -1,5 +1,4 @@
--- Glooth Horror (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Horror)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Glooth Horror")
 local monster = {}

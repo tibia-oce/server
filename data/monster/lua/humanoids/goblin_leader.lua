@@ -1,5 +1,4 @@
--- Goblin Leader (Tibia Wiki: https://tibia.fandom.com/wiki/Goblin_Leader)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Goblin Leader")
 local monster = {}
@@ -80,7 +79,7 @@ monster.loot = {
 	{ id = "leather helmet", chance = 16670 },
 	{ id = "leather armor", chance = 5000 },
 	{ id = "small axe", chance = 12800 },
-	{ id = 3578, chance = 15000 }, -- fish
+	{ id = "fish", chance = 15000 }, -- fish
 }
 
 monster.attacks = {

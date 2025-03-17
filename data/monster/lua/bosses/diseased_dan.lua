@@ -1,5 +1,4 @@
--- Diseased Dan (Tibia Wiki: https://tibia.fandom.com/wiki/Diseased_Dan)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Diseased Dan")
 local monster = {}

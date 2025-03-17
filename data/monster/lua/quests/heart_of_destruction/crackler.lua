@@ -1,5 +1,4 @@
--- Crackler (Tibia Wiki: https://tibia.fandom.com/wiki/Crackler)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Crackler")
 local monster = {}

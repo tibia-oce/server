@@ -1,5 +1,4 @@
--- Deepling Spellsinger (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Spellsinger)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Deepling Spellsinger")
 local monster = {}
@@ -74,10 +73,10 @@ monster.loot = {
 	{ id = "spellsinger's seal", chance = 15185 },
 	{ id = "deepling filet", chance = 14995 },
 	{ id = "key to the drowned library", chance = 10740 },
-	{ id = 3578, chance = 3448 }, -- fish
+	{ id = "fish", chance = 3448 }, -- fish
 	{ id = "small sapphire", chance = 2934 },
 	{ id = "eye of a deepling", chance = 2540 },
-	{ id = 3052, chance = 2459 }, -- life ring
+	{ id = "life ring", chance = 2459 }, -- life ring
 	{ id = "deepling staff", chance = 2020 },
 	{ id = "necklace of the deep", chance = 790 },
 	{ id = "fish fin", chance = 520 },

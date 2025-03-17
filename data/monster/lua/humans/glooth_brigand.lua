@@ -1,5 +1,4 @@
--- Glooth Brigand (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Brigand)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Glooth Brigand")
 local monster = {}
@@ -71,7 +70,7 @@ monster.loot = {
 	{ id = 21203, chance = 9090 }, -- glooth bag
 	{ id = 21816, chance = 7692 }, -- tainted glooth capsule
 	{ id = 238, chance = 5882 }, -- great mana potion
-	{ id = 21143, chance = 4000 }, -- glooth sandwich
+	{ id = "glooth sandwich", chance = 4000 }, -- glooth sandwich
 	{ id = 21814, chance = 3030 }, -- glooth capsule
 	{ id = 7642, chance = 2500 }, -- great spirit potion
 	{ id = 21146, chance = 2000 }, -- glooth steak
@@ -79,13 +78,13 @@ monster.loot = {
 	{ id = 21178, chance = 1515 }, -- glooth club
 	{ id = 21183, chance = 1515 }, -- glooth amulet
 	{ id = 7386, chance = 1000 }, -- mercenary sword
-	{ id = 811, chance = 1000 }, -- terra mantle
+	{ id = "terra mantle", chance = 1000 }, -- terra mantle
 	{ id = 281, chance = 1000 }, -- giant shimmering pearl (green)
 	{ id = 814, chance = 1000 }, -- terra amulet
 	{ id = 7412, chance = 1000 }, -- butcher's axe
 	{ id = 3038, chance = 1000 }, -- green gem
 	{ id = 813, chance = 502 }, -- terra boots
-	{ id = 7419, chance = 502 }, -- dreaded cleaver
+	{ id = "dreaded cleaver", chance = 502 }, -- dreaded cleaver
 	{ id = 21167, chance = 502 }, -- heat core
 	{ id = 21158, chance = 502 }, -- glooth spear
 	{ id = 21165, chance = 502 }, -- rubber cap

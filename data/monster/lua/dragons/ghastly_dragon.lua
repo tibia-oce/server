@@ -1,5 +1,4 @@
--- Ghastly Dragon (Tibia Wiki: https://tibia.fandom.com/wiki/Ghastly_Dragon)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Ghastly Dragon")
 local monster = {}

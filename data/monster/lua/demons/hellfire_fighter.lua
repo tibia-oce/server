@@ -1,5 +1,4 @@
--- Hellfire Fighter (Tibia Wiki: https://tibia.fandom.com/wiki/Hellfire_Fighter)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Hellfire Fighter")
 local monster = {}
@@ -81,7 +80,7 @@ monster.loot = {
 	{ id = "magma coat", chance = 380 },
 	{ id = "fiery heart", chance = 9570 },
 	{ id = "piece of hellfire armor", chance = 5060 },
-	{ id = 12600, chance = 670 }, -- coal
+	{ id = "coal", chance = 670 }, -- coal
 	{ id = "eternal flames", chance = 380 },
 }
 

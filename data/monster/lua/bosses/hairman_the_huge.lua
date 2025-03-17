@@ -1,5 +1,4 @@
--- Hairman the Huge (Tibia Wiki: https://tibia.fandom.com/wiki/Hairman_the_Huge)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Hairman the Huge")
 local monster = {}
@@ -74,7 +73,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 60 },
-	{ id = 3093, chance = 25000 }, -- club ring
+	{ id = "club ring", chance = 25000 }, -- club ring
 	{ id = "banana", chance = 25000, maxCount = 1 },
 }
 

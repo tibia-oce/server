@@ -1,5 +1,4 @@
--- Tortoise (Tibia Wiki: https://tibia.fandom.com/wiki/Tortoise)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Tortoise")
 local monster = {}
@@ -66,9 +65,9 @@ monster.loot = {
 	{ id = "gold coin", chance = 59000, maxCount = 30 },
 	{ id = "battle hammer", chance = 730 },
 	{ id = "plate shield", chance = 2850 },
-	{ id = 3578, chance = 4600 }, -- fish
+	{ id = "fish", chance = 4600 }, -- fish
 	{ id = "tortoise egg", chance = 770, maxCount = 2 },
-	{ id = 5899, chance = 1300 }, -- turtle shell
+	{ id = "turtle shell", chance = 1300 }, -- turtle shell
 	{ id = "tortoise shield", chance = 200 },
 }
 

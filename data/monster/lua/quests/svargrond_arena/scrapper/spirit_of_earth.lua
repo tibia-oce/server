@@ -1,5 +1,4 @@
--- Spirit of Earth (Tibia Wiki: https://tibia.fandom.com/wiki/Spirit_of_Earth)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Spirit of Earth")
 local monster = {}

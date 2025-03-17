@@ -1,5 +1,4 @@
--- Depowered Minotaur (Tibia Wiki: https://tibia.fandom.com/wiki/Depowered_Minotaur)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Depowered Minotaur")
 local monster = {}
@@ -63,11 +62,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 82 }, -- gold coin
+	{ id = "gold coin", chance = 100000, maxCount = 82 }, -- gold coin
 	{ id = 11472, chance = 100000 }, -- minotaur horn
-	{ id = 3035, chance = 100000, maxCount = 4 }, -- platinum coin
+	{ id = "platinum coin", chance = 100000, maxCount = 4 }, -- platinum coin
 	{ id = 236, chance = 25000 }, -- strong health potion
-	{ id = 5878, chance = 25000 }, -- minotaur leather
+	{ id = "minotaur leather", chance = 25000 }, -- minotaur leather
 	{ id = 3029, chance = 25000 }, -- small sapphire
 }
 

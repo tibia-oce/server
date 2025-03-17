@@ -1,5 +1,4 @@
--- Cockroach (Tibia Wiki: https://tibia.fandom.com/wiki/Cockroach)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Cockroach")
 local monster = {}

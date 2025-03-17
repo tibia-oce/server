@@ -1,5 +1,4 @@
--- Lonely Polar Bear (Tibia Wiki: https://tibia.fandom.com/wiki/Lonely_Polar_Bear)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Lonely Polar Bear")
 local monster = {}
@@ -67,9 +66,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 9650, chance = 930 }, -- polar bear paw
-	{ id = 3582, chance = 50760, maxCount = 2 }, -- ham
-	{ id = 3577, chance = 51080, maxCount = 4 }, -- meat
+	{ id = "polar bear paw", chance = 930 }, -- polar bear paw
+	{ id = "ham", chance = 50760, maxCount = 2 }, -- ham
+	{ id = "meat", chance = 51080, maxCount = 4 }, -- meat
 }
 
 monster.attacks = {

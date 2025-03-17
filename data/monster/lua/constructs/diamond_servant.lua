@@ -1,5 +1,4 @@
--- Diamond Servant (Tibia Wiki: https://tibia.fandom.com/wiki/Diamond_Servant)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Diamond Servant")
 local monster = {}
@@ -81,7 +80,7 @@ monster.loot = {
 	{ id = "strong mana potion", chance = 5980 },
 	{ id = "lightning pendant", chance = 710 },
 	{ id = "crystalline armor", chance = 20 },
-	{ id = 9690, chance = 5000 } -- "gear wheel",
+	{ id = 9690, chance = 5000}, -- "gear wheel"
 	{ id = 9063, chance = 5320 }, -- crystal pedestal
 	{ id = "shockwave amulet", chance = 110 },
 	{ id = "gear crystal", chance = 5000 },

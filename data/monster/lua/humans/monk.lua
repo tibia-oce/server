@@ -1,5 +1,4 @@
--- Monk (Tibia Wiki: https://tibia.fandom.com/wiki/Monk_(Creature))
--- Version: 6.40
+
 
 local mType = Game.createMonsterType("Monk")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "brown flask", chance = 820 },
 	{ id = 2914, chance = 880 }, -- lamp
 	{ id = "gold coin", chance = 15000, maxCount = 18 },
-	{ id = 3050, chance = 100 }, -- power ring
+	{ id = "power ring", chance = 100 }, -- power ring
 	{ id = "life crystal", chance = 1002 },
 	{ id = "ankh", chance = 2240 },
 	{ id = 3289, chance = 440 }, -- staff

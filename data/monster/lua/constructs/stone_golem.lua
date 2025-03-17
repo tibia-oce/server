@@ -1,5 +1,4 @@
--- Stone Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Stone_Golem)
--- Version: 6.4
+
 
 local mType = Game.createMonsterType("Stone Golem")
 local monster = {}
@@ -66,15 +65,15 @@ monster.loot = {
 	{ id = "small stone", chance = 13890, maxCount = 4 },
 	{ id = 3007, chance = 120 }, -- crystal ring
 	{ id = "gold coin", chance = 90000, maxCount = 40 },
-	{ id = 3039, chance = 30 }, -- red gem
-	{ id = 3050, chance = 5070 }, -- power ring
+	{ id = "red gem", chance = 30 }, -- red gem
+	{ id = "power ring", chance = 5070 }, -- power ring
 	{ id = "carlin sword", chance = 2500 },
 	{ id = "iron ore", chance = 1980 },
 	{ id = "ancient stone", chance = 1020 },
 	{ id = "shiny stone", chance = 760 },
 	{ id = "sulphurous stone", chance = 10370 },
 	{ id = "piece of marble rock", chance = 380 },
-	{ id = 12600, chance = 550 }, -- coal
+	{ id = "coal", chance = 550 }, -- coal
 }
 
 monster.attacks = {

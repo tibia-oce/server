@@ -1,5 +1,4 @@
--- Merlkin (Tibia Wiki: https://tibia.fandom.com/wiki/Merlkin)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Merlkin")
 local monster = {}

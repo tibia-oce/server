@@ -1,5 +1,4 @@
--- Gargoyle (Tibia Wiki: https://tibia.fandom.com/wiki/Gargoyle)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Gargoyle")
 local monster = {}
@@ -69,9 +68,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3012, chance = 1480 }, -- wolf tooth chain
+	{ id = "wolf tooth chain", chance = 1480 }, -- wolf tooth chain
 	{ id = "gold coin", chance = 88000, maxCount = 30 },
-	{ id = 3093, chance = 260 }, -- club ring
+	{ id = "club ring", chance = 260 }, -- club ring
 	{ id = "morning star", chance = 2150 },
 	{ id = "steel helmet", chance = 850 },
 	{ id = "dark armor", chance = 300 },

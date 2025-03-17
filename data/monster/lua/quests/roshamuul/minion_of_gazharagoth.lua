@@ -1,5 +1,4 @@
--- Minion of Gaz'haragoth (Tibia Wiki: https://tibia.fandom.com/wiki/Minion_of_Gaz'haragoth)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Minion of Gaz'haragoth")
 local monster = {}

@@ -1,5 +1,4 @@
--- Lost Basher (Tibia Wiki: https://tibia.fandom.com/wiki/Lost_Basher)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Lost Basher")
 local monster = {}
@@ -82,7 +81,7 @@ monster.loot = {
 	{ id = "terra boots", chance = 780 },
 	{ id = "ultimate health potion", chance = 10250 },
 	{ id = "small topaz", chance = 10200 },
-	{ id = 12600, chance = 21130 }, -- coal
+	{ id = "coal", chance = 21130 }, -- coal
 	{ id = "blue crystal shard", chance = 840 },
 	{ id = "lost basher's spike", chance = 17260 },
 	{ id = "lost basher's spike", chance = 14380 },

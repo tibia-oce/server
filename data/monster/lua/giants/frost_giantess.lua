@@ -1,5 +1,4 @@
--- Frost Giantess (Tibia Wiki: https://tibia.fandom.com/wiki/Frost_Giantess)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Frost Giantess")
 local monster = {}
@@ -71,13 +70,13 @@ monster.voices = {
 monster.loot = {
 	{ id = "small stone", chance = 10360, maxCount = 3 },
 	{ id = "gold coin", chance = 80000, maxCount = 40 },
-	{ id = 3093, chance = 70 }, -- club ring
+	{ id = "club ring", chance = 70 }, -- club ring
 	{ id = "short sword", chance = 7960 },
 	{ id = "dark helmet", chance = 170 },
 	{ id = "battle shield", chance = 1490 },
 	{ id = "ham", chance = 20990, maxCount = 2 },
 	{ id = "shard", chance = 100 },
-	{ id = 7441, chance = 2008 }, -- ice cube
+	{ id = "ice cube", chance = 2008 }, -- ice cube
 	{ id = "norse shield", chance = 320 },
 	{ id = "mana potion", chance = 950 },
 	{ id = "frost giant pelt", chance = 4800 },

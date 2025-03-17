@@ -1,5 +1,4 @@
--- Lonely Scorpion (Tibia Wiki: https://tibia.fandom.com/wiki/Lonely_Scorpion)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Lonely Scorpion")
 local monster = {}
@@ -65,7 +64,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 9651, chance = 4970 }, -- scorpion tail
+	{ id = "scorpion tail", chance = 4970 }, -- scorpion tail
 }
 
 monster.attacks = {

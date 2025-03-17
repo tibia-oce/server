@@ -1,5 +1,4 @@
--- Minion of Versperoth (Tibia Wiki: https://tibia.fandom.com/wiki/Minion_of_Versperoth)
--- Version: 9.61
+
 
 local mType = Game.createMonsterType("Minion of Versperoth")
 local monster = {}

@@ -1,5 +1,4 @@
--- Skeleton (Tibia Wiki: https://tibia.fandom.com/wiki/Skeleton)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Skeleton")
 local monster = {}
@@ -67,7 +66,7 @@ monster.loot = {
 	{ id = 2920, chance = 9880 }, -- torch
 	{ id = "gold coin", chance = 43900, maxCount = 10 },
 	{ id = 3115, chance = 49100 }, -- bone
-	{ id = 3264, chance = 1940 }, -- sword
+	{ id = "sword", chance = 1940 }, -- sword
 	{ id = "hatchet", chance = 4850 },
 	{ id = "mace", chance = 4850 },
 	{ id = "viking helmet", chance = 7520 },

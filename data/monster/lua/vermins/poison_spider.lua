@@ -1,5 +1,4 @@
--- Poison Spider (Tibia Wiki: https://tibia.fandom.com/wiki/Poison_Spider)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Poison Spider")
 local monster = {}

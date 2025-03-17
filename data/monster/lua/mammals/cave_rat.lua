@@ -1,5 +1,4 @@
--- Cave Rat (Tibia Wiki: https://tibia.fandom.com/wiki/Cave_Rat)
--- Version: 7.1
+
 
 local mType = Game.createMonsterType("Cave Rat")
 local monster = {}

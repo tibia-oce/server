@@ -1,5 +1,4 @@
--- Swarmer (Tibia Wiki: https://tibia.fandom.com/wiki/Swarmer)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Swarmer")
 local monster = {}

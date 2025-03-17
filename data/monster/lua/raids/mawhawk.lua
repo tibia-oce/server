@@ -1,5 +1,4 @@
--- Mawhawk (Tibia Wiki: https://tibia.fandom.com/wiki/Mawhawk)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Mawhawk")
 local monster = {}
@@ -81,14 +80,14 @@ monster.loot = {
 	{ id = 5880, chance = 10000 }, -- iron ore
 	{ id = 5895, chance = 10000 }, -- fish fin
 	{ id = 5911, chance = 10000 }, -- red piece of cloth
-	{ id = 5925, chance = 10000 }, -- hardened bone
+	{ id = "hardened bone", chance = 10000 }, -- hardened bone
 	{ id = 7404, chance = 10000 }, -- assassin dagger
-	{ id = 7407, chance = 10000 }, -- haunted blade
+	{ id = "haunted blade", chance = 10000 }, -- haunted blade
 	{ id = 7418, chance = 10000 }, -- nightmare blade
 	{ id = 16120, chance = 10000, maxCount = 3 }, -- violet crystal shard
 	{ id = 16121, chance = 10000, maxCount = 3 }, -- green crystal shard
 	{ id = 16122, chance = 10000, maxCount = 5 }, -- green crystal splinter
-	{ id = 16124, chance = 10000, maxCount = 5 }, -- blue crystal splinter
+	{ id = "blue crystal splinter", chance = 10000, maxCount = 5 }, -- blue crystal splinter
 }
 
 monster.attacks = {

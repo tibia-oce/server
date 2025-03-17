@@ -1,5 +1,4 @@
--- Damaged Crystal Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Damaged_Crystal_Golem)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Damaged Crystal Golem")
 local monster = {}

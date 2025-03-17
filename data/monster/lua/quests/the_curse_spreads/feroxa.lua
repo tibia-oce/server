@@ -1,5 +1,4 @@
--- Feroxa (Tibia Wiki: https://tibia.fandom.com/wiki/Feroxa)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("Feroxa")
 local monster = {}

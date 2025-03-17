@@ -1,5 +1,4 @@
--- Rorc (Tibia Wiki: https://tibia.fandom.com/wiki/Rorc)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Rorc")
 local monster = {}
@@ -66,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3012, chance = 7410 }, -- wolf tooth chain
+	{ id = "wolf tooth chain", chance = 7410 }, -- wolf tooth chain
 	{ id = "gold coin", chance = 73640, maxCount = 25 },
 	{ id = "obsidian lance", chance = 930 },
 	{ id = "orcish axe", chance = 2040 },

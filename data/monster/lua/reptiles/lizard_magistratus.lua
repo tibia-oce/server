@@ -1,5 +1,4 @@
--- Lizard Magistratus (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Magistratus)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("Lizard Magistratus")
 local monster = {}

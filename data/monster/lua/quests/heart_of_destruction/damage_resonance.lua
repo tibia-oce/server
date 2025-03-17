@@ -1,5 +1,4 @@
--- Damage Resonance (Tibia Wiki: https://tibia.fandom.com/wiki/Damage_Resonance)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Damage Resonance")
 local monster = {}

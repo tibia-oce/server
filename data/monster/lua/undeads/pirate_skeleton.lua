@@ -1,5 +1,4 @@
--- Pirate Skeleton (Tibia Wiki: https://tibia.fandom.com/wiki/Pirate_Skeleton)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Pirate Skeleton")
 local monster = {}
@@ -67,7 +66,7 @@ monster.loot = {
 	{ id = 3114, chance = 4460 }, -- skull
 	{ id = 3115, chance = 4250 }, -- bone
 	{ id = 3116, chance = 5140 }, -- big bone
-	{ id = 3264, chance = 550 }, -- sword
+	{ id = "sword", chance = 550 }, -- sword
 	{ id = "short sword", chance = 1003 },
 	{ id = "bone club", chance = 960 },
 	{ id = "spooky blue eye", chance = 4730 },

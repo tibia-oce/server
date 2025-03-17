@@ -1,5 +1,4 @@
--- Draken Elite (Tibia Wiki: https://tibia.fandom.com/wiki/Draken_Elite)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("Draken Elite")
 local monster = {}

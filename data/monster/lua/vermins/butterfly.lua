@@ -1,5 +1,4 @@
--- Butterfly (Tibia Wiki: https://tibia.fandom.com/wiki/Butterfly)
--- Version: 7.50
+
 
 local mType = Game.createMonsterType("Butterfly")
 local monster = {}

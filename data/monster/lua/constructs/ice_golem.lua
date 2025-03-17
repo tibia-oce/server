@@ -1,5 +1,4 @@
--- Ice Golem (Tibia Wiki: https://tibia.fandom.com/wiki/Ice_Golem)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Ice Golem")
 local monster = {}
@@ -73,7 +72,7 @@ monster.loot = {
 	{ id = "ice rapier", chance = 350 },
 	{ id = "strange helmet", chance = 350 },
 	{ id = "shard", chance = 200 },
-	{ id = 7441, chance = 5000 }, -- ice cube
+	{ id = "ice cube", chance = 5000 }, -- ice cube
 	{ id = "crystal sword", chance = 600 },
 	{ id = "strong health potion", chance = 2500 },
 	{ id = "strong mana potion", chance = 3000 },

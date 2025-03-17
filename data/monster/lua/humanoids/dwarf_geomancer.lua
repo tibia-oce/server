@@ -1,5 +1,4 @@
--- Dwarf Geomancer (Tibia Wiki: https://tibia.fandom.com/wiki/Dwarf_Geomancer)
--- Version: 7.0
+
 
 local mType = Game.createMonsterType("Dwarf Geomancer")
 local monster = {}
@@ -69,8 +68,8 @@ monster.loot = {
 	{ id = "small sapphire", chance = 710 },
 	{ id = "gold coin", chance = 50000, maxCount = 35 },
 	{ id = 3046, chance = 14000 }, -- magic light wand
-	{ id = 3059, chance = 360 }, -- spellbook
-	{ id = 3097, chance = 530 }, -- dwarven ring
+	{ id = "spellbook", chance = 360 }, -- spellbook
+	{ id = "dwarven ring", chance = 530 }, -- dwarven ring
 	{ id = "blank rune", chance = 33000 },
 	{ id = "clerical mace", chance = 1120 },
 	{ id = "pear", chance = 25000 },

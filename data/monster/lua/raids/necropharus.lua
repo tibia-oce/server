@@ -1,5 +1,4 @@
--- Necropharus (Tibia Wiki: https://tibia.fandom.com/wiki/Necropharus)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Necropharus")
 local monster = {}
@@ -73,7 +72,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 10320, chance = 100000 }, -- book of necromantic rituals
+	{ id = "book of necromantic rituals", chance = 100000 }, -- book of necromantic rituals
 	{ id = 3031, chance = 100000, maxCount = 99 }, -- gold coin
 	{ id = 11475, chance = 100000 }, -- necromantic robe
 	{ id = 5809, chance = 100000 }, -- soul stone
@@ -82,12 +81,12 @@ monster.loot = {
 	{ id = 3337, chance = 38000 }, -- bone club
 	{ id = 3114, chance = 19000 }, -- skull
 	{ id = 3732, chance = 14000 }, -- green mushroom
-	{ id = 3070, chance = 14000 }, -- moonlight rod
+	{ id = "moonlight rod", chance = 14000 }, -- moonlight rod
 	{ id = 3116, chance = 9500 }, -- big bone
 	{ id = 3441, chance = 9500 }, -- bone shield
 	{ id = 3079, chance = 4700 }, -- boots of haste
 	{ id = 3574, chance = 4700 }, -- mystic turban
-	{ id = 237, chance = 4700 }, -- strong mana potion
+	{ id = "strong mana potion", chance = 4700 }, -- strong mana potion
 }
 
 monster.attacks = {

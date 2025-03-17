@@ -1,5 +1,4 @@
--- Dreadwing (Tibia Wiki: https://tibia.fandom.com/wiki/Dreadwing)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Dreadwing")
 local monster = {}

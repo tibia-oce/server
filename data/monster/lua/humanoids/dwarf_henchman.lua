@@ -1,5 +1,4 @@
--- Dwarf Henchman (Tibia Wiki: https://tibia.fandom.com/wiki/Dwarf_Henchman)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Dwarf Henchman")
 local monster = {}

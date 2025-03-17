@@ -1,5 +1,4 @@
--- Tanjis (Tibia Wiki: https://tibia.fandom.com/wiki/Tanjis)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Tanjis")
 local monster = {}

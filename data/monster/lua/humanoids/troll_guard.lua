@@ -1,5 +1,4 @@
--- Troll Guard (Tibia Wiki: https://tibia.fandom.com/wiki/Troll_Guard)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Troll Guard")
 local monster = {}

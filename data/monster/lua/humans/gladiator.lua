@@ -1,5 +1,4 @@
--- Gladiator (Tibia Wiki: https://tibia.fandom.com/wiki/Gladiator)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Gladiator")
 local monster = {}
@@ -68,7 +67,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 49500, maxCount = 30 },
-	{ id = 3264, chance = 12620 }, -- sword
+	{ id = "sword", chance = 12620 }, -- sword
 	{ id = "mace", chance = 11160 },
 	{ id = "chain helmet", chance = 5200 },
 	{ id = "iron helmet", chance = 590 },

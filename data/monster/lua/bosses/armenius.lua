@@ -1,5 +1,4 @@
--- Armenius (Creature) (Tibia Wiki: https://tibia.fandom.com/wiki/Armenius_(Creature))
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Armenius (Creature)")
 local monster = {}
@@ -66,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3434, chance = 5230 }, -- vampire shield
+	{ id = "vampire shield", chance = 5230 }, -- vampire shield
 }
 
 monster.attacks = {

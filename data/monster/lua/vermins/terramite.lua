@@ -1,5 +1,4 @@
--- Terramite (Tibia Wiki: https://tibia.fandom.com/wiki/Terramite)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Terramite")
 local monster = {}

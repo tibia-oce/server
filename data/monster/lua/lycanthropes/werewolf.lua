@@ -1,5 +1,4 @@
--- Werewolf (Tibia Wiki: https://tibia.fandom.com/wiki/Werewolf)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Werewolf")
 local monster = {}
@@ -72,7 +71,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 98000, maxCount = 230 }, -- gold coin
+	{ id = "gold coin", chance = 98000, maxCount = 230 }, -- gold coin
 	{ id = 3053, chance = 800 }, -- time ring
 	{ id = "platinum amulet", chance = 870 },
 	{ id = "stone skin amulet", chance = 1000 },
@@ -89,7 +88,7 @@ monster.loot = {
 	{ id = "strong health potion", chance = 5000 },
 	{ id = "ultimate health potion", chance = 2400 },
 	{ id = 8895, chance = 210 }, -- rusted armor
-	{ id = 22052, chance = 15000 }, -- werewolf fangs
+	{ id = "werewolf fangs", chance = 15000 }, -- werewolf fangs
 	{ id = "werewolf fur", chance = 10650 },
 }
 

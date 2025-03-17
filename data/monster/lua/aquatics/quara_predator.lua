@@ -1,5 +1,4 @@
--- Quara Predator (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Predator)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Quara Predator")
 local monster = {}

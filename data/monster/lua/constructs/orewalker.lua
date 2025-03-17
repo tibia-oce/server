@@ -1,5 +1,4 @@
--- Orewalker (Tibia Wiki: https://tibia.fandom.com/wiki/Orewalker)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Orewalker")
 local monster = {}
@@ -69,7 +68,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 98 },
 	{ id = "platinum coin", chance = 100000, maxCount = 10 },
 	{ id = "yellow gem", chance = 1030 },
-	{ id = 3097, chance = 4660 }, -- dwarven ring
+	{ id = "dwarven ring", chance = 4660 }, -- dwarven ring
 	{ id = "knight legs", chance = 1910 },
 	{ id = "crown armor", chance = 370 },
 	{ id = "crown helmet", chance = 890 },

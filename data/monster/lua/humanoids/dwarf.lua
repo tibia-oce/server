@@ -1,5 +1,4 @@
--- Dwarf (Tibia Wiki: https://tibia.fandom.com/wiki/Dwarf)
--- Version: 6.1
+
 
 local mType = Game.createMonsterType("Dwarf")
 local monster = {}
@@ -65,13 +64,13 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 35000, maxCount = 8 },
-	{ id = 3097, chance = 100 }, -- dwarven ring
+	{ id = "dwarven ring", chance = 100 }, -- dwarven ring
 	{ id = "axe", chance = 15000 },
 	{ id = "hatchet", chance = 25000 },
 	{ id = "studded armor", chance = 8000 },
 	{ id = "copper shield", chance = 10000 },
 	{ id = 3456, chance = 10000 }, -- pick
-	{ id = 3505, chance = 8000 }, -- letter
+	{ id = "letter", chance = 8000 }, -- letter
 	{ id = "leather legs", chance = 10000 },
 	{ id = "white mushroom", chance = 50000 },
 	{ id = "iron ore", chance = 700 },

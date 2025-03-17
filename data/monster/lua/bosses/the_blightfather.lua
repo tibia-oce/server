@@ -1,5 +1,4 @@
--- The Blightfather (Tibia Wiki: https://tibia.fandom.com/wiki/The_Blightfather)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("The Blightfather")
 local monster = {}
@@ -74,9 +73,9 @@ monster.loot = {
 	{ id = 3031, chance = 2000, maxCount = 60 }, -- gold coin
 	{ id = 9692, chance = 17500 }, -- lump of dirt
 	{ id = 9640, chance = 12500 }, -- poisonous slime
-	{ id = 10455, chance = 7000 }, -- lancer beetle shell
-	{ id = 10457, chance = 400 }, -- beetle necklace
-	{ id = 3033, chance = 800 }, -- small amethyst
+	{ id = "lancer beetle shell", chance = 7000 }, -- lancer beetle shell
+	{ id = "beetle necklace", chance = 400 }, -- beetle necklace
+	{ id = "small amethyst", chance = 800 }, -- small amethyst
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Fleshslicer (Tibia Wiki: https://tibia.fandom.com/wiki/Fleshslicer)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Fleshslicer")
 local monster = {}

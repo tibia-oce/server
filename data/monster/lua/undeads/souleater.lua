@@ -1,5 +1,4 @@
--- Souleater (Tibia Wiki: https://tibia.fandom.com/wiki/Souleater)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("Souleater")
 local monster = {}
@@ -73,7 +72,7 @@ monster.loot = {
 	{ id = "platinum coin", chance = 49610, maxCount = 6 },
 	{ id = "necrotic rod", chance = 980 },
 	{ id = "wand of cosmic energy", chance = 910 },
-	{ id = 5884, chance = 140 }, -- spirit container
+	{ id = "spirit container", chance = 140 }, -- spirit container
 	{ id = 6299, chance = 300 }, -- death ring
 	{ id = "great mana potion", chance = 8000 },
 	{ id = "ultimate health potion", chance = 9400 },

@@ -1,5 +1,4 @@
--- Deer (Tibia Wiki: https://tibia.fandom.com/wiki/Deer)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Deer")
 local monster = {}
@@ -65,7 +64,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "meat", chance = 80000, maxCount = 4 },
 	{ id = "ham", chance = 50000, maxCount = 2 },
-	{ id = 10297, chance = 870 }, -- antlers
+	{ id = "antlers", chance = 870 }, -- antlers
 }
 
 monster.attacks = {

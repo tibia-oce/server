@@ -1,5 +1,4 @@
--- Hive Overseer (Tibia Wiki: https://tibia.fandom.com/wiki/Hive_Overseer)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Hive Overseer")
 local monster = {}

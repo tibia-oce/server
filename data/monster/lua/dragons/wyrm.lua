@@ -1,5 +1,4 @@
--- Wyrm (Tibia Wiki: https://tibia.fandom.com/wiki/Wyrm)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Wyrm")
 local monster = {}
@@ -73,7 +72,7 @@ monster.loot = {
 	{ id = "strong health potion", chance = 19910 },
 	{ id = "wyrm scale", chance = 17540 },
 	{ id = "strong mana potion", chance = 15170 },
-	{ id = 3449, chance = 5690, maxCount = 10 }, -- burst arrow
+	{ id = "burst arrow", chance = 5690, maxCount = 10 }, -- burst arrow
 	{ id = "crossbow", chance = 5690 },
 	{ id = "focus cape", chance = 2370 },
 	{ id = "small diamond", chance = 1420, maxCount = 3 },

@@ -1,5 +1,4 @@
--- Massive Earth Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Massive_Earth_Elemental)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Massive Earth Elemental")
 local monster = {}
@@ -72,14 +71,14 @@ monster.loot = {
 	{ id = "gold coin", chance = 32000, maxCount = 41 },
 	{ id = "stone skin amulet", chance = 980 },
 	{ id = "protection amulet", chance = 1580 },
-	{ id = 3097, chance = 2790 }, -- dwarven ring
+	{ id = "dwarven ring", chance = 2790 }, -- dwarven ring
 	{ id = "diamond sceptre", chance = 150 },
 	{ id = "terra amulet", chance = 500 },
 	{ id = 8895, chance = 3300 }, -- rusted armor
 	{ id = "small topaz", chance = 5280, maxCount = 2 },
 	{ id = "lump of earth", chance = 40680 },
 	{ id = "clay lump", chance = 480 },
-	{ id = 12600, chance = 430 }, -- coal
+	{ id = "coal", chance = 430 }, -- coal
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Mummy (Tibia Wiki: https://tibia.fandom.com/wiki/Mummy)
--- Version: 6.0
+
 
 local mType = Game.createMonsterType("Mummy")
 local monster = {}

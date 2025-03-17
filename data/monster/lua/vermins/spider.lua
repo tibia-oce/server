@@ -1,5 +1,4 @@
--- Spider (Tibia Wiki: https://tibia.fandom.com/wiki/Spider)
--- Version: 2.0
+
 
 local mType = Game.createMonsterType("Spider")
 local monster = {}

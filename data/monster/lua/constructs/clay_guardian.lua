@@ -1,5 +1,4 @@
--- Clay Guardian (Tibia Wiki: https://tibia.fandom.com/wiki/Clay_Guardian)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Clay Guardian")
 local monster = {}

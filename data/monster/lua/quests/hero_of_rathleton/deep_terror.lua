@@ -1,5 +1,4 @@
--- Deep Terror (Tibia Wiki: https://tibia.fandom.com/wiki/Deep_Terror)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Deep Terror")
 local monster = {}
@@ -74,7 +73,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 21899, chance = 10000, unique = true }, -- glooth glider tubes and wires
+	{ id = "glooth glider tubes and wires", chance = 10000, unique = true }, -- glooth glider tubes and wires
 }
 
 monster.attacks = {

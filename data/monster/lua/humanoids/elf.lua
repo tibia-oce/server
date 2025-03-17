@@ -1,5 +1,4 @@
--- Elf (Tibia Wiki: https://tibia.fandom.com/wiki/Elf)
--- Version: 6.2
+
 
 local mType = Game.createMonsterType("Elf")
 local monster = {}
@@ -75,7 +74,7 @@ monster.loot = {
 	{ id = "plate shield", chance = 9300 },
 	{ id = "arrow", chance = 7060, maxCount = 3 },
 	{ id = "leather boots", chance = 11410 },
-	{ id = 5921, chance = 940 }, -- heaven blossom
+	{ id = "heaven blossom", chance = 940 }, -- heaven blossom
 	{ id = "plum", chance = 20000, maxCount = 2 },
 	{ id = "elvish talisman", chance = 2100 },
 }

@@ -1,5 +1,4 @@
--- Foreman Kneebiter (Tibia Wiki: https://tibia.fandom.com/wiki/Foreman_Kneebiter)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Foreman Kneebiter")
 local monster = {}
@@ -71,9 +70,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 5880, chance = 2500, maxCount = 2 }, -- iron ore
-	{ id = 3031, chance = 90000, maxCount = 100 }, -- gold coin
-	{ id = 3413, chance = 6666 }, -- battle shield
+	{ id = "iron ore", chance = 2500, maxCount = 2 }, -- iron ore
+	{ id = "gold coin", chance = 90000, maxCount = 100 }, -- gold coin
+	{ id = "battle shield", chance = 6666 }, -- battle shield
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- The Handmaiden (Tibia Wiki: https://tibia.fandom.com/wiki/The_Handmaiden)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("The Handmaiden")
 local monster = {}

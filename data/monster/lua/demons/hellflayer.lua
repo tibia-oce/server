@@ -1,5 +1,4 @@
--- Hellflayer (Tibia Wiki: https://tibia.fandom.com/wiki/Hellflayer)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Hellflayer")
 local monster = {}
@@ -90,11 +89,11 @@ monster.loot = {
 	{ id = 22729, chance = 800 }, -- pair of hellflayer horns
 	{ id = 3039, chance = 500 }, -- red gem
 	{ id = 22866, chance = 280 }, -- rift bow
-	{ id = 22867, chance = 180 }, -- rift crossbow
+	{ id = "rift crossbow", chance = 180 }, -- rift crossbow
 	{ id = 5741, chance = 450 }, -- skull helmet
-	{ id = 22727, chance = 200 }, -- rift lance
+	{ id = "rift lance", chance = 200 }, -- rift lance
 	{ id = 7413, chance = 900 }, -- titan axe
-	{ id = 3360, chance = 750 }, -- golden armor
+	{ id = "golden armor", chance = 750 }, -- golden armor
 	{ id = 8074, chance = 900 }, -- spellbook of mind control
 	{ id = 3340, chance = 400 }, -- heavy mace
 }

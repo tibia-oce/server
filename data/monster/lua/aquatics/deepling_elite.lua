@@ -1,5 +1,4 @@
--- Deepling Elite (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Elite)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Deepling Elite")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "deeptags", chance = 20600 },
 	{ id = "deepling ridge", chance = 19500 },
 	{ id = "small emerald", chance = 6890, maxCount = 2 },
-	{ id = 3052, chance = 5360 }, -- life ring
+	{ id = "life ring", chance = 5360 }, -- life ring
 	{ id = "heavy trident", chance = 3680 },
 	{ id = "fish fin", chance = 2300 },
 	{ id = "warrior's shield", chance = 1534 },

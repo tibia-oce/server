@@ -1,5 +1,4 @@
--- Hellhound (Tibia Wiki: https://tibia.fandom.com/wiki/Hellhound)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Hellhound")
 local monster = {}
@@ -83,14 +82,14 @@ monster.loot = {
 	{ id = 7642, chance = 20000 }, -- great spirit potion
 	{ id = 3038, chance = 1000 }, -- green gem
 	{ id = 3582, chance = 30000, maxCount = 14 }, -- ham
-	{ id = 5925, chance = 10000 }, -- hardened bone
+	{ id = "hardened bone", chance = 10000 }, -- hardened bone
 	{ id = 9637, chance = 20000 }, -- hellhound slobber
 	{ id = 3318, chance = 7500 }, -- knight axe
 	{ id = 817, chance = 3000 }, -- magma amulet
 	{ id = 818, chance = 1500 }, -- magma boots
 	{ id = 826, chance = 800 }, -- magma coat
 	{ id = 821, chance = 1000 }, -- magma legs
-	{ id = 827, chance = 900 }, -- magma monocle
+	{ id = "magma monocle", chance = 900 }, -- magma monocle
 	{ id = 7421, chance = 1000 }, -- onyx flail
 	{ id = 3035, chance = 100000, maxCount = 7 }, -- platinum coin
 	{ id = 3039, chance = 4500 }, -- red gem
@@ -103,7 +102,7 @@ monster.loot = {
 	{ id = 3071, chance = 7000 }, -- wand of inferno
 	{ id = 3037, chance = 4500 }, -- yellow gem
 	{ id = 5911, chance = 3000 }, -- red piece of cloth
-	{ id = 5910, chance = 5000 }, -- green piece of cloth
+	{ id = "green piece of cloth", chance = 5000 }, -- green piece of cloth
 	{ id = 5914, chance = 6000 }, -- yellow piece of cloth
 }
 

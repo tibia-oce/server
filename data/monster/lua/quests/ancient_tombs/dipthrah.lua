@@ -1,5 +1,4 @@
--- Dipthrah (Tibia Wiki: https://tibia.fandom.com/wiki/Dipthrah)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Dipthrah")
 local monster = {}
@@ -83,7 +82,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 80 },
 	{ id = "gold coin", chance = 50000, maxCount = 80 },
 	{ id = "blue gem", chance = 1500 },
-	{ id = 3051, chance = 7000 }, -- energy ring
+	{ id = "energy ring", chance = 7000 }, -- energy ring
 	{ id = "mind stone", chance = 1500 },
 	{ id = "ankh", chance = 500 },
 	{ id = "ornamented ankh", chance = 100000 },

@@ -1,5 +1,4 @@
--- Dwarf Soldier (Tibia Wiki: https://tibia.fandom.com/wiki/Dwarf_Soldier)
--- Version: 6.1
+
 
 local mType = Game.createMonsterType("Dwarf Soldier")
 local monster = {}
@@ -65,14 +64,14 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 28000, maxCount = 12 },
-	{ id = 3092, chance = 120 }, -- axe ring
+	{ id = "axe ring", chance = 120 }, -- axe ring
 	{ id = "battle axe", chance = 2500 },
 	{ id = "crossbow", chance = 3000 },
 	{ id = "chain armor", chance = 8000 },
 	{ id = "soldier helmet", chance = 12000 },
 	{ id = "dwarven shield", chance = 3000 },
 	{ id = "bolt", chance = 40000, maxCount = 7 },
-	{ id = 3457, chance = 10000 }, -- shovel
+	{ id = "shovel", chance = 10000 }, -- shovel
 	{ id = "white mushroom", chance = 40000, maxCount = 3 },
 	{ id = "iron ore", chance = 300 },
 	{ id = "piercing bolt", chance = 4000, maxCount = 3 },

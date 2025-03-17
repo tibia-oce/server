@@ -1,5 +1,4 @@
--- Rat (Tibia Wiki: https://tibia.fandom.com/wiki/Rat)
--- Version: 3.0
+
 
 local mType = Game.createMonsterType("Rat")
 local monster = {}

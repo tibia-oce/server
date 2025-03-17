@@ -1,5 +1,4 @@
--- Dryad (Tibia Wiki: https://tibia.fandom.com/wiki/Dryad)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Dryad")
 local monster = {}

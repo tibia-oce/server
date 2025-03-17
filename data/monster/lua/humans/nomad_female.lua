@@ -1,5 +1,4 @@
--- Nomad Female (Tibia Wiki: https://tibia.fandom.com/wiki/Nomad_Female)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Nomad Female")
 local monster = {}
@@ -77,11 +76,11 @@ monster.loot = {
 	{ id = 8010, chance = 4840, maxCount = 3 }, -- potato
 	{ id = 3274, chance = 2730 }, -- axe
 	{ id = 3359, chance = 2350 }, -- brass armor
-	{ id = 3286, chance = 2150 }, -- mace
+	{ id = "mace", chance = 2150 }, -- mace
 	{ id = 11456, chance = 2140 }, -- dirty turban
 	{ id = 3409, chance = 900 }, -- steel shield
-	{ id = 3353, chance = 660 }, -- iron helmet
-	{ id = 7533, chance = 210 }, -- nomad parchment
+	{ id = "iron helmet", chance = 660 }, -- iron helmet
+	{ id = "nomad parchment", chance = 210 }, -- nomad parchment
 }
 
 monster.attacks = {

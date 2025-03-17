@@ -1,5 +1,4 @@
--- Lizard Noble (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Noble)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("Lizard Noble")
 local monster = {}

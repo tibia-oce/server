@@ -1,5 +1,4 @@
--- Hyaena (Tibia Wiki: https://tibia.fandom.com/wiki/Hyaena)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Hyaena")
 local monster = {}

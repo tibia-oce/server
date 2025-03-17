@@ -1,5 +1,4 @@
--- Travelling Merchant (Tibia Wiki: https://tibia.fandom.com/wiki/Travelling_Merchant)
--- Version: 8.70
+
 
 local mType = Game.createMonsterType("Travelling Merchant")
 local monster = {}

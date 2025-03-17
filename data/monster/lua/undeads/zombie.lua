@@ -1,5 +1,4 @@
--- Zombie (Tibia Wiki: https://tibia.fandom.com/wiki/Zombie)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Zombie")
 local monster = {}

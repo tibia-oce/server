@@ -1,5 +1,4 @@
--- Furious Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Furious_Troll)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Furious Troll")
 local monster = {}

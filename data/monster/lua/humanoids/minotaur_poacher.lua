@@ -1,5 +1,4 @@
--- Minotaur Poacher (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Poacher)
--- Version: 10.55
+
 
 local mType = Game.createMonsterType("Minotaur Poacher")
 local monster = {}

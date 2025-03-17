@@ -1,5 +1,4 @@
--- Greed (Tibia Wiki: https://tibia.fandom.com/wiki/Greed)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Greed")
 local monster = {}

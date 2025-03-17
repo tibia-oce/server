@@ -1,5 +1,4 @@
--- Feversleep (Tibia Wiki: https://tibia.fandom.com/wiki/Feversleep)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Feversleep")
 local monster = {}

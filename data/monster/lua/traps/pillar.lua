@@ -1,5 +1,4 @@
--- Pillar (Tibia Wiki: https://tibia.fandom.com/wiki/Pillar)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Pillar")
 local monster = {}

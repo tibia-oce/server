@@ -1,5 +1,4 @@
--- Ghazbaran (Tibia Wiki: https://tibia.fandom.com/wiki/Ghazbaran)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Ghazbaran")
 local monster = {}
@@ -95,12 +94,12 @@ monster.loot = {
 	{ id = "green gem", chance = 20000 },
 	{ id = "blue gem", chance = 14285 },
 	{ id = "might ring", chance = 12500 },
-	{ id = 3049, chance = 12500 }, -- stealth ring
+	{ id = "stealth ring", chance = 12500 }, -- stealth ring
 	{ id = "strange symbol", chance = 11111 },
 	{ id = "life crystal", chance = 12500 },
 	{ id = "mind stone", chance = 20000 },
 	{ id = "gold ring", chance = 20000 },
-	{ id = 3098, chance = 20000 }, -- ring of healing
+	{ id = "ring of healing", chance = 20000 }, -- ring of healing
 	{ id = "twin axe", chance = 11111 },
 	{ id = "golden armor", chance = 8333 },
 	{ id = "magic plate armor", chance = 8333 },

@@ -1,5 +1,4 @@
--- Stonecracker (Tibia Wiki: https://tibia.fandom.com/wiki/Stonecracker)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Stonecracker")
 local monster = {}
@@ -67,14 +66,14 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 76225, maxCount = 100 }, -- gold coin
-	{ id = 5893, chance = 64800 }, -- perfect behemoth fang
+	{ id = "perfect behemoth fang", chance = 64800 }, -- perfect behemoth fang
 	{ id = 3577, chance = 36200 }, -- meat
 	{ id = 5930, chance = 50500 }, -- behemoth claw
-	{ id = 7368, chance = 11225, maxCount = 2 }, -- assassin star
+	{ id = "assassin star", chance = 11225, maxCount = 2 }, -- assassin star
 	{ id = 3383, chance = 7650 }, -- dark armor
 	{ id = 3304, chance = 14800 }, -- crowbar
 	{ id = 3033, chance = 7650, maxCount = 2 }, -- small amethyst
-	{ id = 3275, chance = 7650 }, -- double axe
+	{ id = "double axe", chance = 7650 }, -- double axe
 }
 
 monster.attacks = {

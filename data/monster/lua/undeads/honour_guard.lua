@@ -1,5 +1,4 @@
--- Honour Guard (Tibia Wiki: https://tibia.fandom.com/wiki/Honour_Guard)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Honour Guard")
 local monster = {}
@@ -70,7 +69,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 15 },
 	{ id = "scarab coin", chance = 2600 },
 	{ id = "mace", chance = 3760 },
-	{ id = 3307, chance = 1640 }, -- scimitar
+	{ id = "scimitar", chance = 1640 }, -- scimitar
 	{ id = "brown mushroom", chance = 6120, maxCount = 2 },
 	{ id = "pelvis bone", chance = 8700 },
 }

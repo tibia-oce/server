@@ -1,5 +1,4 @@
--- Undead Mine Worker (Tibia Wiki: https://tibia.fandom.com/wiki/Undead_Mine_Worker)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Undead Mine Worker")
 local monster = {}
@@ -68,7 +67,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 73000, maxCount = 10 },
 	{ id = 3115, chance = 42000 }, -- bone
-	{ id = 3264, chance = 3850 }, -- sword
+	{ id = "sword", chance = 3850 }, -- sword
 	{ id = "mace", chance = 26900 },
 	{ id = "white mushroom", chance = 15400, maxCount = 3 },
 	{ id = "brown mushroom", chance = 3850 },

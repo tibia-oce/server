@@ -1,5 +1,4 @@
--- Spider Queen (Tibia Wiki: https://tibia.fandom.com/wiki/Spider_Queen)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Spider Queen")
 local monster = {}

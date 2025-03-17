@@ -1,5 +1,4 @@
--- Water Buffalo (Tibia Wiki: https://tibia.fandom.com/wiki/Water_Buffalo)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Water Buffalo")
 local monster = {}

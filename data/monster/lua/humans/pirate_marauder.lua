@@ -1,5 +1,4 @@
--- Pirate Marauder (Tibia Wiki: https://tibia.fandom.com/wiki/Pirate_Marauder)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Pirate Marauder")
 local monster = {}
@@ -73,7 +72,7 @@ monster.loot = {
 	{ id = "plate shield", chance = 5000 },
 	{ id = 5090, chance = 910 }, -- treasure map
 	{ id = "rum flask", chance = 110 },
-	{ id = 5792, chance = 90 }, -- die
+	{ id = "die", chance = 90 }, -- die
 	{ id = "bandana", chance = 880 },
 	{ id = "pirate bag", chance = 430 },
 	{ id = "empty goldfish bowl", chance = 80 },

@@ -1,5 +1,4 @@
--- Deepling Tyrant (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Tyrant)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Deepling Tyrant")
 local monster = {}

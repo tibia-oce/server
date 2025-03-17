@@ -1,5 +1,4 @@
--- Blue Butterfly (Tibia Wiki: https://tibia.fandom.com/wiki/Blue_Butterfly)
--- Version: 7.50
+
 
 local mType = Game.createMonsterType("Blue Butterfly")
 local monster = {}

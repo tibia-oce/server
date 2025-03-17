@@ -1,5 +1,4 @@
--- Dworc Fleshhunter (Tibia Wiki: https://tibia.fandom.com/wiki/Dworc_Fleshhunter)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Dworc Fleshhunter")
 local monster = {}

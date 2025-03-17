@@ -1,5 +1,4 @@
--- Fernfang (Tibia Wiki: https://tibia.fandom.com/wiki/Fernfang)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Fernfang")
 local monster = {}
@@ -81,7 +80,7 @@ monster.loot = {
 	{ id = 3736, chance = 86000 }, -- star herb
 	{ id = 11492, chance = 53000 }, -- rope belt
 	{ id = 3050, chance = 40000 }, -- power ring
-	{ id = 11493, chance = 40000 }, -- safety pin
+	{ id = "safety pin", chance = 40000 }, -- safety pin
 	{ id = 3037, chance = 33000 }, -- yellow gem
 	{ id = 2885, chance = 20000 }, -- brown flask
 	{ id = 237, chance = 20000 }, -- strong mana potion
@@ -89,10 +88,10 @@ monster.loot = {
 	{ id = 3289, chance = 13000 }, -- staff
 	{ id = 5786, chance = 13000 }, -- wooden whistle
 	{ id = 3147, chance = 7000 }, -- blank rune
-	{ id = 3600, chance = 7000 }, -- bread
+	{ id = "bread", chance = 7000 }, -- bread
 	{ id = 3563, chance = 7000 }, -- green tunic
 	{ id = 3061, chance = 7000 }, -- life crystal
-	{ id = 3738, chance = 7000 }, -- sling herb
+	{ id = "sling herb", chance = 7000 }, -- sling herb
 	{ id = 3012, chance = 7000 }, -- wolf tooth chain
 }
 

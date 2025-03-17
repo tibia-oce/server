@@ -1,5 +1,4 @@
--- Sharptooth (Tibia Wiki: https://tibia.fandom.com/wiki/Sharptooth)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Sharptooth")
 local monster = {}
@@ -73,7 +72,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3111, chance = 50000 }, -- fishbone
+	{ id = "fishbone", chance = 50000 }, -- fishbone
 }
 
 monster.attacks = {

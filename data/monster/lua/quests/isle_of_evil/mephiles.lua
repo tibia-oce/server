@@ -1,5 +1,4 @@
--- Mephiles (Tibia Wiki: https://tibia.fandom.com/wiki/Mephiles)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Mephiles")
 local monster = {}
@@ -76,11 +75,11 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 2000, maxCount = 95 }, -- gold coin
-	{ id = 3035, chance = 30000, maxCount = 9 }, -- platinum coin
-	{ id = 9376, chance = 1000 }, -- stale bread of ancientness
+	{ id = "platinum coin", chance = 30000, maxCount = 9 }, -- platinum coin
+	{ id = "stale bread of ancientness", chance = 1000 }, -- stale bread of ancientness
 	{ id = 9387, chance = 1000 }, -- poet's fencing quill
 	{ id = 9400, chance = 1000 }, -- rain coat
-	{ id = 3537, chance = 1000 }, -- white knight
+	{ id = "white knight", chance = 1000 }, -- white knight
 }
 
 monster.attacks = {

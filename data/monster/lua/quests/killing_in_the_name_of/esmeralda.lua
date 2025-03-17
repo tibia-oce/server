@@ -1,5 +1,4 @@
--- Esmeralda (Tibia Wiki: https://tibia.fandom.com/wiki/Esmeralda)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Esmeralda")
 local monster = {}
@@ -68,14 +67,14 @@ monster.voices = {
 monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 170 }, -- gold coin
 	{ id = 9668, chance = 100000 }, -- mutated rat tail
-	{ id = 3098, chance = 100000 }, -- ring of healing
+	{ id = "ring of healing", chance = 100000 }, -- ring of healing
 	{ id = 3035, chance = 95000, maxCount = 4 }, -- platinum coin
 	{ id = 3030, chance = 68000, maxCount = 3 }, -- small ruby
 	{ id = 3370, chance = 54000 }, -- knight armor
-	{ id = 3428, chance = 34000 }, -- tower shield
+	{ id = "tower shield", chance = 34000 }, -- tower shield
 	{ id = 3269, chance = 31050 }, -- halberd
 	{ id = 3326, chance = 26000 }, -- epee
-	{ id = 811, chance = 8200 }, -- terra mantle
+	{ id = "terra mantle", chance = 8200 }, -- terra mantle
 	{ id = 3735, chance = 6500 }, -- stone herb
 }
 

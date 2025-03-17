@@ -1,5 +1,4 @@
--- Noble Lion (Tibia Wiki: https://tibia.fandom.com/wiki/Noble_Lion)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Noble Lion")
 local monster = {}
@@ -67,10 +66,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 68 }, -- gold coin
-	{ id = 3577, chance = 25000 }, -- meat
+	{ id = "gold coin", chance = 100000, maxCount = 68 }, -- gold coin
+	{ id = "meat", chance = 25000 }, -- meat
 	{ id = 3582, chance = 25000 }, -- ham
-	{ id = 9691, chance = 20000 }, -- lion's mane
+	{ id = "lion's mane", chance = 20000 }, -- lion's mane
 }
 
 monster.attacks = {

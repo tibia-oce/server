@@ -1,5 +1,4 @@
--- Lonely Yielothax (Tibia Wiki: https://tibia.fandom.com/wiki/Lonely_Yielothax)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Lonely Yielothax")
 local monster = {}
@@ -69,10 +68,10 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 7440, chance = 490 }, -- mastermind potion
-	{ id = 12742, chance = 300 }, -- yielowax
+	{ id = "yielowax", chance = 300 }, -- yielowax
 	{ id = 12805, chance = 320 }, -- yielocks
 	{ id = 3031, chance = 99800, maxCount = 227 }, -- gold coin
-	{ id = 3725, chance = 9930, maxCount = 3 }, -- brown mushroom
+	{ id = "brown mushroom", chance = 9930, maxCount = 3 }, -- brown mushroom
 	{ id = 236, chance = 19910 }, -- strong health potion
 	{ id = 237, chance = 19920 }, -- strong mana potion
 	{ id = 3028, chance = 4860, maxCount = 5 }, -- small diamond
@@ -83,7 +82,7 @@ monster.loot = {
 	{ id = 3326, chance = 520 }, -- epee
 	{ id = 9304, chance = 570 }, -- shockwave amulet
 	{ id = 816, chance = 830 }, -- lightning pendant
-	{ id = 822, chance = 480 }, -- lightning legs
+	{ id = "lightning legs", chance = 480 }, -- lightning legs
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Hydra (Tibia Wiki: https://tibia.fandom.com/wiki/Hydra)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Hydra")
 local monster = {}
@@ -77,7 +76,7 @@ monster.loot = {
 	{ id = "warrior helmet", chance = 1310 },
 	{ id = "knight armor", chance = 1120 },
 	{ id = "life crystal", chance = 930 },
-	{ id = 3098, chance = 840 }, -- ring of healing
+	{ id = "ring of healing", chance = 840 }, -- ring of healing
 	{ id = "hydra egg", chance = 840 },
 	{ id = "strong mana potion", chance = 840 },
 	{ id = "stone skin amulet", chance = 750 },

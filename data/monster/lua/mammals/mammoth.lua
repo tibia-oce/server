@@ -1,5 +1,4 @@
--- Mammoth (Tibia Wiki: https://tibia.fandom.com/wiki/Mammoth)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Mammoth")
 local monster = {}

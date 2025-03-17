@@ -1,5 +1,4 @@
--- Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Wolf)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Wolf")
 local monster = {}

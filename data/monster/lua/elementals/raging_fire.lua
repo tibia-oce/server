@@ -1,5 +1,4 @@
--- Raging Fire (Tibia Wiki: https://tibia.fandom.com/wiki/Raging_Fire)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Raging Fire")
 local monster = {}

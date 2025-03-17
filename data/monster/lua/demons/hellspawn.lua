@@ -1,5 +1,4 @@
--- Hellspawn (Tibia Wiki: https://tibia.fandom.com/wiki/Hellspawn)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Hellspawn")
 local monster = {}
@@ -87,7 +86,7 @@ monster.loot = {
 	{ id = 8895, chance = 3125 }, -- rusted armor
 	{ id = 8896, chance = 3125 }, -- slightly rusted armor
 	{ id = 9034, chance = 140 }, -- dracoyle statue
-	{ id = 9056, chance = 151 }, -- black skull
+	{ id = "black skull", chance = 151 }, -- black skull
 	{ id = "small topaz", chance = 5882, maxCount = 3 },
 	{ id = "hellspawn tail", chance = 20000 },
 }

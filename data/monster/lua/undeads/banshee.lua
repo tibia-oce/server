@@ -1,5 +1,4 @@
--- Banshee (Tibia Wiki: https://tibia.fandom.com/wiki/Banshee)
--- Version: 7.2
+
 
 local mType = Game.createMonsterType("Banshee")
 local monster = {}
@@ -80,10 +79,10 @@ monster.loot = {
 	{ id = "black pearl", chance = 2030 },
 	{ id = "gold coin", chance = 30000, maxCount = 80 },
 	{ id = "silver amulet", chance = 8700 },
-	{ id = 3059, chance = 520 }, -- spellbook
+	{ id = "spellbook", chance = 520 }, -- spellbook
 	{ id = "life crystal", chance = 70 },
 	{ id = "stone skin amulet", chance = 820 },
-	{ id = 3098, chance = 730 }, -- ring of healing
+	{ id = "ring of healing", chance = 730 }, -- ring of healing
 	{ id = 2949, chance = 910 }, -- lyre
 	{ id = "poison dagger", chance = 1350 },
 	{ id = "red robe", chance = 150 },

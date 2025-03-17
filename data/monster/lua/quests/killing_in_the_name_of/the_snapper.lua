@@ -1,5 +1,4 @@
--- The Snapper (Tibia Wiki: https://tibia.fandom.com/wiki/The_Snapper)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("The Snapper")
 local monster = {}
@@ -65,13 +64,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 178 }, -- gold coin
-	{ id = 266, chance = 80000, maxCount = 5 }, -- health potion
+	{ id = "gold coin", chance = 100000, maxCount = 178 }, -- gold coin
+	{ id = "health potion", chance = 80000, maxCount = 5 }, -- health potion
 	{ id = 3032, chance = 75000, maxCount = 4 }, -- small emerald
 	{ id = 3557, chance = 44000 }, -- plate legs
 	{ id = 3357, chance = 39800 }, -- plate armor
 	{ id = 3556, chance = 6000 }, -- crocodile boots
-	{ id = 3370, chance = 400 }, -- knight armor
+	{ id = "knight armor", chance = 400 }, -- knight armor
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Angry Adventurer (Tibia Wiki: https://tibia.fandom.com/wiki/Angry_Adventurer)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Angry Adventurer")
 local monster = {}

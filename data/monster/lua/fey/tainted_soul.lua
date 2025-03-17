@@ -1,5 +1,4 @@
--- Tainted Soul (Tibia Wiki: https://tibia.fandom.com/wiki/Tainted_Soul)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("Tainted Soul")
 local monster = {}

@@ -1,5 +1,4 @@
--- Lizard Dragon Priest (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Dragon_Priest)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Lizard Dragon Priest")
 local monster = {}
@@ -76,7 +75,7 @@ monster.loot = {
 	{ id = "small amethyst", chance = 4900, maxCount = 3 },
 	{ id = "platinum coin", chance = 4090, maxCount = 2 },
 	{ id = "yellow gem", chance = 1000 },
-	{ id = 3052, chance = 770 }, -- life ring
+	{ id = "life ring", chance = 770 }, -- life ring
 	{ id = "terra rod", chance = 1001 },
 	{ id = "wand of inferno", chance = 1480 },
 	{ id = "lizard leather", chance = 980 },

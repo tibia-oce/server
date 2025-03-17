@@ -1,5 +1,4 @@
--- Enthralled Demon (Tibia Wiki: https://tibia.fandom.com/wiki/Enthralled_Demon)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Enthralled Demon")
 local monster = {}

@@ -1,5 +1,4 @@
--- Bog Frog (Tibia Wiki: https://tibia.fandom.com/wiki/Bog_Frog)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Bog Frog")
 local monster = {}

@@ -1,5 +1,4 @@
--- Hideous Fungus (Tibia Wiki: https://tibia.fandom.com/wiki/Hideous_Fungus)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Hideous Fungus")
 local monster = {}

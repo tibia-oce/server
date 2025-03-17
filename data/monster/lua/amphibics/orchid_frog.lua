@@ -1,5 +1,4 @@
--- Orchid Frog (Tibia Wiki: https://tibia.fandom.com/wiki/Orchid_Frog)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Orchid Frog")
 local monster = {}

@@ -1,5 +1,4 @@
--- Clomp (Tibia Wiki: https://tibia.fandom.com/wiki/Clomp)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Clomp")
 local monster = {}
@@ -69,12 +68,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 92000, maxCount = 130 }, -- gold coin
+	{ id = "gold coin", chance = 92000, maxCount = 130 }, -- gold coin
 	{ id = 22186, chance = 2200 }, -- raw meat
-	{ id = 5925, chance = 1200, maxCount = 2 }, -- hardened bone
+	{ id = "hardened bone", chance = 1200, maxCount = 2 }, -- hardened bone
 	{ id = 10307, chance = 900 }, -- thick fur
 	{ id = 3443, chance = 400 }, -- tusk shield
-	{ id = 7432, chance = 200 }, -- furry club
+	{ id = "furry club", chance = 200 }, -- furry club
 }
 
 monster.attacks = {

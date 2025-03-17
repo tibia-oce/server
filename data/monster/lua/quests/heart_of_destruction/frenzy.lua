@@ -1,5 +1,4 @@
--- Frenzy (Tibia Wiki: https://tibia.fandom.com/wiki/Frenzy)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Frenzy")
 local monster = {}

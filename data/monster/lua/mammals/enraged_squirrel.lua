@@ -1,5 +1,4 @@
--- Enraged Squirrel (Tibia Wiki: https://tibia.fandom.com/wiki/Enraged_Squirrel)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Enraged Squirrel")
 local monster = {}
@@ -63,7 +62,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 836, chance = 2680 }, -- walnut
+	{ id = "walnut", chance = 2680 }, -- walnut
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Arachir the Ancient One (Tibia Wiki: https://tibia.fandom.com/wiki/Arachir_the_Ancient_One)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Arachir the Ancient One")
 local monster = {}
@@ -81,11 +80,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 7416, chance = 1200 }, -- bloody edge
+	{ id = "bloody edge", chance = 1200 }, -- bloody edge
 	{ id = 236, chance = 10000 }, -- strong health potion
 	{ id = 3114, chance = 10000 }, -- skull
-	{ id = 3031, chance = 100000, maxCount = 98 }, -- gold coin
-	{ id = 8192, chance = 100000 }, -- vampire lord token
+	{ id = "gold coin", chance = 100000, maxCount = 98 }, -- gold coin
+	{ id = "vampire lord token", chance = 100000 }, -- vampire lord token
 	{ id = 3035, chance = 50000, maxCount = 5 }, -- platinum coin
 	{ id = 3434, chance = 6300 }, -- vampire shield
 	{ id = 3027, chance = 8980 }, -- black pearl

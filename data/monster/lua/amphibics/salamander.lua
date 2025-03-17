@@ -1,5 +1,4 @@
--- Salamander (Tibia Wiki: https://tibia.fandom.com/wiki/Salamander)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Salamander")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "brass helmet", chance = 2180 },
 	{ id = "arrow", chance = 7890, maxCount = 3 },
 	{ id = "health potion", chance = 1480 },
-	{ id = 3307, chance = 490 }, -- scimitar
+	{ id = "scimitar", chance = 490 }, -- scimitar
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Starving Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Starving_Wolf)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Starving Wolf")
 local monster = {}

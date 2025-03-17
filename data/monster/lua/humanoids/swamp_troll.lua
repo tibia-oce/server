@@ -1,5 +1,4 @@
--- Swamp Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Swamp_Troll)
--- Version: 7.1
+
 
 local mType = Game.createMonsterType("Swamp Troll")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "spear", chance = 13000 },
 	{ id = "fishing rod", chance = 60 },
 	{ id = "leather boots", chance = 9500 },
-	{ id = 3578, chance = 60000 }, -- fish
+	{ id = "fish", chance = 60000 }, -- fish
 	{ id = "troll green", chance = 1200 },
 	{ id = 5901, chance = 2140 }, -- wood
 	{ id = "swamp grass", chance = 3100 },

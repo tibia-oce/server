@@ -1,5 +1,4 @@
--- Ghost Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Ghost_Wolf)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("Ghost Wolf")
 local monster = {}

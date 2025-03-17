@@ -1,5 +1,4 @@
--- Devourer (Tibia Wiki: https://tibia.fandom.com/wiki/Devourer)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Devourer")
 local monster = {}
@@ -78,12 +77,12 @@ monster.loot = {
 	{ id = 9057, chance = 1030, maxCount = 3 }, -- small topaz
 	{ id = 3032, chance = 1170, maxCount = 3 }, -- small emerald
 	{ id = 3030, chance = 1190, maxCount = 3 }, -- small ruby
-	{ id = 3028, chance = 1050, maxCount = 3 }, -- small diamond
+	{ id = "small diamond", chance = 1050, maxCount = 3 }, -- small diamond
 	{ id = 3037, chance = 1090 }, -- yellow gem
-	{ id = 3038, chance = 100 }, -- green gem
+	{ id = "green gem", chance = 100 }, -- green gem
 	{ id = 21164, chance = 210 }, -- glooth cape
 	{ id = 21183, chance = 130 }, -- glooth amulet
-	{ id = 21179, chance = 350 }, -- glooth blade
+	{ id = "glooth blade", chance = 350 }, -- glooth blade
 	{ id = 21178, chance = 510 }, -- glooth club
 	{ id = 21180, chance = 390 }, -- glooth axe
 	{ id = 21158, chance = 370 }, -- glooth spear

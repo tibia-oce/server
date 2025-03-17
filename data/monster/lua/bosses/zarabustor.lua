@@ -1,5 +1,4 @@
--- Zarabustor (Tibia Wiki: https://tibia.fandom.com/wiki/Zarabustor)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Zarabustor")
 local monster = {}
@@ -84,12 +83,12 @@ monster.loot = {
 	{ id = 3031, chance = 32000, maxCount = 80 }, -- gold coin
 	{ id = 3299, chance = 9600 }, -- poison dagger
 	{ id = 3324, chance = 8330 }, -- skull staff
-	{ id = 7368, chance = 5500, maxCount = 4 }, -- assassin star
+	{ id = "assassin star", chance = 5500, maxCount = 4 }, -- assassin star
 	{ id = 3567, chance = 3390 }, -- blue robe
-	{ id = 3029, chance = 3190 }, -- small sapphire
+	{ id = "small sapphire", chance = 3190 }, -- small sapphire
 	{ id = 825, chance = 3040 }, -- lightning robe
 	{ id = 3006, chance = 2420 }, -- ring of the sky
-	{ id = 3360, chance = 2240 }, -- golden armor
+	{ id = "golden armor", chance = 2240 }, -- golden armor
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Insectoid Worker (Tibia Wiki: https://tibia.fandom.com/wiki/Insectoid_Worker)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Insectoid Worker")
 local monster = {}

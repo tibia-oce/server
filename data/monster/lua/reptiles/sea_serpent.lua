@@ -1,5 +1,4 @@
--- Sea Serpent (Tibia Wiki: https://tibia.fandom.com/wiki/Sea_Serpent)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Sea Serpent")
 local monster = {}
@@ -70,8 +69,8 @@ monster.loot = {
 	{ id = "gold coin", chance = 30000, maxCount = 100 },
 	{ id = "gold coin", chance = 30000, maxCount = 36 },
 	{ id = "platinum coin", chance = 25000, maxCount = 3 },
-	{ id = 3049, chance = 400 }, -- stealth ring
-	{ id = 3098, chance = 1100 }, -- ring of healing
+	{ id = "stealth ring", chance = 400 }, -- stealth ring
+	{ id = "ring of healing", chance = 1100 }, -- ring of healing
 	{ id = "serpent sword", chance = 4200 },
 	{ id = "plate legs", chance = 7150 },
 	{ id = "dragon ham", chance = 60000, maxCount = 2 },

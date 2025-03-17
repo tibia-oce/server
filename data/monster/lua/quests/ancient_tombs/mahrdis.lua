@@ -1,5 +1,4 @@
--- Mahrdis (Tibia Wiki: https://tibia.fandom.com/wiki/Mahrdis)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Mahrdis")
 local monster = {}
@@ -87,8 +86,8 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 80 },
 	{ id = "gold coin", chance = 50000, maxCount = 70 },
 	{ id = "gold coin", chance = 50000, maxCount = 64 },
-	{ id = 3039, chance = 1500 }, -- red gem
-	{ id = 3052, chance = 1500 }, -- life ring
+	{ id = "red gem", chance = 1500 }, -- red gem
+	{ id = "life ring", chance = 1500 }, -- life ring
 	{ id = "burning heart", chance = 100000 },
 	{ id = "fire axe", chance = 750 },
 	{ id = "phoenix shield", chance = 300 },

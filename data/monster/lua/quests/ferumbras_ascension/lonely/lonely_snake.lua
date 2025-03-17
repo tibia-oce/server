@@ -1,5 +1,4 @@
--- Lonely Snake (Tibia Wiki: https://tibia.fandom.com/wiki/Lonely_Snake)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Lonely Snake")
 local monster = {}

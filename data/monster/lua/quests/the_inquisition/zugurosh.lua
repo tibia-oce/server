@@ -1,5 +1,4 @@
--- Zugurosh (Tibia Wiki: https://tibia.fandom.com/wiki/Zugurosh)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Zugurosh")
 local monster = {}
@@ -85,8 +84,8 @@ monster.loot = {
 	{ id = 8896, chance = 45000 }, -- slightly rusted armor
 	{ id = 238, chance = 27000 }, -- great mana potion
 	{ id = 7642, chance = 26000 }, -- great spirit potion
-	{ id = 239, chance = 23000 }, -- great health potion
-	{ id = 7643, chance = 22000 }, -- ultimate health potion
+	{ id = "great health potion", chance = 23000 }, -- great health potion
+	{ id = "ultimate health potion", chance = 22000 }, -- ultimate health potion
 	{ id = 9058, chance = 21000 }, -- gold ingot
 	{ id = 3035, chance = 21000, maxCount = 30 }, -- platinum coin
 	{ id = 6104, chance = 21000 }, -- jewel case
@@ -96,7 +95,7 @@ monster.loot = {
 	{ id = 3017, chance = 17000 }, -- silver brooch
 	{ id = 5912, chance = 15000, maxCount = 10 }, -- blue piece of cloth
 	{ id = 5909, chance = 15000, maxCount = 10 }, -- white piece of cloth
-	{ id = 5910, chance = 14000, maxCount = 10 }, -- green piece of cloth
+	{ id = "green piece of cloth", chance = 14000, maxCount = 10 }, -- green piece of cloth
 	{ id = 5914, chance = 14000, maxCount = 10 }, -- yellow piece of cloth
 	{ id = 5913, chance = 12000, maxCount = 10 }, -- brown piece of cloth
 	{ id = 5954, chance = 9700, maxCount = 2 }, -- demon horn

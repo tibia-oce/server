@@ -1,5 +1,4 @@
--- Hellgorak (Tibia Wiki: https://tibia.fandom.com/wiki/Hellgorak)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Hellgorak")
 local monster = {}
@@ -88,7 +87,7 @@ monster.loot = {
 	{ id = 3344, chance = 29950 }, -- beastslayer axe
 	{ id = 3035, chance = 21790, maxCount = 30 }, -- platinum coin
 	{ id = 7642, chance = 21180 }, -- great spirit potion
-	{ id = 239, chance = 20570 }, -- great health potion
+	{ id = "great health potion", chance = 20570 }, -- great health potion
 	{ id = 3381, chance = 19670 }, -- crown armor
 	{ id = 238, chance = 16190 }, -- great mana potion
 	{ id = 3027, chance = 14070, maxCount = 25 }, -- black pearl
@@ -98,7 +97,7 @@ monster.loot = {
 	{ id = 3030, chance = 13010, maxCount = 5 }, -- small ruby
 	{ id = 3008, chance = 12710 }, -- crystal necklace
 	{ id = 3033, chance = 12410, maxCount = 25 }, -- small amethyst
-	{ id = 3016, chance = 11800 }, -- ruby necklace
+	{ id = "ruby necklace", chance = 11800 }, -- ruby necklace
 	{ id = 3029, chance = 11650, maxCount = 25 }, -- small sapphire
 	{ id = 821, chance = 11350 }, -- magma legs
 	{ id = 9057, chance = 11200, maxCount = 25 }, -- small topaz
@@ -111,7 +110,7 @@ monster.loot = {
 	{ id = 3371, chance = 9530 }, -- knight legs
 	{ id = 5954, chance = 9230, maxCount = 2 }, -- demon horn
 	{ id = 8074, chance = 8770 }, -- spellbook of mind control
-	{ id = 8075, chance = 8620 }, -- spellbook of lost souls
+	{ id = "spellbook of lost souls", chance = 8620 }, -- spellbook of lost souls
 	{ id = 3567, chance = 8170 }, -- blue robe
 	{ id = 3360, chance = 2870 }, -- golden armor
 	{ id = 7412, chance = 2720 }, -- butcher's axe

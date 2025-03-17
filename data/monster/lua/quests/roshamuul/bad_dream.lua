@@ -1,5 +1,4 @@
--- Bad Dream (Tibia Wiki: https://tibia.fandom.com/wiki/Bad_Dream)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Bad Dream")
 local monster = {}

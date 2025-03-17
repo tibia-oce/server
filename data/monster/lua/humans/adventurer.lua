@@ -1,5 +1,4 @@
--- Adventurer (Tibia Wiki: https://tibia.fandom.com/wiki/Adventurer)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Adventurer")
 local monster = {}

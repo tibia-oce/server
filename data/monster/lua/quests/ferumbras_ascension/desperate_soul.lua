@@ -1,5 +1,4 @@
--- Desperate Soul (Tibia Wiki: https://tibia.fandom.com/wiki/Desperate_Soul)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Desperate Soul")
 local monster = {}

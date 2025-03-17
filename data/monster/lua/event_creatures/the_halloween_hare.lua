@@ -1,5 +1,4 @@
--- The Halloween Hare (Tibia Wiki: https://tibia.fandom.com/wiki/The_Halloween_Hare)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("The Halloween Hare")
 local monster = {}

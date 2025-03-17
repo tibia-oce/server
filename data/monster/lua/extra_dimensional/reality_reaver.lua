@@ -1,5 +1,4 @@
--- Reality Reaver (Tibia Wiki: https://tibia.fandom.com/wiki/Reality_Reaver)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Reality Reaver")
 local monster = {}
@@ -71,14 +70,14 @@ monster.loot = {
 	{ id = 3035, chance = 100000, maxCount = 6 }, -- platinum coin
 	{ id = 23545, chance = 15000 }, -- energy drink
 	{ id = 23535, chance = 15000 }, -- energy bar
-	{ id = 23508, chance = 15000 }, -- energy vein
+	{ id = "energy vein", chance = 15000 }, -- energy vein
 	{ id = 23520, chance = 14700 }, -- plasmatic lightning
 	{ id = 7642, chance = 11400, maxCount = 2 }, -- great spirit potion
 	{ id = 238, chance = 10300, maxCount = 2 }, -- great mana potion
 	{ id = 239, chance = 9700, maxCount = 2 }, -- great health potion
 	{ id = 23506, chance = 9700 }, -- plasma pearls
 	{ id = 23515, chance = 9600 }, -- dangerous proto matter
-	{ id = 16124, chance = 7900 }, -- blue crystal splinter
+	{ id = "blue crystal splinter", chance = 7900 }, -- blue crystal splinter
 	{ id = 16126, chance = 6000 }, -- red crystal fragment
 	{ id = 16120, chance = 4400 }, -- violet crystal shard
 	{ id = 16119, chance = 4000 }, -- blue crystal shard
@@ -88,7 +87,7 @@ monster.loot = {
 	{ id = 3036, chance = 370 }, -- violet gem
 	{ id = 23529, chance = 370 }, -- ring of blue plasma
 	{ id = 23544, chance = 300 }, -- collar of red plasma
-	{ id = 23531, chance = 220 }, -- ring of green plasma
+	{ id = "ring of green plasma", chance = 220 }, -- ring of green plasma
 }
 
 monster.attacks = {

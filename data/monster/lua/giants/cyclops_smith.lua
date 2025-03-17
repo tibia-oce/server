@@ -1,5 +1,4 @@
--- Cyclops Smith (Tibia Wiki: https://tibia.fandom.com/wiki/Cyclops_Smith)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Cyclops Smith")
 local monster = {}
@@ -68,7 +67,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 82920, maxCount = 70 },
-	{ id = 3093, chance = 90 }, -- club ring
+	{ id = "club ring", chance = 90 }, -- club ring
 	{ id = "battle axe", chance = 5450 },
 	{ id = "double axe", chance = 880 },
 	{ id = "battle hammer", chance = 5200 },
@@ -77,7 +76,7 @@ monster.loot = {
 	{ id = "plate shield", chance = 2000 },
 	{ id = "battle shield", chance = 6190 },
 	{ id = "meat", chance = 49950 },
-	{ id = 7398, chance = 140 }, -- cyclops trophy
+	{ id = "cyclops trophy", chance = 140 }, -- cyclops trophy
 	{ id = "spiked squelcher", chance = 150 },
 	{ id = "strong health potion", chance = 390 },
 	{ id = "cyclops toe", chance = 10280 },

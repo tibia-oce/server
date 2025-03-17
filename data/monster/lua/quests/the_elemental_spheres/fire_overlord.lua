@@ -1,5 +1,4 @@
--- Fire Overlord (Tibia Wiki: https://tibia.fandom.com/wiki/Fire_Overlord)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Fire Overlord")
 local monster = {}

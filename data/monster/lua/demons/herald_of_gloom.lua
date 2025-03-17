@@ -1,5 +1,4 @@
--- Herald of Gloom (Tibia Wiki: https://tibia.fandom.com/wiki/Herald_of_Gloom)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Herald of Gloom")
 local monster = {}

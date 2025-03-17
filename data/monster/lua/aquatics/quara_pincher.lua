@@ -1,5 +1,4 @@
--- Quara Pincher (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Pincher)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Quara Pincher")
 local monster = {}

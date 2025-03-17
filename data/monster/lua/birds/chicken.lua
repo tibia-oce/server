@@ -1,5 +1,4 @@
--- Chicken (Tibia Wiki: https://tibia.fandom.com/wiki/Chicken)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Chicken")
 local monster = {}

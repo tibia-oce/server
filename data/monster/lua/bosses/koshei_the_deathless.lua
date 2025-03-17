@@ -1,5 +1,4 @@
--- Koshei the Deathless (Tibia Wiki: https://tibia.fandom.com/wiki/Koshei_the_Deathless)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Koshei the Deathless")
 local monster = {}

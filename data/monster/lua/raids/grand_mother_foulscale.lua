@@ -1,5 +1,4 @@
--- Grand Mother Foulscale (Tibia Wiki: https://tibia.fandom.com/wiki/Grand_Mother_Foulscale)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Grand Mother Foulscale")
 local monster = {}
@@ -80,10 +79,10 @@ monster.voices = {
 monster.loot = {
 	{ id = 3031, chance = 37500, maxCount = 70 }, -- gold coin
 	{ id = 3031, chance = 37500, maxCount = 50 }, -- gold coin
-	{ id = 3449, chance = 4000, maxCount = 12 }, -- burst arrow
+	{ id = "burst arrow", chance = 4000, maxCount = 12 }, -- burst arrow
 	{ id = 3583, chance = 15500, maxCount = 3 }, -- dragon ham
 	{ id = 3294, chance = 25000 }, -- short sword
-	{ id = 3286, chance = 21500 }, -- mace
+	{ id = "mace", chance = 21500 }, -- mace
 	{ id = 3409, chance = 14000 }, -- steel shield
 	{ id = 3349, chance = 10000 }, -- crossbow
 	{ id = 3285, chance = 5000 }, -- longsword
@@ -92,8 +91,8 @@ monster.loot = {
 	{ id = 3301, chance = 2000 }, -- broadsword
 	{ id = 3275, chance = 1333 }, -- double axe
 	{ id = 3071, chance = 1800 }, -- wand of inferno
-	{ id = 5920, chance = 100000 }, -- green dragon scale
-	{ id = 3322, chance = 600 }, -- dragon hammer
+	{ id = "green dragon scale", chance = 100000 }, -- green dragon scale
+	{ id = "dragon hammer", chance = 600 }, -- dragon hammer
 	{ id = 5877, chance = 100000 }, -- green dragon leather
 	{ id = 3416, chance = 500 }, -- dragon shield
 	{ id = 7430, chance = 650 }, -- dragonbone staff

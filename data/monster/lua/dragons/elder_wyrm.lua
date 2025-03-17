@@ -1,5 +1,4 @@
--- Elder Wyrm (Tibia Wiki: https://tibia.fandom.com/wiki/Elder_Wyrm)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Elder Wyrm")
 local monster = {}

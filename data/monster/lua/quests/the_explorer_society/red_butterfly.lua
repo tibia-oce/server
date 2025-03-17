@@ -1,5 +1,4 @@
--- Red Butterfly (Tibia Wiki: https://tibia.fandom.com/wiki/Red_Butterfly)
--- Version: 7.50
+
 
 local mType = Game.createMonsterType("Red Butterfly")
 local monster = {}

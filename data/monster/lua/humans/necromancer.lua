@@ -1,5 +1,4 @@
--- Necromancer (Tibia Wiki: https://tibia.fandom.com/wiki/Necromancer)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Necromancer")
 local monster = {}

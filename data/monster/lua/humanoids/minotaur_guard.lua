@@ -1,5 +1,4 @@
--- Minotaur Guard (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Guard)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Minotaur Guard")
 local monster = {}
@@ -74,7 +73,7 @@ monster.loot = {
 	{ id = "battle shield", chance = 2150 },
 	{ id = "fishing rod", chance = 480 },
 	{ id = "minotaur leather", chance = 1000 },
-	{ id = 7401, chance = 80 }, -- minotaur trophy
+	{ id = "minotaur trophy", chance = 80 }, -- minotaur trophy
 	{ id = "health potion", chance = 400 },
 	{ id = "minotaur horn", chance = 8330, maxCount = 2 },
 	{ id = "piece of warrior armor", chance = 5040 },

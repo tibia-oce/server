@@ -1,5 +1,4 @@
--- The Masked Marauder (Tibia Wiki: https://tibia.fandom.com/wiki/The_Masked_Marauder)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("The Masked Marauder")
 local monster = {}

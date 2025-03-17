@@ -1,5 +1,4 @@
--- Weeper (Tibia Wiki: https://tibia.fandom.com/wiki/Weeper)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Weeper")
 local monster = {}
@@ -68,7 +67,7 @@ monster.loot = {
 	{ id = "small ruby", chance = 15690, maxCount = 3 },
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "gold coin", chance = 50000, maxCount = 99 },
-	{ id = 3035, chance = 100000, maxCount = 7 }, -- platinum coin
+	{ id = "platinum coin", chance = 100000, maxCount = 7 }, -- platinum coin
 	{ id = "fire sword", chance = 3280 },
 	{ id = "fire axe", chance = 2150 },
 	{ id = "great mana potion", chance = 14800, maxCount = 2 },
@@ -76,7 +75,7 @@ monster.loot = {
 	{ id = "magma coat", chance = 790 },
 	{ id = "ultimate health potion", chance = 15440, maxCount = 2 },
 	{ id = "fiery heart", chance = 13570 },
-	{ id = 12600, chance = 1320 }, -- coal
+	{ id = "coal", chance = 1320 }, -- coal
 	{ id = "wand of everblazing", chance = 1480 },
 	{ id = "violet crystal shard", chance = 5430 },
 	{ id = "brown crystal splinter", chance = 12100, maxCount = 2 },

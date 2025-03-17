@@ -1,5 +1,4 @@
--- Deepsea Blood Crab (Tibia Wiki: https://tibia.fandom.com/wiki/Deepsea_Blood_Crab)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Deepsea Blood Crab")
 local monster = {}
@@ -64,7 +63,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 87000, maxCount = 20 },
-	{ id = 3578, chance = 10450 }, -- fish
+	{ id = "fish", chance = 10450 }, -- fish
 	{ id = "bloody pincers", chance = 6980 },
 	{ id = "chain armor", chance = 5020 },
 	{ id = "brass legs", chance = 2720 },

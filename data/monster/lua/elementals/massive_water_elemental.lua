@@ -1,5 +1,4 @@
--- Massive Water Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Massive_Water_Elemental)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Massive Water Elemental")
 local monster = {}
@@ -70,9 +69,9 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "small emerald", chance = 1000, maxCount = 2 },
 	{ id = "platinum coin", chance = 20000, maxCount = 2 },
-	{ id = 3051, chance = 910 }, -- energy ring
-	{ id = 3052, chance = 1000 }, -- life ring
-	{ id = 3578, chance = 40000, maxCount = 2 }, -- fish
+	{ id = "energy ring", chance = 910 }, -- energy ring
+	{ id = "life ring", chance = 1000 }, -- life ring
+	{ id = "fish", chance = 40000, maxCount = 2 }, -- fish
 	{ id = "rainbow trout", chance = 1340 },
 	{ id = "green perch", chance = 1590 },
 	{ id = "great mana potion", chance = 10400 },

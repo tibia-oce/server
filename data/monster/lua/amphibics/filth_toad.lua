@@ -1,5 +1,4 @@
--- Filth Toad (Tibia Wiki: https://tibia.fandom.com/wiki/Filth_Toad)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Filth Toad")
 local monster = {}
@@ -66,7 +65,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 75000, maxCount = 21 },
 	{ id = "two handed sword", chance = 500 },
 	{ id = "mace", chance = 2000 },
-	{ id = 3578, chance = 22000 }, -- fish
+	{ id = "fish", chance = 22000 }, -- fish
 	{ id = "poisonous slime", chance = 3000 },
 }
 

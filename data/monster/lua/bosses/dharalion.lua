@@ -1,5 +1,4 @@
--- Dharalion (Tibia Wiki: https://tibia.fandom.com/wiki/Dharalion)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Dharalion")
 local monster = {}

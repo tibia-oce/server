@@ -1,5 +1,4 @@
--- Black Knight (Tibia Wiki: https://tibia.fandom.com/wiki/Black_Knight)
--- Version: 5.0
+
 
 local mType = Game.createMonsterType("Black Knight")
 local monster = {}

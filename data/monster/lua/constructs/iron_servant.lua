@@ -1,5 +1,4 @@
--- Iron Servant (Tibia Wiki: https://tibia.fandom.com/wiki/Iron_Servant)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Iron Servant")
 local monster = {}
@@ -70,7 +69,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 82000, maxCount = 55 },
 	{ id = 2381, chance = 1000 },
-	{ id = 9690, chance = 4840 } -- "gear wheel",
+	{ id = 9690, chance = 4840}, -- "gear wheel"
 	{ id = 8894, chance = 200 }, -- heavily rusted armor
 	{ id = "slime mould", chance = 310 },
 }

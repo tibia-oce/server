@@ -1,5 +1,4 @@
--- Axeitus Headbanger (Tibia Wiki: https://tibia.fandom.com/wiki/Axeitus_Headbanger)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Axeitus Headbanger")
 local monster = {}

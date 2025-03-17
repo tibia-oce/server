@@ -1,5 +1,4 @@
--- Orshabaal (Tibia Wiki: https://tibia.fandom.com/wiki/Orshabaal)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Orshabaal")
 local monster = {}
@@ -105,7 +104,7 @@ monster.loot = {
 	{ id = "mind stone", chance = 20000 },
 	{ id = "boots of haste", chance = 12500 },
 	{ id = "protection amulet", chance = 20000 },
-	{ id = 3098, chance = 33333 }, -- ring of healing
+	{ id = "ring of healing", chance = 33333 }, -- ring of healing
 	{ id = "two handed sword", chance = 12500 },
 	{ id = "giant sword", chance = 25000 },
 	{ id = "silver dagger", chance = 6666 },

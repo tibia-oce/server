@@ -1,5 +1,4 @@
--- Muglex Clan Scavenger (Tibia Wiki: https://tibia.fandom.com/wiki/Muglex_Clan_Scavenger)
--- Version: 10.55
+
 
 local mType = Game.createMonsterType("Muglex Clan Scavenger")
 local monster = {}
@@ -63,14 +62,14 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3115, chance = 10820 }, -- bone
-	{ id = 3337, chance = 11860 }, -- bone club
+	{ id = "bone club", chance = 11860 }, -- bone club
 	{ id = 3267, chance = 30410 }, -- dagger
-	{ id = 3578, chance = 16750, maxCount = 3 }, -- fish
+	{ id = "fish", chance = 16750, maxCount = 3 }, -- fish
 	{ id = 3031, chance = 100000, maxCount = 12 }, -- gold coin
 	{ id = 3361, chance = 7990 }, -- leather armor
 	{ id = 3355, chance = 7990 }, -- leather helmet
-	{ id = 3120, chance = 9020 }, -- mouldy cheese
-	{ id = 3294, chance = 11860 }, -- short sword
+	{ id = "mouldy cheese", chance = 9020 }, -- mouldy cheese
+	{ id = "short sword", chance = 11860 }, -- short sword
 	{ id = 3462, chance = 15210 }, -- small axe
 	{ id = 1781, chance = 22420, maxCount = 2 }, -- small stone
 }

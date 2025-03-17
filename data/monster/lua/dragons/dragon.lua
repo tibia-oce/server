@@ -1,5 +1,4 @@
--- Dragon (Tibia Wiki: https://tibia.fandom.com/wiki/Dragon)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Dragon")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "steel shield", chance = 15650 },
 	{ id = "dragon's tail", chance = 9680 },
 	{ id = "crossbow", chance = 9120 },
-	{ id = 3449, chance = 8060, maxCount = 10 }, -- burst arrow
+	{ id = "burst arrow", chance = 8060, maxCount = 10 }, -- burst arrow
 	{ id = "longsword", chance = 3830 },
 	{ id = "steel helmet", chance = 3490 },
 	{ id = "broadsword", chance = 2700 },

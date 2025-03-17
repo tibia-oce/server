@@ -1,5 +1,4 @@
--- Frost Dragon (Tibia Wiki: https://tibia.fandom.com/wiki/Frost_Dragon)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Frost Dragon")
 local monster = {}
@@ -74,10 +73,10 @@ monster.loot = {
 	{ id = "dragon ham", chance = 83040, maxCount = 2 },
 	{ id = "green mushroom", chance = 10710 },
 	{ id = 7441, chance = 6250 }, -- ice cube
-	{ id = 2842, chance = 8500 }, -- book
+	{ id = "book", chance = 8500 }, -- book
 	{ id = "power bolt", chance = 5360, maxCount = 6 },
 	{ id = "golden mug", chance = 5360 },
-	{ id = 3051, chance = 2680 }, -- energy ring
+	{ id = "energy ring", chance = 2680 }, -- energy ring
 	{ id = "small sapphire", chance = 1790 },
 	{ id = "strange helmet", chance = 890 },
 	{ id = "life crystal", chance = 890 },

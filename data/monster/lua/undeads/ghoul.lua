@@ -1,5 +1,4 @@
--- Ghoul (Tibia Wiki: https://tibia.fandom.com/wiki/Ghoul)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Ghoul")
 local monster = {}
@@ -65,7 +64,7 @@ monster.voices = {
 monster.loot = {
 	{ id = 2920, chance = 5000 }, -- torch
 	{ id = "gold coin", chance = 68000, maxCount = 30 },
-	{ id = 3052, chance = 180 }, -- life ring
+	{ id = "life ring", chance = 180 }, -- life ring
 	{ id = 3114, chance = 240 }, -- skull
 	{ id = "viking helmet", chance = 990 },
 	{ id = "scale armor", chance = 1000 },

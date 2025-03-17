@@ -1,5 +1,4 @@
--- Enraged White Deer (Tibia Wiki: https://tibia.fandom.com/wiki/Enraged_White_Deer)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Enraged White Deer")
 local monster = {}

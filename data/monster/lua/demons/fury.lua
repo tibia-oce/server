@@ -1,5 +1,4 @@
--- Fury (Tibia Wiki: https://tibia.fandom.com/wiki/Fury)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Fury")
 local monster = {}
@@ -81,7 +80,7 @@ monster.loot = {
 	{ id = "soul orb", chance = 50 },
 	{ id = 6300, chance = 60 }, -- death ring
 	{ id = "demonic essence", chance = 22500 },
-	{ id = "flask of demonic blood", chance = 35000, maxCount = 3 },
+	{ id = 6558, chance = 35000, maxCount = 3}, -- "flask of demonic blood"
 	{ id = "assassin dagger", chance = 660 },
 	{ id = "noble axe", chance = 2000 },
 	{ id = "great health potion", chance = 10500 },

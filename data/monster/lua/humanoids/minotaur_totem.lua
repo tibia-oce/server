@@ -1,5 +1,4 @@
--- Minotaur Totem (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Totem)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Minotaur Totem")
 local monster = {}

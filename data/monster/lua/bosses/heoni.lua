@@ -1,5 +1,4 @@
--- Heoni (Tibia Wiki: https://tibia.fandom.com/wiki/Heoni)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("Heoni")
 local monster = {}

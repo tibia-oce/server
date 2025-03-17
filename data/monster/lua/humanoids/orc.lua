@@ -1,5 +1,4 @@
--- Orc (Tibia Wiki: https://tibia.fandom.com/wiki/Orc)
--- Version: 3.0
+
 
 local mType = Game.createMonsterType("Orc")
 local monster = {}

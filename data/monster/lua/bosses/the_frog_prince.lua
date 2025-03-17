@@ -1,5 +1,4 @@
--- The Frog Prince (Tibia Wiki: https://tibia.fandom.com/wiki/The_Frog_Prince)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("The Frog Prince")
 local monster = {}

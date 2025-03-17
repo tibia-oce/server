@@ -1,5 +1,4 @@
--- Massive Energy Elemental (Tibia Wiki: https://tibia.fandom.com/wiki/Massive_Energy_Elemental)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Massive Energy Elemental")
 local monster = {}

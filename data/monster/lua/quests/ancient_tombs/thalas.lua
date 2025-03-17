@@ -1,5 +1,4 @@
--- Thalas (Tibia Wiki: https://tibia.fandom.com/wiki/Thalas)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Thalas")
 local monster = {}
@@ -81,7 +80,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 80 },
 	{ id = "small emerald", chance = 7000, maxCount = 3 },
 	{ id = "green gem", chance = 500 },
-	{ id = 3049, chance = 1500 }, -- stealth ring
+	{ id = "stealth ring", chance = 1500 }, -- stealth ring
 	{ id = 3053, chance = 7000 }, -- time ring
 	{ id = "cobrafang dagger", chance = 100000 },
 	{ id = "serpent sword", chance = 500 },

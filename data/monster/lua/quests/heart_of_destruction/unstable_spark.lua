@@ -1,5 +1,4 @@
--- Unstable Spark (Tibia Wiki: https://tibia.fandom.com/wiki/Unstable_Spark)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Unstable Spark")
 local monster = {}

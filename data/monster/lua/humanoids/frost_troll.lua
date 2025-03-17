@@ -1,5 +1,4 @@
--- Frost Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Frost_Troll)
--- Version: 6.2
+
 
 local mType = Game.createMonsterType("Frost Troll")
 local monster = {}
@@ -66,12 +65,12 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 50840, maxCount = 12 },
-	{ id = 3130, chance = 8300 }, -- twigs
+	{ id = "twigs", chance = 8300 }, -- twigs
 	{ id = "rapier", chance = 15500 },
 	{ id = "spear", chance = 21500 },
 	{ id = 3412, chance = 15850 }, -- wooden shield
 	{ id = "coat", chance = 1200 },
-	{ id = 3578, chance = 18000 }, -- fish
+	{ id = "fish", chance = 18000 }, -- fish
 	{ id = "frosty ear of a troll", chance = 2000 },
 }
 

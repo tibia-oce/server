@@ -1,5 +1,4 @@
--- Insectoid Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Insectoid_Scout)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Insectoid Scout")
 local monster = {}
@@ -66,7 +65,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 80000, maxCount = 80 },
-	{ id = 3093, chance = 100 }, -- club ring
+	{ id = "club ring", chance = 100 }, -- club ring
 	{ id = "ripper lance", chance = 850 },
 	{ id = "health potion", chance = 280 },
 }

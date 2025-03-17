@@ -1,5 +1,4 @@
--- Lizard Snakecharmer (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Snakecharmer)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Lizard Snakecharmer")
 local monster = {}
@@ -75,7 +74,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 83740, maxCount = 55 },
 	{ id = "small amethyst", chance = 520 },
 	{ id = "yellow gem", chance = 150 },
-	{ id = 3052, chance = 340 }, -- life ring
+	{ id = "life ring", chance = 340 }, -- life ring
 	{ id = "life crystal", chance = 1430 },
 	{ id = "terra rod", chance = 920 },
 	{ id = "snakebite rod", chance = 230 },

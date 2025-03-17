@@ -1,5 +1,4 @@
--- Shadow Pupil (Tibia Wiki: https://tibia.fandom.com/wiki/Shadow_Pupil)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Shadow Pupil")
 local monster = {}

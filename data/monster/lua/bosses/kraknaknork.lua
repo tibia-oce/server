@@ -1,5 +1,4 @@
--- Kraknaknork (Tibia Wiki: https://tibia.fandom.com/wiki/Kraknaknork)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Kraknaknork")
 local monster = {}

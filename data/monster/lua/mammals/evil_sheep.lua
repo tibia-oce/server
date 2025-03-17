@@ -1,5 +1,4 @@
--- Evil Sheep (Tibia Wiki: https://tibia.fandom.com/wiki/Evil_Sheep)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Evil Sheep")
 local monster = {}

@@ -1,5 +1,4 @@
--- The Ravager (Tibia Wiki: https://tibia.fandom.com/wiki/The_Ravager)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("The Ravager")
 local monster = {}
@@ -90,9 +89,9 @@ monster.loot = {
 	{ id = 3031, chance = 95000, maxCount = 243 }, -- gold coin
 	{ id = 238, chance = 10000, maxCount = 5 }, -- great mana potion
 	{ id = 239, chance = 5000, maxCount = 5 }, -- great health potion
-	{ id = 3035, chance = 37500, maxCount = 5 }, -- platinum coin
-	{ id = 3042, chance = 15000, maxCount = 5 }, -- scarab coin
-	{ id = 3328, chance = 5000 }, -- daramian waraxe
+	{ id = "platinum coin", chance = 37500, maxCount = 5 }, -- platinum coin
+	{ id = "scarab coin", chance = 15000, maxCount = 5 }, -- scarab coin
+	{ id = "daramian waraxe", chance = 5000 }, -- daramian waraxe
 }
 
 monster.attacks = {

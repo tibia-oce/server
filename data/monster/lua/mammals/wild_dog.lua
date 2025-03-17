@@ -1,5 +1,4 @@
--- Wild Dog (Tibia Wiki: https://tibia.fandom.com/wiki/Wild_Dog)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Wild Dog")
 local monster = {}

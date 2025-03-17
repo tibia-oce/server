@@ -1,5 +1,4 @@
--- Fatality (Tibia Wiki: https://tibia.fandom.com/wiki/Fatality)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Fatality")
 local monster = {}

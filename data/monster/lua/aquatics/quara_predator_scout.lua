@@ -1,5 +1,4 @@
--- Quara Predator Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Predator_Scout)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Quara Predator Scout")
 local monster = {}

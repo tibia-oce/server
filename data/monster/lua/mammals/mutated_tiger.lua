@@ -1,5 +1,4 @@
--- Mutated Tiger (Tibia Wiki: https://tibia.fandom.com/wiki/Mutated_Tiger)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Mutated Tiger")
 local monster = {}
@@ -67,7 +66,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "gold coin", chance = 50000, maxCount = 5 },
-	{ id = 3052, chance = 5580 }, -- life ring
+	{ id = "life ring", chance = 5580 }, -- life ring
 	{ id = "guardian shield", chance = 380 },
 	{ id = "meat", chance = 29500, maxCount = 2 },
 	{ id = "angelic axe", chance = 440 },

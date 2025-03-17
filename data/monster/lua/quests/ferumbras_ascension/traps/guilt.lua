@@ -1,5 +1,4 @@
--- Guilt (Tibia Wiki: https://tibia.fandom.com/wiki/Guilt)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Guilt")
 local monster = {}

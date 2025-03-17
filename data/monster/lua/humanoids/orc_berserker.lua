@@ -1,5 +1,4 @@
--- Orc Berserker (Tibia Wiki: https://tibia.fandom.com/wiki/Orc_Berserker)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Orc Berserker")
 local monster = {}

@@ -1,5 +1,4 @@
--- Panda (Tibia Wiki: https://tibia.fandom.com/wiki/Panda)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Panda")
 local monster = {}

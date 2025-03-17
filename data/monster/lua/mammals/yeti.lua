@@ -1,5 +1,4 @@
--- Yeti (Tibia Wiki: https://tibia.fandom.com/wiki/Yeti)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Yeti")
 local monster = {}
@@ -66,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2992, chance = 10000, maxCount = 22 }, -- snowball
+	{ id = "snowball", chance = 10000, maxCount = 22 }, -- snowball
 	{ id = "gold coin", chance = 100000, maxCount = 60 },
 	{ id = "gold coin", chance = 100000, maxCount = 40 },
 	{ id = "bunnyslippers", chance = 1333 },

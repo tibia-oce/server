@@ -1,5 +1,4 @@
--- Morik the Gladiator (Tibia Wiki: https://tibia.fandom.com/wiki/Morik_the_Gladiator)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Morik the Gladiator")
 local monster = {}

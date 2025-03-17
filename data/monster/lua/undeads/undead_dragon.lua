@@ -1,5 +1,4 @@
--- Undead Dragon (Tibia Wiki: https://tibia.fandom.com/wiki/Undead_Dragon)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Undead Dragon")
 local monster = {}

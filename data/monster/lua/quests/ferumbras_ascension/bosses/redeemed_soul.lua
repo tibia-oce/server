@@ -1,5 +1,4 @@
--- Redeemed Soul (Tibia Wiki: https://tibia.fandom.com/wiki/Redeemed_Soul)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("Redeemed Soul")
 local monster = {}

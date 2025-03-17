@@ -1,5 +1,4 @@
--- Insect Swarm (Tibia Wiki: https://tibia.fandom.com/wiki/Insect_Swarm)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Insect Swarm")
 local monster = {}

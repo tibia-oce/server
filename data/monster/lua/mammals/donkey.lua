@@ -1,5 +1,4 @@
--- Donkey (Tibia Wiki: https://tibia.fandom.com/wiki/Donkey)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Donkey")
 local monster = {}

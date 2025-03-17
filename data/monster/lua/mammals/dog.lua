@@ -1,5 +1,4 @@
--- Dog (Tibia Wiki: https://tibia.fandom.com/wiki/Dog)
--- Version: 4.0
+
 
 local mType = Game.createMonsterType("Dog")
 local monster = {}

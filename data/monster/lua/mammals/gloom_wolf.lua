@@ -1,5 +1,4 @@
--- Gloom Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Gloom_Wolf)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("Gloom Wolf")
 local monster = {}
@@ -64,11 +63,11 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "ham", chance = 20120 },
-	{ id = 3012, chance = 2000 }, -- wolf tooth chain
+	{ id = "wolf tooth chain", chance = 2000 }, -- wolf tooth chain
 	{ id = "gold coin", chance = 65000, maxCount = 48 },
 	{ id = "meat", chance = 55000, maxCount = 2 },
 	{ id = "wolf paw", chance = 980 },
-	{ id = 22007, chance = 8000 }, --gloom wolf fur
+	{ id = "gloom wolf fur", chance = 8000 }, --gloom wolf fur
 }
 
 monster.attacks = {

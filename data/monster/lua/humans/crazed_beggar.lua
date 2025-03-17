@@ -1,5 +1,4 @@
--- Crazed Beggar (Tibia Wiki: https://tibia.fandom.com/wiki/Crazed_Beggar)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Crazed Beggar")
 local monster = {}
@@ -73,8 +72,8 @@ monster.loot = {
 	{ id = "small blue pillow", chance = 420 },
 	{ id = 2950, chance = 360 }, -- lute
 	{ id = "gold coin", chance = 99000, maxCount = 9 },
-	{ id = 3097, chance = 120 }, -- dwarven ring
-	{ id = 3122, chance = 55000 }, -- dirty cape
+	{ id = "dwarven ring", chance = 120 }, -- dwarven ring
+	{ id = "dirty cape", chance = 55000 }, -- dirty cape
 	{ id = "wooden hammer", chance = 6500 },
 	{ id = "wooden spoon", chance = 9750 },
 	{ id = 3473, chance = 5650 }, -- rolling pin

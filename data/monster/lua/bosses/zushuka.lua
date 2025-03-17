@@ -1,5 +1,4 @@
--- Zushuka (Tibia Wiki: https://tibia.fandom.com/wiki/Zushuka)
--- Version: 10.20
+
 
 local mType = Game.createMonsterType("Zushuka")
 local monster = {}
@@ -87,7 +86,7 @@ monster.loot = {
 	{ id = 819, chance = 35000 }, -- glacier shoes
 	{ id = 7440, chance = 35000 }, -- mastermind potion
 	{ id = 3035, chance = 35000 }, -- platinum coin
-	{ id = 5909, chance = 35000, maxCount = 2 }, -- white piece of cloth
+	{ id = "white piece of cloth", chance = 35000, maxCount = 2 }, -- white piece of cloth
 	{ id = 7439, chance = 28000 }, -- berserk potion
 	{ id = 3041, chance = 28000 }, -- blue gem
 	{ id = 3574, chance = 28000 }, -- mystic turban
@@ -95,7 +94,7 @@ monster.loot = {
 	{ id = 238, chance = 21000, maxCount = 5 }, -- great mana potion
 	{ id = 5912, chance = 14000 }, -- blue piece of cloth
 	{ id = 3333, chance = 14000 }, -- crystal mace
-	{ id = 3085, chance = 14000 }, -- dragon necklace
+	{ id = "dragon necklace", chance = 14000 }, -- dragon necklace
 	{ id = 823, chance = 14000 }, -- glacier kilt
 	{ id = 824, chance = 14000 }, -- glacier robe
 	{ id = 9058, chance = 14000 }, -- gold ingot
@@ -103,7 +102,7 @@ monster.loot = {
 	{ id = 7459, chance = 14000 }, -- pair of earmuffs
 	{ id = 3324, chance = 14000 }, -- skull staff
 	{ id = 3079, chance = 7000 }, -- boots of haste
-	{ id = 829, chance = 7000 }, -- glacier mask
+	{ id = "glacier mask", chance = 7000 }, -- glacier mask
 	{ id = 5911, chance = 7000 }, -- red piece of cloth
 	{ id = 19365, chance = 7000 }, -- trapped lightning
 	{ id = 19366, chance = 3000 }, -- icy culottes

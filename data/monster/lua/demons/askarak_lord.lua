@@ -1,5 +1,4 @@
--- Askarak Lord (Tibia Wiki: https://tibia.fandom.com/wiki/Askarak_Lord)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Askarak Lord")
 local monster = {}
@@ -75,7 +74,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 90 },
 	{ id = "small emerald", chance = 5882, maxCount = 5 },
 	{ id = "platinum coin", chance = 35333, maxCount = 2 },
-	{ id = 3051, chance = 606 }, -- energy ring
+	{ id = "energy ring", chance = 606 }, -- energy ring
 	{ id = "brown mushroom", chance = 5263, maxCount = 5 },
 	{ id = "magic sulphur", chance = 620 },
 	{ id = "assassin star", chance = 70, maxCount = 5 },

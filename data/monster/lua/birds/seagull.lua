@@ -1,5 +1,4 @@
--- Seagull (Tibia Wiki: https://tibia.fandom.com/wiki/Seagull)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Seagull")
 local monster = {}

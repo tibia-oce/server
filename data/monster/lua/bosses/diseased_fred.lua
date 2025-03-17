@@ -1,5 +1,4 @@
--- Diseased Fred (Tibia Wiki: https://tibia.fandom.com/wiki/Diseased_Fred)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Diseased Fred")
 local monster = {}

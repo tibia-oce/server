@@ -1,5 +1,4 @@
--- Giant Spider (Tibia Wiki: https://tibia.fandom.com/wiki/Giant_Spider)
--- Version: 5.0
+
 
 local mType = Game.createMonsterType("Giant Spider")
 local monster = {}

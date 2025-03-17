@@ -1,5 +1,4 @@
--- Yaga the Crone (Tibia Wiki: https://tibia.fandom.com/wiki/Yaga_the_Crone)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Yaga the Crone")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "cookie", chance = 62500, maxCount = 8 },
 	{ id = "gold coin", chance = 29170, maxCount = 55 },
 	{ id = "star herb", chance = 20833 },
-	{ id = 3012, chance = 20833 }, -- wolf tooth chain
+	{ id = "wolf tooth chain", chance = 20833 }, -- wolf tooth chain
 	{ id = "garlic necklace", chance = 8333 },
 	{ id = "spellbook of mind control", chance = 8333 },
 	{ id = "coat", chance = 4170 },

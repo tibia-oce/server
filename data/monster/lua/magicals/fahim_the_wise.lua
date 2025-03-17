@@ -1,5 +1,4 @@
--- Fahim the Wise (Tibia Wiki: https://tibia.fandom.com/wiki/Fahim_the_Wise)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Fahim the Wise")
 local monster = {}

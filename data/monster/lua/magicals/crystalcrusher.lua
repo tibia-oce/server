@@ -1,5 +1,4 @@
--- Crystalcrusher (Tibia Wiki: https://tibia.fandom.com/wiki/Crystalcrusher)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Crystalcrusher")
 local monster = {}

@@ -1,5 +1,4 @@
--- Thornfire Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Thornfire_Wolf)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Thornfire Wolf")
 local monster = {}

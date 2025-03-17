@@ -1,5 +1,4 @@
--- Frostfur (Tibia Wiki: https://tibia.fandom.com/wiki/Frostfur)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Frostfur")
 local monster = {}

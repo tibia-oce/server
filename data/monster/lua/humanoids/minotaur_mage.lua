@@ -1,5 +1,4 @@
--- Minotaur Mage (Tibia Wiki: https://tibia.fandom.com/wiki/Minotaur_Mage)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Minotaur Mage")
 local monster = {}

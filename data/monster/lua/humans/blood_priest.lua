@@ -1,5 +1,4 @@
--- Blood Priest (Tibia Wiki: https://tibia.fandom.com/wiki/Blood_Priest)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Blood Priest")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "spellbook of mind control", chance = 180 },
 	{ id = "underworld rod", chance = 470 },
 	{ id = "book of necromantic rituals", chance = 13550 },
-	{ id = 3039, chance = 880 }, -- red gem
+	{ id = "red gem", chance = 880 }, -- red gem
 	{ id = "lancet", chance = 14410 },
 	{ id = "horoscope", chance = 9270 },
 	{ id = "blood tincture in a vial", chance = 14460 },

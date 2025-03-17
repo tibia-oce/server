@@ -1,5 +1,4 @@
--- Willi Wasp (Tibia Wiki: https://tibia.fandom.com/wiki/Willi_Wasp)
--- Version: 10.10
+
 
 local mType = Game.createMonsterType("Willi Wasp")
 local monster = {}
@@ -71,10 +70,10 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 20 }, -- gold coin
-	{ id = 5902, chance = 100000, maxCount = 3 }, -- honeycomb
-	{ id = 3054, chance = 17650 }, -- silver amulet
+	{ id = "honeycomb", chance = 100000, maxCount = 3 }, -- honeycomb
+	{ id = "silver amulet", chance = 17650 }, -- silver amulet
 	{ id = 3032, chance = 5880 }, -- small emerald
-	{ id = 19083, chance = 5000 }, -- silver raid token
+	{ id = "silver raid token", chance = 5000 }, -- silver raid token
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Tremor Worm (Tibia Wiki: https://tibia.fandom.com/wiki/Tremor_Worm)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Tremor Worm")
 local monster = {}
@@ -65,9 +64,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3035, chance = 33000, maxCount = 5 }, -- platinum coin
-	{ id = 239, chance = 10000 }, -- great health potion
-	{ id = 238, chance = 10000 }, -- great mana potion
+	{ id = "platinum coin", chance = 33000, maxCount = 5 }, -- platinum coin
+	{ id = "great health potion", chance = 10000 }, -- great health potion
+	{ id = "great mana potion", chance = 10000 }, -- great mana potion
 }
 
 monster.attacks = {

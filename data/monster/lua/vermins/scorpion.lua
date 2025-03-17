@@ -1,5 +1,4 @@
--- Scorpion (Tibia Wiki: https://tibia.fandom.com/wiki/Scorpion)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Scorpion")
 local monster = {}

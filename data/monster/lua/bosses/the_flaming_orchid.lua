@@ -1,5 +1,4 @@
--- The Flaming Orchid (Tibia Wiki: https://tibia.fandom.com/wiki/The_Flaming_Orchid)
--- Version: 10.80
+
 
 local mType = Game.createMonsterType("The Flaming Orchid")
 local monster = {}
@@ -70,7 +69,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 250 },
 	{ id = "platinum coin", chance = 9240, maxCount = 10 },
-	{ id = 3039, chance = 18200 }, -- red gem
+	{ id = "red gem", chance = 18200 }, -- red gem
 	{ id = "gold ingot", chance = 29700, maxCount = 5 },
 	{ id = "assassin star", chance = 29700, maxCount = 13 },
 	{ id = "demonic essence", chance = 330 },

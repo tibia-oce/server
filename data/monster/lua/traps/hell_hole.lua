@@ -1,5 +1,4 @@
--- Hell Hole (Tibia Wiki: https://tibia.fandom.com/wiki/Hell_Hole)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Hell Hole")
 local monster = {}

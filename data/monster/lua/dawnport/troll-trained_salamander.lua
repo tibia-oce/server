@@ -1,5 +1,4 @@
--- Troll-Trained Salamander (Tibia Wiki: https://tibia.fandom.com/wiki/Troll-Trained_Salamander)
--- Version: 10.55
+
 
 local mType = Game.createMonsterType("Troll-Trained Salamander")
 local monster = {}
@@ -64,16 +63,16 @@ monster.voices = {
 monster.loot = {
 	{ id = 3274, chance = 5080 }, -- axe
 	{ id = 3337, chance = 4630 }, -- bone club
-	{ id = 21470, chance = 17650, maxCount = 5 }, -- simple arrow
+	{ id = "simple arrow", chance = 17650, maxCount = 5 }, -- simple arrow
 	{ id = 3031, chance = 100000, maxCount = 11 }, -- gold coin
 	{ id = 3352, chance = 6300 }, -- chain helmet
 	{ id = 266, chance = 1520 }, -- health potion
-	{ id = 17457, chance = 34410, maxCount = 5 }, -- insectoid eggs
+	{ id = "insectoid eggs", chance = 34410, maxCount = 5 }, -- insectoid eggs
 	{ id = 3577, chance = 9940 }, -- meat
 	{ id = 3448, chance = 2970, maxCount = 2 }, -- poison arrow
-	{ id = 3294, chance = 4470 }, -- short sword
+	{ id = "short sword", chance = 4470 }, -- short sword
 	{ id = 3457, chance = 5080 }, -- shovel
-	{ id = 3376, chance = 4070 }, -- studded helmet
+	{ id = "studded helmet", chance = 4070 }, -- studded helmet
 }
 
 monster.attacks = {

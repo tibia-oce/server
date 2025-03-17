@@ -1,5 +1,4 @@
--- Deepling Guard (Tibia Wiki: https://tibia.fandom.com/wiki/Deepling_Guard)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Deepling Guard")
 local monster = {}

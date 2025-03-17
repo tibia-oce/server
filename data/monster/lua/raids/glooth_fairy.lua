@@ -1,5 +1,4 @@
--- Glooth Fairy (Tibia Wiki: https://tibia.fandom.com/wiki/Glooth_Fairy)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Glooth Fairy")
 local monster = {}
@@ -74,20 +73,20 @@ monster.loot = {
 	{ id = 3035, chance = 37170, maxCount = 14 }, -- platinum coin
 	{ id = 21103, chance = 14630 }, -- glooth injection tube
 	{ id = 238, chance = 11270 }, -- great mana potion
-	{ id = 21143, chance = 10550 }, -- glooth sandwich
+	{ id = "glooth sandwich", chance = 10550 }, -- glooth sandwich
 	{ id = 9057, chance = 4320, maxCount = 2 }, -- small topaz
 	{ id = 3032, chance = 3600, maxCount = 2 }, -- small emerald
 	{ id = 21183, chance = 2400 }, -- glooth amulet
-	{ id = 8775, chance = 1920 }, -- gear wheel
+	{ id = "gear wheel", chance = 1920 }, -- gear wheel
 	{ id = 21180, chance = 1200 }, -- glooth axe
 	{ id = 21158, chance = 1200 }, -- glooth spear
 	{ id = 21167, chance = 1200 }, -- heat core
 	{ id = 3037, chance = 960 }, -- yellow gem
-	{ id = 21179, chance = 720 }, -- glooth blade
+	{ id = "glooth blade", chance = 720 }, -- glooth blade
 	{ id = 21178, chance = 480 }, -- glooth club
 	{ id = 21165, chance = 480 }, -- rubber cap
 	{ id = 3039, chance = 980 }, -- red gem
-	{ id = 21292, chance = 480 }, -- feedbag
+	{ id = "feedbag", chance = 480 }, -- feedbag
 	{ id = 5880, chance = 980 }, -- iron ore
 	{ id = 21144, chance = 280 }, -- bowl of glooth soup
 }

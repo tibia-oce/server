@@ -1,5 +1,4 @@
--- Crimson Frog (Tibia Wiki: https://tibia.fandom.com/wiki/Crimson_Frog)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Crimson Frog")
 local monster = {}

@@ -1,5 +1,4 @@
--- Breach Brood (Tibia Wiki: https://tibia.fandom.com/wiki/Breach_Brood)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Breach Brood")
 local monster = {}
@@ -70,16 +69,16 @@ monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
 	{ id = 3035, chance = 100000, maxCount = 5 }, -- platinum coin
 	{ id = 23535, chance = 15000 }, -- energy bar
-	{ id = 23545, chance = 15000 }, -- energy drink
+	{ id = "energy drink", chance = 15000 }, -- energy drink
 	{ id = 23516, chance = 15000 }, -- instable proto matter
 	{ id = 239, chance = 12200 }, -- great health potion
 	{ id = 238, chance = 12000 }, -- great mana potion
 	{ id = 7642, chance = 11700 }, -- great spirit potion
-	{ id = 23507, chance = 11500 }, -- crystallized anger
+	{ id = "crystallized anger", chance = 11500 }, -- crystallized anger
 	{ id = 23511, chance = 10600 }, -- curious matter
 	{ id = 23514, chance = 9600 }, -- volatile proto matter
 	{ id = 23506, chance = 9600 }, -- plasma pearls
-	{ id = 16124, chance = 7400, maxCount = 2 }, -- blue crystal splinter
+	{ id = "blue crystal splinter", chance = 7400, maxCount = 2 }, -- blue crystal splinter
 	{ id = 16125, chance = 6500 }, -- cyan crystal fragment
 	{ id = 16119, chance = 4400 }, -- blue crystal shard
 	{ id = 16121, chance = 4100 }, -- green crystal shard

@@ -1,5 +1,4 @@
--- Ashmunrah (Tibia Wiki: https://tibia.fandom.com/wiki/Ashmunrah)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Ashmunrah")
 local monster = {}

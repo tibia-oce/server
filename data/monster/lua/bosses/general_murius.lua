@@ -1,5 +1,4 @@
--- General Murius (Tibia Wiki: https://tibia.fandom.com/wiki/General_Murius)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("General Murius")
 local monster = {}
@@ -91,7 +90,7 @@ monster.loot = {
 	{ id = "meat", chance = 30770 },
 	{ id = "battle shield", chance = 23080 },
 	{ id = "chain legs", chance = 23080 },
-	{ id = 7401, chance = 23080 }, -- minotaur trophy
+	{ id = "minotaur trophy", chance = 23080 }, -- minotaur trophy
 	{ id = "power bolt", chance = 23080, maxCount = 7 },
 	{ id = "fishing rod", chance = 7690 },
 	{ id = "strong health potion", chance = 7690 },

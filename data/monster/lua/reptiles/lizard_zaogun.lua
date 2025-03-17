@@ -1,5 +1,4 @@
--- Lizard Zaogun (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Zaogun)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Lizard Zaogun")
 local monster = {}

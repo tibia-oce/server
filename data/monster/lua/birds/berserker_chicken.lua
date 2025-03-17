@@ -1,5 +1,4 @@
--- Berserker Chicken (Tibia Wiki: https://tibia.fandom.com/wiki/Berserker_Chicken)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Berserker Chicken")
 local monster = {}

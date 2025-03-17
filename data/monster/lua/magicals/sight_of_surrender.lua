@@ -1,5 +1,4 @@
--- Sight of Surrender (Tibia Wiki: https://tibia.fandom.com/wiki/Sight_of_Surrender)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Sight of Surrender")
 local monster = {}
@@ -94,7 +93,7 @@ monster.loot = {
 	{ id = "cluster of solace", chance = 11800 },
 	{ id = "sight of surrender's eye", chance = 100000 },
 	{ id = "broken visor", chance = 100000 },
-	{ id = 20208, chance = 460 }, -- string of mending
+	{ id = "string of mending", chance = 460 }, -- string of mending
 }
 
 monster.attacks = {

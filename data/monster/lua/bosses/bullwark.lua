@@ -1,5 +1,4 @@
--- Bullwark (Tibia Wiki: https://tibia.fandom.com/wiki/Bullwark)
--- Version: 10.50
+
 
 local mType = Game.createMonsterType("Bullwark")
 local monster = {}

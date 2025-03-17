@@ -1,5 +1,4 @@
--- Marid (Tibia Wiki: https://tibia.fandom.com/wiki/Marid)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Marid")
 local monster = {}

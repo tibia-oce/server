@@ -81,7 +81,7 @@ monster.loot = {
 	{ id = 3027, chance = 15000, maxCount = 15 }, -- black pearl
 	{ id = 3041, chance = 1500 }, -- blue gem
 	{ id = 3079, chance = 4000 }, -- boots of haste
-	{ id = 3070, chance = 3500 }, -- moonlight rod
+	{ id = "moonlight rod", chance = 3500 }, -- moonlight rod
 	{ id = 3076, chance = 2500 }, -- crystal ball
 	{ id = 3008, chance = 1500 }, -- crystal necklace
 	{ id = 3007, chance = 5500 }, -- crystal ring
@@ -101,7 +101,7 @@ monster.loot = {
 	{ id = 2903, chance = 7500 }, -- golden mug
 	{ id = 3306, chance = 4500 }, -- golden sickle
 	{ id = 3066, chance = 3500 }, -- snakebite rod
-	{ id = 3038, chance = 1500 }, -- green gem
+	{ id = "green gem", chance = 1500 }, -- green gem
 	{ id = 3072, chance = 2500 }, -- wand of decay
 	{ id = 3284, chance = 7500 }, -- ice rapier
 	{ id = 3061, chance = 1000 }, -- life crystal
@@ -127,7 +127,7 @@ monster.loot = {
 	{ id = 3081, chance = 4000 }, -- stone skin amulet
 	{ id = 3058, chance = 2500 }, -- strange symbol
 	{ id = 3034, chance = 14000, maxCount = 7 }, -- talon
-	{ id = 2993, chance = 14500 }, -- teddy bear
+	{ id = "teddy bear", chance = 14500 }, -- teddy bear
 	{ id = 3309, chance = 13500 }, -- thunder hammer
 	{ id = 3265, chance = 20000 }, -- two handed sword
 	{ id = 3002, chance = 100 }, -- voodoo doll

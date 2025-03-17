@@ -1,5 +1,4 @@
--- Slime (Tibia Wiki: https://tibia.fandom.com/wiki/Slime)
--- Version: 5.1
+
 
 local mType = Game.createMonsterType("Slime")
 local monster = {}

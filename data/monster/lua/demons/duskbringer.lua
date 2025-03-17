@@ -1,5 +1,4 @@
--- Duskbringer (Tibia Wiki: https://tibia.fandom.com/wiki/Duskbringer)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Duskbringer")
 local monster = {}

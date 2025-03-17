@@ -1,5 +1,4 @@
--- Chakoya Windcaller (Tibia Wiki: https://tibia.fandom.com/wiki/Chakoya_Windcaller)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Chakoya Windcaller")
 local monster = {}
@@ -70,7 +69,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 71170, maxCount = 27 },
 	{ id = "brass helmet", chance = 4390 },
 	{ id = "bone shield", chance = 960 },
-	{ id = 3578, chance = 30790, maxCount = 3 }, -- fish
+	{ id = "fish", chance = 30790, maxCount = 3 }, -- fish
 	{ id = "northern pike", chance = 40 },
 	{ id = "rainbow trout", chance = 40 },
 	{ id = "green perch", chance = 110 },

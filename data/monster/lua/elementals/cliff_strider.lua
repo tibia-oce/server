@@ -1,5 +1,4 @@
--- Cliff Strider (Tibia Wiki: https://tibia.fandom.com/wiki/Cliff_Strider)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Cliff Strider")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 100 },
 	{ id = "gold coin", chance = 100000, maxCount = 95 },
 	{ id = "platinum coin", chance = 100000, maxCount = 10 },
-	{ id = 3039, chance = 6110 }, -- red gem
+	{ id = "red gem", chance = 6110 }, -- red gem
 	{ id = "blue gem", chance = 830 },
 	{ id = "giant sword", chance = 620 },
 	{ id = "hammer of wrath", chance = 70 },

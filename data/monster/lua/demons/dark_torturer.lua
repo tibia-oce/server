@@ -1,5 +1,4 @@
--- Dark Torturer (Tibia Wiki: https://tibia.fandom.com/wiki/Dark_Torturer)
--- Version: 7.9
+
 
 local mType = Game.createMonsterType("Dark Torturer")
 local monster = {}
@@ -75,7 +74,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 40000, maxCount = 99 },
 	{ id = "platinum coin", chance = 55000, maxCount = 8 },
 	{ id = "golden legs", chance = 30 },
-	{ id = 3461, chance = 5250 }, -- saw
+	{ id = "saw", chance = 5250 }, -- saw
 	{ id = "steel boots", chance = 5050 },
 	{ id = "ham", chance = 60000, maxCount = 2 },
 	{ id = "orichalcum pearl", chance = 2760, maxCount = 2 },
@@ -84,7 +83,7 @@ monster.loot = {
 	{ id = "soul orb", chance = 23000 },
 	{ id = 6299, chance = 2008 }, -- death ring
 	{ id = "demonic essence", chance = 8520 },
-	{ id = "flask of demonic blood", chance = 33333, maxCount = 3 },
+	{ id = 6558, chance = 33333, maxCount = 3}, -- "flask of demonic blood"
 	{ id = "assassin star", chance = 2222, maxCount = 5 },
 	{ id = "vile axe", chance = 480 },
 	{ id = "butcher's axe", chance = 850 },

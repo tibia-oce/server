@@ -1,5 +1,4 @@
--- Quara Pincher Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Pincher_Scout)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Quara Pincher Scout")
 local monster = {}

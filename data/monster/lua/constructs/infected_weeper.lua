@@ -1,5 +1,4 @@
--- Infected Weeper (Tibia Wiki: https://tibia.fandom.com/wiki/Infected_Weeper)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Infected Weeper")
 local monster = {}
@@ -74,7 +73,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 198 },
 	{ id = "platinum coin", chance = 100000, maxCount = 7 },
-	{ id = 12600, chance = 1460 }, -- coal
+	{ id = "coal", chance = 1460 }, -- coal
 }
 
 monster.attacks = {

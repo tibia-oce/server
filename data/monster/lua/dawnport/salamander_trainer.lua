@@ -1,5 +1,4 @@
--- Salamander Trainer (Tibia Wiki: https://tibia.fandom.com/wiki/Salamander_Trainer)
--- Version: 10.55
+
 
 local mType = Game.createMonsterType("Salamander Trainer")
 local monster = {}
@@ -62,11 +61,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 9689, chance = 1050 }, -- bunch of troll hair
-	{ id = 3031, chance = 65300, maxCount = 12 }, -- gold coin
+	{ id = "bunch of troll hair", chance = 1050 }, -- bunch of troll hair
+	{ id = "gold coin", chance = 65300, maxCount = 12 }, -- gold coin
 	{ id = 3577, chance = 15200 }, -- meat
 	{ id = 3003, chance = 7960 }, -- rope
-	{ id = 3277, chance = 12970, maxCount = 3 }, -- spear
+	{ id = "spear", chance = 12970, maxCount = 3 }, -- spear
 }
 
 monster.attacks = {

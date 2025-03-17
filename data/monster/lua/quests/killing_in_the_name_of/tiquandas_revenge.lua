@@ -1,5 +1,4 @@
--- Tiquandas Revenge (Tibia Wiki: https://tibia.fandom.com/wiki/Tiquandas_Revenge)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Tiquandas Revenge")
 local monster = {}
@@ -63,11 +62,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 87250, maxCount = 110 }, -- gold coin
+	{ id = "gold coin", chance = 87250, maxCount = 110 }, -- gold coin
 	{ id = 3577, chance = 70250, maxCount = 50 }, -- meat
 	{ id = 3582, chance = 38250, maxCount = 8 }, -- ham
-	{ id = 3728, chance = 21250, maxCount = 6 }, -- dark mushroom
-	{ id = 3028, chance = 100 }, -- small diamond
+	{ id = "dark mushroom", chance = 21250, maxCount = 6 }, -- dark mushroom
+	{ id = "small diamond", chance = 100 }, -- small diamond
 	{ id = 647, chance = 100000, maxCount = 3 }, -- seeds
 	{ id = 12311, chance = 12750 }, -- carrot on a stick
 	{ id = 5014, chance = 100000 }, -- mandrake

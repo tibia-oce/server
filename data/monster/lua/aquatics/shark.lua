@@ -1,5 +1,4 @@
--- Shark (Tibia Wiki: https://tibia.fandom.com/wiki/Shark)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Shark")
 local monster = {}
@@ -66,7 +65,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "gold coin", chance = 41000, maxCount = 38 },
-	{ id = 3578, chance = 25430, maxCount = 4 }, -- fish
+	{ id = "fish", chance = 25430, maxCount = 4 }, -- fish
 	{ id = "deepling scales", chance = 9620 },
 	{ id = "eye of a deepling", chance = 1200 },
 	{ id = "small sapphire", chance = 1090 },

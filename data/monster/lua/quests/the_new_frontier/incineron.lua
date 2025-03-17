@@ -1,5 +1,4 @@
--- Incineron (Tibia Wiki: https://tibia.fandom.com/wiki/Incineron)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Incineron")
 local monster = {}

@@ -1,5 +1,4 @@
--- Baron Brute (Tibia Wiki: https://tibia.fandom.com/wiki/Baron_Brute)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Baron Brute")
 local monster = {}

@@ -1,5 +1,4 @@
--- Anomaly (Tibia Wiki: https://tibia.fandom.com/wiki/Anomaly)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Anomaly")
 local monster = {}
@@ -77,7 +76,7 @@ monster.voices = {
 monster.loot = {
 	{ id = 22721, chance = 100000, maxCount = 4 }, -- gold token
 	{ id = 23509, chance = 100000 }, -- mysterious remains
-	{ id = 23510, chance = 100000 }, -- odd organ
+	{ id = "odd organ", chance = 100000 }, -- odd organ
 	{ id = 3031, chance = 100000, maxCount = 200 }, -- gold coin
 	{ id = 3035, chance = 100000, maxCount = 30 }, -- platinum coin
 	{ id = 16119, chance = 8000, maxCount = 3 }, -- blue crystal shard
@@ -95,12 +94,12 @@ monster.loot = {
 	{ id = 3038, chance = 6000 }, -- green gem
 	{ id = 23542, chance = 3500 }, -- collar of blue plasma
 	{ id = 23529, chance = 3500 }, -- ring of blue plasma
-	{ id = 23531, chance = 3500 }, -- ring of green plasma
+	{ id = "ring of green plasma", chance = 3500 }, -- ring of green plasma
 	{ id = 23511, chance = 8000 }, -- curious matter
 	{ id = 23519, chance = 8000 }, -- frozen lightning
 	{ id = 16160, chance = 4000, unique = true }, -- crystalline sword
 	{ id = 828, chance = 4000 }, -- lightning headband
-	{ id = 7427, chance = 3000 }, -- chaos mace
+	{ id = "chaos mace", chance = 3000 }, -- chaos mace
 	{ id = 7451, chance = 3000 }, -- shadow sceptre
 	{ id = 8073, chance = 3000 }, -- spellbook of warding
 	{ id = 822, chance = 2500 }, -- lightning legs

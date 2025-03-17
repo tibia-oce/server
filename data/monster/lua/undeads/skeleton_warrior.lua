@@ -1,5 +1,4 @@
--- Skeleton Warrior (Tibia Wiki: https://tibia.fandom.com/wiki/Skeleton_Warrior)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Skeleton Warrior")
 local monster = {}
@@ -65,7 +64,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 43500, maxCount = 10 },
 	{ id = 3115, chance = 50000 }, -- bone
-	{ id = 3264, chance = 1500 }, -- sword
+	{ id = "sword", chance = 1500 }, -- sword
 	{ id = "mace", chance = 2000 },
 	{ id = "white mushroom", chance = 24000, maxCount = 3 },
 	{ id = "brown mushroom", chance = 1700 },

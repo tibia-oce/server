@@ -1,5 +1,4 @@
--- Ancient Scarab (Tibia Wiki: https://tibia.fandom.com/wiki/Ancient_Scarab)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Ancient Scarab")
 local monster = {}

@@ -1,5 +1,4 @@
--- Doom Deer (Tibia Wiki: https://tibia.fandom.com/wiki/Doom_Deer)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Doom Deer")
 local monster = {}

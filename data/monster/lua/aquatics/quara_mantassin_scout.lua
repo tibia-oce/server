@@ -1,5 +1,4 @@
--- Quara Mantassin Scout (Tibia Wiki: https://tibia.fandom.com/wiki/Quara_Mantassin_Scout)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Quara Mantassin Scout")
 local monster = {}
@@ -71,7 +70,7 @@ monster.loot = {
 	{ id = 3114, chance = 990 }, -- skull
 	{ id = "small sapphire", chance = 990 },
 	{ id = "two handed sword", chance = 810 },
-	{ id = 3049, chance = 710 }, -- stealth ring
+	{ id = "stealth ring", chance = 710 }, -- stealth ring
 	{ id = "fish fin", chance = 360 },
 }
 

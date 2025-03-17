@@ -1,5 +1,4 @@
--- Waspoid (Tibia Wiki: https://tibia.fandom.com/wiki/Waspoid)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Waspoid")
 local monster = {}

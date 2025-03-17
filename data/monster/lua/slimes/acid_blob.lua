@@ -1,5 +1,4 @@
--- Acid Blob (Tibia Wiki: https://tibia.fandom.com/wiki/Acid_Blob)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Acid Blob")
 local monster = {}

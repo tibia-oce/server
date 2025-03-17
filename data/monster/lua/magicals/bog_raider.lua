@@ -1,5 +1,4 @@
--- Bog Raider (Tibia Wiki: https://tibia.fandom.com/wiki/Bog_Raider)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Bog Raider")
 local monster = {}

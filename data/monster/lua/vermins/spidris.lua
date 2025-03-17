@@ -1,5 +1,4 @@
--- Spidris (Tibia Wiki: https://tibia.fandom.com/wiki/Spidris)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Spidris")
 local monster = {}

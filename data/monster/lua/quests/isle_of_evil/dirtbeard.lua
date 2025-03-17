@@ -1,5 +1,4 @@
--- Dirtbeard (Tibia Wiki: https://tibia.fandom.com/wiki/Dirtbeard)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Dirtbeard")
 local monster = {}
@@ -80,11 +79,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 2000, maxCount = 95 }, -- gold coin
+	{ id = "gold coin", chance = 2000, maxCount = 95 }, -- gold coin
 	{ id = 3035, chance = 30000, maxCount = 9 }, -- platinum coin
 	{ id = 9375, chance = 1000 }, -- pointed rabbitslayer
-	{ id = 9382, chance = 1000 }, -- helmet of nature
-	{ id = 9374, chance = 1000 }, -- odd hat
+	{ id = "helmet of nature", chance = 1000 }, -- helmet of nature
+	{ id = "odd hat", chance = 1000 }, -- odd hat
 	{ id = 9401, chance = 2000 }, -- shield nevermourn
 }
 

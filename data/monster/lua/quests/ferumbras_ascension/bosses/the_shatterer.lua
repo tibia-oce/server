@@ -1,5 +1,4 @@
--- The Shatterer (Tibia Wiki: https://tibia.fandom.com/wiki/The_Shatterer)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("The Shatterer")
 local monster = {}
@@ -75,9 +74,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 238, chance = 23000, maxCount = 10 }, -- great mana potion
-	{ id = 7642, chance = 46100, maxCount = 10 }, -- great spirit potion
-	{ id = 7643, chance = 46100, maxCount = 10 }, -- ultimate health potion
+	{ id = "great mana potion", chance = 23000, maxCount = 10 }, -- great mana potion
+	{ id = "great spirit potion", chance = 46100, maxCount = 10 }, -- great spirit potion
+	{ id = "ultimate health potion", chance = 46100, maxCount = 10 }, -- ultimate health potion
 	{ id = 3030, chance = 12000, maxCount = 12 }, -- small ruby
 	{ id = 3035, chance = 8000, maxCount = 10 }, -- platinum coin
 	{ id = 3031, chance = 30000, maxCount = 200 }, -- gold coin

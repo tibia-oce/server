@@ -1,5 +1,4 @@
--- Armadile (Tibia Wiki: https://tibia.fandom.com/wiki/Armadile)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Armadile")
 local monster = {}
@@ -82,7 +81,7 @@ monster.loot = {
 	{ id = "terra boots", chance = 2850 },
 	{ id = "crystalline armor", chance = 230 },
 	{ id = "battle stone", chance = 12460 },
-	{ id = 12600, chance = 6000 }, -- coal
+	{ id = "coal", chance = 6000 }, -- coal
 	{ id = "green crystal splinter", chance = 3920, maxCount = 2 },
 	{ id = "green crystal fragment", chance = 5690, maxCount = 2 },
 	{ id = "crystalline spikes", chance = 14540 },

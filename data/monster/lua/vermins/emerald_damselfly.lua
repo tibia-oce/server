@@ -1,5 +1,4 @@
--- Emerald Damselfly (Tibia Wiki: https://tibia.fandom.com/wiki/Emerald_Damselfly)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Emerald Damselfly")
 local monster = {}
@@ -69,8 +68,8 @@ monster.loot = {
 	{ id = "arrow", chance = 7570, maxCount = 5 },
 	{ id = "health potion", chance = 3580 },
 	{ id = "mana potion", chance = 3550 },
-	{ id = 17458, chance = 11830 }, -- damselfly wing
-	{ id = 17463, chance = 9970 }, -- damselfly eye
+	{ id = "damselfly wing", chance = 11830 }, -- damselfly wing
+	{ id = "damselfly eye", chance = 9970 }, -- damselfly eye
 }
 
 monster.attacks = {

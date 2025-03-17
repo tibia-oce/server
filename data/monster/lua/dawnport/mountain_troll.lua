@@ -1,5 +1,4 @@
--- Mountain Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Mountain_Troll)
--- Version: 10.55
+
 
 local mType = Game.createMonsterType("Mountain Troll")
 local monster = {}
@@ -68,13 +67,13 @@ monster.voices = {
 monster.loot = {
 	{ id = 9689, chance = 920 }, -- bunch of troll hair
 	{ id = 3031, chance = 100000, maxCount = 8 }, -- gold coin
-	{ id = 3268, chance = 3590 }, -- hand axe
+	{ id = "hand axe", chance = 3590 }, -- hand axe
 	{ id = 3361, chance = 4060 }, -- leather armor
 	{ id = 3577, chance = 27980 }, -- meat
 	{ id = 3272, chance = 3470 }, -- rapier
 	{ id = 3003, chance = 7870 }, -- rope
-	{ id = 3277, chance = 6800 }, -- spear
-	{ id = 3336, chance = 3510 }, -- studded club
+	{ id = "spear", chance = 6800 }, -- spear
+	{ id = "studded club", chance = 3510 }, -- studded club
 }
 
 monster.attacks = {

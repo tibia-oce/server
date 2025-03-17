@@ -1,5 +1,4 @@
--- Crawler (Tibia Wiki: https://tibia.fandom.com/wiki/Crawler)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Crawler")
 local monster = {}

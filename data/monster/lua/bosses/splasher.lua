@@ -1,5 +1,4 @@
--- Splasher (Tibia Wiki: https://tibia.fandom.com/wiki/Splasher)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Splasher")
 local monster = {}

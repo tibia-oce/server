@@ -1,5 +1,4 @@
--- Elf Overseer (Tibia Wiki: https://tibia.fandom.com/wiki/Elf_Overseer)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Elf Overseer")
 local monster = {}
@@ -77,12 +76,12 @@ monster.loot = {
 	{ id = "elven amulet", chance = 1999 },
 	{ id = "blank rune", chance = 18000 },
 	{ id = "arrow", chance = 6000, maxCount = 3 },
-	{ id = 3509, chance = 1000 }, -- inkwell
+	{ id = "inkwell", chance = 1000 }, -- inkwell
 	{ id = "sandals", chance = 950 },
 	{ id = "green tunic", chance = 7000 },
 	{ id = "melon", chance = 22000 },
 	{ id = "bread", chance = 14000 },
-	{ id = 2747, chance = 880 } -- "grave flower",
+	{ id = 2747, chance = 880}, -- "grave flower"
 	{ id = "sling herb", chance = 5000 },
 	{ id = "holy orchid", chance = 2100 },
 	{ id = "strong mana potion", chance = 3000 },

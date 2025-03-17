@@ -1,5 +1,4 @@
--- Ghoulish Hyaena (Tibia Wiki: https://tibia.fandom.com/wiki/Ghoulish_Hyaena)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Ghoulish Hyaena")
 local monster = {}

@@ -1,5 +1,4 @@
--- Vashresamun (Tibia Wiki: https://tibia.fandom.com/wiki/Vashresamun)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Vashresamun")
 local monster = {}
@@ -82,7 +81,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2950, chance = 7000 }, -- lute
-	{ id = 2953, chance = 1500 }, -- panpipes
+	{ id = "panpipes", chance = 1500 }, -- panpipes
 	{ id = 3007, chance = 1500 }, -- crystal ring
 	{ id = "ancient tiara", chance = 300 },
 	{ id = "white pearl", chance = 7000 },

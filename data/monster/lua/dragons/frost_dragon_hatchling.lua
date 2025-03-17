@@ -1,5 +1,4 @@
--- Frost Dragon Hatchling (Tibia Wiki: https://tibia.fandom.com/wiki/Frost_Dragon_Hatchling)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Frost Dragon Hatchling")
 local monster = {}

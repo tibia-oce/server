@@ -1,5 +1,4 @@
--- Tyrn (Tibia Wiki: https://tibia.fandom.com/wiki/Tyrn)
--- Version: 10.20
+
 
 local mType = Game.createMonsterType("Tyrn")
 local monster = {}
@@ -72,9 +71,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 19083, chance = 5000 }, -- silver raid token
-	{ id = 19361, chance = 3000 }, -- sun mirror
-	{ id = 3583, chance = 55000, maxCount = 3 }, -- dragon ham
+	{ id = "silver raid token", chance = 5000 }, -- silver raid token
+	{ id = "sun mirror", chance = 3000 }, -- sun mirror
+	{ id = "dragon ham", chance = 55000, maxCount = 3 }, -- dragon ham
 	{ id = 3155, chance = 15000 }, -- sudden death rune
 	{ id = 3031, chance = 100000, maxCount = 50 }, -- gold coin
 	{ id = 3035, chance = 60000, maxCount = 8 }, -- platinum coin

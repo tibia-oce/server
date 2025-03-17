@@ -1,5 +1,4 @@
--- Frazzlemaw (Tibia Wiki: https://tibia.fandom.com/wiki/Frazzlemaw)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Frazzlemaw")
 local monster = {}
@@ -83,7 +82,7 @@ monster.loot = {
 	{ id = 3115, chance = 10000 }, -- bone
 	{ id = 3116, chance = 5500 }, -- big bone
 	{ id = "two handed sword", chance = 3200 },
-	{ id = 3578, chance = 6750, maxCount = 3 }, -- fish
+	{ id = "fish", chance = 6750, maxCount = 3 }, -- fish
 	{ id = "ham", chance = 6000, maxCount = 2 },
 	{ id = "iron ore", chance = 3000 },
 	{ id = "fish fin", chance = 4700 },
@@ -99,7 +98,7 @@ monster.loot = {
 	{ id = "violet crystal shard", chance = 3000 },
 	{ id = "brown crystal splinter", chance = 16000 },
 	{ id = "red crystal fragment", chance = 7600 },
-	{ id = 16279, chance = 10000 }, -- crystal rubbish
+	{ id = "crystal rubbish", chance = 10000 }, -- crystal rubbish
 	{ id = "cluster of solace", chance = 4450 },
 	{ id = "frazzle tongue", chance = 18760 },
 	{ id = "frazzle skin", chance = 16000 },

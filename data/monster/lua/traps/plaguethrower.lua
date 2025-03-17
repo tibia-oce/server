@@ -1,5 +1,4 @@
--- Plaguethrower (Tibia Wiki: https://tibia.fandom.com/wiki/Plaguethrower)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Plaguethrower")
 local monster = {}

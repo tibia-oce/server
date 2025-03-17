@@ -1,5 +1,4 @@
--- Jaul (Tibia Wiki: https://tibia.fandom.com/wiki/Jaul)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Jaul")
 local monster = {}

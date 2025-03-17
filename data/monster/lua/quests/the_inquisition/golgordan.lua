@@ -1,5 +1,4 @@
--- Golgordan (Tibia Wiki: https://tibia.fandom.com/wiki/Golgordan)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Golgordan")
 local monster = {}
@@ -77,8 +76,8 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 273 }, -- gold coin
-	{ id = 239, chance = 55000 }, -- great health potion
-	{ id = 3275, chance = 30000 }, -- double axe
+	{ id = "great health potion", chance = 55000 }, -- great health potion
+	{ id = "double axe", chance = 30000 }, -- double axe
 	{ id = 6299, chance = 25000 }, -- death ring
 	{ id = 3098, chance = 25000 }, -- ring of healing
 	{ id = 3027, chance = 20000, maxCount = 13 }, -- black pearl
@@ -100,7 +99,7 @@ monster.loot = {
 	{ id = 3320, chance = 5000 }, -- fire axe
 	{ id = 3038, chance = 5000 }, -- green gem
 	{ id = 3048, chance = 5000 }, -- might ring
-	{ id = 3290, chance = 5000 }, -- silver dagger
+	{ id = "silver dagger", chance = 5000 }, -- silver dagger
 	{ id = 3033, chance = 15000, maxCount = 12 }, -- small amethyst
 	{ id = 3066, chance = 5000 }, -- snakebite rod
 	{ id = 3049, chance = 5000 }, -- stealth ring

@@ -1,5 +1,4 @@
--- Webster (Tibia Wiki: https://tibia.fandom.com/wiki/Webster)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Webster")
 local monster = {}

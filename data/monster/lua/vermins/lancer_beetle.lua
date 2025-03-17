@@ -1,5 +1,4 @@
--- Lancer Beetle (Tibia Wiki: https://tibia.fandom.com/wiki/Lancer_Beetle)
--- Version: 8.54
+
 
 local mType = Game.createMonsterType("Lancer Beetle")
 local monster = {}

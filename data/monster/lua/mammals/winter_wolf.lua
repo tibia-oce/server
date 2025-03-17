@@ -1,5 +1,4 @@
--- Winter Wolf (Tibia Wiki: https://tibia.fandom.com/wiki/Winter_Wolf)
--- Version: 6.2
+
 
 local mType = Game.createMonsterType("Winter Wolf")
 local monster = {}

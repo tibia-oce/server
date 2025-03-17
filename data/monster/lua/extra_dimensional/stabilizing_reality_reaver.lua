@@ -1,5 +1,4 @@
--- Stabilizing Reality Reaver (Tibia Wiki: https://tibia.fandom.com/wiki/Stabilizing_Reality_Reaver)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Stabilizing Reality Reaver")
 local monster = {}
@@ -74,15 +73,15 @@ monster.loot = {
 	{ id = 238, chance = 12700 }, -- great mana potion
 	{ id = 23545, chance = 11200 }, -- energy drink
 	{ id = 23535, chance = 10900 }, -- energy bar
-	{ id = 23501, chance = 9900 }, -- condensed energy
+	{ id = "condensed energy", chance = 9900 }, -- condensed energy
 	{ id = 23524, chance = 8300 }, -- small energy ball
 	{ id = 23506, chance = 8000 }, -- plasma pearls
 	{ id = 16126, chance = 3400 }, -- red crystal fragment
 	{ id = 16120, chance = 3400 }, -- violet crystal shard
-	{ id = 16124, chance = 2700, maxCount = 2 }, -- blue crystal splinter
+	{ id = "blue crystal splinter", chance = 2700, maxCount = 2 }, -- blue crystal splinter
 	{ id = 16119, chance = 1900 }, -- blue crystal shard
 	{ id = 3039, chance = 1500 }, -- red gem
-	{ id = 8092, chance = 1100 }, -- wand of starstorm
+	{ id = "wand of starstorm", chance = 1100 }, -- wand of starstorm
 }
 
 monster.attacks = {

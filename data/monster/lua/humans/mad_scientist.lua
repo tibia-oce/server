@@ -1,5 +1,4 @@
--- Mad Scientist (Tibia Wiki: https://tibia.fandom.com/wiki/Mad_Scientist)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Mad Scientist")
 local monster = {}

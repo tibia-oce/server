@@ -1,5 +1,4 @@
--- Corym Vanguard (Tibia Wiki: https://tibia.fandom.com/wiki/Corym_Vanguard)
--- Version: 9.80
+
 
 local mType = Game.createMonsterType("Corym Vanguard")
 local monster = {}

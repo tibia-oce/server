@@ -1,5 +1,4 @@
--- Energy Overlord (Tibia Wiki: https://tibia.fandom.com/wiki/Energy_Overlord)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Energy Overlord")
 local monster = {}
@@ -71,7 +70,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 64 },
 	{ id = "platinum coin", chance = 25000, maxCount = 2 },
-	{ id = "pure energy", chance = 100000 },
+	{ id = 8306, chance = 100000 }, -- "pure energy",
 }
 
 monster.attacks = {

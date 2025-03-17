@@ -1,5 +1,4 @@
--- Island Troll (Tibia Wiki: https://tibia.fandom.com/wiki/Island_Troll)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Island Troll")
 local monster = {}

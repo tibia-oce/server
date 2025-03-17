@@ -1,5 +1,4 @@
--- Mechanical Fighter (Tibia Wiki: https://tibia.fandom.com/wiki/Mechanical_Fighter)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Mechanical Fighter")
 local monster = {}

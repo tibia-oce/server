@@ -1,5 +1,4 @@
--- Sibang (Tibia Wiki: https://tibia.fandom.com/wiki/Sibang)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Sibang")
 local monster = {}

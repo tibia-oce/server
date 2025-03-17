@@ -1,5 +1,4 @@
--- The Pale Count (Tibia Wiki: https://tibia.fandom.com/wiki/The_Pale_Count)
--- Version: 10.20
+
 
 local mType = Game.createMonsterType("The Pale Count")
 local monster = {}
@@ -98,11 +97,11 @@ monster.loot = {
 	{ id = 3098, chance = 10000 }, -- ring of healing
 	{ id = 5909, chance = 10000 }, -- white piece of cloth
 	{ id = 5911, chance = 10000 }, -- red piece of cloth
-	{ id = 5912, chance = 10000 }, -- blue piece of cloth
+	{ id = "blue piece of cloth", chance = 10000 }, -- blue piece of cloth
 	{ id = 7427, chance = 5000 }, -- chaos mace
 	{ id = 3326, chance = 10000 }, -- epee
-	{ id = 7419, chance = 5000 }, -- dreaded cleaver
-	{ id = 8075, chance = 5000 }, -- spellbook of lost souls
+	{ id = "dreaded cleaver", chance = 5000 }, -- dreaded cleaver
+	{ id = "spellbook of lost souls", chance = 5000 }, -- spellbook of lost souls
 	{ id = 19373, chance = 5000 }, -- haunted mirror piece
 	{ id = 3434, chance = 5000 }, -- vampire shield
 	{ id = 19374, chance = 5000 }, -- vampire silk slippers

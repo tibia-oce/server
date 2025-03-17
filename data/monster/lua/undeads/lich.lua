@@ -1,5 +1,4 @@
--- Lich (Tibia Wiki: https://tibia.fandom.com/wiki/Lich)
--- Version: 7.4
+
 
 local mType = Game.createMonsterType("Lich")
 local monster = {}
@@ -86,9 +85,9 @@ monster.loot = {
 	{ id = "platinum coin", chance = 19720 },
 	{ id = "yellow gem", chance = 690 },
 	{ id = "platinum amulet", chance = 450 },
-	{ id = 3059, chance = 10000 }, -- spellbook
+	{ id = "spellbook", chance = 10000 }, -- spellbook
 	{ id = "mind stone", chance = 350 },
-	{ id = 3098, chance = 1540 }, -- ring of healing
+	{ id = "ring of healing", chance = 1540 }, -- ring of healing
 	{ id = "skull staff", chance = 550 },
 	{ id = "strange helmet", chance = 740 },
 	{ id = "ancient shield", chance = 2422 },

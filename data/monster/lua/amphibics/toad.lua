@@ -1,5 +1,4 @@
--- Toad (Tibia Wiki: https://tibia.fandom.com/wiki/Toad)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Toad")
 local monster = {}
@@ -68,7 +67,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 80000, maxCount = 20 },
 	{ id = "war hammer", chance = 148 },
 	{ id = "mace", chance = 2854 },
-	{ id = 3578, chance = 20000 }, -- fish
+	{ id = "fish", chance = 20000 }, -- fish
 	{ id = "poisonous slime", chance = 4761 },
 }
 

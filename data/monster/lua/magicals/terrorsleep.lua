@@ -1,5 +1,4 @@
--- Terrorsleep (Tibia Wiki: https://tibia.fandom.com/wiki/Terrorsleep)
--- Version: 10.30
+
 
 local mType = Game.createMonsterType("Terrorsleep")
 local monster = {}
@@ -85,7 +84,7 @@ monster.loot = {
 	{ id = "blue crystal shard", chance = 6000 },
 	{ id = "blue crystal splinter", chance = 13000 },
 	{ id = "cyan crystal fragment", chance = 17000 },
-	{ id = 20029, chance = 1130 }, -- broken dream
+	{ id = "broken dream", chance = 1130 }, -- broken dream
 	{ id = "trapped bad dream monster", chance = 13000 },
 	{ id = "bowl of terror sweat", chance = 18000 },
 }

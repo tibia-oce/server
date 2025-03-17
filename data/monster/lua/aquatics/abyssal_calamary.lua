@@ -1,5 +1,4 @@
--- Abyssal Calamary (Tibia Wiki: https://tibia.fandom.com/wiki/Abyssal_Calamary)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Abyssal Calamary")
 local monster = {}
@@ -63,8 +62,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3581, chance = 9680 }, -- shrimp
-	{ id = 3578, chance = 10770 }, -- fish
+	{ id = "shrimp", chance = 9680 }, -- shrimp
+	{ id = "fish", chance = 10770 }, -- fish
 	{ id = "black pearl", chance = 1500, maxCount = 1 },
 	{ id = "white pearl", chance = 830, maxCount = 1 },
 	{ id = "small sapphire", chance = 250, maxCount = 3 },

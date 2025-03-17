@@ -1,5 +1,4 @@
--- Pirate Corsair (Tibia Wiki: https://tibia.fandom.com/wiki/Pirate_Corsair)
--- Version: 7.8
+
 
 local mType = Game.createMonsterType("Pirate Corsair")
 local monster = {}
@@ -74,7 +73,7 @@ monster.loot = {
 	{ id = "dark shield", chance = 1000 },
 	{ id = "pirate boots", chance = 220 },
 	{ id = "rum flask", chance = 130 },
-	{ id = 5813, chance = 130 }, -- skull candle
+	{ id = "skull candle", chance = 130 }, -- skull candle
 	{ id = "pirate backpack", chance = 930 },
 	{ id = "pirate hat", chance = 1150 },
 	{ id = "hook", chance = 600 },

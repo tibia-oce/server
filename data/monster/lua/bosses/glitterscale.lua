@@ -1,5 +1,4 @@
--- Glitterscale (Tibia Wiki: https://tibia.fandom.com/wiki/Glitterscale)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("Glitterscale")
 local monster = {}

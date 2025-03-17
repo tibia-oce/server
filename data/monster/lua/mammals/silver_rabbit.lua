@@ -1,5 +1,4 @@
--- Silver Rabbit (Tibia Wiki: https://tibia.fandom.com/wiki/Silver_Rabbit)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Silver Rabbit")
 local monster = {}

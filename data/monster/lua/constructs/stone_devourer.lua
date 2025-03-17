@@ -1,5 +1,4 @@
--- Stone Devourer (Tibia Wiki: https://tibia.fandom.com/wiki/Stone_Devourer)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Stone Devourer")
 local monster = {}
@@ -70,7 +69,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 100000, maxCount = 100 },
 	{ id = "platinum coin", chance = 92000, maxCount = 7 },
 	{ id = "stone skin amulet", chance = 2270 },
-	{ id = 3097, chance = 2840 }, -- dwarven ring
+	{ id = "dwarven ring", chance = 2840 }, -- dwarven ring
 	{ id = "giant sword", chance = 570 },
 	{ id = "crystal mace", chance = 850 },
 	{ id = "war axe", chance = 920 },
@@ -82,7 +81,7 @@ monster.loot = {
 	{ id = "great mana potion", chance = 15610, maxCount = 2 },
 	{ id = "mana potion", chance = 15050, maxCount = 2 },
 	{ id = "ultimate health potion", chance = 14410 },
-	{ id = 12600, chance = 11360 }, -- coal
+	{ id = "coal", chance = 11360 }, -- coal
 	{ id = "ancient stone", chance = 12850 },
 	{ id = "crystalline arrow", chance = 9940, maxCount = 10 },
 	{ id = "green crystal splinter", chance = 6960 },

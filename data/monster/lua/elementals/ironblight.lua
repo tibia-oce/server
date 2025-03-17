@@ -1,5 +1,4 @@
--- Ironblight (Tibia Wiki: https://tibia.fandom.com/wiki/Ironblight)
--- Version: 9.60
+
 
 local mType = Game.createMonsterType("Ironblight")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "small emerald", chance = 10890, maxCount = 3 },
 	{ id = "small amethyst", chance = 15020, maxCount = 3 },
 	{ id = "platinum coin", chance = 100000, maxCount = 8 },
-	{ id = 3039, chance = 3510 }, -- red gem
+	{ id = "red gem", chance = 3510 }, -- red gem
 	{ id = "blue gem", chance = 480 },
 	{ id = "epee", chance = 480 },
 	{ id = "magic sulphur", chance = 830 },

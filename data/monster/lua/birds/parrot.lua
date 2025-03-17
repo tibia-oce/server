@@ -1,5 +1,4 @@
--- Parrot (Tibia Wiki: https://tibia.fandom.com/wiki/Parrot)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Parrot")
 local monster = {}

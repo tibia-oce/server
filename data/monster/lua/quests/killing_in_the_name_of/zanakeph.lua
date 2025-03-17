@@ -1,5 +1,4 @@
--- Zanakeph (Tibia Wiki: https://tibia.fandom.com/wiki/Zanakeph)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Zanakeph")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
 	{ id = 2903, chance = 100000 }, -- golden mug
 	{ id = 3035, chance = 100000, maxCount = 10 }, -- platinum coin
-	{ id = 10316, chance = 100000, maxCount = 3 }, -- unholy bone
+	{ id = "unholy bone", chance = 100000, maxCount = 3 }, -- unholy bone
 	{ id = 9058, chance = 78000 }, -- gold ingot
 	{ id = 6499, chance = 56000 }, -- demonic essence
 	{ id = 3370, chance = 47270 }, -- knight armor
@@ -80,7 +79,7 @@ monster.loot = {
 	{ id = 7642, chance = 37000, maxCount = 3 }, -- great spirit potion
 	{ id = 5925, chance = 37000, maxCount = 5 }, -- hardened bone
 	{ id = 10451, chance = 37000 }, -- jade hat
-	{ id = 239, chance = 35000, maxCount = 4 }, -- great health potion
+	{ id = "great health potion", chance = 35000, maxCount = 4 }, -- great health potion
 	{ id = 8896, chance = 35000 }, -- slightly rusted armor
 	{ id = 3032, chance = 33000, maxCount = 5 }, -- small emerald
 	{ id = 3029, chance = 33000, maxCount = 5 }, -- small sapphire
@@ -89,7 +88,7 @@ monster.loot = {
 	{ id = 12304, chance = 6780 }, -- maxilla maximus
 	{ id = 5741, chance = 5000 }, -- skull helmet
 	{ id = 8057, chance = 3390 }, -- divine plate
-	{ id = 3392, chance = 1690 }, -- royal helmet
+	{ id = "royal helmet", chance = 1690 }, -- royal helmet
 }
 
 monster.attacks = {

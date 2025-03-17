@@ -1,5 +1,4 @@
--- Pythius The Rotten (Tibia Wiki: https://tibia.fandom.com/wiki/Pythius_The_Rotten)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Pythius The Rotten")
 local monster = {}

@@ -1,5 +1,4 @@
--- Stalker (Tibia Wiki: https://tibia.fandom.com/wiki/Stalker)
--- Version: 6.4
+
 
 local mType = Game.createMonsterType("Stalker")
 local monster = {}

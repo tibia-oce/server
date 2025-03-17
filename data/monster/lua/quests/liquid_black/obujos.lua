@@ -1,5 +1,4 @@
--- Obujos (Tibia Wiki: https://tibia.fandom.com/wiki/Obujos)
--- Version: 9.40
+
 
 local mType = Game.createMonsterType("Obujos")
 local monster = {}

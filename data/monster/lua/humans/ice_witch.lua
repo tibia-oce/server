@@ -1,5 +1,4 @@
--- Ice Witch (Tibia Wiki: https://tibia.fandom.com/wiki/Ice_Witch)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Ice Witch")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "green mushroom", chance = 1310 },
 	{ id = "shard", chance = 530 },
 	{ id = "diamond sceptre", chance = 330 },
-	{ id = 7441, chance = 10000 }, -- ice cube
+	{ id = "ice cube", chance = 10000 }, -- ice cube
 	{ id = "crystal sword", chance = 400 },
 	{ id = "pair of earmuffs", chance = 90 },
 	{ id = "strong mana potion", chance = 820 },

@@ -1,5 +1,4 @@
--- Barbarian Skullhunter (Tibia Wiki: https://tibia.fandom.com/wiki/Barbarian_Skullhunter)
--- Version: 8.00
+
 
 local mType = Game.createMonsterType("Barbarian Skullhunter")
 local monster = {}
@@ -71,7 +70,7 @@ monster.voices = {
 monster.loot = {
 	{ id = 2920, chance = 6680 }, -- torch
 	{ id = "gold coin", chance = 8240, maxCount = 30 },
-	{ id = 3052, chance = 300 }, -- life ring
+	{ id = "life ring", chance = 300 }, -- life ring
 	{ id = 3114, chance = 3000 }, -- skull
 	{ id = "knife", chance = 1067 },
 	{ id = "brass helmet", chance = 2200 },

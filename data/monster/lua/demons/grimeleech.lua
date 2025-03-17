@@ -1,5 +1,4 @@
--- Grimeleech (Tibia Wiki: https://tibia.fandom.com/wiki/Grimeleech)
--- Version: 10.90
+
 
 local mType = Game.createMonsterType("Grimeleech")
 local monster = {}
@@ -72,7 +71,7 @@ monster.loot = {
 	{ id = "great mana potion", chance = 34850, maxCount = 3 },
 	{ id = "great health potion", chance = 34290, maxCount = 3 },
 	{ id = "great spirit potion", chance = 30860, maxCount = 3 },
-	{ id = "flask of demonic blood", chance = 23400, maxCount = 3 },
+	{ id = 6558, chance = 23400, maxCount = 3}, -- "flask of demonic blood"
 	{ id = "demonic essence", chance = 19240 },
 	{ id = "some grimeleech wings", chance = 19080 },
 	{ id = "fire mushroom", chance = 15360, maxCount = 5 },
@@ -83,7 +82,7 @@ monster.loot = {
 	{ id = "small amethyst", chance = 9640, maxCount = 5 },
 	{ id = "underworld rod", chance = 6890 },
 	{ id = "wand of voodoo", chance = 4810 },
-	{ id = 3039, chance = 3930 }, -- red gem
+	{ id = "red gem", chance = 3930 }, -- red gem
 	{ id = "yellow gem", chance = 2900 },
 	{ id = "devil helmet", chance = 1360 },
 	{ id = "magma legs", chance = 1150 },

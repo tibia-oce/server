@@ -1,5 +1,4 @@
--- Crazed Dwarf (Tibia Wiki: https://tibia.fandom.com/wiki/Crazed_Dwarf)
--- Version: 10.55
+
 
 local mType = Game.createMonsterType("Crazed Dwarf")
 local monster = {}
@@ -64,13 +63,13 @@ monster.voices = {
 monster.loot = {
 	{ id = 3274, chance = 12860 }, -- axe
 	{ id = 3031, chance = 100000, maxCount = 4 }, -- gold coin
-	{ id = 3276, chance = 25710 }, -- hatchet
+	{ id = "hatchet", chance = 25710 }, -- hatchet
 	{ id = 3559, chance = 8570 }, -- leather legs
-	{ id = 3505, chance = 4290 }, -- letter
+	{ id = "letter", chance = 4290 }, -- letter
 	{ id = 3456, chance = 8570 }, -- pick
 	{ id = 3410, chance = 17140 }, -- plate shield
-	{ id = 3378, chance = 8570 }, -- studded armor
-	{ id = 3723, chance = 47140 }, -- white mushroom
+	{ id = "studded armor", chance = 8570 }, -- studded armor
+	{ id = "white mushroom", chance = 47140 }, -- white mushroom
 }
 
 monster.attacks = {

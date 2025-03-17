@@ -1,5 +1,4 @@
--- Dark Magician (Tibia Wiki: https://tibia.fandom.com/wiki/Dark_Magician)
--- Version: 8.10
+
 
 local mType = Game.createMonsterType("Dark Magician")
 local monster = {}

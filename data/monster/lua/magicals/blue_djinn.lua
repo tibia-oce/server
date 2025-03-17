@@ -1,5 +1,4 @@
--- Blue Djinn (Tibia Wiki: https://tibia.fandom.com/wiki/Blue_Djinn)
--- Version: 7.0
+
 
 local mType = Game.createMonsterType("Blue Djinn")
 local monster = {}
@@ -68,7 +67,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2829, chance = 2350 }, -- book
+	{ id = "book", chance = 2350 }, -- book
 	{ id = "small oil lamp", chance = 690 },
 	{ id = "small sapphire", chance = 2560, maxCount = 4 },
 	{ id = "gold coin", chance = 60000, maxCount = 70 },

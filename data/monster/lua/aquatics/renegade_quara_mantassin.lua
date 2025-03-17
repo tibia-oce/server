@@ -1,5 +1,4 @@
--- Renegade Quara Mantassin (Tibia Wiki: https://tibia.fandom.com/wiki/Renegade_Quara_Mantassin)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Renegade Quara Mantassin")
 local monster = {}
@@ -70,14 +69,14 @@ monster.loot = {
 	{ id = "mind stone", chance = 10370 },
 	{ id = "shrimp", chance = 3950, maxCount = 3 },
 	{ id = "small sapphire", chance = 3540, maxCount = 3 },
-	{ id = 3049, chance = 3290 }, -- stealth ring
+	{ id = "stealth ring", chance = 3290 }, -- stealth ring
 	{ id = "ice rapier", chance = 2060 },
 	{ id = "blue crystal shard", chance = 1890 },
 	{ id = "strange helmet", chance = 1320 },
 	{ id = "two handed sword", chance = 820 },
 	{ id = "fish fin", chance = 740 },
 	{ id = "blue robe", chance = 660 },
-	{ id = 3051, chance = 580 }, -- energy ring
+	{ id = "energy ring", chance = 580 }, -- energy ring
 }
 
 monster.attacks = {

@@ -1,5 +1,4 @@
--- Energized Raging Mage (Tibia Wiki: https://tibia.fandom.com/wiki/Energized_Raging_Mage)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Energized Raging Mage")
 local monster = {}

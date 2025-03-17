@@ -1,5 +1,4 @@
--- Tomb Servant (Tibia Wiki: https://tibia.fandom.com/wiki/Tomb_Servant)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Tomb Servant")
 local monster = {}

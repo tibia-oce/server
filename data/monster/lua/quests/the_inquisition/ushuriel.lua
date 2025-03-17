@@ -1,5 +1,4 @@
--- Ushuriel (Tibia Wiki: https://tibia.fandom.com/wiki/Ushuriel)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Ushuriel")
 local monster = {}
@@ -86,7 +85,7 @@ monster.loot = {
 	{ id = "spike sword", chance = 9090 },
 	{ id = "fire sword", chance = 14285 },
 	{ id = "giant sword", chance = 7692 },
-	{ id = 3307, chance = 11111 }, -- scimitar
+	{ id = "scimitar", chance = 11111 }, -- scimitar
 	{ id = "warrior helmet", chance = 20000 },
 	{ id = "strange helmet", chance = 8333 },
 	{ id = "crown helmet", chance = 6250 },
@@ -95,13 +94,13 @@ monster.loot = {
 	{ id = "mysterious voodoo skull", chance = 12500 },
 	{ id = "skull helmet", chance = 20000 },
 	{ id = "iron ore", chance = 33333 },
-	{ id = 5884, chance = 4761 }, -- spirit container
+	{ id = "spirit container", chance = 4761 }, -- spirit container
 	{ id = "flask of warrior's sweat", chance = 5555 },
 	{ id = "enchanted chicken wing", chance = 7692 },
 	{ id = "huge chunk of crude iron", chance = 14285 },
 	{ id = "hardened bone", chance = 25000, maxCount = 20 },
 	{ id = "demon horn", chance = 8333, maxCount = 2 },
-	{ id = 6103, chance = 2063 }, -- unholy book
+	{ id = "unholy book", chance = 2063 }, -- unholy book
 	{ id = "demonic essence", chance = 100000 },
 	{ id = 7385, chance = 10000 }, -- crimson sword
 	{ id = "thaian sword", chance = 25000 },

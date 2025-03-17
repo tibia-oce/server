@@ -1,5 +1,4 @@
--- Elder Mummy (Tibia Wiki: https://tibia.fandom.com/wiki/Elder_Mummy)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Elder Mummy")
 local monster = {}
@@ -76,7 +75,7 @@ monster.loot = {
 	{ id = "worm", chance = 20000, maxCount = 3 },
 	{ id = "gauze bandage", chance = 10000 },
 	{ id = "flask of embalming fluid", chance = 12600 },
-	{ id = 12483, chance = 2400 }, -- pharaoh banner
+	{ id = "pharaoh banner", chance = 2400 }, -- pharaoh banner
 }
 
 monster.attacks = {

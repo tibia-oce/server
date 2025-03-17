@@ -1,5 +1,4 @@
--- Spit Nettle (Tibia Wiki: https://tibia.fandom.com/wiki/Spit_Nettle)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Spit Nettle")
 local monster = {}

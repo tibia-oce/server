@@ -1,5 +1,4 @@
--- Green Djinn (Tibia Wiki: https://tibia.fandom.com/wiki/Green_Djinn)
--- Version: 7.3
+
 
 local mType = Game.createMonsterType("Green Djinn")
 local monster = {}
@@ -68,13 +67,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2831, chance = 2280 }, -- book
+	{ id = "book", chance = 2280 }, -- book
 	{ id = "gold coin", chance = 41000, maxCount = 70 },
 	{ id = "gold coin", chance = 51000, maxCount = 45 },
 	{ id = "small emerald", chance = 2960, maxCount = 4 },
 	{ id = "mystic turban", chance = 140 },
 	{ id = 3607, chance = 23500 }, -- cheese
-	{ id = 2747, chance = 1000 } -- "grave flower",
+	{ id = 2747, chance = 1000}, -- "grave flower"
 	{ id = "green piece of cloth", chance = 2000 },
 	{ id = "royal spear", chance = 4870, maxCount = 2 },
 	{ id = "mana potion", chance = 490 },

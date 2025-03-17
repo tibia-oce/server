@@ -1,5 +1,4 @@
--- Rift Lord (Tibia Wiki: https://tibia.fandom.com/wiki/Rift_Lord)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Rift Lord")
 local monster = {}

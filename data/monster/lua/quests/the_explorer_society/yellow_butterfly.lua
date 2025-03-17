@@ -1,5 +1,4 @@
--- Yellow Butterfly (Tibia Wiki: https://tibia.fandom.com/wiki/Yellow_Butterfly)
--- Version: 7.50
+
 
 local mType = Game.createMonsterType("Yellow Butterfly")
 local monster = {}

@@ -1,5 +1,4 @@
--- Goblin Assassin (Tibia Wiki: https://tibia.fandom.com/wiki/Goblin_Assassin)
--- Version: 8.20
+
 
 local mType = Game.createMonsterType("Goblin Assassin")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "leather helmet", chance = 13000 },
 	{ id = "leather armor", chance = 7240 },
 	{ id = "small axe", chance = 9800 },
-	{ id = 3578, chance = 12400 }, -- fish
+	{ id = "fish", chance = 12400 }, -- fish
 }
 
 monster.attacks = {

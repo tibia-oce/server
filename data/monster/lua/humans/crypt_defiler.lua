@@ -1,5 +1,4 @@
--- Crypt Defiler (Tibia Wiki: https://tibia.fandom.com/wiki/Crypt_Defiler)
--- Version: 9.50
+
 
 local mType = Game.createMonsterType("Crypt Defiler")
 local monster = {}

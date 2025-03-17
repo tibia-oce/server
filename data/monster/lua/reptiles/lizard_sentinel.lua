@@ -1,5 +1,4 @@
--- Lizard Sentinel (Tibia Wiki: https://tibia.fandom.com/wiki/Lizard_Sentinel)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Lizard Sentinel")
 local monster = {}

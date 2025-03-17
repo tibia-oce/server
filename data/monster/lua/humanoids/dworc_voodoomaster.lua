@@ -1,5 +1,4 @@
--- Dworc Voodoomaster (Tibia Wiki: https://tibia.fandom.com/wiki/Dworc_Voodoomaster)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("Dworc Voodoomaster")
 local monster = {}

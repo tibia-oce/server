@@ -1,5 +1,4 @@
--- Shaburak Lord (Tibia Wiki: https://tibia.fandom.com/wiki/Shaburak_Lord)
--- Version: 9.10
+
 
 local mType = Game.createMonsterType("Shaburak Lord")
 local monster = {}
@@ -75,7 +74,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50000, maxCount = 100 },
 	{ id = "gold coin", chance = 50000, maxCount = 78 },
 	{ id = "platinum coin", chance = 33333, maxCount = 2 },
-	{ id = 3051, chance = 1652 }, -- energy ring
+	{ id = "energy ring", chance = 1652 }, -- energy ring
 	{ id = "wand of inferno", chance = 800 },
 	{ id = "steel boots", chance = 160 },
 	{ id = "brown mushroom", chance = 5346 },

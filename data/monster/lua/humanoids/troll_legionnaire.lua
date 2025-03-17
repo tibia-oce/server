@@ -1,5 +1,4 @@
--- Troll Legionnaire (Tibia Wiki: https://tibia.fandom.com/wiki/Troll_Legionnaire)
--- Version: 8.50
+
 
 local mType = Game.createMonsterType("Troll Legionnaire")
 local monster = {}
@@ -66,7 +65,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 92000, maxCount = 155 },
-	{ id = 3049, chance = 560 }, -- stealth ring
+	{ id = "stealth ring", chance = 560 }, -- stealth ring
 	{ id = "throwing star", chance = 28000, maxCount = 10 },
 	{ id = "frosty ear of a troll", chance = 5120 },
 }

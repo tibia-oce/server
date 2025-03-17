@@ -1,5 +1,4 @@
--- Overcharge (Tibia Wiki: https://tibia.fandom.com/wiki/Overcharge)
--- Version: 10.94
+
 
 local mType = Game.createMonsterType("Overcharge")
 local monster = {}

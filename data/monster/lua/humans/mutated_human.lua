@@ -1,5 +1,4 @@
--- Mutated Human (Tibia Wiki: https://tibia.fandom.com/wiki/Mutated_Human)
--- Version: 8.40
+
 
 local mType = Game.createMonsterType("Mutated Human")
 local monster = {}
@@ -74,7 +73,7 @@ monster.loot = {
 	{ id = "strange talisman", chance = 4980 },
 	{ id = "silver amulet", chance = 70 },
 	{ id = "fishbone", chance = 10050 },
-	{ id = 3264, chance = 5030 }, -- sword
+	{ id = "sword", chance = 5030 }, -- sword
 	{ id = "scale armor", chance = 8080 },
 	{ id = 3607, chance = 8000 }, -- cheese
 	{ id = "fern", chance = 420 },

@@ -1,5 +1,4 @@
--- Renegade Quara Hydromancer (Tibia Wiki: https://tibia.fandom.com/wiki/Renegade_Quara_Hydromancer)
--- Version: 10.70
+
 
 local mType = Game.createMonsterType("Renegade Quara Hydromancer")
 local monster = {}
@@ -78,7 +77,7 @@ monster.loot = {
 	{ id = "yellow piece of cloth", chance = 3230 },
 	{ id = "green crystal shard", chance = 3000 },
 	{ id = "green piece of cloth", chance = 2880 },
-	{ id = 3052, chance = 2190 }, -- life ring
+	{ id = "life ring", chance = 2190 }, -- life ring
 	{ id = "fish fin", chance = 1380 },
 	{ id = 281, chance = 1150 }, -- giant shimmering pearl (green)
 	{ id = "wand of cosmic energy", chance = 1150 },

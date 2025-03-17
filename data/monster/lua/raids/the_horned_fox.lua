@@ -1,5 +1,4 @@
--- The Horned Fox (Tibia Wiki: https://tibia.fandom.com/wiki/The_Horned_Fox)
--- Version: 7.5
+
 
 local mType = Game.createMonsterType("The Horned Fox")
 local monster = {}
@@ -77,18 +76,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 5804, chance = 100000 }, -- nose ring
+	{ id = "nose ring", chance = 100000 }, -- nose ring
 	{ id = 3031, chance = 96000, maxCount = 99 }, -- gold coin
 	{ id = 3035, chance = 38890, maxCount = 3 }, -- platinum coin
-	{ id = 5878, chance = 100000 }, -- minotaur leather
+	{ id = "minotaur leather", chance = 100000 }, -- minotaur leather
 	{ id = 11472, chance = 92590, maxCount = 2 }, -- minotaur horn
 	{ id = 11482, chance = 85000 }, -- piece of warrior armor
 	{ id = 3450, chance = 48000, maxCount = 14 }, -- power bolt
 	{ id = 3577, chance = 18000, maxCount = 3 }, -- meat
 	{ id = 3049, chance = 10000 }, -- stealth ring
-	{ id = 3483, chance = 7410 }, -- fishing rod
+	{ id = "fishing rod", chance = 7410 }, -- fishing rod
 	{ id = 236, chance = 7410 }, -- strong health potion
-	{ id = 7401, chance = 900 }, -- minotaur trophy,
+	{ id = "minotaur trophy", chance = 900 }, -- minotaur trophy,
 	{ id = 21174, chance = 12000 }, -- mino lance
 	{ id = 21175, chance = 6000 }, -- mino shield
 }

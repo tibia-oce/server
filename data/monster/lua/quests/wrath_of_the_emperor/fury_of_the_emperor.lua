@@ -1,5 +1,4 @@
--- Fury of the Emperor (Tibia Wiki: https://tibia.fandom.com/wiki/Fury_of_the_Emperor)
--- Version: 8.60
+
 
 local mType = Game.createMonsterType("Fury of the Emperor")
 local monster = {}
