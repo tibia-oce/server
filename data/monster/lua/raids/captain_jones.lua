@@ -75,12 +75,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 150 }, -- gold coin
-	{ id = 3049, chance = 33000 }, -- stealth ring
-	{ id = "crown legs", chance = 5070 }, -- crown legs
-	{ id = 8043, chance = 3070 }, -- focus cape
-	{ id = "red robe", chance = 1110 }, -- red robe
-	{ id = 3271, chance = 1110 }, -- spike sword
+	{ id = "gold coin", chance = 100000, minCount = 8, maxCount = 53 },  -- 2148
+	{ id = "stealth ring", chance = 14286 },  -- 2165
 }
 
 monster.attacks = {

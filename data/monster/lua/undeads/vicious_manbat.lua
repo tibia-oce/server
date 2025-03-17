@@ -68,7 +68,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 163 },  -- 2148
+	{ id = "tooth file", chance = 10305 },  -- 21241
+	{ id = "strong mana potion", chance = 9924 },  -- 7589
+	{ id = "small ruby", chance = 9160, minCount = 1, maxCount = 3 },  -- 2147
+	{ id = "strong health potion", chance = 8779 },  -- 7588
+	{ id = "vampire teeth", chance = 7634 },  -- 10602
+	{ id = "blood preservation", chance = 5344 },  -- 12405
+	{ id = "bat wing", chance = 4198 },  -- 5894
+	{ id = "emerald bangle", chance = 1145 },  -- 2127
+	{ id = "red gem", chance = 763 },  -- 2156
+	{ id = "vampire shield", chance = 763 },  -- 2534
 }
 
 monster.attacks = {

@@ -68,26 +68,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small sapphire", chance = 5600, maxCount = 3 },
-	{ id = "gold coin", chance = 38000, maxCount = 100 },
-	{ id = "gold coin", chance = 30000, maxCount = 100 },
-	{ id = "gold coin", chance = 30000, maxCount = 36 },
-	{ id = "platinum coin", chance = 25000, maxCount = 3 },
-	{ id = "stealth ring", chance = 400 }, -- stealth ring
-	{ id = "ring of healing", chance = 1100 }, -- ring of healing
-	{ id = "serpent sword", chance = 4200 },
-	{ id = "plate legs", chance = 7150 },
-	{ id = "dragon ham", chance = 60000, maxCount = 2 },
-	{ id = "strong health potion", chance = 5500 },
-	{ id = "strong mana potion", chance = 3850 },
-	{ id = "great mana potion", chance = 920 },
-	{ id = "glacier amulet", chance = 880 },
-	{ id = "glacier kilt", chance = 430 },
-	{ id = "spirit cloak", chance = 2900 },
-	{ id = "focus cape", chance = 370 },
-	{ id = "crystalline armor", chance = 90 },
-	{ id = "northwind rod", chance = 930 },
-	{ id = "sea serpent scale", chance = 10200 },
+	{ id = "gold coin", chance = 98321, minCount = 1, maxCount = 236 },  -- 2148
+	{ id = "dragon ham", chance = 60514 },  -- 2672
+	{ id = "platinum coin", chance = 26847, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "sea serpent scale", chance = 10123 },  -- 10583
+	{ id = "plate legs", chance = 7146 },  -- 2647
+	{ id = "small sapphire", chance = 5935, minCount = 1, maxCount = 3 },  -- 2146
+	{ id = "strong health potion", chance = 5008 },  -- 7588
+	{ id = "serpent sword", chance = 4031 },  -- 2409
+	{ id = "strong mana potion", chance = 3998 },  -- 7589
+	{ id = "spirit cloak", chance = 2914 },  -- 8870
+	{ id = "ring of healing", chance = 1143 },  -- 2214
+	{ id = "northwind rod", chance = 1019 },  -- 8911
+	{ id = "great mana potion", chance = 911 },  -- 7590
+	{ id = "glacier amulet", chance = 890 },  -- 7888
+	{ id = "glacier kilt", chance = 431 },  -- 7896
+	{ id = "stealth ring", chance = 422 },  -- 2165
+	{ id = "focus cape", chance = 405 },  -- 8871
+	{ id = "leviathan's amulet", chance = 115 },  -- 10220
+	{ id = "crystalline armor", chance = 91 },  -- 8878
 }
 
 monster.attacks = {

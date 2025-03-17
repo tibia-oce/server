@@ -72,14 +72,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 11452, chance = 3700 }, -- broken shamanic staff
-	{ id = "corncob", chance = 11110, maxCount = 2 }, -- corncob
-	{ id = 3031, chance = 100000, maxCount = 17 }, -- gold coin
-	{ id = 10196, chance = 11110 }, -- orc tooth
-	{ id = "shamanic hood", chance = 3700 }, -- shamanic hood
-	{ id = "spear", chance = 55560 }, -- spear
-	{ id = 3378, chance = 3700 }, -- studded armor
-	{ id = 3362, chance = 11110 }, -- studded legs
+	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 16 },  -- 2148
+	{ id = "spear", chance = 62500 },  -- 2389
 }
 
 monster.attacks = {

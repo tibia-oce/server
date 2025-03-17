@@ -74,28 +74,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 7364, chance = 1210, maxCount = 4 }, -- sniper arrow
-	{ id = 3031, chance = 75410, maxCount = 30 }, -- gold coin
-	{ id = 3035, chance = 75410, maxCount = 2 }, -- platinum coin
-	{ id = 3592, chance = 1210 }, -- grapes
-	{ id = 3577, chance = 1210, maxCount = 2 }, -- meat
-	{ id = "great health potion", chance = 1210 }, -- great health potion
-	{ id = 3269, chance = 1610 }, -- halberd
-	{ id = 3658, chance = 510 }, -- red rose
-	{ id = 3003, chance = 1510 }, -- rope
-	{ id = 11510, chance = 910 }, -- scroll of heroic deeds
-	{ id = 11450, chance = 910 }, -- small notebook
-	{ id = 3030, chance = 810, maxCount = 2 }, -- small ruby
-	{ id = 3029, chance = 810, maxCount = 2 }, -- small sapphire
-	{ id = 3004, chance = 510 }, -- wedding ring
-	{ id = 5911, chance = 210 }, -- red piece of cloth
-	{ id = 3279, chance = 210 }, -- war hammer
-	{ id = 3381, chance = 310 }, -- crown armor
-	{ id = 3280, chance = 210 }, -- fire sword
-	{ id = "crown helmet", chance = 310 }, -- crown helmet
-	{ id = "crown shield", chance = 210 }, -- crown shield
-	{ id = 3382, chance = 110 }, -- crown legs
-	{ id = 3055, chance = 210 }, -- platinum amulet
+	{ id = "gold coin", chance = 99943, minCount = 1, maxCount = 173 },  -- 2148
+	{ id = "platinum coin", chance = 73678, minCount = 1, maxCount = 2 },  -- 2152
+	{ id = "meat", chance = 9634 },  -- 2666
+	{ id = "scroll of heroic deeds", chance = 7868 },  -- 12466
+	{ id = "great health potion", chance = 7008 },  -- 7591
+	{ id = "wedding ring", chance = 5173 },  -- 2121
+	{ id = "small ruby", chance = 3533 },  -- 2147
+	{ id = "small sapphire", chance = 3533 },  -- 2146
+	{ id = "small notebook", chance = 2397 },  -- 12406
+	{ id = "red piece of cloth", chance = 2202 },  -- 5911
+	{ id = "war hammer", chance = 2133 },  -- 2391
+	{ id = "crown armor", chance = 1170 },  -- 2487
+	{ id = "fire sword", chance = 872 },  -- 2392
+	{ id = "crown legs", chance = 780 },  -- 2488
+	{ id = "crown helmet", chance = 619 },  -- 2491
+	{ id = "platinum amulet", chance = 390 },  -- 2171
+	{ id = "crown shield", chance = 298 },  -- 2519
+	{ id = "piggy bank", chance = 149 },  -- 2114
 }
 
 monster.attacks = {

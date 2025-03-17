@@ -86,24 +86,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 7290, chance = 100000 }, -- shard
-	{ id = 3031, chance = 97000, maxCount = 283 }, -- gold coin
-	{ id = 5912, chance = 74000 }, -- blue piece of cloth
-	{ id = 7440, chance = 65000 }, -- mastermind potion
-	{ id = "gold ingot", chance = 33000 }, -- gold ingot
-	{ id = 7449, chance = 22000 }, -- crystal sword
-	{ id = "dragon necklace", chance = 15000 }, -- dragon necklace
-	{ id = 823, chance = 12000 }, -- glacier kilt
-	{ id = 238, chance = 9500 }, -- great mana potion
-	{ id = 7443, chance = 8000 }, -- bullseye potion
-	{ id = "glacier robe", chance = 8000 }, -- glacier robe
-	{ id = 3324, chance = 8000 }, -- skull staff
-	{ id = 7459, chance = 6350 }, -- pair of earmuffs
-	{ id = 7439, chance = 4700 }, -- berserk potion
-	{ id = 3052, chance = 4700 }, -- life ring
-	{ id = 7410, chance = 4700 }, -- queen's sceptre
-	{ id = 3079, chance = 1500 }, -- boots of haste
-	{ id = 3732, chance = 1500 }, -- green mushroom
+	{ id = "shard", chance = 100000 },  -- 7290
+	{ id = "gold coin", chance = 98089, minCount = 1, maxCount = 283 },  -- 2148
+	{ id = "blue piece of cloth", chance = 77070 },  -- 5912
+	{ id = "mastermind potion", chance = 59873 },  -- 7440
+	{ id = "gold ingot", chance = 36306 },  -- 9971
+	{ id = "crystal sword", chance = 15924 },  -- 7449
+	{ id = "glacier kilt", chance = 13376 },  -- 7896
+	{ id = "glacier robe", chance = 12102 },  -- 7897
+	{ id = "dragon necklace", chance = 10828 },  -- 2201
+	{ id = "great mana potion", chance = 9554 },  -- 7590
+	{ id = "skull staff", chance = 7006 },  -- 2436
+	{ id = "life ring", chance = 5732 },  -- 2168
+	{ id = "bullseye potion", chance = 5096 },  -- 7443
+	{ id = "pair of earmuffs", chance = 5096 },  -- 7459
+	{ id = "berserk potion", chance = 3822 },  -- 7439
+	{ id = "queen's sceptre", chance = 3185 },  -- 7410
+	{ id = "boots of haste", chance = 1274 },  -- 2195
+	{ id = "green mushroom", chance = 637 },  -- 2796
 }
 
 monster.attacks = {

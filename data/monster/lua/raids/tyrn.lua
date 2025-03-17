@@ -75,27 +75,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "silver raid token", chance = 5000 }, -- silver raid token
-	{ id = "sun mirror", chance = 3000 }, -- sun mirror
-	{ id = "dragon ham", chance = 55000, maxCount = 3 }, -- dragon ham
-	{ id = 3155, chance = 15000 }, -- sudden death rune
-	{ id = 3031, chance = 100000, maxCount = 50 }, -- gold coin
-	{ id = 3035, chance = 60000, maxCount = 8 }, -- platinum coin
-	{ id = 7368, chance = 30000, maxCount = 5 }, -- assassin star
-	{ id = 236, chance = 25000, maxCount = 5 }, -- strong health potion
-	{ id = 237, chance = 25000, maxCount = 5 }, -- strong mana potion
-	{ id = 9665, chance = 100000 }, -- wyrm scale
-	{ id = 3039, chance = 9000 }, -- red gem
-	{ id = 3037, chance = 9000 }, -- yellow gem
-	{ id = 3036, chance = 9000 }, -- violet gem
-	{ id = 3415, chance = 9000 }, -- guardian shield
-	{ id = 8045, chance = 9000 }, -- hibiscus dress
-	{ id = 3028, chance = 15000, maxCount = 5 }, -- small diamond
-	{ id = 3033, chance = 15000, maxCount = 5 }, -- small amethyst
-	{ id = 3032, chance = 15000, maxCount = 5 }, -- small emerald
-	{ id = 3029, chance = 15000, maxCount = 5 }, -- small sapphire
-	{ id = 9057, chance = 15000, maxCount = 5 }, -- small topaz
-	{ id = 3030, chance = 15000, maxCount = 5 }, -- small ruby
+	{ id = "gold coin", chance = 100000, maxCount = 50 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 5, maxCount = 8 },  -- 2152
+	{ id = "wyrm scale", chance = 100000 },  -- 10582
+	{ id = "dragon ham", chance = 66667 },  -- 2672
+	{ id = "strong mana potion", chance = 66667, maxCount = 5 },  -- 7589
+	{ id = "sudden death rune", chance = 66667, maxCount = 5 },  -- 2268
+	{ id = "assassin star", chance = 33333, maxCount = 5 },  -- 7368
+	{ id = "silver raid token", chance = 33333 },  -- 21400
+	{ id = "small emerald", chance = 33333, maxCount = 5 },  -- 2149
+	{ id = "small ruby", chance = 33333, maxCount = 5 },  -- 2147
+	{ id = "small topaz", chance = 33333, maxCount = 5 },  -- 9970
+	{ id = "strong health potion", chance = 33333, maxCount = 5 },  -- 7588
+	{ id = "yellow gem", chance = 33333 },  -- 2154
 }
 
 monster.attacks = {

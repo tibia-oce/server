@@ -70,26 +70,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 19083, chance = 3000 }, -- silver raid token
-	{ id = 3031, chance = 100000, maxCount = 105 }, -- gold coin
-	{ id = 3035, chance = 100000, maxCount = 8 }, -- platinum coin
-	{ id = 19371, chance = 3000 }, -- glass of goo
-	{ id = 19372, chance = 3000 }, -- goo shell
-	{ id = 3037, chance = 10000 }, -- yellow gem
-	{ id = 3038, chance = 10000 }, -- green gem
-	{ id = "ultimate health potion", chance = 10000, maxCount = 3 }, -- ultimate health potion
-	{ id = 7642, chance = 10000, maxCount = 3 }, -- great spirit potion
-	{ id = "great mana potion", chance = 10000, maxCount = 3 }, -- great mana potion
-	{ id = 3032, chance = 10000, maxCount = 5 }, -- small emerald
-	{ id = 9057, chance = 10000, maxCount = 5 }, -- small topaz
-	{ id = 8044, chance = 20000 }, -- belted cape
-	{ id = "green piece of cloth", chance = 10000 }, -- green piece of cloth
-	{ id = 5911, chance = 10000 }, -- red piece of cloth
-	{ id = 5914, chance = 10000 }, -- yellow piece of cloth
-	{ id = 3297, chance = 20000 }, -- serpent sword
-	{ id = 8084, chance = 20000 }, -- springsprout rod
-	{ id = 8063, chance = 10000 }, -- paladin armor
-	{ id = 9667, chance = 100000 }, -- boggy dreads
+	{ id = "boggy dreads", chance = 100000 },  -- 10584
+	{ id = "gold coin", chance = 100000, maxCount = 105 },  -- 2148
+	{ id = "belted cape", chance = 75000 },  -- 8872
+	{ id = "ultimate health potion", chance = 50000, maxCount = 3 },  -- 8473
+	{ id = "yellow piece of cloth", chance = 50000 },  -- 5914
+	{ id = "great mana potion", chance = 25000, maxCount = 3 },  -- 7590
+	{ id = "great spirit potion", chance = 25000, maxCount = 3 },  -- 8472
+	{ id = "green piece of cloth", chance = 25000 },  -- 5910
+	{ id = "platinum coin", chance = 25000, maxCount = 5 },  -- 2152
+	{ id = "serpent sword", chance = 25000 },  -- 2409
+	{ id = "small emerald", chance = 25000, maxCount = 5 },  -- 2149
+	{ id = "small topaz", chance = 25000, maxCount = 5 },  -- 9970
+	{ id = "springsprout rod", chance = 25000 },  -- 8912
+	{ id = "yellow gem", chance = 25000 },  -- 2154
 }
 
 monster.attacks = {

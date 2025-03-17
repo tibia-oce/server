@@ -66,7 +66,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "midnight shard", chance = 6930 },
+	{ id = "midnight shard", chance = 6782 },  -- 10531
 }
 
 monster.attacks = {

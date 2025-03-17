@@ -71,10 +71,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50110, maxCount = 30 },
-	{ id = "club ring", chance = 740 }, -- club ring
-	{ id = "studded legs", chance = 5220 },
-	{ id = "leather legs", chance = 15330 },
+	{ id = "gold coin", chance = 49031, minCount = 1, maxCount = 30 },  -- 2148
+	{ id = "leather legs", chance = 15148 },  -- 2649
+	{ id = "mace", chance = 9379 },  -- 2398
+	{ id = "brown bread", chance = 5460 },  -- 2691
+	{ id = "studded legs", chance = 4844 },  -- 2468
+	{ id = "club ring", chance = 1057 },  -- 2209
 }
 
 monster.attacks = {

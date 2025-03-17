@@ -65,12 +65,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 11453, chance = 6740 }, -- broken helmet
-	{ id = "chain armor", chance = 5620 }, -- chain armor
-	{ id = 3031, chance = 100000, maxCount = 8 }, -- gold coin
-	{ id = 3577, chance = 13480 }, -- meat
-	{ id = "orc leather", chance = 5620 }, -- orc leather
-	{ id = "skull belt", chance = 1120 }, -- skull belt
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 8 },  -- 2148
+	{ id = "meat", chance = 22857 },  -- 2666
+	{ id = "chain armor", chance = 14286 },  -- 2464
+	{ id = "studded legs", chance = 8571 },  -- 2468
 }
 
 monster.attacks = {

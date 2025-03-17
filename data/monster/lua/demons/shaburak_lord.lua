@@ -74,19 +74,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small ruby", chance = 6120, maxCount = 5 },
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 78 },
-	{ id = "platinum coin", chance = 33333, maxCount = 2 },
-	{ id = "energy ring", chance = 1652 }, -- energy ring
-	{ id = "wand of inferno", chance = 800 },
-	{ id = "steel boots", chance = 160 },
-	{ id = "brown mushroom", chance = 5346 },
-	{ id = "magic sulphur", chance = 620 },
-	{ id = "bullseye potion", chance = 400 },
-	{ id = "strong health potion", chance = 7000 },
-	{ id = "strong mana potion", chance = 7000 },
-	{ id = "magma coat", chance = 100 },
+	{ id = "gold coin", chance = 96059, minCount = 1, maxCount = 178 },  -- 2148
+	{ id = "platinum coin", chance = 34301, minCount = 1, maxCount = 2 },  -- 2152
+	{ id = "strong mana potion", chance = 6948 },  -- 7589
+	{ id = "strong health potion", chance = 6819 },  -- 7588
+	{ id = "small ruby", chance = 6326, minCount = 1, maxCount = 5 },  -- 2147
+	{ id = "brown mushroom", chance = 5211 },  -- 2789
+	{ id = "energy ring", chance = 1426 },  -- 2167
+	{ id = "wand of inferno", chance = 985 },  -- 2187
+	{ id = "magic sulphur", chance = 415 },  -- 5904
+	{ id = "bullseye potion", chance = 389 },  -- 7443
+	{ id = "magma coat", chance = 130 },  -- 7899
+	{ id = "steel boots", chance = 130 },  -- 2645
 }
 
 monster.attacks = {

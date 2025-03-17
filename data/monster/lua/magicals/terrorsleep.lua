@@ -72,25 +72,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small ruby", chance = 9600, maxCount = 3 },
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "small emerald", chance = 14000 },
-	{ id = "small amethyst", chance = 17000, maxCount = 3 },
-	{ id = "platinum coin", chance = 100000, maxCount = 8 },
-	{ id = "giant sword", chance = 560 },
-	{ id = "warrior helmet", chance = 2820 },
-	{ id = "knight armor", chance = 4000 },
-	{ id = "white piece of cloth", chance = 4520 },
-	{ id = "red piece of cloth", chance = 1130 },
-	{ id = "great mana potion", chance = 36000, maxCount = 2 },
-	{ id = "ultimate health potion", chance = 26000 },
-	{ id = "small topaz", chance = 17000, maxCount = 2 },
-	{ id = "blue crystal shard", chance = 6000 },
-	{ id = "blue crystal splinter", chance = 13000 },
-	{ id = "cyan crystal fragment", chance = 17000 },
-	{ id = "broken dream", chance = 1130 }, -- broken dream
-	{ id = "trapped bad dream monster", chance = 13000 },
-	{ id = "bowl of terror sweat", chance = 18000 },
+	{ id = "gold coin", chance = 99964, minCount = 4, maxCount = 197 },  -- 2148
+	{ id = "platinum coin", chance = 99964, minCount = 1, maxCount = 9 },  -- 2152
+	{ id = "great mana potion", chance = 34825, minCount = 1, maxCount = 2 },  -- 7590
+	{ id = "ultimate health potion", chance = 21361 },  -- 8473
+	{ id = "cyan crystal fragment", chance = 16958 },  -- 18419
+	{ id = "bowl of terror sweat", chance = 16157 },  -- 22538
+	{ id = "small amethyst", chance = 15102, minCount = 1, maxCount = 3 },  -- 2150
+	{ id = "small topaz", chance = 14301, minCount = 1, maxCount = 3 },  -- 9970
+	{ id = "small emerald", chance = 13501, minCount = 1, maxCount = 3 },  -- 2149
+	{ id = "small ruby", chance = 12518, minCount = 1, maxCount = 3 },  -- 2147
+	{ id = "blue crystal splinter", chance = 12154 },  -- 18418
+	{ id = "trapped bad dream monster", chance = 12118 },  -- 22537
+	{ id = "blue crystal shard", chance = 8843 },  -- 18413
+	{ id = "white piece of cloth", chance = 4076 },  -- 5909
+	{ id = "blue piece of cloth", chance = 3493 },  -- 5912
+	{ id = "knight armor", chance = 2402 },  -- 2476
+	{ id = "fish fin", chance = 2147 },  -- 5895
+	{ id = "broken dream", chance = 2111 },  -- 22363
+	{ id = "warrior helmet", chance = 1856 },  -- 2475
+	{ id = "giant sword", chance = 1638 },  -- 2393
+	{ id = "blue robe", chance = 1128 },  -- 2656
+	{ id = "red piece of cloth", chance = 1055 },  -- 5911
+	{ id = "cluster of solace", chance = 873 },  -- 22396
 }
 
 monster.attacks = {

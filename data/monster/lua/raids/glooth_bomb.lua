@@ -68,20 +68,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 21170, chance = 5000 }, -- gearwheel chain
-	{ id = "glooth glider gear wheel", chance = 10000 }, -- glooth glider gear wheel
-	{ id = 3031, chance = 100000, maxCount = 50 }, -- gold coin
-	{ id = 239, chance = 100000, maxCount = 13 }, -- great health potion
-	{ id = 238, chance = 100000, maxCount = 13 }, -- great mana potion
-	{ id = "great spirit potion", chance = 100000, maxCount = 13 }, -- great spirit potion
-	{ id = "moohtant horn", chance = 83300, maxCount = 2 }, -- moohtant horn
-	{ id = 3035, chance = 100000, maxCount = 30 }, -- platinum coin
-	{ id = 5911, chance = 16670 }, -- red piece of cloth
-	{ id = 3098, chance = 16670 }, -- ring of healing
-	{ id = 3028, chance = 16670, maxCount = 5 }, -- small diamond
-	{ id = 3030, chance = 50000 }, -- small ruby
-	{ id = 9057, chance = 16670, maxCount = 3 }, -- small topaz
-	{ id = 3037, chance = 33330 }, -- yellow gem
+	{ id = "gold coin", chance = 62500, minCount = 4, maxCount = 86 },  -- 2148
+	{ id = "great health potion", chance = 37500, minCount = 6, maxCount = 13 },  -- 7591
+	{ id = "great mana potion", chance = 37500, minCount = 10, maxCount = 13 },  -- 7590
+	{ id = "great spirit potion", chance = 37500, minCount = 4, maxCount = 11 },  -- 8472
+	{ id = "platinum coin", chance = 37500, minCount = 22, maxCount = 27 },  -- 2152
+	{ id = "moohtant horn", chance = 31250, maxCount = 2 },  -- 23571
+	{ id = "small ruby", chance = 18750 },  -- 2147
+	{ id = "yellow gem", chance = 12500 },  -- 2154
+	{ id = "red piece of cloth", chance = 6250 },  -- 5911
+	{ id = "ring of healing", chance = 6250 },  -- 2214
+	{ id = "small diamond", chance = 6250, maxCount = 5 },  -- 2145
+	{ id = "small topaz", chance = 6250, maxCount = 3 },  -- 9970
 }
 
 monster.attacks = {

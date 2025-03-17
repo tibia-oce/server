@@ -68,14 +68,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 99 }, -- gold coin
-	{ id = 10321, chance = 100000, maxCount = 2 }, -- mammoth tusk
-	{ id = "platinum coin", chance = 100000, maxCount = 5 }, -- platinum coin
-	{ id = "furry club", chance = 63000 }, -- furry club
-	{ id = 5911, chance = 60000 }, -- red piece of cloth
-	{ id = 3443, chance = 55000 }, -- tusk shield
-	{ id = "tusk", chance = 41000, maxCount = 4 }, -- tusk
-	{ id = 7463, chance = 18000 }, -- mammoth fur cape
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "mammoth tusk", chance = 100000, minCount = 1, maxCount = 2 },  -- 11238
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 5 },  -- 2152
+	{ id = "tusk shield", chance = 63855 },  -- 3973
+	{ id = "furry club", chance = 59036 },  -- 7432
+	{ id = "red piece of cloth", chance = 57831 },  -- 5911
+	{ id = "tusk", chance = 42169, minCount = 1, maxCount = 4 },  -- 3956
+	{ id = "mammoth fur cape", chance = 21687 },  -- 7463
 }
 
 monster.attacks = {

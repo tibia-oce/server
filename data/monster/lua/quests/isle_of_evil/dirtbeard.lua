@@ -83,12 +83,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 2000, maxCount = 95 }, -- gold coin
-	{ id = 3035, chance = 30000, maxCount = 9 }, -- platinum coin
-	{ id = 9375, chance = 1000 }, -- pointed rabbitslayer
-	{ id = "helmet of nature", chance = 1000 }, -- helmet of nature
-	{ id = "odd hat", chance = 1000 }, -- odd hat
-	{ id = 9401, chance = 2000 }, -- shield nevermourn
+	{ id = "helmet of nature", chance = 60000 },  -- 10299
+	{ id = "pointed rabbitslayer", chance = 40000 },  -- 10292
 }
 
 monster.attacks = {

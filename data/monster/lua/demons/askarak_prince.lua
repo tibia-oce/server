@@ -74,20 +74,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 86 },
-	{ id = "small emerald", chance = 12500, maxCount = 5 },
-	{ id = "platinum coin", chance = 35333, maxCount = 4 },
-	{ id = "stealth ring", chance = 4545 }, -- stealth ring
-	{ id = "giant sword", chance = 320 },
-	{ id = "brown mushroom", chance = 6666, maxCount = 5 },
-	{ id = "magic sulphur", chance = 740 },
-	{ id = "mastermind potion", chance = 1315 },
-	{ id = "strong health potion", chance = 14285 },
-	{ id = "strong mana potion", chance = 14285 },
-	{ id = "terra mantle", chance = 840 },
-	{ id = "springsprout rod", chance = 950 },
-	{ id = "demonic finger", chance = 420 },
+	{ id = "gold coin", chance = 95527, minCount = 1, maxCount = 186 },  -- 2148
+	{ id = "platinum coin", chance = 35410, minCount = 1, maxCount = 4 },  -- 2152
+	{ id = "strong mana potion", chance = 15761 },  -- 7589
+	{ id = "strong health potion", chance = 13951 },  -- 7588
+	{ id = "small emerald", chance = 11981, minCount = 1, maxCount = 5 },  -- 2149
+	{ id = "brown mushroom", chance = 6550, minCount = 1, maxCount = 4 },  -- 2789
+	{ id = "stealth ring", chance = 5378 },  -- 2165
+	{ id = "mastermind potion", chance = 1651 },  -- 7440
+	{ id = "magic sulphur", chance = 958 },  -- 5904
+	{ id = "springsprout rod", chance = 799 },  -- 8912
+	{ id = "terra mantle", chance = 692 },  -- 7884
+	{ id = "demonic finger", chance = 373 },  -- 13530
+	{ id = "giant sword", chance = 319 },  -- 2393
 }
 
 monster.attacks = {

@@ -70,24 +70,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 21144, chance = 3190 }, -- bowl of glooth soup
-	{ id = 21197, chance = 2020 }, -- slimy leaf tentacle
-	{ id = 3732, chance = 3180 }, -- green mushroom
-	{ id = 21183, chance = 320 }, -- glooth amulet
-	{ id = 3031, chance = 100000, maxCount = 170 }, -- gold coin
-	{ id = 236, chance = 6690, maxCount = 2 }, -- strong health potion
-	{ id = 237, chance = 6690, maxCount = 2 }, -- strong mana potion
-	{ id = "ultimate health potion", chance = 960 }, -- ultimate health potion
-	{ id = 3035, chance = 57320, maxCount = 3 }, -- platinum coin
-	{ id = 9057, chance = 1240, maxCount = 3 }, -- small topaz
-	{ id = 3032, chance = 1600, maxCount = 3 }, -- small emerald
-	{ id = 3030, chance = 1150, maxCount = 3 }, -- small ruby
-	{ id = 21164, chance = 140 }, -- glooth cape
-	{ id = "glooth whip", chance = 700 }, -- glooth whip
-	{ id = "glooth blade", chance = 120 }, -- glooth blade
-	{ id = 21178, chance = 370 }, -- glooth club
-	{ id = 21180, chance = 240 }, -- glooth axe
-	{ id = 21158, chance = 370 }, -- glooth spear
+	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 175 },  -- 2148
+	{ id = "platinum coin", chance = 60111, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "slimy leaf tentacle", chance = 17932 },  -- 23568
+	{ id = "bowl of glooth soup", chance = 10129 },  -- 23515
+	{ id = "small topaz", chance = 8215, minCount = 1, maxCount = 4 },  -- 9970
+	{ id = "small emerald", chance = 8130, minCount = 1, maxCount = 4 },  -- 2149
+	{ id = "small ruby", chance = 8068, minCount = 1, maxCount = 4 },  -- 2147
+	{ id = "strong mana potion", chance = 7940, minCount = 1, maxCount = 2 },  -- 7589
+	{ id = "strong health potion", chance = 7455, minCount = 1, maxCount = 2 },  -- 7588
+	{ id = "glooth whip", chance = 4071 },  -- 23543
+	{ id = "green mushroom", chance = 2928 },  -- 2796
+	{ id = "ultimate health potion", chance = 1903, minCount = 1, maxCount = 2 },  -- 8473
+	{ id = "glooth axe", chance = 1029 },  -- 23551
+	{ id = "glooth amulet", chance = 1025 },  -- 23554
+	{ id = "glooth club", chance = 1011 },  -- 23549
+	{ id = "glooth spear", chance = 1011 },  -- 23529
+	{ id = "glooth blade", chance = 957 },  -- 23550
+	{ id = "glooth cape", chance = 849 },  -- 23535
 }
 
 monster.attacks = {

@@ -85,17 +85,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "holy falcon", chance = 500 },
-	{ id = "small ruby", chance = 7000, maxCount = 3 },
-	{ id = "gold coin", chance = 50000, maxCount = 80 },
-	{ id = "gold coin", chance = 50000, maxCount = 70 },
-	{ id = "gold coin", chance = 50000, maxCount = 64 },
-	{ id = "red gem", chance = 1500 }, -- red gem
-	{ id = "life ring", chance = 1500 }, -- life ring
-	{ id = "burning heart", chance = 100000 },
-	{ id = "fire axe", chance = 750 },
-	{ id = "phoenix shield", chance = 300 },
-	{ id = "great health potion", chance = 1500 },
+	{ id = "burning heart", chance = 100000 },  -- 2353
+	{ id = "gold coin", chance = 88741, minCount = 1, maxCount = 230 },  -- 2148
+	{ id = "small ruby", chance = 12177, minCount = 1, maxCount = 3 },  -- 2147
+	{ id = "great health potion", chance = 10203 },  -- 7591
+	{ id = "life ring", chance = 6700 },  -- 2168
+	{ id = "fire axe", chance = 917 },  -- 2432
+	{ id = "red gem", chance = 612 },  -- 2156
+	{ id = "phoenix shield", chance = 167 },  -- 2539
+	{ id = "holy falcon", chance = 139 },  -- 2141
+	{ id = "mini mummy", chance = 111 },  -- 11207
 }
 
 monster.attacks = {

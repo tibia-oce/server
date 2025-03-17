@@ -78,11 +78,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 93210, maxCount = 50 }, -- gold coin
-	{ id = 3287, chance = 9210, maxCount = 14 }, -- throwing star
-	{ id = 7366, chance = 6200, maxCount = 7 }, -- viper star
-	{ id = "steel helmet", chance = 4190 }, -- steel helmet
-	{ id = "steel shield", chance = 1940 }, -- steel shield
+	{ id = "gold coin", chance = 87500, minCount = 14, maxCount = 80 },  -- 2148
+	{ id = "throwing star", chance = 37500, minCount = 1, maxCount = 5 },  -- 2399
+	{ id = "battle shield", chance = 25000 },  -- 2513
+	{ id = "plate shield", chance = 12500 },  -- 2510
+	{ id = "viper star", chance = 12500, maxCount = 4 },  -- 7366
 }
 
 monster.attacks = {

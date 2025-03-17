@@ -71,9 +71,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small sapphire", chance = 5000 },
-	{ id = "gold coin", chance = 92000, maxCount = 200 }, -- gold coin
-	{ id = "royal helmet", chance = 270 },
+	{ id = "gold coin", chance = 91918, minCount = 1, maxCount = 200 },  -- 2148
+	{ id = "small sapphire", chance = 5079 },  -- 2146
+	{ id = "royal helmet", chance = 174 },  -- 2498
 }
 
 monster.attacks = {

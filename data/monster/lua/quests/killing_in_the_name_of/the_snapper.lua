@@ -68,13 +68,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 178 }, -- gold coin
-	{ id = "health potion", chance = 80000, maxCount = 5 }, -- health potion
-	{ id = 3032, chance = 75000, maxCount = 4 }, -- small emerald
-	{ id = 3557, chance = 44000 }, -- plate legs
-	{ id = 3357, chance = 39800 }, -- plate armor
-	{ id = 3556, chance = 6000 }, -- crocodile boots
-	{ id = "knight armor", chance = 400 }, -- knight armor
+	{ id = "gold coin", chance = 100000, minCount = 10, maxCount = 179 },  -- 2148
+	{ id = "life ring", chance = 99367 },  -- 2168
+	{ id = "health potion", chance = 80380, minCount = 1, maxCount = 5 },  -- 7618
+	{ id = "small emerald", chance = 77848, minCount = 1, maxCount = 4 },  -- 2149
+	{ id = "plate legs", chance = 44304 },  -- 2647
+	{ id = "plate armor", chance = 43038 },  -- 2463
+	{ id = "crocodile boots", chance = 10127 },  -- 3982
+	{ id = "knight armor", chance = 3797 },  -- 2476
 }
 
 monster.attacks = {

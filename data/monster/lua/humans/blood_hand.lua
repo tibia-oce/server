@@ -69,23 +69,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 130 },
-	{ id = "necrotic rod", chance = 3000 },
-	{ id = "boots of haste", chance = 210 },
-	{ id = "skull staff", chance = 130 },
-	{ id = "mystic turban", chance = 790 },
-	{ id = "white piece of cloth", chance = 840 },
-	{ id = "red piece of cloth", chance = 500 },
-	{ id = "noble axe", chance = 10 },
-	{ id = "strong mana potion", chance = 5590 },
-	{ id = "spellbook of enlightenment", chance = 790 },
-	{ id = "book of necromantic rituals", chance = 9340 },
-	{ id = "red gem", chance = 710 }, -- red gem
-	{ id = "lancet", chance = 10680 },
-	{ id = "horoscope", chance = 7950 },
-	{ id = "blood tincture in a vial", chance = 15460 },
-	{ id = "incantation notes", chance = 8820 },
-	{ id = "pieces of magic chalk", chance = 6120 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 135 },  -- 2148
+	{ id = "blood tincture in a vial", chance = 15629 },  -- 21245
+	{ id = "book of necromantic rituals", chance = 10133 },  -- 11237
+	{ id = "lancet", chance = 9990 },  -- 21242
+	{ id = "incantation notes", chance = 9752 },  -- 21246
+	{ id = "horoscope", chance = 7926 },  -- 21243
+	{ id = "pieces of magic chalk", chance = 6401 },  -- 21247
+	{ id = "strong mana potion", chance = 5988 },  -- 7589
+	{ id = "necrotic rod", chance = 3129 },  -- 2185
+	{ id = "mystic turban", chance = 1080 },  -- 2663
+	{ id = "spellbook of enlightenment", chance = 1032 },  -- 8900
+	{ id = "white piece of cloth", chance = 905 },  -- 5909
+	{ id = "red piece of cloth", chance = 651 },  -- 5911
+	{ id = "red gem", chance = 524 },  -- 2156
+	{ id = "boots of haste", chance = 111 },  -- 2195
+	{ id = "skull staff", chance = 48 },  -- 2436
+	{ id = "noble axe", chance = 16 },  -- 7456
 }
 
 monster.attacks = {

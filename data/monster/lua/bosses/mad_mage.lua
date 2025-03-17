@@ -83,24 +83,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 340 }, -- gold coin
-	{ id = 3035, chance = 48000, maxCount = 5 }, -- platinum coin
-	{ id = 237, chance = 21000, maxCount = 5 }, -- strong mana potion
-	{ id = 236, chance = 17000, maxCount = 5 }, -- strong health potion
-	{ id = 3062, chance = 9000 }, -- mind stone
-	{ id = 3049, chance = 6000 }, -- stealth ring
-	{ id = "assassin star", chance = 4000, maxCount = 4 }, -- assassin star
-	{ id = "dark mushroom", chance = 4000, maxCount = 3 }, -- dark mushroom
-	{ id = 5911, chance = 5000 }, -- red piece of cloth
-	{ id = 3033, chance = 4000, maxCount = 3 }, -- small amethyst
-	{ id = 12599, chance = 1680, unique = true }, -- mage's cap
-	{ id = 7443, chance = 1100 }, -- bullseye potion
-	{ id = 9027, chance = 740 }, -- crystal of focus
-	{ id = 3079, chance = 2370 }, -- boots of haste
-	{ id = "luminous orb", chance = 370 }, -- luminous orb
-	{ id = 2995, chance = 1370 }, -- piggy bank
-	{ id = 3006, chance = 1370 }, -- ring of the sky
-	{ id = 8073, chance = 2370 }, -- spellbook of warding
+	{ id = "gold coin", chance = 99329, minCount = 1, maxCount = 338 },  -- 2148
+	{ id = "platinum coin", chance = 51342, minCount = 1, maxCount = 5 },  -- 2152
+	{ id = "strong mana potion", chance = 23826, minCount = 1, maxCount = 5 },  -- 7589
+	{ id = "strong health potion", chance = 20470, minCount = 1, maxCount = 5 },  -- 7588
+	{ id = "stealth ring", chance = 6040 },  -- 2165
+	{ id = "assassin star", chance = 5369, minCount = 1, maxCount = 5 },  -- 7368
+	{ id = "mind stone", chance = 5034 },  -- 2178
+	{ id = "dark mushroom", chance = 4698, minCount = 1, maxCount = 3 },  -- 2792
+	{ id = "red piece of cloth", chance = 4698 },  -- 5911
+	{ id = "small amethyst", chance = 2685, minCount = 1, maxCount = 3 },  -- 2150
+	{ id = "mage's cap", chance = 1678 },  -- 13756
+	{ id = "bullseye potion", chance = 1342 },  -- 7443
+	{ id = "luminous orb", chance = 1342 },  -- 12410
+	{ id = "piggy bank", chance = 1007 },  -- 2114
+	{ id = "boots of haste", chance = 671 },  -- 2195
+	{ id = "crystal of focus", chance = 671 },  -- 9941
+	{ id = "lightning robe", chance = 336 },  -- 7898
+	{ id = "ring of the sky", chance = 336 },  -- 2123
+	{ id = "spellbook of warding", chance = 336 },  -- 8901
 }
 
 monster.attacks = {

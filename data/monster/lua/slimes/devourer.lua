@@ -72,26 +72,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 165 }, -- gold coin
-	{ id = 3035, chance = 9100, maxCount = 2 }, -- platinum coin
-	{ id = 21182, chance = 1670 }, -- glob of glooth
-	{ id = 3034, chance = 940 }, -- talon
-	{ id = 3029, chance = 1170, maxCount = 3 }, -- small sapphire
-	{ id = 3033, chance = 1030, maxCount = 3 }, -- small amethyst
-	{ id = 9057, chance = 1030, maxCount = 3 }, -- small topaz
-	{ id = 3032, chance = 1170, maxCount = 3 }, -- small emerald
-	{ id = 3030, chance = 1190, maxCount = 3 }, -- small ruby
-	{ id = "small diamond", chance = 1050, maxCount = 3 }, -- small diamond
-	{ id = 3037, chance = 1090 }, -- yellow gem
-	{ id = "green gem", chance = 100 }, -- green gem
-	{ id = 21164, chance = 210 }, -- glooth cape
-	{ id = 21183, chance = 130 }, -- glooth amulet
-	{ id = "glooth blade", chance = 350 }, -- glooth blade
-	{ id = 21178, chance = 510 }, -- glooth club
-	{ id = 21180, chance = 390 }, -- glooth axe
-	{ id = 21158, chance = 370 }, -- glooth spear
-	{ id = 8084, chance = 250 }, -- springsprout rod
-	{ id = 3065, chance = 260 }, -- terra rod
+	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 165 },  -- 2148
+	{ id = "platinum coin", chance = 60028, minCount = 1, maxCount = 2 },  -- 2152
+	{ id = "glob of glooth", chance = 14854 },  -- 23553
+	{ id = "small emerald", chance = 6057, minCount = 1, maxCount = 3 },  -- 2149
+	{ id = "small sapphire", chance = 6057, minCount = 1, maxCount = 3 },  -- 2146
+	{ id = "small ruby", chance = 6037, minCount = 1, maxCount = 3 },  -- 2147
+	{ id = "small topaz", chance = 6007, minCount = 1, maxCount = 3 },  -- 9970
+	{ id = "small diamond", chance = 6002, minCount = 1, maxCount = 3 },  -- 2145
+	{ id = "small amethyst", chance = 5929, minCount = 1, maxCount = 3 },  -- 2150
+	{ id = "glooth axe", chance = 3041 },  -- 23551
+	{ id = "glooth club", chance = 2994 },  -- 23549
+	{ id = "glooth blade", chance = 2956 },  -- 23550
+	{ id = "talon", chance = 2525 },  -- 2151
+	{ id = "glooth spear", chance = 2004 },  -- 23529
+	{ id = "yellow gem", chance = 1802, minCount = 1, maxCount = 2 },  -- 2154
+	{ id = "springsprout rod", chance = 1221 },  -- 8912
+	{ id = "glooth amulet", chance = 987 },  -- 23554
+	{ id = "terra rod", chance = 707 },  -- 2181
+	{ id = "glooth cape", chance = 240 },  -- 23535
+	{ id = "green gem", chance = 105 },  -- 2155
 }
 
 monster.attacks = {

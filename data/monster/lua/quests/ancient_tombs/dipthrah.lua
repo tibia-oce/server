@@ -82,17 +82,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small sapphire", chance = 7000, maxCount = 3 },
-	{ id = "gold coin", chance = 50000, maxCount = 80 },
-	{ id = "gold coin", chance = 50000, maxCount = 80 },
-	{ id = "blue gem", chance = 1500 },
-	{ id = "energy ring", chance = 7000 }, -- energy ring
-	{ id = "mind stone", chance = 1500 },
-	{ id = "ankh", chance = 500 },
-	{ id = "ornamented ankh", chance = 100000 },
-	{ id = "skull staff", chance = 500 },
-	{ id = "pharaoh sword", chance = 300 },
-	{ id = "great mana potion", chance = 7000 },
+	{ id = "ornamented ankh", chance = 100000 },  -- 2354
+	{ id = "gold coin", chance = 90800, minCount = 1, maxCount = 226 },  -- 2148
+	{ id = "small sapphire", chance = 9689, minCount = 1, maxCount = 3 },  -- 2146
+	{ id = "great mana potion", chance = 8978 },  -- 7590
+	{ id = "energy ring", chance = 4889 },  -- 2167
+	{ id = "mind stone", chance = 1022 },  -- 2178
+	{ id = "blue gem", chance = 889 },  -- 2158
+	{ id = "ankh", chance = 578 },  -- 2193
+	{ id = "skull staff", chance = 578 },  -- 2436
+	{ id = "mini mummy", chance = 89 },  -- 11207
+	{ id = "pharaoh sword", chance = 89 },  -- 2446
 }
 
 monster.attacks = {

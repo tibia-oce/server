@@ -69,11 +69,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 64000, maxCount = 53 },
-	{ id = "meat", chance = 34000 },
-	{ id = "wolf paw", chance = 7900 },
-	{ id = "flaming arrow", chance = 15000, maxCount = 8 },
-	{ id = "fiery heart", chance = 7900 },
+	{ id = "gold coin", chance = 77778, minCount = 6, maxCount = 53 },  -- 2148
+	{ id = "meat", chance = 29630 },  -- 2666
+	{ id = "flaming arrow", chance = 14815, minCount = 4, maxCount = 8 },  -- 7840
+	{ id = "fiery heart", chance = 11111 },  -- 10553
+	{ id = "wolf paw", chance = 3704 },  -- 5897
 }
 
 monster.attacks = {

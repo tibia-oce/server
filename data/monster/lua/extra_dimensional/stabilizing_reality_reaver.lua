@@ -70,22 +70,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
-	{ id = 3035, chance = 100000, maxCount = 4 }, -- platinum coin
-	{ id = 239, chance = 14200 }, -- great health potion
-	{ id = 7642, chance = 14000 }, -- great spirit potion
-	{ id = 238, chance = 12700 }, -- great mana potion
-	{ id = 23545, chance = 11200 }, -- energy drink
-	{ id = 23535, chance = 10900 }, -- energy bar
-	{ id = "condensed energy", chance = 9900 }, -- condensed energy
-	{ id = 23524, chance = 8300 }, -- small energy ball
-	{ id = 23506, chance = 8000 }, -- plasma pearls
-	{ id = 16126, chance = 3400 }, -- red crystal fragment
-	{ id = 16120, chance = 3400 }, -- violet crystal shard
-	{ id = "blue crystal splinter", chance = 2700, maxCount = 2 }, -- blue crystal splinter
-	{ id = 16119, chance = 1900 }, -- blue crystal shard
-	{ id = 3039, chance = 1500 }, -- red gem
-	{ id = "wand of starstorm", chance = 1100 }, -- wand of starstorm
+	{ id = "gold coin", chance = 98154, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "platinum coin", chance = 98154, minCount = 1, maxCount = 4 },  -- 2152
+	{ id = "great health potion", chance = 14606 },  -- 7591
+	{ id = "great spirit potion", chance = 14461 },  -- 8472
+	{ id = "great mana potion", chance = 13942 },  -- 7590
+	{ id = "condensed energy", chance = 10166 },  -- 26157
+	{ id = "energy drink", chance = 9668 },  -- 26201
+	{ id = "small energy ball", chance = 9564 },  -- 26180
+	{ id = "energy bar", chance = 9502 },  -- 26191
+	{ id = "plasma pearls", chance = 9357 },  -- 26162
+	{ id = "violet crystal shard", chance = 4212 },  -- 18414
+	{ id = "red crystal fragment", chance = 3776 },  -- 18420
+	{ id = "blue crystal splinter", chance = 3672, minCount = 1, maxCount = 2 },  -- 18418
+	{ id = "blue crystal shard", chance = 1701 },  -- 18413
+	{ id = "red gem", chance = 1369 },  -- 2156
+	{ id = "wand of starstorm", chance = 1224 },  -- 8920
+	{ id = "lightning headband", chance = 166 },  -- 7901
+	{ id = "focus cape", chance = 145 },  -- 8871
 }
 
 monster.attacks = {

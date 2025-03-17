@@ -69,12 +69,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 74230, maxCount = 70 },
-	{ id = "poison arrow", chance = 74230, maxCount = 5 },
-	{ id = "book of necromantic rituals", chance = 74230 },
-	{ id = "incantation fragment", chance = 100000 },
-	{ id = "necromantic robe", chance = 54230 },
-	{ id = "boots of haste", chance = 5000 },
+	{ id = "incantation fragment", chance = 100000 },  -- 21250
+	{ id = "gold coin", chance = 36000, minCount = 5, maxCount = 87 },  -- 2148
+	{ id = "book of necromantic rituals", chance = 8000 },  -- 11237
+	{ id = "poison arrow", chance = 8000, minCount = 3, maxCount = 5 },  -- 2545
+	{ id = "necromantic robe", chance = 4000 },  -- 12431
 }
 
 monster.attacks = {

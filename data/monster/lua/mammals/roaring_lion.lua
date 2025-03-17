@@ -68,18 +68,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 114 }, -- gold coin
-	{ id = 3577, chance = 25000 }, -- meat
-	{ id = 3582, chance = 25000 }, -- ham
-	{ id = "lion's mane", chance = 16666 }, -- lion's mane
-	{ id = 3035, chance = 10000 }, -- platinum coin
-	{ id = "small ruby", chance = 7692 }, -- small ruby
-	{ id = 3033, chance = 7142 }, -- small amethyst
-	{ id = 9057, chance = 6666 }, -- small topaz
-	{ id = 3029, chance = 5555 }, -- small sapphire
-	{ id = 3077, chance = 1612 }, -- ankh
-	{ id = 3048, chance = 1204 }, -- might ring
-	{ id = "crown helmet", chance = 1010 }, -- crown helmet
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 115 },  -- 2148
+	{ id = "meat", chance = 25279 },  -- 2666
+	{ id = "ham", chance = 24843 },  -- 2671
+	{ id = "lion's mane", chance = 20182 },  -- 10608
+	{ id = "platinum coin", chance = 9999 },  -- 2152
+	{ id = "small sapphire", chance = 7158 },  -- 2146
+	{ id = "small topaz", chance = 6924 },  -- 9970
+	{ id = "small ruby", chance = 6858 },  -- 2147
+	{ id = "small amethyst", chance = 6694 },  -- 2150
+	{ id = "ankh", chance = 2917 },  -- 2193
+	{ id = "might ring", chance = 709 },  -- 2164
+	{ id = "crown helmet", chance = 580 },  -- 2491
 }
 
 monster.attacks = {

@@ -71,13 +71,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 75000, maxCount = 25 },
-	{ id = "fish", chance = 12020, maxCount = 3 }, -- fish
-	{ id = "deepling scales", chance = 6950 },
-	{ id = "heavy trident", chance = 510 },
-	{ id = "fish fin", chance = 350 },
-	{ id = "eye of a deepling", chance = 283 },
-	{ id = "small emerald", chance = 110, maxCount = 1 },
+	{ id = "gold coin", chance = 75597, minCount = 1, maxCount = 25 },  -- 2148
+	{ id = "fish", chance = 11981, minCount = 1, maxCount = 3 },  -- 2667
+	{ id = "deepling scales", chance = 6972 },  -- 15430
+	{ id = "heavy trident", chance = 492 },  -- 13838
+	{ id = "fish fin", chance = 335 },  -- 5895
+	{ id = "eye of a deepling", chance = 291 },  -- 13870
+	{ id = "small emerald", chance = 123 },  -- 2149
 }
 
 monster.attacks = {

@@ -81,29 +81,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 22516, chance = 1000000 }, -- silver token
-	{ id = 10389, chance = 3000 }, -- sai
-	{ id = 16117, chance = 1820 }, -- muck rod
-	{ id = 16125, chance = 23000, maxCount = 6 }, -- cyan crystal fragment
-	{ id = 16126, chance = 23000, maxCount = 6 }, -- red crystal fragment
-	{ id = 16127, chance = 23000, maxCount = 6 }, -- green crystal fragment
-	{ id = 3026, chance = 12000, maxCount = 8 }, -- white pearl
-	{ id = 3029, chance = 12000, maxCount = 9 }, -- small sapphire
-	{ id = 3031, chance = 98000, maxCount = 200 }, -- gold coin
-	{ id = 3033, chance = 10000, maxCount = 5 }, -- small amethyst
-	{ id = 3035, chance = 8000, maxCount = 58 }, -- platinum coin
-	{ id = "rift lance", chance = 800 }, -- rift lance
-	{ id = "plague bite", chance = 500, unique = true }, -- plague bite
-	{ id = 22866, chance = 800 }, -- rift bow
-	{ id = "rift crossbow", chance = 800 }, -- rift crossbow
-	{ id = 6499, chance = 11000 }, -- demonic essence
-	{ id = 7386, chance = 5000 }, -- mercenary sword
-	{ id = 281, chance = 14000, maxCount = 5 }, -- giant shimmering pearl (green)
-	{ id = 282, chance = 14000, maxCount = 5 }, -- giant shimmering pearl (brown)
-	{ id = 814, chance = 5000 }, -- terra amulet
-	{ id = 7643, chance = 23000, maxCount = 15 }, -- ultimate health potion
-	{ id = 8073, chance = 4000 }, -- spellbook of warding
-	{ id = 9057, chance = 10000, maxCount = 8 }, -- small topaz
+	{ id = "demonic essence", chance = 100000 },  -- 6500
+	{ id = "gold coin", chance = 100000, maxCount = 200 },  -- 2148
+	{ id = "great spirit potion", chance = 100000, maxCount = 5 },  -- 8472
+	{ id = "green gem", chance = 100000 },  -- 2155
+	{ id = "platinum coin", chance = 100000, minCount = 20, maxCount = 25 },  -- 2152
+	{ id = "small diamond", chance = 100000, maxCount = 5 },  -- 2145
+	{ id = "cyan crystal fragment", chance = 50000, maxCount = 6 },  -- 18419
+	{ id = "great mana potion", chance = 50000, maxCount = 5 },  -- 7590
+	{ id = "red crystal fragment", chance = 50000, maxCount = 6 },  -- 18420
+	{ id = "terra mantle", chance = 50000 },  -- 7884
+	{ id = "ultimate health potion", chance = 50000, maxCount = 5 },  -- 8473
 }
 
 monster.attacks = {

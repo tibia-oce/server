@@ -75,24 +75,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small diamond", chance = 4761, maxCount = 5 },
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 27 },
-	{ id = "talon", chance = 917 },
-	{ id = "might ring", chance = 3846 },
-	{ id = "wand of cosmic energy", chance = 523 },
-	{ id = "epee", chance = 564 },
-	{ id = "brown mushroom", chance = 9090, maxCount = 3 },
-	{ id = "mastermind potion", chance = 490 },
-	{ id = "strong health potion", chance = 20000 },
-	{ id = "strong mana potion", chance = 20000 },
-	{ id = "lightning pendant", chance = 862 },
-	{ id = "lightning legs", chance = 480 },
-	{ id = "shockwave amulet", chance = 571 },
-	{ id = "broken ring of ending", chance = 261 },
-	{ id = "yielowax", chance = 300 },
-	{ id = "yielocks", chance = 320 },
+	{ id = "gold coin", chance = 99796, minCount = 1, maxCount = 227 },  -- 2148
+	{ id = "strong health potion", chance = 19930 },  -- 7588
+	{ id = "strong mana potion", chance = 19909 },  -- 7589
+	{ id = "brown mushroom", chance = 9960, minCount = 1, maxCount = 3 },  -- 2789
+	{ id = "small diamond", chance = 4907, minCount = 1, maxCount = 5 },  -- 2145
+	{ id = "might ring", chance = 4020 },  -- 2164
+	{ id = "talon", chance = 969 },  -- 2151
+	{ id = "lightning pendant", chance = 751 },  -- 7889
+	{ id = "shockwave amulet", chance = 563 },  -- 10221
+	{ id = "wand of cosmic energy", chance = 535 },  -- 2189
+	{ id = "epee", chance = 500 },  -- 2438
+	{ id = "mastermind potion", chance = 500 },  -- 7440
+	{ id = "lightning legs", chance = 485 },  -- 7895
+	{ id = "broken ring of ending", chance = 301 },  -- 13877
+	{ id = "yielocks", chance = 293 },  -- 13942
+	{ id = "yielowax", chance = 264 },  -- 13881
 }
 
 monster.attacks = {

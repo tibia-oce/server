@@ -69,21 +69,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "wolf tooth chain", chance = 10120 }, -- wolf tooth chain
-	{ id = "gold coin", chance = 64000, maxCount = 40 },
-	{ id = "necrotic rod", chance = 1140 },
-	{ id = "garlic necklace", chance = 1000 },
-	{ id = "silver dagger", chance = 500 },
-	{ id = "sickle", chance = 3910 },
-	{ id = "leather boots", chance = 4950 },
-	{ id = "coat", chance = 2010 },
-	{ id = "cape", chance = 4870 },
-	{ id = "cookie", chance = 29750, maxCount = 8 },
-	{ id = "star herb", chance = 8950 },
-	{ id = "witch broom", chance = 10000 },
-	{ id = "witch hat", chance = 80 },
-	{ id = "stuffed toad", chance = 10 },
-	{ id = "bag of apple slices", chance = 920 },
+	{ id = "gold coin", chance = 63943, minCount = 1, maxCount = 40 },  -- 2148
+	{ id = "cookie", chance = 29995, minCount = 1, maxCount = 8 },  -- 2687
+	{ id = "wolf tooth chain", chance = 10088 },  -- 2129
+	{ id = "witch broom", chance = 10006 },  -- 10569
+	{ id = "star herb", chance = 8962 },  -- 2800
+	{ id = "leather boots", chance = 5032 },  -- 2643
+	{ id = "cape", chance = 4980 },  -- 2654
+	{ id = "sickle", chance = 3892 },  -- 2405
+	{ id = "garlic necklace", chance = 2538 },  -- 2199
+	{ id = "coat", chance = 1997 },  -- 2651
+	{ id = "necrotic rod", chance = 1085 },  -- 2185
+	{ id = "bag of apple slices", chance = 906 },  -- 13537
+	{ id = "silver dagger", chance = 544 },  -- 2402
+	{ id = "witch hat", chance = 96 },  -- 10570
+	{ id = "stuffed toad", chance = 6 },  -- 11211
 }
 
 monster.attacks = {

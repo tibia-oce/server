@@ -68,17 +68,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3436, chance = 100000 }, -- medusa shield
-	{ id = 3035, chance = 100000, maxCount = 20 }, -- platinum coin
-	{ id = 10309, chance = 100000 }, -- strand of medusa hair
-	{ id = "great mana potion", chance = 87000, maxCount = 2 }, -- great mana potion
-	{ id = "sacred tree amulet", chance = 60000 }, -- sacred tree amulet
-	{ id = 7643, chance = 60000, maxCount = 2 }, -- ultimate health potion
-	{ id = 3032, chance = 46470, maxCount = 4 }, -- small emerald
-	{ id = 814, chance = 46470 }, -- terra amulet
-	{ id = "terra mantle", chance = 46470 }, -- terra mantle
-	{ id = 812, chance = 33300 }, -- terra legs
-	{ id = 7413, chance = 33300 }, -- titan axe
+	{ id = "medusa shield", chance = 100000 },  -- 2536
+	{ id = "platinum coin", chance = 100000, minCount = 4, maxCount = 20 },  -- 2152
+	{ id = "strand of medusa hair", chance = 100000 },  -- 11226
+	{ id = "great mana potion", chance = 82051, minCount = 1, maxCount = 2 },  -- 7590
+	{ id = "ultimate health potion", chance = 64103, minCount = 1, maxCount = 2 },  -- 8473
+	{ id = "sacred tree amulet", chance = 56410 },  -- 10219
+	{ id = "small emerald", chance = 53846, minCount = 1, maxCount = 4 },  -- 2149
+	{ id = "terra amulet", chance = 46154 },  -- 7887
+	{ id = "titan axe", chance = 43590 },  -- 7413
+	{ id = "terra mantle", chance = 35897 },  -- 7884
+	{ id = "terra legs", chance = 30769 },  -- 7885
 }
 
 monster.attacks = {

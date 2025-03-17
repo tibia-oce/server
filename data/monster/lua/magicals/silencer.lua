@@ -77,22 +77,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "platinum coin", chance = 100000, maxCount = 8 },
-	{ id = "stealth ring", chance = 1200 }, -- stealth ring
-	{ id = "boots of haste", chance = 360 },
-	{ id = "dark shield", chance = 2000 },
-	{ id = "assassin star", chance = 7600, maxCount = 10 },
-	{ id = "diamond sceptre", chance = 960 },
-	{ id = "haunted blade", chance = 2000 },
-	{ id = "titan axe", chance = 2200 },
-	{ id = "shadow sceptre", chance = 640 },
-	{ id = "glorious axe", chance = 2400 },
-	{ id = "terra legs", chance = 960 },
-	{ id = "terra boots", chance = 480 },
-	{ id = "cluster of solace", chance = 4560 },
-	{ id = "silencer claws", chance = 17000 },
-	{ id = "silencer resonating chamber", chance = 8410 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 8 },  -- 2152
+	{ id = "silencer claws", chance = 16258 },  -- 22534
+	{ id = "silencer resonating chamber", chance = 9015 },  -- 22535
+	{ id = "assassin star", chance = 7427, minCount = 1, maxCount = 10 },  -- 7368
+	{ id = "glorious axe", chance = 2601 },  -- 7454
+	{ id = "haunted blade", chance = 1862 },  -- 7407
+	{ id = "titan axe", chance = 1854 },  -- 7413
+	{ id = "dark shield", chance = 1597 },  -- 2521
+	{ id = "stealth ring", chance = 1469 },  -- 2165
+	{ id = "diamond sceptre", chance = 1034 },  -- 7387
+	{ id = "terra boots", chance = 963 },  -- 7886
+	{ id = "terra legs", chance = 886 },  -- 7885
+	{ id = "shadow sceptre", chance = 791 },  -- 7451
+	{ id = "cluster of solace", chance = 502 },  -- 22396
+	{ id = "boots of haste", chance = 484 },  -- 2195
 }
 
 monster.attacks = {

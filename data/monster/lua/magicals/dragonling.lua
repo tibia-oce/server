@@ -73,12 +73,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 37500, maxCount = 100 },
-	{ id = "gold coin", chance = 37500, maxCount = 100 },
-	{ id = "gold coin", chance = 37500, maxCount = 27 },
-	{ id = "strong health potion", chance = 24480, maxCount = 2 },
-	{ id = "strong mana potion", chance = 16900, maxCount = 2 },
-	{ id = "blazing bone", chance = 12410 },
+	{ id = "gold coin", chance = 96749, minCount = 1, maxCount = 249 },  -- 2148
+	{ id = "strong health potion", chance = 18635, minCount = 1, maxCount = 2 },  -- 7588
+	{ id = "strong mana potion", chance = 14355, minCount = 1, maxCount = 2 },  -- 7589
+	{ id = "blazing bone", chance = 11040 },  -- 18425
 }
 
 monster.attacks = {

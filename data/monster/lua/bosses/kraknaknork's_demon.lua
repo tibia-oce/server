@@ -70,7 +70,9 @@ monster.voices = {
 	{ text = "ROOKIE FOR BREAKFAST", yell = true },
 }
 
-monster.loot = {}
+monster.loot = {
+	{ id = "gold coin", chance = 95455, minCount = 1, maxCount = 15 },  -- 2148
+}
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -499 },

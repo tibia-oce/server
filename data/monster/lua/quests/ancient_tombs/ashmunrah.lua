@@ -86,13 +86,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "silver brooch", chance = 7000 },
-	{ id = "holy scarab", chance = 400 },
-	{ id = "gold coin", chance = 50000, maxCount = 80 },
-	{ id = "gold coin", chance = 50000, maxCount = 60 },
-	{ id = "might ring", chance = 1000 },
-	{ id = "crown armor", chance = 80000 },
-	{ id = "great mana potion", chance = 1500 },
+	{ id = "gold coin", chance = 93870, minCount = 1, maxCount = 304 },  -- 2148
+	{ id = "great mana potion", chance = 11980 },  -- 7590
+	{ id = "might ring", chance = 4668 },  -- 2164
+	{ id = "silver brooch", chance = 4274 },  -- 2134
+	{ id = "crown armor", chance = 450 },  -- 2487
+	{ id = "mini mummy", chance = 169 },  -- 11207
+	{ id = "hammer of wrath", chance = 112 },  -- 2444
+	{ id = "holy scarab", chance = 112 },  -- 2140
 }
 
 monster.attacks = {

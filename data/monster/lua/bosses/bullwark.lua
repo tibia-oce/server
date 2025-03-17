@@ -73,24 +73,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 200 },
-	{ id = "platinum coin", chance = 80000, maxCount = 5 },
-	{ id = "great health potion", chance = 40000, maxCount = 5 },
-	{ id = "great mana potion", chance = 40000, maxCount = 5 },
-	{ id = "great spirit potion", chance = 40000, maxCount = 5 },
-	{ id = "ham", chance = 35250, maxCount = 5 },
-	{ id = "meat", chance = 35250, maxCount = 5 },
-	{ id = "minotaur leather", chance = 26500, maxCount = 2 },
-	{ id = "moohtant horn", chance = 21000, maxCount = 2 },
-	{ id = "small diamond", chance = 17900, maxCount = 5 },
-	{ id = "small emerald", chance = 16350, maxCount = 5 },
-	{ id = "small ruby", chance = 15500, maxCount = 5 },
-	{ id = "small sapphire", chance = 14200, maxCount = 5 },
-	{ id = "giant pacifier", chance = 1920 },
-	{ id = "moohtant cudgel", chance = 1800 },
-	{ id = "red piece of cloth", chance = 1500 },
-	{ id = "yellow gem", chance = 1200 },
-	{ id = "one hit wonder", chance = 350 },
+	{ id = "giant pacifier", chance = 0 },  -- 23570
+	{ id = "gold coin", chance = 0, maxCount = 200 },  -- 2148
+	{ id = "great health potion", chance = 0, maxCount = 5 },  -- 7591
+	{ id = "minotaur leather", chance = 0 },  -- 5878
+	{ id = "moohtant horn", chance = 0, maxCount = 2 },  -- 23571
+	{ id = "platinum coin", chance = 0, maxCount = 5 },  -- 2152
+	{ id = "ham", chance = 0 },  -- 2671
+	{ id = "meat", chance = 0 },  -- 2666
+	{ id = "mooh'tah plate", chance = 0 },  -- 23537
+	{ id = "small amethyst", chance = 0, maxCount = 5 },  -- 2150
+	{ id = "small topaz", chance = 0, maxCount = 5 },  -- 9970
 }
 
 monster.attacks = {

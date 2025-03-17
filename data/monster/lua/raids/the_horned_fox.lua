@@ -80,20 +80,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "nose ring", chance = 100000 }, -- nose ring
-	{ id = 3031, chance = 96000, maxCount = 99 }, -- gold coin
-	{ id = 3035, chance = 38890, maxCount = 3 }, -- platinum coin
-	{ id = "minotaur leather", chance = 100000 }, -- minotaur leather
-	{ id = 11472, chance = 92590, maxCount = 2 }, -- minotaur horn
-	{ id = 11482, chance = 85000 }, -- piece of warrior armor
-	{ id = 3450, chance = 48000, maxCount = 14 }, -- power bolt
-	{ id = 3577, chance = 18000, maxCount = 3 }, -- meat
-	{ id = 3049, chance = 10000 }, -- stealth ring
-	{ id = "fishing rod", chance = 7410 }, -- fishing rod
-	{ id = 236, chance = 7410 }, -- strong health potion
-	{ id = "minotaur trophy", chance = 900 }, -- minotaur trophy,
-	{ id = 21174, chance = 12000 }, -- mino lance
-	{ id = 21175, chance = 6000 }, -- mino shield
+	{ id = "nose ring", chance = 100000 },  -- 5804
+	{ id = "gold coin", chance = 96875, minCount = 6, maxCount = 99 },  -- 2148
+	{ id = "minotaur leather", chance = 96875 },  -- 5878
+	{ id = "minotaur horn", chance = 93750, minCount = 1, maxCount = 2 },  -- 12428
+	{ id = "piece of warrior armor", chance = 81250 },  -- 12438
+	{ id = "piercing bolt", chance = 46875, minCount = 1, maxCount = 14 },  -- 7363
+	{ id = "brass armor", chance = 28125 },  -- 2465
+	{ id = "meat", chance = 15625 },  -- 2666
+	{ id = "battle shield", chance = 12500 },  -- 2513
+	{ id = "dwarven helmet", chance = 9375 },  -- 2502
+	{ id = "strong health potion", chance = 9375 },  -- 7588
+	{ id = "fishing rod", chance = 6250 },  -- 2580
+	{ id = "double axe", chance = 3125 },  -- 2387
 }
 
 monster.attacks = {

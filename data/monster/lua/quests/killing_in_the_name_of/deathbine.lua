@@ -68,17 +68,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "carniphila seeds", chance = 100000 }, -- carniphila seeds
-	{ id = 3035, chance = 100000, maxCount = 5 }, -- platinum coin
-	{ id = 3740, chance = 100000 }, -- shadow herb
-	{ id = 3032, chance = 100000, maxCount = 4 }, -- small emerald
-	{ id = "dark mushroom", chance = 50000 }, -- dark mushroom
-	{ id = 647, chance = 50000 }, -- seeds
-	{ id = 814, chance = 50000 }, -- terra amulet
-	{ id = 813, chance = 50000 }, -- terra boots
-	{ id = 8084, chance = 50000 }, -- springsprout rod
-	{ id = 5014, chance = 5555 }, -- mandrake
-	{ id = "sweet smelling bait", chance = 2854 }, -- sweet smelling bait
+	{ id = "carniphila seeds", chance = 100000 },  -- 11217
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 5 },  -- 2152
+	{ id = "shadow herb", chance = 100000 },  -- 2804
+	{ id = "small emerald", chance = 100000, minCount = 1, maxCount = 4 },  -- 2149
+	{ id = "dark mushroom", chance = 79882 },  -- 2792
+	{ id = "seeds", chance = 78107 },  -- 7732
+	{ id = "terra amulet", chance = 55621 },  -- 7887
+	{ id = "springsprout rod", chance = 54438 },  -- 8912
+	{ id = "terra boots", chance = 46154 },  -- 7886
+	{ id = "sweet smelling bait", chance = 4734 },  -- 13307
+	{ id = "mandrake", chance = 2959 },  -- 5015
 }
 
 monster.attacks = {

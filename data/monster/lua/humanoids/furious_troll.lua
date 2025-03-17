@@ -75,10 +75,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 93000, maxCount = 146 },
-	{ id = "platinum coin", chance = 6000 },
-	{ id = "war hammer", chance = 750 },
-	{ id = "bunch of troll hair", chance = 4400 },
+	{ id = "gold coin", chance = 92914, minCount = 1, maxCount = 148 },  -- 2148
+	{ id = "bunch of troll hair", chance = 5131 },  -- 10606
+	{ id = "platinum coin", chance = 5096 },  -- 2152
+	{ id = "war hammer", chance = 803 },  -- 2391
 }
 
 monster.attacks = {

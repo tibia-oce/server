@@ -68,25 +68,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small ruby", chance = 3510, maxCount = 2 },
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 71 },
-	{ id = "boots of haste", chance = 120 },
-	{ id = "skull staff", chance = 180 },
-	{ id = "mystic turban", chance = 2170 },
-	{ id = "white piece of cloth", chance = 3040 },
-	{ id = "red piece of cloth", chance = 640 },
-	{ id = "strong mana potion", chance = 6000 },
-	{ id = "spellbook of warding", chance = 290 },
-	{ id = "spellbook of mind control", chance = 180 },
-	{ id = "underworld rod", chance = 470 },
-	{ id = "book of necromantic rituals", chance = 13550 },
-	{ id = "red gem", chance = 880 }, -- red gem
-	{ id = "lancet", chance = 14410 },
-	{ id = "horoscope", chance = 9270 },
-	{ id = "blood tincture in a vial", chance = 14460 },
-	{ id = "incantation notes", chance = 14660 },
-	{ id = "pieces of magic chalk", chance = 7770 },
+	{ id = "gold coin", chance = 99983, minCount = 1, maxCount = 180 },  -- 2148
+	{ id = "book of necromantic rituals", chance = 15205 },  -- 11237
+	{ id = "lancet", chance = 14705 },  -- 21242
+	{ id = "incantation notes", chance = 14505 },  -- 21246
+	{ id = "blood tincture in a vial", chance = 14105 },  -- 21245
+	{ id = "horoscope", chance = 9653 },  -- 21243
+	{ id = "pieces of magic chalk", chance = 7352 },  -- 21247
+	{ id = "strong mana potion", chance = 6019 },  -- 7589
+	{ id = "small ruby", chance = 3234, minCount = 1, maxCount = 2 },  -- 2147
+	{ id = "mystic turban", chance = 2851 },  -- 2663
+	{ id = "white piece of cloth", chance = 2768 },  -- 5909
+	{ id = "red gem", chance = 767 },  -- 2156
+	{ id = "red piece of cloth", chance = 634 },  -- 5911
+	{ id = "underworld rod", chance = 300 },  -- 8910
+	{ id = "spellbook of warding", chance = 283 },  -- 8901
+	{ id = "spellbook of mind control", chance = 250 },  -- 8902
+	{ id = "skull staff", chance = 200 },  -- 2436
+	{ id = "boots of haste", chance = 167 },  -- 2195
+	{ id = "noble axe", chance = 67 },  -- 7456
 }
 
 monster.attacks = {

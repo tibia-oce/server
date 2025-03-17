@@ -79,38 +79,36 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 92000, maxCount = 200 }, -- gold coin
-	{ id = 19083, chance = 92000 }, -- silver raid token
-	{ id = 7290, chance = 57000 }, -- shard
-	{ id = 7449, chance = 42000 }, -- crystal sword
-	{ id = 7642, chance = 42000, maxCount = 5 }, -- great spirit potion
-	{ id = 3284, chance = 42000 }, -- ice rapier
-	{ id = 3052, chance = 42000 }, -- life ring
-	{ id = 7443, chance = 35000 }, -- bullseye potion
-	{ id = 819, chance = 35000 }, -- glacier shoes
-	{ id = 7440, chance = 35000 }, -- mastermind potion
-	{ id = 3035, chance = 35000 }, -- platinum coin
-	{ id = "white piece of cloth", chance = 35000, maxCount = 2 }, -- white piece of cloth
-	{ id = 7439, chance = 28000 }, -- berserk potion
-	{ id = 3041, chance = 28000 }, -- blue gem
-	{ id = 3574, chance = 28000 }, -- mystic turban
-	{ id = 815, chance = 21000 }, -- glacier amulet
-	{ id = 238, chance = 21000, maxCount = 5 }, -- great mana potion
-	{ id = 5912, chance = 14000 }, -- blue piece of cloth
-	{ id = 3333, chance = 14000 }, -- crystal mace
-	{ id = "dragon necklace", chance = 14000 }, -- dragon necklace
-	{ id = 823, chance = 14000 }, -- glacier kilt
-	{ id = 824, chance = 14000 }, -- glacier robe
-	{ id = 9058, chance = 14000 }, -- gold ingot
-	{ id = 239, chance = 14000, maxCount = 5 }, -- great health potion
-	{ id = 7459, chance = 14000 }, -- pair of earmuffs
-	{ id = 3324, chance = 14000 }, -- skull staff
-	{ id = 3079, chance = 7000 }, -- boots of haste
-	{ id = "glacier mask", chance = 7000 }, -- glacier mask
-	{ id = 5911, chance = 7000 }, -- red piece of cloth
-	{ id = 19365, chance = 7000 }, -- trapped lightning
-	{ id = 19366, chance = 3000 }, -- icy culottes
-	{ id = 7410, chance = 3000 }, -- queen's sceptre
+	{ id = "gold coin", chance = 93333, minCount = 100, maxCount = 200 },  -- 2148
+	{ id = "silver raid token", chance = 86667 },  -- 21400
+	{ id = "shard", chance = 60000 },  -- 7290
+	{ id = "crystal sword", chance = 46667 },  -- 7449
+	{ id = "glacier shoes", chance = 40000 },  -- 7892
+	{ id = "great spirit potion", chance = 40000, maxCount = 5 },  -- 8472
+	{ id = "ice rapier", chance = 40000 },  -- 2396
+	{ id = "life ring", chance = 40000 },  -- 2168
+	{ id = "platinum coin", chance = 40000 },  -- 2152
+	{ id = "berserk potion", chance = 33333 },  -- 7439
+	{ id = "blue gem", chance = 33333 },  -- 2158
+	{ id = "bullseye potion", chance = 33333 },  -- 7443
+	{ id = "mastermind potion", chance = 33333 },  -- 7440
+	{ id = "white piece of cloth", chance = 33333, minCount = 1, maxCount = 2 },  -- 5909
+	{ id = "great mana potion", chance = 26667, maxCount = 5 },  -- 7590
+	{ id = "mystic turban", chance = 26667 },  -- 2663
+	{ id = "glacier amulet", chance = 20000 },  -- 7888
+	{ id = "skull staff", chance = 20000 },  -- 2436
+	{ id = "blue piece of cloth", chance = 13333 },  -- 5912
+	{ id = "crystal mace", chance = 13333 },  -- 2445
+	{ id = "dragon necklace", chance = 13333 },  -- 2201
+	{ id = "glacier kilt", chance = 13333 },  -- 7896
+	{ id = "glacier robe", chance = 13333 },  -- 7897
+	{ id = "gold ingot", chance = 13333 },  -- 9971
+	{ id = "great health potion", chance = 13333, maxCount = 5 },  -- 7591
+	{ id = "pair of earmuffs", chance = 13333 },  -- 7459
+	{ id = "boots of haste", chance = 6667 },  -- 2195
+	{ id = "glacier mask", chance = 6667 },  -- 7902
+	{ id = "red piece of cloth", chance = 6667 },  -- 5911
+	{ id = "trapped lightning", chance = 6667 },  -- 21699
 }
 
 monster.attacks = {

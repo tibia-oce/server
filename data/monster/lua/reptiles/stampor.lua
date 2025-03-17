@@ -67,17 +67,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 30000, maxCount = 242 },
-	{ id = "platinum coin", chance = 9920, maxCount = 2 },
-	{ id = "war hammer", chance = 1010 },
-	{ id = "knight armor", chance = 870 },
-	{ id = "spiked squelcher", chance = 160 },
-	{ id = "strong health potion", chance = 5000, maxCount = 2 },
-	{ id = "strong mana potion", chance = 5000, maxCount = 2 },
-	{ id = "small topaz", chance = 7940, maxCount = 2 },
-	{ id = "stampor horn", chance = 4920 },
-	{ id = "stampor talons", chance = 9950, maxCount = 2 },
-	{ id = "hollow stampor hoof", chance = 3020 },
+	{ id = "gold coin", chance = 94491, minCount = 1, maxCount = 242 },  -- 2148
+	{ id = "platinum coin", chance = 9933, minCount = 1, maxCount = 2 },  -- 2152
+	{ id = "stampor talons", chance = 9827 },  -- 13300
+	{ id = "small topaz", chance = 7833, minCount = 1, maxCount = 2 },  -- 9970
+	{ id = "strong mana potion", chance = 4997, minCount = 1, maxCount = 2 },  -- 7589
+	{ id = "stampor horn", chance = 4944 },  -- 13299
+	{ id = "strong health potion", chance = 4830, minCount = 1, maxCount = 2 },  -- 7588
+	{ id = "hollow stampor hoof", chance = 3088 },  -- 13301
+	{ id = "war hammer", chance = 979 },  -- 2391
+	{ id = "knight armor", chance = 820 },  -- 2476
+	{ id = "spiked squelcher", chance = 190 },  -- 7452
 }
 
 monster.attacks = {

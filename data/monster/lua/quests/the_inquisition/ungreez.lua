@@ -74,10 +74,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 21000, maxCount = 90 }, -- gold coin
-	{ id = "fire mushroom", chance = 10000, maxCount = 6 }, -- fire mushroom
-	{ id = 238, chance = 20000 }, -- great mana potion
-	{ id = "great health potion", chance = 20000 }, -- great health potion
+	{ id = "gold coin", chance = 37037, minCount = 8, maxCount = 96 },  -- 2148
+	{ id = "fire mushroom", chance = 18519, minCount = 1, maxCount = 4 },  -- 2795
+	{ id = "great health potion", chance = 7407 },  -- 7591
 }
 
 monster.attacks = {

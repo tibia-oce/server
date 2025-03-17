@@ -72,22 +72,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "platinum coin", chance = 100000, maxCount = 9 },
-	{ id = "fire sword", chance = 1240 },
-	{ id = "crown shield", chance = 1700 },
-	{ id = "tower shield", chance = 550 },
-	{ id = "brown mushroom", chance = 14000, maxCount = 2 },
-	{ id = "beastslayer axe", chance = 4260 },
-	{ id = "mercenary sword", chance = 2500 },
-	{ id = "spiked squelcher", chance = 410 },
-	{ id = "great mana potion", chance = 12500 },
-	{ id = "great health potion", chance = 15000 },
-	{ id = "underworld rod", chance = 1800 },
-	{ id = "wand of starstorm", chance = 960 },
-	{ id = "broken dream", chance = 3700 }, -- broken dream
-	{ id = "goosebump leather", chance = 16400 },
-	{ id = "pool of chitinous glue", chance = 14000 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 9 },  -- 2152
+	{ id = "pool of chitinous glue", chance = 15398 },  -- 22541
+	{ id = "brown mushroom", chance = 14903, minCount = 1, maxCount = 2 },  -- 2789
+	{ id = "goosebump leather", chance = 14748 },  -- 22539
+	{ id = "great mana potion", chance = 14639 },  -- 7590
+	{ id = "great health potion", chance = 14407 },  -- 7591
+	{ id = "broken dream", chance = 5354 },  -- 22363
+	{ id = "beastslayer axe", chance = 4983 },  -- 3962
+	{ id = "mercenary sword", chance = 2321 },  -- 7386
+	{ id = "wand of starstorm", chance = 1578 },  -- 8920
+	{ id = "crown shield", chance = 1532 },  -- 2519
+	{ id = "underworld rod", chance = 1455 },  -- 8910
+	{ id = "spiked squelcher", chance = 1362 },  -- 7452
+	{ id = "fire sword", chance = 1253 },  -- 2392
+	{ id = "tower shield", chance = 990 },  -- 2528
+	{ id = "butcher's axe", chance = 681 },  -- 7412
+	{ id = "onyx flail", chance = 573 },  -- 7421
+	{ id = "cluster of solace", chance = 433 },  -- 22396
+	{ id = "steel boots", chance = 155 },  -- 2645
 }
 
 monster.attacks = {

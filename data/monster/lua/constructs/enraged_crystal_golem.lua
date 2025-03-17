@@ -70,14 +70,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "crystal sword", chance = 4710 },
-	{ id = "glorious axe", chance = 360 },
-	{ id = "strong health potion", chance = 7140 },
-	{ id = "strong mana potion", chance = 8270 },
-	{ id = "blue crystal splinter", chance = 4120 },
-	{ id = "cyan crystal fragment", chance = 1050 },
-	{ id = "crystalline spikes", chance = 7980 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "crystalline spikes", chance = 8287 },  -- 18432
+	{ id = "strong mana potion", chance = 8126 },  -- 7589
+	{ id = "strong health potion", chance = 8100 },  -- 7588
+	{ id = "crystalline arrow", chance = 5128, minCount = 1, maxCount = 5 },  -- 18304
+	{ id = "crystal sword", chance = 4746 },  -- 7449
+	{ id = "blue crystal splinter", chance = 4090 },  -- 18418
+	{ id = "cyan crystal fragment", chance = 944 },  -- 18419
+	{ id = "glorious axe", chance = 382 },  -- 7454
 }
 
 monster.attacks = {

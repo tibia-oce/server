@@ -68,15 +68,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 10277, chance = 100000 }, -- bony tail
-	{ id = "hardened bone", chance = 98910, maxCount = 3 }, -- hardened bone
-	{ id = 3035, chance = 98910, maxCount = 8 }, -- platinum coin
-	{ id = 3028, chance = 61960, maxCount = 4 }, -- small diamond
-	{ id = "bone shield", chance = 60000 }, -- bone shield
-	{ id = 3732, chance = 60000, maxCount = 4 }, -- green mushroom
-	{ id = 10244, chance = 29000 }, -- bonebeast trophy
-	{ id = "skull helmet", chance = 8700 }, -- skull helmet
-	{ id = 12304, chance = 2000 }, -- maxilla maximus
+	{ id = "bony tail", chance = 100000 },  -- 11194
+	{ id = "hardened bone", chance = 100000, minCount = 1, maxCount = 3 },  -- 5925
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 8 },  -- 2152
+	{ id = "bone shield", chance = 72947 },  -- 2541
+	{ id = "green mushroom", chance = 66184, minCount = 1, maxCount = 3 },  -- 2796
+	{ id = "small diamond", chance = 66184, minCount = 1, maxCount = 4 },  -- 2145
+	{ id = "bonebeast trophy", chance = 23671 },  -- 11161
+	{ id = "skull helmet", chance = 6280 },  -- 5741
+	{ id = "maxilla maximus", chance = 1449 },  -- 13291
 }
 
 monster.attacks = {

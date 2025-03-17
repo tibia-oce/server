@@ -68,16 +68,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 5894, chance = 100000, maxCount = 2 }, -- bat wing
-	{ id = 3051, chance = 100000 }, -- energy ring
-	{ id = 3031, chance = 100000, maxCount = 99 }, -- gold coin
-	{ id = 9662, chance = 100000 }, -- mutated bat ear
-	{ id = "small amethyst", chance = 100000, maxCount = 5 }, -- small amethyst
-	{ id = "star herb", chance = 100000 }, -- star herb
-	{ id = 3429, chance = 92000 }, -- black shield
-	{ id = 3027, chance = 85000, maxCount = 5 }, -- black pearl
-	{ id = "mercenary sword", chance = 25000 }, -- mercenary sword
-	{ id = 9103, chance = 16000 }, -- batwing hat
+	{ id = "bat wing", chance = 100000, minCount = 1, maxCount = 2 },  -- 5894
+	{ id = "energy ring", chance = 100000 },  -- 2167
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 99 },  -- 2148
+	{ id = "mutated bat ear", chance = 100000 },  -- 10579
+	{ id = "small amethyst", chance = 100000, minCount = 1, maxCount = 5 },  -- 2150
+	{ id = "star herb", chance = 100000 },  -- 2800
+	{ id = "black shield", chance = 92683 },  -- 2529
+	{ id = "black pearl", chance = 85366, minCount = 1, maxCount = 5 },  -- 2144
+	{ id = "mercenary sword", chance = 23171 },  -- 7386
+	{ id = "batwing hat", chance = 17073 },  -- 10016
 }
 
 monster.attacks = {

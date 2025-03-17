@@ -67,7 +67,9 @@ monster.voices = {
 	{ text = "Bobble!", yell = false },
 }
 
-monster.loot = { }
+monster.loot = {
+	{ id = "shrimp", chance = 10605 },  -- 2670
+}
 
 monster.defenses = {
 	defense = 5,

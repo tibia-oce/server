@@ -71,19 +71,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 80 }, -- gold coin
-	{ id = 3035, chance = 10390 }, -- platinum coin
-	{ id = 236, chance = 10310 }, -- strong health potion
-	{ id = "strong mana potion", chance = 9990 }, -- strong mana potion
-	{ id = 21182, chance = 4320 }, -- glob of glooth
-	{ id = 3052, chance = 1630 }, -- life ring
-	{ id = 3029, chance = 1110 }, -- small sapphire
-	{ id = 9057, chance = 1140, maxCount = 2 }, -- small topaz
-	{ id = 3032, chance = 940, maxCount = 2 }, -- small emerald
-	{ id = "green gem", chance = 80 }, -- green gem
-	{ id = 21183, chance = 130 }, -- glooth amulet
-	{ id = 21180, chance = 60 }, -- glooth axe
-	{ id = "glooth spear", chance = 460 }, -- glooth spear
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 140 },  -- 2148
+	{ id = "glob of glooth", chance = 14036, minCount = 1, maxCount = 2 },  -- 23553
+	{ id = "platinum coin", chance = 10131 },  -- 2152
+	{ id = "strong mana potion", chance = 10076 },  -- 7589
+	{ id = "strong health potion", chance = 10017 },  -- 7588
+	{ id = "small sapphire", chance = 5066 },  -- 2146
+	{ id = "small emerald", chance = 5008, minCount = 1, maxCount = 4 },  -- 2149
+	{ id = "small topaz", chance = 4958, minCount = 1, maxCount = 2 },  -- 9970
+	{ id = "glooth spear", chance = 4877 },  -- 23529
+	{ id = "life ring", chance = 1487 },  -- 2168
+	{ id = "glooth axe", chance = 101 },  -- 23551
+	{ id = "green gem", chance = 101 },  -- 2155
+	{ id = "glooth amulet", chance = 94 },  -- 23554
 }
 
 monster.attacks = {

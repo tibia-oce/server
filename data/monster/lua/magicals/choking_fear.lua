@@ -73,28 +73,32 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "platinum coin", chance = 100000, maxCount = 8 },
-	{ id = "energy ring", chance = 3000 }, -- energy ring
-	{ id = "life ring", chance = 4200 }, -- life ring
-	{ id = "ring of healing", chance = 3000 }, -- ring of healing
-	{ id = "guardian shield", chance = 1540 },
-	{ id = "beastslayer axe", chance = 3290 },
-	{ id = "brown piece of cloth", chance = 6000 },
-	{ id = "yellow piece of cloth", chance = 3500 },
-	{ id = "great mana potion", chance = 20000, maxCount = 3 },
-	{ id = "terra boots", chance = 720 },
-	{ id = "great spirit potion", chance = 20000, maxCount = 3 },
-	{ id = "ultimate health potion", chance = 19000, maxCount = 3 },
-	{ id = "spellbook of mind control", chance = 720 },
-	{ id = "underworld rod", chance = 720 },
-	{ id = "springsprout rod", chance = 510 },
-	{ id = "green crystal shard", chance = 1540 },
-	{ id = "brown crystal splinter", chance = 52500, maxCount = 2 },
-	{ id = "blue crystal splinter", chance = 10000, maxCount = 3 },
-	{ id = "cluster of solace", chance = 4620 },
-	{ id = "dead weight", chance = 14180 },
-	{ id = "hemp rope", chance = 14180 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 8 },  -- 2152
+	{ id = "brown crystal splinter", chance = 48943, minCount = 1, maxCount = 2 },  -- 18417
+	{ id = "great mana potion", chance = 19967, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "great spirit potion", chance = 19692, minCount = 1, maxCount = 3 },  -- 8472
+	{ id = "ultimate health potion", chance = 19404, minCount = 1, maxCount = 3 },  -- 8473
+	{ id = "hemp rope", chance = 15401 },  -- 22540
+	{ id = "dead weight", chance = 14638 },  -- 22536
+	{ id = "blue crystal splinter", chance = 9696, minCount = 1, maxCount = 3 },  -- 18418
+	{ id = "life ring", chance = 4967 },  -- 2168
+	{ id = "brown piece of cloth", chance = 4879 },  -- 5913
+	{ id = "ring of healing", chance = 3541 },  -- 2214
+	{ id = "beastslayer axe", chance = 3441 },  -- 3962
+	{ id = "energy ring", chance = 3290 },  -- 2167
+	{ id = "yellow piece of cloth", chance = 2840 },  -- 5914
+	{ id = "green crystal shard", chance = 1689 },  -- 18415
+	{ id = "guardian shield", chance = 1614 },  -- 2515
+	{ id = "red piece of cloth", chance = 1151 },  -- 5911
+	{ id = "shadow sceptre", chance = 1101 },  -- 7451
+	{ id = "sai", chance = 951 },  -- 11306
+	{ id = "underworld rod", chance = 701 },  -- 8910
+	{ id = "spellbook of mind control", chance = 663 },  -- 8902
+	{ id = "springsprout rod", chance = 588 },  -- 8912
+	{ id = "terra mantle", chance = 588 },  -- 7884
+	{ id = "terra boots", chance = 500 },  -- 7886
+	{ id = "cluster of solace", chance = 350 },  -- 22396
 }
 
 monster.attacks = {

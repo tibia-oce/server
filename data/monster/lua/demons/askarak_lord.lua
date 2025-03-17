@@ -74,20 +74,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 90 },
-	{ id = "small emerald", chance = 5882, maxCount = 5 },
-	{ id = "platinum coin", chance = 35333, maxCount = 2 },
-	{ id = "energy ring", chance = 606 }, -- energy ring
-	{ id = "brown mushroom", chance = 5263, maxCount = 5 },
-	{ id = "magic sulphur", chance = 620 },
-	{ id = "assassin star", chance = 70, maxCount = 5 },
-	{ id = "dreaded cleaver", chance = 30 },
-	{ id = "mastermind potion", chance = 750 },
-	{ id = "strong health potion", chance = 6250 },
-	{ id = "strong mana potion", chance = 7692 },
-	{ id = "terra mantle", chance = 70 },
-	{ id = "springsprout rod", chance = 1010 },
+	{ id = "gold coin", chance = 95889, minCount = 1, maxCount = 190 },  -- 2148
+	{ id = "platinum coin", chance = 35261, minCount = 1, maxCount = 2 },  -- 2152
+	{ id = "strong mana potion", chance = 7666 },  -- 7589
+	{ id = "strong health potion", chance = 6794 },  -- 7588
+	{ id = "small emerald", chance = 6307, minCount = 1, maxCount = 5 },  -- 2149
+	{ id = "brown mushroom", chance = 4913, minCount = 1, maxCount = 5 },  -- 2789
+	{ id = "mastermind potion", chance = 1010 },  -- 7440
+	{ id = "energy ring", chance = 836 },  -- 2167
+	{ id = "springsprout rod", chance = 697 },  -- 8912
+	{ id = "magic sulphur", chance = 592 },  -- 5904
+	{ id = "assassin star", chance = 35, maxCount = 5 },  -- 7368
+	{ id = "terra mantle", chance = 35 },  -- 7884
 }
 
 monster.attacks = {

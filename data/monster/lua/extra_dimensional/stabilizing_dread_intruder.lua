@@ -70,22 +70,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
-	{ id = 3035, chance = 20000, maxCount = 5 }, -- platinum coin
-	{ id = 23535, chance = 12200 }, -- energy bar
-	{ id = 238, chance = 10800 }, -- great mana potion
-	{ id = "strange proto matter", chance = 9800 }, -- strange proto matter
-	{ id = 23517, chance = 9400 }, -- solid rage
-	{ id = 23522, chance = 9000 }, -- glistening bone
-	{ id = 7643, chance = 8700 }, -- ultimate health potion
-	{ id = "energy drink", chance = 8700 }, -- energy drink
-	{ id = 7642, chance = 8700 }, -- great spirit potion
-	{ id = 3033, chance = 5000, maxCount = 2 }, -- small amethyst
-	{ id = "blue crystal splinter", chance = 4800 }, -- blue crystal splinter
-	{ id = 3029, chance = 4400, maxCount = 2 }, -- small sapphire
-	{ id = 16120, chance = 4200 }, -- violet crystal shard
-	{ id = 3030, chance = 3400, maxCount = 2 }, -- small ruby
-	{ id = 16125, chance = 3300 }, -- cyan crystal fragment
+	{ id = "gold coin", chance = 98715, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "platinum coin", chance = 86519, minCount = 1, maxCount = 5 },  -- 2152
+	{ id = "energy bar", chance = 10496 },  -- 26191
+	{ id = "energy drink", chance = 9923 },  -- 26201
+	{ id = "solid rage", chance = 9804 },  -- 26173
+	{ id = "strange proto matter", chance = 9804 },  -- 26169
+	{ id = "glistening bone", chance = 9468 },  -- 26178
+	{ id = "ultimate health potion", chance = 9429 },  -- 8473
+	{ id = "great spirit potion", chance = 9251 },  -- 8472
+	{ id = "great mana potion", chance = 9231 },  -- 7590
+	{ id = "violet crystal shard", chance = 5396 },  -- 18414
+	{ id = "cyan crystal fragment", chance = 5258 },  -- 18419
+	{ id = "blue crystal splinter", chance = 5120 },  -- 18418
+	{ id = "small sapphire", chance = 4863, minCount = 1, maxCount = 2 },  -- 2146
+	{ id = "small amethyst", chance = 4843, minCount = 1, maxCount = 2 },  -- 2150
+	{ id = "small ruby", chance = 4270, minCount = 1, maxCount = 2 },  -- 2147
+	{ id = "violet gem", chance = 217 },  -- 2153
 }
 
 monster.attacks = {

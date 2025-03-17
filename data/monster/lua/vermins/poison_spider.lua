@@ -66,8 +66,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 75000, maxCount = 4 },
-	{ id = "poison spider shell", chance = 1140 },
+	{ id = "gold coin", chance = 74692, minCount = 1, maxCount = 4 },  -- 2148
+	{ id = "poison spider shell", chance = 1052 },  -- 12441
 }
 
 monster.attacks = {

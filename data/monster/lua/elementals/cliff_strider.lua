@@ -70,40 +70,38 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "white pearl", chance = 9630, maxCount = 3 },
-	{ id = "black pearl", chance = 9090 },
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "gold coin", chance = 100000, maxCount = 95 },
-	{ id = "platinum coin", chance = 100000, maxCount = 10 },
-	{ id = "red gem", chance = 6110 }, -- red gem
-	{ id = "blue gem", chance = 830 },
-	{ id = "giant sword", chance = 620 },
-	{ id = "hammer of wrath", chance = 70 },
-	{ id = "knight legs", chance = 830 },
-	{ id = "crown armor", chance = 310 },
-	{ id = "crusader helmet", chance = 410 },
-	{ id = "steel boots", chance = 100 },
-	{ id = "iron ore", chance = 14490 },
-	{ id = "magic sulphur", chance = 1450 },
-	{ id = "soul orb", chance = 17080 },
-	{ id = "sapphire hammer", chance = 1350 },
-	{ id = "spiked squelcher", chance = 1040 },
-	{ id = "great mana potion", chance = 30950, maxCount = 4 },
-	{ id = "ultimate health potion", chance = 25260, maxCount = 2 },
-	{ id = "crystal of balance", chance = 2690 },
-	{ id = "crystal of power", chance = 720 },
-	{ id = "shiny stone", chance = 11280 },
-	{ id = "wand of defiance", chance = 2000 },
-	{ id = "glacial rod", chance = 1240 },
-	{ id = "blue crystal shard", chance = 6520 },
-	{ id = "blue crystal splinter", chance = 7970, maxCount = 2 },
-	{ id = "cyan crystal fragment", chance = 8070 },
-	{ id = "pulverized ore", chance = 15110 },
-	{ id = "cliff strider claw", chance = 15630 },
-	{ id = "vein of ore", chance = 18000, maxCount = 2 },
-	{ id = "prismatic bolt", chance = 9090, maxCount = 8 },
-	{ id = "crystalline sword", chance = 620 },
-	{ id = "crystal crossbow", chance = 830 },
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 198 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 10 },  -- 2152
+	{ id = "great mana potion", chance = 34219, minCount = 1, maxCount = 4 },  -- 7590
+	{ id = "ultimate health potion", chance = 23634, minCount = 1, maxCount = 2 },  -- 8473
+	{ id = "vein of ore", chance = 18360, minCount = 1, maxCount = 2 },  -- 18429
+	{ id = "soul orb", chance = 17513 },  -- 5944
+	{ id = "cliff strider claw", chance = 15666 },  -- 18428
+	{ id = "pulverized ore", chance = 15204 },  -- 18427
+	{ id = "iron ore", chance = 14704 },  -- 5880
+	{ id = "shiny stone", chance = 12510 },  -- 11227
+	{ id = "black pearl", chance = 10162 },  -- 2144
+	{ id = "prismatic bolt", chance = 9815, minCount = 1, maxCount = 8 },  -- 18435
+	{ id = "white pearl", chance = 9353, minCount = 1, maxCount = 3 },  -- 2143
+	{ id = "blue crystal splinter", chance = 9122, minCount = 1, maxCount = 2 },  -- 18418
+	{ id = "cyan crystal fragment", chance = 8507 },  -- 18419
+	{ id = "blue crystal shard", chance = 5658 },  -- 18413
+	{ id = "red gem", chance = 5427 },  -- 2156
+	{ id = "crystal of balance", chance = 2694 },  -- 9942
+	{ id = "wand of defiance", chance = 1848 },  -- 18390
+	{ id = "sapphire hammer", chance = 1732 },  -- 7437
+	{ id = "magic sulphur", chance = 1424 },  -- 5904
+	{ id = "spiked squelcher", chance = 1347 },  -- 7452
+	{ id = "glacial rod", chance = 1270 },  -- 18412
+	{ id = "crystal of power", chance = 885 },  -- 9980
+	{ id = "giant sword", chance = 885 },  -- 2393
+	{ id = "knight legs", chance = 885 },  -- 2477
+	{ id = "crystal crossbow", chance = 770 },  -- 18453
+	{ id = "blue gem", chance = 693 },  -- 2158
+	{ id = "crystalline sword", chance = 500 },  -- 18450
+	{ id = "crusader helmet", chance = 462 },  -- 2497
+	{ id = "crown armor", chance = 385 },  -- 2487
+	{ id = "steel boots", chance = 77 },  -- 2645
 }
 
 monster.attacks = {

@@ -71,30 +71,31 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 199 },
-	{ id = "small emerald", chance = 10890, maxCount = 3 },
-	{ id = "small amethyst", chance = 15020, maxCount = 3 },
-	{ id = "platinum coin", chance = 100000, maxCount = 8 },
-	{ id = "red gem", chance = 3510 }, -- red gem
-	{ id = "blue gem", chance = 480 },
-	{ id = "epee", chance = 480 },
-	{ id = "magic sulphur", chance = 830 },
-	{ id = "sapphire hammer", chance = 480 },
-	{ id = "great mana potion", chance = 17640 },
-	{ id = "terra legs", chance = 1110 },
-	{ id = "ultimate health potion", chance = 18330 },
-	{ id = "composite hornbow", chance = 210 },
-	{ id = "springsprout rod", chance = 1720 },
-	{ id = "crystal of balance", chance = 4480 },
-	{ id = "crystal of power", chance = 2480 },
-	{ id = "war crystal", chance = 21230 },
-	{ id = "shiny stone", chance = 15230 },
-	{ id = "jade hat", chance = 210 },
-	{ id = "glacial rod", chance = 960 },
-	{ id = "green crystal shard", chance = 5720 },
-	{ id = "brown crystal splinter", chance = 12610, maxCount = 2 },
-	{ id = "red crystal fragment", chance = 10540 },
-	{ id = "crystalline spikes", chance = 18400 },
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 8 },  -- 2152
+	{ id = "war crystal", chance = 20730 },  -- 10571
+	{ id = "ultimate health potion", chance = 18755 },  -- 8473
+	{ id = "crystalline spikes", chance = 17904 },  -- 18432
+	{ id = "great mana potion", chance = 17329 },  -- 7590
+	{ id = "shiny stone", chance = 14529 },  -- 11227
+	{ id = "small amethyst", chance = 14429, minCount = 1, maxCount = 3 },  -- 2150
+	{ id = "brown crystal splinter", chance = 13453, minCount = 1, maxCount = 2 },  -- 18417
+	{ id = "red crystal fragment", chance = 10503 },  -- 18420
+	{ id = "small emerald", chance = 10478, minCount = 1, maxCount = 3 },  -- 2149
+	{ id = "green crystal shard", chance = 5451 },  -- 18415
+	{ id = "crystal of balance", chance = 4976 },  -- 9942
+	{ id = "red gem", chance = 3601 },  -- 2156
+	{ id = "crystal of power", chance = 2051 },  -- 9980
+	{ id = "springsprout rod", chance = 1500 },  -- 8912
+	{ id = "terra legs", chance = 875 },  -- 7885
+	{ id = "glacial rod", chance = 850 },  -- 18412
+	{ id = "sapphire hammer", chance = 850 },  -- 7437
+	{ id = "magic sulphur", chance = 825 },  -- 5904
+	{ id = "epee", chance = 575 },  -- 2438
+	{ id = "blue gem", chance = 550 },  -- 2158
+	{ id = "crystal mace", chance = 425 },  -- 2445
+	{ id = "jade hat", chance = 325 },  -- 11368
+	{ id = "composite hornbow", chance = 200 },  -- 8855
 }
 
 monster.attacks = {

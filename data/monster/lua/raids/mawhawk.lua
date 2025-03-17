@@ -75,23 +75,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 20062, chance = 30000, maxCount = 2 }, -- cluster of solace
-	{ id = 20198, chance = 30000 }, -- frazzle tongue
-	{ id = 20264, chance = 30000, maxCount = 2, unique = true }, -- unrealized dream
-	{ id = 3031, chance = 10000, maxCount = 100 }, -- gold coin
-	{ id = 3035, chance = 10000, maxCount = 25 }, -- platinum coin
-	{ id = 3280, chance = 10000 }, -- fire sword
-	{ id = 5880, chance = 10000 }, -- iron ore
-	{ id = 5895, chance = 10000 }, -- fish fin
-	{ id = 5911, chance = 10000 }, -- red piece of cloth
-	{ id = "hardened bone", chance = 10000 }, -- hardened bone
-	{ id = 7404, chance = 10000 }, -- assassin dagger
-	{ id = "haunted blade", chance = 10000 }, -- haunted blade
-	{ id = 7418, chance = 10000 }, -- nightmare blade
-	{ id = 16120, chance = 10000, maxCount = 3 }, -- violet crystal shard
-	{ id = 16121, chance = 10000, maxCount = 3 }, -- green crystal shard
-	{ id = 16122, chance = 10000, maxCount = 5 }, -- green crystal splinter
-	{ id = "blue crystal splinter", chance = 10000, maxCount = 5 }, -- blue crystal splinter
+	{ id = "frazzle tongue", chance = 100000 },  -- 22532
+	{ id = "gold coin", chance = 100000, maxCount = 101 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 10, maxCount = 25 },  -- 2152
+	{ id = "unrealized dream", chance = 98058, minCount = 1, maxCount = 2 },  -- 22598
+	{ id = "cluster of solace", chance = 98058, minCount = 1, maxCount = 2 },  -- 22396
+	{ id = "brown crystal splinter", chance = 35922, maxCount = 5 },  -- 18417
+	{ id = "green crystal splinter", chance = 33981, maxCount = 5 },  -- 18416
+	{ id = "blue crystal splinter", chance = 30097, maxCount = 5 },  -- 18418
+	{ id = "fish fin", chance = 16505 },  -- 5895
+	{ id = "hardened bone", chance = 15534 },  -- 5925
+	{ id = "iron ore", chance = 14563 },  -- 5880
+	{ id = "red piece of cloth", chance = 12621 },  -- 5911
+	{ id = "fire sword", chance = 10680 },  -- 2392
+	{ id = "violet crystal shard", chance = 10680, maxCount = 3 },  -- 18414
+	{ id = "blue crystal shard", chance = 9709, maxCount = 3 },  -- 18413
+	{ id = "green crystal shard", chance = 7767, maxCount = 3 },  -- 18415
+	{ id = "nightmare blade", chance = 7767 },  -- 7418
+	{ id = "assassin dagger", chance = 3883 },  -- 7404
+	{ id = "haunted blade", chance = 3883 },  -- 7407
 }
 
 monster.attacks = {
