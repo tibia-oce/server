@@ -67,20 +67,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "black pearl", chance = 720, maxCount = 3 },
-	{ id = "gold coin", chance = 92500, maxCount = 130 },
-	{ id = "small amethyst", chance = 500, maxCount = 2 },
-	{ id = "energy ring", chance = 990 }, -- energy ring
-	{ id = "battle shield", chance = 7760 },
-	{ id = "black shield", chance = 70 },
-	{ id = "obsidian lance", chance = 7260 },
-	{ id = "star herb", chance = 5060 },
-	{ id = "bat wing", chance = 4900, maxCount = 2 },
-	{ id = "mercenary sword", chance = 110 },
-	{ id = 8894, chance = 12530 }, -- heavily rusted armor
-	{ id = 8895, chance = 12530, maxCount = 2 }, -- rusted armor
-	{ id = "batwing hat", chance = 80 },
-	{ id = "mutated bat ear", chance = 4900 },
+	{ id = "gold coin", chance = 92550, minCount = 1, maxCount = 130 },  -- 2148
+	{ id = 9808, chance = 12633, minCount = 1, maxCount = 2 },  -- rusty armor
+	{ id = "battle shield", chance = 7801 },  -- 2513
+	{ id = "obsidian lance", chance = 7114 },  -- 2425
+	{ id = "bat wing", chance = 5102, minCount = 1, maxCount = 2 },  -- 5894
+	{ id = "star herb", chance = 5046 },  -- 2800
+	{ id = "mutated bat ear", chance = 5004 },  -- 10579
+	{ id = "energy ring", chance = 916 },  -- 2167
+	{ id = "black pearl", chance = 788, minCount = 1, maxCount = 3 },  -- 2144
+	{ id = "small amethyst", chance = 498, minCount = 1, maxCount = 2 },  -- 2150
+	{ id = "mercenary sword", chance = 117 },  -- 7386
+	{ id = "black shield", chance = 109 },  -- 2529
+	{ id = "batwing hat", chance = 104 },  -- 10016
 }
 
 monster.attacks = {

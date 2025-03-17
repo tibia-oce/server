@@ -68,15 +68,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "white pearl", chance = 3000 },
-	{ id = "gold coin", chance = 70000, maxCount = 144 },
-	{ id = "scarab coin", chance = 10000, maxCount = 3 },
-	{ id = "spellbook", chance = 6800 }, -- spellbook
-	{ id = "ring of healing", chance = 1000 }, -- ring of healing
-	{ id = "orichalcum pearl", chance = 6000, maxCount = 4 },
-	{ id = "health potion", chance = 15000 },
-	{ id = "mana potion", chance = 15000 },
-	{ id = "hieroglyph banner", chance = 27000 }, -- hieroglyph banner
+	{ id = "gold coin", chance = 69870, minCount = 1, maxCount = 153 },  -- 2148
+	{ id = 13739, chance = 26098 },  -- hieroglyph banner
+	{ id = "mana potion", chance = 15904 },  -- 7620
+	{ id = "health potion", chance = 14829 },  -- 7618
+	{ id = "scarab coin", chance = 9478, minCount = 1, maxCount = 3 },  -- 2159
+	{ id = "orichalcum pearl", chance = 6124, minCount = 1, maxCount = 4 },  -- 5022
+	{ id = 2175, chance = 5295 },  -- spellbook
+	{ id = "white pearl", chance = 2676 },  -- 2143
+	{ id = "ring of healing", chance = 1018 },  -- 2214
 }
 
 monster.attacks = {

@@ -68,31 +68,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000 }, -- gold coin
-	{ id = 3031, chance = 100000, maxCount = 98 }, -- gold coin
-	{ id = 3577, chance = 100000 }, -- meat
-	{ id = 6499, chance = 64000 }, -- demonic essence
-	{ id = "assassin star", chance = 100000, maxCount = 10 }, -- assassin star
-	{ id = 3383, chance = 68000 }, -- dark armor
-	{ id = 3033, chance = 28000, maxCount = 5 }, -- small amethyst
-	{ id = 3029, chance = 40000, maxCount = 5 }, -- small sapphire
-	{ id = 3028, chance = 32000, maxCount = 5 }, -- small diamond
-	{ id = 10298, chance = 100000 }, -- metal spike
-	{ id = 7452, chance = 32000 }, -- spiked squelcher
-	{ id = 3035, chance = 100000, maxCount = 8 }, -- platinum coin
-	{ id = 3281, chance = 24000 }, -- giant sword
-	{ id = 239, chance = 44000, maxCount = 3 }, -- great health potion
-	{ id = 238, chance = 44000, maxCount = 3 }, -- great mana potion
-	{ id = 7642, chance = 44000, maxCount = 3 }, -- great spirit potion
-	{ id = 281, chance = 48000 }, -- giant shimmering pearl (green)
-	{ id = 282, chance = 48000 }, -- giant shimmering pearl (brown)
-	{ id = 3554, chance = 4000 }, -- steel boots
-	{ id = "chaos mace", chance = 24000 }, -- chaos mace
-	{ id = "dreaded cleaver", chance = 12000 }, -- dreaded cleaver
-	{ id = 3008, chance = 24000 }, -- crystal necklace
-	{ id = 3421, chance = 16000 }, -- dark shield
-	{ id = 6299, chance = 100000 }, -- death ring
-	{ id = 5741, chance = 4000 }, -- skull helmet
+	{ id = "assassin star", chance = 100000, minCount = 1, maxCount = 10 },  -- 7368
+	{ id = 6300, chance = 100000 },  -- death ring
+	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 99 },  -- 2148
+	{ id = "meat", chance = 100000 },  -- 2666
+	{ id = "metal spike", chance = 100000 },  -- 11215
+	{ id = "platinum coin", chance = 100000, minCount = 2, maxCount = 8 },  -- 2152
+	{ id = "dark armor", chance = 66667 },  -- 2489
+	{ id = "demonic essence", chance = 61111 },  -- 6500
+	{ id = "great health potion", chance = 47222, minCount = 1, maxCount = 3 },  -- 7591
+	{ id = 7632, chance = 41667 },  -- giant shimmering pearl
+	{ id = "small sapphire", chance = 38889, minCount = 1, maxCount = 5 },  -- 2146
+	{ id = "spiked squelcher", chance = 38889 },  -- 7452
+	{ id = "small diamond", chance = 33333, minCount = 1, maxCount = 5 },  -- 2145
+	{ id = "great spirit potion", chance = 30556, minCount = 1, maxCount = 3 },  -- 8472
+	{ id = "crystal necklace", chance = 27778 },  -- 2125
+	{ id = "small amethyst", chance = 27778, minCount = 1, maxCount = 5 },  -- 2150
+	{ id = "great mana potion", chance = 22222, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "chaos mace", chance = 19444 },  -- 7427
+	{ id = "dark shield", chance = 19444 },  -- 2521
+	{ id = "giant sword", chance = 16667 },  -- 2393
+	{ id = "dreaded cleaver", chance = 13889 },  -- 7419
+	{ id = "steel boots", chance = 5556 },  -- 2645
+	{ id = "skull helmet", chance = 2778 },  -- 5741
 }
 
 monster.attacks = {

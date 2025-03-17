@@ -71,29 +71,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "golden mug", chance = 2870 },
-	{ id = "small sapphire", chance = 12000 },
-	{ id = "gold coin", chance = 97250, maxCount = 239 },
-	{ id = "energy ring", chance = 590 }, -- energy ring
-	{ id = "life ring", chance = 6250 }, -- life ring
-	{ id = "life crystal", chance = 800 },
-	{ id = "snakebite rod", chance = 930 },
-	{ id = "warrior helmet", chance = 560 },
-	{ id = "strange helmet", chance = 670 },
-	{ id = "crown armor", chance = 510 },
-	{ id = 4831, chance = 550 }, -- old parchment
-	{ id = "royal helmet", chance = 140 },
-	{ id = "tower shield", chance = 920 },
-	{ id = "power bolt", chance = 6200 },
-	{ id = "green mushroom", chance = 18200 },
-	{ id = "charmer's tiara", chance = 180 },
-	{ id = "mercenary sword", chance = 2070 },
-	{ id = "noble axe", chance = 750 },
-	{ id = "great mana potion", chance = 2000 },
-	{ id = "swamplair armor", chance = 90 },
-	{ id = "spellbook of mind control", chance = 90 },
-	{ id = "snake skin", chance = 14800 },
-	{ id = "winged tail", chance = 960 },
+	{ id = "gold coin", chance = 97235, minCount = 1, maxCount = 245 },  -- 2148
+	{ id = "green mushroom", chance = 18309 },  -- 2796
+	{ id = "snake skin", chance = 14992 },  -- 10611
+	{ id = "small sapphire", chance = 12099 },  -- 2146
+	{ id = "power bolt", chance = 6086 },  -- 2547
+	{ id = "life ring", chance = 6032 },  -- 2168
+	{ id = "energy ring", chance = 5953 },  -- 2167
+	{ id = "golden mug", chance = 2976 },  -- 2033
+	{ id = "mercenary sword", chance = 2039 },  -- 7386
+	{ id = "great mana potion", chance = 2021 },  -- 7590
+	{ id = "snakebite rod", chance = 980 },  -- 2182
+	{ id = "winged tail", chance = 939 },  -- 11230
+	{ id = "tower shield", chance = 852 },  -- 2528
+	{ id = "noble axe", chance = 812 },  -- 7456
+	{ id = "life crystal", chance = 788 },  -- 2177
+	{ id = "strange helmet", chance = 638 },  -- 2479
+	{ id = "warrior helmet", chance = 557 },  -- 2475
+	{ id = 4842, chance = 556 },  -- old parchment
+	{ id = "crown armor", chance = 518 },  -- 2487
+	{ id = "charmer's tiara", chance = 178 },  -- 3971
+	{ id = "royal helmet", chance = 120 },  -- 2498
+	{ id = "spellbook of mind control", chance = 97 },  -- 8902
+	{ id = "swamplair armor", chance = 82 },  -- 8880
 }
 
 monster.attacks = {

@@ -69,15 +69,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 9689, chance = 920 }, -- bunch of troll hair
-	{ id = 3031, chance = 100000, maxCount = 8 }, -- gold coin
-	{ id = "hand axe", chance = 3590 }, -- hand axe
-	{ id = 3361, chance = 4060 }, -- leather armor
-	{ id = 3577, chance = 27980 }, -- meat
-	{ id = 3272, chance = 3470 }, -- rapier
-	{ id = 3003, chance = 7870 }, -- rope
-	{ id = "spear", chance = 6800 }, -- spear
-	{ id = "studded club", chance = 3510 }, -- studded club
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 8 },  -- 2148
+	{ id = "meat", chance = 28248 },  -- 2666
+	{ id = 2120, chance = 8308 },  -- rope
+	{ id = "spear", chance = 7049 },  -- 2389
+	{ id = "leather armor", chance = 4632 },  -- 2467
+	{ id = "rapier", chance = 3927 },  -- 2384
+	{ id = "studded club", chance = 3575 },  -- 2448
+	{ id = "hand axe", chance = 3273 },  -- 2380
 }
 
 monster.attacks = {

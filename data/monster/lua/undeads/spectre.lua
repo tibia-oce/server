@@ -70,24 +70,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2949, chance = 9620 }, -- lyre
-	{ id = "silver brooch", chance = 850 },
-	{ id = "silver brooch", chance = 110 },
-	{ id = 3019, chance = 110 }, -- demonbone amulet
-	{ id = "gold coin", chance = 33000, maxCount = 100 },
-	{ id = "gold coin", chance = 33000, maxCount = 100 },
-	{ id = "gold coin", chance = 33000, maxCount = 97 },
-	{ id = "platinum coin", chance = 3850, maxCount = 7 },
-	{ id = "stealth ring", chance = 190 }, -- stealth ring
-	{ id = "wand of cosmic energy", chance = 9800 },
-	{ id = "blank rune", chance = 30310, maxCount = 2 },
-	{ id = "white piece of cloth", chance = 3800 },
-	{ id = "soul orb", chance = 6005 },
-	{ id = 6299, chance = 280 }, -- death ring
-	{ id = "demonic essence", chance = 6270 },
-	{ id = "relic sword", chance = 700 },
-	{ id = "great mana potion", chance = 920 },
-	{ id = "shiny stone", chance = 1000 },
+	{ id = "gold coin", chance = 99686, minCount = 1, maxCount = 301 },  -- 2148
+	{ id = "blank rune", chance = 30133, minCount = 1, maxCount = 2 },  -- 2260
+	{ id = "wand of cosmic energy", chance = 9848 },  -- 2189
+	{ id = 2071, chance = 9793 },  -- lyre
+	{ id = "demonic essence", chance = 6152 },  -- 6500
+	{ id = "soul orb", chance = 6026 },  -- 5944
+	{ id = "white piece of cloth", chance = 3668 },  -- 5909
+	{ id = "platinum coin", chance = 3497, minCount = 1, maxCount = 7 },  -- 2152
+	{ id = "shiny stone", chance = 958 },  -- 11227
+	{ id = "great mana potion", chance = 936 },  -- 7590
+	{ id = "silver brooch", chance = 821 },  -- 2134
+	{ id = "relic sword", chance = 744 },  -- 7383
+	{ id = 6300, chance = 292 },  -- death ring
+	{ id = "stealth ring", chance = 215 },  -- 2165
+	{ id = 2136, chance = 121 },  -- demonbone amulet
+	{ id = "shadow sceptre", chance = 105 },  -- 7451
 }
 
 monster.attacks = {

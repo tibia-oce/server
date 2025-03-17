@@ -81,36 +81,36 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 16119, chance = 37500, maxCount = 5 }, -- blue crystal shard
-	{ id = 20062, chance = 62500, maxCount = 4 }, -- cluster of solace
-	{ id = 16125, chance = 43750, maxCount = 3 }, -- cyan crystal fragment
-	{ id = 5954, chance = 100000 }, -- demon horn
-	{ id = 6499, chance = 812500, maxCount = 4 }, -- demonic essence
-	{ id = 20278, chance = 6250 }, -- demonic tapestry
-	{ id = 20063, chance = 81250, maxCount = 2 }, -- dream matter
-	{ id = 20276, chance = 3250, unique = true }, -- dream warden mask
-	{ id = 20279, chance = 2500 }, -- eye pod
-	{ id = 281, chance = 43750 }, -- giant shimmering pearl (green)
-	{ id = 282, chance = 43750 }, -- giant shimmering pearl (brown)
-	{ id = 3031, chance = 18750, maxCount = 100 }, -- gold coin
-	{ id = "great mana potion", chance = 6250, maxCount = 8 }, -- great mana potion
-	{ id = 7642, chance = 56250, maxCount = 8 }, -- great spirit potion
-	{ id = 16127, chance = 37500, maxCount = 3 }, -- green crystal fragment
-	{ id = 16121, chance = 18750, maxCount = 5 }, -- green crystal shard
-	{ id = 3038, chance = 18750 }, -- green gem
-	{ id = 820, chance = 12500 }, -- lightning boots
-	{ id = 825, chance = 18750 }, -- lightning robe
-	{ id = 20282, chance = 12500 }, -- nightmare hook
-	{ id = "nightmare horn", chance = 100000, unique = true }, -- nightmare horn
-	{ id = 3035, chance = 93750, maxCount = 20 }, -- platinum coin
-	{ id = 20277, chance = 6250 }, -- psychedelic tapestry
-	{ id = 16126, chance = 6250, maxCount = 3 }, -- red crystal fragment
-	{ id = 3098, chance = 6250 }, -- ring of healing
-	{ id = "skull helmet", chance = 6250 }, -- skull helmet
-	{ id = 3554, chance = 6250 }, -- steel boots
-	{ id = 7643, chance = 31250, maxCount = 8 }, -- ultimate health potion
-	{ id = 20264, chance = 81250, maxCount = 3 }, -- unrealized dream
-	{ id = 16120, chance = 18750, maxCount = 5 }, -- violet crystal shard
+	{ id = "platinum coin", chance = 93750, minCount = 10, maxCount = 20 },  -- 2152
+	{ id = "demonic essence", chance = 81250 },  -- 6500
+	{ id = "dream matter", chance = 81250, minCount = 1, maxCount = 2 },  -- 22397
+	{ id = "unrealized dream", chance = 81250, minCount = 1, maxCount = 3 },  -- 22598
+	{ id = "cluster of solace", chance = 62500, minCount = 1, maxCount = 4 },  -- 22396
+	{ id = "great spirit potion", chance = 56250, maxCount = 8 },  -- 8472
+	{ id = "cyan crystal fragment", chance = 43750, maxCount = 3 },  -- 18419
+	{ id = 7632, chance = 43750 },  -- giant shimmering pearl
+	{ id = "blue crystal shard", chance = 37500, maxCount = 5 },  -- 18413
+	{ id = "green crystal fragment", chance = 37500, maxCount = 3 },  -- 18421
+	{ id = "ultimate health potion", chance = 31250, maxCount = 8 },  -- 8473
+	{ id = "demon horn", chance = 18750 },  -- 5954
+	{ id = "gold coin", chance = 18750, maxCount = 100 },  -- 2148
+	{ id = "green crystal shard", chance = 18750, maxCount = 5 },  -- 18415
+	{ id = "green gem", chance = 18750 },  -- 2155
+	{ id = "lightning robe", chance = 18750 },  -- 7898
+	{ id = "violet crystal shard", chance = 18750, maxCount = 5 },  -- 18414
+	{ id = "lightning boots", chance = 12500 },  -- 7893
+	{ id = "nightmare hook", chance = 12500 },  -- 22616
+	{ id = "noble axe", chance = 12500, maxCount = 2 },  -- 7456
+	{ id = "crystalline armor", chance = 6250 },  -- 8878
+	{ id = "demonic tapestry", chance = 6250 },  -- 22612
+	{ id = "dream warden mask", chance = 6250 },  -- 22610
+	{ id = "great mana potion", chance = 6250, maxCount = 8 },  -- 7590
+	{ id = "nightmare horn", chance = 6250 },  -- 22608
+	{ id = "psychedelic tapestry", chance = 6250 },  -- 22611
+	{ id = "red crystal fragment", chance = 6250, maxCount = 3 },  -- 18420
+	{ id = "ring of healing", chance = 6250 },  -- 2214
+	{ id = "skull helmet", chance = 6250 },  -- 5741
+	{ id = "steel boots", chance = 6250 },  -- 2645
 }
 
 monster.attacks = {

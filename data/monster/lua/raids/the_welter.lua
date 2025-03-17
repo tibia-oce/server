@@ -81,25 +81,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 19083, chance = 200 }, -- silver raid token
-	{ id = 19356, chance = 200 }, -- triple bolt crossbow
-	{ id = 3369, chance = 2000 }, -- warrior helmet
-	{ id = 19357, chance = 500 }, -- shrunken head necklace
-	{ id = 3079, chance = 1000 }, -- boots of haste
-	{ id = 3436, chance = 2000 }, -- medusa shield
-	{ id = 3284, chance = 2000 }, -- ice rapier
-	{ id = 3029, chance = 20000, maxCount = 2 }, -- small sapphire
-	{ id = 3370, chance = 3000 }, -- knight armor
-	{ id = 236, chance = 20000, maxCount = 2 }, -- strong health potion
-	{ id = "sacred tree amulet", chance = 1000 }, -- sacred tree amulet
-	{ id = 3081, chance = 20000 }, -- stone skin amulet
-	{ id = 9058, chance = 800 }, -- gold ingot
-	{ id = "royal helmet", chance = 500 }, -- royal helmet
-	{ id = 281, chance = 600 }, -- giant shimmering pearl (green)
-	{ id = 4839, chance = 2000 }, -- hydra egg
-	{ id = "strong mana potion", chance = 20000, maxCount = 2 }, -- strong mana potion
-	{ id = 3035, chance = 20000, maxCount = 10 }, -- platinum coin
-	{ id = 3031, chance = 20000, maxCount = 100 }, -- gold coin
+	{ id = 7632, chance = 100000 },  -- giant shimmering pearl
+	{ id = "gold coin", chance = 100000, minCount = 30, maxCount = 50 },  -- 2148
+	{ id = "hydra egg", chance = 25000 },  -- 4850
+	{ id = "platinum coin", chance = 100000, minCount = 5, maxCount = 20 },  -- 2152
+	{ id = "royal helmet", chance = 25000 },  -- 2498
+	{ id = "stone skin amulet", chance = 75000 },  -- 2197
+	{ id = "strong mana potion", chance = 75000, maxCount = 3 },  -- 7589
+	{ id = "strong health potion", chance = 25000, maxCount = 3 },  -- 7588
+	{ id = "small sapphire", chance = 25000, maxCount = 5 },  -- 2146
+	{ id = "silver raid token", chance = 25000 },  -- 21400
+	{ id = "warrior helmet", chance = 25000 },  -- 2475
 }
 
 monster.attacks = {

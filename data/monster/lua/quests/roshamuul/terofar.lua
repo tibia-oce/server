@@ -72,39 +72,43 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 20062, chance = 100000 }, -- cluster of solace
-	{ id = 20264, chance = 100000 }, -- unrealized dream
-	{ id = 20063, chance = 100000 }, -- dream matter
-	{ id = 6499, chance = 100000 }, -- demonic essence
-	{ id = 5954, chance = 100000 }, -- demon horn
-	{ id = 20276, chance = 3560 }, -- dream warden mask
-	{ id = 3031, chance = 100000, maxCount = 200 }, -- gold coin
-	{ id = 3035, chance = 100000, maxCount = 50 }, -- platinum coin
-	{ id = "great mana potion", chance = 33330, maxCount = 10 }, -- great mana potion
-	{ id = 7643, chance = 3890, maxCount = 10 }, -- ultimate health potion
-	{ id = 7642, chance = 2780, maxCount = 5 }, -- great spirit potion
-	{ id = 16119, chance = 22220, maxCount = 8 }, -- blue crystal shard
-	{ id = 16120, chance = 33330, maxCount = 8 }, -- violet crystal shard
-	{ id = 16121, chance = 44440, maxCount = 8 }, -- green crystal shard
-	{ id = 9058, chance = 16670 }, -- gold ingot
-	{ id = 281, chance = 38890 }, -- giant shimmering pearl (green)
-	{ id = 282, chance = 38890 }, -- giant shimmering pearl (brown)
-	{ id = 3420, chance = 11110 }, -- demon shield
-	{ id = 3415, chance = 22220 }, -- guardian shield
-	{ id = 3419, chance = 11110 }, -- crown shield
-	{ id = 3414, chance = 960 }, -- mastermind shield
-	{ id = 8063, chance = 5560 }, -- paladin armor
-	{ id = 8051, chance = 11110 }, -- voltage armor
-	{ id = 8049, chance = 6110 }, -- lavos armor
-	{ id = 3038, chance = 16670 }, -- green gem
-	{ id = 3041, chance = 11110 }, -- blue gem
-	{ id = 8054, chance = 410 }, -- earthborn titan armor
-	{ id = 3366, chance = 610 }, -- magic plate armor
-	{ id = 3554, chance = 910 }, -- steel boots
-	{ id = "royal helmet", chance = 910 }, -- royal helmet
-	{ id = 813, chance = 2910 }, -- terra boots
-	{ id = 3079, chance = 1910 }, -- boots of haste
-	{ id = "skull helmet", chance = 1910 }, -- skull helmet
+	{ id = "cluster of solace", chance = 100000 },  -- 22396
+	{ id = "demon horn", chance = 100000 },  -- 5954
+	{ id = "demonic essence", chance = 100000 },  -- 6500
+	{ id = "dream matter", chance = 100000 },  -- 22397
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 60 },  -- 2152
+	{ id = "unrealized dream", chance = 100000 },  -- 22598
+	{ id = 7632, chance = 41811 },  -- giant shimmering pearl
+	{ id = "violet crystal shard", chance = 37958, minCount = 1, maxCount = 8 },  -- 18414
+	{ id = "great mana potion", chance = 33526, minCount = 1, maxCount = 10 },  -- 7590
+	{ id = "great spirit potion", chance = 33333, minCount = 1, maxCount = 10 },  -- 8472
+	{ id = "ultimate health potion", chance = 32563, minCount = 1, maxCount = 10 },  -- 8473
+	{ id = "blue crystal shard", chance = 31599, minCount = 1, maxCount = 8 },  -- 18413
+	{ id = "green crystal shard", chance = 30058, minCount = 1, maxCount = 8 },  -- 18415
+	{ id = "green gem", chance = 25626 },  -- 2155
+	{ id = "small diamond", chance = 17726, minCount = 1, maxCount = 25 },  -- 2145
+	{ id = "small ruby", chance = 15029, minCount = 1, maxCount = 25 },  -- 2147
+	{ id = "small topaz", chance = 14836, minCount = 1, maxCount = 25 },  -- 9970
+	{ id = "blue gem", chance = 14451 },  -- 2158
+	{ id = "terra boots", chance = 14066 },  -- 7886
+	{ id = "small sapphire", chance = 13680, minCount = 1, maxCount = 25 },  -- 2146
+	{ id = "gold coin", chance = 13295, minCount = 20, maxCount = 177 },  -- 2148
+	{ id = "gold ingot", chance = 12717 },  -- 9971
+	{ id = "small amethyst", chance = 12524, minCount = 1, maxCount = 25 },  -- 2150
+	{ id = "paladin armor", chance = 11753 },  -- 8891
+	{ id = "small emerald", chance = 11175, minCount = 1, maxCount = 25 },  -- 2149
+	{ id = "crown shield", chance = 10405 },  -- 2519
+	{ id = "dream warden mask", chance = 10019 },  -- 22610
+	{ id = "demon shield", chance = 6166 },  -- 2520
+	{ id = "boots of haste", chance = 5395 },  -- 2195
+	{ id = "steel boots", chance = 5395 },  -- 2645
+	{ id = "skull helmet", chance = 4239 },  -- 5741
+	{ id = "royal helmet", chance = 2697 },  -- 2498
+	{ id = "magic plate armor", chance = 1734 },  -- 2472
+	{ id = "guardian shield", chance = 1541 },  -- 2515
+	{ id = "voltage armor", chance = 1349 },  -- 8879
+	{ id = "mastermind shield", chance = 578 },  -- 2514
+	{ id = "lavos armor", chance = 385 },  -- 8877
 }
 
 monster.attacks = {

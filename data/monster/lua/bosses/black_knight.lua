@@ -81,28 +81,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 23000, maxCount = 80 },
-	{ id = "gold coin", chance = 23000, maxCount = 56 },
-	{ id = "spear", chance = 30800, maxCount = 3 },
-	{ id = "brown bread", chance = 21600, maxCount = 2 },
-	{ id = 3003, chance = 16020 }, -- rope
-	{ id = "brass legs", chance = 12200 },
-	{ id = 2381, chance = 11850 },
-	{ id = "plate armor", chance = 10370 },
-	{ id = "steel helmet", chance = 11220 },
-	{ id = "two handed sword", chance = 8470 },
-	{ id = "battle hammer", chance = 6910 },
-	{ id = "warrior helmet", chance = 4710 },
-	{ id = "knight axe", chance = 2630 },
-	{ id = "dark helmet", chance = 2430 },
-	{ id = "dark armor", chance = 2020 },
-	{ id = "knight legs", chance = 1050 },
-	{ id = "knight armor", chance = 750 },
-	{ id = "ruby necklace", chance = 750 },
-	{ id = "lightning legs", chance = 580 },
-	{ id = "boots of haste", chance = 400 },
-	{ id = "dragon lance", chance = 290 },
-	{ id = "piggy bank", chance = 120 },
+	{ id = "gold coin", chance = 48646, minCount = 1, maxCount = 143 },  -- 2148
+	{ id = "spear", chance = 29517, minCount = 1, maxCount = 3 },  -- 2389
+	{ id = "brown bread", chance = 20357, minCount = 1, maxCount = 2 },  -- 2691
+	{ id = 2120, chance = 14381 },  -- rope
+	{ id = "brass legs", chance = 13069 },  -- 2478
+	{ id = 2381, chance = 12566 },  -- halberd
+	{ id = "plate armor", chance = 10947 },  -- 2463
+	{ id = "steel helmet", chance = 10416 },  -- 2457
+	{ id = "two handed sword", chance = 9578 },  -- 2377
+	{ id = "battle hammer", chance = 6953 },  -- 2417
+	{ id = "warrior helmet", chance = 4719 },  -- 2475
+	{ id = "knight axe", chance = 2653 },  -- 2430
+	{ id = "dark helmet", chance = 2402 },  -- 2490
+	{ id = "dark armor", chance = 2011 },  -- 2489
+	{ id = "knight legs", chance = 1033 },  -- 2477
+	{ id = "knight armor", chance = 726 },  -- 2476
+	{ id = "ruby necklace", chance = 726 },  -- 2133
+	{ id = "lightning legs", chance = 586 },  -- 7895
+	{ id = "boots of haste", chance = 391 },  -- 2195
+	{ id = "dragon lance", chance = 307 },  -- 2414
+	{ id = "piggy bank", chance = 112 },  -- 2114
 }
 
 monster.attacks = {

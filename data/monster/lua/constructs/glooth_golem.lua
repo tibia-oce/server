@@ -71,25 +71,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 5880, chance = 530 }, -- iron ore
-	{ id = 21183, chance = 720 }, -- glooth amulet
-	{ id = 21170, chance = 1720 }, -- gearwheel chain
-	{ id = 21165, chance = 370 }, -- rubber cap
-	{ id = 3031, chance = 100000, maxCount = 200 }, -- gold coin
-	{ id = "bronze gear wheel", chance = 1470 }, -- bronze gear wheel
-	{ id = "gear wheel", chance = 690 }, -- gear wheel
-	{ id = 21143, chance = 1970 }, -- glooth sandwich
-	{ id = 3035, chance = 6010, maxCount = 4 }, -- platinum coin
-	{ id = 21103, chance = 2840 }, -- glooth injection tube
-	{ id = "ultimate health potion", chance = 4470 }, -- ultimate health potion
-	{ id = 238, chance = 9280 }, -- great mana potion
-	{ id = 21167, chance = 690 }, -- heat core
-	{ id = "glooth blade", chance = 440 }, -- glooth blade
-	{ id = 21178, chance = 230 }, -- glooth club
-	{ id = 21180, chance = 290 }, -- glooth axe
-	{ id = 3037, chance = 730 }, -- yellow gem
-	{ id = 9057, chance = 1560, maxCount = 4 }, -- small topaz
-	{ id = 3032, chance = 1590, maxCount = 4 }, -- small emerald
+	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 60180, minCount = 1, maxCount = 4 },  -- 2152
+	{ id = "glooth injection tube", chance = 15108 },  -- 23474
+	{ id = "great mana potion", chance = 11966 },  -- 7590
+	{ id = "glooth sandwich", chance = 10029 },  -- 23514
+	{ id = "small emerald", chance = 8074, minCount = 1, maxCount = 4 },  -- 2149
+	{ id = "small topaz", chance = 8016, minCount = 1, maxCount = 4 },  -- 9970
+	{ id = "ultimate health potion", chance = 4997 },  -- 8473
+	{ id = "bronze gear wheel", chance = 2987 },  -- 24124
+	{ id = "iron ore", chance = 1987 },  -- 5880
+	{ id = "glooth spear", chance = 1555 },  -- 23529
+	{ id = "glooth amulet", chance = 1529 },  -- 23554
+	{ id = "glooth axe", chance = 1522 },  -- 23551
+	{ id = "heat core", chance = 1520 },  -- 23538
+	{ id = 9690, chance = 1495 },  -- gear wheel
+	{ id = "glooth blade", chance = 1483 },  -- 23550
+	{ id = "gearwheel chain", chance = 994 },  -- 23541
+	{ id = "rubber cap", chance = 984 },  -- 23536
+	{ id = "glooth club", chance = 942 },  -- 23549
+	{ id = "yellow gem", chance = 835 },  -- 2154
+	{ id = "green gem", chance = 103 },  -- 2155
 }
 
 monster.attacks = {

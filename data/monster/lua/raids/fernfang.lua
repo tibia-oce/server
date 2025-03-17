@@ -78,25 +78,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 9646, chance = 100000 }, -- book of prayers
-	{ id = 3031, chance = 100000, maxCount = 95 }, -- gold coin
-	{ id = 3035, chance = 93000, maxCount = 3 }, -- platinum coin
-	{ id = 3736, chance = 86000 }, -- star herb
-	{ id = 11492, chance = 53000 }, -- rope belt
-	{ id = 3050, chance = 40000 }, -- power ring
-	{ id = "safety pin", chance = 40000 }, -- safety pin
-	{ id = 3037, chance = 33000 }, -- yellow gem
-	{ id = 2885, chance = 20000 }, -- brown flask
-	{ id = 237, chance = 20000 }, -- strong mana potion
-	{ id = 2914, chance = 13000 }, -- lamp
-	{ id = 3289, chance = 13000 }, -- staff
-	{ id = 5786, chance = 13000 }, -- wooden whistle
-	{ id = 3147, chance = 7000 }, -- blank rune
-	{ id = "bread", chance = 7000 }, -- bread
-	{ id = 3563, chance = 7000 }, -- green tunic
-	{ id = 3061, chance = 7000 }, -- life crystal
-	{ id = "sling herb", chance = 7000 }, -- sling herb
-	{ id = 3012, chance = 7000 }, -- wolf tooth chain
+	{ id = "book of prayers", chance = 100000 },  -- 10563
+	{ id = "gold coin", chance = 100000, minCount = 4, maxCount = 99 },  -- 2148
+	{ id = "platinum coin", chance = 97826, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "star herb", chance = 91304 },  -- 2800
+	{ id = "rope belt", chance = 56522 },  -- 12448
+	{ id = "power ring", chance = 45652 },  -- 2166
+	{ id = "yellow gem", chance = 45652 },  -- 2154
+	{ id = "safety pin", chance = 41304 },  -- 12449
+	{ id = "blank rune", chance = 17391 },  -- 2260
+	{ id = "bread", chance = 13043 },  -- 2689
+	{ id = "green tunic", chance = 13043 },  -- 2652
+	{ id = "strong mana potion", chance = 13043 },  -- 7589
+	{ id = "brown flask", chance = 10870 },  -- 2015
+	{ id = 2044, chance = 10870 },  -- lamp
+	{ id = 2401, chance = 10870 },  -- staff
+	{ id = "wolf tooth chain", chance = 8696 },  -- 2129
+	{ id = "sling herb", chance = 6522 },  -- 2802
+	{ id = "wooden whistle", chance = 6522 },  -- 5786
+	{ id = "life crystal", chance = 2174 },  -- 2177
 }
 
 monster.attacks = {
