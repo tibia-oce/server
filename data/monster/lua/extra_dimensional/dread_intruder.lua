@@ -70,29 +70,30 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
-	{ id = 3031, chance = 100000, maxCount = 89 }, -- gold coin
-	{ id = 3035, chance = 100000, maxCount = 8 }, -- platinum coin
-	{ id = "energy drink", chance = 15000 }, -- energy drink
-	{ id = 23535, chance = 15000 }, -- energy bar
-	{ id = 23519, chance = 15000 }, -- frozen lightning
-	{ id = 23516, chance = 8000 }, -- instable proto matter
-	{ id = 7642, chance = 14000 }, -- great spirit potion
-	{ id = 7643, chance = 13500 }, -- ultimate health potion
-	{ id = 238, chance = 12700 }, -- great mana potion
-	{ id = "energy ball", chance = 11800 }, -- energy ball
-	{ id = 23510, chance = 9600 }, -- odd organ
-	{ id = "blue crystal splinter", chance = 9500 }, -- blue crystal splinter
-	{ id = 16125, chance = 6200 }, -- cyan crystal fragment
-	{ id = 3030, chance = 5400, maxCount = 2 }, -- small ruby
-	{ id = 3029, chance = 5400, maxCount = 2 }, -- small sapphire
-	{ id = 3033, chance = 5000, maxCount = 2 }, -- small amethyst
-	{ id = 16120, chance = 4500 }, -- violet crystal shard
-	{ id = 3036, chance = 1000 }, -- violet gem
-	{ id = 23533, chance = 450 }, -- ring of red plasma
-	{ id = 23542, chance = 230 }, -- collar of blue plasma
-	{ id = 23543, chance = 230 }, -- collar of green plasma
-	{ id = 23529, chance = 230 }, -- ring of blue plasma
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 8 },  -- 2152
+	{ id = "energy drink", chance = 20860 },  -- 26201
+	{ id = "energy bar", chance = 19895 },  -- 26191
+	{ id = "frozen lightning", chance = 15967 },  -- 26175
+	{ id = "instable proto matter", chance = 14938 },  -- 26172
+	{ id = "great mana potion", chance = 13305 },  -- 7590
+	{ id = "great spirit potion", chance = 12944 },  -- 8472
+	{ id = "ultimate health potion", chance = 12734 },  -- 8473
+	{ id = "energy ball", chance = 11974 },  -- 26179
+	{ id = "odd organ", chance = 9808 },  -- 26166
+	{ id = "blue crystal splinter", chance = 8967 },  -- 18418
+	{ id = "cyan crystal fragment", chance = 5755 },  -- 18419
+	{ id = "small ruby", chance = 4710, minCount = 1, maxCount = 2 },  -- 2147
+	{ id = "small sapphire", chance = 4640, minCount = 1, maxCount = 2 },  -- 2146
+	{ id = "violet crystal shard", chance = 4500 },  -- 18414
+	{ id = "small amethyst", chance = 4435, minCount = 1, maxCount = 2 },  -- 2150
+	{ id = "violet gem", chance = 1002 },  -- 2153
+	{ id = 26189, chance = 302 },  -- ring of red plasma
+	{ id = "ring of green plasma", chance = 280 },  -- 26187
+	{ id = 26198, chance = 253 },  -- collar of blue plasma
+	{ id = 26185, chance = 253 },  -- ring of blue plasma
+	{ id = "collar of green plasma", chance = 237 },  -- 26199
+	{ id = 26200, chance = 210 },  -- collar of red plasma
 }
 
 monster.attacks = {

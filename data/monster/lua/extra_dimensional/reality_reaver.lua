@@ -70,28 +70,32 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
-	{ id = 3035, chance = 100000, maxCount = 6 }, -- platinum coin
-	{ id = 23545, chance = 15000 }, -- energy drink
-	{ id = 23535, chance = 15000 }, -- energy bar
-	{ id = "energy vein", chance = 15000 }, -- energy vein
-	{ id = 23520, chance = 14700 }, -- plasmatic lightning
-	{ id = 7642, chance = 11400, maxCount = 2 }, -- great spirit potion
-	{ id = 238, chance = 10300, maxCount = 2 }, -- great mana potion
-	{ id = 239, chance = 9700, maxCount = 2 }, -- great health potion
-	{ id = 23506, chance = 9700 }, -- plasma pearls
-	{ id = 23515, chance = 9600 }, -- dangerous proto matter
-	{ id = "blue crystal splinter", chance = 7900 }, -- blue crystal splinter
-	{ id = 16126, chance = 6000 }, -- red crystal fragment
-	{ id = 16120, chance = 4400 }, -- violet crystal shard
-	{ id = 16119, chance = 4000 }, -- blue crystal shard
-	{ id = 3039, chance = 2600 }, -- red gem
-	{ id = 23543, chance = 630 }, -- collar of green plasma
-	{ id = 828, chance = 520 }, -- lightning headband
-	{ id = 3036, chance = 370 }, -- violet gem
-	{ id = 23529, chance = 370 }, -- ring of blue plasma
-	{ id = 23544, chance = 300 }, -- collar of red plasma
-	{ id = "ring of green plasma", chance = 220 }, -- ring of green plasma
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 6 },  -- 2152
+	{ id = "energy drink", chance = 17649, minCount = 1, maxCount = 2 },  -- 26201
+	{ id = "energy bar", chance = 17501, minCount = 1, maxCount = 2 },  -- 26191
+	{ id = "energy vein", chance = 15255 },  -- 26164
+	{ id = "plasmatic lightning", chance = 14753 },  -- 26176
+	{ id = "great spirit potion", chance = 11118, minCount = 1, maxCount = 2 },  -- 8472
+	{ id = "great mana potion", chance = 10929, minCount = 1, maxCount = 2 },  -- 7590
+	{ id = "great health potion", chance = 10808, minCount = 1, maxCount = 2 },  -- 7591
+	{ id = "dangerous proto matter", chance = 9858 },  -- 26171
+	{ id = "plasma pearls", chance = 9831 },  -- 26162
+	{ id = "blue crystal splinter", chance = 8042, minCount = 1, maxCount = 2 },  -- 18418
+	{ id = "red crystal fragment", chance = 6160 },  -- 18420
+	{ id = "violet crystal shard", chance = 4079 },  -- 18414
+	{ id = "blue crystal shard", chance = 4026 },  -- 18413
+	{ id = "red gem", chance = 2596 },  -- 2156
+	{ id = "wand of starstorm", chance = 1040 },  -- 8920
+	{ id = "lightning headband", chance = 520 },  -- 7901
+	{ id = "violet gem", chance = 417 },  -- 2153
+	{ id = 26185, chance = 386 },  -- ring of blue plasma
+	{ id = "focus cape", chance = 381 },  -- 8871
+	{ id = "ring of green plasma", chance = 363 },  -- 26187
+	{ id = "collar of green plasma", chance = 291 },  -- 26199
+	{ id = 26198, chance = 287 },  -- collar of blue plasma
+	{ id = 26189, chance = 278 },  -- ring of red plasma
+	{ id = 26200, chance = 260 },  -- collar of red plasma
 }
 
 monster.attacks = {

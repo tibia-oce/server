@@ -77,30 +77,48 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
-	{ id = 3035, chance = 100000, maxCount = 20 }, -- platinum coin
-	{ id = 16119, chance = 10000, maxCount = 3 }, -- blue crystal shard
-	{ id = 238, chance = 10000, maxCount = 5 }, -- great mana potion
-	{ id = 7642, chance = 10000, maxCount = 5 }, -- great spirit potion
-	{ id = 16121, chance = 10000, maxCount = 3 }, -- green crystal shard
-	{ id = 7643, chance = 10000, maxCount = 5 }, -- ultimate health potion
-	{ id = 16120, chance = 10000, maxCount = 3 }, -- violet crystal shard
-	{ id = 23507, chance = 10000 }, -- crystallized anger
-	{ id = "energy vein", chance = 10000 }, -- energy vein
-	{ id = 281, chance = 5000 }, -- giant shimmering pearl (green)
-	{ id = 282, chance = 5000 }, -- giant shimmering pearl (brown)
-	{ id = "odd organ", chance = 10000 }, -- odd organ
-	{ id = 23520, chance = 10000 }, -- plasmatic lightning
-	{ id = 3038, chance = 10000 }, -- green gem
-	{ id = 22721, chance = 100000 }, -- gold token
-	{ id = "amber staff", chance = 10000 }, -- amber staff
-	{ id = 828, chance = 8000 }, -- lightning headband
-	{ id = 23533, chance = 8000 }, -- ring of red plasma
-	{ id = 3036, chance = 8000 }, -- violet gem
-	{ id = 23474, chance = 6000, unique = true }, -- tiara of power
-	{ id = 23477, chance = 6000, unique = true }, -- void boots
-	{ id = 23686, chance = 4000, unique = true }, -- devourer core
-	{ id = 23684, chance = 2000, unique = true }, -- crackling egg
+	{ id = "energy bar", chance = 0, maxCount = 5 },  -- 26191
+	{ id = "energy drink", chance = 0, maxCount = 5 },  -- 26201
+	{ id = "gold coin", chance = 0, minCount = 100, maxCount = 200 },  -- 2148
+	{ id = "gold token", chance = 0, minCount = 12, maxCount = 17 },  -- 25377
+	{ id = "mysterious remains", chance = 0 },  -- 26165
+	{ id = "platinum coin", chance = 0, minCount = 5, maxCount = 35 },  -- 2152
+	{ id = "crystallized anger", chance = 0 },  -- 26163
+	{ id = "energy vein", chance = 0 },  -- 26164
+	{ id = 26133, chance = 0 },  -- void boots
+	{ id = "green crystal shard", chance = 0, maxCount = 3 },  -- 18415
+	{ id = "blue crystal shard", chance = 0, maxCount = 3 },  -- 18413
+	{ id = 26130, chance = 0 },  -- tiara of power
+	{ id = "violet crystal shard", chance = 0, maxCount = 3 },  -- 18414
+	{ id = "great mana potion", chance = 0, minCount = 5, maxCount = 10 },  -- 7590
+	{ id = "great spirit potion", chance = 0, minCount = 5, maxCount = 10 },  -- 8472
+	{ id = "ultimate health potion", chance = 0, minCount = 5, maxCount = 10 },  -- 8473
+	{ id = "blue gem", chance = 0 },  -- 2158
+	{ id = "small ruby", chance = 0, maxCount = 20 },  -- 2147
+	{ id = "small sapphire", chance = 0, maxCount = 20 },  -- 2146
+	{ id = 26185, chance = 0 },  -- ring of blue plasma
+	{ id = "small amethyst", chance = 0, maxCount = 20 },  -- 2150
+	{ id = "yellow gem", chance = 0 },  -- 2154
+	{ id = "small topaz", chance = 0, maxCount = 20 },  -- 9970
+	{ id = "green gem", chance = 0 },  -- 2155
+	{ id = "red gem", chance = 0 },  -- 2156
+	{ id = "small emerald", chance = 0, maxCount = 20 },  -- 2149
+	{ id = 26189, chance = 0 },  -- ring of red plasma
+	{ id = "skull staff", chance = 0 },  -- 2436
+	{ id = 7632, chance = 0 },  -- giant shimmering pearl
+	{ id = "collar of green plasma", chance = 0 },  -- 26199
+	{ id = 26200, chance = 0 },  -- collar of red plasma
+	{ id = "ring of green plasma", chance = 0 },  -- 26187
+	{ id = 26198, chance = 0 },  -- collar of blue plasma
+	{ id = "lightning headband", chance = 0 },  -- 7901
+	{ id = "bonebreaker", chance = 0 },  -- 7428
+	{ id = "amber staff", chance = 0 },  -- 7426
+	{ id = "violet gem", chance = 0 },  -- 2153
+	{ id = "crystalline armor", chance = 0 },  -- 8878
+	{ id = "golden legs", chance = 0 },  -- 2470
+	{ id = "composite hornbow", chance = 0 },  -- 8855
+	{ id = "devourer core", chance = 0 },  -- 26342
+	{ id = "runed sword", chance = 0 },  -- 7417
 }
 
 monster.attacks = {

@@ -84,63 +84,64 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3043, chance = 10000, maxCount = 6 }, -- crystal coin
-	{ id = 16124, chance = 10000, maxCount = 15 }, -- blue crystal splinter
-	{ id = 7368, chance = 10000, maxCount = 100 }, -- assassin star
-	{ id = 20264, chance = 7000, maxCount = 3 }, -- unrealized dream
-	{ id = 6499, chance = 1000, maxCount = 2 }, -- demonic essence
-	{ id = 7643, chance = 10000, maxCount = 100 }, -- ultimate health potion
-	{ id = 238, chance = 10000, maxCount = 100 }, -- great mana potion
-	{ id = 7642, chance = 10000, maxCount = 100 }, -- great spirit potion
-	{ id = 20063, chance = 2000, maxCount = 3 }, -- dream matter
-	{ id = 20062, chance = 12000, maxCount = 14 }, -- cluster of solace
-	{ id = 3041, chance = 10000, maxCount = 2 }, -- blue gem
-	{ id = 16122, chance = 10000, maxCount = 10 }, -- green crystal splinter
-	{ id = 16120, chance = 10000, maxCount = 15 }, -- violet crystal shard
-	{ id = 6528, chance = 6000 }, -- infernal bolt
-	{ id = 20278, chance = 6000 }, -- demonic tapestry
-	{ id = 5914, chance = 6000 }, -- yellow piece of cloth
-	{ id = 5911, chance = 6000 }, -- red piece of cloth
-	{ id = 20276, chance = 1100 }, -- dream warden mask
-	{ id = 281, chance = 6000 }, -- giant shimmering pearl (green)
-	{ id = 5954, chance = 6000 }, -- demon horn
-	{ id = "nightmare horn", chance = 6000, unique = true }, -- nightmare horn
-	{ id = 3052, chance = 6000 }, -- life ring
-	{ id = 20280, chance = 6000 }, -- nightmare beacon
-	{ id = 20279, chance = 6000 }, -- eye pod
-	{ id = 20277, chance = 6000 }, -- psychedelic tapestry
-	{ id = 20064, chance = 800 }, -- crude umbral blade
-	{ id = 20067, chance = 1000 }, -- crude umbral slayer
-	{ id = 20070, chance = 1000 }, -- crude umbral axe
-	{ id = 20073, chance = 1000 }, -- crude umbral chopper
-	{ id = 20079, chance = 1000 }, -- crude umbral hammer
-	{ id = 20076, chance = 500 }, -- crude umbral mace
-	{ id = 20082, chance = 1000 }, -- crude umbral bow
-	{ id = 20085, chance = 400 }, -- crude umbral crossbow
-	{ id = 20088, chance = 700 }, -- crude umbral spellbook
-	{ id = 20065, chance = 100 }, -- umbral blade
-	{ id = 20068, chance = 200 }, -- umbral slayer
-	{ id = 20071, chance = 1000 }, -- umbral axe
-	{ id = 20074, chance = 500 }, -- umbral chopper
-	{ id = 20080, chance = 1000 }, -- umbral hammer
-	{ id = 20077, chance = 500 }, -- umbral mace
-	{ id = 20083, chance = 250 }, -- umbral bow
-	{ id = "umbral crossbow", chance = 400 }, -- umbral crossbow
-	{ id = 20089, chance = 200 }, -- umbral spellbook
-	{ id = 20066, chance = 300 }, -- umbral masterblade
-	{ id = 20069, chance = 700 }, -- umbral master slayer
-	{ id = 20072, chance = 500 }, -- umbral master axe
-	{ id = 20075, chance = 300 }, -- umbral master chopper
-	{ id = 20081, chance = 250 }, -- umbral master hammer
-	{ id = 20078, chance = 300 }, -- umbral master mace
-	{ id = 20084, chance = 1300 }, -- umbral master bow
-	{ id = 20087, chance = 1000 }, -- umbral master crossbow
-	{ id = 20090, chance = 140 }, -- umbral master spellbook
-	{ id = 10345, chance = 6000 }, -- solitude charm
-	{ id = 10344, chance = 6000 }, -- twin sun charm
-	{ id = "spiritual charm", chance = 6000 }, -- spiritual charm
-	{ id = 10342, chance = 6000 }, -- unity charm
-	{ id = 10341, chance = 6000 }, -- phoenix charm
+	{ id = "cluster of solace", chance = 0, minCount = 1, maxCount = 14 },  -- 22396
+	{ id = "crystal coin", chance = 0, minCount = 1, maxCount = 6 },  -- 2160
+	{ id = "dream matter", chance = 0 },  -- 22397
+	{ id = "phoenix charm", chance = 0 },  -- 11258
+	{ id = "solitude charm", chance = 0 },  -- 11262
+	{ id = "spiritual charm", chance = 0 },  -- 11260
+	{ id = "twin sun charm", chance = 0 },  -- 11261
+	{ id = "unity charm", chance = 0 },  -- 11259
+	{ id = "demonic essence", chance = 0 },  -- 6500
+	{ id = "unrealized dream", chance = 0, minCount = 1, maxCount = 3 },  -- 22598
+	{ id = "red piece of cloth", chance = 0 },  -- 5911
+	{ id = "yellow piece of cloth", chance = 0 },  -- 5914
+	{ id = "blue crystal splinter", chance = 0, maxCount = 15 },  -- 18418
+	{ id = "assassin star", chance = 0, maxCount = 100 },  -- 7368
+	{ id = "great mana potion", chance = 0, maxCount = 100 },  -- 7590
+	{ id = "great spirit potion", chance = 0, maxCount = 100 },  -- 8472
+	{ id = "green crystal splinter", chance = 0, maxCount = 15 },  -- 18416
+	{ id = "ultimate health potion", chance = 0, maxCount = 100 },  -- 8473
+	{ id = "demon horn", chance = 0 },  -- 5954
+	{ id = "blue gem", chance = 0 },  -- 2158
+	{ id = "green crystal shard", chance = 0, maxCount = 15 },  -- 18415
+	{ id = "brown crystal splinter", chance = 0, maxCount = 15 },  -- 18417
+	{ id = "infernal bolt", chance = 0, maxCount = 100 },  -- 6529
+	{ id = 7632, chance = 0 },  -- giant shimmering pearl
+	{ id = "life ring", chance = 0 },  -- 2168
+	{ id = "blue crystal shard", chance = 0, maxCount = 15 },  -- 18413
+	{ id = "violet crystal shard", chance = 0, maxCount = 15 },  -- 18414
+	{ id = "crude umbral crossbow", chance = 0 },  -- 22419
+	{ id = "crude umbral blade", chance = 0 },  -- 22398
+	{ id = "crude umbral axe", chance = 0 },  -- 22404
+	{ id = "crude umbral spellbook", chance = 0 },  -- 22422
+	{ id = "dream warden mask", chance = 0 },  -- 22610
+	{ id = "nightmare horn", chance = 0 },  -- 22608
+	{ id = "crude umbral mace", chance = 0 },  -- 22410
+	{ id = "demonic tapestry", chance = 0 },  -- 22612
+	{ id = "eye pod", chance = 0 },  -- 22613
+	{ id = "nightmare hook", chance = 0 },  -- 22616
+	{ id = "crude umbral chopper", chance = 0 },  -- 22407
+	{ id = "crude umbral bow", chance = 0 },  -- 22416
+	{ id = 22614, chance = 0 },  -- nightmare beacon
+	{ id = "umbral crossbow", chance = 0 },  -- 22420
+	{ id = "boots of haste", chance = 0 },  -- 2195
+	{ id = "crude umbral hammer", chance = 0 },  -- 22413
+	{ id = "giant sword", chance = 0 },  -- 2393
+	{ id = "golden legs", chance = 0 },  -- 2470
+	{ id = "magma coat", chance = 0 },  -- 7899
+	{ id = "psychedelic tapestry", chance = 0 },  -- 22611
+	{ id = "umbral master axe", chance = 0 },  -- 22406
+	{ id = "umbral master hammer", chance = 0 },  -- 22415
+	{ id = "umbral masterblade", chance = 0 },  -- 22400
+	{ id = "umbral slayer", chance = 0 },  -- 22402
+	{ id = "crude umbral slayer", chance = 0 },  -- 22401
+	{ id = "umbral axe", chance = 0 },  -- 22405
+	{ id = "umbral bow", chance = 0 },  -- 22417
+	{ id = "umbral hammer", chance = 0 },  -- 22414
+	{ id = "umbral mace", chance = 0 },  -- 22411
+	{ id = "umbral master crossbow", chance = 0 },  -- 22421
+	{ id = "umbral master spellbook", chance = 0 },  -- 22424
 }
 
 monster.attacks = {
