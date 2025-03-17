@@ -1,3 +1,7 @@
+-- Version: 6.0
+-- Monster: https://tibia.fandom.com/wiki/Pig
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Pig
+---
 
 
 local mType = Game.createMonsterType("Pig")

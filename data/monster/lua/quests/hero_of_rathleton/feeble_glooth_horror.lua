@@ -1,3 +1,6 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Feeble_Glooth_Horror
+---
 
 
 local mType = Game.createMonsterType("Feeble Glooth Horror")

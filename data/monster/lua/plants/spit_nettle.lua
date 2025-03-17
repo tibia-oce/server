@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Spit_Nettle
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Spit_Nettle
+---
 
 
 local mType = Game.createMonsterType("Spit Nettle")

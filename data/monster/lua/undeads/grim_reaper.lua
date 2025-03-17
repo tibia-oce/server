@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Grim_Reaper
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Grim_Reaper
+---
 
 
 local mType = Game.createMonsterType("Grim Reaper")

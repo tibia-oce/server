@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Dharalion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dharalion
+---
 
 
 local mType = Game.createMonsterType("Dharalion")

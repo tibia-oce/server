@@ -1,3 +1,7 @@
+-- Version: 7.1
+-- Monster: https://tibia.fandom.com/wiki/Valkyrie
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Valkyrie
+---
 
 
 local mType = Game.createMonsterType("Valkyrie")

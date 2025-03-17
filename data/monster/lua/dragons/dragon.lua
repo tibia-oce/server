@@ -1,3 +1,7 @@
+-- Version: 4.0
+-- Monster: https://tibia.fandom.com/wiki/Dragon
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dragon
+---
 
 
 local mType = Game.createMonsterType("Dragon")

@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Wyvern
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Wyvern
+---
 
 
 local mType = Game.createMonsterType("Wyvern")

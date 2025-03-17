@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Enraged_Crystal_Golem
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Enraged_Crystal_Golem
+---
 
 
 local mType = Game.createMonsterType("Enraged Crystal Golem")

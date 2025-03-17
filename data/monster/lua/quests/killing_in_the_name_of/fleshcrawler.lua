@@ -1,3 +1,7 @@
+-- Version: 9.20
+-- Monster: https://tibia.fandom.com/wiki/Fleshcrawler
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Fleshcrawler
+---
 
 
 local mType = Game.createMonsterType("Fleshcrawler")

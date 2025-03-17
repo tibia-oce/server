@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Fleabringer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Fleabringer
+---
 
 
 local mType = Game.createMonsterType("Fleabringer")

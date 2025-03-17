@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Retching_Horror
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Retching_Horror
+---
 
 
 local mType = Game.createMonsterType("Retching Horror")

@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Skeleton_Warrior
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Skeleton_Warrior
+---
 
 
 local mType = Game.createMonsterType("Skeleton Warrior")

@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Willi_Wasp
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Willi_Wasp
+---
 
 
 local mType = Game.createMonsterType("Willi Wasp")

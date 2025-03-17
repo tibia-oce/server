@@ -1,3 +1,6 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Lesser_Death_Minion
+---
 
 
 local mType = Game.createMonsterType("Lesser Death Minion")

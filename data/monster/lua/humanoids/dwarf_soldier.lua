@@ -1,3 +1,7 @@
+-- Version: 6.1
+-- Monster: https://tibia.fandom.com/wiki/Dwarf_Soldier
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dwarf_Soldier
+---
 
 
 local mType = Game.createMonsterType("Dwarf Soldier")

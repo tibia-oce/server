@@ -1,3 +1,6 @@
+-- Version: 7.92
+-- Monster: https://tibia.fandom.com/wiki/Undead_Minion
+---
 
 
 local mType = Game.createMonsterType("Undead Minion")

@@ -1,3 +1,7 @@
+-- Version: 6.2
+-- Monster: https://tibia.fandom.com/wiki/Elf
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Elf
+---
 
 
 local mType = Game.createMonsterType("Elf")

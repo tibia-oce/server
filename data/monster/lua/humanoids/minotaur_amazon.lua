@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Minotaur_Amazon
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Minotaur_Amazon
+---
 
 
 local mType = Game.createMonsterType("Minotaur Amazon")

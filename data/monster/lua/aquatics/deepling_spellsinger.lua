@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Deepling_Spellsinger
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Deepling_Spellsinger
+---
 
 
 local mType = Game.createMonsterType("Deepling Spellsinger")

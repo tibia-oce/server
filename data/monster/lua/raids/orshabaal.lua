@@ -1,3 +1,7 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Orshabaal
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Orshabaal
+---
 
 
 local mType = Game.createMonsterType("Orshabaal")

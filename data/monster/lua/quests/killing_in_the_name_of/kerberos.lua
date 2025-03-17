@@ -1,3 +1,7 @@
+-- Version: 9.20
+-- Monster: https://tibia.fandom.com/wiki/Kerberos
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Kerberos
+---
 
 
 local mType = Game.createMonsterType("Kerberos")

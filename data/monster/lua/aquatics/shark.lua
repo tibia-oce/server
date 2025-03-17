@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Shark
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Shark
+---
 
 
 local mType = Game.createMonsterType("Shark")

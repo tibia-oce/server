@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Massacre
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Massacre
+---
 
 
 local mType = Game.createMonsterType("Massacre")

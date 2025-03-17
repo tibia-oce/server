@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Rot_Elemental
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Rot_Elemental
+---
 
 
 local mType = Game.createMonsterType("Rot Elemental")

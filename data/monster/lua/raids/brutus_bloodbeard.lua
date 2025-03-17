@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Brutus_Bloodbeard
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Brutus_Bloodbeard
+---
 
 
 local mType = Game.createMonsterType("Brutus Bloodbeard")

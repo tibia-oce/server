@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Enlightened_of_the_Cult
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Enlightened_of_the_Cult
+---
 
 
 local mType = Game.createMonsterType("Enlightened of the Cult")

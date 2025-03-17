@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Elder_Wyrm
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Elder_Wyrm
+---
 
 
 local mType = Game.createMonsterType("Elder Wyrm")

@@ -1,3 +1,6 @@
+-- Version: 7.92
+-- Monster: https://tibia.fandom.com/wiki/Primitive
+---
 
 
 local mType = Game.createMonsterType("Primitive")

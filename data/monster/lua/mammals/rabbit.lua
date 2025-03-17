@@ -1,3 +1,7 @@
+-- Version: 7.1
+-- Monster: https://tibia.fandom.com/wiki/Rabbit
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Rabbit
+---
 
 
 local mType = Game.createMonsterType("Rabbit")

@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Blood_Beast
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Blood_Beast
+---
 
 
 local mType = Game.createMonsterType("Blood Beast")

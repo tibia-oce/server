@@ -1,3 +1,7 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Bonebeast
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bonebeast
+---
 
 
 local mType = Game.createMonsterType("Bonebeast")

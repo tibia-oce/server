@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Shock_Head
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Shock_Head
+---
 
 
 local mType = Game.createMonsterType("Shock Head")

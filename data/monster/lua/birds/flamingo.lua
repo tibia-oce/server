@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Flamingo
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Flamingo
+---
 
 
 local mType = Game.createMonsterType("Flamingo")

@@ -1,3 +1,6 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Wild_Fury_Magic
+---
 
 
 local mType = Game.createMonsterType("Wild Fury Magic")

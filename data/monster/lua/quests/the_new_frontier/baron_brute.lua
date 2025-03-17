@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Baron_Brute
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Baron_Brute
+---
 
 
 local mType = Game.createMonsterType("Baron Brute")

@@ -1,3 +1,7 @@
+-- Version: 3.0
+-- Monster: https://tibia.fandom.com/wiki/Snake
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Snake
+---
 
 
 local mType = Game.createMonsterType("Snake")

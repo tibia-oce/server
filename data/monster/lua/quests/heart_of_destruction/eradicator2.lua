@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Eradicator
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Eradicator
+---
 
 
 local mType = Game.createMonsterType("Eradicator2")

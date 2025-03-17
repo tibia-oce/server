@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Realityquake
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Realityquake
+---
 
 
 local mType = Game.createMonsterType("Realityquake")

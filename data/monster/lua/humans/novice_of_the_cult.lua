@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Novice_of_the_Cult
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Novice_of_the_Cult
+---
 
 
 local mType = Game.createMonsterType("Novice of the Cult")

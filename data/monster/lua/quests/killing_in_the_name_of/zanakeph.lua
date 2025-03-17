@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Zanakeph
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Zanakeph
+---
 
 
 local mType = Game.createMonsterType("Zanakeph")

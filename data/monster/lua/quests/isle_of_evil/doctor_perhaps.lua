@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Doctor_Perhaps
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Doctor_Perhaps
+---
 
 
 local mType = Game.createMonsterType("Doctor Perhaps")

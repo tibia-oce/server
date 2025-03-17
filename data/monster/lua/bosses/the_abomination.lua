@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/The_Abomination
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Abomination
+---
 
 
 local mType = Game.createMonsterType("The Abomination")

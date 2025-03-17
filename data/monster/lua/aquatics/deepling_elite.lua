@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Deepling_Elite
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Deepling_Elite
+---
 
 
 local mType = Game.createMonsterType("Deepling Elite")

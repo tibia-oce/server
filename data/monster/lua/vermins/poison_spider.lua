@@ -1,3 +1,7 @@
+-- Version: 4.0
+-- Monster: https://tibia.fandom.com/wiki/Poison_Spider
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Poison_Spider
+---
 
 
 local mType = Game.createMonsterType("Poison Spider")

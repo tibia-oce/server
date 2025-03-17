@@ -1,3 +1,6 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Strong_Glooth_Horror
+---
 
 
 local mType = Game.createMonsterType("Strong Glooth Horror")

@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Spirit_of_Fire
+---
 
 
 local mType = Game.createMonsterType("Spirit of Fire")

@@ -1,3 +1,5 @@
+-- Monster: https://tibia.fandom.com/wiki/Void
+---
 
 
 local mType = Game.createMonsterType("Void")

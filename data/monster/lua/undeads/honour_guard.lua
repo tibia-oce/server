@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Honour_Guard
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Honour_Guard
+---
 
 
 local mType = Game.createMonsterType("Honour Guard")

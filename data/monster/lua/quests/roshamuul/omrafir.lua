@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Omrafir
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Omrafir
+---
 
 
 local mType = Game.createMonsterType("Omrafir")

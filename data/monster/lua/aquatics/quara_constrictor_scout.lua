@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Quara_Constrictor_Scout
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Quara_Constrictor_Scout
+---
 
 
 local mType = Game.createMonsterType("Quara Constrictor Scout")

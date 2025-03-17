@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Emerald_Damselfly
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Emerald_Damselfly
+---
 
 
 local mType = Game.createMonsterType("Emerald Damselfly")

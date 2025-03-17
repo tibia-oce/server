@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Bruise_Payne
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bruise_Payne
+---
 
 
 local mType = Game.createMonsterType("Bruise Payne")

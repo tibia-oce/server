@@ -1,3 +1,6 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Wild_Horse
+---
 
 
 local mType = Game.createMonsterType("Wild Horse")

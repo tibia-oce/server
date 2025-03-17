@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Destroyer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Destroyer
+---
 
 
 local mType = Game.createMonsterType("Destroyer")

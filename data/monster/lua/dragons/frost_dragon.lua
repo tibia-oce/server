@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Frost_Dragon
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Frost_Dragon
+---
 
 
 local mType = Game.createMonsterType("Frost Dragon")

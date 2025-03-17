@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Morgaroth
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Morgaroth
+---
 
 
 local mType = Game.createMonsterType("Morgaroth")

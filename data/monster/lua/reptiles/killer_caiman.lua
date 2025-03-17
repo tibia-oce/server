@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Killer_Caiman
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Killer_Caiman
+---
 
 
 local mType = Game.createMonsterType("Killer Caiman")

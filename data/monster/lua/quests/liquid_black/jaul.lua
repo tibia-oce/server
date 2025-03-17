@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Jaul
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Jaul
+---
 
 
 local mType = Game.createMonsterType("Jaul")

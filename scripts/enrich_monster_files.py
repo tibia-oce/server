@@ -21,18 +21,28 @@ logging.basicConfig(
     ]
 )
 
-def run_script(script_path):
+def run_script(script_path, monster_dir=None):
     """
     Run a Python script and return the result.
     
     Args:
-        script_path (str): Path to the Python script
+        script_path (Path or str): Path to the Python script
+        monster_dir (str, optional): Path to monster directory to pass as environment variable
         
     Returns:
         bool: True if the script executed successfully, False otherwise
     """
     try:
-        subprocess.run([sys.executable, script_path], check=True)
+        env = os.environ.copy()
+        if monster_dir:
+            env['MONSTER_DIR'] = monster_dir
+            
+        cmd = [sys.executable, str(script_path)]  # Convert Path to string
+        if script_path.name == 'scan_monsters.py' and monster_dir:
+            cmd.extend(['--monster-dir', monster_dir])
+            
+        logging.info(f"Running command: {' '.join(cmd)}")
+        subprocess.run(cmd, check=True, env=env)
         return True
     except subprocess.CalledProcessError as e:
         logging.error(f"Error running script {script_path}: {e}")
@@ -49,6 +59,17 @@ def main():
     parser.add_argument('--scripts-dir', dest='scripts_dir', default='scripts',
                       help='Directory to store the scripts (default: scripts)')
     args = parser.parse_args()
+    
+    # Convert relative paths to absolute paths
+    monster_dir = os.path.abspath(args.monster_dir)
+    scripts_dir = os.path.abspath(args.scripts_dir)
+    
+    logging.info(f"Monster directory (absolute path): {monster_dir}")
+    logging.info(f"Scripts directory (absolute path): {scripts_dir}")
+    
+    # Update args to use absolute paths
+    args.monster_dir = monster_dir
+    args.scripts_dir = scripts_dir
     
     # Create the scripts directory if it doesn't exist
     scripts_dir = Path(args.scripts_dir)
@@ -94,7 +115,7 @@ def main():
     
     # Run the scripts in sequence
     logging.info("Step 1: Scanning monster files...")
-    if not run_script(scan_script):
+    if not run_script(scan_script, monster_dir):  # Pass monster_dir as a string
         logging.error("Failed to scan monster files, aborting")
         return
     

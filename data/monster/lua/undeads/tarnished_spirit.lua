@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Tarnished_Spirit
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tarnished_Spirit
+---
 
 
 local mType = Game.createMonsterType("Tarnished Spirit")

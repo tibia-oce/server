@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Fleshslicer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Fleshslicer
+---
 
 
 local mType = Game.createMonsterType("Fleshslicer")

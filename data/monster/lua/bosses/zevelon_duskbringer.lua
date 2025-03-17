@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Zevelon_Duskbringer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Zevelon_Duskbringer
+---
 
 
 local mType = Game.createMonsterType("Zevelon Duskbringer")

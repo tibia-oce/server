@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Ushuriel
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ushuriel
+---
 
 
 local mType = Game.createMonsterType("Ushuriel")

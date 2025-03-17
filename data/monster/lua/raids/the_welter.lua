@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/The_Welter
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Welter
+---
 
 
 local mType = Game.createMonsterType("The Welter")

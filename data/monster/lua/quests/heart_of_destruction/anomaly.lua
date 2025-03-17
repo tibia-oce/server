@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Anomaly
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Anomaly
+---
 
 
 local mType = Game.createMonsterType("Anomaly")

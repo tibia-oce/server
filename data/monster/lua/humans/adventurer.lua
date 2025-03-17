@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Adventurer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Adventurer
+---
 
 
 local mType = Game.createMonsterType("Adventurer")

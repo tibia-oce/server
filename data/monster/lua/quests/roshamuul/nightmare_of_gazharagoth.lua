@@ -1,3 +1,6 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Nightmare_of_Gaz%27haragoth
+---
 
 
 local mType = Game.createMonsterType("Nightmare of Gaz'haragoth")

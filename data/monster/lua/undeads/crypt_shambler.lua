@@ -1,3 +1,7 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Crypt_Shambler
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Crypt_Shambler
+---
 
 
 local mType = Game.createMonsterType("Crypt Shambler")

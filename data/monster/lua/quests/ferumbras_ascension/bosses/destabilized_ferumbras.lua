@@ -1,3 +1,6 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Destabilized_Ferumbras
+---
 
 
 local mType = Game.createMonsterType("Destabilized Ferumbras")

@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Doom_Deer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Doom_Deer
+---
 
 
 local mType = Game.createMonsterType("Doom Deer")

@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Depowered_Minotaur
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Depowered_Minotaur
+---
 
 
 local mType = Game.createMonsterType("Depowered Minotaur")

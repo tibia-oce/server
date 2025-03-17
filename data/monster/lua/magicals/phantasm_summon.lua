@@ -1,3 +1,6 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Phantasm
+---
 
 
 local mType = Game.createMonsterType("Phantasm Summon")

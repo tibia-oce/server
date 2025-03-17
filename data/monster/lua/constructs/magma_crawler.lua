@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Magma_Crawler
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Magma_Crawler
+---
 
 
 local mType = Game.createMonsterType("Magma Crawler")

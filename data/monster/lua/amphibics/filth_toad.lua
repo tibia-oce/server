@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Filth_Toad
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Filth_Toad
+---
 
 
 local mType = Game.createMonsterType("Filth Toad")

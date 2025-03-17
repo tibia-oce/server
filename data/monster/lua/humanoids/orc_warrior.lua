@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Orc_Warrior
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Orc_Warrior
+---
 
 
 local mType = Game.createMonsterType("Orc Warrior")

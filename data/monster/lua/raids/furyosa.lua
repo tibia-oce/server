@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/Furyosa
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Furyosa
+---
 
 
 local mType = Game.createMonsterType("Furyosa")

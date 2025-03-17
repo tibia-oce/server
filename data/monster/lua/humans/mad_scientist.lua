@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Mad_Scientist
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mad_Scientist
+---
 
 
 local mType = Game.createMonsterType("Mad Scientist")

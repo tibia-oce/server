@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Rocko
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Rocko
+---
 
 
 local mType = Game.createMonsterType("Rocko")

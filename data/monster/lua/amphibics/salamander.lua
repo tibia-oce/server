@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Salamander
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Salamander
+---
 
 
 local mType = Game.createMonsterType("Salamander")

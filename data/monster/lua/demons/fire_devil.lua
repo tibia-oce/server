@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Fire_Devil
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Fire_Devil
+---
 
 
 local mType = Game.createMonsterType("Fire Devil")

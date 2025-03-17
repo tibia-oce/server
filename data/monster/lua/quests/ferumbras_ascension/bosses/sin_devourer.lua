@@ -1,3 +1,6 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Sin_Devourer
+---
 
 
 local mType = Game.createMonsterType("Sin Devourer")

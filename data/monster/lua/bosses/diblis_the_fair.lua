@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Diblis_the_Fair
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Diblis_the_Fair
+---
 
 
 local mType = Game.createMonsterType("Diblis the Fair")

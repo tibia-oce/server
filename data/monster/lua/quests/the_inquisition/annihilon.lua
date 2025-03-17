@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Annihilon
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Annihilon
+---
 
 
 local mType = Game.createMonsterType("Annihilon")

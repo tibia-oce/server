@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Weeper
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Weeper
+---
 
 
 local mType = Game.createMonsterType("Weeper")

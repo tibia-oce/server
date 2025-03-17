@@ -1,3 +1,7 @@
+-- Version: 9.20
+-- Monster: https://tibia.fandom.com/wiki/Flameborn
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Flameborn
+---
 
 
 local mType = Game.createMonsterType("Flameborn")

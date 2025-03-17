@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Iron_Servant
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Iron_Servant
+---
 
 
 local mType = Game.createMonsterType("Iron Servant")

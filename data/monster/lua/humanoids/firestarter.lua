@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Firestarter
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Firestarter
+---
 
 
 local mType = Game.createMonsterType("Firestarter")

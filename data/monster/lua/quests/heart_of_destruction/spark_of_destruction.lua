@@ -1,3 +1,6 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Spark_of_Destruction
+---
 
 
 local mType = Game.createMonsterType("Spark of Destruction")

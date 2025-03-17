@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Poacher
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Poacher
+---
 
 
 local mType = Game.createMonsterType("Poacher")

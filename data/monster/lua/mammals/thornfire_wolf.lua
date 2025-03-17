@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Thornfire_Wolf
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Thornfire_Wolf
+---
 
 
 local mType = Game.createMonsterType("Thornfire Wolf")

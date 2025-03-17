@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Fallen_Mooh%27Tah_Master_Ghar
+---
 
 
 local mType = Game.createMonsterType("Fallen Mooh'tah Master Ghar")

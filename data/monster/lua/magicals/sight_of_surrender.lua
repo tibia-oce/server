@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Sight_of_Surrender
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Sight_of_Surrender
+---
 
 
 local mType = Game.createMonsterType("Sight of Surrender")

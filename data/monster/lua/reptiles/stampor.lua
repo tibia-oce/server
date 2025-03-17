@@ -1,3 +1,7 @@
+-- Version: 8.70
+-- Monster: https://tibia.fandom.com/wiki/Stampor
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Stampor
+---
 
 
 local mType = Game.createMonsterType("Stampor")

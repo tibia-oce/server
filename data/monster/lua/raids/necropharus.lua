@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Necropharus
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Necropharus
+---
 
 
 local mType = Game.createMonsterType("Necropharus")

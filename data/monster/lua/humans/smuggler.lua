@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Smuggler
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Smuggler
+---
 
 
 local mType = Game.createMonsterType("Smuggler")

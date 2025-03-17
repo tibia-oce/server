@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Woodling
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Woodling
+---
 
 
 local mType = Game.createMonsterType("Woodling")

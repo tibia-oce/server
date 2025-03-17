@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Charged_Energy_Elemental
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Charged_Energy_Elemental
+---
 
 
 local mType = Game.createMonsterType("Charged Energy Elemental")

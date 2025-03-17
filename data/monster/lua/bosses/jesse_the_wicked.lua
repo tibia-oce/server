@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Jesse_the_Wicked
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Jesse_the_Wicked
+---
 
 
 local mType = Game.createMonsterType("Jesse the Wicked")

@@ -1,4 +1,9 @@
 
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Gaz%27haragoth
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gaz%27haragoth
+---
+
 
 local mType = Game.createMonsterType("Gaz'Haragoth")
 local monster = {}

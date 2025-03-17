@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Empowered_Glooth_Horror
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Empowered_Glooth_Horror
+---
 
 
 local mType = Game.createMonsterType("Empowered Glooth Horror")

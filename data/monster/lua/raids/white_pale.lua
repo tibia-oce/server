@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/White_Pale
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:White_Pale
+---
 
 
 local mType = Game.createMonsterType("White Pale")

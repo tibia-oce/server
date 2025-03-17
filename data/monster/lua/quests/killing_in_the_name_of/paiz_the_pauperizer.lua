@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Paiz_the_Pauperizer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Paiz_the_Pauperizer
+---
 
 
 local mType = Game.createMonsterType("Paiz the Pauperizer")

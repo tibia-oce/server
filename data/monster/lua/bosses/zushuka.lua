@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/Zushuka
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Zushuka
+---
 
 
 local mType = Game.createMonsterType("Zushuka")

@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Hide
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hide
+---
 
 
 local mType = Game.createMonsterType("Hide")

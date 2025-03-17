@@ -1,3 +1,7 @@
+-- Version: 7.0
+-- Monster: https://tibia.fandom.com/wiki/Dwarf_Geomancer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dwarf_Geomancer
+---
 
 
 local mType = Game.createMonsterType("Dwarf Geomancer")

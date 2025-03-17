@@ -1,3 +1,7 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Efreet
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Efreet
+---
 
 
 local mType = Game.createMonsterType("Efreet")

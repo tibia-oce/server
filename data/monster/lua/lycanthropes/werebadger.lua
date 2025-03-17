@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Werebadger
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Werebadger
+---
 
 
 local mType = Game.createMonsterType("Werebadger")

@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Energy_Overlord
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Energy_Overlord
+---
 
 
 local mType = Game.createMonsterType("Energy Overlord")

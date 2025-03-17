@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Serpent_Spawn
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Serpent_Spawn
+---
 
 
 local mType = Game.createMonsterType("Serpent Spawn")

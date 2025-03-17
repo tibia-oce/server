@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Cursed_Gladiator
+---
 
 
 local mType = Game.createMonsterType("Cursed Gladiator")

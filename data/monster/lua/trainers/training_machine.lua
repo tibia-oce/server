@@ -1,6 +1,3 @@
--- Training Machine (Tibia Wiki: https://tibia.fandom.com/wiki/Training_Machine)
--- Version: xxxx
-
 local mType = Game.createMonsterType("Training Machine")
 local monster = {}
 

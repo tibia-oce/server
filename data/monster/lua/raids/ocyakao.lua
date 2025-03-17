@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/Ocyakao
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ocyakao
+---
 
 
 local mType = Game.createMonsterType("Ocyakao")

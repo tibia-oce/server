@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Meadow_Strider
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Meadow_Strider
+---
 
 
 local mType = Game.createMonsterType("Meadow Strider")

@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Undead_Gladiator
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Undead_Gladiator
+---
 
 
 local mType = Game.createMonsterType("Undead Gladiator")

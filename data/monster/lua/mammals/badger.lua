@@ -1,3 +1,7 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Badger
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Badger
+---
 
 
 local mType = Game.createMonsterType("Badger")

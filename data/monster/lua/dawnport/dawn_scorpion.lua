@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Dawn_Scorpion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dawn_Scorpion
+---
 
 
 local mType = Game.createMonsterType("Dawn Scorpion")

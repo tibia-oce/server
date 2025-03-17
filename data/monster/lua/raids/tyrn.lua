@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/Tyrn
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tyrn
+---
 
 
 local mType = Game.createMonsterType("Tyrn")

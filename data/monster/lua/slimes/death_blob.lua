@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Death_Blob
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Death_Blob
+---
 
 
 local mType = Game.createMonsterType("Death Blob")

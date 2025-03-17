@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Koshei_the_Deathless
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Koshei_the_Deathless
+---
 
 
 local mType = Game.createMonsterType("Koshei the Deathless")

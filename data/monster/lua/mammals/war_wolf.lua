@@ -1,3 +1,7 @@
+-- Version: 7.0
+-- Monster: https://tibia.fandom.com/wiki/War_Wolf
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:War_Wolf
+---
 
 
 local mType = Game.createMonsterType("War Wolf")

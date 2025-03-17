@@ -1,3 +1,7 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Marid
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Marid
+---
 
 
 local mType = Game.createMonsterType("Marid")

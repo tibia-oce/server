@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Goblin_Leader
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Goblin_Leader
+---
 
 
 local mType = Game.createMonsterType("Goblin Leader")

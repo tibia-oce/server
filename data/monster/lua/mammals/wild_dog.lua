@@ -1,3 +1,6 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Wild_Dog
+---
 
 
 local mType = Game.createMonsterType("Wild Dog")

@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Pigeon
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Pigeon
+---
 
 
 local mType = Game.createMonsterType("Pigeon")

@@ -1,3 +1,7 @@
+-- Version: 8.70
+-- Monster: https://tibia.fandom.com/wiki/Undead_Cavebear
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Undead_Cavebear
+---
 
 
 local mType = Game.createMonsterType("Undead Cavebear")

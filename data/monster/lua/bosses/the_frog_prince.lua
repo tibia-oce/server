@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/The_Frog_Prince
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Frog_Prince
+---
 
 
 local mType = Game.createMonsterType("The Frog Prince")

@@ -1,3 +1,6 @@
+-- Version: 6.0
+-- Monster: https://tibia.fandom.com/wiki/Egg
+---
 
 
 local mType = Game.createMonsterType("Egg")

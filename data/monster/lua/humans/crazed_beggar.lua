@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Crazed_Beggar
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Crazed_Beggar
+---
 
 
 local mType = Game.createMonsterType("Crazed Beggar")

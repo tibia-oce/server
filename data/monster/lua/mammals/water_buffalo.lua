@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Water_Buffalo
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Water_Buffalo
+---
 
 
 local mType = Game.createMonsterType("Water Buffalo")

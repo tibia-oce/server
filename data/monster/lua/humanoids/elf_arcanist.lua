@@ -1,3 +1,7 @@
+-- Version: 6.2
+-- Monster: https://tibia.fandom.com/wiki/Elf_Arcanist
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Elf_Arcanist
+---
 
 
 local mType = Game.createMonsterType("Elf Arcanist")

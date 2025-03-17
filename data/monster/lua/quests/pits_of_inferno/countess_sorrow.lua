@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Countess_Sorrow
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Countess_Sorrow
+---
 
 
 local mType = Game.createMonsterType("Countess Sorrow")

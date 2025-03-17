@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Silver_Rabbit
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Silver_Rabbit
+---
 
 
 local mType = Game.createMonsterType("Silver Rabbit")

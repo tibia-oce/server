@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Silencer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Silencer
+---
 
 
 local mType = Game.createMonsterType("Silencer")

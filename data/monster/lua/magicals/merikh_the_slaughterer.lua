@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Merikh_the_Slaughterer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Merikh_the_Slaughterer
+---
 
 
 local mType = Game.createMonsterType("Merikh the Slaughterer")

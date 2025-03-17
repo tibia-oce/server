@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Tremorak
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tremorak
+---
 
 
 local mType = Game.createMonsterType("Tremorak")

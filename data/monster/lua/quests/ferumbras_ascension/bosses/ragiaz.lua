@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Ragiaz
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ragiaz
+---
 
 
 local mType = Game.createMonsterType("Ragiaz")

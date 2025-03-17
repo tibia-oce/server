@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Enslaved_Dwarf
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Enslaved_Dwarf
+---
 
 
 local mType = Game.createMonsterType("Enslaved Dwarf")

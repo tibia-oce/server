@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Shaburak_Demon
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Shaburak_Demon
+---
 
 
 local mType = Game.createMonsterType("Shaburak Demon")

@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Bog_Raider
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bog_Raider
+---
 
 
 local mType = Game.createMonsterType("Bog Raider")

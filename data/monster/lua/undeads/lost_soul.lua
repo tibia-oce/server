@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Lost_Soul
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lost_Soul
+---
 
 
 local mType = Game.createMonsterType("Lost Soul")

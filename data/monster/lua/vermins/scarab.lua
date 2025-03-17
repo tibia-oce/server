@@ -1,3 +1,7 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Scarab
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Scarab
+---
 
 
 local mType = Game.createMonsterType("Scarab")

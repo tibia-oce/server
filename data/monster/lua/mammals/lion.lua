@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Lion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lion
+---
 
 
 local mType = Game.createMonsterType("Lion")

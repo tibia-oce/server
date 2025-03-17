@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Deep_Terror
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Deep_Terror
+---
 
 
 local mType = Game.createMonsterType("Deep Terror")

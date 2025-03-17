@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Grorlam
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Grorlam
+---
 
 
 local mType = Game.createMonsterType("Grorlam")

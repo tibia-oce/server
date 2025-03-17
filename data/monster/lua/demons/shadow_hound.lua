@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Shadow_Hound
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Shadow_Hound
+---
 
 
 local mType = Game.createMonsterType("Shadow Hound")

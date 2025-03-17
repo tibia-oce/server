@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/The_Snapper
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Snapper
+---
 
 
 local mType = Game.createMonsterType("The Snapper")

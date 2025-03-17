@@ -1,3 +1,6 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Disgusting_Ooze
+---
 
 
 local mType = Game.createMonsterType("Disgusting Ooze")

@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Dwarf_Miner
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dwarf_Miner
+---
 
 
 local mType = Game.createMonsterType("Dwarf Miner")

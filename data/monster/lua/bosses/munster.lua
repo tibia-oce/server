@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Munster
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Munster
+---
 
 
 local mType = Game.createMonsterType("Munster")

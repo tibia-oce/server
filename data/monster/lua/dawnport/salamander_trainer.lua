@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Salamander_Trainer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Salamander_Trainer
+---
 
 
 local mType = Game.createMonsterType("Salamander Trainer")

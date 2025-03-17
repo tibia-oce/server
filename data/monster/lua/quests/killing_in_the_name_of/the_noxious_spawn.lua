@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/The_Noxious_Spawn
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Noxious_Spawn
+---
 
 
 local mType = Game.createMonsterType("The Noxious Spawn")

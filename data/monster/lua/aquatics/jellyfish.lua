@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Jellyfish
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Jellyfish
+---
 
 
 local mType = Game.createMonsterType("Jellyfish")

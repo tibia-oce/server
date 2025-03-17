@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Gozzler
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gozzler
+---
 
 
 local mType = Game.createMonsterType("Gozzler")

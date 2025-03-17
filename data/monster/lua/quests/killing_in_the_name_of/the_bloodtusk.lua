@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/The_Bloodtusk
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Bloodtusk
+---
 
 
 local mType = Game.createMonsterType("The Bloodtusk")

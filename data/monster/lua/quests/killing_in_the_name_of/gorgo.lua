@@ -1,3 +1,7 @@
+-- Version: 9.20
+-- Monster: https://tibia.fandom.com/wiki/Gorgo
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gorgo
+---
 
 
 local mType = Game.createMonsterType("Gorgo")

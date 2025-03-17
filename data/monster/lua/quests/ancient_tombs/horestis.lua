@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Horestis
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Horestis
+---
 
 
 local mType = Game.createMonsterType("Horestis")

@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Azure_Frog
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Azure_Frog
+---
 
 
 local mType = Game.createMonsterType("Azure Frog")

@@ -1,3 +1,6 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Flame_of_Omrafir
+---
 
 
 local mType = Game.createMonsterType("Flame of Omrafir")

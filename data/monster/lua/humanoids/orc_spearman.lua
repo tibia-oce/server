@@ -1,3 +1,7 @@
+-- Version: 6.0
+-- Monster: https://tibia.fandom.com/wiki/Orc_Spearman
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Orc_Spearman
+---
 
 
 local mType = Game.createMonsterType("Orc Spearman")

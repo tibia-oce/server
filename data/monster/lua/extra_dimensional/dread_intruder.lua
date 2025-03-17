@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Dread_Intruder
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dread_Intruder
+---
 
 
 local mType = Game.createMonsterType("Dread Intruder")

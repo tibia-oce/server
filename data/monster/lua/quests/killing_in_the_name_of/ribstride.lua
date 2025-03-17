@@ -1,3 +1,7 @@
+-- Version: 9.20
+-- Monster: https://tibia.fandom.com/wiki/Ribstride
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ribstride
+---
 
 
 local mType = Game.createMonsterType("Ribstride")

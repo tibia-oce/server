@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Tarbaz
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tarbaz
+---
 
 
 local mType = Game.createMonsterType("Tarbaz")

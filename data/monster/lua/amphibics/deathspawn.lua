@@ -1,3 +1,6 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Deathspawn
+---
 
 
 local mType = Game.createMonsterType("Deathspawn")

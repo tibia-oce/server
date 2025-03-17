@@ -1,3 +1,7 @@
+-- Version: 9.20
+-- Monster: https://tibia.fandom.com/wiki/Deathbine
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Deathbine
+---
 
 
 local mType = Game.createMonsterType("Deathbine")

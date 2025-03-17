@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Muglex_Clan_Footman
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Muglex_Clan_Footman
+---
 
 
 local mType = Game.createMonsterType("Muglex Clan Footman")

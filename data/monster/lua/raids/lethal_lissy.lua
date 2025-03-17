@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Lethal_Lissy
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lethal_Lissy
+---
 
 
 local mType = Game.createMonsterType("Lethal Lissy")

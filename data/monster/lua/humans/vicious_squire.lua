@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Vicious_Squire
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Vicious_Squire
+---
 
 
 local mType = Game.createMonsterType("Vicious Squire")

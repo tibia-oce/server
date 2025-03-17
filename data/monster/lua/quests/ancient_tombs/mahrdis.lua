@@ -1,3 +1,7 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Mahrdis
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mahrdis
+---
 
 
 local mType = Game.createMonsterType("Mahrdis")

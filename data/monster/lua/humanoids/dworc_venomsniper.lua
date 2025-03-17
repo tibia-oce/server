@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Dworc_Venomsniper
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dworc_Venomsniper
+---
 
 
 local mType = Game.createMonsterType("Dworc Venomsniper")

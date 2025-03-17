@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Betrayed_Wraith
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Betrayed_Wraith
+---
 
 
 local mType = Game.createMonsterType("Betrayed Wraith")

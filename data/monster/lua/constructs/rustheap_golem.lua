@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Rustheap_Golem
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Rustheap_Golem
+---
 
 
 local mType = Game.createMonsterType("Rustheap Golem")

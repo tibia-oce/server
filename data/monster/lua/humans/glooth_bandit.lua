@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Glooth_Bandit
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Glooth_Bandit
+---
 
 
 local mType = Game.createMonsterType("Glooth Bandit")

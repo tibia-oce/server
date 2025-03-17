@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Manta_Ray
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Manta_Ray
+---
 
 
 local mType = Game.createMonsterType("Manta Ray")

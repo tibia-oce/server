@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Kongra
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Kongra
+---
 
 
 local mType = Game.createMonsterType("Kongra")

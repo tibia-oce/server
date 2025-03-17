@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Barbarian_Bloodwalker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Barbarian_Bloodwalker
+---
 
 
 local mType = Game.createMonsterType("Barbarian Bloodwalker")

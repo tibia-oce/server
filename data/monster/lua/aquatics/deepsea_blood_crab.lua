@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Deepsea_Blood_Crab
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Deepsea_Blood_Crab
+---
 
 
 local mType = Game.createMonsterType("Deepsea Blood Crab")

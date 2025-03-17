@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Shadow_Pupil
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Shadow_Pupil
+---
 
 
 local mType = Game.createMonsterType("Shadow Pupil")

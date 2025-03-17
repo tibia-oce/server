@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Necromancer_Servant
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Necromancer_Servant
+---
 
 
 local mType = Game.createMonsterType("Necromancer Servant")

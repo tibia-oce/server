@@ -1,3 +1,6 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Mooh%27Tah_Master
+---
 
 
 local mType = Game.createMonsterType("Mooh'Tah Master")

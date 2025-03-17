@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Noble_Lion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Noble_Lion
+---
 
 
 local mType = Game.createMonsterType("Noble Lion")

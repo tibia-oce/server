@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Eternal_Guardian
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Eternal_Guardian
+---
 
 
 local mType = Game.createMonsterType("Eternal Guardian")

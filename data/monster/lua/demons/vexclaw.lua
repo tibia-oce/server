@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Vexclaw
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Vexclaw
+---
 
 
 local mType = Game.createMonsterType("Vexclaw")

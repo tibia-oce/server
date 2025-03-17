@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Werebear
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Werebear
+---
 
 
 local mType = Game.createMonsterType("Werebear")

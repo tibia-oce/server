@@ -1,3 +1,6 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Superior_Death_Minion
+---
 
 
 local mType = Game.createMonsterType("Superior Death Minion")

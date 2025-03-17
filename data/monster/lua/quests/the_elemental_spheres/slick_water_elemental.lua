@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Slick_Water_Elemental
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Slick_Water_Elemental
+---
 
 
 local mType = Game.createMonsterType("Slick Water Elemental")

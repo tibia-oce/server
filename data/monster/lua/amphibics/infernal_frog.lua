@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Infernal_Frog
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Infernal_Frog
+---
 
 
 local mType = Game.createMonsterType("Infernal Frog")

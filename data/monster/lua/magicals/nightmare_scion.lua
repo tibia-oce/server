@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Nightmare_Scion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Nightmare_Scion
+---
 
 
 local mType = Game.createMonsterType("Nightmare Scion")

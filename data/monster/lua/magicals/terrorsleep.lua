@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Terrorsleep
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Terrorsleep
+---
 
 
 local mType = Game.createMonsterType("Terrorsleep")

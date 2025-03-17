@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Death_Priest_Shargon
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Death_Priest_Shargon
+---
 
 
 local mType = Game.createMonsterType("Death Priest Shargon")

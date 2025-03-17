@@ -1,3 +1,6 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Ascending_Ferumbras
+---
 
 
 local mType = Game.createMonsterType("Ascending Ferumbras")

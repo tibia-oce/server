@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Zomba
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Zomba
+---
 
 
 local mType = Game.createMonsterType("Zomba")

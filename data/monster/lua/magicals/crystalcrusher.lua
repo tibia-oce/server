@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Crystalcrusher
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Crystalcrusher
+---
 
 
 local mType = Game.createMonsterType("Crystalcrusher")

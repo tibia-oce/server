@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Stabilizing_Reality_Reaver
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Stabilizing_Reality_Reaver
+---
 
 
 local mType = Game.createMonsterType("Stabilizing Reality Reaver")

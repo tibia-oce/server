@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Jagged_Earth_Elemental
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Jagged_Earth_Elemental
+---
 
 
 local mType = Game.createMonsterType("Jagged Earth Elemental")

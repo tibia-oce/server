@@ -1,3 +1,7 @@
+-- Version: 8.60
+-- Monster: https://tibia.fandom.com/wiki/Draken_Abomination
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Draken_Abomination
+---
 
 
 local mType = Game.createMonsterType("Draken Abomination")

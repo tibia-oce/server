@@ -1,3 +1,6 @@
+-- Version: 7.50
+-- Monster: https://tibia.fandom.com/wiki/Carved_Stone_Tile_(Ornamented)
+---
 
 
 local mType = Game.createMonsterType("a carved stone tile")

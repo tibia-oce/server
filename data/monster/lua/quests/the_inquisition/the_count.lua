@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/The_Count
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Count
+---
 
 
 local mType = Game.createMonsterType("The Count")

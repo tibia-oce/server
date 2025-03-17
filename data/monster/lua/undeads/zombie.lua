@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Zombie
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Zombie
+---
 
 
 local mType = Game.createMonsterType("Zombie")

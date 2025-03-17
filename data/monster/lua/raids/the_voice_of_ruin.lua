@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/The_Voice_of_Ruin
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Voice_of_Ruin
+---
 
 
 local mType = Game.createMonsterType("The Voice of Ruin")

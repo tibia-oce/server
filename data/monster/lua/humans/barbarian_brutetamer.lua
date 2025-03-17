@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Barbarian_Brutetamer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Barbarian_Brutetamer
+---
 
 
 local mType = Game.createMonsterType("Barbarian Brutetamer")

@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Troll_Champion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Troll_Champion
+---
 
 
 local mType = Game.createMonsterType("Troll Champion")

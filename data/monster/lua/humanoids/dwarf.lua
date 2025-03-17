@@ -1,3 +1,7 @@
+-- Version: 6.1
+-- Monster: https://tibia.fandom.com/wiki/Dwarf
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dwarf
+---
 
 
 local mType = Game.createMonsterType("Dwarf")

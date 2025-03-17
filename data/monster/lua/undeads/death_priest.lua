@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Death_Priest
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Death_Priest
+---
 
 
 local mType = Game.createMonsterType("Death Priest")

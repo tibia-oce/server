@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Furious_Troll
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Furious_Troll
+---
 
 
 local mType = Game.createMonsterType("Furious Troll")

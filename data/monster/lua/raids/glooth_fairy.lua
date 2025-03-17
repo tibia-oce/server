@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Glooth_Fairy
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Glooth_Fairy
+---
 
 
 local mType = Game.createMonsterType("Glooth Fairy")

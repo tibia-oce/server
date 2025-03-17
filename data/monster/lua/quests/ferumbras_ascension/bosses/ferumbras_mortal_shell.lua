@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Ferumbras_Mortal_Shell
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ferumbras_Mortal_Shell
+---
 
 
 local mType = Game.createMonsterType("Ferumbras Mortal Shell")

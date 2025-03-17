@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Waspoid
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Waspoid
+---
 
 
 local mType = Game.createMonsterType("Waspoid")

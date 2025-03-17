@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Prince_Drazzak
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Prince_Drazzak
+---
 
 
 local mType = Game.createMonsterType("Prince Drazzak")

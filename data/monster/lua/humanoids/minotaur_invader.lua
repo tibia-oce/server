@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Minotaur_Invader
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Minotaur_Invader
+---
 
 
 local mType = Game.createMonsterType("Minotaur Invader")

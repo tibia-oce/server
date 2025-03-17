@@ -1,3 +1,7 @@
+-- Version: 7.1
+-- Monster: https://tibia.fandom.com/wiki/Swamp_Troll
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Swamp_Troll
+---
 
 
 local mType = Game.createMonsterType("Swamp Troll")

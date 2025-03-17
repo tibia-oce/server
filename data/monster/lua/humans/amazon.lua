@@ -1,3 +1,7 @@
+-- Version: 7.1
+-- Monster: https://tibia.fandom.com/wiki/Amazon
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Amazon
+---
 
 
 local mType = Game.createMonsterType("Amazon")

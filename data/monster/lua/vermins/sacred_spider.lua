@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Sacred_Spider
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Sacred_Spider
+---
 
 
 local mType = Game.createMonsterType("Sacred Spider")

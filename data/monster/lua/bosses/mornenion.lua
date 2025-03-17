@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Mornenion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mornenion
+---
 
 
 local mType = Game.createMonsterType("Mornenion")

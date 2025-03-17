@@ -1,3 +1,6 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Strange_Slime
+---
 
 
 local mType = Game.createMonsterType("Strange Slime")

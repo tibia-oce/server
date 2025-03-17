@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Forest_Fury
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Forest_Fury
+---
 
 
 local mType = Game.createMonsterType("Forest Fury")

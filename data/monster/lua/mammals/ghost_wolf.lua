@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Ghost_Wolf
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ghost_Wolf
+---
 
 
 local mType = Game.createMonsterType("Ghost Wolf")

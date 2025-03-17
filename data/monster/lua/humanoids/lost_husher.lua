@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Lost_Husher
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lost_Husher
+---
 
 
 local mType = Game.createMonsterType("Lost Husher")

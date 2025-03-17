@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Phantasm
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Phantasm
+---
 
 
 local mType = Game.createMonsterType("Phantasm")

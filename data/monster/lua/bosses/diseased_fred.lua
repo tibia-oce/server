@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Diseased_Fred
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Diseased_Fred
+---
 
 
 local mType = Game.createMonsterType("Diseased Fred")

@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Fernfang
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Fernfang
+---
 
 
 local mType = Game.createMonsterType("Fernfang")

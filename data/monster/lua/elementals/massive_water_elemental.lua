@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Massive_Water_Elemental
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Massive_Water_Elemental
+---
 
 
 local mType = Game.createMonsterType("Massive Water Elemental")

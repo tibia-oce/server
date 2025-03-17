@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Crazed_Dwarf
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Crazed_Dwarf
+---
 
 
 local mType = Game.createMonsterType("Crazed Dwarf")

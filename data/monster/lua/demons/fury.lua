@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Fury
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Fury
+---
 
 
 local mType = Game.createMonsterType("Fury")

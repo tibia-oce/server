@@ -1,3 +1,7 @@
+-- Version: 7.40
+-- Monster: https://tibia.fandom.com/wiki/Demon_(Goblin)
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Demon_(Goblin)
+---
 
 
 local mType = Game.createMonsterType("Demon Goblin")

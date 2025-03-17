@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Nightstalker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Nightstalker
+---
 
 
 local mType = Game.createMonsterType("Nightstalker")

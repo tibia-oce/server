@@ -1,3 +1,7 @@
+-- Version: 7.1
+-- Monster: https://tibia.fandom.com/wiki/Cave_Rat
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Cave_Rat
+---
 
 
 local mType = Game.createMonsterType("Cave Rat")

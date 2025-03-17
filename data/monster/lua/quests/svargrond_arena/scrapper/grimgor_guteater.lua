@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Grimgor_Guteater
+---
 
 
 local mType = Game.createMonsterType("Grimgor Guteater")

@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Deepling_Tyrant
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Deepling_Tyrant
+---
 
 
 local mType = Game.createMonsterType("Deepling Tyrant")

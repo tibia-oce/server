@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Mushroom_Sniffer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mushroom_Sniffer
+---
 
 
 local mType = Game.createMonsterType("Mushroom Sniffer")

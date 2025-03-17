@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Frost_Giant
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Frost_Giant
+---
 
 
 local mType = Game.createMonsterType("Frost Giant")

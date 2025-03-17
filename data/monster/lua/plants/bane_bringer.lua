@@ -1,3 +1,7 @@
+-- Version: 8.70
+-- Monster: https://tibia.fandom.com/wiki/Bane_Bringer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bane_Bringer
+---
 
 
 local mType = Game.createMonsterType("Bane Bringer")

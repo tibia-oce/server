@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Tentacle_of_the_Deep_Terror
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tentacle_of_the_Deep_Terror
+---
 
 
 local mType = Game.createMonsterType("Tentacle of the Deep Terror")

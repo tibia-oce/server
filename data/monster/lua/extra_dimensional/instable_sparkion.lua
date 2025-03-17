@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Instable_Sparkion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Instable_Sparkion
+---
 
 
 local mType = Game.createMonsterType("Instable Sparkion")

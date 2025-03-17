@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/The_Obliverator
+---
 
 
 local mType = Game.createMonsterType("The Obliverator")

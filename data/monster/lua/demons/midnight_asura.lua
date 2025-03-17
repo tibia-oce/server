@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Midnight_Asura
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Midnight_Asura
+---
 
 
 local mType = Game.createMonsterType("Midnight Asura")

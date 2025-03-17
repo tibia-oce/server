@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Dark_Monk
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dark_Monk
+---
 
 
 local mType = Game.createMonsterType("Dark Monk")

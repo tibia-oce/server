@@ -1,3 +1,6 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Furious_Orc_Berserker
+---
 
 
 local mType = Game.createMonsterType("Furious Orc Berserker")

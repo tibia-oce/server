@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Swarmer_Hatchling
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Swarmer_Hatchling
+---
 
 
 local mType = Game.createMonsterType("Swarmer Hatchling")

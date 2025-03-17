@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Plaguesmith
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Plaguesmith
+---
 
 
 local mType = Game.createMonsterType("Plaguesmith")

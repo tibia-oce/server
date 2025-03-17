@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Vampire_Pig
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Vampire_Pig
+---
 
 
 local mType = Game.createMonsterType("Vampire Pig")

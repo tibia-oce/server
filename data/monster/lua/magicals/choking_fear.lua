@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Choking_Fear
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Choking_Fear
+---
 
 
 local mType = Game.createMonsterType("Choking Fear")

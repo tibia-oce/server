@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/The_Pale_Count
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Pale_Count
+---
 
 
 local mType = Game.createMonsterType("The Pale Count")

@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Frazzlemaw
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Frazzlemaw
+---
 
 
 local mType = Game.createMonsterType("Frazzlemaw")

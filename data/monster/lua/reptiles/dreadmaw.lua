@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Dreadmaw
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dreadmaw
+---
 
 
 local mType = Game.createMonsterType("Dreadmaw")

@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Renegade_Knight
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Renegade_Knight
+---
 
 
 local mType = Game.createMonsterType("Renegade Knight")

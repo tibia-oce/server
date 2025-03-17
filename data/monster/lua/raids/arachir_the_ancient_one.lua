@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Arachir_the_Ancient_One
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Arachir_the_Ancient_One
+---
 
 
 local mType = Game.createMonsterType("Arachir the Ancient One")

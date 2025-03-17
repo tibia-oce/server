@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Ironblight
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ironblight
+---
 
 
 local mType = Game.createMonsterType("Ironblight")

@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Dark_Apprentice
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dark_Apprentice
+---
 
 
 local mType = Game.createMonsterType("Dark Apprentice")

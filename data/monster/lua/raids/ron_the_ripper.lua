@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Ron_the_Ripper
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ron_the_Ripper
+---
 
 
 local mType = Game.createMonsterType("Ron the Ripper")

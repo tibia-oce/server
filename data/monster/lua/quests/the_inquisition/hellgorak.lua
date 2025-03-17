@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Hellgorak
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hellgorak
+---
 
 
 local mType = Game.createMonsterType("Hellgorak")

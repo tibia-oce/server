@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Professor_Maxxen
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Professor_Maxxen
+---
 
 
 local mType = Game.createMonsterType("Professor Maxxen")

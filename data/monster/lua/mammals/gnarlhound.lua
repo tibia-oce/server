@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Gnarlhound
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gnarlhound
+---
 
 
 local mType = Game.createMonsterType("Gnarlhound")

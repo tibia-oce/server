@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Zamulosh
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Zamulosh
+---
 
 
 local mType = Game.createMonsterType("Zamulosh3")

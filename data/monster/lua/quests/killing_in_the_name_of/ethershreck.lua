@@ -1,3 +1,7 @@
+-- Version: 9.20
+-- Monster: https://tibia.fandom.com/wiki/Ethershreck
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ethershreck
+---
 
 
 local mType = Game.createMonsterType("Ethershreck")

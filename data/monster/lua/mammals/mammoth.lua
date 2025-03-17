@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Mammoth
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mammoth
+---
 
 
 local mType = Game.createMonsterType("Mammoth")

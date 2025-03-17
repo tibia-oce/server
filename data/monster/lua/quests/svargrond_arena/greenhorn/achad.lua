@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Achad
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Achad
+---
 
 
 local mType = Game.createMonsterType("Achad")

@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Demon_Outcast
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Demon_Outcast
+---
 
 
 local mType = Game.createMonsterType("Demon Outcast")

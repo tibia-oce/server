@@ -1,3 +1,7 @@
+-- Version: 8.60
+-- Monster: https://tibia.fandom.com/wiki/Brimstone_Bug
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Brimstone_Bug
+---
 
 
 local mType = Game.createMonsterType("Brimstone Bug")

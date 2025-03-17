@@ -1,3 +1,6 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Armenius_%28Creature%29
+---
 
 
 local mType = Game.createMonsterType("Armenius (Creature)")

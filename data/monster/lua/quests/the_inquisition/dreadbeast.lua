@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Dreadbeast
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dreadbeast
+---
 
 
 local mType = Game.createMonsterType("Dreadbeast")

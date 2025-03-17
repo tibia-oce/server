@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Orcus_the_Cruel
+---
 
 
 local mType = Game.createMonsterType("Orcus the Cruel")

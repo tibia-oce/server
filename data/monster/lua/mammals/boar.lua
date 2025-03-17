@@ -1,3 +1,7 @@
+-- Version: 8.70
+-- Monster: https://tibia.fandom.com/wiki/Boar
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Boar
+---
 
 
 local mType = Game.createMonsterType("Boar")

@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Feverish_Citizen
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Feverish_Citizen
+---
 
 
 local mType = Game.createMonsterType("Feverish Citizen")

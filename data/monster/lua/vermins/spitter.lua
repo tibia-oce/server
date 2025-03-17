@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Spitter
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Spitter
+---
 
 
 local mType = Game.createMonsterType("Spitter")

@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Obujos
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Obujos
+---
 
 
 local mType = Game.createMonsterType("Obujos")

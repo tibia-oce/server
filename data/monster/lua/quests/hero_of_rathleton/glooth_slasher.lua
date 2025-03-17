@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Glooth_Slasher
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Glooth_Slasher
+---
 
 
 local mType = Game.createMonsterType("Glooth Slasher")

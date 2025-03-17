@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Glooth_Anemone
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Glooth_Anemone
+---
 
 
 local mType = Game.createMonsterType("Glooth Anemone")

@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Dirtbeard
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dirtbeard
+---
 
 
 local mType = Game.createMonsterType("Dirtbeard")

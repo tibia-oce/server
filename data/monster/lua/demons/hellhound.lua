@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Hellhound
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hellhound
+---
 
 
 local mType = Game.createMonsterType("Hellhound")

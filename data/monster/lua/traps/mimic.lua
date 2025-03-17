@@ -1,3 +1,6 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Mimic
+---
 
 
 local mType = Game.createMonsterType("Mimic")

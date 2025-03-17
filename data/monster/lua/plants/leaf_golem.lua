@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Leaf_Golem
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Leaf_Golem
+---
 
 
 local mType = Game.createMonsterType("Leaf Golem")

@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Tromphonyte
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tromphonyte
+---
 
 
 local mType = Game.createMonsterType("Tromphonyte")

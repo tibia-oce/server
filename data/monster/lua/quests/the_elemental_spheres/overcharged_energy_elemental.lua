@@ -1,3 +1,6 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Overcharged_Energy_Elemental
+---
 
 
 local mType = Game.createMonsterType("Overcharged Energy Elemental")

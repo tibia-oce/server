@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Lava_Golem
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lava_Golem
+---
 
 
 local mType = Game.createMonsterType("Lava Golem")

@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Mad_Technomancer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mad_Technomancer
+---
 
 
 local mType = Game.createMonsterType("Mad Technomancer")

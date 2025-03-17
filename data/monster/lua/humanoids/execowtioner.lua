@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Execowtioner
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Execowtioner
+---
 
 
 local mType = Game.createMonsterType("Execowtioner")

@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Warlock
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Warlock
+---
 
 
 local mType = Game.createMonsterType("Warlock")

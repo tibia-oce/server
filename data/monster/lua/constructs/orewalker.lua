@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Orewalker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Orewalker
+---
 
 
 local mType = Game.createMonsterType("Orewalker")

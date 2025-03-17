@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Grandfather_Tridian
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Grandfather_Tridian
+---
 
 
 local mType = Game.createMonsterType("Grandfather Tridian")

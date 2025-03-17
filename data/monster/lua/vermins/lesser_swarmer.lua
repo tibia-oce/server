@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Lesser_Swarmer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lesser_Swarmer
+---
 
 
 local mType = Game.createMonsterType("Lesser Swarmer")

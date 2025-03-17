@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Undead_Dragon
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Undead_Dragon
+---
 
 
 local mType = Game.createMonsterType("Undead Dragon")

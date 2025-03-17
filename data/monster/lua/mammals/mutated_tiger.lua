@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Mutated_Tiger
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mutated_Tiger
+---
 
 
 local mType = Game.createMonsterType("Mutated Tiger")

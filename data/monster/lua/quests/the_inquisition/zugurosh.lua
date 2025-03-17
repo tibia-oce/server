@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Zugurosh
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Zugurosh
+---
 
 
 local mType = Game.createMonsterType("Zugurosh")

@@ -1,3 +1,7 @@
+-- Version: 3.0
+-- Monster: https://tibia.fandom.com/wiki/Orc
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Orc
+---
 
 
 local mType = Game.createMonsterType("Orc")

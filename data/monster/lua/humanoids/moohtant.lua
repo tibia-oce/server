@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Moohtant
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Moohtant
+---
 
 
 local mType = Game.createMonsterType("Moohtant")

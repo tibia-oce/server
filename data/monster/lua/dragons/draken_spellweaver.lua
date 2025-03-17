@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Draken_Spellweaver
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Draken_Spellweaver
+---
 
 
 local mType = Game.createMonsterType("Draken Spellweaver")

@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Slug
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Slug
+---
 
 
 local mType = Game.createMonsterType("Slug")

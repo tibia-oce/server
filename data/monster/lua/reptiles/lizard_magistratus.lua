@@ -1,3 +1,7 @@
+-- Version: 8.60
+-- Monster: https://tibia.fandom.com/wiki/Lizard_Magistratus
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lizard_Magistratus
+---
 
 
 local mType = Game.createMonsterType("Lizard Magistratus")

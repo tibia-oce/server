@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Thul
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Thul
+---
 
 
 local mType = Game.createMonsterType("Thul")

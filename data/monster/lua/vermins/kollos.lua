@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Kollos
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Kollos
+---
 
 
 local mType = Game.createMonsterType("Kollos")

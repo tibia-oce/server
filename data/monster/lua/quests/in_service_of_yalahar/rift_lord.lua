@@ -1,3 +1,6 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Rift_Lord
+---
 
 
 local mType = Game.createMonsterType("Rift Lord")

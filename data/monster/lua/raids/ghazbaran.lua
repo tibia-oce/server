@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Ghazbaran
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ghazbaran
+---
 
 
 local mType = Game.createMonsterType("Ghazbaran")

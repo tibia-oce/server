@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Troll_Marauder
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Troll_Marauder
+---
 
 
 local mType = Game.createMonsterType("Troll Marauder")

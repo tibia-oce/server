@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Werewolf
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Werewolf
+---
 
 
 local mType = Game.createMonsterType("Werewolf")

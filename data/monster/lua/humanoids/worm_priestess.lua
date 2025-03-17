@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Worm_Priestess
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Worm_Priestess
+---
 
 
 local mType = Game.createMonsterType("Worm Priestess")

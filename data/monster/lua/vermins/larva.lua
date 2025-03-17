@@ -1,3 +1,7 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Larva
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Larva
+---
 
 
 local mType = Game.createMonsterType("Larva")

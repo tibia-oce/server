@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/The_Flaming_Orchid
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Flaming_Orchid
+---
 
 
 local mType = Game.createMonsterType("The Flaming Orchid")

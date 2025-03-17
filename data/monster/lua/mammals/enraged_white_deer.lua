@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Enraged_White_Deer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Enraged_White_Deer
+---
 
 
 local mType = Game.createMonsterType("Enraged White Deer")

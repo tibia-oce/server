@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Carniphila
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Carniphila
+---
 
 
 local mType = Game.createMonsterType("Carniphila")

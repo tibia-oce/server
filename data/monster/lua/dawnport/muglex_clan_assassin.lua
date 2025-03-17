@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Muglex_Clan_Assassin
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Muglex_Clan_Assassin
+---
 
 
 local mType = Game.createMonsterType("Muglex Clan Assassin")

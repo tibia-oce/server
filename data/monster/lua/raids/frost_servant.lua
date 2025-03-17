@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/Frost_Servant
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Frost_Servant
+---
 
 
 local mType = Game.createMonsterType("Frost Servant")

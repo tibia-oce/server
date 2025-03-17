@@ -1,3 +1,6 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Slime
+---
 
 
 local mType = Game.createMonsterType("Slime")

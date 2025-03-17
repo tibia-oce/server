@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Party_Skeleton
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Party_Skeleton
+---
 
 
 local mType = Game.createMonsterType("Party Skeleton")

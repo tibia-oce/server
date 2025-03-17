@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Kreebosh_the_Exile
+---
 
 
 local mType = Game.createMonsterType("Kreebosh the Exile")

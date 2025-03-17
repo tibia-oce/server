@@ -1,3 +1,6 @@
+-- Version: 8.60
+-- Monster: https://tibia.fandom.com/wiki/Snake_Thing
+---
 
 
 local mType = Game.createMonsterType("Snake Thing")

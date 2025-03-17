@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Armadile
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Armadile
+---
 
 
 local mType = Game.createMonsterType("Armadile")

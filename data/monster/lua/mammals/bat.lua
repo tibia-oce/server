@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Bat
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bat
+---
 
 
 local mType = Game.createMonsterType("Bat")

@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Acolyte_of_Darkness
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Acolyte_of_Darkness
+---
 
 
 local mType = Game.createMonsterType("Acolyte of Darkness")

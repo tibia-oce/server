@@ -1,3 +1,5 @@
+-- Monster: https://tibia.fandom.com/wiki/Yalahari
+---
 
 
 local mType = Game.createMonsterType("Yalahari")

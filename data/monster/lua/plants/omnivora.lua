@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Omnivora
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Omnivora
+---
 
 
 local mType = Game.createMonsterType("Omnivora")

@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Damaged_Worker_Golem
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Damaged_Worker_Golem
+---
 
 
 local mType = Game.createMonsterType("Damaged Worker Golem")

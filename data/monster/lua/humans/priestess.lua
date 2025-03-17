@@ -1,3 +1,7 @@
+-- Version: 6.4
+-- Monster: https://tibia.fandom.com/wiki/Priestess
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Priestess
+---
 
 
 local mType = Game.createMonsterType("Priestess")

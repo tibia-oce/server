@@ -1,3 +1,7 @@
+-- Version: 7.0
+-- Monster: https://tibia.fandom.com/wiki/Orc_Warlord
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Orc_Warlord
+---
 
 
 local mType = Game.createMonsterType("Orc Warlord")

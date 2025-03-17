@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Pirate_Skeleton
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Pirate_Skeleton
+---
 
 
 local mType = Game.createMonsterType("Pirate Skeleton")

@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Sea_Serpent
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Sea_Serpent
+---
 
 
 local mType = Game.createMonsterType("Sea Serpent")

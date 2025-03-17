@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Outburst
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Outburst
+---
 
 
 local mType = Game.createMonsterType("Outburst")

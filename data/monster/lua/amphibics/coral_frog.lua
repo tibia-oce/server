@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Coral_Frog
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Coral_Frog
+---
 
 
 local mType = Game.createMonsterType("Coral Frog")

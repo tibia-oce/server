@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/The_Blightfather
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Blightfather
+---
 
 
 local mType = Game.createMonsterType("The Blightfather")

@@ -1,3 +1,7 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Hyaena
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hyaena
+---
 
 
 local mType = Game.createMonsterType("Hyaena")

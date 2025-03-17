@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Vulcongra
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Vulcongra
+---
 
 
 local mType = Game.createMonsterType("Vulcongra")

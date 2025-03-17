@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Rukor_Zad
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Rukor_Zad
+---
 
 
 local mType = Game.createMonsterType("Rukor Zad")

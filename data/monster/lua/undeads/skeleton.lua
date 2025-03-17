@@ -1,3 +1,7 @@
+-- Version: 4.0
+-- Monster: https://tibia.fandom.com/wiki/Skeleton
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Skeleton
+---
 
 
 local mType = Game.createMonsterType("Skeleton")

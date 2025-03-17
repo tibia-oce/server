@@ -1,3 +1,6 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Eye_of_the_Seven
+---
 
 
 local mType = Game.createMonsterType("Eye of the Seven")

@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Lost_Berserker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lost_Berserker
+---
 
 
 local mType = Game.createMonsterType("Lost Berserker")

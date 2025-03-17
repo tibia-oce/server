@@ -1,3 +1,6 @@
+-- Version: --
+-- Monster: https://tibia.fandom.com/wiki/Bazir
+---
 -- Bazir (Tibia Wiki: https://tibia.fandom.com/wiki/Bazir)
 -- Version: --
 

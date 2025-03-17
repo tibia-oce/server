@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Troll_Legionnaire
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Troll_Legionnaire
+---
 
 
 local mType = Game.createMonsterType("Troll Legionnaire")

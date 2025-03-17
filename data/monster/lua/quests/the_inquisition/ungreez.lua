@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Ungreez
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ungreez
+---
 
 
 local mType = Game.createMonsterType("Ungreez")

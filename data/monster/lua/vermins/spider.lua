@@ -1,3 +1,7 @@
+-- Version: 2.0
+-- Monster: https://tibia.fandom.com/wiki/Spider
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Spider
+---
 
 
 local mType = Game.createMonsterType("Spider")

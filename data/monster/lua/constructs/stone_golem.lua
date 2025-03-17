@@ -1,3 +1,7 @@
+-- Version: 6.4
+-- Monster: https://tibia.fandom.com/wiki/Stone_Golem
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Stone_Golem
+---
 
 
 local mType = Game.createMonsterType("Stone Golem")

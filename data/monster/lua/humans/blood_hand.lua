@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Blood_Hand
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Blood_Hand
+---
 
 
 local mType = Game.createMonsterType("Blood Hand")

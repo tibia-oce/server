@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Orc_Berserker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Orc_Berserker
+---
 
 
 local mType = Game.createMonsterType("Orc Berserker")

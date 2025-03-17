@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Grimeleech
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Grimeleech
+---
 
 
 local mType = Game.createMonsterType("Grimeleech")

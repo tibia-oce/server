@@ -1,3 +1,7 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Elder_Bonelord
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Elder_Bonelord
+---
 
 
 local mType = Game.createMonsterType("Elder Bonelord")

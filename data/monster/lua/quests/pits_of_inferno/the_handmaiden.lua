@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/The_Handmaiden
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Handmaiden
+---
 
 
 local mType = Game.createMonsterType("The Handmaiden")

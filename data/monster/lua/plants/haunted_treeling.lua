@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Haunted_Treeling
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Haunted_Treeling
+---
 
 
 local mType = Game.createMonsterType("Haunted Treeling")

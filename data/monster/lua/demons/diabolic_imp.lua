@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Diabolic_Imp
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Diabolic_Imp
+---
 
 
 local mType = Game.createMonsterType("Diabolic Imp")

@@ -1,3 +1,6 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/White_Deer
+---
 
 
 local mType = Game.createMonsterType("White Deer")

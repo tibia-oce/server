@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Devourer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Devourer
+---
 
 
 local mType = Game.createMonsterType("Devourer")

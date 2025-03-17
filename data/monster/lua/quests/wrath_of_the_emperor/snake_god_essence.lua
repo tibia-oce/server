@@ -1,3 +1,6 @@
+-- Version: 8.60
+-- Monster: https://tibia.fandom.com/wiki/Snake_God_Essence
+---
 
 
 local mType = Game.createMonsterType("Snake God Essence")

@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Lizard_Templar
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lizard_Templar
+---
 
 
 local mType = Game.createMonsterType("Lizard Templar")

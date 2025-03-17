@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Gloom_Wolf
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gloom_Wolf
+---
 
 
 local mType = Game.createMonsterType("Gloom Wolf")

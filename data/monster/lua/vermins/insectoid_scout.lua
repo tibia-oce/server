@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Insectoid_Scout
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Insectoid_Scout
+---
 
 
 local mType = Game.createMonsterType("Insectoid Scout")

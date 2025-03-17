@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Crawler
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Crawler
+---
 
 
 local mType = Game.createMonsterType("Crawler")

@@ -1,3 +1,6 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Azerus
+---
 
 
 local mType = Game.createMonsterType("Azerus2")

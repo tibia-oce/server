@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Gravedigger
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gravedigger
+---
 
 
 local mType = Game.createMonsterType("Gravedigger")

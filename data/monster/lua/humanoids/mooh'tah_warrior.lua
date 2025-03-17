@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Mooh%27Tah_Warrior
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mooh%27Tah_Warrior
+---
 
 
 local mType = Game.createMonsterType("Mooh'Tah Warrior")

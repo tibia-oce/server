@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Elf_Overseer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Elf_Overseer
+---
 
 
 local mType = Game.createMonsterType("Elf Overseer")

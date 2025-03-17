@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Undead_Mine_Worker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Undead_Mine_Worker
+---
 
 
 local mType = Game.createMonsterType("Undead Mine Worker")

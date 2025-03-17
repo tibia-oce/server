@@ -1,3 +1,6 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Hell_Hole
+---
 
 
 local mType = Game.createMonsterType("Hell Hole")

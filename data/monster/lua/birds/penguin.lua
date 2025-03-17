@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Penguin
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Penguin
+---
 
 
 local mType = Game.createMonsterType("Penguin")

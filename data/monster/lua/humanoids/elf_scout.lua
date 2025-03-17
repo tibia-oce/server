@@ -1,3 +1,7 @@
+-- Version: 6.2
+-- Monster: https://tibia.fandom.com/wiki/Elf_Scout
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Elf_Scout
+---
 
 
 local mType = Game.createMonsterType("Elf Scout")

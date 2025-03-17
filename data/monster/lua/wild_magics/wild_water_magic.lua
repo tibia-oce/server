@@ -1,3 +1,6 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Wild_Water_Magic
+---
 
 
 local mType = Game.createMonsterType("Wild Water Magic")

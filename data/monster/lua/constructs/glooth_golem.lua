@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Glooth_Golem
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Glooth_Golem
+---
 
 
 local mType = Game.createMonsterType("Glooth Golem")

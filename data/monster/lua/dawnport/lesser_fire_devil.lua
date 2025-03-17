@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Lesser_Fire_Devil
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lesser_Fire_Devil
+---
 
 
 local mType = Game.createMonsterType("Lesser Fire Devil")

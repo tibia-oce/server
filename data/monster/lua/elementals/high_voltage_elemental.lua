@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/High_Voltage_Elemental
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:High_Voltage_Elemental
+---
 
 
 local mType = Game.createMonsterType("High Voltage Elemental")

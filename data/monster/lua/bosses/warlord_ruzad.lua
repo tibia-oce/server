@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Warlord_Ruzad
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Warlord_Ruzad
+---
 
 
 local mType = Game.createMonsterType("Warlord Ruzad")

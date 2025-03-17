@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Ekatrix
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ekatrix
+---
 
 
 local mType = Game.createMonsterType("Ekatrix")

@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Juvenile_Cyclops
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Juvenile_Cyclops
+---
 
 
 local mType = Game.createMonsterType("Juvenile Cyclops")

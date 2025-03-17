@@ -1,3 +1,6 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Evil_Mastermind
+---
 
 
 local mType = Game.createMonsterType("Evil Mastermind")

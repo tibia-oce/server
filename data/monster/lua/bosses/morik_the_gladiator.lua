@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Morik_the_Gladiator
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Morik_the_Gladiator
+---
 
 
 local mType = Game.createMonsterType("Morik the Gladiator")

@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Metal_Gargoyle
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Metal_Gargoyle
+---
 
 
 local mType = Game.createMonsterType("Metal Gargoyle")

@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Dawnfly
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dawnfly
+---
 
 
 local mType = Game.createMonsterType("Dawnfly")

@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Dragonling
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dragonling
+---
 
 
 local mType = Game.createMonsterType("Dragonling")

@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Cyclops_Drone
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Cyclops_Drone
+---
 
 
 local mType = Game.createMonsterType("Cyclops Drone")

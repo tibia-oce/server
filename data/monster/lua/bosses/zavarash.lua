@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Zavarash
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Zavarash
+---
 
 
 local mType = Game.createMonsterType("Zavarash")

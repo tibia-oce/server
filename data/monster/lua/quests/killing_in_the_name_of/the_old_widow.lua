@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/The_Old_Widow
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Old_Widow
+---
 
 
 local mType = Game.createMonsterType("The Old Widow")

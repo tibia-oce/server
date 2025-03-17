@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Dragon_Lord_Hatchling
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dragon_Lord_Hatchling
+---
 
 
 local mType = Game.createMonsterType("Dragon Lord Hatchling")

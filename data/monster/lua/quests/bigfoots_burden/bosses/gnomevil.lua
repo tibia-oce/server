@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Gnomevil
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gnomevil
+---
 
 
 local mType = Game.createMonsterType("Gnomevil")

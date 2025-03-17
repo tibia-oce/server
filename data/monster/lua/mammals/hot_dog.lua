@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Hot_Dog
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hot_Dog
+---
 
 
 local mType = Game.createMonsterType("Hot Dog")

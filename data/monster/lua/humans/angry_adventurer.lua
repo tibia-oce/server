@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Angry_Adventurer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Angry_Adventurer
+---
 
 
 local mType = Game.createMonsterType("Angry Adventurer")

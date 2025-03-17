@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Minotaur_Poacher
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Minotaur_Poacher
+---
 
 
 local mType = Game.createMonsterType("Minotaur Poacher")

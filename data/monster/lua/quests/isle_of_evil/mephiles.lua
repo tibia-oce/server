@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Mephiles
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mephiles
+---
 
 
 local mType = Game.createMonsterType("Mephiles")

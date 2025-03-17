@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Defiler
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Defiler
+---
 
 
 local mType = Game.createMonsterType("Defiler")

@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Bibby_Bloodbath
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bibby_Bloodbath
+---
 
 
 local mType = Game.createMonsterType("Bibby Bloodbath")

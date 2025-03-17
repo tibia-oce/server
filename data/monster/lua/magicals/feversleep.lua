@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Feversleep
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Feversleep
+---
 
 
 local mType = Game.createMonsterType("Feversleep")

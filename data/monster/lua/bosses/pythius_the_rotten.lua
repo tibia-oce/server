@@ -1,3 +1,6 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Pythius_The_Rotten
+---
 
 
 local mType = Game.createMonsterType("Pythius The Rotten")

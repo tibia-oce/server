@@ -1,3 +1,6 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Shiversleep
+---
 
 
 local mType = Game.createMonsterType("Shiversleep")

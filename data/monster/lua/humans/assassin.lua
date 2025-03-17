@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Assassin
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Assassin
+---
 
 
 local mType = Game.createMonsterType("Assassin")

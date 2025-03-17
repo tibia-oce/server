@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Dwarf_Henchman
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dwarf_Henchman
+---
 
 
 local mType = Game.createMonsterType("Dwarf Henchman")

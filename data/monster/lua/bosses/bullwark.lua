@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Bullwark
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bullwark
+---
 
 
 local mType = Game.createMonsterType("Bullwark")

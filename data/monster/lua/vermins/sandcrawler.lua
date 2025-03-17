@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Sandcrawler
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Sandcrawler
+---
 
 
 local mType = Game.createMonsterType("Sandcrawler")

@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Blistering_Fire_Elemental
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Blistering_Fire_Elemental
+---
 
 
 local mType = Game.createMonsterType("Blistering Fire Elemental")

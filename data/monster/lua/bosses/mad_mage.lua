@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Mad_Mage
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mad_Mage
+---
 
 
 local mType = Game.createMonsterType("Mad Mage")

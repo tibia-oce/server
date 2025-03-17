@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Corym_Vanguard
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Corym_Vanguard
+---
 
 
 local mType = Game.createMonsterType("Corym Vanguard")

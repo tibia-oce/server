@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Drillworm
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Drillworm
+---
 
 
 local mType = Game.createMonsterType("Drillworm")

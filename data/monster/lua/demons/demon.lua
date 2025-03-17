@@ -1,3 +1,7 @@
+-- Version: 4.0
+-- Monster: https://tibia.fandom.com/wiki/Demon
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Demon
+---
 
 
 local mType = Game.createMonsterType("Demon")

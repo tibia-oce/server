@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Feroxa
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Feroxa
+---
 
 
 local mType = Game.createMonsterType("Feroxa")

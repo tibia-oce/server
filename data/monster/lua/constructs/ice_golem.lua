@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Ice_Golem
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ice_Golem
+---
 
 
 local mType = Game.createMonsterType("Ice Golem")

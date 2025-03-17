@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Incineron
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Incineron
+---
 
 
 local mType = Game.createMonsterType("Incineron")

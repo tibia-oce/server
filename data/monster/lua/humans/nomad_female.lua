@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Nomad_(Female)
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Nomad_(Basic)
+---
 
 
 local mType = Game.createMonsterType("Nomad Female")

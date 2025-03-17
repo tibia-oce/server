@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Sandstone_Scorpion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Sandstone_Scorpion
+---
 
 
 local mType = Game.createMonsterType("Sandstone Scorpion")

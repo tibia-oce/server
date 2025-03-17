@@ -1,5 +1,8 @@
 
-
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Raging_Mage
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Raging_Mage
+---
 local mType = Game.createMonsterType("Raging mage")
 local monster = {}
 

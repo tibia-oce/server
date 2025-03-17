@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Pirate_Cutthroat
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Pirate_Cutthroat
+---
 
 
 local mType = Game.createMonsterType("Pirate Cutthroat")

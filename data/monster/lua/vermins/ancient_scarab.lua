@@ -1,3 +1,7 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Ancient_Scarab
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ancient_Scarab
+---
 
 
 local mType = Game.createMonsterType("Ancient Scarab")

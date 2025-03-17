@@ -1,3 +1,7 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Gazer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gazer
+---
 
 
 local mType = Game.createMonsterType("Gazer")

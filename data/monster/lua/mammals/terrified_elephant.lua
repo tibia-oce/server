@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Terrified_Elephant
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Terrified_Elephant
+---
 
 
 local mType = Game.createMonsterType("Terrified Elephant")

@@ -1,3 +1,7 @@
+-- Version: 6.4
+-- Monster: https://tibia.fandom.com/wiki/Stalker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Stalker
+---
 
 
 local mType = Game.createMonsterType("Stalker")

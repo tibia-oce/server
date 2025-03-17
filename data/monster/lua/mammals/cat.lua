@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Cat
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Cat
+---
 
 
 local mType = Game.createMonsterType("Cat")

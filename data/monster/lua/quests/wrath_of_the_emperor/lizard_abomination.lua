@@ -1,3 +1,6 @@
+-- Version: 8.60
+-- Monster: https://tibia.fandom.com/wiki/Lizard_Abomination
+---
 
 
 local mType = Game.createMonsterType("Lizard Abomination")

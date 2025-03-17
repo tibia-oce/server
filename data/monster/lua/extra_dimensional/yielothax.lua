@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Yielothax
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Yielothax
+---
 
 
 local mType = Game.createMonsterType("Yielothax")

@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Dawnfire_Asura
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dawnfire_Asura
+---
 
 
 local mType = Game.createMonsterType("Dawnfire Asura")

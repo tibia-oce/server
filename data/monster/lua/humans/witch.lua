@@ -1,3 +1,7 @@
+-- Version: 6.0
+-- Monster: https://tibia.fandom.com/wiki/Witch
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Witch
+---
 
 
 local mType = Game.createMonsterType("Witch")

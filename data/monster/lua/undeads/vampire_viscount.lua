@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Vampire_Viscount
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Vampire_Viscount
+---
 
 
 local mType = Game.createMonsterType("Vampire Viscount")

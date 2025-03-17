@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Massive_Earth_Elemental
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Massive_Earth_Elemental
+---
 
 
 local mType = Game.createMonsterType("Massive Earth Elemental")

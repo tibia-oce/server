@@ -1,3 +1,7 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Ashmunrah
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ashmunrah
+---
 
 
 local mType = Game.createMonsterType("Ashmunrah")

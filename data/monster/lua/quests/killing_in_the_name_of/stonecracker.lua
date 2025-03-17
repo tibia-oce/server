@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Stonecracker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Stonecracker
+---
 
 
 local mType = Game.createMonsterType("Stonecracker")

@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Rupture
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Rupture
+---
 
 
 local mType = Game.createMonsterType("Rupture")

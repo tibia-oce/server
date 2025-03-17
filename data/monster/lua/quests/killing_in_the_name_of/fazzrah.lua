@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Fazzrah
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Fazzrah
+---
 
 
 local mType = Game.createMonsterType("Fazzrah")

@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Hive_Overseer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hive_Overseer
+---
 
 
 local mType = Game.createMonsterType("Hive Overseer")

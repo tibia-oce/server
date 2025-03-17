@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Carrion_Worm
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Carrion_Worm
+---
 
 
 local mType = Game.createMonsterType("Carrion Worm")

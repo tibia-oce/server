@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Tiger
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tiger
+---
 
 
 local mType = Game.createMonsterType("Tiger")

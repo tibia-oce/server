@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Clay_Guardian
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Clay_Guardian
+---
 
 
 local mType = Game.createMonsterType("Clay Guardian")

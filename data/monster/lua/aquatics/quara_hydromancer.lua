@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Quara_Hydromancer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Quara_Hydromancer
+---
 
 
 local mType = Game.createMonsterType("Quara Hydromancer")

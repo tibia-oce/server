@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Vicious_Manbat
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Vicious_Manbat
+---
 
 
 local mType = Game.createMonsterType("Vicious Manbat")

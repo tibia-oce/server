@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Spider_Queen
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Spider_Queen
+---
 
 
 local mType = Game.createMonsterType("Spider Queen")

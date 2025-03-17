@@ -1,3 +1,7 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Gargoyle
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gargoyle
+---
 
 
 local mType = Game.createMonsterType("Gargoyle")

@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Rift_Worm
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Rift_Worm
+---
 
 
 local mType = Game.createMonsterType("Rift Worm")

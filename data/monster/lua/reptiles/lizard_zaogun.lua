@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Lizard_Zaogun
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lizard_Zaogun
+---
 
 
 local mType = Game.createMonsterType("Lizard Zaogun")

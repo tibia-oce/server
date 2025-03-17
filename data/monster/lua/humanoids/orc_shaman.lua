@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Orc_Shaman
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Orc_Shaman
+---
 
 
 local mType = Game.createMonsterType("Orc Shaman")

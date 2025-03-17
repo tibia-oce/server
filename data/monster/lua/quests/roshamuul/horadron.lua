@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Horadron
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Horadron
+---
 
 
 local mType = Game.createMonsterType("Horadron")

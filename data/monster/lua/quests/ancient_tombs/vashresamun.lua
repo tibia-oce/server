@@ -1,3 +1,7 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Vashresamun
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Vashresamun
+---
 
 
 local mType = Game.createMonsterType("Vashresamun")

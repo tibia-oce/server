@@ -1,3 +1,7 @@
+-- Version: 6.2
+-- Monster: https://tibia.fandom.com/wiki/Frost_Troll
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Frost_Troll
+---
 
 
 local mType = Game.createMonsterType("Frost Troll")

@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/The_Hairy_One
+---
 
 
 local mType = Game.createMonsterType("The Hairy One")

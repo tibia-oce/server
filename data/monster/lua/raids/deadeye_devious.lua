@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Deadeye_Devious
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Deadeye_Devious
+---
 
 
 local mType = Game.createMonsterType("Deadeye Devious")

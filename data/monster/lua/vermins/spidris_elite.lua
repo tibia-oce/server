@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Spidris_Elite
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Spidris_Elite
+---
 
 
 local mType = Game.createMonsterType("Spidris Elite")

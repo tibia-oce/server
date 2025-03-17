@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Scar_Tribe_Warrior
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Scar_Tribe_Warrior
+---
 
 
 local mType = Game.createMonsterType("Scar Tribe Warrior")

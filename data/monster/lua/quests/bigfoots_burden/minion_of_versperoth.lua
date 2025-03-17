@@ -1,3 +1,7 @@
+-- Version: 9.61
+-- Monster: https://tibia.fandom.com/wiki/Minion_of_Versperoth
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Minion_of_Versperoth
+---
 
 
 local mType = Game.createMonsterType("Minion of Versperoth")

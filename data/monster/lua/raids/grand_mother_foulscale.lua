@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Grand_Mother_Foulscale
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Grand_Mother_Foulscale
+---
 
 
 local mType = Game.createMonsterType("Grand Mother Foulscale")

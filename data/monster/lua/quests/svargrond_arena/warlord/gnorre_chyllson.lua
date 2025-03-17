@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Gnorre_Chyllson
+---
 
 
 local mType = Game.createMonsterType("Gnorre Chyllson")

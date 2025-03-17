@@ -1,3 +1,7 @@
+-- Version: 4.0
+-- Monster: https://tibia.fandom.com/wiki/Dog
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dog
+---
 
 
 local mType = Game.createMonsterType("Dog")

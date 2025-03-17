@@ -1,3 +1,6 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Weakened_Demon
+---
 
 
 local mType = Game.createMonsterType("Weakened Demon")

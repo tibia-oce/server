@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Ogre_Shaman
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ogre_Shaman
+---
 
 
 local mType = Game.createMonsterType("Ogre Shaman")

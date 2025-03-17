@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Blazing_Fire_Elemental
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Blazing_Fire_Elemental
+---
 
 
 local mType = Game.createMonsterType("Blazing Fire Elemental")

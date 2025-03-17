@@ -1,3 +1,6 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Magicthrower
+---
 
 
 local mType = Game.createMonsterType("Magicthrower")

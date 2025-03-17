@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Man_in_the_Cave
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Man_in_the_Cave
+---
 
 
 local mType = Game.createMonsterType("Man in the Cave")

@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Vampire_Bride
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Vampire_Bride
+---
 
 
 local mType = Game.createMonsterType("Vampire Bride")

@@ -1,3 +1,6 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Glooth-Generator
+---
 
 
 local mType = Game.createMonsterType("Glooth-Generator")

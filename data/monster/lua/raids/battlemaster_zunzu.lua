@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Battlemaster_Zunzu
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Battlemaster_Zunzu
+---
 
 
 local mType = Game.createMonsterType("Battlemaster Zunzu")

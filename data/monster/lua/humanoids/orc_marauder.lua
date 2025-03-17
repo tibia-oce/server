@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Orc_Marauder
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Orc_Marauder
+---
 
 
 local mType = Game.createMonsterType("Orc Marauder")

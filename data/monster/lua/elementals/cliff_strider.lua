@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Cliff_Strider
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Cliff_Strider
+---
 
 
 local mType = Game.createMonsterType("Cliff Strider")

@@ -1,3 +1,7 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Lich
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lich
+---
 
 
 local mType = Game.createMonsterType("Lich")

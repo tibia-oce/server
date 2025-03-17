@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Quara_Pincher
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Quara_Pincher
+---
 
 
 local mType = Game.createMonsterType("Quara Pincher")

@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Greater_Death_Minion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Greater_Death_Minion
+---
 
 
 local mType = Game.createMonsterType("Greater Death Minion")

@@ -1,3 +1,6 @@
+-- Version: 7.92
+-- Monster: https://tibia.fandom.com/wiki/Fluffy
+---
 
 
 local mType = Game.createMonsterType("Fluffy")

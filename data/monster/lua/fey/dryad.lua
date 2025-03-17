@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Dryad
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dryad
+---
 
 
 local mType = Game.createMonsterType("Dryad")

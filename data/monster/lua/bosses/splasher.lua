@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Splasher
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Splasher
+---
 
 
 local mType = Game.createMonsterType("Splasher")

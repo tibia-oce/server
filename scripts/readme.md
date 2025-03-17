@@ -38,7 +38,7 @@ The project consists of several Python scripts:
 2. Run the main script:
 
 ```bash
-python enrich_monster_files.py --monster-dir path/to/your/monster/directory
+python3 enrich_monster_files.py --monster-dir ../data/monster/lua
 ```
 
 By default, the script looks for monster files in `data/monster/lua`.

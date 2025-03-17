@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Vile_Grandmaster
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Vile_Grandmaster
+---
 
 
 local mType = Game.createMonsterType("Vile Grandmaster")

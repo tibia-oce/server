@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Tiquandas_Revenge
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tiquandas_Revenge
+---
 
 
 local mType = Game.createMonsterType("Tiquandas Revenge")

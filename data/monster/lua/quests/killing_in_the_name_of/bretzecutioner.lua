@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Bretzecutioner
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bretzecutioner
+---
 
 
 local mType = Game.createMonsterType("Bretzecutioner")

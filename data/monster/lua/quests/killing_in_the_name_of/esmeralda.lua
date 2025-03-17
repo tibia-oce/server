@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Esmeralda
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Esmeralda
+---
 
 
 local mType = Game.createMonsterType("Esmeralda")

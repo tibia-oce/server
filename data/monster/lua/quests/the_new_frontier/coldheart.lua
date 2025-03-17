@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Coldheart
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Coldheart
+---
 
 
 local mType = Game.createMonsterType("Coldheart")

@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Bog_Frog
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bog_Frog
+---
 
 
 local mType = Game.createMonsterType("Bog Frog")

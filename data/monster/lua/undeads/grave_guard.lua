@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Grave_Guard
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Grave_Guard
+---
 
 
 local mType = Game.createMonsterType("Grave Guard")

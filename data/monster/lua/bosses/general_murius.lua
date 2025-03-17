@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/General_Murius
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:General_Murius
+---
 
 
 local mType = Game.createMonsterType("General Murius")

@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Squirrel
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Squirrel
+---
 
 
 local mType = Game.createMonsterType("Squirrel")

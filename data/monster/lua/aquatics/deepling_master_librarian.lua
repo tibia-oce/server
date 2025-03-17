@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Deepling_Master_Librarian
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Deepling_Master_Librarian
+---
 
 
 local mType = Game.createMonsterType("Deepling Master Librarian")

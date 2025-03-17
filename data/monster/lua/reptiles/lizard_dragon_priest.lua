@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Lizard_Dragon_Priest
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lizard_Dragon_Priest
+---
 
 
 local mType = Game.createMonsterType("Lizard Dragon Priest")

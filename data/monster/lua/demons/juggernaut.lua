@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Juggernaut
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Juggernaut
+---
 
 
 local mType = Game.createMonsterType("Juggernaut")

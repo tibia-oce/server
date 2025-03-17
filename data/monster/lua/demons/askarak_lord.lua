@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Askarak_Lord
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Askarak_Lord
+---
 
 
 local mType = Game.createMonsterType("Askarak Lord")

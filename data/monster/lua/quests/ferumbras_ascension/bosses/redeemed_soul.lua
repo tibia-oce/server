@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Redeemed_Soul
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Redeemed_Soul
+---
 
 
 local mType = Game.createMonsterType("Redeemed Soul")

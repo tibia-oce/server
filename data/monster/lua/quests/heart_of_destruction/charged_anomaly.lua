@@ -1,3 +1,6 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Charged_Anomaly
+---
 
 
 local mType = Game.createMonsterType("Charged Anomaly")

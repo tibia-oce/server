@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Minotaur_Occultist
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Minotaur_Occultist
+---
 
 
 local mType = Game.createMonsterType("Minotaur Occultist")

@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Tanjis
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tanjis
+---
 
 
 local mType = Game.createMonsterType("Tanjis")

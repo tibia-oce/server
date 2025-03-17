@@ -1,3 +1,7 @@
+-- Version: 7.0
+-- Monster: https://tibia.fandom.com/wiki/Orc_Rider
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Orc_Rider
+---
 
 
 local mType = Game.createMonsterType("Orc Rider")

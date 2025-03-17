@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Seagull
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Seagull
+---
 
 
 local mType = Game.createMonsterType("Seagull")

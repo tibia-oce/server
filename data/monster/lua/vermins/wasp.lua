@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Wasp
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Wasp
+---
 
 
 local mType = Game.createMonsterType("Wasp")

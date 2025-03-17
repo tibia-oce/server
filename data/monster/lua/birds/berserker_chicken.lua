@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Berserker_Chicken
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Berserker_Chicken
+---
 
 
 local mType = Game.createMonsterType("Berserker Chicken")

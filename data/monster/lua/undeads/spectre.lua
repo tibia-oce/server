@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Spectre
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Spectre
+---
 
 
 local mType = Game.createMonsterType("Spectre")

@@ -1,3 +1,7 @@
+-- Version: 6.2
+-- Monster: https://tibia.fandom.com/wiki/Winter_Wolf
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Winter_Wolf
+---
 
 
 local mType = Game.createMonsterType("Winter Wolf")

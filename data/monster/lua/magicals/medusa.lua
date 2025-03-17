@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Medusa
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Medusa
+---
 
 
 local mType = Game.createMonsterType("Medusa")

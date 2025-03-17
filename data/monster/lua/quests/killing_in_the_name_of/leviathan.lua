@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Leviathan
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Leviathan
+---
 
 
 local mType = Game.createMonsterType("Leviathan")

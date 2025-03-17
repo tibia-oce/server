@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Smuggler_Baron_Silvertoe
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Smuggler_Baron_Silvertoe
+---
 
 
 local mType = Game.createMonsterType("Smuggler Baron Silvertoe")

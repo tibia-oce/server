@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Dire_Penguin
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dire_Penguin
+---
 
 
 local mType = Game.createMonsterType("Dire Penguin")

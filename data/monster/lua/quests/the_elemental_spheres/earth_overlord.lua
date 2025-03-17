@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Earth_Overlord
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Earth_Overlord
+---
 
 
 local mType = Game.createMonsterType("Earth Overlord")

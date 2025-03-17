@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Killer_Rabbit
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Killer_Rabbit
+---
 
 
 local mType = Game.createMonsterType("Killer Rabbit")

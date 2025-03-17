@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Crab
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Crab
+---
 
 
 local mType = Game.createMonsterType("Crab")

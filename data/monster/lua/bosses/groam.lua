@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Groam
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Groam
+---
 
 
 local mType = Game.createMonsterType("Groam")

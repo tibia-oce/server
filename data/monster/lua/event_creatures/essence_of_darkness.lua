@@ -1,3 +1,6 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Essence_of_Darkness
+---
 
 
 local mType = Game.createMonsterType("Essence of Darkness")

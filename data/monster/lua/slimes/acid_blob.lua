@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Acid_Blob
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Acid_Blob
+---
 
 
 local mType = Game.createMonsterType("Acid Blob")

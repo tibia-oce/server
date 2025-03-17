@@ -1,3 +1,6 @@
+-- Version: --
+-- Monster: https://tibia.fandom.com/wiki/Zoralurk
+---
 -- Zoralurk (Tibia Wiki: https://tibia.fandom.com/wiki/Zoralurk)
 -- Version: --
 

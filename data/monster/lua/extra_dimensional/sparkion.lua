@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Sparkion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Sparkion
+---
 
 
 local mType = Game.createMonsterType("Sparkion")

@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Parasite
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Parasite
+---
 
 
 local mType = Game.createMonsterType("Parasite")

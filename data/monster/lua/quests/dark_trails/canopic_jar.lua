@@ -1,3 +1,6 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Canopic_Jar
+---
 
 
 local mType = Game.createMonsterType("Canopic Jar")

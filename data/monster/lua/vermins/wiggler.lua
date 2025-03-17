@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Wiggler
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Wiggler
+---
 
 
 local mType = Game.createMonsterType("Wiggler")

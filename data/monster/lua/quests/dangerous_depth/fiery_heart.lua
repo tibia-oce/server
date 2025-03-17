@@ -1,3 +1,6 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Fiery_Heart
+---
 
 
 local mType = Game.createMonsterType("Fiery Heart")

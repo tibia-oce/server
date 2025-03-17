@@ -1,3 +1,6 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Depolarized_Crackler
+---
 
 
 local mType = Game.createMonsterType("Depolarized Crackler")

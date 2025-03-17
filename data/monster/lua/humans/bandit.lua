@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Bandit
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bandit
+---
 
 
 local mType = Game.createMonsterType("Bandit")

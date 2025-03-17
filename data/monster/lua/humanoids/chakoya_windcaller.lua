@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Chakoya_Windcaller
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Chakoya_Windcaller
+---
 
 
 local mType = Game.createMonsterType("Chakoya Windcaller")

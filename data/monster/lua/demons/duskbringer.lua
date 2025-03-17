@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Duskbringer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Duskbringer
+---
 
 
 local mType = Game.createMonsterType("Duskbringer")

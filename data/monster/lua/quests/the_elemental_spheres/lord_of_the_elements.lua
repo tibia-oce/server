@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Lord_of_the_Elements
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lord_of_the_Elements
+---
 
 
 local mType = Game.createMonsterType("Lord of the Elements")

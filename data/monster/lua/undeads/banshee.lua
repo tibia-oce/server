@@ -1,3 +1,7 @@
+-- Version: 7.2
+-- Monster: https://tibia.fandom.com/wiki/Banshee
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Banshee
+---
 
 
 local mType = Game.createMonsterType("Banshee")

@@ -1,3 +1,5 @@
+-- Monster: https://tibia.fandom.com/wiki/Butterfly
+---
 
 
 local mType = Game.createMonsterType("Butterfly")

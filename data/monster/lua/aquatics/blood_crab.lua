@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Blood_Crab
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Blood_Crab
+---
 
 
 local mType = Game.createMonsterType("Blood Crab")

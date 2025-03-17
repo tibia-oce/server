@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Necromancer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Necromancer
+---
 
 
 local mType = Game.createMonsterType("Necromancer")

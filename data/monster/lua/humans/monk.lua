@@ -1,3 +1,6 @@
+-- Version: 14.15
+-- Monster: https://tibia.fandom.com/wiki/Monk
+---
 
 
 local mType = Game.createMonsterType("Monk")

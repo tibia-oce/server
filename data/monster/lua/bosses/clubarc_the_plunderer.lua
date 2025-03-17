@@ -1,5 +1,7 @@
--- Clubarc The Plunderer (Tibia Wiki: https://tibia.fandom.com/wiki/Cublarc_the_Plunderer
 -- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Cublarc_the_Plunderer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Cublarc_the_Plunderer
+---
 
 local mType = Game.createMonsterType("Clubarc The Plunderer")
 local monster = {}

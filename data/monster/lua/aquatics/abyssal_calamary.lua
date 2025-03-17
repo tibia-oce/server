@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Abyssal_Calamary
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Abyssal_Calamary
+---
 
 
 local mType = Game.createMonsterType("Abyssal Calamary")

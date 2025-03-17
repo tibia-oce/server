@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Minotaur_Guard
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Minotaur_Guard
+---
 
 
 local mType = Game.createMonsterType("Minotaur Guard")

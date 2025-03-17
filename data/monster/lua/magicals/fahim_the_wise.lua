@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Fahim_the_Wise
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Fahim_the_Wise
+---
 
 
 local mType = Game.createMonsterType("Fahim the Wise")

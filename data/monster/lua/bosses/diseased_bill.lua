@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Diseased_Bill
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Diseased_Bill
+---
 
 
 local mType = Game.createMonsterType("Diseased Bill")

@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Infected_Weeper
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Infected_Weeper
+---
 
 
 local mType = Game.createMonsterType("Infected Weeper")

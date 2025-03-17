@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Acolyte_of_the_Cult
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Acolyte_of_the_Cult
+---
 
 
 local mType = Game.createMonsterType("Acolyte of the Cult")

@@ -1,3 +1,6 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Running_Elite_Orc_Guard
+---
 
 
 local mType = Game.createMonsterType("Running Elite Orc Guard")

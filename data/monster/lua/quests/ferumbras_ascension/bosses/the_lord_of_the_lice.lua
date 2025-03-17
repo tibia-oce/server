@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/The_Lord_of_the_Lice
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Lord_of_the_Lice
+---
 
 
 local mType = Game.createMonsterType("The Lord of the Lice")

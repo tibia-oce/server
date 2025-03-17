@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Frost_Dragon_Hatchling
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Frost_Dragon_Hatchling
+---
 
 
 local mType = Game.createMonsterType("Frost Dragon Hatchling")

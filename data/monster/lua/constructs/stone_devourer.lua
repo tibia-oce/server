@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Stone_Devourer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Stone_Devourer
+---
 
 
 local mType = Game.createMonsterType("Stone Devourer")

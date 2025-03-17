@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Worker_Golem
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Worker_Golem
+---
 
 
 local mType = Game.createMonsterType("Worker Golem")

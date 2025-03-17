@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Calamary
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Calamary
+---
 
 
 local mType = Game.createMonsterType("Calamary")

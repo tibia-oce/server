@@ -1,3 +1,6 @@
+-- Version: 12.40.9997
+-- Monster: https://tibia.fandom.com/wiki/Agressive_Chicken
+---
 
 
 local mType = Game.createMonsterType("Agressive Chicken")

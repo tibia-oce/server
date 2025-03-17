@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Minotaur_Hunter
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Minotaur_Hunter
+---
 
 
 local mType = Game.createMonsterType("Minotaur Hunter")

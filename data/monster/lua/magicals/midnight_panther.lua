@@ -1,3 +1,7 @@
+-- Version: 8.70
+-- Monster: https://tibia.fandom.com/wiki/Midnight_Panther
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Midnight_Panther
+---
 
 
 local mType = Game.createMonsterType("Midnight Panther")

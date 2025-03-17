@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Goblin_Assassin
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Goblin_Assassin
+---
 
 
 local mType = Game.createMonsterType("Goblin Assassin")

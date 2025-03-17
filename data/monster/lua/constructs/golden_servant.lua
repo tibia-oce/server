@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Golden_Servant
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Golden_Servant
+---
 
 
 local mType = Game.createMonsterType("Golden Servant")

@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Island_Troll
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Island_Troll
+---
 
 
 local mType = Game.createMonsterType("Island Troll")

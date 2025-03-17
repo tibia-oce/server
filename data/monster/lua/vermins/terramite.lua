@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Terramite
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Terramite
+---
 
 
 local mType = Game.createMonsterType("Terramite")

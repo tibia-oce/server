@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Polar_Bear
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Polar_Bear
+---
 
 
 local mType = Game.createMonsterType("Polar Bear")

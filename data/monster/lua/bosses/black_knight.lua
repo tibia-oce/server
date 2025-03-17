@@ -1,3 +1,7 @@
+-- Version: 5.0
+-- Monster: https://tibia.fandom.com/wiki/Black_Knight
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Black_Knight
+---
 
 
 local mType = Game.createMonsterType("Black Knight")

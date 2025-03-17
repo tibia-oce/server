@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/The_Evil_Eye
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Evil_Eye
+---
 
 
 local mType = Game.createMonsterType("The Evil Eye")

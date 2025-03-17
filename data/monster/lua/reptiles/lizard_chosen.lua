@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Lizard_Chosen
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lizard_Chosen
+---
 
 
 local mType = Game.createMonsterType("Lizard Chosen")

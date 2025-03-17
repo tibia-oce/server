@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Menace
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Menace
+---
 
 
 local mType = Game.createMonsterType("Menace")

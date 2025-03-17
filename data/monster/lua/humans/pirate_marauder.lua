@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Pirate_Marauder
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Pirate_Marauder
+---
 
 
 local mType = Game.createMonsterType("Pirate Marauder")

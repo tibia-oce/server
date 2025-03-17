@@ -1,3 +1,7 @@
+-- Version: 10.80
+-- Monster: https://tibia.fandom.com/wiki/Tainted_Soul
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tainted_Soul
+---
 
 
 local mType = Game.createMonsterType("Tainted Soul")

@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Desperate_White_Deer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Desperate_White_Deer
+---
 
 
 local mType = Game.createMonsterType("Desperate White Deer")

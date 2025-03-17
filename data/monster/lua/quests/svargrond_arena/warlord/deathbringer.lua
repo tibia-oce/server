@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Deathbringer
+---
 
 
 local mType = Game.createMonsterType("Deathbringer")

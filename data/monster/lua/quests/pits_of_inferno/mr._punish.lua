@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Mr._Punish
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mr._Punish
+---
 
 
 local mType = Game.createMonsterType("Mr. Punish")

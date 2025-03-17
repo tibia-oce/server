@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Blightwalker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Blightwalker
+---
 
 
 local mType = Game.createMonsterType("Blightwalker")

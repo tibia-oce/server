@@ -1,3 +1,7 @@
+-- Version: 7.0
+-- Monster: https://tibia.fandom.com/wiki/Blue_Djinn
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Blue_Djinn
+---
 
 
 local mType = Game.createMonsterType("Blue Djinn")

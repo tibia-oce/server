@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Grynch_Clan_Goblin
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Grynch_Clan_Goblin
+---
 
 
 local mType = Game.createMonsterType("Grynch Clan Goblin")

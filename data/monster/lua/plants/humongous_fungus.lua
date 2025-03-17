@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Humongous_Fungus
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Humongous_Fungus
+---
 
 
 local mType = Game.createMonsterType("Humongous Fungus")

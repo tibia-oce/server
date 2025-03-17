@@ -1,3 +1,7 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Morguthis
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Morguthis
+---
 
 
 local mType = Game.createMonsterType("Morguthis")

@@ -1,3 +1,6 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Ferumbras_Essence
+---
 
 
 local mType = Game.createMonsterType("Ferumbras Essence")

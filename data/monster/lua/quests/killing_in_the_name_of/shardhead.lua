@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Shardhead
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Shardhead
+---
 
 
 local mType = Game.createMonsterType("Shardhead")

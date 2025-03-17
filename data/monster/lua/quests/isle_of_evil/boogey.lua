@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Boogey
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Boogey
+---
 
 
 local mType = Game.createMonsterType("Boogey")

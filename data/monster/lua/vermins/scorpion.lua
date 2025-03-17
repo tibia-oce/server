@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Scorpion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Scorpion
+---
 
 
 local mType = Game.createMonsterType("Scorpion")

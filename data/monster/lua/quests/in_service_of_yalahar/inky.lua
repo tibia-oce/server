@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Inky
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Inky
+---
 
 
 local mType = Game.createMonsterType("Inky")

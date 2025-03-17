@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Bug
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bug
+---
 
 
 local mType = Game.createMonsterType("Bug")

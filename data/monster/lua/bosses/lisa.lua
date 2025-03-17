@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Lisa
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lisa
+---
 
 
 local mType = Game.createMonsterType("Lisa")

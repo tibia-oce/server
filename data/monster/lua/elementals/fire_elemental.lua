@@ -1,3 +1,7 @@
+-- Version: 6.4
+-- Monster: https://tibia.fandom.com/wiki/Fire_Elemental
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Fire_Elemental
+---
 
 
 local mType = Game.createMonsterType("Fire Elemental")

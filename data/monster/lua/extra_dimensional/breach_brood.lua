@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Breach_Brood
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Breach_Brood
+---
 
 
 local mType = Game.createMonsterType("Breach Brood")

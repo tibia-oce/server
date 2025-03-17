@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Yaga_the_Crone
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Yaga_the_Crone
+---
 
 
 local mType = Game.createMonsterType("Yaga the Crone")

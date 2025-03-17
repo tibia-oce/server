@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Ferumbras
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ferumbras
+---
 
 
 local mType = Game.createMonsterType("Ferumbras")

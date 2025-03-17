@@ -1,3 +1,6 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Bone_Capsule
+---
 
 
 local mType = Game.createMonsterType("Bone Capsule")

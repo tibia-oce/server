@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Darakan_the_Executioner
+---
 
 
 local mType = Game.createMonsterType("Darakan the Executioner")

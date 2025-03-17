@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/The_Axeorcist
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Axeorcist
+---
 
 
 local mType = Game.createMonsterType("The Axeorcist")

@@ -1,3 +1,7 @@
+-- Version: 9.62
+-- Monster: https://tibia.fandom.com/wiki/Young_Troll
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Young_Troll
+---
 
 
 local mType = Game.createMonsterType("Young Troll")

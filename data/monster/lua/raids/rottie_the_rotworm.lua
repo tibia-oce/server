@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Rottie_the_Rotworm
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Rottie_the_Rotworm
+---
 
 
 local mType = Game.createMonsterType("Rottie the Rotworm")

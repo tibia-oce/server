@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Crystal_Spider
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Crystal_Spider
+---
 
 
 local mType = Game.createMonsterType("Crystal Spider")

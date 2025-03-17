@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Wisp
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Wisp
+---
 
 
 local mType = Game.createMonsterType("Wisp")

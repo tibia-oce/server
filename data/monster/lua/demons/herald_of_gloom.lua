@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Herald_of_Gloom
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Herald_of_Gloom
+---
 
 
 local mType = Game.createMonsterType("Herald of Gloom")

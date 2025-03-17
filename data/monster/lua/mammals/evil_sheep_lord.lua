@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Evil_Sheep_Lord
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Evil_Sheep_Lord
+---
 
 
 local mType = Game.createMonsterType("Evil Sheep Lord")

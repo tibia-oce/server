@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Damaged_Crystal_Golem
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Damaged_Crystal_Golem
+---
 
 
 local mType = Game.createMonsterType("Damaged Crystal Golem")

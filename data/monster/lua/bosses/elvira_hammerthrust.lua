@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Elvira_Hammerthrust
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Elvira_Hammerthrust
+---
 
 
 local mType = Game.createMonsterType("Elvira Hammerthrust")

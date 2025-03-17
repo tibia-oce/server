@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/Enraged_Soul
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Enraged_Soul
+---
 
 
 local mType = Game.createMonsterType("Enraged Soul")

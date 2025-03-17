@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Wilting_Leaf_Golem
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Wilting_Leaf_Golem
+---
 
 
 local mType = Game.createMonsterType("Wilting Leaf Golem")

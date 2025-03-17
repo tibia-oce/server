@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Roaring_Lion
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Roaring_Lion
+---
 
 
 local mType = Game.createMonsterType("Roaring Lion")

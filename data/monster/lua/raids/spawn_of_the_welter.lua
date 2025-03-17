@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/Spawn_of_the_Welter
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Spawn_of_the_Welter
+---
 
 
 local mType = Game.createMonsterType("Spawn of the Welter")

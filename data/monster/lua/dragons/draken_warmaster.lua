@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Draken_Warmaster
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Draken_Warmaster
+---
 
 
 local mType = Game.createMonsterType("Draken Warmaster")

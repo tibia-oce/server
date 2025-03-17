@@ -1,3 +1,7 @@
+-- Version: 6.61-6.97
+-- Monster: https://tibia.fandom.com/wiki/Ghost
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ghost
+---
 -- Ghost (Tibia Wiki: https://tibia.fandom.com/wiki/Ghost)
 -- Version: 6.61-6.97
 

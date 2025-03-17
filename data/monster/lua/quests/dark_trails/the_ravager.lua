@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/The_Ravager
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Ravager
+---
 
 
 local mType = Game.createMonsterType("The Ravager")

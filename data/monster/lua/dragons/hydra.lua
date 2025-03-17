@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Hydra
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hydra
+---
 
 
 local mType = Game.createMonsterType("Hydra")

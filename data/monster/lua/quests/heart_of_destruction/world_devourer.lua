@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/World_Devourer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:World_Devourer
+---
 
 
 local mType = Game.createMonsterType("World Devourer")

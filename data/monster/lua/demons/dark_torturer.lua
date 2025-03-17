@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Dark_Torturer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dark_Torturer
+---
 
 
 local mType = Game.createMonsterType("Dark Torturer")

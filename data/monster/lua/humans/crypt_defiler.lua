@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Crypt_Defiler
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Crypt_Defiler
+---
 
 
 local mType = Game.createMonsterType("Crypt Defiler")

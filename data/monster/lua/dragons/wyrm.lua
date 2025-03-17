@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Wyrm
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Wyrm
+---
 
 
 local mType = Game.createMonsterType("Wyrm")

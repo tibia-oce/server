@@ -1,3 +1,7 @@
+-- Version: 6.1
+-- Monster: https://tibia.fandom.com/wiki/Dwarf_Guard
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dwarf_Guard
+---
 
 
 local mType = Game.createMonsterType("Dwarf Guard")

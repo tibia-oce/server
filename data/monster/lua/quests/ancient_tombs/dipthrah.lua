@@ -1,3 +1,7 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Dipthrah
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dipthrah
+---
 
 
 local mType = Game.createMonsterType("Dipthrah")

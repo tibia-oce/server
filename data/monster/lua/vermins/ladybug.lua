@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Ladybug
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ladybug
+---
 
 
 local mType = Game.createMonsterType("Ladybug")

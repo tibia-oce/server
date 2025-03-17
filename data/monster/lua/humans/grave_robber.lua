@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Grave_Robber
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Grave_Robber
+---
 
 
 local mType = Game.createMonsterType("Grave Robber")

@@ -1,3 +1,7 @@
+-- Version: 6.4
+-- Monster: https://tibia.fandom.com/wiki/Behemoth
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Behemoth
+---
 
 
 local mType = Game.createMonsterType("Behemoth")

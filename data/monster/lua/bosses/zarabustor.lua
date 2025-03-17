@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Zarabustor
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Zarabustor
+---
 
 
 local mType = Game.createMonsterType("Zarabustor")

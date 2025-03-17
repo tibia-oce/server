@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Haunter
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Haunter
+---
 
 
 local mType = Game.createMonsterType("Haunter")

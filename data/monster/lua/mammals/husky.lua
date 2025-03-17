@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Husky
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Husky
+---
 
 
 local mType = Game.createMonsterType("Husky")

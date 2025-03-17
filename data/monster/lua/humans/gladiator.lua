@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Gladiator
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gladiator
+---
 
 
 local mType = Game.createMonsterType("Gladiator")

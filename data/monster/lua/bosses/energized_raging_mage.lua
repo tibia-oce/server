@@ -1,3 +1,6 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Energized_Raging_Mage
+---
 
 
 local mType = Game.createMonsterType("Energized Raging Mage")

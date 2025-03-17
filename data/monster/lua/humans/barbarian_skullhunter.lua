@@ -1,3 +1,7 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Barbarian_Skullhunter
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Barbarian_Skullhunter
+---
 
 
 local mType = Game.createMonsterType("Barbarian Skullhunter")

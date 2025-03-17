@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Hideous_Fungus
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hideous_Fungus
+---
 
 
 local mType = Game.createMonsterType("Hideous Fungus")

@@ -1,3 +1,7 @@
+-- Version: 5.0
+-- Monster: https://tibia.fandom.com/wiki/Giant_Spider
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Giant_Spider
+---
 
 
 local mType = Game.createMonsterType("Giant Spider")

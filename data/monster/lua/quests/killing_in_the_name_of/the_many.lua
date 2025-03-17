@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/The_Many
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Many
+---
 
 
 local mType = Game.createMonsterType("The Many")

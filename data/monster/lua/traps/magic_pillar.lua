@@ -1,3 +1,6 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Magic_Pillar
+---
 
 
 local mType = Game.createMonsterType("Magic Pillar")

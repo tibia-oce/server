@@ -1,3 +1,6 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Incredibly_Old_Witch
+---
 
 
 local mType = Game.createMonsterType("Incredibly Old Witch")

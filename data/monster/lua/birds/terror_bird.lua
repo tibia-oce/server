@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Terror_Bird
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Terror_Bird
+---
 
 
 local mType = Game.createMonsterType("Terror Bird")

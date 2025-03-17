@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/Nightfiend
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Nightfiend
+---
 
 
 local mType = Game.createMonsterType("Nightfiend")

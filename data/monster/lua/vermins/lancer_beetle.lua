@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Lancer_Beetle
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lancer_Beetle
+---
 
 
 local mType = Game.createMonsterType("Lancer Beetle")

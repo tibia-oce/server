@@ -1,3 +1,6 @@
+-- Version: --
+-- Monster: https://tibia.fandom.com/wiki/Infernatil
+---
 -- Infernatil (Tibia Wiki: https://tibia.fandom.com/wiki/Infernatil)
 -- Version: --
 

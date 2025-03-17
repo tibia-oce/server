@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Sheep
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Sheep
+---
 
 
 local mType = Game.createMonsterType("Sheep")

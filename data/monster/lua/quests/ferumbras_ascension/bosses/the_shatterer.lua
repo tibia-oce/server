@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/The_Shatterer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Shatterer
+---
 
 
 local mType = Game.createMonsterType("The Shatterer")

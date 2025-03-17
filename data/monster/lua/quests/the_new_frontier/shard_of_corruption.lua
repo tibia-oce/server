@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Shard_of_Corruption
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Shard_of_Corruption
+---
 
 
 local mType = Game.createMonsterType("Shard of Corruption")

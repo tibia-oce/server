@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Demon_Parrot
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Demon_Parrot
+---
 
 
 local mType = Game.createMonsterType("Demon Parrot")

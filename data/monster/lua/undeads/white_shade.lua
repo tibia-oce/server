@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/White_Shade
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:White_Shade
+---
 
 
 local mType = Game.createMonsterType("White Shade")

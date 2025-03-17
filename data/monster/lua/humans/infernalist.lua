@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Infernalist
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Infernalist
+---
 
 
 local mType = Game.createMonsterType("Infernalist")

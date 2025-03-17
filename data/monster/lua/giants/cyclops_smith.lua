@@ -1,3 +1,7 @@
+-- Version: 8.10
+-- Monster: https://tibia.fandom.com/wiki/Cyclops_Smith
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Cyclops_Smith
+---
 
 
 local mType = Game.createMonsterType("Cyclops Smith")

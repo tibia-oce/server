@@ -1,3 +1,7 @@
+-- Version: 9.20
+-- Monster: https://tibia.fandom.com/wiki/Sulphur_Scuttler
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Sulphur_Scuttler
+---
 
 
 local mType = Game.createMonsterType("Sulphur Scuttler")

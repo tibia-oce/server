@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Foreman_Kneebiter
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Foreman_Kneebiter
+---
 
 
 local mType = Game.createMonsterType("Foreman Kneebiter")

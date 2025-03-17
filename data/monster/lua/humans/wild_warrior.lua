@@ -1,3 +1,7 @@
+-- Version: 5.0
+-- Monster: https://tibia.fandom.com/wiki/Wild_Warrior
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Wild_Warrior
+---
 
 
 local mType = Game.createMonsterType("Wild Warrior")

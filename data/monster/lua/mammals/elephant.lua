@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Elephant
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Elephant
+---
 
 
 local mType = Game.createMonsterType("Elephant")

@@ -1,3 +1,7 @@
+-- Version: 10.50
+-- Monster: https://tibia.fandom.com/wiki/Walker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Walker
+---
 
 
 local mType = Game.createMonsterType("Walker")

@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Chicken
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Chicken
+---
 
 
 local mType = Game.createMonsterType("Chicken")

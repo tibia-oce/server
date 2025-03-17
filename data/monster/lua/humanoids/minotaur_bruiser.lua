@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Minotaur_Bruiser
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Minotaur_Bruiser
+---
 
 
 local mType = Game.createMonsterType("Minotaur Bruiser")

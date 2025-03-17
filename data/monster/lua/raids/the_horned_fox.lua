@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/The_Horned_Fox
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Horned_Fox
+---
 
 
 local mType = Game.createMonsterType("The Horned Fox")

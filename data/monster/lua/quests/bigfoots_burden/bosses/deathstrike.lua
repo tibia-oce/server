@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Deathstrike
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Deathstrike
+---
 
 
 local mType = Game.createMonsterType("Deathstrike")

@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Mountain_Troll
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mountain_Troll
+---
 
 
 local mType = Game.createMonsterType("Mountain Troll")

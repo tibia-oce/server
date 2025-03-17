@@ -1,3 +1,7 @@
+-- Version: 10.96
+-- Monster: https://tibia.fandom.com/wiki/Dawn_Bat
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dawn_Bat
+---
 
 
 local mType = Game.createMonsterType("Dawn Bat")

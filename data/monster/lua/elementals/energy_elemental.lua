@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Energy_Elemental
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Energy_Elemental
+---
 
 
 local mType = Game.createMonsterType("Energy Elemental")

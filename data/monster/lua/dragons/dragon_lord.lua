@@ -1,3 +1,7 @@
+-- Version: 5.1
+-- Monster: https://tibia.fandom.com/wiki/Dragon_Lord
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dragon_Lord
+---
 
 
 local mType = Game.createMonsterType("Dragon Lord")

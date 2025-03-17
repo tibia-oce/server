@@ -1,3 +1,7 @@
+-- Version: 6.1
+-- Monster: https://tibia.fandom.com/wiki/Goblin
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Goblin
+---
 
 
 local mType = Game.createMonsterType("Goblin")

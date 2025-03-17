@@ -1,3 +1,7 @@
+-- Version: 10.30
+-- Monster: https://tibia.fandom.com/wiki/Guzzlemaw
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Guzzlemaw
+---
 
 
 local mType = Game.createMonsterType("Guzzlemaw")

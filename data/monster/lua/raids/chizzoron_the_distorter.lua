@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Chizzoron_the_Distorter
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Chizzoron_the_Distorter
+---
 
 
 local mType = Game.createMonsterType("Chizzoron the Distorter")

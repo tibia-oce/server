@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Marsh_Stalker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Marsh_Stalker
+---
 
 
 local mType = Game.createMonsterType("Marsh Stalker")

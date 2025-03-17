@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Wailing_Widow
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Wailing_Widow
+---
 
 
 local mType = Game.createMonsterType("Wailing Widow")

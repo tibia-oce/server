@@ -1,3 +1,7 @@
+-- Version: 2.0
+-- Monster: https://tibia.fandom.com/wiki/Cyclops
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Cyclops
+---
 
 
 local mType = Game.createMonsterType("Cyclops")

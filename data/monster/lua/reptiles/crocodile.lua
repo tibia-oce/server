@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Crocodile
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Crocodile
+---
 
 
 local mType = Game.createMonsterType("Crocodile")

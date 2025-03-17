@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Hemming
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hemming
+---
 
 
 local mType = Game.createMonsterType("Hemming")

@@ -1,3 +1,6 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Rage_of_Mazoran
+---
 
 
 local mType = Game.createMonsterType("Rage of Mazoran")

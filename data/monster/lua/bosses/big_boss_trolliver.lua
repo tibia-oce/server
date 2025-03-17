@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Big_Boss_Trolliver
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Big_Boss_Trolliver
+---
 
 
 local mType = Game.createMonsterType("Big Boss Trolliver")

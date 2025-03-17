@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Mutated_Bat
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Mutated_Bat
+---
 
 
 local mType = Game.createMonsterType("Mutated Bat")

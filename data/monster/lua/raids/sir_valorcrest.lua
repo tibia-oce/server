@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Sir_Valorcrest
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Sir_Valorcrest
+---
 
 
 local mType = Game.createMonsterType("Sir Valorcrest")

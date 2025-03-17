@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Quara_Mantassin
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Quara_Mantassin
+---
 
 
 local mType = Game.createMonsterType("Quara Mantassin")

@@ -1,3 +1,6 @@
+-- Version: 8.60
+-- Monster: https://tibia.fandom.com/wiki/Wrath_of_the_Emperor
+---
 
 
 local mType = Game.createMonsterType("Wrath of the Emperor")

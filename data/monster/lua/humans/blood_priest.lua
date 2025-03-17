@@ -1,3 +1,7 @@
+-- Version: 10.10
+-- Monster: https://tibia.fandom.com/wiki/Blood_Priest
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Blood_Priest
+---
 
 
 local mType = Game.createMonsterType("Blood Priest")

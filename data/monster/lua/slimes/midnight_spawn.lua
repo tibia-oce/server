@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Midnight_Spawn
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Midnight_Spawn
+---
 
 
 local mType = Game.createMonsterType("Midnight Spawn")

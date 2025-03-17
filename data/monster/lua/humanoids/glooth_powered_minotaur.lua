@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Glooth_Powered_Minotaur
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Glooth_Powered_Minotaur
+---
 
 
 local mType = Game.createMonsterType("Glooth Powered Minotaur")

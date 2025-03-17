@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Pirate_Ghost
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Pirate_Ghost
+---
 
 
 local mType = Game.createMonsterType("Pirate Ghost")

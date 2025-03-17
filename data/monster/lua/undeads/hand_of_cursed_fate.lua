@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Hand_of_Cursed_Fate
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hand_of_Cursed_Fate
+---
 
 
 local mType = Game.createMonsterType("Hand of Cursed Fate")

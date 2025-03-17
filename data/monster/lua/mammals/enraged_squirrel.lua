@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Enraged_Squirrel
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Enraged_Squirrel
+---
 
 
 local mType = Game.createMonsterType("Enraged Squirrel")

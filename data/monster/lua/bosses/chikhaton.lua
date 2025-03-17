@@ -1,3 +1,6 @@
+-- Version: 8.61
+-- Monster: https://tibia.fandom.com/wiki/Chikhaton
+---
 
 
 local mType = Game.createMonsterType("Chikhaton")

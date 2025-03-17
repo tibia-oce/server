@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Shulgrax
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Shulgrax
+---
 
 
 local mType = Game.createMonsterType("Shulgrax")

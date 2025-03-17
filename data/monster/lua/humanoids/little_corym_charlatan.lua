@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Little_Corym_Charlatan
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Little_Corym_Charlatan
+---
 
 
 local mType = Game.createMonsterType("Little Corym Charlatan")

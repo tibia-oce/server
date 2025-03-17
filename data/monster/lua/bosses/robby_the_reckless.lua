@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Robby_the_Reckless
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Robby_the_Reckless
+---
 
 
 local mType = Game.createMonsterType("Robby the Reckless")

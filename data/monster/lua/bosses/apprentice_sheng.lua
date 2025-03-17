@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Apprentice_Sheng
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Apprentice_Sheng
+---
 
 
 local mType = Game.createMonsterType("Apprentice Sheng")

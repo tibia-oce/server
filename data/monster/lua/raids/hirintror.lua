@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/Hirintror
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hirintror
+---
 
 
 local mType = Game.createMonsterType("Hirintror")

@@ -1,3 +1,7 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Thalas
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Thalas
+---
 
 
 local mType = Game.createMonsterType("Thalas")

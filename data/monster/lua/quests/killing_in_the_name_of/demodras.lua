@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Demodras
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Demodras
+---
 
 
 local mType = Game.createMonsterType("Demodras")

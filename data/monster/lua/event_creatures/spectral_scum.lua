@@ -1,3 +1,6 @@
+-- Version: 8.70
+-- Monster: https://tibia.fandom.com/wiki/Spectral_Scum
+---
 
 
 local mType = Game.createMonsterType("Spectral Scum")

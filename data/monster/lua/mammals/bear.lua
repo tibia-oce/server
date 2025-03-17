@@ -1,3 +1,7 @@
+-- Version: 4.0
+-- Monster: https://tibia.fandom.com/wiki/Bear
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bear
+---
 
 
 local mType = Game.createMonsterType("Bear")

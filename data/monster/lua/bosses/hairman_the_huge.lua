@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Hairman_the_Huge
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hairman_the_Huge
+---
 
 
 local mType = Game.createMonsterType("Hairman the Huge")

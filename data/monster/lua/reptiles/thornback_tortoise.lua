@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Thornback_Tortoise
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Thornback_Tortoise
+---
 
 
 local mType = Game.createMonsterType("Thornback Tortoise")

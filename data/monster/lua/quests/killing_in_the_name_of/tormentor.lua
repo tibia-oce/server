@@ -1,3 +1,7 @@
+-- Version: 9.50
+-- Monster: https://tibia.fandom.com/wiki/Tormentor
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tormentor
+---
 
 
 local mType = Game.createMonsterType("Tormentor")

@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Ghoulish_Hyaena
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ghoulish_Hyaena
+---
 
 
 local mType = Game.createMonsterType("Ghoulish Hyaena")

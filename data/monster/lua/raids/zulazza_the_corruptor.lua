@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Zulazza_the_Corruptor
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Zulazza_the_Corruptor
+---
 
 
 local mType = Game.createMonsterType("Zulazza the Corruptor")

@@ -1,3 +1,6 @@
+-- Version: --
+-- Monster: https://tibia.fandom.com/wiki/Apocalypse
+---
 -- Apocalypse (Tibia Wiki: https://tibia.fandom.com/wiki/Apocalypse)
 -- Version: --
 

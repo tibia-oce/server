@@ -1,3 +1,7 @@
+-- Version: 9.60
+-- Monster: https://tibia.fandom.com/wiki/Abyssador
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Abyssador
+---
 
 
 local mType = Game.createMonsterType("Abyssador")

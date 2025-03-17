@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Barbaria
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Barbaria
+---
 
 
 local mType = Game.createMonsterType("Barbaria")

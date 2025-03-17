@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Dracola
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dracola
+---
 
 
 local mType = Game.createMonsterType("Dracola")

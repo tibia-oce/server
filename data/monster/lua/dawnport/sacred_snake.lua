@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Sacred_Snake
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Sacred_Snake
+---
 
 
 local mType = Game.createMonsterType("Sacred Snake")

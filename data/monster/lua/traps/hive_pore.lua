@@ -1,3 +1,6 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Hive_Pore
+---
 
 
 local mType = Game.createMonsterType("Hive Pore")

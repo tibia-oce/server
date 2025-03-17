@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Undead_Prospector
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Undead_Prospector
+---
 
 
 local mType = Game.createMonsterType("Undead Prospector")

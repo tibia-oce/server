@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Cockroach
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Cockroach
+---
 
 
 local mType = Game.createMonsterType("Cockroach")

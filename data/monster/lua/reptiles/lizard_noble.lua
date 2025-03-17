@@ -1,3 +1,7 @@
+-- Version: 8.60
+-- Monster: https://tibia.fandom.com/wiki/Lizard_Noble
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lizard_Noble
+---
 
 
 local mType = Game.createMonsterType("Lizard Noble")

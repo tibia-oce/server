@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Clomp
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Clomp
+---
 
 
 local mType = Game.createMonsterType("Clomp")

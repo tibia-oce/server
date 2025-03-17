@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Elder_Mummy
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Elder_Mummy
+---
 
 
 local mType = Game.createMonsterType("Elder Mummy")

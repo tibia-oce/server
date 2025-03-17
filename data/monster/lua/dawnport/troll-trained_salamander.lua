@@ -1,3 +1,7 @@
+-- Version: 10.55
+-- Monster: https://tibia.fandom.com/wiki/Troll-Trained_Salamander
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Troll-Trained_Salamander
+---
 
 
 local mType = Game.createMonsterType("Troll-Trained Salamander")

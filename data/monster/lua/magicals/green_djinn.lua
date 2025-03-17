@@ -1,3 +1,7 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Green_Djinn
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Green_Djinn
+---
 
 
 local mType = Game.createMonsterType("Green Djinn")

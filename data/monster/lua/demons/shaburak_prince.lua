@@ -1,3 +1,7 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Shaburak_Prince
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Shaburak_Prince
+---
 
 
 local mType = Game.createMonsterType("Shaburak Prince")

@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Latrivan
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Latrivan
+---
 
 
 local mType = Game.createMonsterType("Latrivan")

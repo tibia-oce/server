@@ -1,3 +1,7 @@
+-- Version: 10.94
+-- Monster: https://tibia.fandom.com/wiki/Reality_Reaver
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Reality_Reaver
+---
 
 
 local mType = Game.createMonsterType("Reality Reaver")

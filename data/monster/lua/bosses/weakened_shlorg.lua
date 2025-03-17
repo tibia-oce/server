@@ -1,3 +1,7 @@
+-- Version: 10.20
+-- Monster: https://tibia.fandom.com/wiki/Weakened_Shlorg
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Weakened_Shlorg
+---
 
 
 local mType = Game.createMonsterType("Weakened Shlorg")

@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/Svoren_the_Mad
+---
 
 
 local mType = Game.createMonsterType("Svoren the Mad")

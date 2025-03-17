@@ -1,3 +1,6 @@
+-- Version: 8.00
+-- Monster: https://tibia.fandom.com/wiki/The_Masked_Marauder
+---
 
 
 local mType = Game.createMonsterType("The Masked Marauder")

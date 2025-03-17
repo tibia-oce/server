@@ -1,3 +1,7 @@
+-- Version: 7.9
+-- Monster: https://tibia.fandom.com/wiki/Hellfire_Fighter
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hellfire_Fighter
+---
 
 
 local mType = Game.createMonsterType("Hellfire Fighter")

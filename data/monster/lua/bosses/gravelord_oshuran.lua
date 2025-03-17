@@ -1,3 +1,7 @@
+-- Version: 8.20
+-- Monster: https://tibia.fandom.com/wiki/Gravelord_Oshuran
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gravelord_Oshuran
+---
 
 
 local mType = Game.createMonsterType("Gravelord Oshuran")

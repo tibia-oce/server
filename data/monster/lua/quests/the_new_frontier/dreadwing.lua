@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Dreadwing
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Dreadwing
+---
 
 
 local mType = Game.createMonsterType("Dreadwing")

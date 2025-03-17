@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Tremor_Worm
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Tremor_Worm
+---
 
 
 local mType = Game.createMonsterType("Tremor Worm")

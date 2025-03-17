@@ -1,3 +1,7 @@
+-- Version: 7.4
+-- Monster: https://tibia.fandom.com/wiki/Skunk
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Skunk
+---
 
 
 local mType = Game.createMonsterType("Skunk")

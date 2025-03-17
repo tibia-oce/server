@@ -1,3 +1,7 @@
+-- Version: 7.5
+-- Monster: https://tibia.fandom.com/wiki/Centipede
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Centipede
+---
 
 
 local mType = Game.createMonsterType("Centipede")

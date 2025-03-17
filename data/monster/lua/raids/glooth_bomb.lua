@@ -1,3 +1,7 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Glooth_Bomb
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Glooth_Bomb
+---
 
 
 local mType = Game.createMonsterType("Glooth Bomb")

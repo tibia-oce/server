@@ -1,3 +1,7 @@
+-- Version: 8.30
+-- Monster: https://tibia.fandom.com/wiki/The_Mutated_Pumpkin
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Mutated_Pumpkin
+---
 
 
 local mType = Game.createMonsterType("The Mutated Pumpkin")

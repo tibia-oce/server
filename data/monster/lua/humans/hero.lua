@@ -1,3 +1,7 @@
+-- Version: 6.4
+-- Monster: https://tibia.fandom.com/wiki/Hero
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hero
+---
 
 
 local mType = Game.createMonsterType("Hero")

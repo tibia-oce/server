@@ -1,3 +1,7 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Toad
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Toad
+---
 
 
 local mType = Game.createMonsterType("Toad")

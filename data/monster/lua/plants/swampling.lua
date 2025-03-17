@@ -1,3 +1,7 @@
+-- Version: 9.80
+-- Monster: https://tibia.fandom.com/wiki/Swampling
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Swampling
+---
 
 
 local mType = Game.createMonsterType("Swampling")

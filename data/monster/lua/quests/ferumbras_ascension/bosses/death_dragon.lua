@@ -1,3 +1,6 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Death_Dragon
+---
 
 
 local mType = Game.createMonsterType("Death Dragon")

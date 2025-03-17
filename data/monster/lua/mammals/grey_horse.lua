@@ -1,4 +1,5 @@
-
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Horse_(Grey)
 
 local mType = Game.createMonsterType("Grey Horse")
 local monster = {}

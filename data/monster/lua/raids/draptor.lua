@@ -1,3 +1,7 @@
+-- Version: 8.70
+-- Monster: https://tibia.fandom.com/wiki/Draptor
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Draptor
+---
 
 
 local mType = Game.createMonsterType("Draptor")

@@ -1,3 +1,7 @@
+-- Version: 10.90
+-- Monster: https://tibia.fandom.com/wiki/Hellflayer
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Hellflayer
+---
 
 
 local mType = Game.createMonsterType("Hellflayer")

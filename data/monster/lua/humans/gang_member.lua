@@ -1,3 +1,7 @@
+-- Version: 8.40
+-- Monster: https://tibia.fandom.com/wiki/Gang_Member
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Gang_Member
+---
 
 
 local mType = Game.createMonsterType("Gang Member")

@@ -1,3 +1,7 @@
+-- Version: 9.20
+-- Monster: https://tibia.fandom.com/wiki/The_Bloodweb
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:The_Bloodweb
+---
 
 
 local mType = Game.createMonsterType("The Bloodweb")

@@ -1,3 +1,7 @@
+-- Version: 8.50
+-- Monster: https://tibia.fandom.com/wiki/Bane_of_Light
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Bane_of_Light
+---
 
 
 local mType = Game.createMonsterType("Bane of Light")

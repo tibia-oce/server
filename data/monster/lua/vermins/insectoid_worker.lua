@@ -1,3 +1,7 @@
+-- Version: 9.40
+-- Monster: https://tibia.fandom.com/wiki/Insectoid_Worker
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Insectoid_Worker
+---
 
 
 local mType = Game.createMonsterType("Insectoid Worker")

@@ -1,3 +1,6 @@
+-- Version: 10.70
+-- Monster: https://tibia.fandom.com/wiki/Weakened_Glooth_Horror
+---
 
 
 local mType = Game.createMonsterType("Weakened Glooth Horror")

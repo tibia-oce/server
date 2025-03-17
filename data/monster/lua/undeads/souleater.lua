@@ -1,3 +1,7 @@
+-- Version: 8.60
+-- Monster: https://tibia.fandom.com/wiki/Souleater
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Souleater
+---
 
 
 local mType = Game.createMonsterType("Souleater")

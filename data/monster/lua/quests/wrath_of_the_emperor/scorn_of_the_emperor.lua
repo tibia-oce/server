@@ -1,3 +1,6 @@
+-- Version: 8.60
+-- Monster: https://tibia.fandom.com/wiki/Scorn_of_the_Emperor
+---
 
 
 local mType = Game.createMonsterType("Scorn of the Emperor")

@@ -1,3 +1,7 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Ghastly_Dragon
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ghastly_Dragon
+---
 
 
 local mType = Game.createMonsterType("Ghastly Dragon")

@@ -1,3 +1,5 @@
+-- Monster: https://tibia.fandom.com/wiki/Hacker
+---
 
 
 local mType = Game.createMonsterType("Hacker")
