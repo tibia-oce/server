@@ -73,18 +73,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 82000, maxCount = 40 },
-	{ id = "club ring", chance = 130 }, -- club ring
-	{ id = 2381, chance = 560 },
-	{ id = "short sword", chance = 8140 },
-	{ id = "dark helmet", chance = 180 },
-	{ id = "battle shield", chance = 1350 },
-	{ id = "meat", chance = 4970, maxCount = 2 },
-	{ id = "shard", chance = 60 },
-	{ id = "ice cube", chance = 2180 }, -- ice cube
-	{ id = "norse shield", chance = 250 },
-	{ id = "health potion", chance = 819 },
-	{ id = "frost giant pelt", chance = 5000 },
+	{ id = "gold coin", chance = 82096, minCount = 1, maxCount = 40 },  -- 2148
+	{ id = "short sword", chance = 8223 },  -- 2406
+	{ id = "meat", chance = 4918 },  -- 2666
+	{ id = "frost giant pelt", chance = 4912 },  -- 10575
+	{ id = 7441, chance = 2208 },  -- ice cube
+	{ id = "battle shield", chance = 1383 },  -- 2513
+	{ id = "health potion", chance = 899 },  -- 7618
+	{ id = 2381, chance = 558 },  -- halberd
+	{ id = "norse shield", chance = 285 },  -- 7460
+	{ id = "dark helmet", chance = 167 },  -- 2490
+	{ id = "club ring", chance = 118 },  -- 2209
+	{ id = "shard", chance = 62 },  -- 7290
 }
 
 monster.attacks = {

@@ -71,20 +71,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "spear", chance = 55000, maxCount = 3 },
-	{ id = "gold coin", chance = 32000, maxCount = 12 },
-	{ id = "meat", chance = 30000 },
-	{ id = "chain armor", chance = 10000 },
-	{ id = "red apple", chance = 7500, maxCount = 2 },
-	{ id = "girlish hair decoration", chance = 5900 },
-	{ id = "hunting spear", chance = 5155 },
-	{ id = "protective charm", chance = 3200 },
-	{ id = "protection amulet", chance = 1100 },
-	{ id = "plate armor", chance = 830 },
-	{ id = 3114, chance = 760 }, -- skull
-	{ id = "health potion", chance = 500 },
-	{ id = "double axe", chance = 430 },
-	{ id = "small diamond", chance = 130 },
+	{ id = "spear", chance = 55356, minCount = 1, maxCount = 3 },  -- 2389
+	{ id = "gold coin", chance = 32468, minCount = 1, maxCount = 12 },  -- 2148
+	{ id = "meat", chance = 30170 },  -- 2666
+	{ id = "chain armor", chance = 10186 },  -- 2464
+	{ id = "red apple", chance = 7579, minCount = 1, maxCount = 2 },  -- 2674
+	{ id = "girlish hair decoration", chance = 5998 },  -- 12399
+	{ id = "hunting spear", chance = 5079 },  -- 3965
+	{ id = "protective charm", chance = 3184 },  -- 12400
+	{ id = "protection amulet", chance = 1093 },  -- 2200
+	{ id = "plate armor", chance = 813 },  -- 2463
+	{ id = 2229, chance = 751 },  -- skull
+	{ id = "health potion", chance = 454 },  -- 7618
+	{ id = "double axe", chance = 398 },  -- 2387
+	{ id = "small diamond", chance = 107 },  -- 2145
 }
 
 monster.attacks = {

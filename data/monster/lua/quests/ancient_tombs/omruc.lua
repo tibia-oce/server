@@ -84,19 +84,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small diamond", chance = 7000, maxCount = 3 },
-	{ id = "gold coin", chance = 50000, maxCount = 90 },
-	{ id = "gold coin", chance = 50000, maxCount = 70 },
-	{ id = "yellow gem", chance = 5000 },
-	{ id = "stealth ring", chance = 5000 }, -- stealth ring
-	{ id = "boots of haste", chance = 1500 },
-	{ id = "crystal arrow", chance = 100000 },
-	{ id = "arrow", chance = 10000, maxCount = 21 },
-	{ id = "poison arrow", chance = 10000, maxCount = 20 },
-	{ id = "burst arrow", chance = 10000, maxCount = 15 }, -- burst arrow
-	{ id = "power bolt", chance = 10000, maxCount = 3 },
-	{ id = "onyx arrow", chance = 10000, maxCount = 2 },
-	{ id = "great health potion", chance = 7000 },
+	{ id = "crystal arrow", chance = 100000 },  -- 2352
+	{ id = "gold coin", chance = 85915, minCount = 2, maxCount = 211 },  -- 2148
+	{ id = "red apple", chance = 82394, minCount = 1, maxCount = 2 },  -- 2674
+	{ id = "poison arrow", chance = 59859, minCount = 1, maxCount = 20 },  -- 2545
+	{ id = 2546, chance = 45775, minCount = 1, maxCount = 15 },  -- burst arrow
+	{ id = "onyx arrow", chance = 34507, minCount = 1, maxCount = 6 },  -- 7365
+	{ id = "arrow", chance = 19014, minCount = 1, maxCount = 25 },  -- 2544
+	{ id = "power bolt", chance = 14085, minCount = 1, maxCount = 5 },  -- 2547
+	{ id = "small diamond", chance = 9859, minCount = 1, maxCount = 3 },  -- 2145
+	{ id = "great health potion", chance = 7746 },  -- 7591
+	{ id = "stealth ring", chance = 3521 },  -- 2165
+	{ id = "mini mummy", chance = 1408 },  -- 11207
+	{ id = "boots of haste", chance = 704 },  -- 2195
 }
 
 monster.attacks = {

@@ -76,27 +76,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 89920, maxCount = 102 },
-	{ id = "dragon ham", chance = 66270, maxCount = 2 },
-	{ id = "steel shield", chance = 15650 },
-	{ id = "dragon's tail", chance = 9680 },
-	{ id = "crossbow", chance = 9120 },
-	{ id = "burst arrow", chance = 8060, maxCount = 10 }, -- burst arrow
-	{ id = "longsword", chance = 3830 },
-	{ id = "steel helmet", chance = 3490 },
-	{ id = "broadsword", chance = 2700 },
-	{ id = "plate legs", chance = 2029 },
-	{ id = "double axe", chance = 1580 },
-	{ id = "strong health potion", chance = 1130 },
-	{ id = "green dragon leather", chance = 1070 },
-	{ id = "green dragon scale", chance = 1010 },
-	{ id = "wand of inferno", chance = 560 },
-	{ id = "small diamond", chance = 450 },
-	{ id = "serpent sword", chance = 230 },
-	{ id = "dragon hammer", chance = 230 },
-	{ id = "dragonbone staff", chance = 170 },
-	{ id = "life crystal", chance = 170 },
-	{ id = "dragon shield", chance = 110 },
+	{ id = "gold coin", chance = 90085, minCount = 1, maxCount = 105 },  -- 2148
+	{ id = "dragon ham", chance = 65089 },  -- 2672
+	{ id = "steel shield", chance = 14906 },  -- 2509
+	{ id = "crossbow", chance = 10094 },  -- 2455
+	{ id = "dragon's tail", chance = 9849 },  -- 12413
+	{ id = 2546, chance = 7991, minCount = 1, maxCount = 10 },  -- burst arrow
+	{ id = "longsword", chance = 4027 },  -- 2397
+	{ id = "steel helmet", chance = 3019 },  -- 2457
+	{ id = "broadsword", chance = 1991 },  -- 2413
+	{ id = "plate legs", chance = 1914 },  -- 2647
+	{ id = "strong health potion", chance = 1054 },  -- 7588
+	{ id = "wand of inferno", chance = 1048 },  -- 2187
+	{ id = "green dragon scale", chance = 1037 },  -- 5920
+	{ id = "green dragon leather", chance = 1014 },  -- 5877
+	{ id = "double axe", chance = 1002 },  -- 2387
+	{ id = "dragon hammer", chance = 515 },  -- 2434
+	{ id = "serpent sword", chance = 505 },  -- 2409
+	{ id = "small diamond", chance = 377 },  -- 2145
+	{ id = "dragon shield", chance = 305 },  -- 2516
+	{ id = "life crystal", chance = 110 },  -- 2177
+	{ id = "dragonbone staff", chance = 106 },  -- 7430
 }
 
 monster.attacks = {

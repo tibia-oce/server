@@ -69,17 +69,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 237, chance = 100000 }, -- strong mana potion
-	{ id = 5879, chance = 50000 }, -- spider silk
-	{ id = "glacier mask", chance = 33333 }, -- glacier mask
-	{ id = 823, chance = 33333 }, -- glacier kilt
-	{ id = "sai", chance = 20000 }, -- sai
-	{ id = 7437, chance = 20000 }, -- sapphire hammer
-	{ id = 5801, chance = 7692 }, -- jewelled backpack
-	{ id = "knight armor", chance = 7692 }, -- knight armor
-	{ id = 3371, chance = 5555 }, -- knight legs
-	{ id = 7290, chance = 3703 }, -- shard
-	{ id = 3053, chance = 3703 }, -- time ring
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 9 },  -- 2152
+	{ id = 7441, chance = 99242 },  -- ice cube
+	{ id = "strong mana potion", chance = 71212 },  -- 7589
+	{ id = "spider silk", chance = 65909 },  -- 5879
+	{ id = "glacier mask", chance = 28788 },  -- 7902
+	{ id = "glacier kilt", chance = 25758 },  -- 7896
+	{ id = "sai", chance = 21212 },  -- 11306
+	{ id = "sapphire hammer", chance = 12121 },  -- 7437
+	{ id = "knight armor", chance = 8333 },  -- 2476
+	{ id = "jewelled backpack", chance = 5303 },  -- 5801
+	{ id = "knight legs", chance = 5303 },  -- 2477
+	{ id = "shard", chance = 1515 },  -- 7290
+	{ id = 2169, chance = 1515 },  -- time ring
 }
 
 monster.attacks = {

@@ -72,19 +72,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 53 },
-	{ id = "platinum coin", chance = 961, maxCount = 3 },
-	{ id = "crown helmet", chance = 666 },
-	{ id = "meat", chance = 50000, maxCount = 4 },
-	{ id = 6299, chance = 250 }, -- death ring
-	{ id = "bar of chocolate", chance = 280 },
-	{ id = "diamond sceptre", chance = 340 },
-	{ id = "shadow sceptre", chance = 270 },
-	{ id = "focus cape", chance = 340 },
-	{ id = "crystal of focus", chance = 100 },
-	{ id = "essence of a bad dream", chance = 7692 },
-	{ id = "scythe leg", chance = 4761 },
+	{ id = "gold coin", chance = 97011, minCount = 1, maxCount = 155 },  -- 2148
+	{ id = "meat", chance = 50282, minCount = 1, maxCount = 4 },  -- 2666
+	{ id = "essence of a bad dream", chance = 8059 },  -- 11223
+	{ id = "scythe leg", chance = 4965 },  -- 11229
+	{ id = "platinum coin", chance = 1050, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "crown helmet", chance = 730 },  -- 2491
+	{ id = "diamond sceptre", chance = 358 },  -- 7387
+	{ id = "focus cape", chance = 325 },  -- 8871
+	{ id = 6300, chance = 286 },  -- death ring
+	{ id = "shadow sceptre", chance = 248 },  -- 7451
+	{ id = "bar of chocolate", chance = 229 },  -- 6574
+	{ id = "crystal of focus", chance = 115 },  -- 9941
 }
 
 monster.attacks = {

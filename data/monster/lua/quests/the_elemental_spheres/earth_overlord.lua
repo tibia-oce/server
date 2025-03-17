@@ -72,14 +72,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "gold coin", chance = 100000, maxCount = 68 },
-	{ id = "platinum coin", chance = 33333, maxCount = 3 },
-	{ id = "terra mantle", chance = 1923 },
-	{ id = "mother soil", chance = 100000 },
-	{ id = "lump of earth", chance = 33333 },
-	{ id = "shiny stone", chance = 8333 },
-	{ id = "coal", chance = 552 }, -- coal
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 168 },  -- 2148
+	{ id = "mother soil", chance = 100000 },  -- 8305
+	{ id = "lump of earth", chance = 47741 },  -- 11222
+	{ id = "platinum coin", chance = 40864, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "shiny stone", chance = 9037 },  -- 11227
+	{ id = "terra mantle", chance = 1965 },  -- 7884
+	{ id = 13757, chance = 589 },  -- coal
 }
 
 monster.attacks = {

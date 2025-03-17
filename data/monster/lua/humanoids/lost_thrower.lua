@@ -69,21 +69,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 37 },
-	{ id = "platinum coin", chance = 70000, maxCount = 2 },
-	{ id = "brown mushroom", chance = 14500, maxCount = 2 },
-	{ id = "iron ore", chance = 9470 },
-	{ id = "great mana potion", chance = 13470 },
-	{ id = "great health potion", chance = 14730 },
-	{ id = "coal", chance = 12180 }, -- coal
-	{ id = "buckle", chance = 850 },
-	{ id = "broken throwing axe", chance = 1390 },
-	{ id = "helmet of the lost", chance = 13560 },
-	{ id = "lost bracers", chance = 14860 },
-	{ id = "mad froth", chance = 11810 },
-	{ id = "basalt fetish", chance = 6150 },
-	{ id = "basalt figurine", chance = 7900 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 140 },  -- 2148
+	{ id = "platinum coin", chance = 70238 },  -- 2152
+	{ id = "broken throwing axe", chance = 15023 },  -- 20131
+	{ id = "brown mushroom", chance = 14986, minCount = 1, maxCount = 2 },  -- 2789
+	{ id = "mad froth", chance = 14426 },  -- 20134
+	{ id = "great health potion", chance = 13932 },  -- 7591
+	{ id = "great mana potion", chance = 13723 },  -- 7590
+	{ id = "lost bracers", chance = 12394 },  -- 20133
+	{ id = "red hair dye", chance = 12237 },  -- 20135
+	{ id = 13757, chance = 11900 },  -- coal
+	{ id = "bloody dwarven beard", chance = 11691 },  -- 20107
+	{ id = "basalt figurine", chance = 8823 },  -- 20137
+	{ id = "iron ore", chance = 8599 },  -- 5880
+	{ id = "basalt fetish", chance = 7060 },  -- 20136
+	{ id = "helmet of the lost", chance = 1576 },  -- 20132
+	{ id = "buckle", chance = 762 },  -- 20109
 }
 
 monster.attacks = {

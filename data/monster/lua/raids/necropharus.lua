@@ -76,21 +76,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "book of necromantic rituals", chance = 100000 }, -- book of necromantic rituals
-	{ id = 3031, chance = 100000, maxCount = 99 }, -- gold coin
-	{ id = 11475, chance = 100000 }, -- necromantic robe
-	{ id = 5809, chance = 100000 }, -- soul stone
-	{ id = 3311, chance = 52000 }, -- clerical mace
-	{ id = 3324, chance = 47000 }, -- skull staff
-	{ id = 3337, chance = 38000 }, -- bone club
-	{ id = 3114, chance = 19000 }, -- skull
-	{ id = 3732, chance = 14000 }, -- green mushroom
-	{ id = "moonlight rod", chance = 14000 }, -- moonlight rod
-	{ id = 3116, chance = 9500 }, -- big bone
-	{ id = 3441, chance = 9500 }, -- bone shield
-	{ id = 3079, chance = 4700 }, -- boots of haste
-	{ id = 3574, chance = 4700 }, -- mystic turban
-	{ id = "strong mana potion", chance = 4700 }, -- strong mana potion
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "soul stone", chance = 100000 },  -- 5809
+	{ id = "book of necromantic rituals", chance = 97436 },  -- 11237
+	{ id = "necromantic robe", chance = 97436 },  -- 12431
+	{ id = "clerical mace", chance = 56410 },  -- 2423
+	{ id = "skull staff", chance = 41026 },  -- 2436
+	{ id = "bone club", chance = 35897 },  -- 2449
+	{ id = "green mushroom", chance = 25641 },  -- 2796
+	{ id = 2229, chance = 12821 },  -- skull
+	{ id = "mystic turban", chance = 10256 },  -- 2663
+	{ id = "bone shield", chance = 7692 },  -- 2541
+	{ id = "moonlight rod", chance = 7692 },  -- 2186
+	{ id = 2231, chance = 5128 },  -- big bone
+	{ id = "boots of haste", chance = 2564 },  -- 2195
+	{ id = "short sword", chance = 2564 },  -- 2406
+	{ id = "strong mana potion", chance = 2564 },  -- 7589
 }
 
 monster.attacks = {

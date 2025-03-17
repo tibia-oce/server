@@ -71,23 +71,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small diamond", chance = 2439, maxCount = 2 },
-	{ id = "small ruby", chance = 3000, maxCount = 2 },
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "gold coin", chance = 100000, maxCount = 72 },
-	{ id = "small emerald", chance = 5366, maxCount = 3 },
-	{ id = "talon", chance = 5710 },
-	{ id = "platinum coin", chance = 95000, maxCount = 6 },
-	{ id = "yellow gem", chance = 1219 },
-	{ id = "green gem", chance = 613 },
-	{ id = "red gem", chance = 1538 }, -- red gem
-	{ id = "blue gem", chance = 300 },
-	{ id = "soul orb", chance = 20000 },
-	{ id = 6299, chance = 3030 }, -- death ring
-	{ id = "demonic essence", chance = 20320 },
-	{ id = "glob of acid slime", chance = 14210 },
-	{ id = "glob of tar", chance = 12000 },
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 272 },  -- 2148
+	{ id = "platinum coin", chance = 96580, minCount = 1, maxCount = 6 },  -- 2152
+	{ id = "soul orb", chance = 19719 },  -- 5944
+	{ id = "demonic essence", chance = 19094 },  -- 6500
+	{ id = "glob of acid slime", chance = 11647 },  -- 9967
+	{ id = "glob of tar", chance = 11057 },  -- 9968
+	{ id = "small emerald", chance = 5850, minCount = 1, maxCount = 3 },  -- 2149
+	{ id = "talon", chance = 4513 },  -- 2151
+	{ id = "small ruby", chance = 3645, minCount = 1, maxCount = 2 },  -- 2147
+	{ id = 6300, chance = 2795 },  -- death ring
+	{ id = "small diamond", chance = 2465, minCount = 1, maxCount = 2 },  -- 2145
+	{ id = "yellow gem", chance = 1632 },  -- 2154
+	{ id = "red gem", chance = 1059 },  -- 2156
+	{ id = "blue gem", chance = 833 },  -- 2158
+	{ id = "green gem", chance = 729 },  -- 2155
 }
 
 monster.attacks = {

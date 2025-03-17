@@ -72,20 +72,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "emerald bangle", chance = 230 },
-	{ id = "black pearl", chance = 1800 },
-	{ id = "gold coin", chance = 90230, maxCount = 60 },
-	{ id = "bronze amulet", chance = 220 },
-	{ id = 3114, chance = 1000 }, -- skull
-	{ id = "spike sword", chance = 1000 },
-	{ id = "ice rapier", chance = 420 },
-	{ id = "katana", chance = 1560 },
-	{ id = "strange helmet", chance = 420 },
-	{ id = "vampire shield", chance = 230 },
-	{ id = 2747, chance = 1910}, -- "grave flower"
-	{ id = "strong health potion", chance = 1500 },
-	{ id = "vampire teeth", chance = 7600 },
-	{ id = "blood preservation", chance = 5100 },
+	{ id = "gold coin", chance = 90022, minCount = 1, maxCount = 60 },  -- 2148
+	{ id = "vampire teeth", chance = 7815 },  -- 10602
+	{ id = "blood preservation", chance = 5060 },  -- 12405
+	{ id = 2747, chance = 1930 },  -- grave flower
+	{ id = "black pearl", chance = 1815 },  -- 2144
+	{ id = "strong health potion", chance = 1540 },  -- 7588
+	{ id = "katana", chance = 1474 },  -- 2412
+	{ id = 2229, chance = 1023 },  -- skull
+	{ id = "spike sword", chance = 1011 },  -- 2383
+	{ id = "ice rapier", chance = 459 },  -- 2396
+	{ id = "strange helmet", chance = 397 },  -- 2479
+	{ id = "bronze amulet", chance = 218 },  -- 2172
+	{ id = "emerald bangle", chance = 191 },  -- 2127
+	{ id = "vampire shield", chance = 177 },  -- 2534
 }
 
 monster.attacks = {

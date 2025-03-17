@@ -65,15 +65,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 21 }, -- gold coin
-	{ id = 3595, chance = 35000, maxCount = 4 }, -- carrot
-	{ id = "swampling club", chance = 12000 }, -- swampling club
-	{ id = 11472, chance = 10000 }, -- minotaur horn
-	{ id = 3559, chance = 9000 }, -- leather legs
-	{ id = "mana potion", chance = 3500 }, -- mana potion
-	{ id = 2920, chance = 3500 }, -- torch
-	{ id = 3355, chance = 1800 }, -- leather helmet
-	{ id = "purple robe", chance = 1800 }, -- purple robe
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 21 },  -- 2148
+	{ id = "carrot", chance = 42857, minCount = 1, maxCount = 4 },  -- 2684
+	{ id = "swampling club", chance = 10714 },  -- 20104
+	{ id = 2050, chance = 10714 },  -- torch
+	{ id = "leather helmet", chance = 7143 },  -- 2461
 }
 
 monster.attacks = {

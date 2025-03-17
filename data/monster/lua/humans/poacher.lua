@@ -69,14 +69,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2920, chance = 4180 }, -- torch
-	{ id = "bow", chance = 14930 },
-	{ id = "leather helmet", chance = 30600 },
-	{ id = "arrow", chance = 49500, maxCount = 17 },
-	{ id = "poison arrow", chance = 2930, maxCount = 3 },
-	{ id = "closed trap", chance = 710 }, -- closed trap
-	{ id = "leather legs", chance = 26740 },
-	{ id = "roll", chance = 11110, maxCount = 2 },
+	{ id = "arrow", chance = 46943, minCount = 1, maxCount = 18 },  -- 2544
+	{ id = "leather helmet", chance = 30576 },  -- 2461
+	{ id = "leather legs", chance = 27727 },  -- 2649
+	{ id = "bow", chance = 15031 },  -- 2456
+	{ id = "roll", chance = 11045, minCount = 1, maxCount = 2 },  -- 2690
+	{ id = 2050, chance = 5015 },  -- torch
+	{ id = "poison arrow", chance = 2581, minCount = 1, maxCount = 3 },  -- 2545
+	{ id = "closed trap", chance = 1052 },  -- 2578
 }
 
 monster.attacks = {

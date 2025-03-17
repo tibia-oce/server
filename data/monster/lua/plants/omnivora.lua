@@ -69,20 +69,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 97000, maxCount = 242 }, -- gold coin
-	{ id = "fish", chance = 18200, maxCount = 2 }, -- fish
-	{ id = "blue crystal splinter", chance = 2000 }, -- blue crystal splinter
-	{ id = "brown crystal splinter", chance = 2000 }, -- brown crystal splinter
-	{ id = 16122, chance = 2210 }, -- green crystal splinter
-	{ id = 3582, chance = 1200 }, -- ham
-	{ id = "white mushroom", chance = 1900 }, -- white mushroom
-	{ id = 3052, chance = 950 }, -- life ring
-	{ id = 3297, chance = 780 }, -- serpent sword
-	{ id = 814, chance = 700 }, -- terra amulet
-	{ id = 813, chance = 560 }, -- terra boots
-	{ id = 3069, chance = 430 }, -- necrotic rod
-	{ id = 8072, chance = 320 }, -- spellbook of enlightenment
-	{ id = 12311, chance = 100 }, -- carrot on a stick
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 145 },  -- 2148
+	{ id = "fish", chance = 10371 },  -- 2667
+	{ id = "white mushroom", chance = 9714, minCount = 1, maxCount = 3 },  -- 2787
+	{ id = "ham", chance = 9114 },  -- 2671
+	{ id = "life ring", chance = 1714 },  -- 2168
+	{ id = "necrotic rod", chance = 1000 },  -- 2185
+	{ id = "brown crystal splinter", chance = 800 },  -- 18417
+	{ id = "blue crystal splinter", chance = 600 },  -- 18418
+	{ id = "green crystal splinter", chance = 571 },  -- 18416
+	{ id = "serpent sword", chance = 543 },  -- 2409
+	{ id = "spellbook of enlightenment", chance = 429 },  -- 8900
+	{ id = "terra amulet", chance = 343 },  -- 7887
+	{ id = "terra boots", chance = 257 },  -- 7886
+	{ id = 6300, chance = 229 },  -- death ring
+	{ id = "carrot on a stick", chance = 200 },  -- 13298
 }
 
 monster.attacks = {

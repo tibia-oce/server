@@ -69,24 +69,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3007, chance = 1560 }, -- crystal ring
-	{ id = "crystal necklace", chance = 1640 },
-	{ id = "gold coin", chance = 100000, maxCount = 197 },
-	{ id = 3053, chance = 1480 }, -- time ring
-	{ id = "platinum amulet", chance = 130 },
-	{ id = "steel helmet", chance = 5200 },
-	{ id = "ice cube", chance = 5000 }, -- ice cube
-	{ id = "plate armor", chance = 9993 },
-	{ id = "knight armor", chance = 560 },
-	{ id = "knight legs", chance = 760 },
-	{ id = "jewelled backpack", chance = 80 },
-	{ id = "spider silk", chance = 2010 },
-	{ id = "shard", chance = 740 },
-	{ id = "sniper arrow", chance = 5840, maxCount = 6 },
-	{ id = "sapphire hammer", chance = 140 },
-	{ id = "crystal sword", chance = 2490 },
-	{ id = "strong mana potion", chance = 14950 },
-	{ id = "glacier mask", chance = 670 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 197 },  -- 2148
+	{ id = "strong mana potion", chance = 14994 },  -- 7589
+	{ id = "plate armor", chance = 9899 },  -- 2463
+	{ id = "sniper arrow", chance = 5908, minCount = 1, maxCount = 6 },  -- 7364
+	{ id = "steel helmet", chance = 5166 },  -- 2457
+	{ id = 7441, chance = 4910 },  -- ice cube
+	{ id = "crystal sword", chance = 2523 },  -- 7449
+	{ id = "spider silk", chance = 1974 },  -- 5879
+	{ id = "crystal necklace", chance = 1623 },  -- 2125
+	{ id = 2124, chance = 1581 },  -- crystal ring
+	{ id = 2169, chance = 1504 },  -- time ring
+	{ id = "knight legs", chance = 753 },  -- 2477
+	{ id = "shard", chance = 717 },  -- 7290
+	{ id = "glacier mask", chance = 665 },  -- 7902
+	{ id = "knight armor", chance = 549 },  -- 2476
+	{ id = "sapphire hammer", chance = 140 },  -- 7437
+	{ id = "platinum amulet", chance = 119 },  -- 2171
+	{ id = "jewelled backpack", chance = 81 },  -- 5801
 }
 
 monster.attacks = {

@@ -68,18 +68,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 78500, maxCount = 130 },
-	{ id = "stealth ring", chance = 540 }, -- stealth ring
-	{ id = 3114, chance = 20240 }, -- skull
-	{ id = "mouldy cheese", chance = 950 },
-	{ id = 2381, chance = 2990 },
-	{ id = "plate shield", chance = 3750 },
-	{ id = "tower shield", chance = 50 },
-	{ id = "green mushroom", chance = 1390 },
-	{ id = "stone herb", chance = 4920 },
-	{ id = "health potion", chance = 560 },
-	{ id = "spellbook of enlightenment", chance = 300 },
-	{ id = "mutated rat tail", chance = 3800 },
+	{ id = "gold coin", chance = 78678, minCount = 1, maxCount = 130 },  -- 2148
+	{ id = 2229, chance = 20272 },  -- skull
+	{ id = "stone herb", chance = 4884 },  -- 2799
+	{ id = "mutated rat tail", chance = 3850 },  -- 10585
+	{ id = "plate shield", chance = 3778 },  -- 2510
+	{ id = 2381, chance = 2936 },  -- halberd
+	{ id = "green mushroom", chance = 1404 },  -- 2796
+	{ id = "mouldy cheese", chance = 942 },  -- 2235
+	{ id = "stealth ring", chance = 569 },  -- 2165
+	{ id = "health potion", chance = 502 },  -- 7618
+	{ id = "spellbook of enlightenment", chance = 294 },  -- 8900
+	{ id = "tower shield", chance = 51 },  -- 2528
 }
 
 monster.attacks = {

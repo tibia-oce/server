@@ -72,27 +72,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "crystal necklace", chance = 500 },
-	{ id = "gold coin", chance = 92500, maxCount = 341 },
-	{ id = "small amethyst", chance = 5850, maxCount = 2 },
-	{ id = "platinum coin", chance = 2250, maxCount = 3 },
-	{ id = "mind stone", chance = 70 },
-	{ id = "giant sword", chance = 1250 },
-	{ id = "crowbar", chance = 10500 },
-	{ id = "plate armor", chance = 3400 },
-	{ id = "dark armor", chance = 6250 },
-	{ id = 3449, chance = 8350, maxCount = 12 }, -- burst arrow
-	{ id = "pick", chance = 4850 }, -- pick
-	{ id = "steel boots", chance = 300 },
-	{ id = "meat", chance = 40000, maxCount = 6 },
-	{ id = "skull helmet", chance = 10 },
-	{ id = "soul orb", chance = 5350 },
-	{ id = 6299, chance = 250 }, -- death ring
-	{ id = "demonic essence", chance = 13850 },
-	{ id = "dreaded cleaver", chance = 400 },
-	{ id = "chaos mace", chance = 800 },
-	{ id = "great health potion", chance = 1000 },
-	{ id = "metal spike", chance = 4850 },
+	{ id = "gold coin", chance = 99528, minCount = 1, maxCount = 341 },  -- 2148
+	{ id = "meat", chance = 54751 },  -- 2666
+	{ id = "demonic essence", chance = 18942 },  -- 6500
+	{ id = "crowbar", chance = 14871 },  -- 2416
+	{ id = 2546, chance = 11031, minCount = 1, maxCount = 12 },  -- burst arrow
+	{ id = "dark armor", chance = 10177 },  -- 2489
+	{ id = "small amethyst", chance = 7497, minCount = 1, maxCount = 2 },  -- 2150
+	{ id = "soul orb", chance = 6921 },  -- 5944
+	{ id = "metal spike", chance = 6887 },  -- 11215
+	{ id = 2553, chance = 6067 },  -- pick
+	{ id = "plate armor", chance = 4922 },  -- 2463
+	{ id = "platinum coin", chance = 3881, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "giant sword", chance = 1492 },  -- 2393
+	{ id = "great health potion", chance = 1065 },  -- 7591
+	{ id = "chaos mace", chance = 856 },  -- 7427
+	{ id = "steel boots", chance = 834 },  -- 2645
+	{ id = "dreaded cleaver", chance = 803 },  -- 7419
+	{ id = "mind stone", chance = 600 },  -- 2178
+	{ id = "crystal necklace", chance = 554 },  -- 2125
+	{ id = 6300, chance = 123 },  -- death ring
+	{ id = "skull helmet", chance = 123 },  -- 5741
 }
 
 monster.attacks = {

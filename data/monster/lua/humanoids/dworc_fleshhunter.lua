@@ -69,15 +69,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2920, chance = 4750 }, -- torch
-	{ id = "gold coin", chance = 69000, maxCount = 13 },
-	{ id = 3114, chance = 3300, maxCount = 3 }, -- skull
-	{ id = "poison dagger", chance = 2250 },
-	{ id = "bone shield", chance = 1000 },
-	{ id = "cleaver", chance = 9750 },
-	{ id = "ripper lance", chance = 90 },
-	{ id = "hunting spear", chance = 2000 },
-	{ id = "tribal mask", chance = 500 },
+	{ id = "gold coin", chance = 74913, minCount = 1, maxCount = 13 },  -- 2148
+	{ id = "leather armor", chance = 10813 },  -- 2467
+	{ id = "cleaver", chance = 8989 },  -- 2568
+	{ id = 2050, chance = 5542 },  -- torch
+	{ id = 2229, chance = 3031, minCount = 1, maxCount = 3 },  -- skull
+	{ id = "poison dagger", chance = 2066 },  -- 2411
+	{ id = "hunting spear", chance = 1960 },  -- 3965
+	{ id = "bone shield", chance = 1038 },  -- 2541
+	{ id = "tribal mask", chance = 483 },  -- 3967
+	{ id = "ripper lance", chance = 96 },  -- 3964
 }
 
 monster.attacks = {

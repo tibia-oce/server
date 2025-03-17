@@ -71,18 +71,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 33400, maxCount = 100 },
-	{ id = "gold coin", chance = 33400, maxCount = 100 },
-	{ id = "platinum coin", chance = 49610, maxCount = 6 },
-	{ id = "necrotic rod", chance = 980 },
-	{ id = "wand of cosmic energy", chance = 910 },
-	{ id = "spirit container", chance = 140 }, -- spirit container
-	{ id = 6299, chance = 300 }, -- death ring
-	{ id = "great mana potion", chance = 8000 },
-	{ id = "ultimate health potion", chance = 9400 },
-	{ id = "souleater trophy", chance = 20 },
-	{ id = "lizard essence", chance = 15250 },
-	{ id = "ectoplasmic sushi", chance = 2000 },
+	{ id = "gold coin", chance = 88031, minCount = 1, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 49760, minCount = 1, maxCount = 6 },  -- 2152
+	{ id = "lizard essence", chance = 14994 },  -- 12636
+	{ id = "ultimate health potion", chance = 9166 },  -- 8473
+	{ id = "great mana potion", chance = 7947 },  -- 7590
+	{ id = "ectoplasmic sushi", chance = 1984 },  -- 12637
+	{ id = "necrotic rod", chance = 965 },  -- 2185
+	{ id = "wand of cosmic energy", chance = 941 },  -- 2189
+	{ id = 6300, chance = 316 },  -- death ring
+	{ id = "spirit container", chance = 132 },  -- 5884
+	{ id = "souleater trophy", chance = 14 },  -- 12635
 }
 
 monster.attacks = {

@@ -67,18 +67,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 84000, maxCount = 60 },
-	{ id = "small emerald", chance = 250 },
-	{ id = "sword", chance = 4000 }, -- sword
-	{ id = "morning star", chance = 1990 },
-	{ id = "short sword", chance = 9500 },
-	{ id = "steel helmet", chance = 2000 },
-	{ id = "plate armor", chance = 1000 },
-	{ id = "templar scytheblade", chance = 500 },
-	{ id = "salamander shield", chance = 110 },
-	{ id = "lizard leather", chance = 880 },
-	{ id = "lizard scale", chance = 990 },
-	{ id = "health potion", chance = 890 },
+	{ id = "gold coin", chance = 83791, minCount = 1, maxCount = 60 },  -- 2148
+	{ id = "short sword", chance = 9925 },  -- 2406
+	{ id = 2376, chance = 4948 },  -- sword
+	{ id = "steel helmet", chance = 1957 },  -- 2457
+	{ id = "morning star", chance = 1929 },  -- 2394
+	{ id = "plate armor", chance = 1043 },  -- 2463
+	{ id = "lizard scale", chance = 967 },  -- 5881
+	{ id = "lizard leather", chance = 943 },  -- 5876
+	{ id = "health potion", chance = 861 },  -- 7618
+	{ id = "templar scytheblade", chance = 536 },  -- 3963
+	{ id = "small emerald", chance = 263 },  -- 2149
+	{ id = "salamander shield", chance = 110 },  -- 3975
 }
 
 monster.attacks = {

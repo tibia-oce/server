@@ -79,14 +79,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "minotaur leather", chance = 100000 },
-	{ id = 3046, chance = 76000 }, -- magic light wand
-	{ id = "gold coin", chance = 38000, maxCount = 10 },
-	{ id = 2920, chance = 30000, maxCount = 2 }, -- torch
-	{ id = "leather legs", chance = 23000 },
-	{ id = 3595, chance = 7690 }, -- carrot
-	{ id = "leather helmet", chance = 7690 },
-	{ id = "knife", chance = 7690 },
+	{ id = "minotaur leather", chance = 100000 },  -- 5878
+	{ id = 2162, chance = 84507 },  -- magic light wand
+	{ id = "gold coin", chance = 70423, minCount = 1, maxCount = 10 },  -- 2148
+	{ id = 2050, chance = 26761, minCount = 1, maxCount = 2 },  -- torch
+	{ id = "leather legs", chance = 14085 },  -- 2649
+	{ id = "knife", chance = 12676 },  -- 2403
+	{ id = "leather helmet", chance = 5634 },  -- 2461
+	{ id = "carrot", chance = 4225, minCount = 2, maxCount = 7 },  -- 2684
 }
 
 monster.attacks = {

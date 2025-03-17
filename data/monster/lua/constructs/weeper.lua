@@ -68,26 +68,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small ruby", chance = 15690, maxCount = 3 },
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 99 },
-	{ id = "platinum coin", chance = 100000, maxCount = 7 }, -- platinum coin
-	{ id = "fire sword", chance = 3280 },
-	{ id = "fire axe", chance = 2150 },
-	{ id = "great mana potion", chance = 14800, maxCount = 2 },
-	{ id = "magma legs", chance = 790 },
-	{ id = "magma coat", chance = 790 },
-	{ id = "ultimate health potion", chance = 15440, maxCount = 2 },
-	{ id = "fiery heart", chance = 13570 },
-	{ id = "coal", chance = 1320 }, -- coal
-	{ id = "wand of everblazing", chance = 1480 },
-	{ id = "violet crystal shard", chance = 5430 },
-	{ id = "brown crystal splinter", chance = 12100, maxCount = 2 },
-	{ id = "red crystal fragment", chance = 8880 },
-	{ id = "magma clump", chance = 13240 },
-	{ id = "blazing bone", chance = 14890 },
-	{ id = "eye of a weeper", chance = 15870 },
-	{ id = "prismatic bolt", chance = 10900, maxCount = 5 },
+	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 199 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 7 },  -- 2152
+	{ id = "eye of a weeper", chance = 15426 },  -- 18426
+	{ id = "ultimate health potion", chance = 15129, minCount = 1, maxCount = 2 },  -- 8473
+	{ id = "blazing bone", chance = 15117 },  -- 18425
+	{ id = "small ruby", chance = 15106, minCount = 1, maxCount = 3 },  -- 2147
+	{ id = "great mana potion", chance = 14568, minCount = 1, maxCount = 2 },  -- 7590
+	{ id = "fiery heart", chance = 13116 },  -- 10553
+	{ id = "magma clump", chance = 12579 },  -- 18424
+	{ id = "brown crystal splinter", chance = 12396, minCount = 1, maxCount = 2 },  -- 18417
+	{ id = "prismatic bolt", chance = 11641, minCount = 1, maxCount = 5 },  -- 18435
+	{ id = "red crystal fragment", chance = 9091 },  -- 18420
+	{ id = "violet crystal shard", chance = 5432 },  -- 18414
+	{ id = "fire sword", chance = 3248 },  -- 2392
+	{ id = "fire axe", chance = 2184 },  -- 2432
+	{ id = "wand of everblazing", chance = 1464 },  -- 18409
+	{ id = 13757, chance = 1281 },  -- coal
+	{ id = "magma legs", chance = 800 },  -- 7894
+	{ id = "magma coat", chance = 720 },  -- 7899
 }
 
 monster.attacks = {

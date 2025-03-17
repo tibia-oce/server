@@ -70,10 +70,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 20 }, -- gold coin
-	{ id = "scale armor", chance = 10000 }, -- scale armor
-	{ id = "small stone", chance = 20000, maxCount = 5 }, -- small stone
-	{ id = "carlin sword", chance = 2500 }, -- carlin sword
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 98 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 6 },  -- 2152
+	{ id = "shiny stone", chance = 100000 },  -- 11227
+	{ id = "small amethyst", chance = 75000, minCount = 1, maxCount = 2 },  -- 2150
+	{ id = "steel shield", chance = 60417 },  -- 2509
+	{ id = "sulphurous stone", chance = 60417 },  -- 11232
+	{ id = "power ring", chance = 50000 },  -- 2166
+	{ id = "red gem", chance = 50000 },  -- 2156
+	{ id = "small stone", chance = 12500, minCount = 1, maxCount = 4 },  -- 1294
+	{ id = "steel boots", chance = 8333 },  -- 2645
+	{ id = 2124, chance = 2083 },  -- crystal ring
+	{ id = 2553, chance = 2083 },  -- pick
+	{ id = "scale armor", chance = 2083 },  -- 2483
 }
 
 monster.attacks = {

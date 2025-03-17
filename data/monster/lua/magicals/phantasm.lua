@@ -78,24 +78,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small ruby", chance = 12160, maxCount = 3 },
-	{ id = "gold coin", chance = 30000, maxCount = 100 },
-	{ id = "gold coin", chance = 30000, maxCount = 100 },
-	{ id = "gold coin", chance = 28000, maxCount = 33 },
-	{ id = "small emerald", chance = 10190, maxCount = 3 },
-	{ id = "small amethyst", chance = 14570, maxCount = 3 },
-	{ id = "platinum coin", chance = 87730, maxCount = 4 },
-	{ id = "stealth ring", chance = 550 }, -- stealth ring
-	{ id = "blank rune", chance = 22500, maxCount = 2 },
-	{ id = "crown armor", chance = 660 },
-	{ id = "shadow herb", chance = 26930, maxCount = 2 },
-	{ id = 6299, chance = 330 }, -- death ring
-	{ id = "demonic essence", chance = 16320 },
-	{ id = "abyss hammer", chance = 110 },
-	{ id = "shadow sceptre", chance = 550 },
-	{ id = "great mana potion", chance = 32750, maxCount = 2 },
-	{ id = "ultimate health potion", chance = 14680 },
-	{ id = "small topaz", chance = 12810, maxCount = 3 },
+	{ id = "gold coin", chance = 88953, minCount = 5, maxCount = 246 },  -- 2148
+	{ id = "platinum coin", chance = 88953, minCount = 1, maxCount = 4 },  -- 2152
+	{ id = "great mana potion", chance = 31170, minCount = 1, maxCount = 2 },  -- 7590
+	{ id = "shadow herb", chance = 26818 },  -- 2804
+	{ id = "blank rune", chance = 21629, minCount = 1, maxCount = 2 },  -- 2260
+	{ id = "ultimate health potion", chance = 17872 },  -- 8473
+	{ id = "demonic essence", chance = 17668 },  -- 6500
+	{ id = "small amethyst", chance = 13669, minCount = 1, maxCount = 3 },  -- 2150
+	{ id = "small topaz", chance = 13446, minCount = 1, maxCount = 3 },  -- 9970
+	{ id = "small ruby", chance = 11419, minCount = 1, maxCount = 3 },  -- 2147
+	{ id = "small emerald", chance = 10768, minCount = 1, maxCount = 3 },  -- 2149
+	{ id = "shadow sceptre", chance = 911 },  -- 7451
+	{ id = "stealth ring", chance = 837 },  -- 2165
+	{ id = "crown armor", chance = 725 },  -- 2487
+	{ id = "abyss hammer", chance = 391 },  -- 7414
+	{ id = 6300, chance = 372 },  -- death ring
 }
 
 monster.attacks = {

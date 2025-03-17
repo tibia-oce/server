@@ -72,20 +72,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3007, chance = 1500 }, -- crystal ring
-	{ id = "silver brooch", chance = 4000 },
-	{ id = "black pearl", chance = 1000 },
-	{ id = "gold coin", chance = 38000, maxCount = 80 },
-	{ id = "strange talisman", chance = 5000 },
-	{ id = 3046, chance = 5800 }, -- magic light wand
-	{ id = "silver amulet", chance = 100 },
-	{ id = "poison dagger", chance = 450 },
-	{ id = "black shield", chance = 170 },
-	{ id = "worm", chance = 19000, maxCount = 3 },
-	{ id = "yellow piece of cloth", chance = 900 },
-	{ id = "gauze bandage", chance = 10000 },
-	{ id = "mini mummy", chance = 10 },
-	{ id = "flask of embalming fluid", chance = 11690 },
+	{ id = "gold coin", chance = 39564, minCount = 1, maxCount = 80 },  -- 2148
+	{ id = "worm", chance = 19864, minCount = 1, maxCount = 3 },  -- 3976
+	{ id = "flask of embalming fluid", chance = 12113 },  -- 12422
+	{ id = "gauze bandage", chance = 10031 },  -- 10566
+	{ id = 2162, chance = 6053 },  -- magic light wand
+	{ id = "strange talisman", chance = 4986 },  -- 2161
+	{ id = "silver brooch", chance = 3936 },  -- 2134
+	{ id = 2124, chance = 1511 },  -- crystal ring
+	{ id = "black pearl", chance = 993 },  -- 2144
+	{ id = "yellow piece of cloth", chance = 945 },  -- 5914
+	{ id = "poison dagger", chance = 510 },  -- 2411
+	{ id = "black shield", chance = 185 },  -- 2529
+	{ id = "silver amulet", chance = 89 },  -- 2170
+	{ id = "mini mummy", chance = 2 },  -- 11207
 }
 
 monster.attacks = {

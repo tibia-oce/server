@@ -86,28 +86,28 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 97000, maxCount = 169 }, -- gold coin
-	{ id = 3035, chance = 77400, maxCount = 9 }, -- platinum coin
-	{ id = 5911, chance = 31100 }, -- red piece of cloth
-	{ id = 239, chance = 26830, maxCount = 5 }, -- great health potion
-	{ id = 238, chance = 23170, maxCount = 5 }, -- great mana potion
-	{ id = 3062, chance = 9760 }, -- mind stone
-	{ id = 7443, chance = 6710, maxCount = 2 }, -- bullseye potion
-	{ id = 8043, chance = 4880 }, -- focus cape
-	{ id = 3049, chance = 4880 }, -- stealth ring
-	{ id = "luminous orb", chance = 4270 }, -- luminous orb
-	{ id = "dark mushroom", chance = 3600, maxCount = 4 }, -- dark mushroom
-	{ id = "assassin star", chance = 1830, maxCount = 7 }, -- assassin star
-	{ id = 3007, chance = 1830 }, -- crystal ring
-	{ id = 3006, chance = 1830 }, -- ring of the sky
-	{ id = 3029, chance = 1830, maxCount = 5 }, -- small sapphire
-	{ id = 12803, chance = 1220 }, -- elemental spikes
-	{ id = 2995, chance = 1220 }, -- piggy bank
-	{ id = 9045, chance = 1220 }, -- royal tapestry
-	{ id = 3079, chance = 610 }, -- boots of haste
-	{ id = 9067, chance = 610 }, -- crystal of power
-	{ id = 5741, chance = 610 }, -- skull helmet
-	{ id = 8074, chance = 610 }, -- spellbook of mind control
+	{ id = "gold coin", chance = 97633, minCount = 2, maxCount = 250 },  -- 2148
+	{ id = "platinum coin", chance = 78107, minCount = 1, maxCount = 12 },  -- 2152
+	{ id = "red piece of cloth", chance = 30769 },  -- 5911
+	{ id = "great health potion", chance = 27219, minCount = 1, maxCount = 5 },  -- 7591
+	{ id = "great mana potion", chance = 23077, minCount = 1, maxCount = 5 },  -- 7590
+	{ id = "mind stone", chance = 10651 },  -- 2178
+	{ id = "bullseye potion", chance = 6509, minCount = 1, maxCount = 2 },  -- 7443
+	{ id = "focus cape", chance = 4734 },  -- 8871
+	{ id = "stealth ring", chance = 4734 },  -- 2165
+	{ id = "luminous orb", chance = 4142 },  -- 12410
+	{ id = "dark mushroom", chance = 3550, minCount = 1, maxCount = 4 },  -- 2792
+	{ id = 2124, chance = 2367 },  -- crystal ring
+	{ id = "small sapphire", chance = 2367, maxCount = 5 },  -- 2146
+	{ id = "assassin star", chance = 2367, minCount = 1, maxCount = 10 },  -- 7368
+	{ id = "ring of the sky", chance = 1775 },  -- 2123
+	{ id = "elemental spikes", chance = 1183 },  -- 13940
+	{ id = "piggy bank", chance = 1183 },  -- 2114
+	{ id = "royal tapestry", chance = 1183 },  -- 9958
+	{ id = "boots of haste", chance = 592 },  -- 2195
+	{ id = "crystal of power", chance = 592 },  -- 9980
+	{ id = "skull helmet", chance = 592 },  -- 5741
+	{ id = "spellbook of mind control", chance = 592 },  -- 8902
 }
 
 monster.attacks = {

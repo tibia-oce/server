@@ -81,15 +81,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 115 }, -- gold coin
-	{ id = "strong mana potion", chance = 17500 }, -- strong mana potion
-	{ id = 3027, chance = 15960 }, -- black pearl
-	{ id = 3026, chance = 15000 }, -- white pearl
-	{ id = "ring of healing", chance = 15040 }, -- ring of healing
-	{ id = 3567, chance = 500 }, -- blue robe
-	{ id = 820, chance = 900 }, -- lightning boots
-	{ id = "spellscroll of prophecies", chance = 300 }, -- spellscroll of prophecies
-	{ id = "spellbook", chance = 4650 }, -- spellbook
+	{ id = "gold coin", chance = 88462, minCount = 5, maxCount = 137 },  -- 2148
+	{ id = "ring of healing", chance = 19231 },  -- 2214
+	{ id = 2175, chance = 19231 },  -- spellbook
+	{ id = "spellscroll of prophecies", chance = 15385 },  -- 8904
+	{ id = "black pearl", chance = 11538 },  -- 2144
+	{ id = "lightning boots", chance = 7692 },  -- 7893
+	{ id = "white pearl", chance = 7692 },  -- 2143
+	{ id = "blue robe", chance = 3846 },  -- 2656
+	{ id = "strange helmet", chance = 3846 },  -- 2479
 }
 
 monster.attacks = {

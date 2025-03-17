@@ -71,33 +71,32 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "piggy bank", chance = 3920 },
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "platinum coin", chance = 100000, maxCount = 9 },
-	{ id = "dwarven ring", chance = 2280 }, -- dwarven ring
-	{ id = "knight axe", chance = 2070 },
-	{ id = "fire axe", chance = 380 },
-	{ id = "royal helmet", chance = 150 },
-	{ id = "guardian shield", chance = 1400 },
-	{ id = "tower shield", chance = 1002 },
-	{ id = "black shield", chance = 640 },
-	{ id = "brown mushroom", chance = 15190, maxCount = 2 },
-	{ id = "iron ore", chance = 8490 },
-	{ id = "magic sulphur", chance = 720 },
-	{ id = "chaos mace", chance = 550 },
-	{ id = "spiked squelcher", chance = 810 },
-	{ id = "great mana potion", chance = 13650 },
-	{ id = "great health potion", chance = 13650 },
-	{ id = "terra boots", chance = 640 },
-	{ id = "small topaz", chance = 7970, maxCount = 2 },
-	{ id = "clay lump", chance = 930 },
-	{ id = "coal", chance = 2050 }, -- coal
-	{ id = "violet crystal shard", chance = 3500 },
-	{ id = "brown crystal splinter", chance = 7540, maxCount = 2 },
-	{ id = "blue crystal splinter", chance = 4610 },
-	{ id = "green crystal fragment", chance = 6870 },
-	{ id = "drill bolt", chance = 8210, maxCount = 10 },
+	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 99973, minCount = 1, maxCount = 9 },  -- 2152
+	{ id = "brown mushroom", chance = 15282, minCount = 1, maxCount = 2 },  -- 2789
+	{ id = "great mana potion", chance = 13995 },  -- 7590
+	{ id = "great health potion", chance = 13729 },  -- 7591
+	{ id = "iron ore", chance = 8706 },  -- 5880
+	{ id = "small topaz", chance = 8138, minCount = 1, maxCount = 2 },  -- 9970
+	{ id = "drill bolt", chance = 8076, minCount = 1, maxCount = 10 },  -- 18436
+	{ id = "brown crystal splinter", chance = 7668, minCount = 1, maxCount = 2 },  -- 18417
+	{ id = "green crystal fragment", chance = 6798 },  -- 18421
+	{ id = "blue crystal splinter", chance = 4766 },  -- 18418
+	{ id = "piggy bank", chance = 4011 },  -- 2114
+	{ id = "violet crystal shard", chance = 3701 },  -- 18414
+	{ id = "dwarven ring", chance = 2423 },  -- 2213
+	{ id = "knight axe", chance = 2334 },  -- 2430
+	{ id = 13757, chance = 1997 },  -- coal
+	{ id = "guardian shield", chance = 1429 },  -- 2515
+	{ id = "clay lump", chance = 1038 },  -- 11339
+	{ id = "tower shield", chance = 861 },  -- 2528
+	{ id = "spiked squelcher", chance = 843 },  -- 7452
+	{ id = "magic sulphur", chance = 719 },  -- 5904
+	{ id = "black shield", chance = 657 },  -- 2529
+	{ id = "terra boots", chance = 657 },  -- 7886
+	{ id = "fire axe", chance = 479 },  -- 2432
+	{ id = "chaos mace", chance = 453 },  -- 7427
+	{ id = "royal helmet", chance = 248 },  -- 2498
 }
 
 monster.attacks = {

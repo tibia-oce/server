@@ -69,20 +69,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3007, chance = 2000 }, -- crystal ring
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 70 },
-	{ id = "small amethyst", chance = 5000, maxCount = 2 },
-	{ id = "energy ring", chance = 892 }, -- energy ring
-	{ id = "silver amulet", chance = 1020 },
-	{ id = "wand of cosmic energy", chance = 636 },
-	{ id = "throwing star", chance = 9900, maxCount = 5 },
-	{ id = "obsidian lance", chance = 3571 },
-	{ id = "guardian shield", chance = 243 },
-	{ id = "crystal sword", chance = 5882 },
-	{ id = "strong mana potion", chance = 7692 },
-	{ id = "mana potion", chance = 11711 },
-	{ id = "flash arrow", chance = 10000, maxCount = 10 }, -- flash arrow
+	{ id = "gold coin", chance = 98068, minCount = 1, maxCount = 170 },  -- 2148
+	{ id = "mana potion", chance = 11963 },  -- 7620
+	{ id = "flash arrow", chance = 10096, minCount = 1, maxCount = 10 },  -- 7838
+	{ id = "throwing star", chance = 10015, minCount = 1, maxCount = 5 },  -- 2399
+	{ id = "strong mana potion", chance = 7946 },  -- 7589
+	{ id = "crystal sword", chance = 6052 },  -- 7449
+	{ id = "small amethyst", chance = 5035, minCount = 1, maxCount = 2 },  -- 2150
+	{ id = "obsidian lance", chance = 3652 },  -- 2425
+	{ id = 2124, chance = 2052 },  -- crystal ring
+	{ id = "silver amulet", chance = 1089 },  -- 2170
+	{ id = "energy ring", chance = 925 },  -- 2167
+	{ id = "wand of cosmic energy", chance = 593 },  -- 2189
+	{ id = "guardian shield", chance = 278 },  -- 2515
 }
 
 monster.attacks = {

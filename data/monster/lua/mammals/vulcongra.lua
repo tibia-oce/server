@@ -72,23 +72,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 7 },
-	{ id = "platinum coin", chance = 14780 },
-	{ id = "wand of inferno", chance = 1000 },
-	{ id = "sword ring", chance = 2920 }, -- sword ring
-	{ id = "fire sword", chance = 260 },
-	{ id = "banana", chance = 10420, maxCount = 10 },
-	{ id = "strong health potion", chance = 7100 },
-	{ id = "strong mana potion", chance = 7100 },
-	{ id = "magma amulet", chance = 970 },
-	{ id = "magma coat", chance = 140 },
-	{ id = "fiery heart", chance = 9380 },
-	{ id = "coal", chance = 940 }, -- coal
-	{ id = "brown crystal splinter", chance = 4850 },
-	{ id = "red crystal fragment", chance = 2280 },
-	{ id = "magma clump", chance = 12440 },
-	{ id = "blazing bone", chance = 8030 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 107 },  -- 2148
+	{ id = "platinum coin", chance = 14358 },  -- 2152
+	{ id = "magma clump", chance = 12029 },  -- 18424
+	{ id = "banana", chance = 9688, minCount = 1, maxCount = 10 },  -- 2676
+	{ id = "fiery heart", chance = 9058 },  -- 10553
+	{ id = "blazing bone", chance = 7888 },  -- 18425
+	{ id = "strong health potion", chance = 7348 },  -- 7588
+	{ id = "strong mana potion", chance = 7213 },  -- 7589
+	{ id = "brown crystal splinter", chance = 4917 },  -- 18417
+	{ id = "sword ring", chance = 2993 },  -- 2207
+	{ id = "red crystal fragment", chance = 2340 },  -- 18420
+	{ id = "wand of inferno", chance = 956 },  -- 2187
+	{ id = "magma amulet", chance = 889 },  -- 7890
+	{ id = 13757, chance = 866 },  -- coal
+	{ id = "fire sword", chance = 293 },  -- 2392
+	{ id = "magma coat", chance = 169 },  -- 7899
 }
 
 monster.attacks = {

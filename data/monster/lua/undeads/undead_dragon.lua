@@ -71,31 +71,31 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "golden mug", chance = 6002 },
-	{ id = "black pearl", chance = 22780, maxCount = 2 },
-	{ id = "small sapphire", chance = 28370, maxCount = 2 },
-	{ id = "gold coin", chance = 35500, maxCount = 100 },
-	{ id = "gold coin", chance = 55500, maxCount = 98 },
-	{ id = "platinum coin", chance = 52000, maxCount = 5 },
-	{ id = "life crystal", chance = 2500 },
-	{ id = "war axe", chance = 1290 },
-	{ id = "golden armor", chance = 860 },
-	{ id = "knight armor", chance = 5500 },
-	{ id = "royal helmet", chance = 1720 },
-	{ id = "power bolt", chance = 15190, maxCount = 15 },
-	{ id = "hardened bone", chance = 14180 },
-	{ id = 6299, chance = 1150 }, -- death ring
-	{ id = "demonic essence", chance = 12460 },
-	{ id = "assassin star", chance = 26650, maxCount = 5 },
-	{ id = "dragon slayer", chance = 860 },
-	{ id = "dragonbone staff", chance = 4000 },
-	{ id = "great mana potion", chance = 21490 },
-	{ id = "great health potion", chance = 21200 },
-	{ id = "divine plate", chance = 430 },
-	{ id = "skullcracker armor", chance = 290 },
-	{ id = "gold ingot", chance = 570 },
-	{ id = "unholy bone", chance = 33380 },
-	{ id = "spellweaver's robe", chance = 860 },
+	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 49747, minCount = 1, maxCount = 6 },  -- 2152
+	{ id = "unholy bone", chance = 33844 },  -- 11233
+	{ id = "small sapphire", chance = 27561, minCount = 1, maxCount = 2 },  -- 2146
+	{ id = "assassin star", chance = 25241, minCount = 1, maxCount = 5 },  -- 7368
+	{ id = "great health potion", chance = 24664, minCount = 1, maxCount = 3 },  -- 7591
+	{ id = "great mana potion", chance = 24664, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "black pearl", chance = 22468, minCount = 1, maxCount = 2 },  -- 2144
+	{ id = "demonic essence", chance = 15403 },  -- 6500
+	{ id = "hardened bone", chance = 15208 },  -- 5925
+	{ id = "power bolt", chance = 14643, minCount = 1, maxCount = 15 },  -- 2547
+	{ id = "golden mug", chance = 5187 },  -- 2033
+	{ id = "knight armor", chance = 4863 },  -- 2476
+	{ id = "dragonbone staff", chance = 4098 },  -- 7430
+	{ id = 6300, chance = 1884 },  -- death ring
+	{ id = "life crystal", chance = 1578 },  -- 2177
+	{ id = "war axe", chance = 1331 },  -- 2454
+	{ id = "royal helmet", chance = 1113 },  -- 2498
+	{ id = "blue gem", chance = 1089 },  -- 2158
+	{ id = "gold ingot", chance = 1060 },  -- 9971
+	{ id = "dragon slayer", chance = 972 },  -- 7402
+	{ id = "spellweaver's robe", chance = 907 },  -- 11355
+	{ id = "golden armor", chance = 665 },  -- 2466
+	{ id = "divine plate", chance = 442 },  -- 8885
+	{ id = "skullcracker armor", chance = 312 },  -- 8889
 }
 
 monster.attacks = {

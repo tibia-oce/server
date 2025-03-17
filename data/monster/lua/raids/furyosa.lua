@@ -86,19 +86,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 200 }, -- gold coin
-	{ id = "jalapeno pepper", chance = 100000, maxCount = 5 }, -- jalapeno pepper
-	{ id = "silver raid token", chance = 45000 }, -- silver raid token
-	{ id = 3035, chance = 85000, maxCount = 25 }, -- platinum coin
-	{ id = 6558, chance = 35000, maxCount = 3 }, -- flask of demonic blood
-	{ id = 6499, chance = 22500 }, -- demonic essence
-	{ id = 5911, chance = 4000 }, -- red piece of cloth
-	{ id = "soul orb", chance = 21500 }, -- soul orb
-	{ id = 5944, chance = 50 }, -- soul orb
-	{ id = 3007, chance = 410 }, -- crystal ring
-	{ id = 6300, chance = 60 }, -- death ring
-	{ id = 3439, chance = 100 }, -- phoenix shield
-	{ id = 19391, chance = 100 }, -- furious frock
+	{ id = 2124, chance = 100000 },  -- crystal ring
+	{ id = "gold coin", chance = 100000, maxCount = 200 },  -- 2148
+	{ id = "great mana potion", chance = 100000, maxCount = 5 },  -- 7590
+	{ id = "jalapeno pepper", chance = 100000, maxCount = 5 },  -- 8844
+	{ id = "soul orb", chance = 100000 },  -- 5944
 }
 
 monster.attacks = {

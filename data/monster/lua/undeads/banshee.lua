@@ -75,28 +75,28 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "candlestick", chance = 70000 },
-	{ id = "wedding ring", chance = 460 },
-	{ id = 3007, chance = 60 }, -- crystal ring
-	{ id = "silver brooch", chance = 1250 },
-	{ id = "white pearl", chance = 1010 },
-	{ id = "black pearl", chance = 2030 },
-	{ id = "gold coin", chance = 30000, maxCount = 80 },
-	{ id = "silver amulet", chance = 8700 },
-	{ id = "spellbook", chance = 520 }, -- spellbook
-	{ id = "life crystal", chance = 70 },
-	{ id = "stone skin amulet", chance = 820 },
-	{ id = "ring of healing", chance = 730 }, -- ring of healing
-	{ id = 2949, chance = 910 }, -- lyre
-	{ id = "poison dagger", chance = 1350 },
-	{ id = "red robe", chance = 150 },
-	{ id = "blue robe", chance = 700 },
-	{ id = "simple dress", chance = 6050 },
-	{ id = "strong mana potion", chance = 680 },
-	{ id = "terra mantle", chance = 340 },
-	{ id = "petrified scream", chance = 4150 },
-	{ id = "hair of a banshee", chance = 4810 },
-	{ id = "sweet smelling bait", chance = 40 },
+	{ id = "candlestick", chance = 72763 },  -- 2047
+	{ id = "gold coin", chance = 30902, minCount = 1, maxCount = 80 },  -- 2148
+	{ id = "silver amulet", chance = 9399 },  -- 2170
+	{ id = "simple dress", chance = 6277 },  -- 2657
+	{ id = "hair of a banshee", chance = 4955 },  -- 12402
+	{ id = "petrified scream", chance = 4276 },  -- 11337
+	{ id = "black pearl", chance = 2171 },  -- 2144
+	{ id = "silver brooch", chance = 1541 },  -- 2134
+	{ id = "poison dagger", chance = 1528 },  -- 2411
+	{ id = "white pearl", chance = 1136 },  -- 2143
+	{ id = 2071, chance = 974 },  -- lyre
+	{ id = "stone skin amulet", chance = 820 },  -- 2197
+	{ id = "strong mana potion", chance = 772 },  -- 7589
+	{ id = "ring of healing", chance = 756 },  -- 2214
+	{ id = "blue robe", chance = 659 },  -- 2656
+	{ id = "wedding ring", chance = 562 },  -- 2121
+	{ id = 2175, chance = 513 },  -- spellbook
+	{ id = "terra mantle", chance = 334 },  -- 7884
+	{ id = 2124, chance = 233 },  -- crystal ring
+	{ id = "red robe", chance = 102 },  -- 2655
+	{ id = "life crystal", chance = 98 },  -- 2177
+	{ id = "sweet smelling bait", chance = 30 },  -- 13307
 }
 
 monster.attacks = {

@@ -67,23 +67,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 90 },
-	{ id = "small amethyst", chance = 8000, maxCount = 2 },
-	{ id = "platinum coin", chance = 75250 },
-	{ id = "green gem", chance = 210 },
-	{ id = 3053, chance = 2400 }, -- time ring
-	{ id = "platinum amulet", chance = 260 },
-	{ id = "crusader helmet", chance = 230 },
-	{ id = "brown mushroom", chance = 7500, maxCount = 3 },
-	{ id = "mastermind potion", chance = 310 },
-	{ id = "crystal sword", chance = 2000 },
-	{ id = "great mana potion", chance = 8000 },
-	{ id = "great health potion", chance = 5000 },
-	{ id = "spitter nose", chance = 18000 },
-	{ id = "compound eye", chance = 15000 },
-	{ id = "calopteryx cape", chance = 240 },
-	{ id = "grasshopper legs", chance = 130 },
+	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 190 },  -- 2148
+	{ id = "platinum coin", chance = 74930 },  -- 2152
+	{ id = "spitter nose", chance = 18113 },  -- 15481
+	{ id = "compound eye", chance = 14971 },  -- 15486
+	{ id = "small amethyst", chance = 8124, minCount = 1, maxCount = 2 },  -- 2150
+	{ id = "great mana potion", chance = 8050 },  -- 7590
+	{ id = "brown mushroom", chance = 7391, minCount = 1, maxCount = 3 },  -- 2789
+	{ id = "great health potion", chance = 4939 },  -- 7591
+	{ id = 2169, chance = 2319 },  -- time ring
+	{ id = "crystal sword", chance = 1993 },  -- 7449
+	{ id = "mastermind potion", chance = 324 },  -- 7440
+	{ id = "calopteryx cape", chance = 241 },  -- 15489
+	{ id = "platinum amulet", chance = 237 },  -- 2171
+	{ id = "green gem", chance = 216 },  -- 2155
+	{ id = "crusader helmet", chance = 214 },  -- 2497
+	{ id = "grasshopper legs", chance = 112 },  -- 15490
 }
 
 monster.attacks = {

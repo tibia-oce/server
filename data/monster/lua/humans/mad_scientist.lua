@@ -70,16 +70,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 30000, maxCount = 65 },
-	{ id = "gold coin", chance = 30000, maxCount = 50 },
-	{ id = 3046, chance = 2000 }, -- magic light wand
-	{ id = "life crystal", chance = 2000 },
-	{ id = "cookie", chance = 1200, maxCount = 5 },
-	{ id = "white mushroom", chance = 8000, maxCount = 3 },
-	{ id = "mastermind potion", chance = 130 },
-	{ id = "health potion", chance = 19000 },
-	{ id = "mana potion", chance = 19000 },
-	{ id = "small enchanted amethyst", chance = 470 },
+	{ id = "gold coin", chance = 60087, minCount = 1, maxCount = 115 },  -- 2148
+	{ id = "health potion", chance = 20045 },  -- 7618
+	{ id = "mana potion", chance = 19609 },  -- 7620
+	{ id = "white mushroom", chance = 8034, minCount = 1, maxCount = 3 },  -- 2787
+	{ id = "powder herb", chance = 6033 },  -- 2803
+	{ id = 2162, chance = 2031 },  -- magic light wand
+	{ id = "life crystal", chance = 2007 },  -- 2177
+	{ id = "cookie", chance = 1179, minCount = 1, maxCount = 5 },  -- 2687
+	{ id = "cream cake", chance = 815 },  -- 6394
+	{ id = "small enchanted amethyst", chance = 481 },  -- 7762
+	{ id = "mastermind potion", chance = 117 },  -- 7440
 }
 
 monster.attacks = {

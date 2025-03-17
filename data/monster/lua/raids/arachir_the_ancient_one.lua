@@ -84,14 +84,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "bloody edge", chance = 1200 }, -- bloody edge
-	{ id = 236, chance = 10000 }, -- strong health potion
-	{ id = 3114, chance = 10000 }, -- skull
-	{ id = "gold coin", chance = 100000, maxCount = 98 }, -- gold coin
-	{ id = "vampire lord token", chance = 100000 }, -- vampire lord token
-	{ id = 3035, chance = 50000, maxCount = 5 }, -- platinum coin
-	{ id = 3434, chance = 6300 }, -- vampire shield
-	{ id = 3027, chance = 8980 }, -- black pearl
+	{ id = "blood preservation", chance = 100000 },  -- 12405
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 100 },  -- 2148
+	{ id = "vampire lord token", chance = 100000 },  -- 9020
+	{ id = "strong health potion", chance = 19608 },  -- 7588
+	{ id = "ring of healing", chance = 11765 },  -- 2214
+	{ id = "vampire shield", chance = 8824 },  -- 2534
+	{ id = "platinum coin", chance = 7843, minCount = 1, maxCount = 5 },  -- 2152
+	{ id = 2229, chance = 6863 },  -- skull
+	{ id = "black pearl", chance = 980 },  -- 2144
+	{ id = "bloody edge", chance = 980 },  -- 7416
 }
 
 monster.attacks = {

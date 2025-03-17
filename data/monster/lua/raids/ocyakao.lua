@@ -76,18 +76,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "silver raid token", chance = 200 }, -- silver raid token
-	{ id = 3031, chance = 100000, maxCount = 20 }, -- gold coin
-	{ id = "fish", chance = 100000, maxCount = 5 }, -- fish
-	{ id = 3026, chance = 100000 }, -- white pearl
-	{ id = "white piece of cloth", chance = 100000 }, -- white piece of cloth
-	{ id = "mace", chance = 37500 }, -- mace
-	{ id = 19369, chance = 200, unique = true }, -- eye of the storm
-	{ id = 3441, chance = 37570 }, -- bone shield
-	{ id = 7381, chance = 25050 }, -- mammoth whopper
-	{ id = 7441, chance = 62570 }, -- ice cube
-	{ id = 7159, chance = 12500 }, -- green perch
-	{ id = 3580, chance = 12520 }, -- northern pike
+	{ id = "fish", chance = 100000, maxCount = 5 },  -- 2667
+	{ id = "gold coin", chance = 100000, maxCount = 65 },  -- 2148
+	{ id = "white pearl", chance = 100000 },  -- 2143
+	{ id = "white piece of cloth", chance = 100000 },  -- 5909
+	{ id = 7441, chance = 62500 },  -- ice cube
+	{ id = "bone shield", chance = 37500 },  -- 2541
+	{ id = "mace", chance = 37500 },  -- 2398
+	{ id = "mammoth whopper", chance = 25000 },  -- 7381
+	{ id = "northern pike", chance = 12500 },  -- 2669
+	{ id = "green perch", chance = 12500 },  -- 7159
 }
 
 monster.attacks = {

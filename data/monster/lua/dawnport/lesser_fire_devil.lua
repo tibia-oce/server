@@ -65,11 +65,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "blank rune", chance = 21050 }, -- blank rune
-	{ id = "gold coin", chance = 100000, maxCount = 10 }, -- gold coin
-	{ id = "small pitchfork", chance = 22810 }, -- small pitchfork
-	{ id = 2920, chance = 1750 }, -- torch
-	{ id = 2920, chance = 1750 }, -- torch
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 10 },  -- 2148
+	{ id = "blank rune", chance = 20732 },  -- 2260
+	{ id = 2050, chance = 2846, minCount = 1, maxCount = 2 },  -- torch
 }
 
 monster.attacks = {

@@ -82,25 +82,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "white pearl", chance = 5000 },
-	{ id = "black pearl", chance = 5960, maxCount = 3 },
-	{ id = "gold coin", chance = 100000, maxCount = 139 },
-	{ id = "small emerald", chance = 2230, maxCount = 3 },
-	{ id = "platinum coin", chance = 19720 },
-	{ id = "yellow gem", chance = 690 },
-	{ id = "platinum amulet", chance = 450 },
-	{ id = "spellbook", chance = 10000 }, -- spellbook
-	{ id = "mind stone", chance = 350 },
-	{ id = "ring of healing", chance = 1540 }, -- ring of healing
-	{ id = "skull staff", chance = 550 },
-	{ id = "strange helmet", chance = 740 },
-	{ id = "ancient shield", chance = 2422 },
-	{ id = "castle shield", chance = 350 },
-	{ id = "blue robe", chance = 150 },
-	{ id = "strong mana potion", chance = 7500 },
-	{ id = "lightning boots", chance = 200 },
-	{ id = "small topaz", chance = 2430, maxCount = 3 },
-	{ id = "maxilla maximus", chance = 100 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 139 },  -- 2148
+	{ id = "platinum coin", chance = 19783 },  -- 2152
+	{ id = 2175, chance = 10376 },  -- spellbook
+	{ id = "strong mana potion", chance = 8006 },  -- 7589
+	{ id = "black pearl", chance = 5151, minCount = 1, maxCount = 3 },  -- 2144
+	{ id = "white pearl", chance = 4872 },  -- 2143
+	{ id = "small topaz", chance = 2451, minCount = 1, maxCount = 3 },  -- 9970
+	{ id = "small emerald", chance = 2370, minCount = 1, maxCount = 3 },  -- 2149
+	{ id = "ancient shield", chance = 1989 },  -- 2532
+	{ id = "ring of healing", chance = 1600 },  -- 2214
+	{ id = "yellow gem", chance = 770 },  -- 2154
+	{ id = "strange helmet", chance = 719 },  -- 2479
+	{ id = "mind stone", chance = 433 },  -- 2178
+	{ id = "platinum amulet", chance = 382 },  -- 2171
+	{ id = "lightning boots", chance = 286 },  -- 7893
+	{ id = "castle shield", chance = 279 },  -- 2535
+	{ id = "skull staff", chance = 279 },  -- 2436
+	{ id = "blue robe", chance = 213 },  -- 2656
+	{ id = "maxilla maximus", chance = 37 },  -- 13291
 }
 
 monster.attacks = {
