@@ -75,6 +75,7 @@ function herbalistSystem.onUse(cid, item, fromPosition, itemEx, toPosition)
                 return true
             end
 
+            player:addSkillTries(SKILL_HERBALISM, 1)
             local multiple = 1
             local rand_multiple = math.random(15)
             if rand_multiple == 15 then

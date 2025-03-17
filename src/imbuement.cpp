@@ -11,6 +11,12 @@ bool Imbuement::isSkill() const {
         case ImbuementType::IMBUEMENT_TYPE_FISHING_SKILL :
         case ImbuementType::IMBUEMENT_TYPE_SHIELD_SKILL :
         case ImbuementType::IMBUEMENT_TYPE_MAGIC_LEVEL :
+		case ImbuementType::IMBUEMENT_TYPE_MINING_SKILL :
+        case ImbuementType::IMBUEMENT_TYPE_WOODCUTTING_SKILL :
+        case ImbuementType::IMBUEMENT_TYPE_HERBALISM_SKILL :
+        case ImbuementType::IMBUEMENT_TYPE_CRAFTING_SKILL :
+        case ImbuementType::IMBUEMENT_TYPE_ENCHANTING_SKILL :
+        case ImbuementType::IMBUEMENT_TYPE_DISENCHANTING_SKILL :
             return true;
 
         default:

@@ -71,6 +71,12 @@ const std::unordered_map<std::string, ItemParseAttributes_t> ItemParseAttributes
 	{"skillclub", ITEM_PARSE_SKILLCLUB},
 	{"skilldist", ITEM_PARSE_SKILLDIST},
 	{"skillfish", ITEM_PARSE_SKILLFISH},
+    {"skillmining", ITEM_PARSE_SKILLMINING},
+    {"skillwoodcutting", ITEM_PARSE_SKILLWOODCUTTING},
+    {"skillherbalism", ITEM_PARSE_SKILLHERBALISM},
+    {"skillcrafting", ITEM_PARSE_SKILLCRAFTING},
+    {"skillenchanting", ITEM_PARSE_SKILLENCHANTING},
+    {"skilldisenchanting", ITEM_PARSE_SKILLDISENCHANTING},
 	{"skillshield", ITEM_PARSE_SKILLSHIELD},
 	{"skillfist", ITEM_PARSE_SKILLFIST},
 	{"maxhitpoints", ITEM_PARSE_MAXHITPOINTS},
@@ -933,6 +939,36 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 					abilities.skills[SKILL_FISHING] = pugi::cast<int32_t>(valueAttribute.value());
 					break;
 				}
+
+                case ITEM_PARSE_SKILLMINING: {
+                    abilities.skills[SKILL_MINING] = pugi::cast<int32_t>(valueAttribute.value());
+                    break;
+                }
+
+                case ITEM_PARSE_SKILLWOODCUTTING: {
+                    abilities.skills[SKILL_WOODCUTTING] = pugi::cast<int32_t>(valueAttribute.value());
+                    break;
+                }
+
+                case ITEM_PARSE_SKILLHERBALISM: {
+                    abilities.skills[SKILL_HERBALISM] = pugi::cast<int32_t>(valueAttribute.value());
+                    break;
+                }
+
+                case ITEM_PARSE_SKILLCRAFTING: {
+                    abilities.skills[SKILL_CRAFTING] = pugi::cast<int32_t>(valueAttribute.value());
+                    break;
+                }
+
+                case ITEM_PARSE_SKILLENCHANTING: {
+                    abilities.skills[SKILL_ENCHANTING] = pugi::cast<int32_t>(valueAttribute.value());
+                    break;
+                }
+
+                case ITEM_PARSE_SKILLDISENCHANTING: {
+                    abilities.skills[SKILL_DISENCHANTING] = pugi::cast<int32_t>(valueAttribute.value());
+                    break;
+                }
 
 				case ITEM_PARSE_SKILLSHIELD: {
 					abilities.skills[SKILL_SHIELD] = pugi::cast<int32_t>(valueAttribute.value());
