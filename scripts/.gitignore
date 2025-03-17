@@ -156,4 +156,5 @@ cython_debug/
 loot_builder_state.json
 loot_errors.txt
 missing_info.txt
+todo_list.txt
 *.bak
