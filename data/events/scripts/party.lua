@@ -26,30 +26,12 @@ function Party:onDisband()
 end
 
 function Party:onShareExperience(exp)
-	local sharedExperienceMultiplier = 1.20 --20%
-	local vocationsIds = {}
-	local rawExp = exp
-
-	local vocationId = self:getLeader():getVocation():getBase():getId()
-	if vocationId ~= VOCATION_NONE then
-		table.insert(vocationsIds, vocationId)
-	end
-
-	for _, member in ipairs(self:getMembers()) do
-		vocationId = member:getVocation():getBase():getId()
-		if not table.contains(vocationsIds, vocationId) and vocationId ~= VOCATION_NONE then
-			table.insert(vocationsIds, vocationId)
-		end
-	end
-
-	local size = #vocationsIds
-	if size > 1 then
-		sharedExperienceMultiplier = 1.0 + ((size * (5 * (size - 1) + 10)) / 100)
-	end
-
-	exp = math.ceil((exp * sharedExperienceMultiplier) / (#self:getMembers() + 1))
-	local onShareExperience = EventCallback.onShareExperience
-	return onShareExperience and onShareExperience(self, exp, rawExp) or exp
+    local rawExp = exp
+    local partyComposition = self:getPartyComposition()
+    local expMultiplier = self:calculateExperienceMultiplier(partyComposition.uniqueVocationCount, partyComposition.totalMembers)
+    local sharedExp = math.ceil((exp * expMultiplier) / partyComposition.totalMembers)
+    local onShareExperience = EventCallback.onShareExperience
+    return onShareExperience and onShareExperience(self, sharedExp, rawExp) or sharedExp
 end
 
 function Party:onInvite(player)
@@ -75,4 +57,47 @@ function Party:onPassLeadership(player)
 		return onPassLeadership(self, player)
 	end
 	return true
+end
+
+function Party:getPartyComposition()
+    local uniqueVocations = {}
+    local composition = {
+        uniqueVocationCount = 0,
+        totalMembers = 1
+    }
+
+    local leaderVocationId = self:getLeader():getVocation():getBase():getId()
+    if leaderVocationId ~= VOCATION_NONE then
+        uniqueVocations[leaderVocationId] = true
+    end
+
+    local members = self:getMembers()
+    composition.totalMembers = composition.totalMembers + #members
+
+    for _, member in ipairs(members) do
+        local vocationId = member:getVocation():getBase():getId()
+        if vocationId ~= VOCATION_NONE then
+            uniqueVocations[vocationId] = true
+        end
+    end
+
+    for _ in pairs(uniqueVocations) do
+        composition.uniqueVocationCount = composition.uniqueVocationCount + 1
+    end
+
+    return composition
+end
+
+function Party:calculateExperienceMultiplier(uniqueVocationCount, partySize)
+    -- A re-balanced hybrid experience formula to reward party play but bring it more in line with solo play/vocation non-diversity
+    -- Interactive comparison available at: https://gist.github.com/jordanhoare/b55456968c5e673d414b992ab95e9798
+    
+    if uniqueVocationCount <= 1 then
+        return 1.20
+    end
+    
+    local rawVocationBonus = ((uniqueVocationCount * (5 * (uniqueVocationCount - 1) + 15)) / 100)
+    local scalingFactor = 1 / (1 + 0.15 * (partySize - 1))
+    
+    return 1.0 + (rawVocationBonus * scalingFactor)
 end
