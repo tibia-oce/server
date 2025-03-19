@@ -71,27 +71,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2815, chance = 31000 }, -- scroll
-	{ id = "candlestick", chance = 2100 },
-	{ id = "gold coin", chance = 37000, maxCount = 47 },
-	{ id = "yellow gem", chance = 50 },
-	{ id = "life crystal", chance = 970 },
-	{ id = "wand of cosmic energy", chance = 1160 },
-	{ id = "elven amulet", chance = 1999 },
-	{ id = "blank rune", chance = 18000 },
-	{ id = "arrow", chance = 6000, maxCount = 3 },
-	{ id = "inkwell", chance = 1000 }, -- inkwell
-	{ id = "sandals", chance = 950 },
-	{ id = "green tunic", chance = 7000 },
-	{ id = "melon", chance = 22000 },
-	{ id = "bread", chance = 14000 },
-	{ id = 2747, chance = 880}, -- "grave flower"
-	{ id = "sling herb", chance = 5000 },
-	{ id = "holy orchid", chance = 2100 },
-	{ id = "strong mana potion", chance = 3000 },
-	{ id = "health potion", chance = 4000 },
-	{ id = "elvish talisman", chance = 10000 },
-	{ id = "elven astral observer", chance = 7710 },
+	{ id = "gold coin", chance = 37169, minCount = 1, maxCount = 49 },  -- 2148
+	{ id = 1949, chance = 30490 },  -- scroll
+	{ id = "melon", chance = 21734 },  -- 2682
+	{ id = "blank rune", chance = 17898 },  -- 2260
+	{ id = "bread", chance = 13919 },  -- 2689
+	{ id = "elvish talisman", chance = 10022 },  -- 10552
+	{ id = "elven astral observer", chance = 7743 },  -- 12421
+	{ id = "green tunic", chance = 7244 },  -- 2652
+	{ id = "arrow", chance = 6101, minCount = 1, maxCount = 3 },  -- 2544
+	{ id = "sling herb", chance = 4859 },  -- 2802
+	{ id = "health potion", chance = 4038 },  -- 7618
+	{ id = "strong mana potion", chance = 2929 },  -- 7589
+	{ id = "candlestick", chance = 2166 },  -- 2047
+	{ id = "elven amulet", chance = 2029 },  -- 2198
+	{ id = "holy orchid", chance = 2008 },  -- 5922
+	{ id = "wand of cosmic energy", chance = 1129 },  -- 2189
+	{ id = "life crystal", chance = 1030 },  -- 2177
+	{ id = "sandals", chance = 979 },  -- 2642
+	{ id = "inkwell", chance = 951 },  -- 2600
+	{ id = 2747, chance = 801 },  -- grave flower
+	{ id = "yellow gem", chance = 44 },  -- 2154
 }
 
 monster.attacks = {

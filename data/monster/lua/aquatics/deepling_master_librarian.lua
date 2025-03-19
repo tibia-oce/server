@@ -75,7 +75,7 @@ monster.loot = {
 	{ id = "deepling filet", chance = 20599 },  -- 15488
 	-- { id = 15422, chance = 19894 },  -- key to the drowned library
 	{ id = "eye of a deepling", chance = 10211 },  -- 13870
-	{ id = "fish", chance = 9155, minCount = 1, maxCount = 2 },  -- 2667
+	{ id = 2667 , chance = 9155, minCount = 1, maxCount = 2 },  -- fish
 	{ id = "small sapphire", chance = 7805, minCount = 1, maxCount = 3 },  -- 2146
 	{ id = "deepling staff", chance = 3110 },  -- 15400
 	{ id = "life ring", chance = 2758 },  -- 2168

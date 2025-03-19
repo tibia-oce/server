@@ -74,7 +74,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 50081, minCount = 1, maxCount = 9 },  -- 2148
 	{ id = "small stone", chance = 24922, minCount = 1, maxCount = 2 },  -- 1294
 	{ id = "dagger", chance = 18219 },  -- 2379
-	{ id = "fish", chance = 12921 },  -- 2667
+	{ id = 2667 , chance = 12921 },  -- fish
 	{ id = 2230, chance = 12684 },  -- bone
 	{ id = "leather helmet", chance = 9912 },  -- 2461
 	{ id = "small axe", chance = 9418 },  -- 2559

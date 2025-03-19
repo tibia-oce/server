@@ -66,7 +66,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "fish", chance = 10676 },  -- 2667
+	{ id = 2667 , chance = 10676 },  -- fish
 	{ id = "shrimp", chance = 9935 },  -- 2670
 	{ id = "black pearl", chance = 1296 },  -- 2144
 	{ id = "small amethyst", chance = 586, minCount = 1, maxCount = 3 },  -- 2150

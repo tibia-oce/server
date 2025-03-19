@@ -76,7 +76,7 @@ monster.loot = {
 	{ id = "orc leather", chance = 20225 },  -- 12435
 	{ id = "gold coin", chance = 19061, minCount = 1, maxCount = 45 },  -- 2148
 	{ id = "throwing star", chance = 14687, minCount = 1, maxCount = 18 },  -- 2399
-	{ id = "fish", chance = 10554, minCount = 1, maxCount = 2 },  -- 2667
+	{ id = 2667 , chance = 10554, minCount = 1, maxCount = 2 },  -- fish
 	{ id = "orc tooth", chance = 9898 },  -- 11113
 	{ id = "plate armor", chance = 5618 },  -- 2463
 	{ id = "orcish axe", chance = 5190 },  -- 2428

@@ -82,7 +82,7 @@ monster.loot = {
 	{ id = 3114, chance = 12380 }, -- skull
 	{ id = 3115, chance = 9510 }, -- bone
 	{ id = 3116, chance = 5360 }, -- big bone
-	{ id = "fish", chance = 6780, maxCount = 3 }, -- fish
+	{ id = 2667 , chance = 6780, maxCount = 3 }, -- fish
 	{ id = 3582, chance = 5960, maxCount = 2 }, -- ham
 	{ id = 5880, chance = 3000 }, -- iron ore
 	{ id = 5895, chance = 4650 }, -- fish fin

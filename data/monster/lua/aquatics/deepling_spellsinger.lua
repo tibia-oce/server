@@ -77,7 +77,7 @@ monster.loot = {
 	{ id = "spellsinger's seal", chance = 15240 },  -- 15421
 	{ id = "deepling filet", chance = 14914 },  -- 15488
 	-- { id = 15422, chance = 10719 },  -- key to the drowned library
-	{ id = "fish", chance = 3506 },  -- 2667
+	{ id = 2667 , chance = 3506 },  -- fish
 	{ id = "small sapphire", chance = 2958 },  -- 2146
 	{ id = "eye of a deepling", chance = 2516 },  -- 13870
 	{ id = "life ring", chance = 2460 },  -- 2168

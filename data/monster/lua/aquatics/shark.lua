@@ -68,7 +68,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 91424, minCount = 1, maxCount = 138 },  -- 2148
-	{ id = "fish", chance = 25184, minCount = 1, maxCount = 4 },  -- 2667
+	{ id = 2667 , chance = 25184, minCount = 1, maxCount = 4 },  -- fish
 	{ id = "deepling scales", chance = 9680 },  -- 15430
 	{ id = "small sapphire", chance = 1124 },  -- 2146
 	{ id = "eye of a deepling", chance = 1085 },  -- 13870
