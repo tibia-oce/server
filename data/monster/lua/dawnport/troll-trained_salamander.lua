@@ -65,18 +65,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3274, chance = 5080 }, -- axe
-	{ id = 3337, chance = 4630 }, -- bone club
-	{ id = "simple arrow", chance = 17650, maxCount = 5 }, -- simple arrow
-	{ id = 3031, chance = 100000, maxCount = 11 }, -- gold coin
-	{ id = 3352, chance = 6300 }, -- chain helmet
-	{ id = 266, chance = 1520 }, -- health potion
-	{ id = "insectoid eggs", chance = 34410, maxCount = 5 }, -- insectoid eggs
-	{ id = 3577, chance = 9940 }, -- meat
-	{ id = 3448, chance = 2970, maxCount = 2 }, -- poison arrow
-	{ id = "short sword", chance = 4470 }, -- short sword
-	{ id = 3457, chance = 5080 }, -- shovel
-	{ id = "studded helmet", chance = 4070 }, -- studded helmet
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 11 },  -- 2148
+	{ id = "insectoid eggs", chance = 23157 },  -- 19737
+	{ id = "simple arrow", chance = 17275, minCount = 1, maxCount = 5 },  -- 23839
+	{ id = 14774, chance = 13031, minCount = 2, maxCount = 5 },  -- insectoid eggs
+	{ id = "meat", chance = 10648 },  -- 2666
+	{ id = "chain helmet", chance = 5733 },  -- 2458
+	{ id = "short sword", chance = 4989 },  -- 2406
+	{ id = "axe", chance = 4765 },  -- 2386
+	{ id = 2554, chance = 4244 },  -- shovel
+	{ id = "bone club", chance = 4021 },  -- 2449
+	{ id = "poison arrow", chance = 2978, minCount = 1, maxCount = 2 },  -- 2545
+	{ id = "studded helmet", chance = 2978 },  -- 2482
+	{ id = "health potion", chance = 1191 },  -- 7618
+	{ id = "bow", chance = 745 },  -- 2456
+	{ id = "spear", chance = 596 },  -- 2389
+	{ id = 23723, chance = 521 },  -- lightest missile rune
 }
 
 monster.attacks = {

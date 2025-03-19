@@ -86,14 +86,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 99 }, -- gold coin
-	{ id = "great health potion", chance = 100000, maxCount = 3 }, -- great health potion
-	{ id = 3069, chance = 100000 }, -- necrotic rod
-	{ id = 3035, chance = 100000, maxCount = 13 }, -- platinum coin
-	{ id = "great mana potion", chance = 10000, maxCount = 4 }, -- great mana potion
-	{ id = 9058, chance = 25000 }, -- gold ingot
-	{ id = 9056, chance = 9090 }, -- black skull
-	{ id = "blood goblet", chance = 9090 }, -- blood goblet
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "necrotic rod", chance = 100000 },  -- 2185
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 15 },  -- 2152
+	{ id = "great health potion", chance = 49924, minCount = 1, maxCount = 5 },  -- 7591
+	{ id = "great mana potion", chance = 45344, minCount = 1, maxCount = 5 },  -- 7590
+	{ id = "black skull", chance = 25191 },  -- 9969
+	{ id = "gold ingot", chance = 22290 },  -- 9971
+	{ id = "blood goblet", chance = 4885 },  -- 9447
+	{ id = 9811, chance = 1374 },  -- rusty legs (todo: slightly rusted does not exist in items.xml)
+	{ id = 9808, chance = 1069 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = 2322, chance = 1069 },  -- voodoo doll
+
 }
 
 monster.attacks = {

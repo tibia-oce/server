@@ -80,30 +80,32 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small diamond", chance = 10000, maxCount = 5 },
-	{ id = "small sapphire", chance = 10000, maxCount = 5 },
-	{ id = "small ruby", chance = 12000, maxCount = 5 },
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "small emerald", chance = 10000, maxCount = 5 },
-	{ id = "platinum coin", chance = 100000, maxCount = 6 },
-	{ id = "might ring", chance = 910 },
-	{ id = "stealth ring", chance = 1300 }, -- stealth ring
-	{ id = "platinum amulet", chance = 1000 },
-	{ id = "ring of healing", chance = 3000 }, -- ring of healing
-	{ id = "giant sword", chance = 2000 },
-	{ id = "ice rapier", chance = 660 },
-	{ id = "devil helmet", chance = 910 },
-	{ id = "crusader helmet", chance = 740 },
-	{ id = "crown shield", chance = 740 },
-	{ id = "demon shield", chance = 170 },
-	{ id = "fire mushroom", chance = 20600, maxCount = 6 },
-	{ id = 5906, chance = 1000 }, -- demon dust
-	{ id = "assassin star", chance = 8340, maxCount = 10 },
-	{ id = "demonrage sword", chance = 350 },
-	{ id = "great mana potion", chance = 18000, maxCount = 2 },
-	{ id = "ultimate health potion", chance = 20500, maxCount = 3 },
-	{ id = "small topaz", chance = 9300, maxCount = 5 },
-	{ id = "cluster of solace", chance = 4550 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 6 },  -- 2152
+	{ id = "fire mushroom", chance = 20205, minCount = 1, maxCount = 6 },  -- 2795
+	{ id = "ultimate health potion", chance = 20043, minCount = 1, maxCount = 3 },  -- 8473
+	{ id = "great mana potion", chance = 19820, minCount = 1, maxCount = 2 },  -- 7590
+	{ id = "small diamond", chance = 10252, minCount = 1, maxCount = 5 },  -- 2145
+	{ id = "small ruby", chance = 10048, minCount = 1, maxCount = 5 },  -- 2147
+	{ id = "small sapphire", chance = 10013, minCount = 1, maxCount = 5 },  -- 2146
+	{ id = "small emerald", chance = 9943, minCount = 1, maxCount = 5 },  -- 2149
+	{ id = "small topaz", chance = 9829, minCount = 1, maxCount = 5 },  -- 9970
+	{ id = "assassin star", chance = 8635, minCount = 1, maxCount = 10 },  -- 7368
+	{ id = "ring of healing", chance = 2459 },  -- 2214
+	{ id = "giant sword", chance = 1998 },  -- 2393
+	{ id = "stealth ring", chance = 1407 },  -- 2165
+	{ id = "crown shield", chance = 912 },  -- 2519
+	{ id = "ice rapier", chance = 883 },  -- 2396
+	{ id = "might ring", chance = 664 },  -- 2164
+	{ id = "platinum amulet", chance = 661 },  -- 2171
+	{ id = "crusader helmet", chance = 565 },  -- 2497
+	{ id = "devil helmet", chance = 556 },  -- 2462
+	{ id = 5906, chance = 527 },  -- demon dust
+
+	{ id = "cluster of solace", chance = 473 },  -- 22396
+	{ id = "demon shield", chance = 451 },  -- 2520
+	{ id = "crown armor", chance = 273 },  -- 2487
+	{ id = "demonrage sword", chance = 86 },  -- 7382
 }
 
 monster.attacks = {

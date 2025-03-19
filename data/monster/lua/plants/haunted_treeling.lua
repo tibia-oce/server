@@ -72,17 +72,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 91920, maxCount = 95 },
-	{ id = 3139, chance = 29190 }, -- wooden trash
-	{ id = "red mushroom", chance = 7700 },
-	{ id = "health potion", chance = 5130 },
-	{ id = "white mushroom", chance = 5030, maxCount = 2 },
-	{ id = "haunted piece of wood", chance = 4950 },
-	{ id = "orange mushroom", chance = 1800 },
-	{ id = "strong health potion", chance = 1040 },
-	{ id = "dwarven ring", chance = 660 }, -- dwarven ring
-	{ id = "small emerald", chance = 620 },
-	{ id = "bullseye potion", chance = 100 },
+	{ id = "gold coin", chance = 91974, minCount = 1, maxCount = 95 },  -- 2148
+	{ id = 2250, chance = 29321 },  -- wooden trash
+	{ id = "red mushroom", chance = 7835 },  -- 2788
+	{ id = "white mushroom", chance = 5127, minCount = 1, maxCount = 2 },  -- 2787
+	{ id = "health potion", chance = 5087 },  -- 7618
+	{ id = "haunted piece of wood", chance = 5000 },  -- 10600
+	{ id = "orange mushroom", chance = 1830 },  -- 2790
+	{ id = "strong health potion", chance = 1102 },  -- 7588
+	{ id = "small emerald", chance = 660 },  -- 2149
+	{ id = "dwarven ring", chance = 613 },  -- 2213
+	{ id = "bullseye potion", chance = 103 },  -- 7443
 }
 
 monster.attacks = {

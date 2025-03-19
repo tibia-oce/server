@@ -76,7 +76,25 @@ monster.voices = {
 	chance = 10,
 }
 
-monster.loot = {}
+monster.loot = {
+	{ id = "blue gem", chance = 100000 },  -- 2158
+	{ id = "great health potion", chance = 100000, maxCount = 5 },  -- 7591
+	{ id = "great mana potion", chance = 100000, maxCount = 6 },  -- 7590
+	{ id = "moonlight crystals", chance = 100000, maxCount = 6 },  -- 24739
+	{ id = "red gem", chance = 100000 },  -- 2156
+	{ id = "small diamond", chance = 100000, maxCount = 3 },  -- 2145
+	{ id = "small ruby", chance = 100000, maxCount = 3 },  -- 2147
+	{ id = "ultimate health potion", chance = 100000 },  -- 8473
+	{ id = 24760, chance = 62500 },  -- trophy of Feroxa
+	{ id = "violet crystal shard", chance = 62500 },  -- 18414
+	{ id = "dreaded cleaver", chance = 25000 },  -- 7419
+	{ id = "platinum coin", chance = 25000, maxCount = 10 },  -- 2152
+	{ id = "red crystal fragment", chance = 25000 },  -- 18420
+	{ id = "skullcracker armor", chance = 25000 },  -- 8889
+	{ id = "wolf backpack", chance = 25000 },  -- 24740
+	{ id = "boots of haste", chance = 12500 },  -- 2195
+	{ id = "werewolf helmet", chance = 12500 },  -- 24718
+}
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = -1400, maxDamage = -1800 },

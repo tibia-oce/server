@@ -75,26 +75,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 95300, maxCount = 237 },
-	{ id = "dragon ham", chance = 79790, maxCount = 2 },
-	{ id = "green mushroom", chance = 12030 },
-	{ id = 2842, chance = 9590 }, -- gemmed book
-	{ id = "royal spear", chance = 9380, maxCount = 3 },
-	{ id = "power bolt", chance = 5920, maxCount = 7 },
-	{ id = "small sapphire", chance = 5590 },
-	{ id = "energy ring", chance = 4550 }, -- energy ring
-	{ id = "golden mug", chance = 3310 },
-	{ id = "red dragon scale", chance = 1940 },
-	{ id = "red dragon leather", chance = 1150 },
-	{ id = "strong health potion", chance = 800 },
-	{ id = "life crystal", chance = 650 },
-	{ id = "strange helmet", chance = 520 },
-	{ id = "tower shield", chance = 410 },
-	{ id = "fire sword", chance = 350 },
-	{ id = "royal helmet", chance = 260 },
-	{ id = "dragon slayer", chance = 220 },
-	{ id = 7399, chance = 130 }, -- "dragon lord trophy"
-	{ id = "dragon scale mail", chance = 90 },
+	{ id = "gold coin", chance = 95233, minCount = 1, maxCount = 246 },  -- 2148
+	{ id = "dragon ham", chance = 79833 },  -- 2672
+	{ id = "green mushroom", chance = 12185 },  -- 2796
+	{ id = 1976, chance = 9132 },  -- book (gemmed)
+	{ id = "royal spear", chance = 9124, minCount = 1, maxCount = 3 },  -- 7378
+	{ id = "power bolt", chance = 6512, minCount = 1, maxCount = 7 },  -- 2547
+	{ id = "energy ring", chance = 5045 },  -- 2167
+	{ id = "small sapphire", chance = 4921 },  -- 2146
+	{ id = "golden mug", chance = 3070 },  -- 2033
+	{ id = "red dragon scale", chance = 1998 },  -- 5882
+	{ id = "red dragon leather", chance = 1036 },  -- 5948
+	{ id = "strong health potion", chance = 991 },  -- 7588
+	{ id = "life crystal", chance = 632 },  -- 2177
+	{ id = "strange helmet", chance = 371 },  -- 2479
+	{ id = "fire sword", chance = 290 },  -- 2392
+	{ id = "tower shield", chance = 276 },  -- 2528
+	{ id = "royal helmet", chance = 234 },  -- 2498
+	{ id = "dragon scale mail", chance = 143 },  -- 2492
+	{ id = "dragon slayer", chance = 104 },  -- 7402
+	{ id = 7399, chance = 89 },  -- dragon lord trophy
 }
 
 monster.attacks = {

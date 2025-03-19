@@ -71,8 +71,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3135, chance = 15220, maxCount = 96 }, -- wooden trash
-	{ id = "dry piece of wood", chance = 100000 },
+	{ id = "dry piece of wood", chance = 100000 },  -- 12969
+	{ id = 2250, chance = 14818 },  -- wooden trash
 }
 
 monster.attacks = {

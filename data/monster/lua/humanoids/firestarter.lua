@@ -73,16 +73,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 79000, maxCount = 35 },
-	{ id = "longsword", chance = 6000 },
-	{ id = "bow", chance = 4000 },
-	{ id = "grapes", chance = 20000 },
-	{ id = "heaven blossom", chance = 930 }, -- heaven blossom
-	{ id = "elvish bow", chance = 100 },
-	{ id = "flaming arrow", chance = 30000, maxCount = 12 },
-	{ id = "elvish talisman", chance = 5000 },
-	{ id = "coal", chance = 15280 }, -- coal
-	{ id = "flintstone", chance = 340 },
+	{ id = "gold coin", chance = 78325, minCount = 1, maxCount = 35 },  -- 2148
+	{ id = "flaming arrow", chance = 29480, minCount = 1, maxCount = 12 },  -- 7840
+	{ id = "grapes", chance = 19925 },  -- 2681
+	{ id = 13757, chance = 15286 },  -- coal
+	{ id = "longsword", chance = 6020 },  -- 2397
+	{ id = "elvish talisman", chance = 5016 },  -- 10552
+	{ id = "bow", chance = 3886 },  -- 2456
+	{ id = 5921, chance = 911 },  -- heaven blossom
+	{ id = "flintstone", chance = 358 },  -- 13943
+	{ id = "elvish bow", chance = 108 },  -- 7438
 }
 
 monster.attacks = {
