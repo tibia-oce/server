@@ -65,15 +65,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3274, chance = 12860 }, -- axe
-	{ id = 3031, chance = 100000, maxCount = 4 }, -- gold coin
-	{ id = "hatchet", chance = 25710 }, -- hatchet
-	{ id = 3559, chance = 8570 }, -- leather legs
-	{ id = "letter", chance = 4290 }, -- letter
-	{ id = 3456, chance = 8570 }, -- pick
-	{ id = 3410, chance = 17140 }, -- plate shield
-	{ id = "studded armor", chance = 8570 }, -- studded armor
-	{ id = "white mushroom", chance = 47140 }, -- white mushroom
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 4 },  -- 2148
+	{ id = "white mushroom", chance = 39344 },  -- 2787
+	{ id = "hatchet", chance = 22951 },  -- 2388
+	{ id = "axe", chance = 19672 },  -- 2386
+	{ id = 2553, chance = 13115 },  -- pick
+	{ id = "leather legs", chance = 11475 },  -- 2649
+	{ id = 2597, chance = 9836 },  -- letter
+	{ id = "studded armor", chance = 6557 },  -- 2484
+	{ id = "plate shield", chance = 4918 },  -- 2510
 }
 
 monster.attacks = {

@@ -69,24 +69,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "platinum coin", chance = 78000, maxCount = 4 },
-	{ id = "quara eye", chance = 20160 },
-	{ id = "mind stone", chance = 10710 },
-	{ id = "shrimp", chance = 7140, maxCount = 4 },
-	{ id = "small topaz", chance = 6800, maxCount = 2 },
-	{ id = "small emerald", chance = 6450, maxCount = 2 },
-	{ id = "great mana potion", chance = 5880, maxCount = 2 },
-	{ id = "spirit cloak", chance = 5650 },
-	{ id = "great health potion", chance = 4950, maxCount = 2 },
-	{ id = "yellow piece of cloth", chance = 3230 },
-	{ id = "green crystal shard", chance = 3000 },
-	{ id = "green piece of cloth", chance = 2880 },
-	{ id = "life ring", chance = 2190 }, -- life ring
-	{ id = "fish fin", chance = 1380 },
-	{ id = 281, chance = 1150 }, -- giant shimmering pearl (green)
-	{ id = "wand of cosmic energy", chance = 1150 },
-	{ id = "green gem", chance = 460 },
-	{ id = "knight armor", chance = 460 },
+	{ id = "platinum coin", chance = 80268, minCount = 1, maxCount = 4 },  -- 2152
+	{ id = "quara eye", chance = 18463 },  -- 12444
+	{ id = "mind stone", chance = 10467 },  -- 2178
+	{ id = "shrimp", chance = 7207 },  -- 2670
+	{ id = "small emerald", chance = 7207, minCount = 1, maxCount = 2 },  -- 2149
+	{ id = "small topaz", chance = 6383, minCount = 1, maxCount = 2 },  -- 9970
+	{ id = "great mana potion", chance = 5491, minCount = 1, maxCount = 2 },  -- 7590
+	{ id = "great health potion", chance = 5079, minCount = 1, maxCount = 2 },  -- 7591
+	{ id = "spirit cloak", chance = 4976 },  -- 8870
+	{ id = "green crystal shard", chance = 2986 },  -- 18415
+	{ id = "green piece of cloth", chance = 2951 },  -- 5910
+	{ id = "yellow piece of cloth", chance = 2505 },  -- 5914
+	{ id = "life ring", chance = 1887 },  -- 2168
+	{ id = "fish fin", chance = 1407 },  -- 5895
+	{ id = "giant shimmering pearl", chance = 1270 },
+	{ id = "wand of cosmic energy", chance = 927 },  -- 2189
+	{ id = "knight armor", chance = 686 },  -- 2476
+	{ id = "green gem", chance = 446 },  -- 2155
+	{ id = 7632, chance = 34 },  -- giant shimmering pearl
 }
 
 monster.attacks = {

@@ -66,21 +66,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small ruby", chance = 23280, maxCount = 5 },
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "platinum coin", chance = 45000, maxCount = 6 },
-	{ id = "violet gem", chance = 1120 },
-	{ id = 6299, chance = 4480 }, -- death ring
-	{ id = "titan axe", chance = 1440 },
-	{ id = "great mana potion", chance = 20400, maxCount = 2 },
-	{ id = 281, chance = 3040 }, -- giant shimmering pearl (green)
-	{ id = "ultimate health potion", chance = 9250, maxCount = 2 },
-	{ id = "spidris mandible", chance = 27440 },
-	{ id = "compound eye", chance = 13210 },
-	{ id = "calopteryx cape", chance = 1280 },
-	{ id = "carapace shield", chance = 1170 },
-	{ id = "hive scythe", chance = 1390 },
+	{ id = "gold coin", chance = 96394, minCount = 1, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 43181, minCount = 1, maxCount = 6 },  -- 2152
+	{ id = "spidris mandible", chance = 29141 },  -- 15485
+	{ id = "small ruby", chance = 23550, minCount = 1, maxCount = 5 },  -- 2147
+	{ id = "great mana potion", chance = 21529 },  -- 7590
+	{ id = "compound eye", chance = 13552 },  -- 15486
+	{ id = "ultimate health potion", chance = 11374 },  -- 8473
+	{ id = 6300, chance = 4546 },  -- death ring
+	{ id = "giant shimmering pearl", chance = 2926 },
+	{ id = "calopteryx cape", chance = 1428 },  -- 15489
+	{ id = "hive scythe", chance = 1324 },  -- 15492
+	{ id = "titan axe", chance = 1167 },  -- 7413
+	{ id = "violet gem", chance = 1115 },  -- 2153
+	{ id = "carapace shield", chance = 993 },  -- 15491
 }
 
 monster.attacks = {

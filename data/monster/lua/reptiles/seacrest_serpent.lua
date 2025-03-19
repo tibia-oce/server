@@ -71,26 +71,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "dragon ham", chance = 13040 }, -- dragon ham
-	{ id = 21801, chance = 12040 }, -- seacrest hair
-	{ id = 762, chance = 7020, maxCount = 17 }, -- shiver arrow
-	{ id = "glacier mask", chance = 2680 }, -- glacier mask
-	{ id = 21892, chance = 400 }, -- crest of the deep seas
-	{ id = 3035, chance = 100000, maxCount = 5 }, -- platinum coin
-	{ id = 236, chance = 7020, maxCount = 2 }, -- strong health potion
-	{ id = 237, chance = 10370, maxCount = 2 }, -- strong mana potion
-	{ id = 21747, chance = 10030 }, -- seacrest pearl
-	{ id = 3026, chance = 3680, maxCount = 2 }, -- white pearl
-	{ id = 3027, chance = 2340, maxCount = 3 }, -- black pearl
-	{ id = 281, chance = 1000 }, -- giant shimmering pearl (green)
-	{ id = 5944, chance = 3340 }, -- soul orb
-	{ id = 3028, chance = 5020, maxCount = 3 }, -- small diamond
-	{ id = "seacrest scale", chance = 17390 }, -- seacrest scale
-	{ id = 815, chance = 670 }, -- glacier amulet
-	{ id = 823, chance = 3680 }, -- glacier kilt
-	{ id = 819, chance = 3010 }, -- glacier shoes
-	{ id = 16096, chance = 670 }, -- wand of defiance
-	{ id = 8093, chance = 670 }, -- wand of draconia
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 5 },  -- 2152
+	{ id = "seacrest scale", chance = 16664 },  -- 24169
+	{ id = "dragon ham", chance = 14079 },  -- 2672
+	{ id = "seacrest hair", chance = 11353 },  -- 24170
+	{ id = "shiver arrow", chance = 8207, minCount = 1, maxCount = 19 },  -- 7839
+	{ id = "strong mana potion", chance = 7927, minCount = 1, maxCount = 2 },  -- 7589
+	{ id = "strong health potion", chance = 7647, minCount = 1, maxCount = 2 },  -- 7588
+	{ id = "seacrest pearl", chance = 6743 },  -- 24116
+	{ id = "small diamond", chance = 4205, minCount = 1, maxCount = 3 },  -- 2145
+	{ id = "soul orb", chance = 3317 },  -- 5944
+	{ id = "black pearl", chance = 2056, minCount = 1, maxCount = 3 },  -- 2144
+	{ id = "glacier kilt", chance = 2056 },  -- 7896
+	{ id = "glacier mask", chance = 2040 },  -- 7902
+	{ id = "white pearl", chance = 1947, minCount = 1, maxCount = 2 },  -- 2143
+	{ id = "glacier shoes", chance = 1931 },  -- 7892
+	{ id = "giant shimmering pearl", chance = 1635 },
+	{ id = "glacier amulet", chance = 1028 },  -- 7888
+	{ id = "crest of the deep seas", chance = 1012 },  -- 24261
+	{ id = "wand of draconia", chance = 934 },  -- 8921
+	{ id = "wand of defiance", chance = 234 },  -- 18390
 }
 
 monster.attacks = {

@@ -71,30 +71,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 197 },
-	{ id = "platinum coin", chance = 100000, maxCount = 5 },
-	{ id = "amulet of loss", chance = 120 },
-	{ id = "gold ring", chance = 1870 },
-	{ id = "hailstorm rod", chance = 10000 },
-	{ id = "garlic necklace", chance = 2050 },
-	{ id = "blank rune", chance = 26250, maxCount = 2 },
-	{ id = "golden sickle", chance = 350 },
-	{ id = "skull staff", chance = 1520 },
-	{ id = "scythe", chance = 3000 },
-	{ id = "bunch of wheat", chance = 50000 },
-	{ id = "soul orb", chance = 23720 },
-	{ id = 6299, chance = 1410 }, -- death ring
-	{ id = "demonic essence", chance = 28000 },
-	{ id = "assassin star", chance = 5900, maxCount = 10 },
-	{ id = "great mana potion", chance = 31360, maxCount = 3 },
-	{ id = 281, chance = 4450 }, -- giant shimmering pearl (green)
-	{ id = 282, chance = 4450 }, -- giant shimmering pearl (brown)
-	{ id = "seeds", chance = 4300 },
-	{ id = "terra mantle", chance = 1050 },
-	{ id = "terra legs", chance = 2500 },
-	{ id = "ultimate health potion", chance = 14720, maxCount = 2 },
-	{ id = "gold ingot", chance = 5270 },
-	{ id = "bundle of cursed straw", chance = 15000 },
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 199 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 5 },  -- 2152
+	{ id = "bunch of wheat", chance = 49772, minCount = 1, maxCount = 2 },  -- 2694
+	{ id = "great mana potion", chance = 30191, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "demonic essence", chance = 29986 },  -- 6500
+	{ id = "soul orb", chance = 25826 },  -- 5944
+	{ id = "blank rune", chance = 25519, minCount = 1, maxCount = 2 },  -- 2260
+	{ id = "bundle of cursed straw", chance = 14919 },  -- 10605
+	{ id = "ultimate health potion", chance = 14593, minCount = 1, maxCount = 2 },  -- 8473
+	{ id = "hailstorm rod", chance = 9642 },  -- 2183
+	{ id = "assassin star", chance = 7082, minCount = 1, maxCount = 10 },  -- 7368
+	{ id = "gold ingot", chance = 5361 },  -- 9971
+	{ id = "giant shimmering pearl", chance = 4597 },
+	{ id = "seeds", chance = 3741 },  -- 7732
+	{ id = "scythe", chance = 2987 },  -- 2550
+	{ id = "terra legs", chance = 2634 },  -- 7885
+	{ id = "garlic necklace", chance = 2010 },  -- 2199
+	{ id = "skull staff", chance = 1796 },  -- 2436
+	{ id = "gold ring", chance = 1424 },  -- 2179
+	{ id = 6300, chance = 1349 },  -- death ring
+	{ id = "terra mantle", chance = 1284 },  -- 7884
+	{ id = "amulet of loss", chance = 158 },  -- 2173
+	{ id = "golden sickle", chance = 140 },  -- 2418
 }
 
 monster.attacks = {

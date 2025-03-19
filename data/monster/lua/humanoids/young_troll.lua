@@ -67,9 +67,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3003, chance = 10000 }, -- rope
-	{ id = "gold coin", chance = 58000, maxCount = 12 },
-	{ id = "meat", chance = 14000 },
+	{ id = "gold coin", chance = 64095, minCount = 1, maxCount = 5 },  -- 2148
+	{ id = "meat", chance = 25816 },  -- 2666
+	{ id = 2120, chance = 7418 },  -- rope
+	{ id = "spear", chance = 6528 },  -- 2389
+	{ id = "leather helmet", chance = 5638 },  -- 2461
+	{ id = "leather boots", chance = 5341 },  -- 2643
+	{ id = 2512, chance = 4451 },  -- wooden shield
+	{ id = "bunch of troll hair", chance = 1187 },  -- 10606
 }
 
 monster.attacks = {

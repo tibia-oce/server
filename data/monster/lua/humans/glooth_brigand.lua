@@ -69,30 +69,33 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
-	{ id = 3035, chance = 100000, maxCount = 3 }, -- platinum coin
-	{ id = 21203, chance = 9090 }, -- glooth bag
-	{ id = 21816, chance = 7692 }, -- tainted glooth capsule
-	{ id = 238, chance = 5882 }, -- great mana potion
-	{ id = "glooth sandwich", chance = 4000 }, -- glooth sandwich
-	{ id = 21814, chance = 3030 }, -- glooth capsule
-	{ id = 7642, chance = 2500 }, -- great spirit potion
-	{ id = 21146, chance = 2000 }, -- glooth steak
-	{ id = 7643, chance = 2000 }, -- ultimate health potion
-	{ id = 21178, chance = 1515 }, -- glooth club
-	{ id = 21183, chance = 1515 }, -- glooth amulet
-	{ id = 7386, chance = 1000 }, -- mercenary sword
-	{ id = "terra mantle", chance = 1000 }, -- terra mantle
-	{ id = 281, chance = 1000 }, -- giant shimmering pearl (green)
-	{ id = 814, chance = 1000 }, -- terra amulet
-	{ id = 7412, chance = 1000 }, -- butcher's axe
-	{ id = 3038, chance = 1000 }, -- green gem
-	{ id = 813, chance = 502 }, -- terra boots
-	{ id = "dreaded cleaver", chance = 502 }, -- dreaded cleaver
-	{ id = 21167, chance = 502 }, -- heat core
-	{ id = 21158, chance = 502 }, -- glooth spear
-	{ id = 21165, chance = 502 }, -- rubber cap
-	{ id = 830, chance = 502 }, -- terra hood
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "platinum coin", chance = 79916, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "glooth bag", chance = 9807, minCount = 1, maxCount = 2 },  -- 23574
+	{ id = "tainted glooth capsule", chance = 8032 },  -- 24185
+	{ id = "great spirit potion", chance = 3547 },  -- 8472
+	{ id = "great mana potion", chance = 3486 },  -- 7590
+	{ id = "ultimate health potion", chance = 3446 },  -- 8473
+	{ id = "glooth capsule", chance = 3112 },  -- 24183
+	{ id = "glooth steak", chance = 2499 },  -- 23517
+	{ id = "glooth sandwich", chance = 2483 },  -- 23514
+	{ id = "giant shimmering pearl", chance = 1495 },
+	{ id = "glooth club", chance = 1003 },  -- 23549
+	{ id = "glooth spear", chance = 999 },  -- 23529
+	{ id = "glooth blade", chance = 997 },  -- 23550
+	{ id = "glooth axe", chance = 985 },  -- 23551
+	{ id = "glooth amulet", chance = 971 },  -- 23554
+	{ id = "terra hood", chance = 703 },  -- 7903
+	{ id = "rubber cap", chance = 637 },  -- 23536
+	{ id = "terra mantle", chance = 600 },  -- 7884
+	{ id = "terra legs", chance = 498 },  -- 7885
+	{ id = "terra boots", chance = 485 },  -- 7886
+	{ id = "terra amulet", chance = 398 },  -- 7887
+	{ id = "green gem", chance = 200 },  -- 2155
+	{ id = "heat core", chance = 155 },  -- 23538
+	{ id = "mercenary sword", chance = 147 },  -- 7386
+	{ id = "dreaded cleaver", chance = 101 },  -- 7419
+	{ id = "butcher's axe", chance = 53 },  -- 7412
 }
 
 monster.attacks = {
