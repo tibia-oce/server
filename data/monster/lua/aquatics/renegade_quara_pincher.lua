@@ -69,25 +69,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "platinum coin", chance = 80000, maxCount = 5 },
-	{ id = "quara pincers", chance = 18800, maxCount = 1 },
-	{ id = "great mana potion", chance = 9720, maxCount = 2 },
-	{ id = "great health potion", chance = 9010, maxCount = 2 },
-	{ id = "small ruby", chance = 9010, maxCount = 2 },
-	{ id = "small diamond", chance = 7060, maxCount = 2 },
-	{ id = "mind stone", chance = 6140 },
-	{ id = "red gem", chance = 5120 }, -- red gem
-	{ id = "shrimp", chance = 4810, maxCount = 5 },
-	{ id = "vortex bolt", chance = 3790, maxCount = 5 },
-	{ id = 281, chance = 1430 }, -- giant shimmering pearl (green)
-	{ id = "warrior helmet", chance = 1430 },
-	{ id = "fish fin", chance = 920 },
-	{ id = "crown armor", chance = 611 },
-	{ id = 3053, chance = 410 }, -- time ring
-	{ id = "talon", chance = 310 },
-	{ id = "glacier robe", chance = 200 },
-	{ id = "giant shrimp", chance = 100 },
-	{ id = "twiceslicer", chance = 100 },
+	{ id = "platinum coin", chance = 80459, minCount = 1, maxCount = 5 },  -- 2152
+	{ id = "quara pincers", chance = 18615 },  -- 12446
+	{ id = "great mana potion", chance = 10456, minCount = 1, maxCount = 2 },  -- 7590
+	{ id = "great health potion", chance = 9393, minCount = 1, maxCount = 2 },  -- 7591
+	{ id = "small ruby", chance = 7885, minCount = 1, maxCount = 2 },  -- 2147
+	{ id = "small diamond", chance = 7645, minCount = 1, maxCount = 2 },  -- 2145
+	{ id = "mind stone", chance = 6582 },  -- 2178
+	{ id = "red gem", chance = 5039 },  -- 2156
+	{ id = "shrimp", chance = 5039 },  -- 2670
+	{ id = "vortex bolt", chance = 3840, minCount = 1, maxCount = 5 },  -- 15649
+	{ id = "giant shimmering pearl", chance = 1748 },  -- 7632
+	{ id = "warrior helmet", chance = 1543 },  -- 2475
+	{ id = "fish fin", chance = 1440 },  -- 5895
+	{ id = 2169, chance = 549 },  -- time ring
+	{ id = "crown armor", chance = 411 },  -- 2487
+	{ id = "talon", chance = 309 },  -- 2151
+	{ id = "glacier robe", chance = 206 },  -- 7897
+	{ id = "giant shrimp", chance = 103 },  -- 13305
+	{ id = "twiceslicer", chance = 34 },  -- 12613
 }
 
 monster.attacks = {

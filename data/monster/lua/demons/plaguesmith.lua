@@ -73,34 +73,33 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "emerald bangle", chance = 341 },
-	{ id = "silver brooch", chance = 2000 },
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 40000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 65 },
-	{ id = "small amethyst", chance = 5000, maxCount = 3 },
-	{ id = "platinum coin", chance = 7142, maxCount = 2 },
-	{ id = "axe ring", chance = 4347 }, -- axe ring
-	{ id = "club ring", chance = 4761 }, -- club ring
-	{ id = "piece of iron", chance = 20000 },
-	{ id = "mouldy cheese", chance = 50000 },
-	{ id = "dirty cape", chance = 60000 }, -- dirty cape
-	{ id = "two handed sword", chance = 20000 },
-	{ id = "war hammer", chance = 2127 },
-	{ id = "morning star", chance = 29000 },
-	{ id = "battle hammer", chance = 20000 },
-	{ id = "hammer of wrath", chance = 952 },
-	{ id = "knight legs", chance = 6250 },
-	{ id = "steel shield", chance = 20000 },
-	{ id = "steel boots", chance = 1123 },
-	{ id = "piece of royal steel", chance = 1234 },
-	{ id = "piece of hell steel", chance = 1010 },
-	{ id = "piece of draconian steel", chance = 1030 },
-	{ id = "soul orb", chance = 11111 },
-	{ id = "demonic essence", chance = 9033 },
-	{ id = "onyx arrow", chance = 7692, maxCount = 4 },
-	{ id = "great health potion", chance = 10000 },
-	{ id = 8896, chance = 540 }, -- slightly rusted armor
+	{ id = "gold coin", chance = 99731, minCount = 1, maxCount = 287 },  -- 2148
+	{ id = "dirty cape", chance = 59855, minCount = 1, maxCount = 2 },  -- 2237
+	{ id = "mouldy cheese", chance = 49515, minCount = 1, maxCount = 2 },  -- 2235
+	{ id = "morning star", chance = 29590 },  -- 2394
+	{ id = "two handed sword", chance = 20090 },  -- 2377
+	{ id = "piece of iron", chance = 20052, minCount = 1, maxCount = 2 },  -- 2225
+	{ id = "battle hammer", chance = 20046 },  -- 2417
+	{ id = "steel shield", chance = 19932 },  -- 2509
+	{ id = "soul orb", chance = 12114 },  -- 5944
+	{ id = "great health potion", chance = 9843 },  -- 7591
+	{ id = "demonic essence", chance = 8966 },  -- 6500
+	{ id = "platinum coin", chance = 8102, minCount = 1, maxCount = 2 },  -- 2152
+	{ id = "onyx arrow", chance = 8031, minCount = 1, maxCount = 4 },  -- 7365
+	{ id = 9808, chance = 7972 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = "knight legs", chance = 6917 },  -- 2477
+	{ id = "club ring", chance = 5093 },  -- 2209
+	{ id = "small amethyst", chance = 4948, minCount = 1, maxCount = 3 },  -- 2150
+	{ id = "axe ring", chance = 4855 },  -- 2208
+	{ id = "silver brooch", chance = 2022 },  -- 2134
+	{ id = "war hammer", chance = 2015 },  -- 2391
+	{ id = "steel boots", chance = 1213 },  -- 2645
+	{ id = "piece of royal steel", chance = 981 },  -- 5887
+	{ id = "piece of hell steel", chance = 975 },  -- 5888
+	{ id = "piece of draconian steel", chance = 969 },  -- 5889
+	{ id = "hammer of wrath", chance = 846 },  -- 2444
+	{ id = "emerald bangle", chance = 373 },  -- 2127
+	{ id = "war horn", chance = 102 },  -- 2079
 }
 
 monster.attacks = {

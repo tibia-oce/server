@@ -82,31 +82,31 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 6499, chance = 100000 }, -- demonic essence
-	{ id = 3031, chance = 100000, maxCount = 194 }, -- gold coin
-	{ id = 8899, chance = 54000 }, -- slightly rusted legs
-	{ id = 8896, chance = 45000 }, -- slightly rusted armor
-	{ id = 238, chance = 27000 }, -- great mana potion
-	{ id = 7642, chance = 26000 }, -- great spirit potion
-	{ id = "great health potion", chance = 23000 }, -- great health potion
-	{ id = "ultimate health potion", chance = 22000 }, -- ultimate health potion
-	{ id = 9058, chance = 21000 }, -- gold ingot
-	{ id = 3035, chance = 21000, maxCount = 30 }, -- platinum coin
-	{ id = 6104, chance = 21000 }, -- jewel case
-	{ id = 5944, chance = 21000, maxCount = 10 }, -- soul orb
-	{ id = 3034, chance = 18000, maxCount = 30 }, -- talon
-	{ id = 5911, chance = 17000, maxCount = 10 }, -- red piece of cloth
-	{ id = 3017, chance = 17000 }, -- silver brooch
-	{ id = 5912, chance = 15000, maxCount = 10 }, -- blue piece of cloth
-	{ id = 5909, chance = 15000, maxCount = 10 }, -- white piece of cloth
-	{ id = "green piece of cloth", chance = 14000, maxCount = 10 }, -- green piece of cloth
-	{ id = 5914, chance = 14000, maxCount = 10 }, -- yellow piece of cloth
-	{ id = 5913, chance = 12000, maxCount = 10 }, -- brown piece of cloth
-	{ id = 5954, chance = 9700, maxCount = 2 }, -- demon horn
-	{ id = 3079, chance = 8700 }, -- boots of haste
-	{ id = 3057, chance = 6000 }, -- amulet of loss
-	{ id = 3554, chance = 4500 }, -- steel boots
-	{ id = 3555, chance = 1500 }, -- golden boots
+	{ id = "demonic essence", chance = 100000 },  -- 6500
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 195 },  -- 2148
+	{ id = 9811, chance = 52174 },  -- rusty legs (todo: slightly rusted does not exist in items.xml)
+	{ id = 9808, chance = 47826 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = "great mana potion", chance = 25725 },  -- 7590
+	{ id = "great spirit potion", chance = 25580 },  -- 8472
+	{ id = "great health potion", chance = 24783 },  -- 7591
+	{ id = "ultimate health potion", chance = 23913 },  -- 8473
+	{ id = "platinum coin", chance = 21232, minCount = 1, maxCount = 30 },  -- 2152
+	{ id = "soul orb", chance = 20725, minCount = 1, maxCount = 10 },  -- 5944
+	{ id = 6104, chance = 20507 },  -- jewel case
+	{ id = "gold ingot", chance = 20217 },  -- 9971
+	{ id = "silver brooch", chance = 19855 },  -- 2134
+	{ id = "talon", chance = 18768, minCount = 1, maxCount = 30 },  -- 2151
+	{ id = "red piece of cloth", chance = 17391, minCount = 1, maxCount = 10 },  -- 5911
+	{ id = "blue piece of cloth", chance = 15652, minCount = 1, maxCount = 10 },  -- 5912
+	{ id = "white piece of cloth", chance = 14928, minCount = 1, maxCount = 10 },  -- 5909
+	{ id = "brown piece of cloth", chance = 14275, minCount = 1, maxCount = 10 },  -- 5913
+	{ id = "green piece of cloth", chance = 13913, minCount = 1, maxCount = 10 },  -- 5910
+	{ id = "yellow piece of cloth", chance = 13623, minCount = 1, maxCount = 10 },  -- 5914
+	{ id = "demon horn", chance = 9348, minCount = 1, maxCount = 2 },  -- 5954
+	{ id = "boots of haste", chance = 8913 },  -- 2195
+	{ id = "steel boots", chance = 4928 },  -- 2645
+	{ id = "amulet of loss", chance = 4855 },  -- 2173
+	{ id = "golden boots", chance = 1304 },  -- 2646
 }
 
 monster.attacks = {

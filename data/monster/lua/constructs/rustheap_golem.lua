@@ -72,23 +72,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 953, chance = 1950 }, -- nail
-	{ id = 9016, chance = 5860 }, -- flask of rust remover
-	{ id = 21196, chance = 14980 }, -- necromantic rust
-	{ id = 3031, chance = 100000, maxCount = 290 }, -- gold coin
-	{ id = 5880, chance = 330 }, -- iron ore
-	{ id = "bronze gear wheel", chance = 1950 }, -- bronze gear wheel
-	{ id = 3035, chance = 58310, maxCount = 3 }, -- platinum coin
-	{ id = 3026, chance = 1300 }, -- white pearl
-	{ id = 3027, chance = 1630 }, -- black pearl
-	{ id = 236, chance = 10100, maxCount = 2 }, -- strong health potion
-	{ id = "strong mana potion", chance = 7170, maxCount = 2 }, -- strong mana potion
-	{ id = 3279, chance = 3580 }, -- war hammer
-	{ id = 7452, chance = 330 }, -- spiked squelcher
-	{ id = 21171, chance = 330 }, -- metal bat
-	{ id = "gearwheel chain", chance = 2930 }, -- gearwheel chain
-	{ id = 8896, chance = 5860 }, -- slightly rusted armor
-	{ id = 8899, chance = 4230 }, -- slightly rusted legs
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 300 },  -- 2148
+	{ id = "platinum coin", chance = 59993, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "necromantic rust", chance = 17038 },  -- 23567
+	{ id = "strong mana potion", chance = 7504, minCount = 1, maxCount = 2 },  -- 7589
+	{ id = "strong health potion", chance = 7472, minCount = 1, maxCount = 2 },  -- 7588
+	{ id = "flask of rust remover", chance = 5051 },  -- 9930
+	{ id = "gearwheel chain", chance = 3537 },  -- 23541
+	{ id = 9808, chance = 3461 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = 9811, chance = 3459 },  -- rusty legs (todo: slightly rusted does not exist in items.xml)
+	{ id = "bronze gear wheel", chance = 3023 },  -- 24124
+	{ id = "nail", chance = 2950 },  -- 8309
+	{ id = "war hammer", chance = 2515 },  -- 2391
+	{ id = "black pearl", chance = 1990 },  -- 2144
+	{ id = "white pearl", chance = 1970 },  -- 2143
+	{ id = "iron ore", chance = 1455 },  -- 5880
+	{ id = "metal bat", chance = 909 },  -- 23542
+	{ id = "spiked squelcher", chance = 509 },  -- 7452
 }
 
 monster.attacks = {

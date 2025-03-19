@@ -68,24 +68,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3035, chance = 100000 }, -- platinum coin
-	{ id = 3035, chance = 100000, maxCount = 13 }, -- platinum coin
-	{ id = 239, chance = 75810 }, -- great health potion
-	{ id = 10304, chance = 100000 }, -- hellspawn tail
-	{ id = 7368, chance = 19350, maxCount = 5 }, -- assassin star
-	{ id = "ultimate health potion", chance = 77420 }, -- ultimate health potion
-	{ id = 6499, chance = 35480 }, -- demonic essence
-	{ id = "red mushroom", chance = 67740, maxCount = 2 }, -- red mushroom
-	{ id = 9057, chance = 43550, maxCount = 4 }, -- small topaz
-	{ id = 3371, chance = 67740 }, -- knight legs
-	{ id = 3369, chance = 20970 }, -- warrior helmet
-	{ id = 7452, chance = 6450 }, -- spiked squelcher
-	{ id = 7439, chance = 37100 }, -- berserk potion
-	{ id = 9056, chance = 20970 }, -- black skull
-	{ id = 9034, chance = 1610 }, -- dracoyle statue
-	{ id = 7421, chance = 3230 }, -- onyx flail
-	{ id = 12311, chance = 4840 }, -- carrot on a stick
-	{ id = "crown shield", chance = 29030 }, -- crown shield
+	{ id = "hellspawn tail", chance = 100000 },  -- 11221
+	{ id = "platinum coin", chance = 98750, minCount = 2, maxCount = 14 },  -- 2152
+	{ id = "ultimate health potion", chance = 78750 },  -- 8473
+	{ id = "great health potion", chance = 75000 },  -- 7591
+	{ id = "red mushroom", chance = 67500, minCount = 1, maxCount = 2 },  -- 2788
+	{ id = "knight legs", chance = 60000 },  -- 2477
+	{ id = "small topaz", chance = 43750, minCount = 1, maxCount = 4 },  -- 9970
+	{ id = "demonic essence", chance = 36250 },  -- 6500
+	{ id = "berserk potion", chance = 32500 },  -- 7439
+	{ id = "crown shield", chance = 27500 },  -- 2519
+	{ id = "assassin star", chance = 23750, minCount = 1, maxCount = 5 },  -- 7368
+	{ id = "black skull", chance = 20000 },  -- 9969
+	{ id = "warrior helmet", chance = 20000 },  -- 2475
+	{ id = "carrot on a stick", chance = 6250 },  -- 13298
+	{ id = "spiked squelcher", chance = 5000 },  -- 7452
+	{ id = "onyx flail", chance = 3750 },  -- 7421
+	{ id = 9948, chance = 1250 },  -- dracoyle statue
 }
 
 monster.attacks = {

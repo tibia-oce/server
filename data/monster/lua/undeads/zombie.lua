@@ -72,16 +72,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 82000, maxCount = 65 },
-	{ id = 2381, chance = 3750 },
-	{ id = "mace", chance = 7250 },
-	{ id = "battle hammer", chance = 7000 },
-	{ id = "steel helmet", chance = 4600 },
-	{ id = "brass helmet", chance = 9400 },
-	{ id = "simple dress", chance = 560 },
-	{ id = "mana potion", chance = 740 },
-	{ id = 8894, chance = 5680 }, -- heavily rusted armor
-	{ id = "half-eaten brain", chance = 10000 },
+	{ id = "gold coin", chance = 82099, minCount = 1, maxCount = 65 },  -- 2148
+	{ id = "half-eaten brain", chance = 10290 },  -- 10576
+	{ id = "brass helmet", chance = 9783 },  -- 2460
+	{ id = "mace", chance = 7979 },  -- 2398
+	{ id = "battle hammer", chance = 6869 },  -- 2417
+	{ id = 9808, chance = 5851 },  -- rusty armor (todo: heavily rusted does not exist in items.xml)
+	{ id = "steel helmet", chance = 4808 },  -- 2457
+	{ id = 2381, chance = 3784 },  -- halberd
+	{ id = "life ring", chance = 933 },  -- 2168
+	{ id = "mana potion", chance = 727 },  -- 7620
+	{ id = "simple dress", chance = 502 },  -- 2657
 }
 
 monster.attacks = {

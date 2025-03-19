@@ -72,19 +72,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "platinum coin", chance = 80120 },
-	{ id = "gold coin", chance = 75110, maxCount = 60 },
-	{ id = "spellsinger's seal", chance = 15185 },
-	{ id = "deepling filet", chance = 14995 },
-	{ id = "key to the drowned library", chance = 10740 },
-	{ id = "fish", chance = 3448 }, -- fish
-	{ id = "small sapphire", chance = 2934 },
-	{ id = "eye of a deepling", chance = 2540 },
-	{ id = "life ring", chance = 2459 }, -- life ring
-	{ id = "deepling staff", chance = 2020 },
-	{ id = "necklace of the deep", chance = 790 },
-	{ id = "fish fin", chance = 520 },
-	{ id = "ornate crossbow", chance = 220 },
+	{ id = "platinum coin", chance = 80030 },  -- 2152
+	{ id = "gold coin", chance = 75137, minCount = 1, maxCount = 60 },  -- 2148
+	{ id = "spellsinger's seal", chance = 15240 },  -- 15421
+	{ id = "deepling filet", chance = 14914 },  -- 15488
+	-- { id = 15422, chance = 10719 },  -- key to the drowned library
+	{ id = "fish", chance = 3506 },  -- 2667
+	{ id = "small sapphire", chance = 2958 },  -- 2146
+	{ id = "eye of a deepling", chance = 2516 },  -- 13870
+	{ id = "life ring", chance = 2460 },  -- 2168
+	{ id = "deepling staff", chance = 2001 },  -- 15400
+	{ id = "necklace of the deep", chance = 763 },  -- 15403
+	{ id = "fish fin", chance = 506 },  -- 5895
+	{ id = "ornate crossbow", chance = 209 },  -- 15644
 }
 
 monster.attacks = {

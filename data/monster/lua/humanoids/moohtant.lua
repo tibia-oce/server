@@ -66,24 +66,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 195 }, -- gold coin
-	{ id = 3035, chance = 58160, maxCount = 2 }, -- platinum coin
-	{ id = "moohtant horn", chance = 2740, maxCount = 2 }, -- moohtant horn
-	{ id = 21199, chance = 1770 }, -- giant pacifier
-	{ id = 239, chance = 7380, maxCount = 3 }, -- great health potion
-	{ id = 238, chance = 7230, maxCount = 3 }, -- great mana potion
-	{ id = 3577, chance = 6520 }, -- meat
-	{ id = 3030, chance = 4680, maxCount = 2 }, -- small ruby
-	{ id = "minotaur leather", chance = 4110 }, -- minotaur leather
-	{ id = 3028, chance = 4400, maxCount = 2 }, -- small diamond
-	{ id = 3098, chance = 2410 }, -- ring of healing
-	{ id = 5911, chance = 900 }, -- red piece of cloth
-	{ id = "moohtant cudgel", chance = 860 }, -- moohtant cudgel
-	{ id = 3037, chance = 710 }, -- yellow gem
-	{ id = 7452, chance = 430 }, -- spiked squelcher
-	{ id = 7427, chance = 280 }, -- chaos mace
-	{ id = 9058, chance = 280 }, -- gold ingot
-	{ id = "minotaur trophy", chance = 280 }, -- minotaur trophy
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 55234, minCount = 1, maxCount = 2 },  -- 2152
+	{ id = "moohtant horn", chance = 15252, minCount = 1, maxCount = 2 },  -- 23571
+	{ id = "giant pacifier", chance = 11068 },  -- 23570
+	{ id = "great health potion", chance = 9177, minCount = 1, maxCount = 3 },  -- 7591
+	{ id = "great mana potion", chance = 8656, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "meat", chance = 7209 },  -- 2666
+	{ id = "small ruby", chance = 5058, minCount = 1, maxCount = 2 },  -- 2147
+	{ id = "small diamond", chance = 4980, minCount = 1, maxCount = 2 },  -- 2145
+	{ id = "minotaur leather", chance = 4810 },  -- 5878
+	{ id = "ring of healing", chance = 2503 },  -- 2214
+	{ id = "red piece of cloth", chance = 2425 },  -- 5911
+	{ id = "moohtant cudgel", chance = 978 },  -- 23544
+	{ id = "red gem", chance = 886 },  -- 2156
+	{ id = "spiked squelcher", chance = 795 },  -- 7452
+	{ id = "yellow gem", chance = 782 },  -- 2154
+	{ id = "gold ingot", chance = 495 },  -- 9971
+	{ id = "chaos mace", chance = 456 },  -- 7427
+	{ id = 7401, chance = 326 },  -- minotaur trophy
 }
 
 monster.attacks = {

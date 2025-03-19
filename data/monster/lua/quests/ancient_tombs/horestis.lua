@@ -81,19 +81,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "scorpion sceptre", chance = 100000 }, -- scorpion sceptre
-	{ id = 3031, chance = 95000, maxCount = 243 }, -- gold coin
-	{ id = 3035, chance = 36000, maxCount = 5 }, -- platinum coin
-	{ id = "pharaoh banner", chance = 17000 }, -- pharaoh banner
-	{ id = 3042, chance = 14000, maxCount = 5 }, -- scarab coin
-	{ id = 12482, chance = 12000 }, -- hieroglyph banner
-	{ id = 3017, chance = 12000 }, -- silver brooch
-	{ id = 238, chance = 10000, maxCount = 3 }, -- great mana potion
-	{ id = "great health potion", chance = 5000, maxCount = 4 }, -- great health potion
-	{ id = "pharaoh sword", chance = 5000 }, -- pharaoh sword
-	{ id = 10290, chance = 2500 }, -- mini mummy
-	{ id = 8897, chance = 2500 }, -- heavily rusted legs
-	{ id = 3335, chance = 2500 }, -- twin axe
+	{ id = "scorpion sceptre", chance = 100000 },  -- 13498
+	{ id = "gold coin", chance = 95833, minCount = 9, maxCount = 243 },  -- 2148
+	{ id = "platinum coin", chance = 35417, minCount = 1, maxCount = 5 },  -- 2152
+	{ id = "scarab coin", chance = 20833, minCount = 1, maxCount = 5 },  -- 2159
+	{ id = 13472, chance = 14583 },  -- pharaoh banner
+	{ id = 13739, chance = 10417 },  -- hieroglyph banner
+	{ id = "silver brooch", chance = 10417 },  -- 2134
+	{ id = "great mana potion", chance = 8333, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "great health potion", chance = 6250, minCount = 4, maxCount = 5 },  -- 7591
+	{ id = "pharaoh sword", chance = 4167 },  -- 2446
+	{ id = "mini mummy", chance = 2083 },  -- 11207
+	{ id = 9811, chance = 2083 },  -- rusty legs (todo: slightly rusted does not exist in items.xml)
+	{ id = "twin axe", chance = 2083 },  -- 2447
 }
 
 monster.attacks = {

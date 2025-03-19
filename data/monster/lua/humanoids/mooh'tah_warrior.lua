@@ -68,25 +68,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 119 },
-	{ id = "platinum coin", chance = 45450, maxCount = 3 },
-	{ id = "mooh'tah shell", chance = 18970 }, -- mooh'tah shell
-	{ id = "strong mana potion", chance = 9290 },
-	{ id = "strong health potion", chance = 8500 },
-	{ id = "small ruby", chance = 7710 },
-	{ id = "small emerald", chance = 6320 },
-	{ id = "small amethyst", chance = 5340 },
-	{ id = "minotaur leather", chance = 5340 },
-	{ id = "minotaur horn", chance = 4550, maxCount = 2 },
-	{ id = "small topaz", chance = 4350 },
-	{ id = "sword ring", chance = 1580 }, -- sword ring
-	{ id = "cowtana", chance = 1380 },
-	{ id = "mooh'tah plate", chance = 1380 }, -- mooh'tah plate
-	{ id = "knight armor", chance = 990 },
-	{ id = "red piece of cloth", chance = 790 },
-	{ id = "knight legs", chance = 590 },
-	{ id = "guardian shield", chance = 590 },
-	{ id = "minotaur trophy", chance = 160 }, -- minotaur trophy
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 120 },  -- 2148
+	{ id = "platinum coin", chance = 39886, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "mooh'tah shell", chance = 15114 },  -- 23573
+	{ id = "strong mana potion", chance = 7085 },  -- 7589
+	{ id = "strong health potion", chance = 6956 },  -- 7588
+	{ id = "small emerald", chance = 5178 },  -- 2149
+	{ id = "minotaur leather", chance = 5140 },  -- 5878
+	{ id = "small amethyst", chance = 5116 },  -- 2150
+	{ id = "small topaz", chance = 5088 },  -- 9970
+	{ id = "minotaur horn", chance = 5082, minCount = 1, maxCount = 2 },  -- 12428
+	{ id = "small ruby", chance = 5043 },  -- 2147
+	{ id = "cowtana", chance = 1443 },  -- 23548
+	{ id = "sword ring", chance = 1066 },  -- 2207
+	{ id = "mooh'tah plate", chance = 1010 },  -- 23537
+	{ id = "guardian shield", chance = 908 },  -- 2515
+	{ id = "red piece of cloth", chance = 743 },  -- 5911
+	{ id = "knight legs", chance = 694 },  -- 2477
+	{ id = "knight armor", chance = 490 },  -- 2476
+	{ id = 7401, chance = 134 },  -- minotaur trophy
 }
 
 monster.attacks = {

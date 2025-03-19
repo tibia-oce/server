@@ -81,41 +81,41 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 190 },
-	{ id = "platinum coin", chance = 20000, maxCount = 26 },
-	{ id = "orb", chance = 16666 },
-	{ id = "life crystal", chance = 16666 },
-	{ id = "mind stone", chance = 20000 },
-	{ id = "spike sword", chance = 9090 },
-	{ id = "fire sword", chance = 14285 },
-	{ id = "giant sword", chance = 7692 },
-	{ id = "scimitar", chance = 11111 }, -- scimitar
-	{ id = "warrior helmet", chance = 20000 },
-	{ id = "strange helmet", chance = 8333 },
-	{ id = "crown helmet", chance = 6250 },
-	{ id = "royal helmet", chance = 20000 },
-	{ id = "brown mushroom", chance = 50000, maxCount = 30 },
-	{ id = "mysterious voodoo skull", chance = 12500 },
-	{ id = "skull helmet", chance = 20000 },
-	{ id = "iron ore", chance = 33333 },
-	{ id = "spirit container", chance = 4761 }, -- spirit container
-	{ id = "flask of warrior's sweat", chance = 5555 },
-	{ id = "enchanted chicken wing", chance = 7692 },
-	{ id = "huge chunk of crude iron", chance = 14285 },
-	{ id = "hardened bone", chance = 25000, maxCount = 20 },
-	{ id = "demon horn", chance = 8333, maxCount = 2 },
-	{ id = "unholy book", chance = 2063 }, -- unholy book
-	{ id = "demonic essence", chance = 100000 },
-	{ id = 7385, chance = 10000 }, -- crimson sword
-	{ id = "thaian sword", chance = 25000 },
-	{ id = "dragon slayer", chance = 8333 },
-	{ id = "runed sword", chance = 6666 },
-	{ id = "great mana potion", chance = 20000 },
-	{ id = "great health potion", chance = 20000 },
-	{ id = "great spirit potion", chance = 20000 },
-	{ id = "ultimate health potion", chance = 20000 },
-	{ id = 8894, chance = 20000 }, -- heavily rusted armor
-	{ id = "gold ingot", chance = 16666 },
+	{ id = "demonic essence", chance = 100000 },  -- 6500
+	{ id = "brown mushroom", chance = 96923, minCount = 1, maxCount = 30 },  -- 2789
+	{ id = "gold coin", chance = 96923, minCount = 3, maxCount = 192 },  -- 2148
+	{ id = "iron ore", chance = 44231 },  -- 5880
+	{ id = "hardened bone", chance = 28077, minCount = 1, maxCount = 20 },  -- 5925
+	{ id = "ultimate health potion", chance = 26346 },  -- 8473
+	{ id = "royal helmet", chance = 25577 },  -- 2498
+	{ id = "great health potion", chance = 25192 },  -- 7591
+	{ id = "great spirit potion", chance = 24423 },  -- 8472
+	{ id = "great mana potion", chance = 20962 },  -- 7590
+	{ id = "life crystal", chance = 20962 },  -- 2177
+	{ id = "platinum coin", chance = 20962, minCount = 1, maxCount = 30 },  -- 2152
+	{ id = "skull helmet", chance = 20962 },  -- 5741
+	{ id = "gold ingot", chance = 20385 },  -- 9971
+	{ id = "mind stone", chance = 20385 },  -- 2178
+	{ id = "mysterious voodoo skull", chance = 20000 },  -- 5669
+	{ id = "warrior helmet", chance = 19615 },  -- 2475
+	{ id = "thaian sword", chance = 19231 },  -- 7391
+	{ id = "fire sword", chance = 19038 },  -- 2392
+	{ id = "orb", chance = 17885 },  -- 2176
+	{ id = 9808, chance = 16538 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = "huge chunk of crude iron", chance = 14423 },  -- 5892
+	{ id = "giant sword", chance = 11731 },  -- 2393
+	{ id = 2419, chance = 10962 },  -- scimitar
+	{ id = "demon horn", chance = 10577, minCount = 1, maxCount = 2 },  -- 5954
+	{ id = "dragon slayer", chance = 10192 },  -- 7402
+	{ id = "spike sword", chance = 10192 },  -- 2383
+	{ id = 7385, chance = 9231 },  -- crimson sword
+	{ id = "crown helmet", chance = 8846 },  -- 2491
+	{ id = "strange helmet", chance = 8846 },  -- 2479
+	{ id = "runed sword", chance = 8269 },  -- 7417
+	{ id = "enchanted chicken wing", chance = 5577 },  -- 5891
+	{ id = "spirit container", chance = 5000 },  -- 5884
+	{ id = "unholy book", chance = 4423 },  -- 6103
+	{ id = "flask of warrior's sweat", chance = 3846 },  -- 5885
 }
 
 monster.attacks = {

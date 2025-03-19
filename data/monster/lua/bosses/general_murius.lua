@@ -84,20 +84,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "minotaur horn", chance = 100000, maxCount = 2 },
-	{ id = "minotaur leather", chance = 100000 },
-	{ id = "gold coin", chance = 92310, maxCount = 97 },
-	{ id = "platinum coin", chance = 92310, maxCount = 3 },
-	{ id = "brass armor", chance = 76920 },
-	{ id = "double axe", chance = 76920 },
-	{ id = "piercing bolt", chance = 38460, maxCount = 11 },
-	{ id = "meat", chance = 30770 },
-	{ id = "battle shield", chance = 23080 },
-	{ id = "chain legs", chance = 23080 },
-	{ id = "minotaur trophy", chance = 23080 }, -- minotaur trophy
-	{ id = "power bolt", chance = 23080, maxCount = 7 },
-	{ id = "fishing rod", chance = 7690 },
-	{ id = "strong health potion", chance = 7690 },
+	{ id = "minotaur horn", chance = 100000, minCount = 1, maxCount = 2 },  -- 12428
+	{ id = "minotaur leather", chance = 100000 },  -- 5878
+	{ id = "gold coin", chance = 96875, minCount = 5, maxCount = 97 },  -- 2148
+	{ id = "platinum coin", chance = 96875, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "double axe", chance = 87500 },  -- 2387
+	{ id = "brass armor", chance = 68750 },  -- 2465
+	{ id = "battle shield", chance = 31250 },  -- 2513
+	{ id = "piercing bolt", chance = 31250, minCount = 1, maxCount = 11 },  -- 7363
+	{ id = "meat", chance = 18750 },  -- 2666
+	{ id = 7401, chance = 18750 },  -- minotaur trophy
+	{ id = "chain legs", chance = 12500 },  -- 2648
+	{ id = "power bolt", chance = 9375, minCount = 1, maxCount = 7 },  -- 2547
+	{ id = "fishing rod", chance = 3125 },  -- 2580
+	{ id = "strong health potion", chance = 3125 },  -- 7588
 }
 
 monster.attacks = {

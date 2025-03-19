@@ -72,24 +72,28 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 92000, maxCount = 130 }, -- gold coin
-	{ id = 3577, chance = 6200 }, -- meat
-	{ id = 3030, chance = 4200 }, -- small ruby
-	{ id = 3026, chance = 6200, maxCount = 3 }, -- white pearl
-	{ id = 11447, chance = 6200 }, -- battle stone
-	{ id = 3598, chance = 6200, maxCount = 7 }, -- cookie
-	{ id = 22188, chance = 5200 }, -- ogre ear stud
-	{ id = 22189, chance = 1200 }, -- ogre nose ring
-	{ id = "onyx chip", chance = 3200, maxCount = 2 }, -- onyx chip
-	{ id = "opal", chance = 3200, maxCount = 3 }, -- opal
-	{ id = 3050, chance = 2200 }, -- power ring
-	{ id = 22191, chance = 1200 }, -- skull fetish
-	{ id = 236, chance = 6200, maxCount = 3 }, -- strong health potion
-	{ id = "bonebreaker", chance = 500 }, -- bonebreaker
-	{ id = 22171, chance = 800 }, -- ogre klubba
-	{ id = 3465, chance = 500 }, -- pot
-	-- { id = "rusted helmet", chance = 220 },
-	{ id = 22192, chance = 300 }, -- shamanic mask
+	{ id = "gold coin", chance = 99651, minCount = 1, maxCount = 125 },  -- 2148
+	{ id = "ogre ear stud", chance = 18823 },  -- 24844
+	{ id = "meat", chance = 14725 },  -- 2666
+	{ id = "ogre nose ring", chance = 14604 },  -- 24845
+	{ id = "strong health potion", chance = 12280 },  -- 7588
+	{ id = "small stone", chance = 5079, minCount = 1, maxCount = 5 },  -- 1294
+	{ id = "battle stone", chance = 4743 },  -- 12403
+	{ id = "cookie", chance = 3829, minCount = 1, maxCount = 5 },  -- 2687
+	{ id = "skull fetish", chance = 3386 },  -- 24847
+	{ id = "small ruby", chance = 2351, minCount = 1, maxCount = 2 },  -- 2147
+	{ id = "club ring", chance = 2271 },  -- 2209
+	{ id = "white pearl", chance = 2230 },  -- 2143
+	{ id = "onyx chip", chance = 2002, minCount = 1, maxCount = 2 },  -- 24849
+	{ id = "opal", chance = 1679, minCount = 1, maxCount = 2 },  -- 24850
+	{ id = "power ring", chance = 1626 },  -- 2166
+	{ id = "ogre klubba", chance = 954 },  -- 24827
+	{ id = "pot", chance = 269 },  -- 2562
+	{ id = "ancient stone", chance = 215 },  -- 10549
+	{ id = 9820, chance = 215 },  -- rusty helmet
+	{ id = "shamanic mask", chance = 148 },  -- 24848
+	{ id = "bonebreaker", chance = 107 },  -- 7428
+	{ id = "butcher's axe", chance = 13 },  -- 7412
 }
 
 monster.attacks = {

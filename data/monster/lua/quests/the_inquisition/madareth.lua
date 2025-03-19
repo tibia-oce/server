@@ -81,48 +81,48 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 150 }, -- gold coin
-	{ id = 8899, chance = 59000 }, -- slightly rusted legs
-	{ id = 8896, chance = 40000 }, -- slightly rusted armor
-	{ id = 7443, chance = 33000 }, -- bullseye potion
-	{ id = 239, chance = 30000 }, -- great health potion
-	{ id = 7642, chance = 30000 }, -- great spirit potion
-	{ id = 7440, chance = 28000 }, -- mastermind potion
-	{ id = 7439, chance = 23000 }, -- berserk potion
-	{ id = 238, chance = 21000 }, -- great mana potion
-	{ id = 6299, chance = 19000 }, -- death ring
-	{ id = 3067, chance = 19000 }, -- hailstorm rod
-	{ id = 2950, chance = 19000 }, -- lute
-	{ id = 3035, chance = 19000, maxCount = 26 }, -- platinum coin
-	{ id = 3265, chance = 19000 }, -- two handed sword
-	{ id = 7404, chance = 16000 }, -- assassin dagger
-	{ id = 3092, chance = 16000 }, -- axe ring
-	{ id = 7643, chance = 16000 }, -- ultimate health potion
-	{ id = 8082, chance = 16000 }, -- underworld rod
-	{ id = 3093, chance = 14000 }, -- club ring
-	{ id = 6499, chance = 14000 }, -- demonic essence
-	{ id = "haunted blade", chance = 14000 }, -- haunted blade
-	{ id = 2949, chance = 14000 }, -- lyre
-	{ id = "nightmare blade", chance = 14000 }, -- nightmare blade
-	{ id = 8084, chance = 14000 }, -- springsprout rod
-	{ id = 2966, chance = 14000 }, -- war drum
-	{ id = 3071, chance = 11000 }, -- wand of inferno
-	{ id = 8094, chance = 11000 }, -- wand of voodoo
-	{ id = 7416, chance = 9500 }, -- bloody edge
-	{ id = 7449, chance = 9500 }, -- crystal sword
-	{ id = 3098, chance = 9500 }, -- ring of healing
-	{ id = 5954, chance = 7000, maxCount = 2 }, -- demon horn
-	{ id = 3052, chance = 7000 }, -- life ring
-	{ id = 7383, chance = 7000 }, -- relic sword
-	{ id = 3053, chance = 7000 }, -- time ring
-	{ id = 8092, chance = 7000 }, -- wand of starstorm
-	{ id = 2958, chance = 7000 }, -- war horn
-	{ id = 2948, chance = 7000 }, -- wooden flute
-	{ id = 2965, chance = 4700 }, -- didgeridoo
-	{ id = "dwarven ring", chance = 4700 }, -- dwarven ring
-	{ id = 3284, chance = 4700 }, -- ice rapier
-	{ id = 7386, chance = 4700 }, -- mercenary sword
-	{ id = 3091, chance = 4700 }, -- sword ring
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 100 },  -- 2148
+	{ id = 9811, chance = 59322 },  -- rusty legs (todo: slightly rusted does not exist in items.xml)
+	{ id = 9808, chance = 40678 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = "bullseye potion", chance = 35593 },  -- 7443
+	{ id = "great health potion", chance = 30508 },  -- 7591
+	{ id = "berserk potion", chance = 27119 },  -- 7439
+	{ id = "great spirit potion", chance = 27119 },  -- 8472
+	{ id = "mastermind potion", chance = 27119 },  -- 7440
+	{ id = "great mana potion", chance = 22034 },  -- 7590
+	{ id = 6300, chance = 20339 },  -- death ring
+	{ id = "platinum coin", chance = 20339, minCount = 1, maxCount = 26 },  -- 2152
+	{ id = "springsprout rod", chance = 20339 },  -- 8912
+	{ id = "ultimate health potion", chance = 20339 },  -- 8473
+	{ id = "two handed sword", chance = 16949 },  -- 2377
+	{ id = "assassin dagger", chance = 15254 },  -- 7404
+	{ id = "axe ring", chance = 15254 },  -- 2208
+	{ id = "hailstorm rod", chance = 15254 },  -- 2183
+	{ id = 2072, chance = 15254 },  -- lute
+	{ id = "underworld rod", chance = 15254 },  -- 8910
+	{ id = "wand of inferno", chance = 15254 },  -- 2187
+	{ id = "nightmare blade", chance = 13559 },  -- 7418
+	{ id = "bloody edge", chance = 11864 },  -- 7416
+	{ id = "club ring", chance = 11864 },  -- 2209
+	{ id = "haunted blade", chance = 11864 },  -- 7407
+	{ id = 2071, chance = 11864 },  -- lyre
+	{ id = "ring of healing", chance = 11864 },  -- 2214
+	{ id = 2169, chance = 11864 },  -- time ring
+	{ id = "wand of voodoo", chance = 11864 },  -- 8922
+	{ id = "war horn", chance = 11864 },  -- 2079
+	{ id = "crystal sword", chance = 10169 },  -- 7449
+	{ id = "demon horn", chance = 10169, minCount = 1, maxCount = 2 },  -- 5954
+	{ id = "demonic essence", chance = 10169 },  -- 6500
+	{ id = "life ring", chance = 10169 },  -- 2168
+	{ id = "war drum", chance = 10169 },  -- 3953
+	{ id = "didgeridoo", chance = 8475 },  -- 3952
+	{ id = "mercenary sword", chance = 8475 },  -- 7386
+	{ id = "relic sword", chance = 6780 },  -- 7383
+	{ id = "wand of starstorm", chance = 6780 },  -- 8920
+	{ id = "ice rapier", chance = 5085 },  -- 2396
+	{ id = 2070, chance = 5085 },  -- wooden flute
+	{ id = "dwarven ring", chance = 3390 },  -- 2213
+	{ id = "sword ring", chance = 3390 },  -- 2207
 }
 
 monster.attacks = {

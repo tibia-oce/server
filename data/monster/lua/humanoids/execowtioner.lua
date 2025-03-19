@@ -72,24 +72,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 198 }, -- gold coin
-	{ id = 3035, chance = 67610, maxCount = 3 }, -- platinum coin
-	{ id = "gold ingot", chance = 390 }, -- gold ingot
-	{ id = 5911, chance = 3230 }, -- red piece of cloth
-	{ id = "minotaur leather", chance = 14710 }, -- minotaur leather
-	{ id = 11472, chance = 6580, maxCount = 2 }, -- minotaur horn
-	{ id = 21201, chance = 13160 }, -- execowtioner mask
-	{ id = 239, chance = 11480 }, -- great health potion
-	{ id = 238, chance = 10060 }, -- great mana potion
-	{ id = 3577, chance = 7230 }, -- meat
-	{ id = 9057, chance = 5810, maxCount = 2 }, -- small topaz
-	{ id = 3030, chance = 4520, maxCount = 2 }, -- small ruby
-	{ id = 7412, chance = 900 }, -- butcher's axe
-	{ id = 3381, chance = 770 }, -- crown armor
-	{ id = 21176, chance = 1420 }, -- execowtioner axe
-	{ id = "knight axe", chance = 770 }, -- knight axe
-	{ id = 7413, chance = 390 }, -- titan axe
-	{ id = "minotaur trophy", chance = 520 }, -- minotaur trophy
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 65607, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "execowtioner mask", chance = 16126 },  -- 23572
+	{ id = "minotaur leather", chance = 15866 },  -- 5878
+	{ id = "great health potion", chance = 10573 },  -- 7591
+	{ id = "great mana potion", chance = 9905 },  -- 7590
+	{ id = "meat", chance = 8431 },  -- 2666
+	{ id = "small ruby", chance = 5334, minCount = 1, maxCount = 2 },  -- 2147
+	{ id = "small topaz", chance = 4993, minCount = 1, maxCount = 2 },  -- 9970
+	{ id = "minotaur horn", chance = 4870, minCount = 1, maxCount = 2 },  -- 12428
+	{ id = "red piece of cloth", chance = 2851 },  -- 5911
+	{ id = "execowtioner axe", chance = 1064 },  -- 23547
+	{ id = "knight axe", chance = 805 },  -- 2430
+	{ id = "crown armor", chance = 628 },  -- 2487
+	{ id = "titan axe", chance = 587 },  -- 7413
+	{ id = "butcher's axe", chance = 505 },  -- 7412
+	{ id = "gold ingot", chance = 355 },  -- 9971
+	{ id = 7401, chance = 300 },  -- minotaur trophy
 }
 
 monster.attacks = {

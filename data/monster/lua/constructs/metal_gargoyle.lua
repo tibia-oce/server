@@ -71,20 +71,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 200 }, -- gold coin
-	{ id = "bronze gear wheel", chance = 1490 }, -- bronze gear wheel
-	{ id = 21193, chance = 17160 }, -- metal jaw
-	{ id = 3035, chance = 43280, maxCount = 2 }, -- platinum coin
-	{ id = 236, chance = 9700, maxCount = 2 }, -- strong health potion
-	{ id = "strong mana potion", chance = 9700, maxCount = 2 }, -- strong mana potion
-	{ id = 21171, chance = 1490 }, -- metal bat
-	{ id = "underworld rod", chance = 1490 }, -- underworld rod
-	{ id = 3051, chance = 2240 }, -- energy ring
-	{ id = 3052, chance = 750 }, -- life ring
-	{ id = 10310, chance = 2240 }, -- shiny stone
-	{ id = 21169, chance = 1490 }, -- metal spats
-	{ id = 21168, chance = 1490 }, -- alloy legs
-	{ id = 8896, chance = 2990 }, -- slightly rusted armor
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 44848, minCount = 1, maxCount = 2 },  -- 2152
+	{ id = "metal jaw", chance = 17827 },  -- 23564
+	{ id = "strong health potion", chance = 8996, minCount = 1, maxCount = 2 },  -- 7588
+	{ id = "strong mana potion", chance = 8968, minCount = 1, maxCount = 2 },  -- 7589
+	{ id = "metal spats", chance = 2997 },  -- 23540
+	{ id = 9808, chance = 2677 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = "bronze gear wheel", chance = 2555 },  -- 24124
+	{ id = "shiny stone", chance = 1396 },  -- 11227
+	{ id = "alloy legs", chance = 1027 },  -- 23539
+	{ id = "metal bat", chance = 949 },  -- 23542
+	{ id = "underworld rod", chance = 855 },  -- 8910
+	{ id = "life ring", chance = 519 },  -- 2168
+	{ id = "iron ore", chance = 513 },  -- 5880
+	{ id = "energy ring", chance = 497 },  -- 2167
 }
 
 monster.attacks = {

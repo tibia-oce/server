@@ -80,45 +80,45 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "emerald bangle", chance = 20000 },
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "platinum coin", chance = 16666, maxCount = 30 },
-	{ id = "violet gem", chance = 16666 },
-	{ id = "yellow gem", chance = 20000 },
-	{ id = "green gem", chance = 12500 },
-	{ id = "red gem", chance = 20000 }, -- red gem
-	{ id = "blue gem", chance = 20000 },
-	{ id = 2381, chance = 20000 },
-	{ id = "guardian halberd", chance = 20000 },
-	{ id = "heavy mace", chance = 25000 },
-	{ id = "mastermind shield", chance = 4166 },
-	{ id = "guardian shield", chance = 7692 },
-	{ id = "crown shield", chance = 11111 },
-	{ id = "demon shield", chance = 4166 },
-	{ id = "tower shield", chance = 9090 },
-	{ id = "power bolt", chance = 16666, maxCount = 94 },
-	{ id = "soul orb", chance = 20000, maxCount = 5 },
-	{ id = "demon horn", chance = 12500, maxCount = 2 },
-	{ id = "infernal bolt", chance = 20000, maxCount = 46 },
-	{ id = "viper star", chance = 16666, maxCount = 70 },
-	{ id = "assassin star", chance = 16666, maxCount = 50 },
-	{ id = "diamond sceptre", chance = 7142 },
-	{ id = "onyx flail", chance = 14285 },
-	{ id = "demonbone", chance = 1234 },
-	{ id = "berserk potion", chance = 16666 },
-	{ id = "mastermind potion", chance = 14285 },
-	{ id = "great mana potion", chance = 11111 },
-	{ id = "great health potion", chance = 14285 },
-	{ id = 281, chance = 33333, maxCount = 2 }, -- giant shimmering pearl (green)
-	{ id = "flaming arrow", chance = 20000, maxCount = 46 },
-	{ id = "great spirit potion", chance = 14285 },
-	{ id = "ultimate health potion", chance = 14285 },
-	{ id = "lavos armor", chance = 1851 },
-	{ id = "paladin armor", chance = 10000 },
-	{ id = "obsidian truncheon", chance = 1234 },
-	{ id = 8894, chance = 1234 }, -- heavily rusted armor
-	{ id = 8896, chance = 50000 }, -- slightly rusted armor
-	{ id = "gold ingot", chance = 20000 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = 9808, chance = 62598 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = 7632, chance = 37795, minCount = 1, maxCount = 2 },  -- giant shimmering pearl
+	{ id = "heavy mace", chance = 27953 },  -- 2452
+	{ id = "assassin star", chance = 23228, minCount = 1, maxCount = 50 },  -- 7368
+	{ id = "guardian halberd", chance = 22835 },  -- 2427
+	{ id = "blue gem", chance = 22441 },  -- 2158
+	{ id = "yellow gem", chance = 22441 },  -- 2154
+	{ id = "emerald bangle", chance = 21654 },  -- 2127
+	{ id = "gold ingot", chance = 20866 },  -- 9971
+	{ id = "infernal bolt", chance = 20866, minCount = 1, maxCount = 50 },  -- 6529
+	{ id = "power bolt", chance = 20472, minCount = 3, maxCount = 99 },  -- 2547
+	{ id = "red gem", chance = 20472 },  -- 2156
+	{ id = "berserk potion", chance = 20079 },  -- 7439
+	{ id = 2381, chance = 19685 },  -- halberd
+	{ id = "soul orb", chance = 19685, minCount = 1, maxCount = 5 },  -- 5944
+	{ id = "platinum coin", chance = 19291, minCount = 1, maxCount = 30 },  -- 2152
+	{ id = "flaming arrow", chance = 18898, minCount = 4, maxCount = 96 },  -- 7840
+	{ id = "green gem", chance = 17323 },  -- 2155
+	{ id = "violet gem", chance = 17323 },  -- 2153
+	{ id = "viper star", chance = 16535, minCount = 2, maxCount = 70 },  -- 7366
+	{ id = "mastermind potion", chance = 14961 },  -- 7440
+	{ id = "great health potion", chance = 14567 },  -- 7591
+	{ id = "onyx flail", chance = 13780 },  -- 7421
+	{ id = "great mana potion", chance = 13386 },  -- 7590
+	{ id = "ultimate health potion", chance = 13386 },  -- 8473
+	{ id = "crown shield", chance = 12598 },  -- 2519
+	{ id = "great spirit potion", chance = 12205 },  -- 8472
+	{ id = "demon horn", chance = 11811, minCount = 1, maxCount = 2 },  -- 5954
+	{ id = "paladin armor", chance = 10236 },  -- 8891
+	{ id = "tower shield", chance = 10236 },  -- 2528
+	{ id = "guardian shield", chance = 8661 },  -- 2515
+	{ id = "diamond sceptre", chance = 7087 },  -- 7387
+	{ id = "demon shield", chance = 3937 },  -- 2520
+	{ id = "mastermind shield", chance = 3543 },  -- 2514
+	{ id = "demonbone", chance = 1575 },  -- 7431
+	{ id = "lavos armor", chance = 1181 },  -- 8877
+	{ id = "obsidian truncheon", chance = 1181 },  -- 8928
+	{ id = "the stomper", chance = 787 },  -- 8929
 }
 
 monster.attacks = {

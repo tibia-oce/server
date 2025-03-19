@@ -70,20 +70,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 82920, maxCount = 70 },
-	{ id = "club ring", chance = 90 }, -- club ring
-	{ id = "battle axe", chance = 5450 },
-	{ id = "double axe", chance = 880 },
-	{ id = "battle hammer", chance = 5200 },
-	{ id = "heavy machete", chance = 2000 },
-	{ id = "dark helmet", chance = 200 },
-	{ id = "plate shield", chance = 2000 },
-	{ id = "battle shield", chance = 6190 },
-	{ id = "meat", chance = 49950 },
-	{ id = "cyclops trophy", chance = 140 }, -- cyclops trophy
-	{ id = "spiked squelcher", chance = 150 },
-	{ id = "strong health potion", chance = 390 },
-	{ id = "cyclops toe", chance = 10280 },
+	{ id = "gold coin", chance = 82738, minCount = 1, maxCount = 70 },  -- 2148
+	{ id = "meat", chance = 50308 },  -- 2666
+	{ id = "cyclops toe", chance = 10049 },  -- 10574
+	{ id = "battle shield", chance = 6263 },  -- 2513
+	{ id = "battle axe", chance = 5135 },  -- 2378
+	{ id = "battle hammer", chance = 5096 },  -- 2417
+	{ id = "plate shield", chance = 2090 },  -- 2510
+	{ id = "heavy machete", chance = 2053 },  -- 2442
+	{ id = "double axe", chance = 952 },  -- 2387
+	{ id = "strong health potion", chance = 534 },  -- 7588
+	{ id = "dark helmet", chance = 203 },  -- 2490
+	{ id = "spiked squelcher", chance = 136 },  -- 7452
+	{ id = 7398, chance = 127 },  -- cyclops trophy
+	{ id = "club ring", chance = 91 },  -- 2209
 }
 
 monster.attacks = {

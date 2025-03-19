@@ -69,30 +69,31 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "assassin star", chance = 3040, maxCount = 5 }, -- assassin star
-	{ id = 21204, chance = 19830 }, -- cowbell
-	{ id = 3031, chance = 100000, maxCount = 196 }, -- gold coin
-	{ id = 3582, chance = 60780 }, -- ham
-	{ id = 3577, chance = 4920 }, -- meat
-	{ id = 3035, chance = 62080, maxCount = 3 }, -- platinum coin
-	{ id = "gold ingot", chance = 290 }, -- gold ingot
-	{ id = "minotaur leather", chance = 17950 }, -- minotaur leather
-	{ id = 239, chance = 7670 }, -- great health potion
-	{ id = 238, chance = 7380 }, -- great mana potion
-	{ id = 11472, chance = 6800, maxCount = 2 }, -- minotaur horn
-	{ id = 3098, chance = 3040 }, -- ring of healing
-	{ id = 3030, chance = 5500, maxCount = 2 }, -- small ruby
-	{ id = 9057, chance = 900, maxCount = 2 }, -- small topaz
-	{ id = 3033, chance = 970, maxCount = 2 }, -- small amethyst
-	{ id = 3032, chance = 4050, maxCount = 2 }, -- small emerald
-	{ id = 21175, chance = 3040 }, -- mino shield
-	{ id = 21174, chance = 1740 }, -- mino lance
-	{ id = 5911, chance = 710 }, -- red piece of cloth
-	{ id = 3039, chance = 430 }, -- red gem
-	{ id = 3081, chance = 850 }, -- stone skin amulet
-	{ id = 3037, chance = 870 }, -- yellow gem
-	{ id = 3369, chance = 1160 }, -- warrior helmet
-	{ id = 7443, chance = 720 }, -- bullseye potion
+	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 65090, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = "ham", chance = 59526 },  -- 2671
+	{ id = "cowbell", chance = 19741 },  -- 23575
+	{ id = "minotaur leather", chance = 16415 },  -- 5878
+	{ id = "great mana potion", chance = 7004 },  -- 7590
+	{ id = "great health potion", chance = 6931 },  -- 7591
+	{ id = "meat", chance = 6895 },  -- 2666
+	{ id = "minotaur horn", chance = 5165, minCount = 1, maxCount = 2 },  -- 12428
+	{ id = "small topaz", chance = 5129, minCount = 1, maxCount = 2 },  -- 9970
+	{ id = "small ruby", chance = 4923, minCount = 1, maxCount = 2 },  -- 2147
+	{ id = "small amethyst", chance = 4899, minCount = 1, maxCount = 2 },  -- 2150
+	{ id = "small emerald", chance = 4572, minCount = 1, maxCount = 2 },  -- 2149
+	{ id = "mino shield", chance = 3871 },  -- 23546
+	{ id = "assassin star", chance = 3036, minCount = 1, maxCount = 5 },  -- 7368
+	{ id = "ring of healing", chance = 2492 },  -- 2214
+	{ id = "mino lance", chance = 1657 },  -- 23545
+	{ id = "stone skin amulet", chance = 835 },  -- 2197
+	{ id = "bullseye potion", chance = 810 },  -- 7443
+	{ id = "warrior helmet", chance = 617 },  -- 2475
+	{ id = "yellow gem", chance = 617 },  -- 2154
+	{ id = "gold ingot", chance = 593 },  -- 9971
+	{ id = "red piece of cloth", chance = 569 },  -- 5911
+	{ id = "red gem", chance = 399 },  -- 2156
+	{ id = 7401, chance = 266 },  -- minotaur trophy
 }
 
 monster.attacks = {

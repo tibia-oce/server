@@ -85,21 +85,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "holy orchid", chance = 100000 },
-	{ id = "elvish talisman", chance = 88000 },
-	{ id = "elven astral observer", chance = 82000 },
-	{ id = "yellow gem", chance = 41790 },
-	{ id = "blank rune", chance = 25370, maxCount = 1 },
-	{ id = "melon", chance = 22390 },
-	{ id = "bread", chance = 16420 },
-	{ id = "elven amulet", chance = 14930 },
-	{ id = "great mana potion", chance = 13430 },
-	{ id = "life crystal", chance = 13430 },
-	{ id = "sling herb", chance = 8960 },
-	{ id = 3257, chance = 7460 }, -- cornucopia
-	{ id = "green tunic", chance = 4480 },
-	{ id = "royal spear", chance = 1490, maxCount = 2 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "holy orchid", chance = 100000 },  -- 5922
+	{ id = "elvish talisman", chance = 89691 },  -- 10552
+	{ id = "elven astral observer", chance = 85567 },  -- 12421
+	{ id = "yellow gem", chance = 36082 },  -- 2154
+	{ id = "melon", chance = 25773 },  -- 2682
+	{ id = "blank rune", chance = 19588 },  -- 2260
+	{ id = "elven amulet", chance = 17526 },  -- 2198
+	{ id = "great mana potion", chance = 15464 },  -- 7590
+	{ id = "bread", chance = 14433 },  -- 2689
+	{ id = "life crystal", chance = 13402 },  -- 2177
+	{ id = "sling herb", chance = 9278 },  -- 2802
+	{ id = 2369, chance = 8247 },  -- cornucopia
+	{ id = "green tunic", chance = 6186 },  -- 2652
+	{ id = "royal spear", chance = 1031, maxCount = 2 },  -- 7378
 }
 
 monster.attacks = {

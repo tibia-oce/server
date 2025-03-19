@@ -69,28 +69,28 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "ruby necklace", chance = 1500 },
-	{ id = "white pearl", chance = 10000, maxCount = 3 },
-	{ id = "black pearl", chance = 12000, maxCount = 3 },
-	{ id = "gold coin", chance = 100000, maxCount = 198 },
-	{ id = "platinum coin", chance = 100000, maxCount = 7 },
-	{ id = "red gem", chance = 15000 }, -- red gem
-	{ id = "stone skin amulet", chance = 2780 },
-	{ id = "blank rune", chance = 35250, maxCount = 3 },
-	{ id = "skull staff", chance = 850 },
-	{ id = "tower shield", chance = 740 },
-	{ id = "skull helmet", chance = 170 },
-	{ id = 5806, chance = 4950 }, -- silver goblet
-	{ id = "soul orb", chance = 15000 },
-	{ id = 6299, chance = 2170 }, -- death ring
-	{ id = "demonic essence", chance = 7500 },
-	{ id = "skeleton decoration", chance = 1250 },
-	{ id = "haunted blade", chance = 740 },
-	{ id = "titan axe", chance = 1000 },
-	{ id = "great mana potion", chance = 14200, maxCount = 2 },
-	{ id = "great health potion", chance = 8800, maxCount = 2 },
-	{ id = 8896, chance = 3500 }, -- slightly rusted armor
-	{ id = "unholy bone", chance = 33010 },
+	{ id = "gold coin", chance = 99994, minCount = 2, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 99994, minCount = 1, maxCount = 7 },  -- 2152
+	{ id = "blank rune", chance = 35139, minCount = 1, maxCount = 3 },  -- 2260
+	{ id = "unholy bone", chance = 32957 },  -- 11233
+	{ id = "great mana potion", chance = 15112, minCount = 1, maxCount = 2 },  -- 7590
+	{ id = "soul orb", chance = 15005 },  -- 5944
+	{ id = "black pearl", chance = 12898, minCount = 1, maxCount = 3 },  -- 2144
+	{ id = "white pearl", chance = 11857, minCount = 1, maxCount = 3 },  -- 2143
+	{ id = "great health potion", chance = 9625, minCount = 1, maxCount = 2 },  -- 7591
+	{ id = "demonic essence", chance = 5994 },  -- 6500
+	{ id = 7370, chance = 5186 },  -- silver goblet
+	{ id = 9808, chance = 3794 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = "stone skin amulet", chance = 3041 },  -- 2197
+	{ id = 6300, chance = 2577 },  -- death ring
+	{ id = "red gem", chance = 2025 },  -- 2156
+	{ id = "skeleton decoration", chance = 1536 },  -- 6526
+	{ id = "ruby necklace", chance = 1273 },  -- 2133
+	{ id = "titan axe", chance = 1035 },  -- 7413
+	{ id = "haunted blade", chance = 884 },  -- 7407
+	{ id = "skull staff", chance = 884 },  -- 2436
+	{ id = "tower shield", chance = 640 },  -- 2528
+	{ id = "skull helmet", chance = 194 },  -- 5741
 }
 
 monster.attacks = {

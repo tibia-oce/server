@@ -73,20 +73,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 190 },
-	{ id = "small emerald", chance = 3770, maxCount = 4 },
-	{ id = "platinum coin", chance = 74810, maxCount = 6 },
-	{ id = "knight armor", chance = 1840 },
-	{ id = "medusa shield", chance = 3040 },
-	{ id = "titan axe", chance = 1160 },
-	{ id = "great mana potion", chance = 10000, maxCount = 2 },
-	{ id = "terra mantle", chance = 870 },
-	{ id = "terra legs", chance = 420 },
-	{ id = "terra amulet", chance = 4060 },
-	{ id = "ultimate health potion", chance = 9290, maxCount = 2 },
-	{ id = 8896, chance = 500 }, -- slightly rusted armor
-	{ id = "sacred tree amulet", chance = 850 },
-	{ id = "strand of medusa hair", chance = 9900 },
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 190 },  -- 2148
+	{ id = "platinum coin", chance = 75008, minCount = 1, maxCount = 6 },  -- 2152
+	{ id = "great mana potion", chance = 9926, minCount = 1, maxCount = 2 },  -- 7590
+	{ id = "strand of medusa hair", chance = 9769 },  -- 11226
+	{ id = "ultimate health potion", chance = 9591, minCount = 1, maxCount = 2 },  -- 8473
+	{ id = "terra amulet", chance = 4155 },  -- 7887
+	{ id = "small emerald", chance = 3925, minCount = 1, maxCount = 4 },  -- 2149
+	{ id = "medusa shield", chance = 3178 },  -- 2536
+	{ id = "knight armor", chance = 1969 },  -- 2476
+	{ id = "titan axe", chance = 1259 },  -- 7413
+	{ id = "sacred tree amulet", chance = 853 },  -- 10219
+	{ id = "terra mantle", chance = 851 },  -- 7884
+	{ id = "terra legs", chance = 382 },  -- 7885
+	{ id = 9808, chance = 309 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
 }
 
 monster.attacks = {

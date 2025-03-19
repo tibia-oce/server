@@ -68,11 +68,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 59640, maxCount = 160 }, -- gold coin
-	{ id = 11472, chance = 8330, maxCount = 2 }, -- minotaur horn
-	{ id = "piece of warrior armor", chance = 5040 }, -- piece of warrior armor
-	{ id = "minotaur leather", chance = 1000 }, -- minotaur leather
-	{ id = "minotaur trophy", chance = 90 }, -- minotaur trophy
+	{ id = "gold coin", chance = 100000, minCount = 3, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 49554, minCount = 1, maxCount = 4 },  -- 2152
+	{ id = "piece of warrior armor", chance = 14646 },  -- 12438
+	{ id = "small topaz", chance = 10342, minCount = 1, maxCount = 2 },  -- 9970
+	{ id = "minotaur horn", chance = 8233, minCount = 1, maxCount = 2 },  -- 12428
+	{ id = "small amethyst", chance = 5185 },  -- 2150
+	{ id = "minotaur leather", chance = 5128 },  -- 5878
+	{ id = "small ruby", chance = 4649 },  -- 2147
+	{ id = "mooh'tah plate", chance = 949 },  -- 23537
+	{ id = "blue piece of cloth", chance = 911 },  -- 5912
+	{ id = "guardian shield", chance = 815 },  -- 2515
+	{ id = "red gem", chance = 767 },  -- 2156
+	{ id = "warrior helmet", chance = 642 },  -- 2475
+	{ id = "knight axe", chance = 613 },  -- 2430
+	{ id = "red piece of cloth", chance = 604 },  -- 5911
+	{ id = 7401, chance = 220 },  -- minotaur trophy
+	{ id = "blue gem", chance = 211 },  -- 2158
+	{ id = "titan axe", chance = 163 },  -- 7413
 }
 
 monster.attacks = {

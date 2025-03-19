@@ -70,29 +70,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 6299, chance = 100000 }, -- death ring
-	{ id = 7430, chance = 100000 }, -- dragonbone staff
-	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
-	{ id = 2903, chance = 100000 }, -- golden mug
-	{ id = 3035, chance = 100000, maxCount = 10 }, -- platinum coin
-	{ id = "unholy bone", chance = 100000, maxCount = 3 }, -- unholy bone
-	{ id = 9058, chance = 78000 }, -- gold ingot
-	{ id = 6499, chance = 56000 }, -- demonic essence
-	{ id = 3370, chance = 47270 }, -- knight armor
-	{ id = 3385, chance = 40000 }, -- crown helmet
-	{ id = 7642, chance = 37000, maxCount = 3 }, -- great spirit potion
-	{ id = 5925, chance = 37000, maxCount = 5 }, -- hardened bone
-	{ id = 10451, chance = 37000 }, -- jade hat
-	{ id = "great health potion", chance = 35000, maxCount = 4 }, -- great health potion
-	{ id = 8896, chance = 35000 }, -- slightly rusted armor
-	{ id = 3032, chance = 33000, maxCount = 5 }, -- small emerald
-	{ id = 3029, chance = 33000, maxCount = 5 }, -- small sapphire
-	{ id = 238, chance = 25000, maxCount = 3 }, -- great mana potion
-	{ id = 3360, chance = 13500 }, -- golden armor
-	{ id = 12304, chance = 6780 }, -- maxilla maximus
-	{ id = 5741, chance = 5000 }, -- skull helmet
-	{ id = 8057, chance = 3390 }, -- divine plate
-	{ id = "royal helmet", chance = 1690 }, -- royal helmet
+	{ id = 6300, chance = 100000 },  -- death ring
+	{ id = "dragonbone staff", chance = 100000 },  -- 7430
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 100 },  -- 2148
+	{ id = "golden mug", chance = 100000 },  -- 2033
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 10 },  -- 2152
+	{ id = "unholy bone", chance = 100000, minCount = 1, maxCount = 3 },  -- 11233
+	{ id = "gold ingot", chance = 78161 },  -- 9971
+	{ id = "demonic essence", chance = 52874 },  -- 6500
+	{ id = "knight armor", chance = 45977 },  -- 2476
+	{ id = "crown helmet", chance = 42529 },  -- 2491
+	{ id = "great health potion", chance = 41379, minCount = 1, maxCount = 4 },  -- 7591
+	{ id = "small emerald", chance = 39080, minCount = 1, maxCount = 5 },  -- 2149
+	{ id = 9808, chance = 36782 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = "great spirit potion", chance = 34483, minCount = 1, maxCount = 3 },  -- 8472
+	{ id = "hardened bone", chance = 34483, minCount = 1, maxCount = 5 },  -- 5925
+	{ id = "small sapphire", chance = 32184, minCount = 1, maxCount = 5 },  -- 2146
+	{ id = "jade hat", chance = 31034 },  -- 11368
+	{ id = "great mana potion", chance = 26437, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "golden armor", chance = 13793 },  -- 2466
+	{ id = "royal helmet", chance = 5747 },  -- 2498
+	{ id = "maxilla maximus", chance = 4598 },  -- 13291
+	{ id = "skull helmet", chance = 4598 },  -- 5741
+	{ id = "divine plate", chance = 3448 },  -- 8885
 }
 
 monster.attacks = {

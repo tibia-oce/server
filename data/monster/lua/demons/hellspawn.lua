@@ -74,25 +74,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 93000, maxCount = 236 },
-	{ id = "morning star", chance = 10000 },
-	{ id = "warrior helmet", chance = 1886 },
-	{ id = "knight legs", chance = 3030 },
-	{ id = "red mushroom", chance = 7692, maxCount = 2 },
-	{ id = "demonic essence", chance = 9090 },
-	{ id = "battle shield", chance = 7500 },
-	{ id = "assassin star", chance = 9090, maxCount = 2 },
-	{ id = "onyx flail", chance = 103 },
-	{ id = "berserk potion", chance = 934 },
-	{ id = "spiked squelcher", chance = 970 },
-	{ id = "great health potion", chance = 40333 },
-	{ id = "ultimate health potion", chance = 9090 },
-	{ id = 8895, chance = 3125 }, -- rusted armor
-	{ id = 8896, chance = 3125 }, -- slightly rusted armor
-	{ id = 9034, chance = 140 }, -- dracoyle statue
-	{ id = "black skull", chance = 151 }, -- black skull
-	{ id = "small topaz", chance = 5882, maxCount = 3 },
-	{ id = "hellspawn tail", chance = 20000 },
+	{ id = "gold coin", chance = 99364, minCount = 1, maxCount = 236 },  -- 2148
+	{ id = "great health potion", chance = 40157 },  -- 7591
+	{ id = "hellspawn tail", chance = 19976 },  -- 11221
+	{ id = "battle shield", chance = 10144 },  -- 2513
+	{ id = "assassin star", chance = 9954, minCount = 1, maxCount = 2 },  -- 7368
+	{ id = "demonic essence", chance = 9888 },  -- 6500
+	{ id = "morning star", chance = 9844 },  -- 2394
+	{ id = "ultimate health potion", chance = 9841 },  -- 8473
+	{ id = "red mushroom", chance = 7931, minCount = 1, maxCount = 2 },  -- 2788
+	{ id = "small topaz", chance = 6129, minCount = 1, maxCount = 3 },  -- 9970
+	{ id = 9808, chance = 3211, minCount = 1, maxCount = 2 },  -- rusty armor
+	{ id = "knight legs", chance = 2934 },  -- 2477
+	{ id = "warrior helmet", chance = 1865 },  -- 2475
+	{ id = "berserk potion", chance = 898 },  -- 7439
+	{ id = "spiked squelcher", chance = 862 },  -- 7452
+	{ id = "black skull", chance = 178 },  -- 9969
+	{ id = 9948, chance = 110 },  -- dracoyle statue
+	{ id = "onyx flail", chance = 97 },  -- 7421
 }
 
 monster.attacks = {
