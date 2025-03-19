@@ -70,44 +70,44 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 7426, chance = 2000 }, -- amber staff
-	{ id = 7368, chance = 25000, maxCount = 10 }, -- assassin star
-	{ id = 3116, chance = 900 }, -- big bone
-	{ id = 3027, chance = 9200, maxCount = 4 }, -- black pearl
-	{ id = 16131, chance = 12500 }, -- blazing bone
-	{ id = 6558, chance = 20000, maxCount = 2 }, -- flask of demonic blood
-	{ id = 6499, chance = 20000 }, -- demonic essence
-	{ id = 4871, chance = 400 }, -- explorer brooch
-	{ id = 9636, chance = 10000 }, -- fiery heart
-	{ id = 3280, chance = 7000 }, -- fire sword
-	{ id = 3281, chance = 1000 }, -- giant sword
-	{ id = 9058, chance = 1500 }, -- gold ingot
-	{ id = 238, chance = 30000, maxCount = 3 }, -- great mana potion
-	{ id = 7642, chance = 20000 }, -- great spirit potion
-	{ id = 3038, chance = 1000 }, -- green gem
-	{ id = 3582, chance = 30000, maxCount = 14 }, -- ham
-	{ id = "hardened bone", chance = 10000 }, -- hardened bone
-	{ id = 9637, chance = 20000 }, -- hellhound slobber
-	{ id = 3318, chance = 7500 }, -- knight axe
-	{ id = 817, chance = 3000 }, -- magma amulet
-	{ id = 818, chance = 1500 }, -- magma boots
-	{ id = 826, chance = 800 }, -- magma coat
-	{ id = 821, chance = 1000 }, -- magma legs
-	{ id = "magma monocle", chance = 900 }, -- magma monocle
-	{ id = 7421, chance = 1000 }, -- onyx flail
-	{ id = 3035, chance = 100000, maxCount = 7 }, -- platinum coin
-	{ id = 3039, chance = 4500 }, -- red gem
-	{ id = 6553, chance = 1000 }, -- ruthless axe
-	{ id = 3032, chance = 10000, maxCount = 3 }, -- small emerald
-	{ id = 3030, chance = 10000, maxCount = 3 }, -- small ruby
-	{ id = 9057, chance = 10000, maxCount = 3 }, -- small topaz
-	{ id = 5944, chance = 20000 }, -- soul orb
-	{ id = 7643, chance = 16000 }, -- ultimate health potion
-	{ id = 3071, chance = 7000 }, -- wand of inferno
-	{ id = 3037, chance = 4500 }, -- yellow gem
-	{ id = 5911, chance = 3000 }, -- red piece of cloth
-	{ id = "green piece of cloth", chance = 5000 }, -- green piece of cloth
-	{ id = 5914, chance = 6000 }, -- yellow piece of cloth
+	{ id = "platinum coin", chance = 100000, minCount = 3, maxCount = 7 },  -- 2152
+	{ id = "great mana potion", chance = 30165, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "ham", chance = 30087 },  -- 2671
+	{ id = "assassin star", chance = 25445, minCount = 1, maxCount = 10 },  -- 7368
+	{ id = "great spirit potion", chance = 20530 },  -- 8472
+	{ id = "demonic essence", chance = 20491 },  -- 6500
+	{ id = "soul orb", chance = 20010 },  -- 5944
+	{ id = "hellhound slobber", chance = 19412 },  -- 10554
+	{ id = "concentrated demonic blood", chance = 19035 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "ultimate health potion", chance = 15668 },  -- 8473
+	{ id = "blazing bone", chance = 12885, minCount = 1, maxCount = 2 },  -- 18425
+	{ id = "small emerald", chance = 10480, minCount = 1, maxCount = 3 },  -- 2149
+	{ id = "small topaz", chance = 10454, minCount = 1, maxCount = 3 },  -- 9970
+	{ id = "small ruby", chance = 9973, minCount = 1, maxCount = 3 },  -- 2147
+	{ id = "fiery heart", chance = 9960 },  -- 10553
+	{ id = "hardened bone", chance = 9882 },  -- 5925
+	{ id = "black pearl", chance = 9661, minCount = 1, maxCount = 4 },  -- 2144
+	{ id = "knight axe", chance = 7515 },  -- 2430
+	{ id = "wand of inferno", chance = 7255 },  -- 2187
+	{ id = "fire sword", chance = 6527 },  -- 2392
+	{ id = "yellow piece of cloth", chance = 5890 },  -- 5914
+	{ id = "green piece of cloth", chance = 5331 },  -- 5910
+	{ id = "red gem", chance = 5058 },  -- 2156
+	{ id = "yellow gem", chance = 4421 },  -- 2154
+	{ id = "red piece of cloth", chance = 3394 },  -- 5911
+	{ id = "magma amulet", chance = 2795 },  -- 7890
+	{ id = "amber staff", chance = 2184 },  -- 7426
+	{ id = "gold ingot", chance = 2054 },  -- 9971
+	{ id = "magma boots", chance = 1508 },  -- 7891
+	{ id = "magma legs", chance = 1157 },  -- 7894
+	{ id = "green gem", chance = 1118 },  -- 2155
+	{ id = "magma monocle", chance = 1027 },  -- 7900
+	{ id = "onyx flail", chance = 962 },  -- 7421
+	{ id = 2231, chance = 949 },  -- big bone
+	{ id = "ruthless axe", chance = 871 },  -- 6553
+	{ id = "giant sword", chance = 793 },  -- 2393
+	{ id = "magma coat", chance = 793 },  -- 7899
+	{ id = "explorer brooch", chance = 351 },  -- 4873
 }
 
 monster.attacks = {

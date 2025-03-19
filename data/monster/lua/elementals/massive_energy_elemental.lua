@@ -69,17 +69,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 91 },
-	{ id = "small amethyst", chance = 3270, maxCount = 3 },
-	{ id = "strong mana potion", chance = 17450 },
-	{ id = "great mana potion", chance = 5450 },
-	{ id = "lightning pendant", chance = 730 },
-	{ id = "lightning legs", chance = 150 },
-	{ id = "spellbook of warding", chance = 360 },
-	{ id = "wand of starstorm", chance = 730 },
-	{ id = 8895, chance = 730 }, -- rusted armor
-	{ id = "shockwave amulet", chance = 500 },
+	{ id = "gold coin", chance = 0, maxCount = 5646 },  -- 2148
+	{ id = "flash arrow", chance = 0, maxCount = 33 },  -- 7838
+	{ id = "strong mana potion", chance = 0, maxCount = 10 },  -- 7589
+	{ id = "great mana potion", chance = 0, maxCount = 5 },  -- 7590
+	{ id = "rusty armor", chance = 0 },  -- todo: rusted armor does not exist in items.xml
+	{ id = "small amethyst", chance = 0, maxCount = 4 },  -- 2150
+	{ id = "energy spike sword", chance = 0 },  -- 7869
+	{ id = "lightning pendant", chance = 0 },  -- 7889
 }
 
 monster.attacks = {

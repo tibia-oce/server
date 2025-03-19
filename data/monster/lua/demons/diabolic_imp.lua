@@ -71,24 +71,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 40000, maxCount = 97 },
-	{ id = "gold coin", chance = 3390, maxCount = 7 },
-	{ id = "small amethyst", chance = 2250, maxCount = 3 },
-	{ id = "stealth ring", chance = 2702 }, -- stealth ring
-	{ id = "necrotic rod", chance = 830 },
-	{ id = "blank rune", chance = 16666, maxCount = 2 },
-	{ id = "double axe", chance = 1994 },
-	{ id = "scimitar", chance = 5660 }, -- scimitar
-	{ id = "guardian shield", chance = 8130 },
-	{ id = "pitchfork", chance = 50000 },
-	{ id = "cleaver", chance = 8830 },
-	{ id = "soul orb", chance = 7230 },
-	{ id = 6299, chance = 120 }, -- death ring
-	{ id = "demonic essence", chance = 8000 },
-	{ id = 6558, chance = 25000, maxCount = 2}, -- "flask of demonic blood"
-	{ id = "magma coat", chance = 250 },
-	{ id = "magma monocle", chance = 430 },
+	{ id = "gold coin", chance = 99406, minCount = 1, maxCount = 200 },  -- 2148
+	{ id = "pitchfork", chance = 50620 },  -- 2548
+	{ id = "concentrated demonic blood", chance = 24722 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "blank rune", chance = 14952, minCount = 1, maxCount = 2 },  -- 2260
+	{ id = "cleaver", chance = 8917 },  -- 2568
+	{ id = "guardian shield", chance = 8335 },  -- 2515
+	{ id = "demonic essence", chance = 7754 },  -- 6500
+	{ id = "soul orb", chance = 6940 },  -- 5944
+	{ id = 2419, chance = 5350 },  -- scimitar
+	{ id = "platinum coin", chance = 3438, minCount = 1, maxCount = 7 },  -- 2152
+	{ id = "stealth ring", chance = 2727 },  -- 2165
+	{ id = "small amethyst", chance = 2546, minCount = 1, maxCount = 3 },  -- 2150
+	{ id = "double axe", chance = 1758 },  -- 2387
+	{ id = "necrotic rod", chance = 801 },  -- 2185
+	{ id = "magma monocle", chance = 530 },  -- 7900
+	{ id = "magma coat", chance = 323 },  -- 7899
+	{ id = 6300, chance = 103 },  -- death ring
 }
 
 monster.attacks = {

@@ -72,37 +72,36 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3019, chance = 550 }, -- demonbone amulet
-	{ id = "small ruby", chance = 20000, maxCount = 4 },
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "gold coin", chance = 100000, maxCount = 100 },
-	{ id = "small emerald", chance = 20000, maxCount = 5 },
-	{ id = "platinum coin", chance = 100000, maxCount = 15 },
-	{ id = "violet gem", chance = 830 },
-	{ id = "green gem", chance = 869 },
-	{ id = "red gem", chance = 13850 }, -- red gem
-	{ id = "dragon hammer", chance = 9000 },
-	{ id = "heavy mace", chance = 400 },
-	{ id = "war axe", chance = 400 },
-	{ id = "golden armor", chance = 550 },
-	{ id = "golden legs", chance = 500 },
-	{ id = "knight armor", chance = 4990 },
-	{ id = "mastermind shield", chance = 800 },
-	{ id = "closed trap", chance = 280 }, -- closed trap
-	{ id = "ham", chance = 60000, maxCount = 8 },
-	{ id = "soul orb", chance = 33333 },
-	{ id = "demonic essence", chance = 45333 },
-	{ id = 6558, chance = 25000, maxCount = 4}, -- "flask of demonic blood"
-	{ id = "onyx arrow", chance = 11111, maxCount = 15 },
-	{ id = "assassin star", chance = 25000, maxCount = 10 },
-	{ id = "titan axe", chance = 4430 },
-	{ id = "spiked squelcher", chance = 7761 },
-	{ id = "great mana potion", chance = 35000 },
-	{ id = "great health potion", chance = 32000 },
-	{ id = "skullcracker armor", chance = 400 },
-	{ id = "gold ingot", chance = 7692, maxCount = 2 },
+	{ id = "gold coin", chance = 100000, minCount = 5, maxCount = 199 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 15 },  -- 2152
+	{ id = "ham", chance = 69383 },  -- 2671
+	{ id = "demonic essence", chance = 45250 },  -- 6500
+	{ id = "great mana potion", chance = 33474, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "soul orb", chance = 32813 },  -- 5944
+	{ id = "great health potion", chance = 32390, minCount = 1, maxCount = 3 },  -- 7591
+	{ id = "concentrated demonic blood", chance = 28605 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "assassin star", chance = 24477, minCount = 1, maxCount = 10 },  -- 7368
+	{ id = "small diamond", chance = 20640, minCount = 1, maxCount = 5 },  -- 2145
+	{ id = "small ruby", chance = 19555, minCount = 1, maxCount = 5 },  -- 2147
+	{ id = "small emerald", chance = 18841, minCount = 1, maxCount = 5 },  -- 2149
+	{ id = "small amethyst", chance = 18497, minCount = 1, maxCount = 5 },  -- 2150
+	{ id = "small topaz", chance = 18418, minCount = 1, maxCount = 5 },  -- 9970
+	{ id = "onyx arrow", chance = 15374, minCount = 1, maxCount = 15 },  -- 7365
+	{ id = "red gem", chance = 14845 },  -- 2156
+	{ id = "giant shimmering pearl", chance = 8918 },
+	{ id = "titan axe", chance = 8018 },  -- 7413
+	{ id = "gold ingot", chance = 7674, minCount = 1, maxCount = 2 },  -- 9971
+	{ id = "knight armor", chance = 6060 },  -- 2476
+	{ id = "spiked squelcher", chance = 5769 },  -- 7452
+	{ id = "war axe", chance = 2646 },  -- 2454
+	{ id = "green gem", chance = 2329 },  -- 2155
+	{ id = "violet gem", chance = 1508 },  -- 2153
+	{ id = "golden armor", chance = 635 },  -- 2466
+	{ id = "mastermind shield", chance = 582 },  -- 2514
+	{ id = "closed trap", chance = 450 },  -- 2578
+	{ id = 2136, chance = 423 },  -- demonbone amulet
+	{ id = "heavy mace", chance = 212 },  -- 2452
+	{ id = 7632, chance = 79 },  -- giant shimmering pearl
 }
 
 monster.attacks = {

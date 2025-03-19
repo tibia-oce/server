@@ -71,23 +71,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 99000, maxCount = 263 },
-	{ id = "platinum coin", chance = 5200, maxCount = 4 },
-	{ id = 3046, chance = 4850 }, -- magic light wand
-	{ id = "dark shield", chance = 3000 },
-	{ id = "scythe", chance = 9000 },
-	{ id = "orichalcum pearl", chance = 1400, maxCount = 4 },
-	{ id = 6299, chance = 330 }, -- death ring
-	{ id = "demonic essence", chance = 10600 },
-	{ id = 6558, chance = 35000 }, -- "flask of demonic blood"
-	{ id = "nightmare blade", chance = 880 },
-	{ id = "great mana potion", chance = 10000 },
-	{ id = "glacier kilt", chance = 330 },
-	{ id = "ultimate health potion", chance = 9600 },
-	{ id = "skullcracker armor", chance = 270 },
-	{ id = "underworld rod", chance = 910 },
-	{ id = 8896, chance = 2500 }, -- slightly rusted armor
-	{ id = "mystical hourglass", chance = 5300 },
+	{ id = "gold coin", chance = 98844, minCount = 1, maxCount = 273 },  -- 2148
+	{ id = "concentrated demonic blood", chance = 35095 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "demonic essence", chance = 10835 },  -- 6500
+	{ id = "ultimate health potion", chance = 10038 },  -- 8473
+	{ id = "scythe", chance = 9775 },  -- 2550
+	{ id = "great mana potion", chance = 9670 },  -- 7590
+	{ id = "platinum coin", chance = 5029, minCount = 1, maxCount = 4 },  -- 2152
+	{ id = 2162, chance = 4975 },  -- magic light wand
+	{ id = "mystical hourglass", chance = 4971 },  -- 10577
+	{ id = "dark shield", chance = 3133 },  -- 2521
+	{ id = 9808, chance = 2917 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = "orichalcum pearl", chance = 1425, minCount = 1, maxCount = 4 },  -- 5022
+	{ id = "underworld rod", chance = 908 },  -- 8910
+	{ id = "nightmare blade", chance = 638 },  -- 7418
+	{ id = "glacier kilt", chance = 302 },  -- 7896
+	{ id = "skullcracker armor", chance = 260 },  -- 8889
+	{ id = 6300, chance = 254 },  -- death ring
 }
 
 monster.attacks = {

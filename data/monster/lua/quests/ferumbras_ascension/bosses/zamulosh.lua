@@ -85,30 +85,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 22516, chance = 1000000 }, -- silver token
-	{ id = 3031, chance = 98000, maxCount = 200 }, -- gold coin
-	{ id = 281, chance = 14000, maxCount = 5 }, -- giant shimmering pearl (green)
-	{ id = 282, chance = 14000, maxCount = 5 }, -- giant shimmering pearl (brown)
-	{ id = 3029, chance = 12000, maxCount = 9 }, -- small sapphire
-	{ id = 3026, chance = 12000, maxCount = 8 }, -- white pearl
-	{ id = 3033, chance = 10000, maxCount = 5 }, -- small amethyst
-	{ id = 9057, chance = 10000, maxCount = 8 }, -- small topaz
-	{ id = 3035, chance = 8000, maxCount = 58 }, -- platinum coin
-	{ id = 6499, chance = 11000 }, -- demonic essence
-	{ id = 16122, chance = 10000, maxCount = 6 }, -- green crystal splinter
-	{ id = "brown crystal splinter", chance = 10000, maxCount = 6 }, -- brown crystal splinter
-	{ id = "blue crystal splinter", chance = 10000, maxCount = 6 }, -- blue crystal splinter
-	{ id = 3039, chance = 1000 }, -- red gem
-	{ id = 3037, chance = 1000 }, -- yellow gem
-	{ id = 3038, chance = 1000 }, -- green gem
-	{ id = 3041, chance = 1000 }, -- blue gem
-	{ id = 3053, chance = 6000 }, -- time ring
-	{ id = 3098, chance = 6000 }, -- ring of healing
-	{ id = 22867, chance = 770 }, -- rift crossbow
-	{ id = "crystalline armor", chance = 770 }, -- crystalline armor
-	{ id = 22726, chance = 670 }, -- rift shield
-	{ id = 22762, chance = 500, unique = true }, -- maimer
-	{ id = 22555, chance = 500, unique = true }, -- stone wall
+	{ id = "brown crystal splinter", chance = 0, maxCount = 6 },  -- 18417
+	{ id = "gold coin", chance = 0, maxCount = 101 },  -- 2148
+	{ id = "platinum coin", chance = 0, minCount = 20, maxCount = 35 },  -- 2152
+	{ id = "silver token", chance = 0 },  -- 25172
+	{ id = "stealth ring", chance = 0 },  -- 2165
+	{ id = 2169, chance = 0 },  -- time ring
+	{ id = "demonic essence", chance = 0 },  -- 6500
+	{ id = "great spirit potion", chance = 0, minCount = 5, maxCount = 10 },  -- 8472
+	{ id = "green crystal splinter", chance = 0, maxCount = 6 },  -- 18416
+	{ id = "blue crystal splinter", chance = 0, maxCount = 6 },  -- 18418
+	{ id = "concentrated demonic blood", chance = 0 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "great mana potion", chance = 0, maxCount = 5 },  -- 7590
+	{ id = "yellow gem", chance = 0 },  -- 2154
+	{ id = "red gem", chance = 0 },  -- 2156
+	{ id = "small amethyst", chance = 0, maxCount = 5 },  -- 2150
+	{ id = "small sapphire", chance = 0, maxCount = 5 },  -- 2146
+	{ id = "small topaz", chance = 0, maxCount = 5 },  -- 9970
+	{ id = "ultimate health potion", chance = 0, maxCount = 10 },  -- 8473
 }
 
 monster.attacks = {

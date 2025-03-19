@@ -74,22 +74,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "emerald bangle", chance = 1100 },
-	{ id = "small diamond", chance = 1020, maxCount = 2 },
-	{ id = "gold coin", chance = 90000, maxCount = 149 },
-	{ id = "platinum coin", chance = 9910 },
-	{ id = "moonlight rod", chance = 5500 },
-	{ id = "boots of haste", chance = 220 },
-	{ id = "strong health potion", chance = 5000 },
-	{ id = "strong mana potion", chance = 10210 },
-	{ id = 649, chance = 200 }, -- flower bouquet
-	{ id = "hibiscus dress", chance = 1030 },
-	{ id = "blood goblet", chance = 60 },
-	{ id = 8895, chance = 1010 }, -- rusted armor
-	{ id = "velvet tapestry", chance = 970 }, -- velvet tapestry
-	{ id = "vampire teeth", chance = 10000 },
-	{ id = "blood preservation", chance = 4950 },
-	{ id = "leather whip", chance = 20 },
+	{ id = "gold coin", chance = 93606, minCount = 1, maxCount = 149 },  -- 2148
+	{ id = "strong mana potion", chance = 10282 },  -- 7589
+	{ id = "platinum coin", chance = 9995 },  -- 2152
+	{ id = "vampire teeth", chance = 9968 },  -- 10602
+	{ id = "moonlight rod", chance = 5182 },  -- 2186
+	{ id = "blood preservation", chance = 5021 },  -- 12405
+	{ id = "strong health potion", chance = 4829 },  -- 7588
+	{ id = "emerald bangle", chance = 1056 },  -- 2127
+	{ id = "small diamond", chance = 1041, minCount = 1, maxCount = 2 },  -- 2145
+	{ id = "rusty armor", chance = 1023 },  -- todo: rusted armor does not exist in items.xml
+	{ id = "velvet tapestry", chance = 999 },  -- 9837
+	{ id = "hibiscus dress", chance = 993 },  -- 8873
+	{ id = "boots of haste", chance = 216 },  -- 2195
+	{ id = 7733, chance = 177 },  -- flower bouquet
+	{ id = "mysterious voodoo skull", chance = 131 },  -- 5669
+	{ id = "blood goblet", chance = 94 },  -- 9447
+	{ id = "leather whip", chance = 30 },  -- 13293
 }
 
 monster.attacks = {

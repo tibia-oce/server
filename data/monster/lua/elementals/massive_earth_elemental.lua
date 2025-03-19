@@ -69,20 +69,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small stone", chance = 25280, maxCount = 10 },
-	{ id = "gold coin", chance = 32000, maxCount = 100 },
-	{ id = "gold coin", chance = 32000, maxCount = 100 },
-	{ id = "gold coin", chance = 32000, maxCount = 41 },
-	{ id = "stone skin amulet", chance = 980 },
-	{ id = "protection amulet", chance = 1580 },
-	{ id = "dwarven ring", chance = 2790 }, -- dwarven ring
-	{ id = "diamond sceptre", chance = 150 },
-	{ id = "terra amulet", chance = 500 },
-	{ id = 8895, chance = 3300 }, -- rusted armor
-	{ id = "small topaz", chance = 5280, maxCount = 2 },
-	{ id = "lump of earth", chance = 40680 },
-	{ id = "clay lump", chance = 480 },
-	{ id = "coal", chance = 430 }, -- coal
+	{ id = "gold coin", chance = 93977, minCount = 1, maxCount = 241 },  -- 2148
+	{ id = "lump of earth", chance = 40309 },  -- 11222
+	{ id = "small stone", chance = 24492, minCount = 1, maxCount = 10 },  -- 1294
+	{ id = "rusty armor", chance = 5001 },  -- todo: rusted armor does not exist in items.xml
+	{ id = "small topaz", chance = 4918, minCount = 1, maxCount = 2 },  -- 9970
+	{ id = "small diamond", chance = 4642, minCount = 1, maxCount = 2 },  -- 2145
+	{ id = "dwarven ring", chance = 2915 },  -- 2213
+	{ id = "protection amulet", chance = 1810 },  -- 2200
+	{ id = "stone skin amulet", chance = 884 },  -- 2197
+	{ id = "terra amulet", chance = 566 },  -- 7887
+	{ id = "clay lump", chance = 483 },  -- 11339
+	{ id = 13757, chance = 470 },  -- coal
+	{ id = "diamond sceptre", chance = 180 },  -- 7387
 }
 
 monster.attacks = {

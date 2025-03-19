@@ -71,24 +71,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 250 },
-	{ id = "platinum coin", chance = 9240, maxCount = 10 },
-	{ id = "red gem", chance = 18200 }, -- red gem
-	{ id = "gold ingot", chance = 29700, maxCount = 5 },
-	{ id = "assassin star", chance = 29700, maxCount = 13 },
-	{ id = "demonic essence", chance = 330 },
-	{ id = "great spirit potion", chance = 330 },
-	{ id = "soul orb", chance = 19530 },
-	{ id = "small amethyst", chance = 8310, maxCount = 2 },
-	{ id = "small amethyst", chance = 8310, maxCount = 2 },
-	{ id = "ultimate health potion", chance = 700, maxCount = 4 },
-	{ id = "golden lotus brooch", chance = 19740 },
-	{ id = "green gem", chance = 15780 },
-	{ id = "magma coat", chance = 1050 },
-	{ id = "moonlight rod", chance = 1050 },
-	{ id = "necrotic rod", chance = 1050 },
-	{ id = "oriental shoes", chance = 490 },
-	{ id = "peacock feather fan", chance = 16870 },
+	{ id = "gold coin", chance = 100000, minCount = 57, maxCount = 246 },  -- 2148
+	{ id = "golden lotus brooch", chance = 100000 },  -- 24630
+	{ id = "peacock feather fan", chance = 100000 },  -- 24631
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 10 },  -- 2152
+	{ id = "assassin star", chance = 49057, minCount = 1, maxCount = 15 },  -- 7368
+	{ id = "concentrated demonic blood", chance = 37736 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "small amethyst", chance = 28302, minCount = 1, maxCount = 3 },  -- 2150
+	{ id = "demonic essence", chance = 26415 },  -- 6500
+	{ id = "soul orb", chance = 20755 },  -- 5944
+	{ id = "ultimate health potion", chance = 20755, minCount = 1, maxCount = 5 },  -- 8473
+	{ id = 2124, chance = 16981 },  -- crystal ring
+	{ id = "great mana potion", chance = 16981, minCount = 1, maxCount = 5 },  -- 7590
+	{ id = "great spirit potion", chance = 9434, minCount = 1, maxCount = 5 },  -- 8472
+	{ id = "moonlight rod", chance = 9434 },  -- 2186
+	{ id = "red gem", chance = 9434 },  -- 2156
+	{ id = "gold ingot", chance = 3774 },  -- 9971
+	{ id = "green gem", chance = 3774 },  -- 2155
+	{ id = "oriental shoes", chance = 3774 },  -- 24637
+	{ id = "assassin dagger", chance = 1887 },  -- 7404
+	{ id = 6300, chance = 1887 },  -- death ring
+	{ id = "necrotic rod", chance = 1887 },  -- 2185
 }
 
 monster.attacks = {

@@ -68,21 +68,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3035, chance = 100000, maxCount = 18 }, -- platinum coin
-	{ id = 3027, chance = 96880, maxCount = 5 }, -- black pearl
-	{ id = 6558, chance = 100000 }, -- flask of demonic blood
-	{ id = 6499, chance = 62500 }, -- demonic essence
-	{ id = 9058, chance = 100000, maxCount = 5 }, -- gold ingot
-	{ id = "knight axe", chance = 10810 }, -- knight axe
-	{ id = 6553, chance = 6250 }, -- ruthless axe
-	{ id = 9637, chance = 100000 }, -- hellhound slobber
-	{ id = 3038, chance = 50000 }, -- green gem
-	{ id = 3280, chance = 46880 }, -- fire sword
-	{ id = "explorer brooch", chance = 65630 }, -- explorer brooch
-	{ id = 817, chance = 96880 }, -- magma amulet
-	{ id = 238, chance = 96880, maxCount = 3 }, -- great mana potion
-	{ id = 7453, chance = 3130 }, -- executioner
-	{ id = "golden armor", chance = 31250 }, -- golden armor
+	{ id = "concentrated demonic blood", chance = 100000 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "gold ingot", chance = 100000, minCount = 1, maxCount = 5 },  -- 9971
+	{ id = "hellhound slobber", chance = 100000 },  -- 10554
+	{ id = "platinum coin", chance = 100000, minCount = 5, maxCount = 19 },  -- 2152
+	{ id = "black pearl", chance = 97619, minCount = 1, maxCount = 5 },  -- 2144
+	{ id = "great mana potion", chance = 97619, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "magma amulet", chance = 97619 },  -- 7890
+	{ id = "knight axe", chance = 71429 },  -- 2430
+	{ id = "demonic essence", chance = 69048 },  -- 6500
+	{ id = "explorer brooch", chance = 66667 },  -- 4873
+	{ id = "fire sword", chance = 52381 },  -- 2392
+	{ id = "green gem", chance = 45238 },  -- 2155
+	{ id = "golden armor", chance = 28571 },  -- 2466
+	{ id = "ruthless axe", chance = 7143 },  -- 6553
+	{ id = "executioner", chance = 2381 },  -- 7453
 }
 
 monster.attacks = {

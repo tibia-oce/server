@@ -87,8 +87,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "glooth glider casing", chance = 1000, unique = true }, -- glooth glider casing
-	{ id = "feedbag", chance = 1000 }, -- feedbag
+	{ id = "glooth bag", chance = 0, minCount = 1, maxCount = 3 },  -- 23574
+	{ id = "glooth glider casing", chance = 0 },  -- 24270
+	{ id = "platinum coin", chance = 0, minCount = 1, maxCount = 4 },  -- 2152
+	{ id = "rusty armor", chance = 0 },  -- todo: rusted armor does not exist in items.xml
+	{ id = "gold ingot", chance = 0 },  -- 9971
+	{ id = 9808, chance = 0 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
+	{ id = "feedbag", chance = 0 },  -- 23663
 }
 
 monster.attacks = {

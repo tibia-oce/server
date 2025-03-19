@@ -69,23 +69,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small diamond", chance = 11800, maxCount = 4 },
-	{ id = "gold coin", chance = 100000, maxCount = 200 },
-	{ id = "platinum coin", chance = 100000, maxCount = 8 },
-	{ id = "power bolt", chance = 50000, maxCount = 5 },
-	{ id = "orichalcum pearl", chance = 8000, maxCount = 2 },
-	{ id = "skull helmet", chance = 390 },
-	{ id = "golden figurine", chance = 160 },
-	{ id = "soul orb", chance = 10000 },
-	{ id = 6299, chance = 390 }, -- death ring
-	{ id = "demonic essence", chance = 19430 },
-	{ id = 6558, chance = 65250 }, -- "flask of demonic blood"
-	{ id = "assassin star", chance = 10780, maxCount = 5 },
-	{ id = "mercenary sword", chance = 1890 },
-	{ id = "bloody edge", chance = 80 },
-	{ id = "great mana potion", chance = 15000, maxCount = 3 },
-	{ id = "ultimate health potion", chance = 15410 },
-	{ id = "unholy bone", chance = 18410 },
+	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 8 },  -- 2152
+	{ id = "concentrated demonic blood", chance = 65559 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "power bolt", chance = 49859, minCount = 1, maxCount = 15 },  -- 2547
+	{ id = "demonic essence", chance = 20390 },  -- 6500
+	{ id = "unholy bone", chance = 19585 },  -- 11233
+	{ id = "ultimate health potion", chance = 15112 },  -- 8473
+	{ id = "great mana potion", chance = 14767, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "small diamond", chance = 11808, minCount = 1, maxCount = 4 },  -- 2145
+	{ id = "assassin star", chance = 9668, minCount = 1, maxCount = 5 },  -- 7368
+	{ id = "soul orb", chance = 9361 },  -- 5944
+	{ id = "orichalcum pearl", chance = 6403, minCount = 1, maxCount = 2 },  -- 5022
+	{ id = "mercenary sword", chance = 1508 },  -- 7386
+	{ id = 6300, chance = 396 },  -- death ring
+	{ id = "skull helmet", chance = 377 },  -- 5741
+	{ id = "golden figurine", chance = 128 },  -- 5799
+	{ id = "bloody edge", chance = 102 },  -- 7416
 }
 
 monster.attacks = {

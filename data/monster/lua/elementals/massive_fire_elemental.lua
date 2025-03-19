@@ -67,16 +67,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small ruby", chance = 6100, maxCount = 2 },
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 25000, maxCount = 100 },
-	{ id = "gold coin", chance = 25000, maxCount = 12 },
-	{ id = "wand of inferno", chance = 2240 },
-	{ id = "fire sword", chance = 530 },
-	{ id = "magma amulet", chance = 1300 },
-	{ id = "magma boots", chance = 560 },
-	{ id = "magma legs", chance = 210 },
-	{ id = 8895, chance = 1330 }, -- rusted armor
+	{ id = "gold coin", chance = 99991, minCount = 1, maxCount = 217 },  -- 2148
+	{ id = "platinum coin", chance = 15193 },  -- 2152
+	{ id = "rusty armor", chance = 7792 },  -- todo: rusted armor does not exist in items.xml
+	{ id = "small ruby", chance = 7049, minCount = 1, maxCount = 2 },  -- 2147
+	{ id = "wand of inferno", chance = 2387 },  -- 2187
+	{ id = "magma amulet", chance = 919 },  -- 7890
+	{ id = "magma boots", chance = 604 },  -- 7891
+	{ id = "fire sword", chance = 474 },  -- 2392
+	{ id = "magma legs", chance = 186 },  -- 7894
 }
 
 monster.attacks = {

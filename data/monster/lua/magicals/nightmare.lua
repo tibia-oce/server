@@ -75,23 +75,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 55 },
-	{ id = "platinum coin", chance = 2564, maxCount = 3 },
-	{ id = "boots of haste", chance = 337 },
-	{ id = "war axe", chance = 95 },
-	{ id = "knight legs", chance = 961 },
-	{ id = "ancient shield", chance = 990 },
-	{ id = "power bolt", chance = 9090, maxCount = 4 },
-	{ id = "ham", chance = 29000, maxCount = 2 },
-	{ id = "mysterious voodoo skull", chance = 123 },
-	{ id = "soul orb", chance = 20000 },
-	{ id = 6299, chance = 1298 }, -- death ring
-	{ id = "demonic essence", chance = 10000 },
-	{ id = "skeleton decoration", chance = 337 },
-	{ id = 6558, chance = 19666, maxCount = 2}, -- "flask of demonic blood"
-	{ id = "essence of a bad dream", chance = 15240 },
-	{ id = "scythe leg", chance = 9090 },
+	{ id = "gold coin", chance = 96915, minCount = 1, maxCount = 155 },  -- 2148
+	{ id = "ham", chance = 29502 },  -- 2671
+	{ id = "soul orb", chance = 21323 },  -- 5944
+	{ id = "concentrated demonic blood", chance = 19778 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "essence of a bad dream", chance = 15126 },  -- 11223
+	{ id = "demonic essence", chance = 10050 },  -- 6500
+	{ id = "scythe leg", chance = 10025 },  -- 11229
+	{ id = "power bolt", chance = 7365, minCount = 1, maxCount = 4 },  -- 2547
+	{ id = "platinum coin", chance = 2532, minCount = 1, maxCount = 3 },  -- 2152
+	{ id = 6300, chance = 1167 },  -- death ring
+	{ id = "ancient shield", chance = 984 },  -- 2532
+	{ id = "knight legs", chance = 971 },  -- 2477
+	{ id = "skeleton decoration", chance = 342 },  -- 6526
+	{ id = "boots of haste", chance = 322 },  -- 2195
+	{ id = "war axe", chance = 111 },  -- 2454
+	{ id = "mysterious voodoo skull", chance = 103 },  -- 5669
 }
 
 monster.attacks = {

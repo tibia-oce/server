@@ -75,25 +75,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 98000, maxCount = 230 }, -- gold coin
-	{ id = 3053, chance = 800 }, -- time ring
-	{ id = "platinum amulet", chance = 870 },
-	{ id = "stone skin amulet", chance = 1000 },
-	{ id = 2381, chance = 3000 },
-	{ id = "epee", chance = 560 },
-	{ id = "plate shield", chance = 10340 },
-	{ id = "brown mushroom", chance = 6940 },
-	{ id = "troll green", chance = 1900 },
-	{ id = "wolf paw", chance = 5200 },
-	{ id = "relic sword", chance = 480 },
-	{ id = "dreaded cleaver", chance = 160 },
-	{ id = "bonebreaker", chance = 400 },
-	{ id = "berserk potion", chance = 1200 },
-	{ id = "strong health potion", chance = 5000 },
-	{ id = "ultimate health potion", chance = 2400 },
-	{ id = 8895, chance = 210 }, -- rusted armor
-	{ id = "werewolf fangs", chance = 15000 }, -- werewolf fangs
-	{ id = "werewolf fur", chance = 10650 },
+	{ id = "gold coin", chance = 98759, minCount = 1, maxCount = 301 },  -- 2148
+	{ id = "werewolf fangs", chance = 14759 },  -- 24708
+	{ id = "werewolf fur", chance = 9828 },  -- 11234
+	{ id = "plate shield", chance = 9714, minCount = 1, maxCount = 2 },  -- 2510
+	{ id = "rusty armor", chance = 7954 },  -- todo: rusted armor does not exist in items.xml
+	{ id = "brown mushroom", chance = 6873 },  -- 2789
+	{ id = "strong health potion", chance = 5246, minCount = 1, maxCount = 2 },  -- 7588
+	{ id = "wolf paw", chance = 5210 },  -- 5897
+	{ id = "troll green", chance = 5050 },  -- 2805
+	{ id = 2381, chance = 3084 },  -- halberd
+	{ id = "ultimate health potion", chance = 2064 },  -- 8473
+	{ id = "berserk potion", chance = 952 },  -- 7439
+	{ id = "stone skin amulet", chance = 891 },  -- 2197
+	{ id = "platinum amulet", chance = 803 },  -- 2171
+	{ id = "moonlight crystals", chance = 695 },  -- 24739
+	{ id = 2169, chance = 582 },  -- time ring
+	{ id = "epee", chance = 453 },  -- 2438
+	{ id = "relic sword", chance = 381 },  -- 7383
+	{ id = "bonebreaker", chance = 268 },  -- 7428
+	{ id = "dreaded cleaver", chance = 108 },  -- 7419
 }
 
 monster.attacks = {

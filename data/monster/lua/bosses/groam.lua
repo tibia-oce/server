@@ -76,11 +76,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 100000, maxCount = 50 },
-	{ id = "hunting spear", chance = 31250, maxCount = 4 },
-	{ id = "life ring", chance = 25000 }, -- life ring
-	-- { id = "rusted armor", chance = 6250 },
-	{ id = "fish fin", chance = 1500 },
+	{ id = "gold coin", chance = 86957, minCount = 5, maxCount = 87 },  -- 2148
+	{ id = "hunting spear", chance = 26087, minCount = 1, maxCount = 5 },  -- 3965
+	{ id = "life ring", chance = 26087 },  -- 2168
+	{ id = "fish fin", chance = 8696 },  -- 5895
+	{ id = "rusty armor", chance = 8696 },  -- todo: rusted armor does not exist in items.xml
+	{ id = "flask of rust remover", chance = 4348 },  -- 9930
+	{ id = "heavy trident", chance = 4348 },  -- 13838
 }
 
 monster.attacks = {

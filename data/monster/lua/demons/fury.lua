@@ -70,25 +70,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3007, chance = 410 }, -- crystal ring
-	{ id = "gold coin", chance = 30000, maxCount = 100 },
-	{ id = "gold coin", chance = 30000, maxCount = 100 },
-	{ id = "gold coin", chance = 38000, maxCount = 69 },
-	{ id = "platinum coin", chance = 2800, maxCount = 4 },
-	{ id = "terra rod", chance = 20000 },
-	{ id = "golden legs", chance = 130 },
-	{ id = "steel boots", chance = 790 },
-	{ id = "orichalcum pearl", chance = 1500, maxCount = 4 },
-	{ id = "red piece of cloth", chance = 4000 },
-	{ id = "soul orb", chance = 21500 },
-	{ id = "soul orb", chance = 50 },
-	{ id = 6300, chance = 60 }, -- death ring
-	{ id = "demonic essence", chance = 22500 },
-	{ id = 6558, chance = 35000, maxCount = 3}, -- "flask of demonic blood"
-	{ id = "assassin dagger", chance = 660 },
-	{ id = "noble axe", chance = 2000 },
-	{ id = "great health potion", chance = 10500 },
-	{ id = "jalapeno pepper", chance = 29280, maxCount = 4 },
+	{ id = "gold coin", chance = 98798, minCount = 1, maxCount = 273 },  -- 2148
+	{ id = "concentrated demonic blood", chance = 34138 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "jalapeno pepper", chance = 29838, minCount = 1, maxCount = 4 },  -- 8844
+	{ id = "demonic essence", chance = 22288 },  -- 6500
+	{ id = "terra rod", chance = 20150 },  -- 2181
+	{ id = "soul orb", chance = 19827 },  -- 5944
+	{ id = 9811, chance = 10100 },  -- rusty legs (todo: slightly rusted does not exist in items.xml)
+	{ id = "great health potion", chance = 9873 },  -- 7591
+	{ id = "small amethyst", chance = 8180, minCount = 1, maxCount = 3 },  -- 2150
+	{ id = "red piece of cloth", chance = 4001 },  -- 5911
+	{ id = "platinum coin", chance = 2513, minCount = 1, maxCount = 4 },  -- 2152
+	{ id = "noble axe", chance = 2031 },  -- 7456
+	{ id = "orichalcum pearl", chance = 1372, minCount = 1, maxCount = 4 },  -- 5022
+	{ id = "assassin dagger", chance = 813 },  -- 7404
+	{ id = "steel boots", chance = 781 },  -- 2645
+	{ id = 2124, chance = 448 },  -- crystal ring
+	{ id = "golden legs", chance = 103 },  -- 2470
+	{ id = "assassin star", chance = 101 },  -- 7368
+	{ id = 6300, chance = 85 },  -- death ring
 }
 
 monster.attacks = {

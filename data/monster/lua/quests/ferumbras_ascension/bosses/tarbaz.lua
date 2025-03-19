@@ -78,37 +78,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 22516, chance = 1000000 }, -- silver token
-	{ id = 6558, chance = 10000 }, -- flask of demonic blood
-	{ id = 6558, chance = 10000 }, -- flask of demonic blood
-	{ id = 6558, chance = 10000 }, -- flask of demonic blood
-	{ id = 6558, chance = 10000 }, -- flask of demonic blood
-	{ id = 6558, chance = 10000 }, -- flask of demonic blood
-	{ id = 3037, chance = 1000 }, -- yellow gem
-	{ id = 3031, chance = 98000, maxCount = 184 }, -- gold coin
-	{ id = 238, chance = 23000, maxCount = 10 }, -- great mana potion
-	{ id = 281, chance = 14000, maxCount = 5 }, -- giant shimmering pearl (green)
-	{ id = 282, chance = 14000, maxCount = 5 }, -- giant shimmering pearl (brown)
-	{ id = 7642, chance = 46100, maxCount = 10 }, -- great spirit potion
-	{ id = 7643, chance = 23000, maxCount = 10 }, -- ultimate health potion
-	{ id = 9057, chance = 10000, maxCount = 8 }, -- small topaz
-	{ id = 3029, chance = 12000, maxCount = 9 }, -- small sapphire
-	{ id = 3026, chance = 12000, maxCount = 8 }, -- white pearl
-	{ id = 3038, chance = 1000 }, -- green gem
-	{ id = 815, chance = 4000 }, -- glacier amulet
-	{ id = 823, chance = 1000 }, -- glacier kilt
-	{ id = "glacier robe", chance = 1000 }, -- glacier robe
-	{ id = 3033, chance = 10000, maxCount = 5 }, -- small amethyst
-	{ id = 3035, chance = 8000, maxCount = 58 }, -- platinum coin
-	{ id = 16119, chance = 10000, maxCount = 5 }, -- blue crystal shard
-	{ id = 16120, chance = 10000, maxCount = 5 }, -- violet crystal shard
-	{ id = 16121, chance = 10000, maxCount = 5 }, -- green crystal shard
-	{ id = 3036, chance = 1000 }, -- violet gem
-	{ id = 22867, chance = 800 }, -- rift crossbow
-	{ id = "rift lance", chance = 800 }, -- rift lance
-	{ id = 3038, chance = 1000 }, -- green gem
-	{ id = "underworld rod", chance = 4000 }, -- underworld rod
-	{ id = 22757, chance = 500, unique = true }, -- shroud of despair
+	{ id = "concentrated demonic blood", chance = 0 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "gold coin", chance = 0, maxCount = 200 },  -- 2148
+	{ id = "green crystal shard", chance = 0, maxCount = 3 },  -- 18415
+	{ id = "platinum coin", chance = 0, minCount = 20, maxCount = 30 },  -- 2152
+	{ id = "silver token", chance = 0 },  -- 25172
+	{ id = "small topaz", chance = 0, maxCount = 5 },  -- 9970
+	{ id = "ultimate health potion", chance = 0, maxCount = 5 },  -- 8473
+	{ id = "chaos mace", chance = 0 },  -- 7427
+	{ id = "demonic essence", chance = 0 },  -- 6500
+	{ id = "energy ring", chance = 0 },  -- 2167
+	{ id = "great mana potion", chance = 0, maxCount = 5 },  -- 7590
+	{ id = "rift shield", chance = 0 },  -- 25382
+	{ id = "yellow gem", chance = 0 },  -- 2154
+	{ id = "blue crystal shard", chance = 0, maxCount = 3 },  -- 18413
+	{ id = "great spirit potion", chance = 0, maxCount = 5 },  -- 8472
+	{ id = "green gem", chance = 0 },  -- 2155
+	{ id = "underworld rod", chance = 0 },  -- 8910
+	{ id = "violet crystal shard", chance = 0, maxCount = 3 },  -- 18414
 }
 
 monster.attacks = {
