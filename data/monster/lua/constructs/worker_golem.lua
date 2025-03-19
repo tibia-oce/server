@@ -74,25 +74,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small diamond", chance = 1000, maxCount = 2 },
-	{ id = "gold coin", chance = 43000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 40 },
-	{ id = "might ring", chance = 370 },
-	{ id = "life crystal", chance = 890 },
-	{ id = "war hammer", chance = 920 },
-	{ id = "iron ore", chance = 1001 },
-	{ id = "bonebreaker", chance = 130 },
-	{ id = "berserk potion", chance = 820 },
-	{ id = "spiked squelcher", chance = 1003 },
-	{ id = "great mana potion", chance = 1470 },
-	{ id = "great health potion", chance = 2100 },
-	{ id = "nail", chance = 5000, maxCount = 5 },
-	{ id = "great spirit potion", chance = 830 },
-	{ id = 9690, chance = 1007}, -- "gear wheel"
-	{ id = 8895, chance = 200 }, -- rusted armor
-	{ id = 8898, chance = 50 }, -- rusted legs
-	{ id = 9066, chance = 2270 }, -- crystal pedestal
-	{ id = "gear crystal", chance = 2270 },
+	{ id = "gold coin", chance = 93746, minCount = 1, maxCount = 139 },  -- 2148
+	{ id = "nail", chance = 4845, minCount = 1, maxCount = 5 },  -- 8309
+	{ id = "gear crystal", chance = 2190 },  -- 10572
+	{ id = "great health potion", chance = 1955 },  -- 7591
+	{ id = "great mana potion", chance = 1567 },  -- 7590
+	{ id = "rusty armor", chance = 1562 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9690, chance = 1045 },  -- gear wheel
+	{ id = "life crystal", chance = 1025 },  -- 2177
+	{ id = "war hammer", chance = 997 },  -- 2391
+	{ id = "small diamond", chance = 963, minCount = 1, maxCount = 2 },  -- 2145
+	{ id = "rusty legs", chance = 901 },  -- todo: rusted legs does not exist in items.xml
+	{ id = "spiked squelcher", chance = 891 },  -- 7452
+	{ id = "iron ore", chance = 867 },  -- 5880
+	{ id = "great spirit potion", chance = 829 },  -- 8472
+	{ id = "berserk potion", chance = 781 },  -- 7439
+	{ id = "might ring", chance = 508 },  -- 2164
+	{ id = 9978, chance = 153 },  -- crystal pedestal (cyan)
+	{ id = "bonebreaker", chance = 110 },  -- 7428
 }
 
 monster.attacks = {

@@ -79,19 +79,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "book", chance = 730 }, -- book
-	{ id = "gold coin", chance = 66940, maxCount = 40 },
-	{ id = "small emerald", chance = 550 },
-	{ id = "life ring", chance = 560 }, -- life ring
-	{ id = "terra rod", chance = 250 },
-	{ id = "dragon necklace", chance = 1050 },
-	{ id = "morning star", chance = 4990 },
-	{ id = "pirate voodoo doll", chance = 1060 },
-	{ id = 6088, chance = 480 }, -- music sheet
-	{ id = "cultish robe", chance = 8070 },
-	{ id = "cultish symbol", chance = 40 },
-	{ id = "rope belt", chance = 10420 },
-	{ id = "broken key ring", chance = 60 },
+	{ id = "gold coin", chance = 65907, minCount = 1, maxCount = 40 },  -- 2148
+	{ id = "rope belt", chance = 10119 },  -- 12448
+	{ id = "cultish robe", chance = 7994 },  -- 10556
+	{ id = "morning star", chance = 4922 },  -- 2394
+	{ id = "dragon necklace", chance = 1078 },  -- 2201
+	{ id = "pirate voodoo doll", chance = 1052 },  -- 5810
+	{ id = 1950, chance = 771 },  -- book (orange)
+	{ id = "life ring", chance = 516 },  -- 2168
+	{ id = "small emerald", chance = 510 },  -- 2149
+	{ id = 6088, chance = 443 },  -- music sheet (second verse)
+	{ id = "terra rod", chance = 197 },  -- 2181
+	{ id = "cultish symbol", chance = 70 },  -- 12411
+	{ id = "broken key ring", chance = 55 },  -- 12608
 }
 
 monster.attacks = {

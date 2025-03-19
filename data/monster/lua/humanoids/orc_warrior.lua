@@ -69,16 +69,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 65000, maxCount = 15 },
-	{ id = "poison dagger", chance = 120 },
-	{ id = "chain armor", chance = 7360 },
-	{ id = "copper shield", chance = 560 },
-	{ id = "meat", chance = 15000 },
-	{ id = "orc tooth", chance = 700 },
-	{ id = "broken helmet", chance = 10800 },
-	{ id = "orc leather", chance = 4000 },
-	{ id = "skull belt", chance = 980 },
-	{ id = 23986, chance = 1000 }, -- heavy old tome
+	{ id = "gold coin", chance = 65157, minCount = 1, maxCount = 15 },  -- 2148
+	{ id = "meat", chance = 14934 },  -- 2666
+	{ id = "broken helmet", chance = 10030 },  -- 12409
+	{ id = "chain armor", chance = 7402 },  -- 2464
+	{ id = "orc leather", chance = 3979 },  -- 12435
+	{ id = "skull belt", chance = 982 },  -- 12436
+	{ id = "orc tooth", chance = 788 },  -- 11113
+	{ id = "copper shield", chance = 492 },  -- 2530
+	{ id = "poison dagger", chance = 115 },  -- 2411
+	-- { id = "heavy old tome", chance = 3 },  -- todo: heavy old tome does not exist in items.xml
 }
 
 monster.attacks = {

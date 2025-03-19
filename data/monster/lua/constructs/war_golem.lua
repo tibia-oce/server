@@ -79,30 +79,30 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 37500, maxCount = 90 }, -- gold coin
-	{ id = 3031, chance = 375000, maxCount = 80 }, -- gold coin
-	{ id = 953, chance = 5260, maxCount = 5 }, -- nail
-	{ id = 3265, chance = 5500 }, -- two handed sword
-	{ id = 3410, chance = 9000 }, -- plate shield
-	{ id = 3282, chance = 7000 }, -- morning star
-	{ id = 3413, chance = 6500 }, -- battle shield
-	{ id = 7643, chance = 10080 }, -- ultimate health potion
-	{ id = 238, chance = 8860 }, -- great mana potion
-	{ id = 5880, chance = 1920 }, -- iron ore
-	{ id = 7439, chance = 900 }, -- berserk potion
-	{ id = 3326, chance = 6400 }, -- epee
-	{ id = 8895, chance = 260 }, -- rusted armor
-	{ id = 3093, chance = 810 }, -- club ring
-	{ id = "dwarven ring", chance = 1210 }, -- dwarven ring
-	{ id = 9067, chance = 130 }, -- crystal of power
-	{ id = 9065, chance = 1080 }, -- crystal pedestal
-	{ id = 820, chance = 90 }, -- lightning boots
-	{ id = 3554, chance = 620 }, -- steel boots
-	{ id = 7403, chance = 50 }, -- berserker
-	{ id = "jade hammer", chance = 120 }, -- jade hammer
-	{ id = "bonebreaker", chance = 770 }, -- bonebreaker
-	{ id = 3061, chance = 1000 }, -- life crystal
-	{ id = 12305, chance = 100 }, -- tin key
+	{ id = "gold coin", chance = 99506, minCount = 1, maxCount = 264 },  -- 2148
+	{ id = "ultimate health potion", chance = 10238 },  -- 8473
+	{ id = "plate shield", chance = 8958 },  -- 2510
+	{ id = "great mana potion", chance = 8877 },  -- 7590
+	{ id = "war crystal", chance = 8288 },  -- 10571
+	{ id = "morning star", chance = 7904 },  -- 2394
+	{ id = "epee", chance = 6720 },  -- 2438
+	{ id = "nail", chance = 5258, minCount = 1, maxCount = 5 },  -- 8309
+	{ id = "battle shield", chance = 4885 },  -- 2513
+	{ id = "two handed sword", chance = 4860 },  -- 2377
+	{ id = "rusty armor", chance = 2934 },  -- todo: rusted armor does not exist in items.xml
+	{ id = "iron ore", chance = 1769 },  -- 5880
+	{ id = "dwarven ring", chance = 1195 },  -- 2213
+	{ id = 9976, chance = 1094 },  -- crystal pedestal (red)
+	{ id = "life crystal", chance = 1044 },  -- 2177
+	{ id = "berserk potion", chance = 973 },  -- 7439
+	{ id = "club ring", chance = 867 },  -- 2209
+	{ id = "bonebreaker", chance = 736 },  -- 7428
+	{ id = "steel boots", chance = 549 },  -- 2645
+	{ id = "crystal of power", chance = 116 },  -- 9980
+	{ id = "jade hammer", chance = 116 },  -- 7422
+	{ id = "lightning boots", chance = 71 },  -- 7893
+	{ id = "berserker", chance = 35 },  -- 7403
+	{ id = "tin key", chance = 10 },  -- 13292
 }
 
 monster.attacks = {

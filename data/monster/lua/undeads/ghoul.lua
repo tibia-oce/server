@@ -66,18 +66,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2920, chance = 5000 }, -- torch
-	{ id = "gold coin", chance = 68000, maxCount = 30 },
-	{ id = "life ring", chance = 180 }, -- life ring
-	{ id = 3114, chance = 240 }, -- skull
-	{ id = "viking helmet", chance = 990 },
-	{ id = "scale armor", chance = 1000 },
-	{ id = "worm", chance = 9600, maxCount = 2 },
-	{ id = "brown piece of cloth", chance = 1000 },
-	{ id = "rotten piece of cloth", chance = 14470 },
-	{ id = "ghoul snack", chance = 5130 },
-	{ id = "pile of grave earth", chance = 950 },
-	{ id = 23986, chance = 1000 }, -- heavy old tome
+	{ id = "gold coin", chance = 69621, minCount = 1, maxCount = 30 },  -- 2148
+	{ id = "rotten piece of cloth", chance = 14884 },  -- 11208
+	{ id = "worm", chance = 9925, minCount = 1, maxCount = 2 },  -- 3976
+	{ id = "ghoul snack", chance = 4999 },  -- 12423
+	{ id = 2050, chance = 4945 },  -- torch
+	{ id = "scale armor", chance = 1008 },  -- 2483
+	{ id = "viking helmet", chance = 1000 },  -- 2473
+	{ id = "brown piece of cloth", chance = 996 },  -- 5913
+	{ id = "pile of grave earth", chance = 964 },  -- 12440
+	{ id = 2229, chance = 301 },  -- skull
+	{ id = "life ring", chance = 197, minCount = 1, maxCount = 2 },  -- 2168
+	-- { id = "heavy old tome", chance = 193 },  -- todo: heavy old tome does not exist in items.xml
 }
 
 monster.attacks = {

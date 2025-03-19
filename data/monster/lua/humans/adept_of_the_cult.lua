@@ -79,22 +79,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "book", chance = 940 }, -- book
-	{ id = "small ruby", chance = 320 },
-	{ id = "gold coin", chance = 65520, maxCount = 60 },
-	{ id = 3053, chance = 420 }, -- time ring
-	{ id = "silver amulet", chance = 1020 },
-	{ id = "hailstorm rod", chance = 220 },
-	{ id = "clerical mace", chance = 1260 },
-	{ id = "red robe", chance = 80 },
-	{ id = "pirate voodoo doll", chance = 1730 },
-	{ id = 6089, chance = 700 }, -- music sheet
-	{ id = "lunar staff", chance = 120 },
-	{ id = "amber staff", chance = 680 },
-	{ id = "cultish robe", chance = 10080 },
-	{ id = "cultish symbol", chance = 90 },
-	{ id = "rope belt", chance = 10000 },
-	{ id = "broken key ring", chance = 120 },
+	{ id = "gold coin", chance = 65398, minCount = 1, maxCount = 60 },  -- 2148
+	{ id = "cultish robe", chance = 10233 },  -- 10556
+	{ id = "rope belt", chance = 9975 },  -- 12448
+	{ id = "pirate voodoo doll", chance = 1477 },  -- 5810
+	{ id = "clerical mace", chance = 1019 },  -- 2423
+	{ id = "silver amulet", chance = 986 },  -- 2170
+	{ id = 1950, chance = 868 },  -- book (orange)
+	{ id = 6089, chance = 605 },  -- music sheet (thirdverse)
+	{ id = "amber staff", chance = 554 },  -- 7426
+	{ id = 2169, chance = 465 },  -- time ring
+	{ id = "small ruby", chance = 281 },  -- 2147
+	{ id = "hailstorm rod", chance = 174 },  -- 2183
+	{ id = "cultish symbol", chance = 85 },  -- 12411
+	{ id = "lunar staff", chance = 85 },  -- 7424
+	{ id = "broken key ring", chance = 78 },  -- 12608
+	{ id = "red robe", chance = 78 },  -- 2655
 }
 
 monster.attacks = {

@@ -84,60 +84,59 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "platinum coin", chance = 95000, maxCount = 74 },
-	{ id = "demonic essence", chance = 95000, maxCount = 5 },
-	{ id = "green gem", chance = 50000 },
-	{ id = "great mana potion", chance = 45000 },
-	{ id = "small amethyst", chance = 36000, maxCount = 18 },
-	{ id = "the devileye", chance = 36000 },
-	{ id = "small emerald", chance = 27000, maxCount = 7 },
-	{ id = "small sapphire", chance = 27000, maxCount = 9 },
-	{ id = "red tome", chance = 27000 },
-	{ id = "ultimate health potion", chance = 27000 },
-	{ id = "talon", chance = 22000, maxCount = 7 },
-	{ id = "demon horn", chance = 22000, maxCount = 2 },
-	{ id = 6299, chance = 22000 }, -- death ring
-	{ id = "ring of healing", chance = 22000 }, -- ring of healing
-	{ id = "chain bolter", chance = 22000 },
-	{ id = "dark lord's cape", chance = 22000 },
-	{ id = "the ironworker", chance = 25000 },
-	{ id = "double axe", chance = 18000 },
-	{ id = "great spirit potion", chance = 18000 },
-	{ id = "magic plate armor", chance = 18000 },
-	{ id = "might ring", chance = 18000 },
-	{ id = "mind stone", chance = 18000 },
-	{ id = "stealth ring", chance = 18000 }, -- stealth ring
-	{ id = "fireborn giant armor", chance = 18000 },
-	{ id = "royal crossbow", chance = 18000 },
-	{ id = "teddy bear", chance = 18000 },
-	{ id = "white pearl", chance = 13000, maxCount = 11 },
-	{ id = "black pearl", chance = 13000, maxCount = 13 },
-	{ id = "assassin star", chance = 13000, maxCount = 35 },
-	{ id = "demonbone", chance = 13000 },
-	{ id = "golden mug", chance = 13000 },
-	{ id = "Morgaroth's heart", chance = 13000 },
-	{ id = "obsidian truncheon", chance = 13000 },
-	{ id = "the stomper", chance = 13000 },
-	{ id = "blue gem", chance = 9000 },
-	{ id = "gold ring", chance = 9000 },
-	{ id = "demon shield", chance = 9000 },
-	{ id = "energy ring", chance = 9000 }, -- energy ring
-	{ id = "giant sword", chance = 9000 },
-	{ id = "golden legs", chance = 9000 },
-	{ id = "life crystal", chance = 9000 },
-	{ id = 3046, chance = 9000 }, -- magic light wand
-	{ id = "orb", chance = 9000 },
-	{ id = "strange symbol", chance = 9000 },
-	{ id = "steel boots", chance = 9000 },
-	{ id = "thunder hammer", chance = 9000 },
-	{ id = "small diamond", chance = 4500, maxCount = 5 },
-	{ id = 3007, chance = 4500 }, -- crystal ring
-	{ id = "fire axe", chance = 4500 },
-	{ id = "great health potion", chance = 4500 },
-	{ id = "mastermind shield", chance = 4500 },
-	{ id = "dragon robe", chance = 4500 },
-	{ id = "molten plate", chance = 4500 },
-	{ id = "great shield", chance = 500 },
+	{ id = "demonic essence", chance = 95455 },  -- 6500
+	{ id = "platinum coin", chance = 95455, minCount = 17, maxCount = 74 },  -- 2152
+	{ id = "green gem", chance = 50000 },  -- 2155
+	{ id = "great mana potion", chance = 45455 },  -- 7590
+	{ id = "small amethyst", chance = 36364, minCount = 1, maxCount = 18 },  -- 2150
+	{ id = "the devileye", chance = 36364 },  -- 8852
+	{ id = "red tome", chance = 27273 },  -- 1986
+	{ id = "small emerald", chance = 27273, minCount = 2, maxCount = 6 },  -- 2149
+	{ id = "small sapphire", chance = 27273, minCount = 2, maxCount = 8 },  -- 2146
+	{ id = "ultimate health potion", chance = 27273 },  -- 8473
+	{ id = "chain bolter", chance = 22727 },  -- 8850
+	{ id = "dark lord's cape", chance = 22727 },  -- 8865
+	{ id = 6300, chance = 22727 },  -- death ring
+	{ id = "demon horn", chance = 22727, minCount = 1, maxCount = 2 },  -- 5954
+	{ id = "ring of healing", chance = 22727 },  -- 2214
+	{ id = "talon", chance = 22727, minCount = 1, maxCount = 7 },  -- 2151
+	{ id = "the ironworker", chance = 22727 },  -- 8853
+	{ id = "double axe", chance = 18182 },  -- 2387
+	{ id = "fireborn giant armor", chance = 18182 },  -- 8881
+	{ id = "great spirit potion", chance = 18182 },  -- 8472
+	{ id = "magic plate armor", chance = 18182 },  -- 2472
+	{ id = "might ring", chance = 18182 },  -- 2164
+	{ id = "mind stone", chance = 18182 },  -- 2178
+	{ id = "royal crossbow", chance = 18182 },  -- 8851
+	{ id = "stealth ring", chance = 18182 },  -- 2165
+	{ id = "teddy bear", chance = 18182 },  -- 2112
+	{ id = "assassin star", chance = 13636, minCount = 16, maxCount = 28 },  -- 7368
+	{ id = "black pearl", chance = 13636, minCount = 8, maxCount = 15 },  -- 2144
+	{ id = "demonbone", chance = 13636 },  -- 7431
+	{ id = "golden mug", chance = 13636 },  -- 2033
+	{ id = "Morgaroth's heart", chance = 13636 },  -- 5943
+	{ id = "obsidian truncheon", chance = 13636 },  -- 8928
+	{ id = "the stomper", chance = 13636 },  -- 8929
+	{ id = "white pearl", chance = 13636, minCount = 2, maxCount = 13 },  -- 2143
+	{ id = "blue gem", chance = 9091 },  -- 2158
+	{ id = "demon shield", chance = 9091 },  -- 2520
+	{ id = "energy ring", chance = 9091 },  -- 2167
+	{ id = "giant sword", chance = 9091 },  -- 2393
+	{ id = "gold ring", chance = 9091 },  -- 2179
+	{ id = "golden legs", chance = 9091 },  -- 2470
+	{ id = "life crystal", chance = 9091 },  -- 2177
+	{ id = 2162, chance = 9091 },  -- magic light wand
+	{ id = "orb", chance = 9091 },  -- 2176
+	{ id = "steel boots", chance = 9091 },  -- 2645
+	{ id = "strange symbol", chance = 9091 },  -- 2174
+	{ id = "thunder hammer", chance = 9091 },  -- 2421
+	{ id = 2124, chance = 4545 },  -- crystal ring
+	{ id = "dragon robe", chance = 4545 },  -- 8867
+	{ id = "fire axe", chance = 4545 },  -- 2432
+	{ id = "great health potion", chance = 4545 },  -- 7591
+	{ id = "mastermind shield", chance = 4545 },  -- 2514
+	{ id = "molten plate", chance = 4545 },  -- 8886
+	{ id = "small diamond", chance = 4545, maxCount = 5 },  -- 2145
 }
 
 monster.attacks = {

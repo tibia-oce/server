@@ -72,19 +72,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "wolf tooth chain", chance = 190 }, -- wolf tooth chain
-	{ id = "gold coin", chance = 82000, maxCount = 47 },
-	{ id = "club ring", chance = 90 }, -- club ring
-	{ id = 2381, chance = 1003 },
-	{ id = "short sword", chance = 8000 },
-	{ id = "dark helmet", chance = 220 },
-	{ id = "plate shield", chance = 2500 },
-	{ id = "battle shield", chance = 1400 },
-	{ id = "meat", chance = 30070 },
-	{ id = "cyclops trophy", chance = 80 }, -- cyclops trophy
-	{ id = "health potion", chance = 210 },
-	{ id = "cyclops toe", chance = 4930 },
-	{ id = 23986, chance = 1000 }, -- heavy old tome
+	{ id = "gold coin", chance = 82083, minCount = 1, maxCount = 47 },  -- 2148
+	{ id = "meat", chance = 30071 },  -- 2666
+	{ id = "short sword", chance = 7996 },  -- 2406
+	{ id = "cyclops toe", chance = 5035 },  -- 10574
+	{ id = "plate shield", chance = 2625 },  -- 2510
+	{ id = "battle shield", chance = 1434 },  -- 2513
+	{ id = 2381, chance = 991 },  -- halberd
+	{ id = "dark helmet", chance = 205 },  -- 2490
+	{ id = "health potion", chance = 203 },  -- 7618
+	{ id = "wolf tooth chain", chance = 200 },  -- 2129
+	{ id = "club ring", chance = 91 },  -- 2209
+	{ id = 7398, chance = 86 },  -- cyclops trophy
+	-- { id = "heavy old tome", chance = 21 },  -- todo: heavy old tome does not exist in items.xml
 }
 
 monster.attacks = {
