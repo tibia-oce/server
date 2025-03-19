@@ -5,7 +5,7 @@
 # and stages them for commit using git add
 
 # Default directory if not specified
-MONSTER_DIR="../data/monster/lua"
+MONSTER_DIR="data/monster/lua"
 
 # Use provided directory if specified
 if [ ! -z "$1" ]; then

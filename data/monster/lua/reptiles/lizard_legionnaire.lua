@@ -67,21 +67,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small diamond", chance = 1001, maxCount = 2 },
-	{ id = "gold coin", chance = 44000, maxCount = 100 },
-	{ id = "gold coin", chance = 54000, maxCount = 65 },
-	{ id = "lizard leather", chance = 970 },
-	{ id = "lizard scale", chance = 980, maxCount = 3 },
-	{ id = "strong health potion", chance = 3880 },
-	{ id = "red lantern", chance = 530 },
-	{ id = "bunch of ripe rice", chance = 1950 },
-	{ id = "zaoan armor", chance = 70 },
-	{ id = "zaoan shoes", chance = 460 },
-	{ id = "drakinata", chance = 710 },
-	{ id = "zaoan halberd", chance = 960 },
-	{ id = "legionnaire flags", chance = 1940 },
-	{ id = "broken halberd", chance = 14940 },
-	{ id = "lizard trophy", chance = 20 },
+	{ id = "gold coin", chance = 94077, minCount = 1, maxCount = 165 },  -- 2148
+	{ id = "broken halberd", chance = 14938 },  -- 11335
+	{ id = "strong health potion", chance = 3906 },  -- 7588
+	{ id = "legionnaire flags", chance = 1938 },  -- 11334
+	{ id = "bunch of ripe rice", chance = 1922 },  -- 11245
+	{ id = "lizard leather", chance = 979 },  -- 5876
+	{ id = "lizard scale", chance = 972 },  -- 5881
+	{ id = "Zaoan halberd", chance = 968 },
+	{ id = "small diamond", chance = 949, minCount = 1, maxCount = 2 },  -- 2145
+	{ id = "drakinata", chance = 715 },  -- 11305
+	{ id = "red lantern", chance = 513 },  -- 11206
+	{ id = "Zaoan shoes", chance = 435 },
+	{ id = "Zaoan armor", chance = 65 },
+	{ id = "lizard trophy", chance = 14 },  -- 11336
 }
 
 monster.attacks = {

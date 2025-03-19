@@ -73,15 +73,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 33000, maxCount = 100 }, -- gold coin
-	{ id = 3031, chance = 32000, maxCount = 100 }, -- gold coin
-	{ id = 3031, chance = 32000, maxCount = 36 }, -- gold coin
-	{ id = "corrupted flag", chance = 5800 }, -- corrupted flag
-	{ id = 3035, chance = 2920, maxCount = 5 }, -- platinum coin
-	{ id = 10410, chance = 3800 }, -- cursed shoulder spikes
-	{ id = "gold ingot", chance = 3800 }, -- gold ingot
-	{ id = "spiked iron ball", chance = 3800 }, -- spiked iron ball
-	{ id = 10386, chance = 3800 }, -- zaoan shoes
+	{ id = "gold coin", chance = 100000, minCount = 8, maxCount = 148 },  -- 2148
+	{ id = "corrupted flag", chance = 50000 },  -- 11326
+	{ id = "spiked iron ball", chance = 37500 },  -- 11325
+	{ id = "platinum coin", chance = 25000, minCount = 1, maxCount = 4 },  -- 2152
+	{ id = "cursed shoulder spikes", chance = 18750 },  -- 11327
+	{ id = "scale of corruption", chance = 6250 },  -- 12629
+	{ id = "Zaoan shoes", chance = 6250 },
 }
 
 monster.attacks = {

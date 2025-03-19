@@ -67,16 +67,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 50000, maxCount = 37 },
-	{ id = 2381, chance = 4460 },
-	{ id = "plate shield", chance = 2854 },
-	{ id = "green mushroom", chance = 3208 },
-	{ id = "health potion", chance = 4761 },
-	{ id = "mana potion", chance = 4785 },
-	{ id = "zaoan halberd", chance = 2210 },
-	{ id = "widow's mandibles", chance = 20950 },
-	{ id = "wailing widow's necklace", chance = 900 },
+	{ id = "gold coin", chance = 96878, minCount = 1, maxCount = 140 },  -- 2148
+	{ id = "widow's mandibles", chance = 19997 },  -- 11328
+	{ id = "mana potion", chance = 5121 },  -- 7620
+	{ id = "health potion", chance = 4994 },  -- 7618
+	{ id = 2381, chance = 4762 },  -- halberd
+	{ id = "plate shield", chance = 3107 },  -- 2510
+	{ id = "green mushroom", chance = 2995 },  -- 2796
+	{ id = "Zaoan halberd", chance = 2254 },
+	{ id = "wailing widow's necklace", chance = 696 },  -- 11329
 }
 
 monster.attacks = {

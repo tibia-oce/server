@@ -77,26 +77,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 47000, maxCount = 98 },
-	{ id = "platinum coin", chance = 50590, maxCount = 8 },
-	{ id = "meat", chance = 50450, maxCount = 4 },
-	{ id = "great mana potion", chance = 9950, maxCount = 3 },
-	{ id = "terra hood", chance = 8730 },
-	{ id = "great spirit potion", chance = 4905, maxCount = 3 },
-	{ id = "ultimate health potion", chance = 9400, maxCount = 3 },
-	{ id = "wand of voodoo", chance = 1020 },
-	{ id = "small topaz", chance = 2900, maxCount = 4 },
-	{ id = "zaoan armor", chance = 470 },
-	{ id = "zaoan helmet", chance = 560 },
-	{ id = "zaoan legs", chance = 780 },
-	{ id = "eye of corruption", chance = 12110 },
-	{ id = "tail of corruption", chance = 6240 },
-	{ id = "scale of corruption", chance = 10940 },
-	{ id = "shield of corruption", chance = 10 },
-	{ id = "draken boots", chance = 540 },
-	{ id = "snake god's wristguard", chance = 10 },
-	{ id = "bamboo leaves", chance = 360 },
+	{ id = "gold coin", chance = 97097, minCount = 1, maxCount = 199 },  -- 2148
+	{ id = "meat", chance = 50274 },  -- 2666
+	{ id = "platinum coin", chance = 49996, minCount = 1, maxCount = 8 },  -- 2152
+	{ id = "eye of corruption", chance = 12059 },  -- 12627
+	{ id = "scale of corruption", chance = 10942 },  -- 12629
+	{ id = "ultimate health potion", chance = 9151, minCount = 1, maxCount = 3 },  -- 8473
+	{ id = "great mana potion", chance = 9047, minCount = 1, maxCount = 3 },  -- 7590
+	{ id = "terra hood", chance = 8304 },  -- 7903
+	{ id = "tail of corruption", chance = 6259 },  -- 12628
+	{ id = "great spirit potion", chance = 4950, minCount = 1, maxCount = 3 },  -- 8472
+	{ id = "small topaz", chance = 2839, minCount = 1, maxCount = 4 },  -- 9970
+	{ id = "wand of voodoo", chance = 1029 },  -- 8922
+	{ id = "Zaoan legs", chance = 817 },
+	{ id = "Zaoan armor", chance = 757 },
+	{ id = "Zaoan helmet", chance = 627 },
+	{ id = "draken boots", chance = 550 },  -- 12646
+	{ id = "bamboo leaves", chance = 314 },  -- 13538
+	{ id = "shield of corruption", chance = 14 },  -- 12644
+	{ id = "snake god's wristguard", chance = 14 },  -- 12647
 }
 
 monster.attacks = {

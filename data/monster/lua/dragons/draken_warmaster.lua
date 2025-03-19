@@ -68,21 +68,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 97490, maxCount = 197 },
-	{ id = "platinum coin", chance = 47640, maxCount = 5 },
-	{ id = "meat", chance = 30390 },
-	{ id = "bone shoulderplate", chance = 12840 },
-	{ id = "zaoan halberd", chance = 8930 },
-	{ id = "warmaster's wristguards", chance = 7020 },
-	{ id = "great health potion", chance = 3710, maxCount = 3 },
-	{ id = "ultimate health potion", chance = 3410 },
-	{ id = "zaoan shoes", chance = 2610 },
-	{ id = "tower shield", chance = 2310 },
-	{ id = "small ruby", chance = 1810, maxCount = 5 },
-	{ id = "zaoan legs", chance = 1300 },
-	{ id = "zaoan armor", chance = 600 },
-	{ id = "drakinata", chance = 600 },
-	{ id = "ring of the sky", chance = 220 },
+	{ id = "gold coin", chance = 97351, minCount = 1, maxCount = 200 },  -- 2148
+	{ id = "platinum coin", chance = 50255, minCount = 1, maxCount = 5 },  -- 2152
+	{ id = "meat", chance = 30168 },  -- 2666
+	{ id = "bone shoulderplate", chance = 12056 },  -- 11321
+	{ id = "Zaoan halberd", chance = 8010 },
+	{ id = "warmaster's wristguards", chance = 6987 },  -- 11322
+	{ id = "great health potion", chance = 5043, minCount = 1, maxCount = 3 },  -- 7591
+	{ id = "ultimate health potion", chance = 3980 },  -- 8473
+	{ id = "Zaoan shoes", chance = 2027 },
+	{ id = "tower shield", chance = 1986 },  -- 2528
+	{ id = "small ruby", chance = 1570, minCount = 1, maxCount = 5 },  -- 2147
+	{ id = "Zaoan legs", chance = 943 },
+	{ id = "drakinata", chance = 827 },  -- 11305
+	{ id = "Zaoan armor", chance = 791 },
+	{ id = "ring of the sky", chance = 208 },  -- 2123
 }
 
 monster.attacks = {
