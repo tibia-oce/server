@@ -74,26 +74,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 50000, maxCount = 100 },
-	{ id = "gold coin", chance = 40000, maxCount = 99 },
-	{ id = "platinum coin", chance = 55000, maxCount = 8 },
-	{ id = "golden legs", chance = 30 },
-	{ id = "saw", chance = 5250 }, -- saw
-	{ id = "steel boots", chance = 5050 },
-	{ id = "ham", chance = 60000, maxCount = 2 },
-	{ id = "orichalcum pearl", chance = 2760, maxCount = 2 },
-	{ id = "cat's paw", chance = 2222 },
-	{ id = "jewelled backpack", chance = 1192 },
-	{ id = "soul orb", chance = 23000 },
-	{ id = 6299, chance = 2008 }, -- death ring
-	{ id = "demonic essence", chance = 8520 },
-	{ id = 6558, chance = 33333, maxCount = 3}, -- "flask of demonic blood"
-	{ id = "assassin star", chance = 2222, maxCount = 5 },
-	{ id = "vile axe", chance = 480 },
-	{ id = "butcher's axe", chance = 850 },
-	{ id = "great mana potion", chance = 14830, maxCount = 2 },
-	{ id = "great health potion", chance = 10000, maxCount = 2 },
-	{ id = "gold ingot", chance = 3140 },
+	{ id = "gold coin", chance = 99997, minCount = 2, maxCount = 200 },  -- 2148
+	{ id = "ham", chance = 64985 },  -- 2671
+	{ id = "platinum coin", chance = 57000, minCount = 1, maxCount = 8 },  -- 2152
+	{ id = "concentrated demonic blood", chance = 35000 },  -- todo: flask of demonic blood does not exist in items.xml
+	{ id = "soul orb", chance = 24317, minCount = 1, maxCount = 2 },  -- 5944
+	{ id = "great mana potion", chance = 15294, minCount = 1, maxCount = 2 },  -- 7590
+	{ id = "great health potion", chance = 10108, minCount = 1, maxCount = 2 },  -- 7591
+	{ id = "demonic essence", chance = 8985 },  -- 6500
+	{ id = "steel boots", chance = 5149 },  -- 2645
+	{ id = 2558, chance = 5026 },  -- saw
+	{ id = "gold ingot", chance = 2869 },  -- 9971
+	{ id = "orichalcum pearl", chance = 2668, minCount = 1, maxCount = 2 },  -- 5022
+	{ id = "cat's paw", chance = 1972 },  -- 5480
+	{ id = "assassin star", chance = 1943, minCount = 1, maxCount = 5 },  -- 7368
+	{ id = 6300, chance = 1936 },  -- death ring
+	{ id = "jewelled backpack", chance = 879 },  -- 5801
+	{ id = "butcher's axe", chance = 655 },  -- 7412
+	{ id = "vile axe", chance = 394 },  -- 7388
+	{ id = "golden legs", chance = 67 },  -- 2470
 }
 
 monster.attacks = {

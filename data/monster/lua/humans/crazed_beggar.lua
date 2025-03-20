@@ -73,21 +73,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "small blue pillow", chance = 420 },
-	{ id = 2950, chance = 360 }, -- lute
-	{ id = "gold coin", chance = 99000, maxCount = 9 },
-	{ id = "dwarven ring", chance = 120 }, -- dwarven ring
-	{ id = "dirty cape", chance = 55000 }, -- dirty cape
-	{ id = "wooden hammer", chance = 6500 },
-	{ id = "wooden spoon", chance = 9750 },
-	{ id = 3473, chance = 5650 }, -- rolling pin
-	{ id = "meat", chance = 9500 },
-	{ id = "roll", chance = 22500 },
-	{ id = "red rose", chance = 4700 },
-	{ id = "sling herb", chance = 420 },
-	{ id = "rum flask", chance = 420 },
-	{ id = 6091, chance = 300 }, -- very noble-looking watch
-	{ id = 8894, chance = 80 }, -- heavily rusted armor
+	{ id = "gold coin", chance = 99353, minCount = 1, maxCount = 9 },  -- 2148
+	{ id = "dirty cape", chance = 60740 },  -- 2237
+	{ id = "roll", chance = 19462 },  -- 2690
+	{ id = "meat", chance = 9886 },  -- 2666
+	{ id = "wooden spoon", chance = 9472 },  -- 2567
+	{ id = "wooden hammer", chance = 6858 },  -- 2556
+	{ id = "red rose", chance = 5098 },  -- 2744
+	{ id = 2570, chance = 4555 },  -- rolling pin
+	{ id = "sling herb", chance = 595 },  -- 2802
+	{ id = "small blue pillow", chance = 569 },  -- 1681
+	{ id = "rum flask", chance = 492 },  -- 5553
+	{ id = 9808, chance = 336 },  -- rusty armor (todo: heavily rusted does not exist in items.xml)
+	{ id = 2072, chance = 336 },  -- lute
+	{ id = 6092, chance = 336 },  -- very noble-looking watch
+	{ id = "dwarven ring", chance = 129 },  -- 2213
 }
 
 monster.attacks = {

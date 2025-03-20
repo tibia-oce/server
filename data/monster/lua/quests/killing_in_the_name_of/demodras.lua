@@ -77,22 +77,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3035, chance = 99150, maxCount = 10 }, -- platinum coin
-	{ id = 5919, chance = 100000 }, -- dragon claw
-	{ id = 3732, chance = 25650, maxCount = 7 }, -- green mushroom
-	{ id = 3029, chance = 12000 }, -- small sapphire
-	{ id = 238, chance = 9500 }, -- great mana potion
-	{ id = 7365, chance = 4250, maxCount = 5 }, -- onyx arrow
-	{ id = 3061, chance = 850 }, -- life crystal
-	{ id = 3450, chance = 19650, maxCount = 10 }, -- power bolt
-	{ id = 3051, chance = 10250 }, -- energy ring
-	{ id = "great health potion", chance = 9500 }, -- great health potion
-	{ id = 3386, chance = 1700 }, -- dragon scale mail
-	{ id = "dragon ham", chance = 75200, maxCount = 10 }, -- dragon ham
-	{ id = 5948, chance = 13700 }, -- red dragon leather
-	{ id = 2842, chance = 10250 }, -- book (gemmed)
-	{ id = 2903, chance = 6000 }, -- golden mug
-	{ id = "fire sword", chance = 1700 }, -- fire sword
+	{ id = 5919, chance = 100000 },  -- dragon claw
+	{ id = "platinum coin", chance = 99145, minCount = 1, maxCount = 10 },  -- 2152
+	{ id = "dragon ham", chance = 75214 },  -- 2672
+	{ id = "green mushroom", chance = 25641, minCount = 1, maxCount = 7 },  -- 2796
+	{ id = "power bolt", chance = 19658, minCount = 1, maxCount = 10 },  -- 2547
+	{ id = "red dragon leather", chance = 13675 },  -- 5948
+	{ id = "small sapphire", chance = 11966 },  -- 2146
+	{ id = 1976, chance = 10256 },  -- book (gemmed)
+	{ id = "energy ring", chance = 10256 },  -- 2167
+	{ id = "great health potion", chance = 9402 },  -- 7591
+	{ id = "great mana potion", chance = 9402 },  -- 7590
+	{ id = "golden mug", chance = 5983 },  -- 2033
+	{ id = "onyx arrow", chance = 4274, minCount = 2, maxCount = 5 },  -- 7365
+	{ id = "dragon scale mail", chance = 1709 },  -- 2492
+	{ id = "fire sword", chance = 1709 },  -- 2392
+	{ id = "life crystal", chance = 855 },  -- 2177
 }
 
 monster.attacks = {
