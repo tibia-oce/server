@@ -71,18 +71,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "book", chance = 2350 }, -- book
-	{ id = "small oil lamp", chance = 690 },
-	{ id = "small sapphire", chance = 2560, maxCount = 4 },
-	{ id = "gold coin", chance = 60000, maxCount = 70 },
-	{ id = "gold coin", chance = 70000, maxCount = 45 },
-	{ id = "mystic turban", chance = 70 },
-	{ id = 3595, chance = 23480 }, -- carrot
-	{ id = "blue rose", chance = 440 },
-	{ id = "blue piece of cloth", chance = 1920 },
-	{ id = "royal spear", chance = 4500, maxCount = 2 },
-	{ id = "mana potion", chance = 860 },
-	{ id = "dirty turban", chance = 1890 },
+	{ id = "gold coin", chance = 87768, minCount = 1, maxCount = 115 },  -- 2148
+	{ id = "carrot", chance = 24359 },  -- 2684
+	{ id = "royal spear", chance = 4734, minCount = 1, maxCount = 2 },  -- 7378
+	{ id = "small sapphire", chance = 2593, minCount = 1, maxCount = 4 },  -- 2146
+	{ id = "1978", chance = 2431 },  -- book (blue)
+	{ id = "blue piece of cloth", chance = 1940 },  -- 5912
+	{ id = "dirty turban", chance = 1859 },  -- 12412
+	{ id = "mana potion", chance = 835 },  -- 7620
+	{ id = "small oil lamp", chance = 750 },  -- 2063
+	{ id = "blue rose", chance = 526 },  -- 2745
+	{ id = "mystic turban", chance = 77 },  -- 2663
 }
 
 monster.attacks = {
