@@ -81,64 +81,64 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 22614, chance = 0 },  -- nightmare beacon
-	{ id = 7632, chance = 0 },  -- giant shimmering pearl
-	{ id = "cluster of solace", chance = 0, minCount = 1, maxCount = 14 },  -- 22396
-	{ id = "crystal coin", chance = 0, minCount = 1, maxCount = 6 },  -- 2160
-	{ id = "dream matter", chance = 0 },  -- 22397
-	{ id = "phoenix charm", chance = 0 },  -- 11258
-	{ id = "solitude charm", chance = 0 },  -- 11262
-	{ id = "spiritual charm", chance = 0 },  -- 11260
-	{ id = "twin sun charm", chance = 0 },  -- 11261
-	{ id = "unity charm", chance = 0 },  -- 11259
-	{ id = "demonic essence", chance = 0 },  -- 6500
-	{ id = "unrealized dream", chance = 0, minCount = 1, maxCount = 3 },  -- 22598
-	{ id = "red piece of cloth", chance = 0 },  -- 5911
-	{ id = "yellow piece of cloth", chance = 0 },  -- 5914
-	{ id = "blue crystal splinter", chance = 0, maxCount = 15 },  -- 18418
-	{ id = "assassin star", chance = 0, maxCount = 100 },  -- 7368
-	{ id = "great mana potion", chance = 0, maxCount = 100 },  -- 7590
-	{ id = "great spirit potion", chance = 0, maxCount = 100 },  -- 8472
-	{ id = "green crystal splinter", chance = 0, maxCount = 15 },  -- 18416
-	{ id = "ultimate health potion", chance = 0, maxCount = 100 },  -- 8473
-	{ id = "demon horn", chance = 0 },  -- 5954
-	{ id = "blue gem", chance = 0 },  -- 2158
-	{ id = "green crystal shard", chance = 0, maxCount = 15 },  -- 18415
-	{ id = "brown crystal splinter", chance = 0, maxCount = 15 },  -- 18417
-	{ id = "infernal bolt", chance = 0, maxCount = 100 },  -- 6529
-	{ id = "life ring", chance = 0 },  -- 2168
-	{ id = "blue crystal shard", chance = 0, maxCount = 15 },  -- 18413
-	{ id = "violet crystal shard", chance = 0, maxCount = 15 },  -- 18414
-	{ id = "crude umbral crossbow", chance = 0 },  -- 22419
-	{ id = "crude umbral blade", chance = 0 },  -- 22398
-	{ id = "crude umbral axe", chance = 0 },  -- 22404
-	{ id = "crude umbral spellbook", chance = 0 },  -- 22422
-	{ id = "dream warden mask", chance = 0 },  -- 22610
-	{ id = "nightmare horn", chance = 0 },  -- 22608
-	{ id = "crude umbral mace", chance = 0 },  -- 22410
-	{ id = "demonic tapestry", chance = 0 },  -- 22612
-	{ id = "eye pod", chance = 0 },  -- 22613
-	{ id = "nightmare hook", chance = 0 },  -- 22616
-	{ id = "crude umbral chopper", chance = 0 },  -- 22407
-	{ id = "crude umbral bow", chance = 0 },  -- 22416
-	{ id = "umbral crossbow", chance = 0 },  -- 22420
-	{ id = "boots of haste", chance = 0 },  -- 2195
-	{ id = "crude umbral hammer", chance = 0 },  -- 22413
-	{ id = "giant sword", chance = 0 },  -- 2393
-	{ id = "golden legs", chance = 0 },  -- 2470
-	{ id = "magma coat", chance = 0 },  -- 7899
-	{ id = "psychedelic tapestry", chance = 0 },  -- 22611
-	{ id = "umbral master axe", chance = 0 },  -- 22406
-	{ id = "umbral master hammer", chance = 0 },  -- 22415
-	{ id = "umbral masterblade", chance = 0 },  -- 22400
-	{ id = "umbral slayer", chance = 0 },  -- 22402
-	{ id = "crude umbral slayer", chance = 0 },  -- 22401
-	{ id = "umbral axe", chance = 0 },  -- 22405
-	{ id = "umbral bow", chance = 0 },  -- 22417
-	{ id = "umbral hammer", chance = 0 },  -- 22414
-	{ id = "umbral mace", chance = 0 },  -- 22411
-	{ id = "umbral master crossbow", chance = 0 },  -- 22421
-	{ id = "umbral master spellbook", chance = 0 },  -- 22424
+    { id = 22614, chance = 3448 },  -- nightmare beacon
+    { id = 7632, chance = 24138 },  -- giant shimmering pearl
+    { id = "cluster of solace", chance = 100000, minCount = 1, maxCount = 14 },  -- 22396
+    { id = "crystal coin", chance = 100000, minCount = 1, maxCount = 6 },  -- 2160
+    { id = "dream matter", chance = 100000 },  -- 22397
+    { id = "phoenix charm", chance = 100000 },  -- 11258
+    { id = "solitude charm", chance = 100000 },  -- 11262
+    { id = "spiritual charm", chance = 100000 },  -- 11260
+    { id = "twin sun charm", chance = 100000 },  -- 11261
+    { id = "unity charm", chance = 100000 },  -- 11259
+    { id = "demonic essence", chance = 95402 },  -- 6500
+    { id = "unrealized dream", chance = 95402, minCount = 1, maxCount = 3 },  -- 22598
+    { id = "red piece of cloth", chance = 62069 },  -- 5911
+    { id = "yellow piece of cloth", chance = 62069 },  -- 5914
+    { id = "blue crystal splinter", chance = 37931, maxCount = 15 },  -- 18418
+    { id = "assassin star", chance = 34483, maxCount = 100 },  -- 7368
+    { id = "great mana potion", chance = 34483, maxCount = 100 },  -- 7590
+    { id = "great spirit potion", chance = 33333, maxCount = 100 },  -- 8472
+    { id = "green crystal splinter", chance = 32184, maxCount = 15 },  -- 18416
+    { id = "ultimate health potion", chance = 32184, maxCount = 100 },  -- 8473
+    { id = "demon horn", chance = 31034 },  -- 5954
+    { id = "blue gem", chance = 28736 },  -- 2158
+    { id = "green crystal shard", chance = 26437, maxCount = 15 },  -- 18415
+    { id = "brown crystal splinter", chance = 25287, maxCount = 15 },  -- 18417
+    { id = "infernal bolt", chance = 25287, maxCount = 100 },  -- 6529
+    { id = "life ring", chance = 20690 },  -- 2168
+    { id = "blue crystal shard", chance = 19540, maxCount = 15 },  -- 18413
+    { id = "violet crystal shard", chance = 16092, maxCount = 15 },  -- 18414
+    { id = "crude umbral crossbow", chance = 12644 },  -- 22419
+    { id = "crude umbral blade", chance = 11494 },  -- 22398
+    { id = "crude umbral axe", chance = 9195 },  -- 22404
+    { id = "crude umbral spellbook", chance = 9195 },  -- 22422
+    { id = "dream warden mask", chance = 9195 },  -- 22610
+    { id = "nightmare horn", chance = 9195 },  -- 22608
+    { id = "crude umbral mace", chance = 8046 },  -- 22410
+    { id = "demonic tapestry", chance = 5747 },  -- 22612
+    { id = "eye pod", chance = 5747 },  -- 22613
+    { id = "nightmare hook", chance = 5747 },  -- 22616
+    { id = "crude umbral chopper", chance = 4598 },  -- 22407
+    { id = "crude umbral bow", chance = 3448 },  -- 22416
+    { id = "umbral crossbow", chance = 3448 },  -- 22420
+    { id = "boots of haste", chance = 2299 },  -- 2195
+    { id = "crude umbral hammer", chance = 2299 },  -- 22413
+    { id = "giant sword", chance = 2299 },  -- 2393
+    { id = "golden legs", chance = 2299 },  -- 2470
+    { id = "magma coat", chance = 2299 },  -- 7899
+    { id = "psychedelic tapestry", chance = 2299 },  -- 22611
+    { id = "umbral master axe", chance = 2299 },  -- 22406
+    { id = "umbral master hammer", chance = 2299 },  -- 22415
+    { id = "umbral masterblade", chance = 2299 },  -- 22400
+    { id = "umbral slayer", chance = 2299 },  -- 22402
+    { id = "crude umbral slayer", chance = 1149 },  -- 22401
+    { id = "umbral axe", chance = 1149 },  -- 22405
+    { id = "umbral bow", chance = 1149 },  -- 22417
+    { id = "umbral hammer", chance = 1149 },  -- 22414
+    { id = "umbral mace", chance = 1149 },  -- 22411
+    { id = "umbral master crossbow", chance = 1149 },  -- 22421
+    { id = "umbral master spellbook", chance = 1149 },  -- 22424
 }
 
 monster.attacks = {

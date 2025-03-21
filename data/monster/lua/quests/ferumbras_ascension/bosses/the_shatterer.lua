@@ -75,13 +75,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 0, maxCount = 100 },  -- 2148
-	{ id = "great mana potion", chance = 0, maxCount = 10 },  -- 7590
-	{ id = "great spirit potion", chance = 0, maxCount = 10 },  -- 8472
-	{ id = "platinum coin", chance = 0, maxCount = 10 },  -- 2152
-	{ id = "small diamond", chance = 0, maxCount = 10 },  -- 2145
-	{ id = "small ruby", chance = 0, maxCount = 12 },  -- 2147
-	{ id = "ultimate health potion", chance = 0, maxCount = 10 },  -- 8473
+    { id = "gold coin", chance = 100000, maxCount = 100 },  -- 2148
+    { id = "great mana potion", chance = 100000, maxCount = 10 },  -- 7590
+    { id = "great spirit potion", chance = 100000, maxCount = 10 },  -- 8472
+    { id = "platinum coin", chance = 100000, maxCount = 10 },  -- 2152
+    { id = "small diamond", chance = 100000, maxCount = 10 },  -- 2145
+    { id = "small ruby", chance = 100000, maxCount = 12 },  -- 2147
+    { id = "ultimate health potion", chance = 100000, maxCount = 10 },  -- 8473
 }
 
 monster.attacks = {

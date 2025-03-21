@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Script to find and list all todo(loot) instances in monster files.
+PS D:\CompSci\Projects\tibia-oce\server> python .\scripts\todo_resolver.py find --monster-dir "data/monster/lua"
 """
 
 import os

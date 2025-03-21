@@ -76,18 +76,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 0, maxCount = 583 },  -- 2148
-	{ id = "white pearl", chance = 0, maxCount = 20 },  -- 2143
-	{ id = "small diamond", chance = 0, maxCount = 3 },  -- 2145
-	{ id = "ring of healing", chance = 0, maxCount = 2 },  -- 2214
-	{ id = "gold ring", chance = 0, maxCount = 2 },  -- 2179
-	{ id = "silver amulet", chance = 0, maxCount = 2 },  -- 2170
-	{ id = 2162, chance = 0, maxCount = 2 },  -- magic light wand
-	{ id = "great health potion", chance = 0 },  -- 7591
-	{ id = "demon shield", chance = 0 },  -- 2520
-	{ id = "fire axe", chance = 0 },  -- 2432
-	{ id = "protection amulet", chance = 0 },  -- 2200
-	{ id = "small sapphire", chance = 0 },  -- 2146
+    { id = "gold coin", chance = 100000, maxCount = 583 },  -- 2148
+    { id = "white pearl", chance = 8180, maxCount = 20 },  -- 2143
+    { id = "small diamond", chance = 7730, maxCount = 3 },  -- 2145
+    { id = "ring of healing", chance = 27730, maxCount = 2 },  -- 2214
+    { id = "gold ring", chance = 18180, maxCount = 2 },  -- 2179
+    { id = "silver amulet", chance = 14550, maxCount = 2 },  -- 2170
+    { id = 2162, chance = 25450, maxCount = 2 },  -- magic light wand
+    { id = "great health potion", chance = 36820 },  -- 7591
+    { id = "demon shield", chance = 7730 },  -- 2520
+    { id = "fire axe", chance = 9550 },  -- 2432
+    { id = "protection amulet", chance = 5910 },  -- 2200
+    { id = "small sapphire", chance = 16360 },  -- 2146
 }
 
 monster.attacks = {

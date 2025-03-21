@@ -68,26 +68,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "glooth bag", chance = 0, minCount = 1, maxCount = 3 },  -- 23574
-	{ id = "great health potion", chance = 0, maxCount = 15 },  -- 7591
-	{ id = "great mana potion", chance = 0, maxCount = 15 },  -- 7590
-	{ id = "platinum coin", chance = 0, maxCount = 25 },  -- 2152
-	{ id = "ultimate health potion", chance = 0, maxCount = 10 },  -- 8473
-	{ id = "gold coin", chance = 0, maxCount = 100 },  -- 2148
-	{ id = "red crystal fragment", chance = 0 },  -- 18420
-	{ id = "cyan crystal fragment", chance = 0 },  -- 18419
-	{ id = "small diamond", chance = 0, maxCount = 5 },  -- 2145
-	{ id = 2169, chance = 0 },  -- time ring
-	{ id = "glooth cape", chance = 0 },  -- 23535
-	{ id = "great spirit potion", chance = 0 },  -- 8472
-	{ id = "green crystal fragment", chance = 0 },  -- 18421
-	{ id = "green crystal shard", chance = 0, maxCount = 2 },  -- 18415
-	{ id = "ring of healing", chance = 0 },  -- 2214
-	{ id = "violet crystal shard", chance = 0, maxCount = 2 },  -- 18414
-	{ id = "glooth glider crank", chance = 0 },  -- 24271
-	{ id = "red gem", chance = 0 },  -- 2156
-	{ id = "small ruby", chance = 0 },  -- 2147
-	{ id = "yellow gem", chance = 0 },  -- 2154
+	{ id = "glooth bag", chance = 100000, minCount = 1, maxCount = 3 },  -- 23574
+	{ id = "great health potion", chance = 100000, maxCount = 15 },  -- 7591
+	{ id = "great mana potion", chance = 100000, maxCount = 15 },  -- 7590
+	{ id = "platinum coin", chance = 100000, maxCount = 25 },  -- 2152
+	{ id = "ultimate health potion", chance = 100000, maxCount = 10 },  -- 8473
+	{ id = "gold coin", chance = 70000, maxCount = 100 },  -- 2148
+	{ id = "red crystal fragment", chance = 50000 },  -- 18420
+	{ id = "cyan crystal fragment", chance = 30000 },  -- 18419
+	{ id = "small diamond", chance = 30000, maxCount = 5 },  -- 2145
+	{ id = 2169, chance = 30000 },  -- time ring
+	{ id = "glooth cape", chance = 20000 },  -- 23535
+	{ id = "great spirit potion", chance = 20000 },  -- 8472
+	{ id = "green crystal fragment", chance = 20000 },  -- 18421
+	{ id = "green crystal shard", chance = 20000, maxCount = 2 },  -- 18415
+	{ id = "ring of healing", chance = 20000 },  -- 2214
+	{ id = "violet crystal shard", chance = 20000, maxCount = 2 },  -- 18414
+	{ id = "glooth glider crank", chance = 10000 },  -- 24271
+	{ id = "red gem", chance = 10000 },  -- 2156
+	{ id = "small ruby", chance = 10000 },  -- 2147
+	{ id = "yellow gem", chance = 10000 },  -- 2154
 }
 
 monster.attacks = {

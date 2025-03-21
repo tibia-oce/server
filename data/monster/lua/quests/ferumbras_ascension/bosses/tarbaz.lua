@@ -75,24 +75,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "concentrated demonic blood", chance = 0 },  -- todo: flask of demonic blood does not exist in items.xml
-	{ id = "gold coin", chance = 0, maxCount = 200 },  -- 2148
-	{ id = "green crystal shard", chance = 0, maxCount = 3 },  -- 18415
-	{ id = "platinum coin", chance = 0, minCount = 20, maxCount = 30 },  -- 2152
-	{ id = "silver token", chance = 0 },  -- 25172
-	{ id = "small topaz", chance = 0, maxCount = 5 },  -- 9970
-	{ id = "ultimate health potion", chance = 0, maxCount = 5 },  -- 8473
-	{ id = "chaos mace", chance = 0 },  -- 7427
-	{ id = "demonic essence", chance = 0 },  -- 6500
-	{ id = "energy ring", chance = 0 },  -- 2167
-	{ id = "great mana potion", chance = 0, maxCount = 5 },  -- 7590
-	{ id = "rift shield", chance = 0 },  -- 25382
-	{ id = "yellow gem", chance = 0 },  -- 2154
-	{ id = "blue crystal shard", chance = 0, maxCount = 3 },  -- 18413
-	{ id = "great spirit potion", chance = 0, maxCount = 5 },  -- 8472
-	{ id = "green gem", chance = 0 },  -- 2155
-	{ id = "underworld rod", chance = 0 },  -- 8910
-	{ id = "violet crystal shard", chance = 0, maxCount = 3 },  -- 18414
+    { id = "concentrated demonic blood", chance = 100000 },  -- todo: flask of demonic blood does not exist in items.xml
+    { id = "gold coin", chance = 100000, maxCount = 200 },  -- 2148
+    { id = "green crystal shard", chance = 100000, maxCount = 3 },  -- 18415
+    { id = "platinum coin", chance = 100000, minCount = 20, maxCount = 30 },  -- 2152
+    { id = "silver token", chance = 100000 },  -- 25172
+    { id = "small topaz", chance = 100000, maxCount = 5 },  -- 9970
+    { id = "ultimate health potion", chance = 100000, maxCount = 5 },  -- 8473
+    { id = "chaos mace", chance = 66667 },  -- 7427
+    { id = "demonic essence", chance = 66667 },  -- 6500
+    { id = "energy ring", chance = 66667 },  -- 2167
+    { id = "great mana potion", chance = 66667, maxCount = 5 },  -- 7590
+    { id = "rift shield", chance = 66667 },  -- 25382
+    { id = "yellow gem", chance = 66667 },  -- 2154
+    { id = "blue crystal shard", chance = 33333, maxCount = 3 },  -- 18413
+    { id = "great spirit potion", chance = 33333, maxCount = 5 },  -- 8472
+    { id = "green gem", chance = 33333 },  -- 2155
+    { id = "underworld rod", chance = 33333 },  -- 8910
+    { id = "violet crystal shard", chance = 33333, maxCount = 3 },  -- 18414
 }
 
 monster.attacks = {

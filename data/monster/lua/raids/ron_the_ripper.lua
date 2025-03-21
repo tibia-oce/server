@@ -69,13 +69,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "Ron the Ripper's sabre", chance = 0 },  -- 6101
-	{ id = 2229, chance = 0, maxCount = 2 },  -- skull
-	{ id = "knight armor", chance = 0 },  -- 2476
-	{ id = "plate armor", chance = 0 },  -- 2463
-	{ id = "great health potion", chance = 0, maxCount = 2 },  -- 7591
-	{ id = "meat", chance = 0 },  -- 2666
-	{ id = "gold coin", chance = 0, maxCount = 33 },  -- 2148
+    { id = "Ron the Ripper's sabre", chance = 100000 },  -- 6101
+    { id = 2229, chance = 83330, maxCount = 2 },  -- skull
+    { id = "knight armor", chance = 11110 },  -- 2476
+    { id = "plate armor", chance = 55560 },  -- 2463
+    { id = "great health potion", chance = 16670, maxCount = 2 },  -- 7591
+    { id = "meat", chance = 16670 },  -- 2666
+    { id = "gold coin", chance = 100000, maxCount = 33 },  -- 2148
 }
 
 monster.attacks = {

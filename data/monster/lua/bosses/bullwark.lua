@@ -69,17 +69,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "giant pacifier", chance = 0 },  -- 23570
-	{ id = "gold coin", chance = 0, maxCount = 200 },  -- 2148
-	{ id = "great health potion", chance = 0, maxCount = 5 },  -- 7591
-	{ id = "minotaur leather", chance = 0 },  -- 5878
-	{ id = "moohtant horn", chance = 0, maxCount = 2 },  -- 23571
-	{ id = "platinum coin", chance = 0, maxCount = 5 },  -- 2152
-	{ id = "ham", chance = 0 },  -- 2671
-	{ id = "meat", chance = 0 },  -- 2666
-	{ id = "mooh'tah plate", chance = 0 },  -- 23537
-	{ id = "small amethyst", chance = 0, maxCount = 5 },  -- 2150
-	{ id = "small topaz", chance = 0, maxCount = 5 },  -- 9970
+    { id = "giant pacifier", chance = 1000 },  -- 23570
+    { id = "gold coin", chance = 100000, maxCount = 200 },  -- 2148
+    { id = "great health potion", chance = 1037, maxCount = 5 },  -- 7591
+    { id = "minotaur leather", chance = 1000 },  -- 5878
+    { id = "moohtant horn", chance = 1845, maxCount = 2 },  -- 23571
+    { id = "platinum coin", chance = 5075, maxCount = 5 },  -- 2152
+    { id = "ham", chance = 2770 },  -- 2671
+    { id = "meat", chance = 2124 },  -- 2666
+    { id = "mooh'tah plate", chance = 68 },  -- 23537
+    { id = "small amethyst", chance = 714, maxCount = 5 },  -- 2150
+    { id = "small topaz", chance = 633, maxCount = 5 },  -- 9970
 }
 
 monster.attacks = {

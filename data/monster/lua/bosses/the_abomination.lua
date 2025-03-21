@@ -85,28 +85,28 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 0 },  -- 2148
-	{ id = "crystal coin", chance = 0, maxCount = 20 },  -- 2160
-	{ id = "ultimate mana potion", chance = 0, maxCount = 6 },  -- 26029
-	{ id = "supreme health potion", chance = 0, maxCount = 6 },  -- 26031
-	{ id = "berserk potion", chance = 0, maxCount = 10 },  -- 7439
-	{ id = "mastermind potion", chance = 0, maxCount = 10 },  -- 7440
-	{ id = "ultimate spirit potion", chance = 0, maxCount = 6 },  -- 26030
-	{ id = "bullseye potion", chance = 0, maxCount = 10 },  -- 7443
-	{ id = "brooch of embracement", chance = 0 },  -- 27341
-	{ id = "giant emerald", chance = 0 },  -- 27186
-	{ id = "giant ruby", chance = 0 },  -- 27187
-	{ id = "gruesome fan", chance = 0 },  -- 27342
-	{ id = "amber with a bug", chance = 0 },  -- 27292
-	{ id = "amber with a dragonfly", chance = 0 },  -- 27293
-	{ id = "diabolic skull", chance = 0 },  -- 27343
-	{ id = "giant sapphire", chance = 0 },  -- 27185
-	{ id = "raw watermelon tourmaline", chance = 0 },  -- 27308
-	{ id = "violet gem", chance = 0 },  -- 2153
-	{ id = "white gem", chance = 0 },  -- 27299
-	-- { id = "fiery horseshoe", chance = 0 },  -- todo: fiery horseshoe does not exist in items.xml
-	-- { id = "abomination's tail", chance = 0 },  -- todo: abomination's tail does not exist in items.xml
-	-- { id = "abomination's eye", chance = 0 },  -- todo: abomination's eye does not exist in items.xml
+    { id = "gold coin", chance = 1000 },  -- 2148
+    { id = "crystal coin", chance = 15976, maxCount = 20 },  -- 2160
+    { id = "ultimate mana potion", chance = 2458, maxCount = 6 },  -- 26029
+    { id = "supreme health potion", chance = 1313, maxCount = 6 },  -- 26031
+    { id = "berserk potion", chance = 1822, maxCount = 10 },  -- 7439
+    { id = "mastermind potion", chance = 1822, maxCount = 10 },  -- 7440
+    { id = "ultimate spirit potion", chance = 1403, maxCount = 6 },  -- 26030
+    { id = "bullseye potion", chance = 1209, maxCount = 10 },  -- 7443
+    { id = "brooch of embracement", chance = 29 },  -- 27341
+    { id = "giant emerald", chance = 29 },  -- 27186
+    { id = "giant ruby", chance = 59 },  -- 27187
+    { id = "gruesome fan", chance = 29 },  -- 27342
+    { id = "amber with a bug", chance = 14 },  -- 27292
+    { id = "amber with a dragonfly", chance = 14 },  -- 27293
+    { id = "diabolic skull", chance = 29 },  -- 27343
+    { id = "giant sapphire", chance = 14 },  -- 27185
+    { id = "raw watermelon tourmaline", chance = 14 },  -- 27308
+    { id = "violet gem", chance = 14 },  -- 2153
+    { id = "white gem", chance = 29 },  -- 27299
+    -- { id = "fiery horseshoe", chance = 0 },  -- todo: fiery horseshoe does not exist in items.xml
+    -- { id = "abomination's tail", chance = 0 },  -- todo: abomination's tail does not exist in items.xml
+    -- { id = "abomination's eye", chance = 0 },  -- todo: abomination's eye does not exist in items.xml
 }
 
 monster.attacks = {

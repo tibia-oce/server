@@ -69,14 +69,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "carrion worm fang", chance = 0 },  -- 11192
-	{ id = "gold coin", chance = 0, minCount = 2, maxCount = 102 },  -- 2148
-	{ id = "lump of dirt", chance = 0 },  -- 10609
-	{ id = "meat", chance = 0, minCount = 1, maxCount = 3 },  -- 2666
-	{ id = "life ring", chance = 0 },  -- 2168
-	{ id = "small diamond", chance = 0 },  -- 2145
-	{ id = "albino plate", chance = 0 },  -- 21692
-	{ id = 13757, chance = 0 },  -- coal
+    { id = "carrion worm fang", chance = 100000 },  -- 11192
+    { id = "gold coin", chance = 100000, minCount = 2, maxCount = 102 },  -- 2148
+    { id = "lump of dirt", chance = 100000 },  -- 10609
+    { id = "meat", chance = 85714, minCount = 1, maxCount = 3 },  -- 2666
+    { id = "life ring", chance = 28571 },  -- 2168
+    { id = "small diamond", chance = 28571 },  -- 2145
+    { id = "albino plate", chance = 14286 },  -- 21692
+    { id = 13757, chance = 14286 },  -- coal
 }
 
 monster.attacks = {

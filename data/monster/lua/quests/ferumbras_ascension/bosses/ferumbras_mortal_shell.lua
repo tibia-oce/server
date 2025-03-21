@@ -86,72 +86,72 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "silver token", chance = 0, maxCount = 3 },  -- 25172
-	{ id = "gold coin", chance = 0, minCount = 100, maxCount = 200 },  -- 2148
-	{ id = 7632, chance = 0 },  -- giant shimmering pearl
-	{ id = "platinum coin", chance = 0, minCount = 10, maxCount = 25 },  -- 2152
-	{ id = "soul orb", chance = 0 },  -- 5944
-	{ id = "emerald bangle", chance = 0 },  -- 2127
-	{ id = "rift crossbow", chance = 0 },  -- 25523
-	{ id = "white pearl", chance = 0, maxCount = 5 },  -- 2143
-	{ id = "black pearl", chance = 0, maxCount = 5 },  -- 2144
-	{ id = "rift shield", chance = 0 },  -- 25382
-	{ id = "gold ingot", chance = 0 },  -- 9971
-	{ id = "red gem", chance = 0 },  -- 2156
-	{ id = "rift lance", chance = 0 },  -- 25383
-	{ id = "small emerald", chance = 0, maxCount = 10 },  -- 2149
-	{ id = "rift bow", chance = 0 },  -- 25522
-	{ id = "small topaz", chance = 0, maxCount = 10 },  -- 9970
-	{ id = "small amethyst", chance = 0, maxCount = 10 },  -- 2150
-	{ id = "small diamond", chance = 0, maxCount = 10 },  -- 2145
-	{ id = "blue gem", chance = 0 },  -- 2158
-	{ id = "small sapphire", chance = 0, maxCount = 10 },  -- 2146
-	{ id = "green gem", chance = 0 },  -- 2155
-	{ id = "lightning legs", chance = 0 },  -- 7895
-	{ id = "terra legs", chance = 0 },  -- 7885
-	{ id = "magma legs", chance = 0 },  -- 7894
-	{ id = "glacier kilt", chance = 0 },  -- 7896
-	{ id = "golden legs", chance = 0 },  -- 2470
-	{ id = 25429, chance = 0 },  -- boots of homecoming
-	{ id = 25420, chance = 0 },  -- Ferumbras' staff (blunt)
-	{ id = "demonrage sword", chance = 0 },  -- 7382
-	{ id = 25425, chance = 0 },  -- "Ferumbras' mana keg"
-	{ id = "spellbook of mind control", chance = 0 },  -- 8902
-	{ id = 25428, chance = 0 },  -- scroll of ascension
-	{ id = "haunted blade", chance = 0 },  -- 7407
-	{ id = "golden armor", chance = 0 },  -- 2466
-	{ id = "mastermind shield", chance = 0 },  -- 2514
-	{ id = "shadow sceptre", chance = 0 },  -- 7451
-	{ id = "demon shield", chance = 0 },  -- 2520
-	{ id = 25423, chance = 0 },  -- Ferumbras' amulet
-	{ id = "spellbook of lost souls", chance = 0 },  -- 8903
-	{ id = "chaos mace", chance = 0 },  -- 7427
-	{ id = "abyss hammer", chance = 0 },  -- 7414
-	{ id = "runed sword", chance = 0 },  -- 7417
-	{ id = "folded rift carpet", chance = 0 },  -- 25393
-	{ id = "berserker", chance = 0 },  -- 7403
-	{ id = "jade hammer", chance = 0 },  -- 7422
-	{ id = "vile axe", chance = 0 },  -- 7388
-	{ id = "bloody edge", chance = 0 },  -- 7416
-	{ id = "divine plate", chance = 0 },  -- 8885
-	{ id = "nightmare blade", chance = 0 },  -- 7418
-	{ id = "spellbook of dark mysteries", chance = 0 },  -- 8918
-	{ id = 25381, chance = 0 },  -- rift lamp
-	{ id = 25387, chance = 0 },  -- rift tapestry
-	{ id = "spellscroll of prophecies", chance = 0 },  -- 8904
-	{ id = "greenwood coat", chance = 0 },  -- 8869
-	{ id = "magic plate armor", chance = 0 },  -- 2472
-	{ id = "obsidian truncheon", chance = 0 },  -- 8928
-	{ id = "ornamented axe", chance = 0 },  -- 7411
-	{ id = "impaler", chance = 0 },  -- 7435
-	{ id = "skullcrusher", chance = 0 },  -- 7423
-	{ id = "velvet mantle", chance = 0 },  -- 8868
-	{ id = "emerald sword", chance = 0 },  -- 8930
-	{ id = "havoc blade", chance = 0 },  -- 7405
-	{ id = "hellforged axe", chance = 0 },  -- 8924
-	{ id = "great axe", chance = 0 },  -- 2415
-	{ id = "demonwing axe", chance = 0 },  -- 8926
-	{ id = "phoenix shield", chance = 0 },  -- 2539
+    { id = "silver token", chance = 99784, maxCount = 3 },  -- 25172
+    { id = "gold coin", chance = 66667, minCount = 100, maxCount = 200 },  -- 2148
+    { id = 7632, chance = 48701 },  -- giant shimmering pearl
+    { id = "platinum coin", chance = 43940, minCount = 10, maxCount = 25 },  -- 2152
+    { id = "soul orb", chance = 36147 },  -- 5944
+    { id = "emerald bangle", chance = 34416 },  -- 2127
+    { id = "rift crossbow", chance = 27706 },  -- 25523
+    { id = "white pearl", chance = 26840, maxCount = 5 },  -- 2143
+    { id = "black pearl", chance = 26407, maxCount = 5 },  -- 2144
+    { id = "rift shield", chance = 26190 },  -- 25382
+    { id = "gold ingot", chance = 24892 },  -- 9971
+    { id = "red gem", chance = 24675 },  -- 2156
+    { id = "rift lance", chance = 23810 },  -- 25383
+    { id = "small emerald", chance = 23377, maxCount = 10 },  -- 2149
+    { id = "rift bow", chance = 22294 },  -- 25522
+    { id = "small topaz", chance = 21212, maxCount = 10 },  -- 9970
+    { id = "small amethyst", chance = 19048, maxCount = 10 },  -- 2150
+    { id = "small diamond", chance = 18831, maxCount = 10 },  -- 2145
+    { id = "blue gem", chance = 17749 },  -- 2158
+    { id = "small sapphire", chance = 17316, maxCount = 10 },  -- 2146
+    { id = "green gem", chance = 15368 },  -- 2155
+    { id = "lightning legs", chance = 15368 },  -- 7895
+    { id = "terra legs", chance = 13636 },  -- 7885
+    { id = "magma legs", chance = 12771 },  -- 7894
+    { id = "glacier kilt", chance = 11905 },  -- 7896
+    { id = "golden legs", chance = 10606 },  -- 2470
+    { id = 25429, chance = 10390 },  -- boots of homecoming
+    { id = 25420, chance = 9957 },  -- Ferumbras' staff (blunt)
+    { id = "demonrage sword", chance = 9740 },  -- 7382
+    { id = 25425, chance = 9740 },  -- "Ferumbras' mana keg"
+    { id = "spellbook of mind control", chance = 9740 },  -- 8902
+    { id = 25428, chance = 9524 },  -- scroll of ascension
+    { id = "haunted blade", chance = 9307 },  -- 7407
+    { id = "golden armor", chance = 9091 },  -- 2466
+    { id = "mastermind shield", chance = 9091 },  -- 2514
+    { id = "shadow sceptre", chance = 9091 },  -- 7451
+    { id = "demon shield", chance = 8658 },  -- 2520
+    { id = 25423, chance = 7792 },  -- Ferumbras' amulet
+    { id = "spellbook of lost souls", chance = 7792 },  -- 8903
+    { id = "chaos mace", chance = 7359 },  -- 7427
+    { id = "abyss hammer", chance = 6926 },  -- 7414
+    { id = "runed sword", chance = 6061 },  -- 7417
+    { id = "folded rift carpet", chance = 5844 },  -- 25393
+    { id = "berserker", chance = 5195 },  -- 7403
+    { id = "jade hammer", chance = 5195 },  -- 7422
+    { id = "vile axe", chance = 4762 },  -- 7388
+    { id = "bloody edge", chance = 4545 },  -- 7416
+    { id = "divine plate", chance = 4545 },  -- 8885
+    { id = "nightmare blade", chance = 4545 },  -- 7418
+    { id = "spellbook of dark mysteries", chance = 4545 },  -- 8918
+    { id = 25381, chance = 4329 },  -- rift lamp
+    { id = 25387, chance = 4113 },  -- rift tapestry
+    { id = "spellscroll of prophecies", chance = 3680 },  -- 8904
+    { id = "greenwood coat", chance = 2814 },  -- 8869
+    { id = "magic plate armor", chance = 2814 },  -- 2472
+    { id = "obsidian truncheon", chance = 2814 },  -- 8928
+    { id = "ornamented axe", chance = 2381 },  -- 7411
+    { id = "impaler", chance = 1732 },  -- 7435
+    { id = "skullcrusher", chance = 1515 },  -- 7423
+    { id = "velvet mantle", chance = 1299 },  -- 8868
+    { id = "emerald sword", chance = 1082 },  -- 8930
+    { id = "havoc blade", chance = 1082 },  -- 7405
+    { id = "hellforged axe", chance = 1082 },  -- 8924
+    { id = "great axe", chance = 649 },  -- 2415
+    { id = "demonwing axe", chance = 216 },  -- 8926
+    { id = "phoenix shield", chance = 216 },  -- 2539
 }
 
 monster.attacks = {

@@ -74,31 +74,31 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 0, maxCount = 200 },  -- 2148
-	{ id = "platinum coin", chance = 0, minCount = 20, maxCount = 30 },  -- 2152
-	{ id = "silver token", chance = 0 },  -- 25172
-	{ id = "cyan crystal fragment", chance = 0, maxCount = 4 },  -- 18419
-	{ id = "demonic essence", chance = 0 },  -- 6500
-	{ id = "great mana potion", chance = 0, maxCount = 5 },  -- 7590
-	{ id = "great spirit potion", chance = 0, maxCount = 5 },  -- 8472
-	{ id = "green crystal fragment", chance = 0, maxCount = 4 },  -- 18421
-	{ id = "red crystal fragment", chance = 0, maxCount = 4 },  -- 18420
-	{ id = "blue gem", chance = 0 },  -- 2158
-	{ id = "concentrated demonic blood", chance = 0 },  -- todo: flask of demonic blood does not exist in items.xml
-	{ id = "red gem", chance = 0 },  -- 2156
-	{ id = "small ruby", chance = 0, maxCount = 5 },  -- 2147
-	{ id = "energy ring", chance = 0 },  -- 2167
-	{ id = "small sapphire", chance = 0, maxCount = 5 },  -- 2146
-	{ id = "ultimate health potion", chance = 0, maxCount = 5 },  -- 8473
-	{ id = "fire axe", chance = 0 },  -- 2432
-	{ id = 7632, chance = 0 },  -- giant shimmering pearl
-	{ id = "magma amulet", chance = 0 },  -- 7890
-	{ id = "magma legs", chance = 0 },  -- 7894
-	{ id = "rift bow", chance = 0 },  -- 25522
-	{ id = "rift shield", chance = 0 },  -- 25382
-	{ id = "small amethyst", chance = 0, maxCount = 5 },  -- 2150
-	{ id = "small topaz", chance = 0, maxCount = 5 },  -- 9970
-	{ id = "wand of everblazing", chance = 0 },  -- 18409
+    { id = "gold coin", chance = 100000, maxCount = 200 },  -- 2148
+    { id = "platinum coin", chance = 100000, minCount = 20, maxCount = 30 },  -- 2152
+    { id = "silver token", chance = 100000 },  -- 25172
+    { id = "cyan crystal fragment", chance = 85714, maxCount = 4 },  -- 18419
+    { id = "demonic essence", chance = 85714 },  -- 6500
+    { id = "great mana potion", chance = 85714, maxCount = 5 },  -- 7590
+    { id = "great spirit potion", chance = 85714, maxCount = 5 },  -- 8472
+    { id = "green crystal fragment", chance = 85714, maxCount = 4 },  -- 18421
+    { id = "red crystal fragment", chance = 71429, maxCount = 4 },  -- 18420
+    { id = "blue gem", chance = 42857 },  -- 2158
+    { id = "concentrated demonic blood", chance = 42857 },  -- todo: flask of demonic blood does not exist in items.xml
+    { id = "red gem", chance = 42857 },  -- 2156
+    { id = "small ruby", chance = 42857, maxCount = 5 },  -- 2147
+    { id = "energy ring", chance = 28571 },  -- 2167
+    { id = "small sapphire", chance = 28571, maxCount = 5 },  -- 2146
+    { id = "ultimate health potion", chance = 28571, maxCount = 5 },  -- 8473
+    { id = "fire axe", chance = 14286 },  -- 2432
+    { id = 7632, chance = 14286 },  -- giant shimmering pearl
+    { id = "magma amulet", chance = 14286 },  -- 7890
+    { id = "magma legs", chance = 14286 },  -- 7894
+    { id = "rift bow", chance = 14286 },  -- 25522
+    { id = "rift shield", chance = 14286 },  -- 25382
+    { id = "small amethyst", chance = 14286, maxCount = 5 },  -- 2150
+    { id = "small topaz", chance = 14286, maxCount = 5 },  -- 9970
+    { id = "wand of everblazing", chance = 14286 },  -- 18409
 }
 
 monster.attacks = {

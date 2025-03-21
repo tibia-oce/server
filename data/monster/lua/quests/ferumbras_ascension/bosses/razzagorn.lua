@@ -84,26 +84,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 0, maxCount = 200 },  -- 2148
-	{ id = "onyx chip", chance = 0, maxCount = 5 },  -- 24849
-	{ id = "opal", chance = 0, maxCount = 5 },  -- 24850
-	{ id = "platinum coin", chance = 0, minCount = 20, maxCount = 30 },  -- 2152
-	{ id = "silver token", chance = 0 },  -- 25172
-	{ id = "demonic essence", chance = 0 },  -- 6500
-	{ id = "great mana potion", chance = 0, maxCount = 5 },  -- 7590
-	{ id = "ultimate health potion", chance = 0, maxCount = 5 },  -- 8473
-	{ id = "concentrated demonic blood", chance = 0 },  -- todo: flask of demonic blood does not exist in items.xml
-	{ id = "great spirit potion", chance = 0, maxCount = 5 },  -- 8472
-	{ id = "small emerald", chance = 0, maxCount = 5 },  -- 2149
-	{ id = "blue gem", chance = 0 },  -- 2158
-	{ id = "green gem", chance = 0 },  -- 2155
-	{ id = "orichalcum pearl", chance = 0, maxCount = 5 },  -- 5022
-	{ id = "red gem", chance = 0 },  -- 2156
-	{ id = "rift crossbow", chance = 0 },  -- 25523
-	{ id = "rift lance", chance = 0 },  -- 25383
-	{ id = "small diamond", chance = 0, maxCount = 5 },  -- 2145
-	{ id = "small ruby", chance = 0, maxCount = 5 },  -- 2147
-	{ id = "violet gem", chance = 0 },  -- 2153
+    { id = "gold coin", chance = 100000, maxCount = 200 },  -- 2148
+    { id = "onyx chip", chance = 100000, maxCount = 5 },  -- 24849
+    { id = "opal", chance = 100000, maxCount = 5 },  -- 24850
+    { id = "platinum coin", chance = 100000, minCount = 20, maxCount = 30 },  -- 2152
+    { id = "silver token", chance = 100000 },  -- 25172
+    { id = "demonic essence", chance = 87500 },  -- 6500
+    { id = "great mana potion", chance = 37500, maxCount = 5 },  -- 7590
+    { id = "ultimate health potion", chance = 75000, maxCount = 5 },  -- 8473
+    { id = "concentrated demonic blood", chance = 37500 },  -- todo: flask of demonic blood does not exist in items.xml
+    { id = "great spirit potion", chance = 50000, maxCount = 5 },  -- 8472
+    { id = "small emerald", chance = 12500, maxCount = 5 },  -- 2149
+    { id = "blue gem", chance = 25000 },  -- 2158
+    { id = "green gem", chance = 25000 },  -- 2155
+    { id = "orichalcum pearl", chance = 23529, maxCount = 5 },  -- 5022 (from February 2022 data)
+    { id = "red gem", chance = 25000 },  -- 2156
+    { id = "rift crossbow", chance = 25000 },  -- 25523
+    { id = "rift lance", chance = 25000 },  -- 25383
+    { id = "small diamond", chance = 62500, maxCount = 5 },  -- 2145
+    { id = "small ruby", chance = 17647, maxCount = 5 },  -- 2147 (from February 2022 data)
+    { id = "violet gem", chance = 12500 },  -- 2153
 }
 
 monster.attacks = {

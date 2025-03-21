@@ -74,27 +74,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "demonic essence", chance = 0 },  -- 6500
-	{ id = "gold coin", chance = 0, maxCount = 200 },  -- 2148
-	{ id = "platinum coin", chance = 0, minCount = 20, maxCount = 30 },  -- 2152
-	{ id = "red crystal fragment", chance = 0, maxCount = 4 },  -- 18420
-	{ id = "silver token", chance = 0 },  -- 25172
-	{ id = "concentrated demonic blood", chance = 0 },  -- todo: flask of demonic blood does not exist in items.xml
-	{ id = "green crystal fragment", chance = 0, maxCount = 4 },  -- 18421
-	{ id = "green gem", chance = 0 },  -- 2155
-	{ id = "small amethyst", chance = 0, maxCount = 5 },  -- 2150
-	{ id = "ultimate health potion", chance = 0, maxCount = 10 },  -- 8473
-	{ id = "amber staff", chance = 0 },  -- 7426
-	{ id = "cyan crystal fragment", chance = 0, maxCount = 4 },  -- 18419
-	{ id = 6300, chance = 0 },  -- death ring
-	{ id = 7632, chance = 0 },  -- giant shimmering pearl
-	{ id = "great mana potion", chance = 0, maxCount = 5 },  -- 7590
-	{ id = "great spirit potion", chance = 0, maxCount = 5 },  -- 8472
-	{ id = "rift bow", chance = 0 },  -- 25522
-	{ id = "rift lance", chance = 0 },  -- 25383
-	{ id = "ring of healing", chance = 0 },  -- 2214
-	{ id = "skull staff", chance = 0 },  -- 2436
-	{ id = "small ruby", chance = 0, maxCount = 5 },  -- 2147
+    { id = "demonic essence", chance = 100000 },  -- 6500
+    { id = "gold coin", chance = 100000, maxCount = 200 },  -- 2148
+    { id = "platinum coin", chance = 100000, minCount = 20, maxCount = 30 },  -- 2152
+    { id = "red crystal fragment", chance = 100000, maxCount = 4 },  -- 18420
+    { id = "silver token", chance = 100000 },  -- 25172
+    { id = "concentrated demonic blood", chance = 66667 },  -- todo: flask of demonic blood does not exist in items.xml
+    { id = "green crystal fragment", chance = 66667, maxCount = 4 },  -- 18421
+    { id = "green gem", chance = 66667 },  -- 2155
+    { id = "small amethyst", chance = 66667, maxCount = 5 },  -- 2150
+    { id = "ultimate health potion", chance = 66667, maxCount = 10 },  -- 8473
+    { id = "amber staff", chance = 33333 },  -- 7426
+    { id = "cyan crystal fragment", chance = 33333, maxCount = 4 },  -- 18419
+    { id = 6300, chance = 33333 },  -- death ring
+    { id = 7632, chance = 33333 },  -- giant shimmering pearl
+    { id = "great mana potion", chance = 33333, maxCount = 5 },  -- 7590
+    { id = "great spirit potion", chance = 33333, maxCount = 5 },  -- 8472
+    { id = "rift bow", chance = 33333 },  -- 25522
+    { id = "rift lance", chance = 33333 },  -- 25383
+    { id = "ring of healing", chance = 33333 },  -- 2214
+    { id = "skull staff", chance = 33333 },  -- 2436
+    { id = "small ruby", chance = 33333, maxCount = 5 },  -- 2147
 }
 
 monster.attacks = {

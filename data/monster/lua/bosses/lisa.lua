@@ -69,23 +69,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "slimy leaf tentacle", chance = 0, maxCount = 3 },  -- 23568
-	{ id = "glooth club", chance = 0 },  -- 23549
-	{ id = "small emerald", chance = 0, maxCount = 5 },  -- 2149
-	{ id = "glooth sandwich", chance = 0, maxCount = 5 },  -- 23514
-	{ id = "great health potion", chance = 0, maxCount = 5 },  -- 7591
-	{ id = "great mana potion", chance = 0, maxCount = 5 },  -- 7590
-	{ id = "great spirit potion", chance = 0, maxCount = 5 },  -- 8472
-	{ id = "bowl of glooth soup", chance = 0, maxCount = 5 },  -- 23515
-	{ id = "glooth steak", chance = 0, maxCount = 5 },  -- 23517
-	{ id = "glooth blade", chance = 0 },  -- 23550
-	{ id = "glooth cape", chance = 0 },  -- 23535
-	{ id = "glooth whip", chance = 0 },  -- 23543
-	{ id = "red gem", chance = 0 },  -- 2156
-	{ id = "small diamond", chance = 0, maxCount = 5 },  -- 2145
-	{ id = "small ruby", chance = 0, maxCount = 5 },  -- 2147
-	{ id = "small sapphire", chance = 0, maxCount = 5 },  -- 2146
-	{ id = "small topaz", chance = 0, maxCount = 5 },  -- 9970
+    { id = "slimy leaf tentacle", chance = 3212, maxCount = 3 },  -- 23568
+    { id = "glooth club", chance = 148 },  -- 23549
+    { id = "small emerald", chance = 787, maxCount = 5 },  -- 2149
+    { id = "glooth sandwich", chance = 2106, maxCount = 5 },  -- 23514
+    { id = "great health potion", chance = 1574, maxCount = 5 },  -- 7591
+    { id = "great mana potion", chance = 1808, maxCount = 5 },  -- 7590
+    { id = "great spirit potion", chance = 1574, maxCount = 5 },  -- 8472
+    { id = "bowl of glooth soup", chance = 1297, maxCount = 5 },  -- 23515
+    { id = "glooth steak", chance = 1361, maxCount = 5 },  -- 23517
+    { id = "glooth blade", chance = 148 },  -- 23550
+    { id = "glooth cape", chance = 63 },  -- 23535
+    { id = "glooth whip", chance = 127 },  -- 23543
+    { id = "red gem", chance = 63 },  -- 2156
+    { id = "small diamond", chance = 680, maxCount = 5 },  -- 2145
+    { id = "small ruby", chance = 170, maxCount = 5 },  -- 2147
+    { id = "small sapphire", chance = 787, maxCount = 5 },  -- 2146
+    { id = "small topaz", chance = 957, maxCount = 5 },  -- 9970
 }
 
 monster.attacks = {

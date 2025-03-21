@@ -82,33 +82,33 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "gold coin", chance = 0, minCount = 100, maxCount = 200 },  -- 2148
-	{ id = "vampire's cape chain", chance = 0 },  -- 21244
-	{ id = "vampire lord token", chance = 0 },  -- 9020
-	{ id = "strong health potion", chance = 0, maxCount = 3 },  -- 7588
-	{ id = "strong mana potion", chance = 0, maxCount = 3 },  -- 7589
-	{ id = "vampire teeth", chance = 0 },  -- 10602
-	{ id = "platinum coin", chance = 0, maxCount = 5 },  -- 2152
-	{ id = "blood preservation", chance = 0 },  -- 12405
-	{ id = "white piece of cloth", chance = 0 },  -- 5909
-	{ id = "stealth ring", chance = 0 },  -- 2165
-	{ id = "blue piece of cloth", chance = 0 },  -- 5912
-	{ id = "small topaz", chance = 0, maxCount = 5 },  -- 9970
-	{ id = "epee", chance = 0 },  -- 2438
-	{ id = "red piece of cloth", chance = 0 },  -- 5911
-	{ id = "ring of healing", chance = 0 },  -- 2214
-	{ id = "small sapphire", chance = 0, maxCount = 5 },  -- 2146
-	{ id = "vampire shield", chance = 0 },  -- 2534
-	{ id = "small amethyst", chance = 0, maxCount = 5 },  -- 2150
-	{ id = "small ruby", chance = 0, maxCount = 5 },  -- 2147
-	{ id = "black pearl", chance = 0, maxCount = 5 },  -- 2144
-	{ id = "small diamond", chance = 0, maxCount = 5 },  -- 2145
-	{ id = "small emerald", chance = 0, maxCount = 5 },  -- 2149
-	{ id = "violet gem", chance = 0 },  -- 2153
-	{ id = "blue gem", chance = 0 },  -- 2158
-	{ id = "chaos mace", chance = 0 },  -- 7427
-	{ id = "Vampire Count's medal", chance = 0 },  -- 21253
-	{ id = "vampire's signet ring", chance = 0 },  -- 21252
+    { id = "gold coin", chance = 100000, minCount = 100, maxCount = 200 },  -- 2148
+    { id = "vampire's cape chain", chance = 100000 },  -- 21244
+    { id = "vampire lord token", chance = 95455 },  -- 9020
+    { id = "strong health potion", chance = 72727, maxCount = 3 },  -- 7588
+    { id = "strong mana potion", chance = 68182, maxCount = 3 },  -- 7589
+    { id = "vampire teeth", chance = 54545 },  -- 10602
+    { id = "platinum coin", chance = 45455, maxCount = 5 },  -- 2152
+    { id = "blood preservation", chance = 40909 },  -- 12405
+    { id = "white piece of cloth", chance = 40909 },  -- 5909
+    { id = "stealth ring", chance = 36364 },  -- 2165
+    { id = "blue piece of cloth", chance = 27273 },  -- 5912
+    { id = "small topaz", chance = 22727, maxCount = 5 },  -- 9970
+    { id = "epee", chance = 18182 },  -- 2438
+    { id = "red piece of cloth", chance = 18182 },  -- 5911
+    { id = "ring of healing", chance = 18182 },  -- 2214
+    { id = "small sapphire", chance = 18182, maxCount = 5 },  -- 2146
+    { id = "vampire shield", chance = 18182 },  -- 2534
+    { id = "small amethyst", chance = 13636, maxCount = 5 },  -- 2150
+    { id = "small ruby", chance = 13636, maxCount = 5 },  -- 2147
+    { id = "black pearl", chance = 9091, maxCount = 5 },  -- 2144
+    { id = "small diamond", chance = 9091, maxCount = 5 },  -- 2145
+    { id = "small emerald", chance = 9091, maxCount = 5 },  -- 2149
+    { id = "violet gem", chance = 9091 },  -- 2153
+    { id = "blue gem", chance = 4545 },  -- 2158
+    { id = "chaos mace", chance = 4545 },  -- 7427
+    { id = "Vampire Count's medal", chance = 4545 },  -- 21253
+    { id = "vampire's signet ring", chance = 4545 },  -- 21252
 }
 
 monster.attacks = {

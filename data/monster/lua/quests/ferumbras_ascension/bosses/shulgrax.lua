@@ -77,25 +77,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "demonic essence", chance = 0 },  -- 6500
-	{ id = "concentrated demonic blood", chance = 0 },  -- todo: flask of demonic blood does not exist in items.xml
-	{ id = "gold coin", chance = 0, maxCount = 200 },  -- 2148
-	{ id = "onyx chip", chance = 0, maxCount = 5 },  -- 24849
-	{ id = "platinum coin", chance = 0, minCount = 25, maxCount = 30 },  -- 2152
-	{ id = "silver token", chance = 0 },  -- 25172
-	{ id = "blue gem", chance = 0 },  -- 2158
-	{ id = "great mana potion", chance = 0, maxCount = 5 },  -- 7590
-	{ id = "great spirit potion", chance = 0, maxCount = 5 },  -- 8472
-	{ id = "opal", chance = 0, maxCount = 5 },  -- 24850
-	{ id = "rift crossbow", chance = 0 },  -- 25523
-	{ id = "small ruby", chance = 0, maxCount = 5 },  -- 2147
-	{ id = "ultimate health potion", chance = 0, maxCount = 5 },  -- 8473
-	{ id = 6300, chance = 0 },  -- death ring
-	{ id = "green gem", chance = 0 },  -- 2155
-	{ id = "lightning pendant", chance = 0 },  -- 7889
-	{ id = "small emerald", chance = 0, maxCount = 5 },  -- 2149
+    { id = "demonic essence", chance = 100000 },  -- 6500
+    { id = "concentrated demonic blood", chance = 100000 },  -- todo: flask of demonic blood does not exist in items.xml
+    { id = "gold coin", chance = 100000, maxCount = 200 },  -- 2148
+    { id = "onyx chip", chance = 100000, maxCount = 5 },  -- 24849
+    { id = "platinum coin", chance = 100000, minCount = 25, maxCount = 30 },  -- 2152
+    { id = "silver token", chance = 100000 },  -- 25172
+    { id = "blue gem", chance = 66667 },  -- 2158
+    { id = "great mana potion", chance = 66667, maxCount = 5 },  -- 7590
+    { id = "great spirit potion", chance = 66667, maxCount = 5 },  -- 8472
+    { id = "opal", chance = 66667, maxCount = 5 },  -- 24850
+    { id = "rift crossbow", chance = 66667 },  -- 25523
+    { id = "small ruby", chance = 66667, maxCount = 5 },  -- 2147
+    { id = "ultimate health potion", chance = 66667, maxCount = 5 },  -- 8473
+    { id = 6300, chance = 33333 },  -- death ring
+    { id = "green gem", chance = 33333 },  -- 2155
+    { id = "lightning pendant", chance = 33333 },  -- 7889
+    { id = "small emerald", chance = 33333, maxCount = 5 },  -- 2149
 }
-
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = -1500, maxDamage = -2500 },
 	{ name = "combat", interval = 3000, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -500, maxDamage = -1000, length = 10, spread = 3, effect = CONST_ME_HITBYFIRE, target = false },

@@ -82,24 +82,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "brown crystal splinter", chance = 0, maxCount = 6 },  -- 18417
-	{ id = "gold coin", chance = 0, maxCount = 101 },  -- 2148
-	{ id = "platinum coin", chance = 0, minCount = 20, maxCount = 35 },  -- 2152
-	{ id = "silver token", chance = 0 },  -- 25172
-	{ id = "stealth ring", chance = 0 },  -- 2165
-	{ id = 2169, chance = 0 },  -- time ring
-	{ id = "demonic essence", chance = 0 },  -- 6500
-	{ id = "great spirit potion", chance = 0, minCount = 5, maxCount = 10 },  -- 8472
-	{ id = "green crystal splinter", chance = 0, maxCount = 6 },  -- 18416
-	{ id = "blue crystal splinter", chance = 0, maxCount = 6 },  -- 18418
-	{ id = "concentrated demonic blood", chance = 0 },  -- todo: flask of demonic blood does not exist in items.xml
-	{ id = "great mana potion", chance = 0, maxCount = 5 },  -- 7590
-	{ id = "yellow gem", chance = 0 },  -- 2154
-	{ id = "red gem", chance = 0 },  -- 2156
-	{ id = "small amethyst", chance = 0, maxCount = 5 },  -- 2150
-	{ id = "small sapphire", chance = 0, maxCount = 5 },  -- 2146
-	{ id = "small topaz", chance = 0, maxCount = 5 },  -- 9970
-	{ id = "ultimate health potion", chance = 0, maxCount = 10 },  -- 8473
+    { id = "brown crystal splinter", chance = 100000, maxCount = 6 },  -- 18417
+    { id = "gold coin", chance = 100000, maxCount = 101 },  -- 2148
+    { id = "platinum coin", chance = 100000, minCount = 20, maxCount = 35 },  -- 2152
+    { id = "silver token", chance = 100000 },  -- 25172
+    { id = "stealth ring", chance = 100000 },  -- 2165
+    { id = 2169, chance = 100000 },  -- time ring
+    { id = "demonic essence", chance = 80000 },  -- 6500
+    { id = "great spirit potion", chance = 80000, minCount = 5, maxCount = 10 },  -- 8472
+    { id = "green crystal splinter", chance = 80000, maxCount = 6 },  -- 18416
+    { id = "blue crystal splinter", chance = 60000, maxCount = 6 },  -- 18418
+    { id = "concentrated demonic blood", chance = 40000 },  -- todo: flask of demonic blood does not exist in items.xml
+    { id = "great mana potion", chance = 40000, maxCount = 5 },  -- 7590
+    { id = "yellow gem", chance = 40000 },  -- 2154
+    { id = "red gem", chance = 20000 },  -- 2156
+    { id = "small amethyst", chance = 20000, maxCount = 5 },  -- 2150
+    { id = "small sapphire", chance = 20000, maxCount = 5 },  -- 2146
+    { id = "small topaz", chance = 20000, maxCount = 5 },  -- 9970
+    { id = "ultimate health potion", chance = 20000, maxCount = 10 },  -- 8473
 }
 
 monster.attacks = {
