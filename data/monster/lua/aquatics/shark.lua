@@ -72,7 +72,7 @@ monster.loot = {
 	{ id = "deepling scales", chance = 9680 },  -- 15430
 	{ id = "small sapphire", chance = 1124 },  -- 2146
 	{ id = "eye of a deepling", chance = 1085 },  -- 13870
-	{ id = "giant shimmering pearl", chance = 397 },  -- 7632
+	{ id = 7632, chance = 397 },  -- 7632
 	{ id = "fish fin", chance = 174 },  -- 5895
 }
 

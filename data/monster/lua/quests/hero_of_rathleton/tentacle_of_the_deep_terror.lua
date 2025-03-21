@@ -57,9 +57,10 @@ monster.flags = {
 	canWalkOnFire = true,
 	canWalkOnPoison = true}
 
-monster.events = {
-	"TentacleDeep",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"TentacleDeep",
+-- }
 
 monster.light = {
 	level = 0,

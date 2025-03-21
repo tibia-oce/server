@@ -70,7 +70,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = "arrow", chance = 82485, minCount = 1, maxCount = 22 },  -- 2544
+	{ id = 2544, chance = 82485, minCount = 1, maxCount = 22 },  -- arrow
 	{ id = "orange", chance = 20031, minCount = 1, maxCount = 2 },  -- 2675
 	{ id = "roll", chance = 11050, minCount = 1, maxCount = 2 },  -- 2690
 	{ id = "hunter's quiver", chance = 10138 },  -- 12425

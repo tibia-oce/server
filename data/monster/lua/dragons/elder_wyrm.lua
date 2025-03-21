@@ -81,7 +81,7 @@ monster.loot = {
 	{ id = "soul orb", chance = 4844 },  -- 5944
 	{ id = "small diamond", chance = 4696, minCount = 1, maxCount = 5 },  -- 2145
 	{ id = "wand of draconia", chance = 1536 },  -- 8921
-	{ id = "power bolt", chance = 835, minCount = 1, maxCount = 10 },  -- 2547
+	{ id = 2547, chance = 835, minCount = 1, maxCount = 10 },  -- power bolt
 	{ id = "lightning pendant", chance = 822 },  -- 7889
 	{ id = "lightning legs", chance = 674 },  -- 7895
 	{ id = "wand of starstorm", chance = 627 },  -- 8920

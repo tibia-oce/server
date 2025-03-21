@@ -75,7 +75,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 88238, minCount = 1, maxCount = 130 },  -- 2148
 	{ id = "mutated flesh", chance = 19950 },  -- 11225
 	{ id = "fishbone", chance = 10051 },  -- 2226
-	{ id = "cheese", chance = 8055 },  -- 2696
+	{ id = 2696, chance = 8055 },  -- cheese
 	{ id = "scale armor", chance = 7837 },  -- 2483
 	{ id = "worm", chance = 7096, minCount = 1, maxCount = 2 },  -- 3976
 	{ id = 2376, chance = 5120 },  -- sword

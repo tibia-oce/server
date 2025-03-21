@@ -72,7 +72,7 @@ monster.loot = {
 	{ id = "axe", chance = 21120 },  -- 2386
 	{ id = "brass shield", chance = 17516 },  -- 2511
 	{ id = "mace", chance = 13277 },  -- 2398
-	{ id = "egg", chance = 12705, minCount = 1, maxCount = 2 },  -- 2695
+	{ id = 2695, chance = 12705, minCount = 1, maxCount = 2 },  -- egg
 	{ id = "chain helmet", chance = 5262 },  -- 2458
 	{ id = "brass armor", chance = 2817 },  -- 2465
 	{ id = "steel shield", chance = 1251 },  -- 2509

@@ -86,7 +86,7 @@ monster.loot = {
 	{ id = "glacier mask", chance = 2040 },  -- 7902
 	{ id = "white pearl", chance = 1947, minCount = 1, maxCount = 2 },  -- 2143
 	{ id = "glacier shoes", chance = 1931 },  -- 7892
-	{ id = "giant shimmering pearl", chance = 1635 },
+	{ id = 7632, chance = 1635 },
 	{ id = "glacier amulet", chance = 1028 },  -- 7888
 	{ id = "crest of the deep seas", chance = 1012 },  -- 24261
 	{ id = "wand of draconia", chance = 934 },  -- 8921

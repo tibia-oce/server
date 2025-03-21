@@ -75,7 +75,7 @@ monster.loot = {
 	{ id = "green mushroom", chance = 18309 },  -- 2796
 	{ id = "snake skin", chance = 14992 },  -- 10611
 	{ id = "small sapphire", chance = 12099 },  -- 2146
-	{ id = "power bolt", chance = 6086 },  -- 2547
+	{ id = 2547, chance = 6086 },  -- power bolt
 	{ id = "life ring", chance = 6032 },  -- 2168
 	{ id = "energy ring", chance = 5953 },  -- 2167
 	{ id = "golden mug", chance = 2976 },  -- 2033

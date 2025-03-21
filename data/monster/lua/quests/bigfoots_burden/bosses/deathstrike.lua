@@ -19,9 +19,10 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.events = {
-	"BossesWarzoneDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"BossesWarzoneDeath",
+-- }
 
 monster.bosstiary = {
 	bossRaceId = 892,
@@ -82,13 +83,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 16175, chance = 8430 }, -- shiny blade
-	{ id = "mycological mace", chance = 6570 }, -- mycological mace
-	{ id = 16160, chance = 10480 }, -- crystalline sword
-	{ id = 16136, chance = 100000 }, -- deathstrike's snippet
-	{ id = 16163, chance = 12380 }, -- crystal crossbow
-	{ id = "crystalline axe", chance = 7430 }, -- crystalline axe
-	{ id = "mycological bow", chance = 11430 }, -- mycological bow
+	{ id = "Deathstrike's snippet", chance = 100000 },  -- 18430
+	{ id = "crystal crossbow", chance = 14419 },  -- 18453
+	{ id = "crystalline axe", chance = 13488 },  -- 18451
+	{ id = "mycological bow", chance = 11628 },  -- 18454
+	{ id = "crystalline sword", chance = 9767 },  -- 18450
+	{ id = "shiny blade", chance = 9302 },  -- 18465
+	{ id = "mycological mace", chance = 6512 },  -- 18452
+	{ id = "decorative ribbon", chance = 1860 },  -- 18449
 }
 
 monster.attacks = {

@@ -83,7 +83,7 @@ monster.loot = {
 	{ id = "hailstorm rod", chance = 9642 },  -- 2183
 	{ id = "assassin star", chance = 7082, minCount = 1, maxCount = 10 },  -- 7368
 	{ id = "gold ingot", chance = 5361 },  -- 9971
-	{ id = "giant shimmering pearl", chance = 4597 },
+	{ id = 7632, chance = 4597 },
 	{ id = "seeds", chance = 3741 },  -- 7732
 	{ id = "scythe", chance = 2987 },  -- 2550
 	{ id = "terra legs", chance = 2634 },  -- 7885

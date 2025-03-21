@@ -102,7 +102,7 @@ monster.loot = {
 	{ id = "orange", chance = 5121, minCount = 1, maxCount = 2 },  -- 2675
 	{ id = "lump of cake dough", chance = 4934 },  -- 6277
 	{ id = "walnut", chance = 2003, minCount = 1, maxCount = 4 },  -- 7909
-	{ id = "egg", chance = 1065, minCount = 1, maxCount = 2 },  -- 2695
+	{ id = 2695, chance = 1065, minCount = 1, maxCount = 2 },  -- egg
 	{ id = "candy cane", chance = 987, minCount = 1, maxCount = 3 },  -- 2688
 	{ id = 3910, chance = 961 },  -- snowman package
 	{ id = "peanut", chance = 937, minCount = 1, maxCount = 5 },  -- 7910
@@ -114,13 +114,13 @@ monster.loot = {
 	{ id = "broom", chance = 413 },  -- 2551
 	{ id = "chicken feather", chance = 413, minCount = 1, maxCount = 3 },  -- 5890
 	{ id = "honeycomb", chance = 352 },  -- 5902
-	{ id = "cherry", chance = 309, minCount = 1, maxCount = 4 },  -- 2679
+	{ id = 2679, chance = 309, minCount = 1, maxCount = 4 },  -- cherry
 	{ id = 5792, chance = 125 },  -- die
 	{ id = "watch", chance = 119 },  -- 2036
 	{ id = "blank rune", chance = 114 },  -- 2260
 	{ id = 2162, chance = 114 },  -- magic light wand
-	{ id = "cream cake", chance = 108 },  -- 6394
-	{ id = "picture", chance = 108 },  -- 1852
+	{ id = 6394, chance = 108 },  -- cream cake
+	{ id = 1852, chance = 108 },  -- picture
 	{ id = 2102, chance = 105 },  -- flower bowl
 	{ id = 2072, chance = 102 },  -- lute
 	{ id = "valentine's cake", chance = 99 },  -- 6393

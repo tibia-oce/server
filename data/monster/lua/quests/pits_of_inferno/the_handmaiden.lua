@@ -73,7 +73,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 6539, chance = 35000 }, -- handmaiden's protector
+	{ id = "demonic essence", chance = 100000 },  -- 6500
+	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 163 },  -- 2148
+	{ id = "soul orb", chance = 100000 },  -- 5944
+	{ id = "the Handmaiden's protector", chance = 100000 },  -- 6539
+	{ id = "piece of iron", chance = 70588 },  -- 2225
+	{ id = "platinum coin", chance = 52941, minCount = 1, maxCount = 5 },  -- 2152
+	{ id = "dark shield", chance = 29412 },  -- 2521
+	{ id = 2231, chance = 23529 },  -- big bone
+	{ id = "steel boots", chance = 23529 },  -- 2645
+	{ id = "blue robe", chance = 11765 },  -- 2656
+	{ id = 6300, chance = 11765 },  -- death ring
+	{ id = "energy ring", chance = 5882 },  -- 2167
+	{ id = "power ring", chance = 5882 },  -- 2166
+	{ id = "stealth ring", chance = 5882 },  -- 2165
 }
 
 monster.attacks = {

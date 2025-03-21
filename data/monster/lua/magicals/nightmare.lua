@@ -82,7 +82,7 @@ monster.loot = {
 	{ id = "essence of a bad dream", chance = 15126 },  -- 11223
 	{ id = "demonic essence", chance = 10050 },  -- 6500
 	{ id = "scythe leg", chance = 10025 },  -- 11229
-	{ id = "power bolt", chance = 7365, minCount = 1, maxCount = 4 },  -- 2547
+	{ id = 2547, chance = 7365, minCount = 1, maxCount = 4 },  -- power bolt
 	{ id = "platinum coin", chance = 2532, minCount = 1, maxCount = 3 },  -- 2152
 	{ id = 6300, chance = 1167 },  -- death ring
 	{ id = "ancient shield", chance = 984 },  -- 2532

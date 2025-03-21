@@ -19,9 +19,10 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.events = {
-	"TheGreatDragonHuntDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"TheGreatDragonHuntDeath",
+-- }
 
 
 monster.health = 1900
@@ -80,7 +81,7 @@ monster.loot = {
 	{ id = "green mushroom", chance = 12185 },  -- 2796
 	{ id = 1976, chance = 9132 },  -- book (gemmed)
 	{ id = "royal spear", chance = 9124, minCount = 1, maxCount = 3 },  -- 7378
-	{ id = "power bolt", chance = 6512, minCount = 1, maxCount = 7 },  -- 2547
+	{ id = 2547, chance = 6512, minCount = 1, maxCount = 7 },  -- power bolt
 	{ id = "energy ring", chance = 5045 },  -- 2167
 	{ id = "small sapphire", chance = 4921 },  -- 2146
 	{ id = "golden mug", chance = 3070 },  -- 2033

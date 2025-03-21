@@ -84,15 +84,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 32000, maxCount = 80 }, -- gold coin
-	{ id = 3299, chance = 9600 }, -- poison dagger
-	{ id = 3324, chance = 8330 }, -- skull staff
-	{ id = "assassin star", chance = 5500, maxCount = 4 }, -- assassin star
-	{ id = 3567, chance = 3390 }, -- blue robe
-	{ id = "small sapphire", chance = 3190 }, -- small sapphire
-	{ id = 825, chance = 3040 }, -- lightning robe
-	{ id = 3006, chance = 2420 }, -- ring of the sky
-	{ id = "golden armor", chance = 2240 }, -- golden armor
+	{ id = "gold coin", chance = 32000, maxCount = 80 }, -- 2148
+	{ id = "poison dagger", chance = 9600 }, -- 2411
+	{ id = "skull staff", chance = 8330 }, -- 2436
+	{ id = "assassin star", chance = 5500, maxCount = 4 }, -- 7368
+	{ id = "blue robe", chance = 3390 }, -- 2656
+	{ id = "small sapphire", chance = 3190 }, -- 2146
+	{ id = "lightning robe", chance = 3040 }, -- 7898
+	{ id = "ring of the sky", chance = 2420 }, -- 2123
+	{ id = "golden armor", chance = 2240 }, -- 2466
 }
 
 monster.attacks = {

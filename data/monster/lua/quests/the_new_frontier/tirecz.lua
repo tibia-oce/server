@@ -18,9 +18,10 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.events = {
-	"TireczDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"TireczDeath",
+-- }
 
 monster.health = 25000
 monster.maxHealth = 25000

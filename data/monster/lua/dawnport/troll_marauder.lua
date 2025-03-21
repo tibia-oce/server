@@ -71,7 +71,7 @@ monster.loot = {
 	{ id = "studded club", chance = 11765 },  -- 2448
 	{ id = "meat", chance = 10294 },  -- 2666
 	{ id = "leather boots", chance = 8824 },  -- 2643
-	{ id = "simple arrow", chance = 7353, minCount = 1, maxCount = 7 },  -- 23839
+	{ id = 23839, chance = 7353, minCount = 1, maxCount = 7 },  -- simple arrow
 	{ id = 2512, chance = 7353 },  -- wooden shield
 }
 

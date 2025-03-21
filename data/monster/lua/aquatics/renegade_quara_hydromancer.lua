@@ -83,7 +83,7 @@ monster.loot = {
 	{ id = "yellow piece of cloth", chance = 2505 },  -- 5914
 	{ id = "life ring", chance = 1887 },  -- 2168
 	{ id = "fish fin", chance = 1407 },  -- 5895
-	{ id = "giant shimmering pearl", chance = 1270 },
+	{ id = 7632, chance = 1270 },
 	{ id = "wand of cosmic energy", chance = 927 },  -- 2189
 	{ id = "knight armor", chance = 686 },  -- 2476
 	{ id = "green gem", chance = 446 },  -- 2155

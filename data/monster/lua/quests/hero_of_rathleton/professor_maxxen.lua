@@ -19,9 +19,10 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.events = {
-	"RathletonBossDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"RathletonBossDeath",
+-- }
 
 monster.health = 90000
 monster.maxHealth = 90000
@@ -90,7 +91,7 @@ monster.loot = {
 	{ id = "glooth bag", chance = 0, minCount = 1, maxCount = 3 },  -- 23574
 	{ id = "glooth glider casing", chance = 0 },  -- 24270
 	{ id = "platinum coin", chance = 0, minCount = 1, maxCount = 4 },  -- 2152
-	{ id = "rusty armor", chance = 0 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9808, chance = 0 },  -- todo: rusted armor does not exist in items.xml
 	{ id = "gold ingot", chance = 0 },  -- 9971
 	{ id = 9808, chance = 0 },  -- rusty armor (todo: slightly rusted does not exist in items.xml)
 	{ id = "feedbag", chance = 0 },  -- 23663

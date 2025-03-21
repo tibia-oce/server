@@ -79,7 +79,7 @@ monster.loot = {
 	{ id = "elvish talisman", chance = 10022 },  -- 10552
 	{ id = "elven astral observer", chance = 7743 },  -- 12421
 	{ id = "green tunic", chance = 7244 },  -- 2652
-	{ id = "arrow", chance = 6101, minCount = 1, maxCount = 3 },  -- 2544
+	{ id = 2544, chance = 6101, minCount = 1, maxCount = 3 },  -- arrow
 	{ id = "sling herb", chance = 4859 },  -- 2802
 	{ id = "health potion", chance = 4038 },  -- 7618
 	{ id = "strong mana potion", chance = 2929 },  -- 7589

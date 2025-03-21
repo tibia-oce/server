@@ -19,9 +19,10 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.events = {
-	"InquisitionBossDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"InquisitionBossDeath",
+-- }
 
 monster.bosstiary = {
 	bossRaceId = 418,
@@ -91,7 +92,7 @@ monster.loot = {
 	{ id = "emerald bangle", chance = 21654 },  -- 2127
 	{ id = "gold ingot", chance = 20866 },  -- 9971
 	{ id = "infernal bolt", chance = 20866, minCount = 1, maxCount = 50 },  -- 6529
-	{ id = "power bolt", chance = 20472, minCount = 3, maxCount = 99 },  -- 2547
+	{ id = 2547, chance = 20472, minCount = 3, maxCount = 99 },  -- power bolt
 	{ id = "red gem", chance = 20472 },  -- 2156
 	{ id = "berserk potion", chance = 20079 },  -- 7439
 	{ id = 2381, chance = 19685 },  -- halberd

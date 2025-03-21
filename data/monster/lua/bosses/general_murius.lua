@@ -91,11 +91,11 @@ monster.loot = {
 	{ id = "double axe", chance = 87500 },  -- 2387
 	{ id = "brass armor", chance = 68750 },  -- 2465
 	{ id = "battle shield", chance = 31250 },  -- 2513
-	{ id = "piercing bolt", chance = 31250, minCount = 1, maxCount = 11 },  -- 7363
+	{ id = 7363, chance = 31250, minCount = 1, maxCount = 11 },  -- piercing bolt
 	{ id = "meat", chance = 18750 },  -- 2666
 	{ id = 7401, chance = 18750 },  -- minotaur trophy
 	{ id = "chain legs", chance = 12500 },  -- 2648
-	{ id = "power bolt", chance = 9375, minCount = 1, maxCount = 7 },  -- 2547
+	{ id = 2547, chance = 9375, minCount = 1, maxCount = 7 },  -- power bolt
 	{ id = "fishing rod", chance = 3125 },  -- 2580
 	{ id = "strong health potion", chance = 3125 },  -- 7588
 }

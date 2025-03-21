@@ -78,7 +78,7 @@ monster.loot = {
 	{ id = "longsword", chance = 10989 },  -- 2397
 	{ id = "studded armor", chance = 8969 },  -- 2484
 	{ id = "plate shield", chance = 8880 },  -- 2510
-	{ id = "arrow", chance = 6995, minCount = 1, maxCount = 3 },  -- 2544
+	{ id = 2544, chance = 6995, minCount = 1, maxCount = 3 },  -- arrow
 	{ id = "elvish talisman", chance = 1951 },  -- 10552
 	{ id = 5921, chance = 1006 },  -- heaven blossom
 }

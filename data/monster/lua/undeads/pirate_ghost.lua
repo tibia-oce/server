@@ -73,7 +73,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 46642, minCount = 1, maxCount = 67 },  -- 2148
 	{ id = "tattered piece of robe", chance = 4249 },  -- 10601
-	{ id = "1948", chance = 822 },  -- parchment (rewritable)
+	{ id = 1948, chance = 822 },  -- parchment (rewritable)
 	{ id = "stealth ring", chance = 685 },  -- 2165
 	{ id = "spike sword", chance = 183 },  -- 2383
 	{ id = "red robe", chance = 46 },  -- 2655

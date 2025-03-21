@@ -26,9 +26,10 @@ monster.corpse = 21987 -- review later
 monster.speed = 210
 monster.manaCost = 0
 
-monster.events = {
-	"killingLibrary",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"killingLibrary",
+-- }
 
 monster.changeTarget = {
 	interval = 4000,

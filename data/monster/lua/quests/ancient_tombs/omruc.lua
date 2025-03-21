@@ -90,8 +90,8 @@ monster.loot = {
 	{ id = "poison arrow", chance = 59859, minCount = 1, maxCount = 20 },  -- 2545
 	{ id = 2546, chance = 45775, minCount = 1, maxCount = 15 },  -- burst arrow
 	{ id = "onyx arrow", chance = 34507, minCount = 1, maxCount = 6 },  -- 7365
-	{ id = "arrow", chance = 19014, minCount = 1, maxCount = 25 },  -- 2544
-	{ id = "power bolt", chance = 14085, minCount = 1, maxCount = 5 },  -- 2547
+	{ id = 2544, chance = 19014, minCount = 1, maxCount = 25 },  -- arrow
+	{ id = 2547, chance = 14085, minCount = 1, maxCount = 5 },  -- power bolt
 	{ id = "small diamond", chance = 9859, minCount = 1, maxCount = 3 },  -- 2145
 	{ id = "great health potion", chance = 7746 },  -- 7591
 	{ id = "stealth ring", chance = 3521 },  -- 2165

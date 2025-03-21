@@ -84,7 +84,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 99301, minCount = 1, maxCount = 90 },  -- 2148
 	{ id = "elder bonelord tentacle", chance = 20039 },  -- 11193
 	{ id = "small flask of eyedrops", chance = 9725 },  -- 12468
-	{ id = "sniper arrow", chance = 8783, minCount = 1, maxCount = 4 },  -- 7364
+	{ id = 7364, chance = 8783, minCount = 1, maxCount = 4 },  -- sniper arrow
 	{ id = "two handed sword", chance = 2973 },  -- 2377
 	{ id = "steel shield", chance = 2039 },  -- 2509
 	{ id = "bonelord eye", chance = 1922 },  -- 5898

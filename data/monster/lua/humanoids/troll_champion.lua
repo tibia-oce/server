@@ -76,7 +76,7 @@ monster.loot = {
 	{ id = "meat", chance = 9967 },  -- 2666
 	{ id = "leather boots", chance = 9956 },  -- 2643
 	{ id = 2512, chance = 5314 },  -- wooden shield
-	{ id = "arrow", chance = 5057, minCount = 1, maxCount = 5 },  -- 2544
+	{ id = 2544, chance = 5057, minCount = 1, maxCount = 5 },  -- arrow
 	{ id = "studded club", chance = 5053 },  -- 2448
 	{ id = "bunch of troll hair", chance = 3055 },  -- 10606
 	{ id = "trollroot", chance = 920 },  -- 12471

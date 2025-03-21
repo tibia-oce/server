@@ -72,7 +72,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 93977, minCount = 1, maxCount = 241 },  -- 2148
 	{ id = "lump of earth", chance = 40309 },  -- 11222
 	{ id = "small stone", chance = 24492, minCount = 1, maxCount = 10 },  -- 1294
-	{ id = "rusty armor", chance = 5001 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9808, chance = 5001 },  -- todo: rusted armor does not exist in items.xml
 	{ id = "small topaz", chance = 4918, minCount = 1, maxCount = 2 },  -- 9970
 	{ id = "small diamond", chance = 4642, minCount = 1, maxCount = 2 },  -- 2145
 	{ id = "dwarven ring", chance = 2915 },  -- 2213

@@ -80,7 +80,7 @@ monster.loot = {
 	{ id = "hunting spear", chance = 26087, minCount = 1, maxCount = 5 },  -- 3965
 	{ id = "life ring", chance = 26087 },  -- 2168
 	{ id = "fish fin", chance = 8696 },  -- 5895
-	{ id = "rusty armor", chance = 8696 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9808, chance = 8696 },  -- todo: rusted armor does not exist in items.xml
 	{ id = "flask of rust remover", chance = 4348 },  -- 9930
 	{ id = "heavy trident", chance = 4348 },  -- 13838
 }

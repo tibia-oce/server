@@ -85,7 +85,7 @@ monster.loot = {
 	{ id = "gold ingot", chance = 9602, minCount = 1, maxCount = 2 },  -- 9971
 	{ id = "small ruby", chance = 9499, minCount = 1, maxCount = 5 },  -- 2147
 	{ id = "small topaz", chance = 9086, minCount = 1, maxCount = 5 },  -- 9970
-	{ id = "giant shimmering pearl", chance = 4724 },
+	{ id = 7632, chance = 4724 },
 	{ id = "red gem", chance = 2426 },  -- 2156
 	{ id = "violet gem", chance = 1807 },  -- 2153
 	{ id = "rift lance", chance = 1678 },  -- 25383

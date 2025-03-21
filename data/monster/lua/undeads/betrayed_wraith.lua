@@ -72,7 +72,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 100000, minCount = 2, maxCount = 200 },  -- 2148
 	{ id = "platinum coin", chance = 100000, minCount = 1, maxCount = 8 },  -- 2152
 	{ id = "concentrated demonic blood", chance = 65559 },  -- todo: flask of demonic blood does not exist in items.xml
-	{ id = "power bolt", chance = 49859, minCount = 1, maxCount = 15 },  -- 2547
+	{ id = 2547, chance = 49859, minCount = 1, maxCount = 15 },  -- power bolt
 	{ id = "demonic essence", chance = 20390 },  -- 6500
 	{ id = "unholy bone", chance = 19585 },  -- 11233
 	{ id = "ultimate health potion", chance = 15112 },  -- 8473

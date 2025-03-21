@@ -84,7 +84,7 @@ monster.loot = {
 	{ id = "orc leather", chance = 4001 },  -- 12435
 	{ id = "orc tooth", chance = 2036 },  -- 11113
 	{ id = "wand of decay", chance = 995 },  -- 2188
-	{ id = "1958", chance = 471 },  -- book (grey)
+	{ id = 1958, chance = 471 },  -- book (grey)
 }
 
 monster.attacks = {

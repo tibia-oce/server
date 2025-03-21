@@ -85,7 +85,7 @@ monster.loot = {
 	{ id = "minotaur leather", chance = 96875 },  -- 5878
 	{ id = "minotaur horn", chance = 93750, minCount = 1, maxCount = 2 },  -- 12428
 	{ id = "piece of warrior armor", chance = 81250 },  -- 12438
-	{ id = "piercing bolt", chance = 46875, minCount = 1, maxCount = 14 },  -- 7363
+	{ id = 7363, chance = 46875, minCount = 1, maxCount = 14 },  -- piercing bolt
 	{ id = "brass armor", chance = 28125 },  -- 2465
 	{ id = "meat", chance = 15625 },  -- 2666
 	{ id = "battle shield", chance = 12500 },  -- 2513

@@ -77,7 +77,7 @@ monster.loot = {
 	{ id = "dragon ham", chance = 79872, minCount = 1, maxCount = 3 },  -- 2672
 	{ id = "green mushroom", chance = 12147 },  -- 2796
 	{ id = 1976, chance = 8841 },  -- book (gemmed)
-	{ id = "power bolt", chance = 5877, minCount = 1, maxCount = 6 },  -- 2547
+	{ id = 2547, chance = 5877, minCount = 1, maxCount = 6 },  -- power bolt
 	{ id = "small sapphire", chance = 5081 },  -- 2146
 	{ id = "energy ring", chance = 4950 },  -- 2167
 	{ id = 7441, chance = 4074 },  -- ice cube

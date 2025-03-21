@@ -94,7 +94,7 @@ monster.loot = {
 	{ id = "studded armor", chance = 7000 },
 	{ id = "studded shield", chance = 1200 },
 	{ id = 6570, chance = 500 }, -- surprise bag
-	{ id = "surprise bag", chance = 500 }, -- surprise bag
+	{ id = 6570, chance = 500 }, -- surprise bag
 }
 
 monster.attacks = {

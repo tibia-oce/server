@@ -75,7 +75,7 @@ monster.loot = {
 	{ id = "spear", chance = 5073, minCount = 1, maxCount = 2 },  -- 2389
 	{ id = "plate shield", chance = 5004 },  -- 2510
 	{ id = "chain armor", chance = 3044 },  -- 2464
-	{ id = "5706", chance = 948 },  -- treasure map (pirate)
+	{ id = 5706, chance = 948 },  -- treasure map (pirate)
 	{ id = "bandana", chance = 931 },  -- 5917
 	{ id = "eye patch", chance = 527 },  -- 6098
 	{ id = "hook", chance = 515 },  -- 6097

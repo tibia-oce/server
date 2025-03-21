@@ -84,7 +84,7 @@ monster.loot = {
 	{ id = "green crystal fragment", chance = 43750, maxCount = 3 },  -- 18421
 	{ id = "blue crystal shard", chance = 40625, maxCount = 5 },  -- 18413
 	{ id = "green gem", chance = 40625 },  -- 2155
-	{ id = "giant shimmering pearl", chance = 34375 },  -- 7632
+	{ id = 7632, chance = 34375 },  -- 7632
 	{ id = "violet crystal shard", chance = 34375, maxCount = 5 },  -- 18414
 	{ id = "great mana potion", chance = 31250, maxCount = 8 },  -- 7590
 	{ id = "cyan crystal fragment", chance = 31250, maxCount = 3 },  -- 18419

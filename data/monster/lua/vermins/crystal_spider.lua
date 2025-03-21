@@ -72,7 +72,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 197 },  -- 2148
 	{ id = "strong mana potion", chance = 14994 },  -- 7589
 	{ id = "plate armor", chance = 9899 },  -- 2463
-	{ id = "sniper arrow", chance = 5908, minCount = 1, maxCount = 6 },  -- 7364
+	{ id = 7364, chance = 5908, minCount = 1, maxCount = 6 },  -- sniper arrow
 	{ id = "steel helmet", chance = 5166 },  -- 2457
 	{ id = 7441, chance = 4910 },  -- ice cube
 	{ id = "crystal sword", chance = 2523 },  -- 7449

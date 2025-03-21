@@ -79,7 +79,7 @@ monster.loot = {
 	{ id = "glooth capsule", chance = 3112 },  -- 24183
 	{ id = "glooth steak", chance = 2499 },  -- 23517
 	{ id = "glooth sandwich", chance = 2483 },  -- 23514
-	{ id = "giant shimmering pearl", chance = 1495 },
+	{ id = 7632, chance = 1495 },
 	{ id = "glooth club", chance = 1003 },  -- 23549
 	{ id = "glooth spear", chance = 999 },  -- 23529
 	{ id = "glooth blade", chance = 997 },  -- 23550

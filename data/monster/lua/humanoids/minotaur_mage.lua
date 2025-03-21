@@ -69,7 +69,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 85333, minCount = 1, maxCount = 35 },  -- 2148
-	{ id = "carrot", chance = 14658, minCount = 1, maxCount = 8 },  -- 2684
+	{ id = 2684, chance = 14658, minCount = 1, maxCount = 8 },  -- carrot
 	{ id = "purple robe", chance = 6070 },  -- 12429
 	{ id = 2050, chance = 4991 },  -- torch
 	{ id = "leather legs", chance = 4870 },  -- 2649

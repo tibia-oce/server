@@ -72,7 +72,7 @@ monster.loot = {
 	{ id = "small emerald", chance = 9953, minCount = 1, maxCount = 5 },  -- 2149
 	{ id = "obsidian lance", chance = 4985 },  -- 2425
 	{ id = "bunch of ripe rice", chance = 4914, minCount = 1, maxCount = 2 },  -- 11245
-	{ id = "giant shimmering pearl", chance = 986 },
+	{ id = 7632, chance = 986 },
 	{ id = "crocodile boots", chance = 499 },  -- 3982
 }
 

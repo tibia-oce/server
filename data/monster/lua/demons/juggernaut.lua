@@ -88,7 +88,7 @@ monster.loot = {
 	{ id = "small topaz", chance = 18418, minCount = 1, maxCount = 5 },  -- 9970
 	{ id = "onyx arrow", chance = 15374, minCount = 1, maxCount = 15 },  -- 7365
 	{ id = "red gem", chance = 14845 },  -- 2156
-	{ id = "giant shimmering pearl", chance = 8918 },
+	{ id = 7632, chance = 8918 },
 	{ id = "titan axe", chance = 8018 },  -- 7413
 	{ id = "gold ingot", chance = 7674, minCount = 1, maxCount = 2 },  -- 9971
 	{ id = "knight armor", chance = 6060 },  -- 2476

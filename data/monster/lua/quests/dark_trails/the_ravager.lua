@@ -19,9 +19,10 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.events = {
-	"TheRavagerDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"TheRavagerDeath",
+-- }
 
 monster.bosstiary = {
 	bossRaceId = 1035,
@@ -66,9 +67,10 @@ monster.flags = {
 	canWalkOnFire = true,
 	canWalkOnPoison = true}
 
-monster.events = {
-	"TheRavagerDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"TheRavagerDeath",
+-- }
 
 monster.light = {
 	level = 0,

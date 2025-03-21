@@ -73,7 +73,7 @@ monster.loot = {
 	{ id = "battle shield", chance = 1000 },
 	{ id = "guardian shield", chance = 5000 },
 	{ id = 6570, chance = 5538 }, -- surprise bag
-	{ id = "surprise bag", chance = 1538 }, -- surprise bag
+	{ id = 6570, chance = 1538 }, -- surprise bag
 }
 
 monster.attacks = {

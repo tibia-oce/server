@@ -36,9 +36,10 @@ monster.strategiesTarget = {
 	nearest = 100,
 }
 
-monster.events = {
-	"GoblinLeaderDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"GoblinLeaderDeath",
+-- }
 
 monster.flags = {
 	summonable = true,

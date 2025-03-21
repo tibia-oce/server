@@ -66,8 +66,8 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 11 },  -- 2148
-	{ id = "insectoid eggs", chance = 23157 },  -- 19737
-	{ id = "simple arrow", chance = 17275, minCount = 1, maxCount = 5 },  -- 23839
+	{ id = 19737, chance = 23157 },  -- insectoid eggs
+	{ id = 23839, chance = 17275, minCount = 1, maxCount = 5 },  -- simple arrow
 	{ id = 14774, chance = 13031, minCount = 2, maxCount = 5 },  -- insectoid eggs
 	{ id = "meat", chance = 10648 },  -- 2666
 	{ id = "chain helmet", chance = 5733 },  -- 2458

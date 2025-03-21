@@ -31,10 +31,11 @@ monster.corpse = 23564
 monster.speed = 200
 monster.manaCost = 0
 
-monster.events = {
-	"AnomalyTransform",
-	"HeartBossDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"AnomalyTransform",
+	-- "HeartBossDeath",
+-- }
 
 monster.changeTarget = {
 	interval = 2000,

@@ -79,12 +79,12 @@ monster.loot = {
 	{ id = "gear crystal", chance = 2190 },  -- 10572
 	{ id = "great health potion", chance = 1955 },  -- 7591
 	{ id = "great mana potion", chance = 1567 },  -- 7590
-	{ id = "rusty armor", chance = 1562 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9808, chance = 1562 },  -- todo: rusted armor does not exist in items.xml
 	{ id = 9690, chance = 1045 },  -- gear wheel
 	{ id = "life crystal", chance = 1025 },  -- 2177
 	{ id = "war hammer", chance = 997 },  -- 2391
 	{ id = "small diamond", chance = 963, minCount = 1, maxCount = 2 },  -- 2145
-	{ id = "rusty legs", chance = 901 },  -- todo: rusted legs does not exist in items.xml
+	{ id = 9811, chance = 901 },  -- todo: rusted legs does not exist in items.xml
 	{ id = "spiked squelcher", chance = 891 },  -- 7452
 	{ id = "iron ore", chance = 867 },  -- 5880
 	{ id = "great spirit potion", chance = 829 },  -- 8472

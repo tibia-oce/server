@@ -79,7 +79,7 @@ monster.loot = {
 	{ id = "red gem", chance = 5039 },  -- 2156
 	{ id = "shrimp", chance = 5039 },  -- 2670
 	{ id = "vortex bolt", chance = 3840, minCount = 1, maxCount = 5 },  -- 15649
-	{ id = "giant shimmering pearl", chance = 1748 },  -- 7632
+	{ id = 7632, chance = 1748 },  -- 7632
 	{ id = "warrior helmet", chance = 1543 },  -- 2475
 	{ id = "fish fin", chance = 1440 },  -- 5895
 	{ id = 2169, chance = 549 },  -- time ring

@@ -77,7 +77,7 @@ monster.loot = {
 	{ id = "gold coin", chance = 75936, minCount = 1, maxCount = 50 },  -- 2148
 	{ id = "hunting spear", chance = 14999, minCount = 1, maxCount = 3 },  -- 3965
 	{ id = "life ring", chance = 2025 },  -- 2168
-	{ id = "rusty armor", chance = 958 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9808, chance = 958 },  -- todo: rusted armor does not exist in items.xml
 	{ id = "heavy trident", chance = 485 },  -- 13838
 	{ id = "eye of a deepling", chance = 302 },  -- 13870
 	{ id = "fish fin", chance = 296 },  -- 5895

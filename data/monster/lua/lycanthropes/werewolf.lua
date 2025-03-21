@@ -79,7 +79,7 @@ monster.loot = {
 	{ id = "werewolf fangs", chance = 14759 },  -- 24708
 	{ id = "werewolf fur", chance = 9828 },  -- 11234
 	{ id = "plate shield", chance = 9714, minCount = 1, maxCount = 2 },  -- 2510
-	{ id = "rusty armor", chance = 7954 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9808, chance = 7954 },  -- todo: rusted armor does not exist in items.xml
 	{ id = "brown mushroom", chance = 6873 },  -- 2789
 	{ id = "strong health potion", chance = 5246, minCount = 1, maxCount = 2 },  -- 7588
 	{ id = "wolf paw", chance = 5210 },  -- 5897

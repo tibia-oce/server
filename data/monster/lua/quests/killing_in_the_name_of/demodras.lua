@@ -81,7 +81,7 @@ monster.loot = {
 	{ id = "platinum coin", chance = 99145, minCount = 1, maxCount = 10 },  -- 2152
 	{ id = "dragon ham", chance = 75214 },  -- 2672
 	{ id = "green mushroom", chance = 25641, minCount = 1, maxCount = 7 },  -- 2796
-	{ id = "power bolt", chance = 19658, minCount = 1, maxCount = 10 },  -- 2547
+	{ id = 2547, chance = 19658, minCount = 1, maxCount = 10 },  -- power bolt
 	{ id = "red dragon leather", chance = 13675 },  -- 5948
 	{ id = "small sapphire", chance = 11966 },  -- 2146
 	{ id = 1976, chance = 10256 },  -- book (gemmed)

@@ -84,7 +84,7 @@ monster.loot = {
 	{ id = "small ruby", chance = 15829, minCount = 1, maxCount = 2 },  -- 2147
 	{ id = "gooey mass", chance = 12449, minCount = 1, maxCount = 2 },  -- 15572
 	{ id = "ultimate health potion", chance = 12106 },  -- 8473
-	{ id = "giant shimmering pearl", chance = 6350 },  -- 7632
+	{ id = 7632, chance = 6350 },  -- 7632
 	{ id = "hive scythe", chance = 1576 },  -- 15492
 	{ id = "calopteryx cape", chance = 1530 },  -- 15489
 	{ id = "carapace shield", chance = 937 },  -- 15491

@@ -78,7 +78,7 @@ monster.loot = {
 	{ id = "gold ingot", chance = 5142 },  -- 9971
 	{ id = "ultimate health potion", chance = 3871, minCount = 1, maxCount = 3 },  -- 8473
 	{ id = "ring of healing", chance = 3158 },  -- 2214
-	{ id = "giant shimmering pearl", chance = 2508 },  -- 7632
+	{ id = 7632, chance = 2508 },  -- 7632
 	{ id = "hive scythe", chance = 784 },  -- 15492
 	{ id = "buggy backpack", chance = 440 },  -- 15646
 	{ id = "calopteryx cape", chance = 369 },  -- 15489

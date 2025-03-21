@@ -72,7 +72,7 @@ monster.loot = {
 	{ id = "chicken feather", chance = 17941 },  -- 5890
 	{ id = "worm", chance = 8755 },  -- 3976
 	{ id = "meat", chance = 1766 },  -- 2666
-	{ id = "egg", chance = 866 },  -- 2695
+	{ id = 2695, chance = 866 },  -- egg
 }
 
 monster.defenses = {

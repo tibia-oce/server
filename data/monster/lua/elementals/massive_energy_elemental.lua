@@ -73,7 +73,7 @@ monster.loot = {
 	{ id = "flash arrow", chance = 0, maxCount = 33 },  -- 7838
 	{ id = "strong mana potion", chance = 0, maxCount = 10 },  -- 7589
 	{ id = "great mana potion", chance = 0, maxCount = 5 },  -- 7590
-	{ id = "rusty armor", chance = 0 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9808, chance = 0 },  -- todo: rusted armor does not exist in items.xml
 	{ id = "small amethyst", chance = 0, maxCount = 4 },  -- 2150
 	{ id = "energy spike sword", chance = 0 },  -- 7869
 	{ id = "lightning pendant", chance = 0 },  -- 7889

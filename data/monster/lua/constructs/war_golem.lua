@@ -89,7 +89,7 @@ monster.loot = {
 	{ id = "nail", chance = 5258, minCount = 1, maxCount = 5 },  -- 8309
 	{ id = "battle shield", chance = 4885 },  -- 2513
 	{ id = "two handed sword", chance = 4860 },  -- 2377
-	{ id = "rusty armor", chance = 2934 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9808, chance = 2934 },  -- todo: rusted armor does not exist in items.xml
 	{ id = "iron ore", chance = 1769 },  -- 5880
 	{ id = "dwarven ring", chance = 1195 },  -- 2213
 	{ id = 9976, chance = 1094 },  -- crystal pedestal (red)

@@ -74,7 +74,7 @@ monster.loot = {
 	{ id = "scale armor", chance = 3046 },  -- 2483
 	{ id = "steel shield", chance = 2893 },  -- 2509
 	{ id = "light shovel", chance = 1952 },  -- 5710
-	{ id = "5706", chance = 1082 },  -- treasure map (pirate)
+	{ id = 5706, chance = 1082 },  -- treasure map (pirate)
 	{ id = "pirate knee breeches", chance = 1028 },  -- 5918
 	{ id = "pirate bag", chance = 1000 },  -- 5927
 	{ id = "hook", chance = 531 },  -- 6097

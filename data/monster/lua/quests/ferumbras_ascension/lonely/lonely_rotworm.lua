@@ -72,7 +72,7 @@ monster.loot = {
 	{ id = 3577, chance = 19940 }, -- meat
 	{ id = "lump of dirt", chance = 9990 }, -- lump of dirt
 	{ id = 3582, chance = 20130 }, -- ham
-	{ id = "sword", chance = 3110 }, -- sword
+	{ id = 2376, chance = 3110 }, -- sword
 	{ id = "mace", chance = 4540 }, -- mace
 }
 

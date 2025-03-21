@@ -68,12 +68,12 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "white mushroom", chance = 39971, minCount = 1, maxCount = 2 },  -- 2787
-	{ id = "bolt", chance = 37961, minCount = 1, maxCount = 7 },  -- 2543
+	{ id = 2543, chance = 37961, minCount = 1, maxCount = 7 },  -- bolt
 	{ id = "gold coin", chance = 28408, minCount = 1, maxCount = 12 },  -- 2148
 	{ id = "soldier helmet", chance = 11810 },  -- 2481
 	{ id = 2554, chance = 10030 },  -- shovel
 	{ id = "chain armor", chance = 7506 },  -- 2464
-	{ id = "piercing bolt", chance = 3803, minCount = 1, maxCount = 3 },  -- 7363
+	{ id = 7363, chance = 3803, minCount = 1, maxCount = 3 },  -- piercing bolt
 	{ id = "dwarven shield", chance = 3046 },  -- 2525
 	{ id = "crossbow", chance = 3011 },  -- 2455
 	{ id = "battle axe", chance = 2483 },  -- 2378

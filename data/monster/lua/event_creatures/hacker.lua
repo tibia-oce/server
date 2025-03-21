@@ -84,7 +84,7 @@ monster.loot = {
 	{ id = "war hammer", chance = 5000 },
 	{ id = "ham", chance = 50000 },
 	{ id = 6570, chance = 5538 }, -- surprise bag
-	{ id = "surprise bag", chance = 1538 }, -- surprise bag
+	{ id = 6570, chance = 1538 }, -- surprise bag
 }
 
 monster.attacks = {

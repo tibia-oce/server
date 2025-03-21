@@ -81,7 +81,7 @@ monster.loot = {
 	{ id = "black pearl", chance = 22468, minCount = 1, maxCount = 2 },  -- 2144
 	{ id = "demonic essence", chance = 15403 },  -- 6500
 	{ id = "hardened bone", chance = 15208 },  -- 5925
-	{ id = "power bolt", chance = 14643, minCount = 1, maxCount = 15 },  -- 2547
+	{ id = 2547, chance = 14643, minCount = 1, maxCount = 15 },  -- power bolt
 	{ id = "golden mug", chance = 5187 },  -- 2033
 	{ id = "knight armor", chance = 4863 },  -- 2476
 	{ id = "dragonbone staff", chance = 4098 },  -- 7430

@@ -71,7 +71,7 @@ monster.loot = {
 	{ id = "dragon ham", chance = 60193 },  -- 2672
 	{ id = "wyvern talisman", chance = 11991 },  -- 10561
 	{ id = "small sapphire", chance = 4945 },  -- 2146
-	{ id = "power bolt", chance = 3412 },  -- 2547
+	{ id = 2547, chance = 3412 },  -- power bolt
 	{ id = "strong health potion", chance = 2501 },  -- 7588
 	{ id = "wand of inferno", chance = 782 },  -- 2187
 	{ id = "emerald bangle", chance = 590 },  -- 2127

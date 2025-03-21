@@ -82,7 +82,7 @@ monster.loot = {
 	{ id = 6299, chance = 4000 }, -- death ring
 	{ id = "demonic essence", chance = 1538 },
 	{ id = 6570, chance = 5538, maxCount = 3 }, -- surprise bag
-	{ id = "surprise bag", chance = 1538 }, -- surprise bag
+	{ id = 6570, chance = 1538 }, -- surprise bag
 	{ id = "dragonbone staff", chance = 50000 },
 }
 

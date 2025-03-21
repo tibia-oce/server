@@ -74,7 +74,7 @@ monster.loot = {
 	{ id = "compound eye", chance = 13552 },  -- 15486
 	{ id = "ultimate health potion", chance = 11374 },  -- 8473
 	{ id = 6300, chance = 4546 },  -- death ring
-	{ id = "giant shimmering pearl", chance = 2926 },
+	{ id = 7632, chance = 2926 },
 	{ id = "calopteryx cape", chance = 1428 },  -- 15489
 	{ id = "hive scythe", chance = 1324 },  -- 15492
 	{ id = "titan axe", chance = 1167 },  -- 7413

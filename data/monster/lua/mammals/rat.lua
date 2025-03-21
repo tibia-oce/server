@@ -19,9 +19,10 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.events = {
-	"RationalRequestRatDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"RationalRequestRatDeath",
+-- }
 
 
 monster.health = 20
@@ -72,7 +73,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 88471, minCount = 1, maxCount = 4 },  -- 2148
-	{ id = "cheese", chance = 34901 },  -- 2696
+	{ id = 2696, chance = 34901 },  -- cheese
 }
 
 monster.attacks = {

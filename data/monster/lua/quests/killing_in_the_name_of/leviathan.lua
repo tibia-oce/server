@@ -72,9 +72,9 @@ monster.voices = {
 monster.loot = {
 	{ id = "leviathan's amulet", chance = 100000 },  -- 10220
 	{ id = "sea serpent trophy", chance = 100000 },  -- 10529
-	{ id = "rusty armor", chance = 84559 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9808, chance = 84559 },  -- todo: rusted armor does not exist in items.xml
 	{ id = "platinum coin", chance = 83088, minCount = 1, maxCount = 7 },  -- 2152
-	{ id = "rusty legs", chance = 83088 },  -- todo: rusted legs does not exist in items.xml
+	{ id = 9811, chance = 83088 },  -- todo: rusted legs does not exist in items.xml
 	{ id = "bonebreaker", chance = 53676 },  -- 7428
 	{ id = "small sapphire", chance = 50735, minCount = 1, maxCount = 5 },  -- 2146
 	{ id = "strong mana potion", chance = 49265 },  -- 7589

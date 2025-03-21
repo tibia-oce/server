@@ -82,7 +82,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 99453, minCount = 1, maxCount = 90 },  -- 2148
 	{ id = "bone sword", chance = 15005 },  -- 2450
-	{ id = "sniper arrow", chance = 9591, minCount = 1, maxCount = 4 },  -- 7364
+	{ id = 7364, chance = 9591, minCount = 1, maxCount = 4 },  -- sniper arrow
 	{ id = "steel shield", chance = 5910 },  -- 2509
 	{ id = "piece of dead brain", chance = 5049 },  -- 10580
 	{ id = "bonelord eye", chance = 2967 },  -- 5898

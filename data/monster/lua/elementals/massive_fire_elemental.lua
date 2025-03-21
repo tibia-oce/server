@@ -69,7 +69,7 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 99991, minCount = 1, maxCount = 217 },  -- 2148
 	{ id = "platinum coin", chance = 15193 },  -- 2152
-	{ id = "rusty armor", chance = 7792 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9808, chance = 7792 },  -- todo: rusted armor does not exist in items.xml
 	{ id = "small ruby", chance = 7049, minCount = 1, maxCount = 2 },  -- 2147
 	{ id = "wand of inferno", chance = 2387 },  -- 2187
 	{ id = "magma amulet", chance = 919 },  -- 7890

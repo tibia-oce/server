@@ -76,7 +76,7 @@ monster.loot = {
 	{ id = "great mana potion", chance = 11503, minCount = 1, maxCount = 2 },  -- 7590
 	{ id = "ultimate health potion", chance = 6229, minCount = 1, maxCount = 2 },  -- 8473
 	{ id = 6300, chance = 2556 },  -- death ring
-	{ id = "giant shimmering pearl", chance = 1633 },
+	{ id = 7632, chance = 1633 },
 	{ id = "titan axe", chance = 864 },  -- 7413
 	{ id = "violet gem", chance = 777 },  -- 2153
 	{ id = "hive scythe", chance = 726 },  -- 15492

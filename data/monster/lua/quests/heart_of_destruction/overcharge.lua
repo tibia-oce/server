@@ -56,9 +56,10 @@ monster.flags = {
 	canWalkOnFire = false,
 	canWalkOnPoison = false}
 
-monster.events = {
-	"OverchargeDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"OverchargeDeath",
+-- }
 
 monster.light = {
 	level = 0,

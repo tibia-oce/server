@@ -85,7 +85,7 @@ monster.loot = {
 	{ id = "fur bag", chance = 7700 },  -- 7343
 	{ id = 2401, chance = 6557 },  -- staff
 	{ id = "hunting spear", chance = 5285 },  -- 3965
-	{ id = "1958", chance = 4672 },  -- book (grey)
+	{ id = 1958, chance = 4672 },  -- book (grey)
 	{ id = "mana potion", chance = 592 },  -- 7620
 	{ id = "brutetamer's staff", chance = 303 },  -- 7379
 	{ id = "fur boots", chance = 144 },  -- 7457

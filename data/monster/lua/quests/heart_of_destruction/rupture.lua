@@ -62,11 +62,12 @@ monster.flags = {
 	canWalkOnFire = true,
 	canWalkOnPoison = true}
 
-monster.events = {
-	"RuptureResonance",
-	"RuptureHeal",
-	"HeartBossDeath",
-}
+-- todo(monster events): not yet migrated from xml to lua (or doesn't exist)
+-- monster.events = {
+--	"RuptureResonance",
+	-- "RuptureHeal",
+	-- "HeartBossDeath",
+-- }
 
 monster.light = {
 	level = 0,

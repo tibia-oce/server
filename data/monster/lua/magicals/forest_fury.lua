@@ -73,9 +73,9 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 87785, minCount = 1, maxCount = 55 },  -- 2148
-	{ id = "bolt", chance = 50517, minCount = 1, maxCount = 15 },  -- 2543
+	{ id = 2543, chance = 50517, minCount = 1, maxCount = 15 },  -- bolt
 	{ id = "meat", chance = 24941 },  -- 2666
-	{ id = "piercing bolt", chance = 14850, minCount = 1, maxCount = 5 },  -- 7363
+	{ id = 7363, chance = 14850, minCount = 1, maxCount = 5 },  -- piercing bolt
 	{ id = "venison", chance = 12032 },  -- 21312
 	{ id = "elven hoof", chance = 7432 },  -- 21311
 	{ id = "crossbow", chance = 2588 },  -- 2455

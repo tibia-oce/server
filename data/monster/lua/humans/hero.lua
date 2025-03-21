@@ -74,11 +74,11 @@ monster.voices = {
 monster.loot = {
 	{ id = "gold coin", chance = 60386, minCount = 1, maxCount = 100 },  -- 2148
 	{ id = 1949, chance = 45074 },  -- scroll
-	{ id = "arrow", chance = 26956, minCount = 1, maxCount = 13 },  -- 2544
+	{ id = 2544, chance = 26956, minCount = 1, maxCount = 13 },  -- arrow
 	{ id = "red rose", chance = 20352 },  -- 2744
 	{ id = "grapes", chance = 20178 },  -- 2681
 	{ id = "bow", chance = 13022 },  -- 2456
-	{ id = "sniper arrow", chance = 11513, minCount = 1, maxCount = 4 },  -- 7364
+	{ id = 7364, chance = 11513, minCount = 1, maxCount = 4 },  -- sniper arrow
 	{ id = "meat", chance = 8573 },  -- 2666
 	{ id = "green tunic", chance = 7953 },  -- 2652
 	{ id = "wedding ring", chance = 5167 },  -- 2121

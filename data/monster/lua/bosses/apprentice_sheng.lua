@@ -86,7 +86,7 @@ monster.loot = {
 	{ id = "leather legs", chance = 14085 },  -- 2649
 	{ id = "knife", chance = 12676 },  -- 2403
 	{ id = "leather helmet", chance = 5634 },  -- 2461
-	{ id = "carrot", chance = 4225, minCount = 2, maxCount = 7 },  -- 2684
+	{ id = 2684, chance = 4225, minCount = 2, maxCount = 7 },  -- carrot
 }
 
 monster.attacks = {

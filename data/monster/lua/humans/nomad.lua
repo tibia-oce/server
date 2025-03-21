@@ -1,20 +1,20 @@
 -- Version: 9.40
--- Monster: https://tibia.fandom.com/wiki/Nomad_(Female)
+-- Monster: https://tibia.fandom.com/wiki/Nomad_(Basic)
 -- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Nomad_(Basic)
 ---
 
 
-local mType = Game.createMonsterType("Nomad Female")
+local mType = Game.createMonsterType("Nomad")
 local monster = {}
 
 monster.name = "Nomad"
 monster.description = "a nomad"
 monster.experience = 60
 monster.outfit = {
-	lookType = 150,
-	lookHead = 96,
-	lookBody = 39,
-	lookLegs = 40,
+	lookType = 146,
+	lookHead = 104,
+	lookBody = 48,
+	lookLegs = 49,
 	lookFeet = 3,
 	lookAddons = 3,
 	lookMount = 0,
@@ -29,7 +29,7 @@ monster.outfit = {
 monster.health = 160
 monster.maxHealth = 160
 monster.race = "blood"
-monster.corpse = 18181
+monster.corpse = 18322
 monster.speed = 95
 monster.manaCost = 0
 
@@ -56,7 +56,6 @@ monster.flags = {
 	targetDistance = 1,
 	runHealth = 15,
 	healthHidden = false,
-	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false}
@@ -90,7 +89,7 @@ monster.loot = {
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -80 },
-	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, radius = 1, effect = CONST_ME_SOUND_WHITE, target = false },
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, effect = CONST_ME_SOUND_WHITE, target = false },
 }
 
 monster.defenses = {

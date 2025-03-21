@@ -66,7 +66,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = "gold coin", chance = 100000, minCount = 1, maxCount = 12 },  -- 2148
-	{ id = "simple arrow", chance = 23126, minCount = 1, maxCount = 16 },  -- 23839
+	{ id = 23839, chance = 23126, minCount = 1, maxCount = 16 },  -- simple arrow
 	{ id = "poison arrow", chance = 14775, minCount = 1, maxCount = 8 },  -- 2545
 	{ id = "doublet", chance = 5567 },  -- 2485
 	{ id = "mana potion", chance = 4711 },  -- 7620

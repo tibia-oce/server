@@ -83,7 +83,7 @@ monster.loot = {
 	{ id = "strong health potion", chance = 4829 },  -- 7588
 	{ id = "emerald bangle", chance = 1056 },  -- 2127
 	{ id = "small diamond", chance = 1041, minCount = 1, maxCount = 2 },  -- 2145
-	{ id = "rusty armor", chance = 1023 },  -- todo: rusted armor does not exist in items.xml
+	{ id = 9808, chance = 1023 },  -- todo: rusted armor does not exist in items.xml
 	{ id = "velvet tapestry", chance = 999 },  -- 9837
 	{ id = "hibiscus dress", chance = 993 },  -- 8873
 	{ id = "boots of haste", chance = 216 },  -- 2195

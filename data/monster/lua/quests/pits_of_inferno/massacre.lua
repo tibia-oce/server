@@ -76,22 +76,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3116, chance = 5880 }, -- big bone
-	{ id = 6499, chance = 100000 }, -- demonic essence
-	{ id = "great health potion", chance = 5880 }, -- great health potion
-	{ id = 238, chance = 5880 }, -- great mana potion
-	{ id = 3031, chance = 94120, maxCount = 157 }, -- gold coin
-	{ id = 3422, chance = 500 }, -- great shield
-	{ id = 3577, chance = 88240, maxCount = 9 }, -- meat
-	{ id = 5021, chance = 82350, maxCount = 7 }, -- orichalcum pearl
-	{ id = 3106, chance = 64710 }, -- old twig
-	{ id = 3035, chance = 58820, maxCount = 6 }, -- platinum coin
-	{ id = 6540, chance = 100000 }, -- piece of massacre's shell
-	{ id = 5944, chance = 100000 }, -- soul orb
-	{ id = "heavy mace", chance = 1000 }, -- heavy mace
-	{ id = 7403, chance = 900 }, -- berserker
-	{ id = "golden armor", chance = 3500 }, -- golden armor
-	{ id = 6104, chance = 1200 }, -- jewel case
+	{ id = "piece of Massacre's shell", chance = 100000 },  -- 6540
+	{ id = "demonic essence", chance = 96552 },  -- 6500
+	{ id = "soul orb", chance = 96552 },  -- 5944
+	{ id = "gold coin", chance = 89655, minCount = 8, maxCount = 157 },  -- 2148
+	{ id = "meat", chance = 82759 },  -- 2666
+	{ id = "orichalcum pearl", chance = 75862, minCount = 1, maxCount = 6 },  -- 5022
+	{ id = "old twig", chance = 65517 },  -- 2221
+	{ id = "platinum coin", chance = 51724, minCount = 1, maxCount = 6 },  -- 2152
+	{ id = "great mana potion", chance = 10345 },  -- 7590
+	{ id = "great health potion", chance = 6897 },  -- 7591
+	{ id = 2231, chance = 3448 },  -- big bone
 }
 
 monster.attacks = {
