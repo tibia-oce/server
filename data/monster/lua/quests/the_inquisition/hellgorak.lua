@@ -24,10 +24,6 @@ monster.outfit = {
 --	"InquisitionBossDeath",
 -- }
 
-monster.bosstiary = {
-	bossRaceId = 403,
-	bossRace = RARITY_BANE,
-}
 
 monster.health = 25850
 monster.maxHealth = 25850

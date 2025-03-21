@@ -19,10 +19,6 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.bosstiary = {
-	bossRaceId = 425,
-	bossRace = RARITY_NEMESIS,
-}
 
 monster.health = 600
 monster.maxHealth = 600

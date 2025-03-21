@@ -24,10 +24,6 @@ monster.outfit = {
 --	"DeeplingBossDeath",
 -- }
 
-monster.bosstiary = {
-	bossRaceId = 774,
-	bossRace = RARITY_BANE,
-}
 
 monster.health = 35000
 monster.maxHealth = 35000

@@ -24,10 +24,6 @@ monster.outfit = {
 --	"DeathPriestShargonDeath",
 -- }
 
-monster.bosstiary = {
-	bossRaceId = 1047,
-	bossRace = RARITY_BANE,
-}
 
 monster.health = 65000
 monster.maxHealth = 65000

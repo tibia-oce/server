@@ -24,10 +24,6 @@ monster.outfit = {
 --	"BlackKnightDeath",
 -- }
 
-monster.bosstiary = {
-	bossRaceId = 46,
-	bossRace = RARITY_BANE,
-}
 
 monster.health = 1800
 monster.maxHealth = 1800

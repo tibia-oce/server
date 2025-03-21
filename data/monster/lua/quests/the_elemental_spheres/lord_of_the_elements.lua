@@ -24,10 +24,6 @@ monster.outfit = {
 --	"ElementalOverlordDeath",
 -- }
 
-monster.bosstiary = {
-	bossRaceId = 454,
-	bossRace = RARITY_ARCHFOE,
-}
 
 monster.health = 8000
 monster.maxHealth = 8000

@@ -24,10 +24,6 @@ monster.outfit = {
 --	"BossesWarzoneDeath",
 -- }
 
-monster.bosstiary = {
-	bossRaceId = 892,
-	bossRace = RARITY_ARCHFOE,
-}
 
 monster.health = 200000
 monster.maxHealth = 200000

@@ -24,15 +24,11 @@ monster.outfit = {
 --	"DiseasedTrioDeath",
 -- }
 
-monster.bosstiary = {
-	bossRaceId = 484,
-	bossRace = RARITY_BANE,
-}
 
 monster.health = 1100
 monster.maxHealth = 1100
 monster.race = "venom"
-monster.corpse = 8123
+monster.corpse = 8951
 monster.speed = 75
 monster.manaCost = 0
 

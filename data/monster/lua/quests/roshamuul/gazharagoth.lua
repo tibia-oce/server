@@ -32,10 +32,6 @@ monster.changeTarget = {
 	chance = 20,
 }
 
-monster.bosstiary = {
-	bossRaceId = 1003,
-	bossRace = RARITY_NEMESIS,
-}
 
 monster.strategiesTarget = {
 	nearest = 70,
@@ -85,6 +81,8 @@ monster.voices = {
 }
 
 monster.loot = {
+	{ id = 22614, chance = 0 },  -- nightmare beacon
+	{ id = 7632, chance = 0 },  -- giant shimmering pearl
 	{ id = "cluster of solace", chance = 0, minCount = 1, maxCount = 14 },  -- 22396
 	{ id = "crystal coin", chance = 0, minCount = 1, maxCount = 6 },  -- 2160
 	{ id = "dream matter", chance = 0 },  -- 22397
@@ -108,7 +106,6 @@ monster.loot = {
 	{ id = "green crystal shard", chance = 0, maxCount = 15 },  -- 18415
 	{ id = "brown crystal splinter", chance = 0, maxCount = 15 },  -- 18417
 	{ id = "infernal bolt", chance = 0, maxCount = 100 },  -- 6529
-	{ id = 7632, chance = 0 },  -- giant shimmering pearl
 	{ id = "life ring", chance = 0 },  -- 2168
 	{ id = "blue crystal shard", chance = 0, maxCount = 15 },  -- 18413
 	{ id = "violet crystal shard", chance = 0, maxCount = 15 },  -- 18414
@@ -124,7 +121,6 @@ monster.loot = {
 	{ id = "nightmare hook", chance = 0 },  -- 22616
 	{ id = "crude umbral chopper", chance = 0 },  -- 22407
 	{ id = "crude umbral bow", chance = 0 },  -- 22416
-	{ id = 22614, chance = 0 },  -- nightmare beacon
 	{ id = "umbral crossbow", chance = 0 },  -- 22420
 	{ id = "boots of haste", chance = 0 },  -- 2195
 	{ id = "crude umbral hammer", chance = 0 },  -- 22413

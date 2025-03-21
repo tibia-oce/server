@@ -1,8 +1,8 @@
 -- Version: --
 -- Monster: https://tibia.fandom.com/wiki/Apocalypse
+-- Loot Table: --
 ---
--- Apocalypse (Tibia Wiki: https://tibia.fandom.com/wiki/Apocalypse)
--- Version: --
+
 
 local mType = Game.createMonsterType("Apocalypse")
 local monster = {}
@@ -71,42 +71,7 @@ monster.voices = {
 	{ text = "DEATH TO ALL!", yell = true },
 }
 
-monster.loot = {
-	{ id = 3025, chance = 13500 }, -- ancient amulet
-	{ id = 3116, chance = 19000 }, -- big bone
-	{ id = "black pearl", chance = 15000, maxCount = 35 },
-	{ id = "boots of haste", chance = 14000 },
-	{ id = 3076, chance = 22500 }, -- crystal ball
-	{ id = "crystal necklace", chance = 21500 },
-	{ id = 3007, chance = 15500 }, -- crystal ring
-	{ id = "demon shield", chance = 15500 },
-	{ id = "devil helmet", chance = 11000 },
-	{ id = "dragon hammer", chance = 34500 },
-	{ id = "energy ring", chance = 13500 }, -- energy ring
-	{ id = "fire axe", chance = 17000 },
-	{ id = "giant sword", chance = 12500 },
-	{ id = "platinum coin", chance = 69900, maxCount = 100 },
-	{ id = "platinum coin", chance = 68800, maxCount = 100 },
-	{ id = "crystal coin", chance = 47700, maxCount = 40 },
-	{ id = "crystal coin", chance = 36600, maxCount = 15 },
-	{ id = "gold ring", chance = 28000 },
-	{ id = "golden legs", chance = 15000 },
-	{ id = "giant ruby", chance = 31500 },
-	{ id = "giant sapphire", chance = 31500 },
-	{ id = "giant emerald", chance = 31500 },
-	{ id = "ice rapier", chance = 27500 },
-	{ id = "magic plate armor", chance = 13000 },
-	{ id = "mastermind shield", chance = 17500 },
-	{ id = "purple tome", chance = 12600 },
-	{ id = "ring of the sky", chance = 13500 },
-	{ id = "silver dagger", chance = 15500 },
-	{ id = "skull staff", chance = 25000 },
-	{ id = "talon", chance = 14000, maxCount = 27 },
-	{ id = "teddy bear", chance = 10500 },
-	{ id = "thunder hammer", chance = 3500 },
-	{ id = 3002, chance = 5100 }, -- voodoo doll
-	{ id = "white pearl", chance = 12500, maxCount = 35 },
-}
+monster.loot = {}
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, skill = 230, attack = 210 },

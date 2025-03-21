@@ -24,10 +24,6 @@ monster.outfit = {
 --	"AscendantBossesDeath",
 -- }
 
-monster.bosstiary = {
-	bossRaceId = 1180,
-	bossRace = RARITY_ARCHFOE,
-}
 
 monster.health = 280000
 monster.maxHealth = 280000
