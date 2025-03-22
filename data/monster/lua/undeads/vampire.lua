@@ -1,9 +1,7 @@
 -- Version: 6.61-6.97
 -- Monster: https://tibia.fandom.com/wiki/Vampire
 -- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Vampire
----
--- Vampire (Tibia Wiki: https://tibia.fandom.com/wiki/Vampire)
--- Version: 6.61-6.97
+
 
 local mType = Game.createMonsterType("Vampire")
 local monster = {}
