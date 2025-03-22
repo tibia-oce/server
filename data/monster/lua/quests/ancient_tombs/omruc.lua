@@ -1,0 +1,134 @@
+-- Version: 7.3
+-- Monster: https://tibia.fandom.com/wiki/Omruc
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Omruc
+---
+
+
+local mType = Game.createMonsterType("Omruc")
+local monster = {}
+
+monster.description = "Omruc"
+monster.experience = 2950
+monster.outfit = {
+	lookType = 90,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
+	lookAddons = 0,
+	lookMount = 0,
+}
+
+monster.health = 4300
+monster.maxHealth = 4300
+monster.race = "undead"
+monster.corpse = 6025
+monster.speed = 185
+monster.manaCost = 0
+
+monster.changeTarget = {
+	interval = 5000,
+	chance = 8,
+}
+
+
+monster.strategiesTarget = {
+	nearest = 70,
+	health = 10,
+	damage = 20,
+}
+
+monster.flags = {
+	summonable = false,
+	attackable = true,
+	hostile = true,
+	convinceable = false,
+	pushable = false,
+	rewardBoss = false,
+	illusionable = false,
+	canPushItems = true,
+	canPushCreatures = true,
+	staticAttackChance = 90,
+	targetDistance = 4,
+	runHealth = 0,
+	healthHidden = false,
+	isBlockable = false,
+	canWalkOnEnergy = false,
+	canWalkOnFire = false,
+	canWalkOnPoison = false}
+
+monster.light = {
+	level = 0,
+	color = 0,
+}
+
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{ name = "Stalker", chance = 100, interval = 2000, count = 4 },
+	},
+}
+
+monster.voices = {
+	interval = 5000,
+	chance = 10,
+	{ text = "Now chhhou shhhee me ... Now chhhou don't.", yell = false },
+	{ text = "Chhhhou are marked ashhh my prey.", yell = false },
+	{ text = "Catchhhh me if chhhou can.", yell = false },
+	{ text = "Die!", yell = false },
+	{ text = "Psssst, I am over chhhere.", yell = false },
+}
+
+monster.loot = {
+	{ id = "crystal arrow", chance = 100000 },  -- 2352
+	{ id = "gold coin", chance = 85915, minCount = 2, maxCount = 211 },  -- 2148
+	{ id = "red apple", chance = 82394, minCount = 1, maxCount = 2 },  -- 2674
+	{ id = "poison arrow", chance = 59859, minCount = 1, maxCount = 20 },  -- 2545
+	{ id = 2546, chance = 45775, minCount = 1, maxCount = 15 },  -- burst arrow
+	{ id = "onyx arrow", chance = 34507, minCount = 1, maxCount = 6 },  -- 7365
+	{ id = 2544, chance = 19014, minCount = 1, maxCount = 25 },  -- arrow
+	{ id = 2547, chance = 14085, minCount = 1, maxCount = 5 },  -- power bolt
+	{ id = "small diamond", chance = 9859, minCount = 1, maxCount = 3 },  -- 2145
+	{ id = "great health potion", chance = 7746 },  -- 7591
+	{ id = "stealth ring", chance = 3521 },  -- 2165
+	{ id = "mini mummy", chance = 1408 },  -- 11207
+	{ id = "boots of haste", chance = 704 },  -- 2195
+}
+
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -120, condition = { type = CONDITION_POISON, totalDamage = 65, interval = 4000 } },
+	{ name = "combat", interval = 5000, chance = 20, type = COMBAT_LIFEDRAIN, minDamage = -100, maxDamage = -250, range = 1, target = false },
+	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_EARTHDAMAGE, minDamage = -200, maxDamage = -500, shootEffect = CONST_ANI_POISONARROW, target = false },
+	{ name = "combat", interval = 1000, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -120, maxDamage = -450, range = 3, shootEffect = CONST_ANI_BURSTARROW, effect = CONST_ME_EXPLOSIONAREA, target = false },
+	{ name = "melee", interval = 3000, chance = 20, minDamage = -150, maxDamage = -500 },
+	{ name = "speed", interval = 1000, chance = 25, speed = -900, range = 7, effect = CONST_ME_MAGIC_RED, target = false, duration = 50000 },
+}
+
+monster.defenses = {
+	defense = 35,
+	armor = 20,
+	{ name = "combat", interval = 1000, chance = 17, type = COMBAT_HEALING, minDamage = 100, maxDamage = 200, effect = CONST_ME_MAGIC_BLUE, target = false },
+	{ name = "invisible", interval = 2000, chance = 14, effect = CONST_ME_MAGIC_BLUE },
+}
+
+monster.elements = {
+	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
+	{ type = COMBAT_FIREDAMAGE, percent = 0 },
+	{ type = COMBAT_LIFEDRAIN, percent = 0 },
+	{ type = COMBAT_MANADRAIN, percent = 0 },
+	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = 0 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
+	{ type = COMBAT_DEATHDAMAGE, percent = 100 },
+}
+
+monster.immunities = {
+	{ type = "paralyze", condition = true },
+	{ type = "outfit", condition = false },
+	{ type = "invisible", condition = true },
+	{ type = "bleed", condition = false },
+}
+
+mType:register(monster)

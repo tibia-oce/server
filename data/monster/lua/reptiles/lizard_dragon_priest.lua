@@ -1,0 +1,130 @@
+-- Version: 8.54
+-- Monster: https://tibia.fandom.com/wiki/Lizard_Dragon_Priest
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Lizard_Dragon_Priest
+---
+
+
+local mType = Game.createMonsterType("Lizard Dragon Priest")
+local monster = {}
+
+monster.description = "a lizard dragon priest"
+monster.experience = 1320
+monster.outfit = {
+	lookType = 339,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
+	lookAddons = 0,
+	lookMount = 0,
+}
+
+
+monster.health = 1450
+monster.maxHealth = 1450
+monster.race = "blood"
+monster.corpse = 11280
+monster.speed = 128
+monster.manaCost = 0
+
+monster.changeTarget = {
+	interval = 4000,
+	chance = 10,
+}
+
+monster.strategiesTarget = {
+	nearest = 100,
+}
+
+monster.flags = {
+	summonable = false,
+	attackable = true,
+	hostile = true,
+	convinceable = false,
+	pushable = false,
+	rewardBoss = false,
+	illusionable = false,
+	canPushItems = true,
+	canPushCreatures = false,
+	staticAttackChance = 90,
+	targetDistance = 4,
+	runHealth = 50,
+	healthHidden = false,
+	isBlockable = false,
+	canWalkOnEnergy = false,
+	canWalkOnFire = true,
+	canWalkOnPoison = true}
+
+monster.light = {
+	level = 0,
+	color = 0,
+}
+
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{ name = "Dragon Hatchling", chance = 20, interval = 2000, count = 2 },
+	},
+}
+
+monster.voices = {
+	interval = 5000,
+	chance = 10,
+	{ text = "I ssssmell warm blood!", yell = false },
+}
+
+monster.loot = {
+	{ id = "gold coin", chance = 93902, minCount = 1, maxCount = 190 },  -- 2148
+	{ id = "strong mana potion", chance = 12084 },  -- 7589
+	{ id = "dragon priest's wandtip", chance = 9960 },  -- 11361
+	{ id = "great mana potion", chance = 8024 },  -- 7590
+	{ id = "small amethyst", chance = 4866, minCount = 1, maxCount = 3 },  -- 2150
+	{ id = "platinum coin", chance = 4041, minCount = 1, maxCount = 2 },  -- 2152
+	{ id = "wand of inferno", chance = 1540 },  -- 2187
+	{ id = "lizard scale", chance = 1056 },  -- 5881
+	{ id = "lizard leather", chance = 1052 },  -- 5876
+	{ id = "terra rod", chance = 1003 },  -- 2181
+	{ id = "yellow gem", chance = 963 },  -- 2154
+	{ id = "bunch of ripe rice", chance = 954 },  -- 11245
+	{ id = "life ring", chance = 778 },  -- 2168
+	{ id = "focus cape", chance = 670 },  -- 8871
+	{ id = "Zaoan shoes", chance = 430 },
+	{ id = "Zaoan robe", chance = 287 },
+}
+
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -50 },
+	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -125, maxDamage = -190, range = 7, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREATTACK, target = true },
+	-- poison
+	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 15, minDamage = -320, maxDamage = -400, range = 7, radius = 1, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = true },
+}
+
+monster.defenses = {
+	defense = 15,
+	armor = 22,
+	mitigation = 0.78,
+	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 200, maxDamage = 300, effect = CONST_ME_MAGIC_BLUE, target = false },
+	{ name = "invisible", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_BLUE },
+}
+
+monster.elements = {
+	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 100 },
+	{ type = COMBAT_FIREDAMAGE, percent = 85 },
+	{ type = COMBAT_LIFEDRAIN, percent = 0 },
+	{ type = COMBAT_MANADRAIN, percent = 0 },
+	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = 0 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
+	{ type = COMBAT_DEATHDAMAGE, percent = 0 },
+}
+
+monster.immunities = {
+	{ type = "paralyze", condition = false },
+	{ type = "outfit", condition = false },
+	{ type = "invisible", condition = true },
+	{ type = "bleed", condition = false },
+}
+
+mType:register(monster)

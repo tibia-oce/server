@@ -1,0 +1,113 @@
+-- Version: 7.8
+-- Monster: https://tibia.fandom.com/wiki/Ron_the_Ripper
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Ron_the_Ripper
+---
+
+
+local mType = Game.createMonsterType("Ron the Ripper")
+local monster = {}
+
+monster.description = "Ron the Ripper"
+monster.experience = 500
+monster.outfit = {
+	lookType = 151,
+	lookHead = 95,
+	lookBody = 94,
+	lookLegs = 117,
+	lookFeet = 59,
+	lookAddons = 1,
+	lookMount = 0,
+}
+
+monster.health = 1500
+monster.maxHealth = 1500
+monster.race = "blood"
+monster.corpse = 20502
+monster.speed = 120
+monster.manaCost = 0
+
+monster.changeTarget = {
+	interval = 60000,
+	chance = 0,
+}
+
+monster.strategiesTarget = {
+	nearest = 70,
+	health = 10,
+	damage = 10,
+	random = 10,
+}
+
+monster.flags = {
+	summonable = false,
+	attackable = true,
+	hostile = true,
+	convinceable = false,
+	pushable = false,
+	rewardBoss = true,
+	illusionable = false,
+	canPushItems = true,
+	canPushCreatures = true,
+	staticAttackChance = 50,
+	targetDistance = 1,
+	runHealth = 250,
+	healthHidden = false,
+	isBlockable = false,
+	canWalkOnEnergy = true,
+	canWalkOnFire = true,
+	canWalkOnPoison = true}
+
+monster.light = {
+	level = 0,
+	color = 0,
+}
+
+monster.voices = {
+	interval = 5000,
+	chance = 10,
+	{ text = "Muahaha!", yell = false },
+}
+
+monster.loot = {
+    { id = "Ron the Ripper's sabre", chance = 100000 },  -- 6101
+    { id = 2229, chance = 83330, maxCount = 2 },  -- skull
+    { id = "knight armor", chance = 11110 },  -- 2476
+    { id = "plate armor", chance = 55560 },  -- 2463
+    { id = "great health potion", chance = 16670, maxCount = 2 },  -- 7591
+    { id = "meat", chance = 16670 },  -- 2666
+    { id = "gold coin", chance = 100000, maxCount = 33 },  -- 2148
+}
+
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -250 },
+	{ name = "combat", interval = 4000, chance = 60, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -160, shootEffect = CONST_ANI_THROWINGKNIFE, target = false },
+}
+
+monster.defenses = {
+	defense = 50,
+	armor = 35,
+	mitigation = 1.20,
+	{ name = "combat", interval = 4000, chance = 25, type = COMBAT_HEALING, minDamage = 50, maxDamage = 150, effect = CONST_ME_MAGIC_BLUE, target = false },
+}
+
+monster.elements = {
+	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
+	{ type = COMBAT_FIREDAMAGE, percent = 0 },
+	{ type = COMBAT_LIFEDRAIN, percent = 0 },
+	{ type = COMBAT_MANADRAIN, percent = 0 },
+	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = 0 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
+	{ type = COMBAT_DEATHDAMAGE, percent = 0 },
+}
+
+monster.immunities = {
+	{ type = "paralyze", condition = true },
+	{ type = "outfit", condition = false },
+	{ type = "invisible", condition = true },
+	{ type = "bleed", condition = false },
+}
+
+mType:register(monster)

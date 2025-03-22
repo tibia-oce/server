@@ -1,0 +1,106 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Troll_Guard
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Troll_Guard
+---
+
+
+local mType = Game.createMonsterType("Troll Guard")
+local monster = {}
+
+monster.description = "a troll guard"
+monster.experience = 25
+monster.outfit = {
+	lookType = 281,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
+	lookAddons = 0,
+	lookMount = 0,
+}
+
+
+monster.health = 60
+monster.maxHealth = 60
+monster.race = "blood"
+monster.corpse = 7926
+monster.speed = 63
+monster.manaCost = 0
+
+monster.changeTarget = {
+	interval = 5000,
+	chance = 20,
+}
+
+monster.strategiesTarget = {
+	nearest = 100,
+}
+
+monster.flags = {
+	summonable = false,
+	attackable = true,
+	hostile = true,
+	convinceable = false,
+	pushable = true,
+	rewardBoss = false,
+	illusionable = false,
+	canPushItems = false,
+	canPushCreatures = false,
+	staticAttackChance = 90,
+	targetDistance = 1,
+	runHealth = 17,
+	healthHidden = false,
+	isBlockable = false,
+	canWalkOnEnergy = false,
+	canWalkOnFire = false,
+	canWalkOnPoison = false}
+
+monster.light = {
+	level = 0,
+	color = 0,
+}
+
+monster.voices = {
+	interval = 5000,
+	chance = 10,
+}
+
+monster.loot = {
+	{ id = "gold coin", chance = 64691, minCount = 1, maxCount = 12 },  -- 2148
+	{ id = "meat", chance = 15802 },  -- 2666
+	{ id = 2120, chance = 7654 },  -- rope
+	{ id = "studded club", chance = 4938 },  -- 2448
+	{ id = "bunch of troll hair", chance = 741 },  -- 10606
+}
+
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -9 },
+}
+
+monster.defenses = {
+	defense = 2,
+	armor = 4,
+	mitigation = 0.15,
+}
+
+monster.elements = {
+	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = 20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = -10 },
+	{ type = COMBAT_FIREDAMAGE, percent = 0 },
+	{ type = COMBAT_LIFEDRAIN, percent = 0 },
+	{ type = COMBAT_MANADRAIN, percent = 0 },
+	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = 0 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 10 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -10 },
+}
+
+monster.immunities = {
+	{ type = "paralyze", condition = false },
+	{ type = "outfit", condition = false },
+	{ type = "invisible", condition = false },
+	{ type = "bleed", condition = false },
+}
+
+mType:register(monster)
