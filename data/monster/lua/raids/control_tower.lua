@@ -10,13 +10,13 @@ local monster = {}
 monster.description = "a control tower"
 monster.experience = 3000
 monster.outfit = {
-	lookTypeEx = 20894,
+	lookTypeEx = 23261,
 }
 
 monster.health = 7500
 monster.maxHealth = 7500
 monster.race = "venom"
-monster.corpse = 21940
+monster.corpse = 24309
 monster.speed = 0
 monster.manaCost = 0
 

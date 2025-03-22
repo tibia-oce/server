@@ -9,7 +9,7 @@ local monster = {}
 monster.description = "Egg"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 4839,
+	lookTypeEx = 4850,
 }
 
 monster.health = 800
