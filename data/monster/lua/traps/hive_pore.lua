@@ -9,7 +9,7 @@ local monster = {}
 monster.description = "a hive pore"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 14064,
+    lookTypeEx = 15467,
 }
 
 monster.health = 1

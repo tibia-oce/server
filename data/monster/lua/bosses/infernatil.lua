@@ -10,7 +10,7 @@ local monster = {}
 monster.description = "Infernatil"
 monster.experience = 30000
 monster.outfit = {
-	lookType = 35,
+	lookType = 12,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -22,7 +22,7 @@ monster.outfit = {
 monster.health = 110000
 monster.maxHealth = 110000
 monster.race = "fire"
-monster.corpse = 4097
+monster.corpse = 2916
 monster.speed = 330
 monster.manaCost = 0
 

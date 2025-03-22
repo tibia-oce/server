@@ -9,13 +9,7 @@ local monster = {}
 monster.description = "a wild water magic"
 monster.experience = 0
 monster.outfit = {
-	lookType = 0,
-	lookHead = 0,
-	lookBody = 0,
-	lookLegs = 0,
-	lookFeet = 0,
-	lookAddons = 0,
-	lookMount = 0,
+    lookTypeEx = 21444,
 }
 
 monster.health = 1

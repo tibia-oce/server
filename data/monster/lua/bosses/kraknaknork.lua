@@ -10,7 +10,7 @@ local monster = {}
 monster.description = "Kraknaknork"
 monster.experience = 300
 monster.outfit = {
-	lookType = 6,
+	lookType = 74,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -22,7 +22,7 @@ monster.outfit = {
 monster.health = 80
 monster.maxHealth = 80
 monster.race = "blood"
-monster.corpse = 5978
+monster.corpse = 6017
 monster.speed = 90
 monster.manaCost = 0
 

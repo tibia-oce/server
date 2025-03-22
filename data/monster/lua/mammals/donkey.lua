@@ -9,7 +9,7 @@ local monster = {}
 monster.description = "a donkey"
 monster.experience = 0
 monster.outfit = {
-	lookType = 387,
+	lookType = 399,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -21,7 +21,7 @@ monster.outfit = {
 monster.health = 45
 monster.maxHealth = 45
 monster.race = "blood"
-monster.corpse = 12520
+monster.corpse = 13509
 monster.speed = 75
 monster.manaCost = 0
 

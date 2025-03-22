@@ -23,7 +23,7 @@ monster.outfit = {
 monster.health = 900
 monster.maxHealth = 900
 monster.race = "blood"
-monster.corpse = 8915
+monster.corpse = 9829
 monster.speed = 93
 monster.manaCost = 0
 

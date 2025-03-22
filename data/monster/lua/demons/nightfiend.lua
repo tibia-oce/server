@@ -10,7 +10,7 @@ local monster = {}
 monster.description = "a nightfiend"
 monster.experience = 2100
 monster.outfit = {
-	lookType = 556,
+	lookType = 568,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -23,7 +23,7 @@ monster.outfit = {
 monster.health = 2700
 monster.maxHealth = 2700
 monster.race = "blood"
-monster.corpse = 18952
+monster.corpse = 2669
 monster.speed = 112
 monster.manaCost = 0
 

@@ -9,7 +9,7 @@ local monster = {}
 monster.description = "a hell hole"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 391,
+    lookTypeEx = 389,
 }
 
 monster.health = 100

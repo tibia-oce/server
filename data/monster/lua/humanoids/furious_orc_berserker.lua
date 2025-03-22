@@ -9,7 +9,7 @@ local monster = {}
 monster.description = "a furious orc berserker"
 monster.experience = 0
 monster.outfit = {
-	lookType = 8,
+	lookType = 74,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -21,7 +21,7 @@ monster.outfit = {
 monster.health = 210
 monster.maxHealth = 210
 monster.race = "blood"
-monster.corpse = 5980
+monster.corpse = 6017
 monster.speed = 125
 monster.manaCost = 0
 

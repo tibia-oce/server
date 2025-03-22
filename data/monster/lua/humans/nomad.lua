@@ -11,7 +11,7 @@ monster.name = "Nomad"
 monster.description = "a nomad"
 monster.experience = 60
 monster.outfit = {
-	lookType = 146,
+	lookType = 150,
 	lookHead = 104,
 	lookBody = 48,
 	lookLegs = 49,
@@ -29,7 +29,7 @@ monster.outfit = {
 monster.health = 160
 monster.maxHealth = 160
 monster.race = "blood"
-monster.corpse = 18322
+monster.corpse = 20462
 monster.speed = 95
 monster.manaCost = 0
 

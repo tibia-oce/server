@@ -8,7 +8,7 @@ local monster = {}
 monster.description = "a butterfly"
 monster.experience = 0
 monster.outfit = {
-	lookType = 227,
+	lookType = 10,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -21,7 +21,7 @@ monster.outfit = {
 monster.health = 2
 monster.maxHealth = 2
 monster.race = "venom"
-monster.corpse = 4993
+monster.corpse = 5014
 monster.speed = 160
 monster.manaCost = 0
 

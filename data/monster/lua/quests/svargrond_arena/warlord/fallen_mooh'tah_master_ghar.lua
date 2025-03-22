@@ -9,7 +9,7 @@ local monster = {}
 monster.description = "Fallen Mooh'Tah Master Ghar"
 monster.experience = 4400
 monster.outfit = {
-	lookType = 611,
+	lookType = 29,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -21,7 +21,7 @@ monster.outfit = {
 monster.health = 7990
 monster.maxHealth = 7990
 monster.race = "blood"
-monster.corpse = 21091
+monster.corpse = 7349
 monster.speed = 95
 monster.manaCost = 0
 
