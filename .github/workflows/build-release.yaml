@@ -6,7 +6,6 @@ on:
     branches:
       - master
       - develop
-      - chore/cicd # todo: remove
     paths:
       - "src/**"
       - "data/**"
@@ -17,13 +16,11 @@ on:
       - "config.lua.dist"
       - "docker/entrypoint.sh"
       - "docker/Dockerfile.*"
-      - ".github/workflows/build-release.yaml" # todo: remove
 
   push:
     branches:
       - master
       - develop
-      - chore/cicd # todo: remove
     paths:
       - "src/**"
       - "data/**"
@@ -34,7 +31,6 @@ on:
       - "config.lua.dist"
       - "docker/entrypoint.sh"
       - "docker/Dockerfile.*"
-      - ".github/workflows/build-release.yaml" # todo: remove
 
 jobs:
   release:
