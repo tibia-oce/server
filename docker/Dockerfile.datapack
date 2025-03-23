@@ -1,0 +1,13 @@
+# docker/Dockerfile.datapack: Adds data files to the compiled application
+ARG APP_IMAGE=server-compiled:local
+FROM ${APP_IMAGE}
+
+COPY *.sql key.pem /app/
+COPY config.lua.dist /app/config.lua
+COPY docker/entrypoint.sh /app/entrypoint.sh
+COPY data /app/data
+USER root
+RUN chmod +x /app/entrypoint.sh && \
+    chown -R btsuser:btsuser /app
+USER btsuser
+ENTRYPOINT ["./entrypoint.sh"]

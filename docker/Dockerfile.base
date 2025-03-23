@@ -1,0 +1,27 @@
+# docker/Dockerfile.base: System dependencies, vcpkg, and premake tools
+FROM ubuntu:22.04
+ENV VCPKG_FORCE_SYSTEM_BINARIES=1
+ENV VCPKG_ROOT=/bts/vcpkg
+
+RUN apt update && apt install -y \
+    unzip make g++ uuid-dev wget curl zip tar git \
+    pkg-config cmake ninja-build python3 subversion
+
+RUN mkdir -p /bts /usr/src/bts
+RUN git clone https://github.com/microsoft/vcpkg.git /bts/vcpkg && \
+    /bts/vcpkg/bootstrap-vcpkg.sh
+
+COPY vcpkg.json /usr/src/bts/
+WORKDIR /usr/src/bts
+RUN /bts/vcpkg/vcpkg install
+
+# Install Premake after vcpkg is ready
+RUN cd /bts && \
+    git clone https://github.com/premake/premake-core.git && \
+    cd premake-core && \
+    git checkout v5.0.0-beta2 && \
+    make -f Bootstrap.mak linux && \
+    mv bin/release/premake5 /usr/local/bin/ && \
+    chmod +x /usr/local/bin/premake5 && \
+    cd .. && \
+    rm -rf premake-core

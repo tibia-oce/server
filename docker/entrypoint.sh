@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# This script downloads assets from a specified repository and branch
+# and then starts the Black-Tek-Server executable.
+
+# It is run from the root of the repository in the containers, so the assets are downloaded
+# to the ./data directory.
+
 set -euo pipefail
 
 ASSETS_REPOSITORY="${ASSETS_REPOSITORY:-https://github.com/tibia-oce/assets}"
