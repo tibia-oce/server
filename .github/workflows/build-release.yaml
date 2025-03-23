@@ -16,6 +16,7 @@ on:
       - "config.lua.dist"
       - "docker/entrypoint.sh"
       - "docker/Dockerfile.*"
+      - ".github/workflows/build-release.yml"
   push:
     branches:
       - master
@@ -30,6 +31,7 @@ on:
       - "config.lua.dist"
       - "docker/entrypoint.sh"
       - "docker/Dockerfile.*"
+      - ".github/workflows/build-release.yml"
 
 jobs:
   release:
