@@ -6,7 +6,6 @@ on:
     branches:
       - master
       - develop
-      - chore/cicd
     paths:
       - "src/**"
       - "data/**"
@@ -21,7 +20,6 @@ on:
     branches:
       - master
       - develop
-      - chore/cicd
     paths:
       - "src/**"
       - "data/**"
@@ -196,6 +194,14 @@ jobs:
           fi
           echo "BASE_TAGS=${BASE_TAGS}" >> $GITHUB_OUTPUT
 
+      - name: Restore Docker layer cache for base
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache-base
+          key: docker-cache-base-${{ runner.os }}-${{ hashFiles('docker/Dockerfile.base', 'vcpkg.json') }}
+          restore-keys: |
+            docker-cache-base-${{ runner.os }}-
+
       - name: Build Base Docker image
         uses: docker/build-push-action@v6
         with:
@@ -244,13 +250,26 @@ jobs:
       - name: Set Compiled Image Tags
         id: set_compiled_tags
         run: |
-          COMPILED_TAGS="ghcr.io/${{ github.repository }}-compiled:${{ needs.release.outputs.release-version }}-${{ matrix.platform }}"
+          # Convert platform to tag-safe format (replace / with -)
+          PLATFORM_TAG="${{ matrix.platform }}"
+          PLATFORM_TAG="${PLATFORM_TAG//\//-}"
+
+          COMPILED_TAGS="ghcr.io/${{ github.repository }}-compiled:${{ needs.release.outputs.release-version }}-${PLATFORM_TAG}"
           if [ "${{ needs.release.outputs.is-prerelease }}" = "true" ]; then
-            COMPILED_TAGS="$COMPILED_TAGS,ghcr.io/${{ github.repository }}-compiled:rc-${{ matrix.platform }}"
+            COMPILED_TAGS="$COMPILED_TAGS,ghcr.io/${{ github.repository }}-compiled:rc-${PLATFORM_TAG}"
           else
-            COMPILED_TAGS="$COMPILED_TAGS,ghcr.io/${{ github.repository }}-compiled:latest-${{ matrix.platform }}"
+            COMPILED_TAGS="$COMPILED_TAGS,ghcr.io/${{ github.repository }}-compiled:latest-${PLATFORM_TAG}"
           fi
           echo "COMPILED_TAGS=${COMPILED_TAGS}" >> $GITHUB_OUTPUT
+          echo "PLATFORM_TAG=${PLATFORM_TAG}" >> $GITHUB_OUTPUT
+
+      - name: Restore Docker layer cache for compiled
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache-compiled
+          key: docker-cache-compiled-${{ runner.os }}-${{ matrix.platform }}-${{ hashFiles('docker/Dockerfile.compiled', 'src/**', 'premake5.lua') }}
+          restore-keys: |
+            docker-cache-compiled-${{ runner.os }}-${{ matrix.platform }}-
 
       - name: Build Compiled Docker image
         uses: docker/build-push-action@v6
@@ -272,12 +291,6 @@ jobs:
     permissions:
       packages: write
     if: ${{ always() && (needs.build-compiled.result == 'success' || needs.release.outputs.change-type == 'datapack' || github.event_name == 'workflow_dispatch') }}
-    strategy:
-      matrix:
-        platform: [linux/amd64]
-        include:
-          - platform: linux/amd64
-            app_platform: linux/amd64
 
     steps:
       - name: Checkout Repository
@@ -309,6 +322,14 @@ jobs:
           fi
           echo "IMAGE_TAGS=${IMAGE_TAGS}" >> $GITHUB_OUTPUT
 
+      - name: Restore Docker layer cache for datapack
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache-datapack
+          key: docker-cache-datapack-${{ runner.os }}-${{ hashFiles('docker/Dockerfile.datapack', 'data/**', '*.sql', 'key.pem', 'config.lua.dist', 'docker/entrypoint.sh') }}
+          restore-keys: |
+            docker-cache-datapack-${{ runner.os }}-
+
       - name: Build Datapack Docker image
         uses: docker/build-push-action@v6
         with:
@@ -318,6 +339,6 @@ jobs:
           tags: ${{ steps.set_tags.outputs.IMAGE_TAGS }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          platforms: ${{ matrix.platform }}
+          platforms: linux/amd64
           build-args: |
-            APP_IMAGE=ghcr.io/${{ github.repository }}-compiled:${{ needs.release.outputs.release-version }}-${{ matrix.app_platform }}
+            APP_IMAGE=ghcr.io/${{ github.repository }}-compiled:${{ needs.release.outputs.release-version }}-linux-amd64
