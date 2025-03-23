@@ -1,5 +1,6 @@
-services:
+name: mythbound
 
+services:
   database:
     container_name: database
     image: mariadb:latest
@@ -13,7 +14,7 @@ services:
       timeout: 5s
       retries: 10
     env_file:
-    - '.env'
+    - '../.env'
     networks:
       - tibia
 
@@ -21,7 +22,7 @@ services:
     container_name: db-healthcheck
     image: jwilder/dockerize:0.6.1    
     env_file:
-      - '.env'      
+      - '../.env'      
     depends_on:
       - database          
     command: 'dockerize -wait=tcp://database:3306 -timeout 30s'
@@ -44,13 +45,40 @@ services:
       - MARIADB_HOST=${MYSQL_HOST}
       - MARIADB_PORT=${MYSQL_PORT}
 
+  # Base image with dependencies (build only, not run as container)
+  server-base:
+    container_name: server-base
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.base
+    image: server-base:local
+    networks:
+      - tibia
+
+  # Compiled application image (build only, not run as container)
+  server-compiled:
+    container_name: server-compiled
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.compiled
+      args:
+        RELEASE_ARCH: release_64
+        BASE_IMAGE: server-base:local
+    image: server-compiled:local
+    networks:
+      - tibia
+    depends_on:
+      - server-base
+
+  # Final server image with data (the one that actually runs)
   server:
     container_name: server
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: docker/Dockerfile.datapack
       args:
-        RELEASE_ARCH: release_64
+        APP_IMAGE: server-compiled:local
+    image: server:local
     restart: always
     ports:
       - 7171:7171
@@ -58,17 +86,16 @@ services:
     networks:
       - tibia
     env_file:
-      - '.env'
+      - '../.env'
     depends_on:
-      migrate:
-        condition: service_completed_successfully
+      - database
 
   phpmyadmin:
     container_name: phpmyadmin
     image: phpmyadmin
     restart: always
     env_file:
-      - '.env'
+      - '../.env'
     environment:
       - PMA_HOST=${MYSQL_HOST}
       - PMA_PORT=${MYSQL_PORT}
@@ -77,8 +104,7 @@ services:
     ports:
       - 5001:80
     depends_on:
-      migrate:
-        condition: service_completed_successfully
+      - database
 
   website:
     container_name: website
@@ -87,14 +113,13 @@ services:
       - 5002:80
     restart: unless-stopped
     env_file:
-      - '.env'
+      - '../.env'
     environment:
       - STATUS_TIMEOUT=2000
     networks:
       - tibia
     depends_on:
-      migrate:
-        condition: service_completed_successfully
+      - database
 
 volumes:
   tibia:

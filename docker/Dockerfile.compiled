@@ -1,0 +1,20 @@
+# docker/Dockerfile.compiled: Compiles the application using the base image
+ARG BASE_IMAGE=server-base:local
+FROM ${BASE_IMAGE} AS build
+
+ARG RELEASE_ARCH=release_arm64
+WORKDIR /usr/src/bts
+COPY premake5.lua /usr/src/bts/
+COPY src /usr/src/bts/src/
+RUN premake5 gmake2
+RUN make -j1 config=${RELEASE_ARCH}
+
+FROM ubuntu:22.04
+RUN apt update && apt install -y wget unzip
+COPY --from=build /usr/src/bts/Black-Tek-Server /app/Black-Tek-Server
+RUN groupadd -r btsuser && \
+    useradd -r -g btsuser -d /app -s /sbin/nologin btsuser && \
+    chmod +x /app/Black-Tek-Server && \
+    chown -R btsuser:btsuser /app
+USER btsuser
+WORKDIR /app
