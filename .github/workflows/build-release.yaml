@@ -17,7 +17,7 @@ on:
       - "config.lua.dist"
       - "docker/entrypoint.sh"
       - "docker/Dockerfile.*"
-      - ".github/workflows/build-release.yml" # todo: remove
+      - ".github/workflows/build-release.yaml" # todo: remove
 
   push:
     branches:
@@ -34,7 +34,7 @@ on:
       - "config.lua.dist"
       - "docker/entrypoint.sh"
       - "docker/Dockerfile.*"
-      - ".github/workflows/build-release.yml" # todo: remove
+      - ".github/workflows/build-release.yaml" # todo: remove
 
 jobs:
   release:
