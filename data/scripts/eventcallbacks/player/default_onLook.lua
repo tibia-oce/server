@@ -1,7 +1,41 @@
 local ec = EventCallback
 
+local rarities = {
+    [1] = "Common",
+    [2] = "Uncommon",
+    [3] = "Rare",
+    [4] = "Epic",
+    [5] = "Legendary",
+    [6] = "Exotic",
+    [7] = "Mythic",
+    [8] = "Chaos",
+    [9] = "Eternal",
+    [10] = "Divine",
+    [11] = "Phantasmal",
+    [12] = "Celestial",
+    [13] = "Cosmic",
+    [14] = "Abyssal",
+    [15] = "Transcendent"
+}
+
+
 ec.onLook = function(self, thing, position, distance, description)
 	local description = "You see " .. thing:getDescription(distance)
+
+	-- Add rarity attributes to item description
+	local rarityPrefix = ""
+    if thing:isItem() then
+        local rarityValue = thing:getCustomAttribute("rarity")
+        if rarityValue then
+            local rarity = rarities[rarityValue]
+            if rarity then
+                rarityPrefix = rarity .. " "
+            end
+        end
+    end
+    description = string.format("You see %s%s", rarityPrefix, thing:getDescription(distance))
+	
+	-- Add item attributes to item description
 	if self:getGroup():getAccess() then
 		if thing:isItem() then
 			description = string.format("%s\nItem ID: %d", description, thing:getId())
@@ -51,6 +85,7 @@ ec.onLook = function(self, thing, position, distance, description)
 		end
 	end
 
+	-- Add imbuements to item description
 	if thing:isItem() then
 		local totalSlots = thing:getImbuementSlots()  -- Get the total number of imbument slots.
 

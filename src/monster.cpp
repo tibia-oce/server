@@ -2100,47 +2100,68 @@ void Monster::updateLookDirection()
 	g_game.internalCreatureTurn(this, newDir);
 }
 
+// todo(rarity): structure the final function to first perform the rarity enhancements on the
+// items then collect the enhanced items for auto-looting.. since both systems traverse the
+// containers, only do one parse.. applying rarity enhancements during traversal, then
+// performing auto-loot afterward
 void Monster::dropLoot(Container* corpse, Creature* mostDamageCreature)
 {
-	if (getMonster()->isRewardBoss()) {
-		int64_t currentTime = std::time(nullptr);
-		Item* rewardContainer = Item::CreateItem(ITEM_REWARD_CONTAINER);
-		rewardContainer->setIntAttr(ITEM_ATTRIBUTE_DATE, currentTime);
-		rewardContainer->setIntAttr(ITEM_ATTRIBUTE_REWARDID, getMonster()->getID());
-		corpse->internalAddThing(rewardContainer);
-	}
+    if (!corpse || !lootDrop) {
+        return;
+    }
 
-	// Checks that the loot container is not null and that the monster actually drops loot
-    if (corpse && lootDrop) {
-        g_events->eventMonsterOnDropLoot(this, corpse);
-        std::list<Container*> containers = { corpse };
+    // Reward boss handling
+    if (getMonster()->isRewardBoss()) {
+        int64_t currentTime = std::time(nullptr);
+        Item* rewardContainer = Item::CreateItem(ITEM_REWARD_CONTAINER);
+        rewardContainer->setIntAttr(ITEM_ATTRIBUTE_DATE, currentTime);
+        rewardContainer->setIntAttr(ITEM_ATTRIBUTE_REWARDID, getMonster()->getID());
+        corpse->internalAddThing(rewardContainer);
+    }
 
-        Player* mostDamagePlayer = nullptr;
-        if (mostDamageCreature) {
-            mostDamagePlayer = mostDamageCreature->getPlayer();
-        }
-        if (!mostDamagePlayer) {
-            return;
-        }
+    // Trigger loot drop event (e.g., Lua rarity roll + attribute assignment)
+    g_events->eventMonsterOnDropLoot(this, corpse);
 
-        // Collects all items from the container and subcontainers
-        containers = { corpse };  // Reuses the containers variable here
-        std::vector<Item*> items;
-        while (!containers.empty()) {
-            Container* container = containers.front();
-            containers.pop_front();
-            for (Item* item : container->getItemList()) {
-                Container* subContainer = item->getContainer();
-                if (subContainer) {
-                    containers.push_back(subContainer);
-                }
-                else {
-                    items.push_back(item);
-                }
+    // Get most damage dealer
+    Player* mostDamagePlayer = mostDamageCreature ? mostDamageCreature->getPlayer() : nullptr;
+    if (!mostDamagePlayer) {
+        return;
+    }
+
+    // Collect all items from corpse and sub-containers
+    std::list<Container*> containers = { corpse };
+    std::vector<Item*> items;
+    while (!containers.empty()) {
+        Container* container = containers.front();
+        containers.pop_front();
+        for (Item* i : container->getItemList()) {
+            if (Container* sub = i->getContainer()) {
+                containers.push_back(sub);
+            } else {
+                items.push_back(i);
             }
         }
-        mostDamagePlayer->doAutoLoot(items);
     }
+
+	// Apply rarity effects to items that have the rarity attribute
+	int rarityItemsFound = 0;
+	for (Item* item : items) {
+		const auto rarityAttr = item->getCustomAttribute("rarity");
+		if (rarityAttr && rarityAttr->value.type() == typeid(int64_t)) {
+			int rarityId = boost::get<int64_t>(rarityAttr->value);
+			if (rarityId > 0) {
+				rarityItemsFound++;
+				std::cout << "[dropLoot] Found item ID " << item->getID() 
+						<< " with rarity " << rarityId << std::endl;
+				// Apply the rarity effects
+				Item::applyRarityEffects(item);
+			}
+		}
+	}
+	std::cout << "[dropLoot] Found " << rarityItemsFound << " items with rarity" << std::endl;
+
+    // Apply auto-loot
+    mostDamagePlayer->doAutoLoot(items);
 }
 
 void Monster::setNormalCreatureLight()

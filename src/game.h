@@ -408,6 +408,8 @@ class Game
 		void playerFollowCreature(uint32_t playerId, uint32_t creatureId);
 		void playerCancelAttackAndFollow(uint32_t playerId);
 		void playerSetFightModes(uint32_t playerId, fightMode_t fightMode, bool chaseMode, bool secureMode);
+		void playerSendTooltip(uint32_t playerId, uint16_t spriteId, uint16_t count);
+		void playerSendTooltip(uint32_t playerId, const Position pos, uint16_t spriteId, uint8_t stackPos);
 		void playerLookAt(uint32_t playerId, const Position& pos, uint8_t stackPos);
 		void playerLookInBattleList(uint32_t playerId, uint32_t creatureId);
 		void playerRequestAddVip(uint32_t playerId, const std::string& name);

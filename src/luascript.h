@@ -621,6 +621,7 @@ class LuaScriptInterface
 		static int luaGameGetReturnMessage(lua_State* L);
 
 		static int luaGameCreateItem(lua_State* L);
+		static int luaGameCreateItemWithRarity(lua_State* L);
 		static int luaGameCreateContainer(lua_State* L);
 		static int luaGameCreateMonster(lua_State* L);
 		static int luaGameCreateNpc(lua_State* L);

@@ -6155,3 +6155,40 @@ bool Game::playerUpdateAutoLoot(uint32_t playerId, uint16_t clientId, const std:
 	return true;
 }
 
+void Game::playerSendTooltip(uint32_t playerId, uint16_t spriteId, uint16_t count)
+{
+	Player* player = getPlayerByID(playerId);
+	if (!player) {
+		return;
+	}
+
+	TooltipDataContainer tooltipData;
+	Item::getTooltipData(nullptr, spriteId, count, tooltipData);
+	if (!tooltipData.empty()) {
+		player->sendTooltipData(tooltipData);
+	}
+}
+
+void Game::playerSendTooltip(uint32_t playerId, const Position pos, uint16_t spriteId, uint8_t stackPos)
+{
+	Player* player = getPlayerByID(playerId);
+	if (!player) {
+		return;
+	}
+
+	Thing* thing = internalGetThing(player, pos, stackPos, spriteId, STACKPOS_LOOK);
+	if (!thing) {
+		return;
+	}
+
+	Item* item = thing->getItem();
+	if (!item || item->getClientID() != spriteId) {
+		return;
+	}
+
+	TooltipDataContainer tooltipData;
+	Item::getTooltipData(item, item->getClientID(), item->getItemCount(), tooltipData);
+	if (!tooltipData.empty()) {
+		player->sendTooltipData(tooltipData);
+	}
+}

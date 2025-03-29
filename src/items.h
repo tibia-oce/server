@@ -55,6 +55,7 @@ enum ItemParseAttributes_t {
 	ITEM_PARSE_ATTACK,
 	ITEM_PARSE_ATTACK_SPEED,
 	ITEM_PARSE_CLASSIFICATION,
+	ITEM_PARSE_RARITY,
 	ITEM_PARSE_TIER,
 	ITEM_PARSE_ROTATETO,
 	ITEM_PARSE_MOVEABLE,
@@ -308,6 +309,7 @@ class ItemType
 		int32_t defense = 0;
 		int32_t extraDefense = 0;
 		int32_t armor = 0;
+		int32_t rarity = 0;
 		uint16_t rotateTo = 0;
 		int32_t runeMagLevel = 0;
 		int32_t runeLevel = 0;

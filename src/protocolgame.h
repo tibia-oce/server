@@ -117,6 +117,7 @@ class ProtocolGame final : public Protocol
 		void parseEnableSharedPartyExperience(NetworkMessage& msg);
 
 		void parseToggleMount(NetworkMessage& msg);
+		void parseTooltip(NetworkMessage& msg);
 
 		void parseModalWindowAnswer(NetworkMessage& msg);
 
@@ -222,6 +223,7 @@ class ProtocolGame final : public Protocol
 		void sendEnterWorld();
 
 		void sendFightModes();
+		void sendTooltipData(const TooltipDataContainer& tooltipData);
 
 		void sendCreatureLight(const Creature* creature);
 		void sendWorldLight(LightInfo lightInfo);

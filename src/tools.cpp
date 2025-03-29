@@ -977,6 +977,8 @@ itemAttrTypes stringToItemAttribute(const std::string& str)
 		return ITEM_ATTRIBUTE_EXTRADEFENSE;
 	} else if (str == "armor") {
 		return ITEM_ATTRIBUTE_ARMOR;
+	} else if (str == "rarity") {
+		return ITEM_ATTRIBUTE_RARITY;
 	} else if (str == "hitchance") {
 		return ITEM_ATTRIBUTE_HITCHANCE;
 	} else if (str == "shootrange") {

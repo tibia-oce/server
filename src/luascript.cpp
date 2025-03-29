@@ -1546,6 +1546,7 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(ITEM_ATTRIBUTE_DEFENSE)
 	registerEnum(ITEM_ATTRIBUTE_EXTRADEFENSE)
 	registerEnum(ITEM_ATTRIBUTE_ARMOR)
+	registerEnum(ITEM_ATTRIBUTE_RARITY)
 	registerEnum(ITEM_ATTRIBUTE_HITCHANCE)
 	registerEnum(ITEM_ATTRIBUTE_SHOOTRANGE)
 	registerEnum(ITEM_ATTRIBUTE_OWNER)
@@ -2203,6 +2204,7 @@ void LuaScriptInterface::registerFunctions()
 
 	registerMethod("Game", "createItem", LuaScriptInterface::luaGameCreateItem);
 	registerMethod("Game", "createContainer", LuaScriptInterface::luaGameCreateContainer);
+	registerMethod("Game", "createItemWithRarity", LuaScriptInterface::luaGameCreateItemWithRarity);
 	registerMethod("Game", "createMonster", LuaScriptInterface::luaGameCreateMonster);
 	registerMethod("Game", "createNpc", LuaScriptInterface::luaGameCreateNpc);
 	registerMethod("Game", "createTile", LuaScriptInterface::luaGameCreateTile);
@@ -4999,6 +5001,47 @@ int LuaScriptInterface::luaGameCreateItem(lua_State* L)
 	return 1;
 }
 
+int LuaScriptInterface::luaGameCreateItemWithRarity(lua_State* L) {
+    // Example: Game.createItemWithRarity(2457, 1, rarityId) -- Should be equipable item with stats
+    uint16_t count = getNumber<uint16_t>(L, 2, 1);
+    int rarityId = getNumber<int>(L, 3, 0);
+    uint16_t id;
+    if (isNumber(L, 1)) {
+        id = getNumber<uint16_t>(L, 1);
+    } else {
+        id = Item::items.getItemIdByName(getString(L, 1));
+        if (id == 0) {
+            lua_pushnil(L);
+            return 1;
+        }
+    }
+    const ItemType& itype = Item::items[id];
+    if (itype.stackable && count == 0) {
+        count = 1;
+    }
+    Item* item = Item::CreateItemWithRarity(id, count, rarityId);
+    if (!item) {
+        lua_pushnil(L);
+        return 1;
+    }
+    if (lua_gettop(L) >= 4) {
+        const Position& position = getPosition(L, 4);
+        Tile* tile = g_game.map.getTile(position);
+        if (!tile) {
+            delete item;
+            lua_pushnil(L);
+            return 1;
+        }
+        g_game.internalAddItem(tile, item, INDEX_WHEREEVER, FLAG_NOLIMIT);
+    } else {
+        getScriptEnv()->addTempItem(item);
+        item->setParent(VirtualCylinder::virtualCylinder);
+    }
+    pushUserdata<Item>(L, item);
+    setItemMetatable(L, -1, item);
+    return 1;
+}
+
 int LuaScriptInterface::luaGameCreateContainer(lua_State* L)
 {
 	// Game.createContainer(itemId, size[, position])
@@ -7311,7 +7354,20 @@ int LuaScriptInterface::luaItemSetCustomAttribute(lua_State* L) {
 		return 1;
 	}
 
-	item->setCustomAttribute(key, val);
+	// todo(rarity): custom attributes should be 64-bit integers, not 32-bit integers?
+	if (val.value.type() == typeid(std::string)) {
+		item->setCustomAttribute(key, boost::get<std::string>(val.value));
+	} else if (val.value.type() == typeid(int64_t)) {
+		item->setCustomAttribute(key, boost::get<int64_t>(val.value));
+	} else if (val.value.type() == typeid(double)) {
+		item->setCustomAttribute(key, boost::get<double>(val.value));
+	} else if (val.value.type() == typeid(bool)) {
+		item->setCustomAttribute(key, boost::get<bool>(val.value));
+	} else {
+		lua_pushnil(L);
+		return 1;
+	}
+
 	pushBoolean(L, true);
 	return 1;
 }

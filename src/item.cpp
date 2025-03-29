@@ -35,6 +35,182 @@ void handleStatsPercentDescription(std::ostringstream& s, const ItemType& it, bo
 void handleAbilitiesDescription(std::ostringstream& s, const ItemType& it, bool& begin);
 void handleMiscDescription(std::ostringstream& s, const ItemType& it, bool& begin);
 
+struct Rarity {
+    int id;
+    double chance;
+    int minLevel;
+    int maxLevel;
+    int minStats;
+    int maxStats;
+};
+
+struct RarityAttributes {
+    int numAbsorbs;
+    int numSkills;
+    int numSpecials;
+    int numElements;
+};
+
+void Item::applyRarityEffects(Item* item) {
+    std::cout << "[applyRarityEffects] Starting for item ID: " << item->getID() << std::endl;
+    
+    int rarityId = 0;
+    const auto rarityAttr = item->getCustomAttribute("rarity");
+    if (rarityAttr && rarityAttr->value.type() == typeid(int64_t)) {
+        rarityId = boost::get<int64_t>(rarityAttr->value);
+    }
+    
+
+    const auto combatPowerAttr = item->getCustomAttribute("combatPowerLevel");
+    if (combatPowerAttr) {
+        std::cout << "[applyRarityEffects] Item already has combat power level, exiting" << std::endl;
+        return;
+    }
+
+    const ItemType& it = Item::items[item->getID()];
+    const uint32_t VALID_EQUIP_SLOTS = SLOTP_HEAD | SLOTP_NECKLACE | SLOTP_ARMOR |
+                                       SLOTP_RIGHT | SLOTP_LEFT | SLOTP_LEGS |
+                                       SLOTP_FEET | SLOTP_RING;
+
+    if ((it.slotPosition & VALID_EQUIP_SLOTS) == 0) {
+        std::cout << "[applyRarityEffects] Item is not equippable, slot position: " 
+                  << it.slotPosition << ", exiting" << std::endl;
+        return;
+    }
+
+    bool isWeapon = (it.weaponType != WEAPON_NONE);
+	std::cout << "[applyRarityEffects] Is weapon: " << (isWeapon ? "yes" : "no") << std::endl;
+
+
+    static const std::vector<Rarity> rarities = {
+        {1, 15.0, 1, 10, 1, 1}, {2, 14.0, 11, 20, 1, 2}, {3, 13.0, 21, 30, 1, 2},
+        {4, 12.0, 31, 40, 1, 3}, {5, 10.0, 41, 50, 1, 3}, {6, 8.0, 51, 60, 2, 4},
+        {7, 7.0, 61, 70, 2, 5}, {8, 6.0, 71, 80, 3, 6}, {9, 5.0, 81, 90, 3, 7},
+        {10, 4.5, 91, 100, 4, 8}, {11, 3.3, 101, 110, 4, 9}, {12, 2.2, 111, 120, 5, 10},
+        {13, 1.8, 121, 130, 6, 10}, {14, 1.3, 131, 140, 7, 12}, {15, 1.0, 141, 150, 9, 15}
+    };
+
+    static const std::vector<RarityAttributes> rarityAttributes = {
+        {0, 1, 0, 0}, {0, 1, 0, 1}, {0, 1, 0, 1}, {0, 1, 1, 1}, {0, 1, 1, 1},
+        {0, 2, 1, 1}, {0, 2, 1, 1}, {0, 2, 2, 1}, {0, 2, 2, 1}, {0, 2, 2, 1},
+        {0, 2, 2, 1}, {0, 2, 2, 1}, {0, 2, 2, 1}, {0, 3, 2, 1}, {0, 3, 2, 1}
+    };
+
+    static const std::vector<std::pair<int, int>> absorptionBonuses = {
+        {1, 1}, {1, 1}, {1, 1}, {1, 2}, {1, 2}, {1, 3}, {1, 3}, {1, 4},
+        {1, 4}, {2, 5}, {2, 5}, {2, 5}, {3, 6}, {4, 6}, {5, 6}
+    };
+
+    static const std::vector<std::pair<int, int>> elementBonuses = {
+        {1, 3}, {3, 6}, {4, 8}, {5, 10}, {6, 12}, {7, 14}, {8, 16},
+        {9, 18}, {10, 20}, {12, 22}, {14, 24}, {16, 26}, {18, 28}, {20, 30}, {25, 40}
+    };
+
+    const Rarity& rarity = rarities[rarityId - 1];
+    const RarityAttributes& attrCounts = rarityAttributes[rarityId - 1];
+    const auto& bonusRange = absorptionBonuses[rarityId - 1];
+
+    int finalLevel = uniform_random(rarity.minLevel, rarity.maxLevel);
+    int bonus = bonusRange.first + ((finalLevel * (bonusRange.second - bonusRange.first + 1)) / 100);
+
+    if (it.attack > 0) {
+        int64_t newAttack = it.attack + bonus;
+        std::cout << "[applyRarityEffects] Boosting attack from " << it.attack 
+                  << " to " << newAttack << std::endl;
+        item->setIntAttr(ITEM_ATTRIBUTE_ATTACK, newAttack);
+    }
+    if (it.defense > 0) item->setIntAttr(ITEM_ATTRIBUTE_DEFENSE, it.defense + bonus);
+    if (it.armor > 0) item->setIntAttr(ITEM_ATTRIBUTE_ARMOR, it.armor + bonus);
+    if (it.hitChance > 0) item->setIntAttr(ITEM_ATTRIBUTE_HITCHANCE, it.hitChance + bonus);
+
+    item->setCustomAttribute("combatPowerLevel", static_cast<int64_t>(finalLevel));
+
+    static const std::vector<std::tuple<int, std::string, std::string>> skillTypes = {
+        {SKILL_FIST, "rarity_fistSkill", "Fist"},
+        {SKILL_CLUB, "rarity_clubSkill", "Club"},
+        {SKILL_SWORD, "rarity_swordSkill", "Sword"},
+        {SKILL_AXE, "rarity_axeSkill", "Axe"},
+        {SKILL_DISTANCE, "rarity_distanceSkill", "Distance"},
+        {SKILL_SHIELD, "rarity_shieldSkill", "Shielding"},
+        {SKILL_MAGLEVEL, "rarity_maglevelSkill", "Magic"}
+    };
+
+    std::string descSkills;
+    if (attrCounts.numSkills > 0) {
+        std::vector autoSkills = skillTypes;
+        std::shuffle(autoSkills.begin(), autoSkills.end(), std::mt19937{std::random_device{}()});
+        for (int i = 0; i < attrCounts.numSkills && i < static_cast<int>(autoSkills.size()); ++i) {
+            auto [id, key, name] = autoSkills[i];
+            int val = uniform_random(bonusRange.first, bonusRange.second);
+            item->setCustomAttribute(key, static_cast<int64_t>(val));
+            descSkills += (descSkills.empty() ? "" : ", ") + name + " +" + std::to_string(val);
+        }
+    }
+
+    static const std::vector<std::pair<std::string, std::string>> specialSets = {
+        {"rarity_criticalHitChance", "rarity_criticalHitAmount"},
+        {"rarity_manaLeechChance", "rarity_manaLeechAmount"},
+        {"rarity_lifeLeechChance", "rarity_lifeLeechAmount"}
+    };
+
+    std::vector specialsShuffled = specialSets;
+    std::shuffle(specialsShuffled.begin(), specialsShuffled.end(), std::mt19937{std::random_device{}()});
+
+    std::string descSpecials;
+    for (int i = 0; i < attrCounts.numSpecials && i < static_cast<int>(specialsShuffled.size()); ++i) {
+        const auto& [chanceKey, amountKey] = specialsShuffled[i];
+        int val = uniform_random(bonusRange.first, bonusRange.second);
+		item->setCustomAttribute(chanceKey, static_cast<int64_t>(val));
+		item->setCustomAttribute(amountKey, static_cast<int64_t>(val));
+        std::string label = chanceKey.find("life") != std::string::npos ? "Life"
+                          : chanceKey.find("mana") != std::string::npos ? "Mana"
+                          : "Critical";
+        descSpecials += (descSpecials.empty() ? "" : ", ") + label + " +" + std::to_string(val) + "%";
+    }
+
+    std::string descElements;
+    if (isWeapon && attrCounts.numElements > 0 && (!it.abilities || it.abilities->elementDamage <= 0)) {
+        static const std::vector<std::tuple<CombatType_t, std::string, std::string>> elements = {
+            {COMBAT_FIREDAMAGE, "rarity_elementfire", "Fire"},
+            {COMBAT_ICEDAMAGE, "rarity_elementice", "Ice"},
+            {COMBAT_ENERGYDAMAGE, "rarity_elementenergy", "Energy"},
+            {COMBAT_DEATHDAMAGE, "rarity_elementdeath", "Death"},
+            {COMBAT_EARTHDAMAGE, "rarity_elementearth", "Earth"},
+            {COMBAT_HOLYDAMAGE, "rarity_elementholy", "Holy"},
+        };
+
+        std::vector autoElements = elements;
+        std::shuffle(autoElements.begin(), autoElements.end(), std::mt19937{std::random_device{}()});
+        for (int i = 0; i < attrCounts.numElements && i < static_cast<int>(autoElements.size()); ++i) {
+            auto [ctype, key, name] = autoElements[i];
+            int val = uniform_random(elementBonuses[rarityId - 1].first, elementBonuses[rarityId - 1].second);
+            item->setCustomAttribute(key, static_cast<int64_t>(val));
+            descElements += (descElements.empty() ? "" : ", ") + name + " +" + std::to_string(val) + "% dmg";
+        }
+    }
+
+    std::string description = item->getStrAttr(ITEM_ATTRIBUTE_DESCRIPTION);
+    if (!description.empty()) description += ", ";
+    description += "Level: " + std::to_string(finalLevel);
+    if (!descSkills.empty()) description += ", " + descSkills;
+    if (!descSpecials.empty()) description += ", " + descSpecials;
+    if (!descElements.empty()) description += ", Element: " + descElements;
+
+    item->setStrAttr(ITEM_ATTRIBUTE_DESCRIPTION, description);
+}
+
+Item* Item::CreateItemWithRarity(const uint16_t type, uint16_t count, int rarityId) {
+    if (rarityId <= 0) {
+        return CreateItem(type, count);
+    }
+    Item* newItem = CreateItem(type, count);
+    if (newItem) {
+        newItem->setCustomAttribute("rarity", static_cast<int64_t>(rarityId));
+        applyRarityEffects(newItem);
+    }
+    return newItem;
+}
+
 Item* Item::CreateItem(const uint16_t type, uint16_t count /*= 0*/)
 {
 	Item* newItem = nullptr;
@@ -83,13 +259,18 @@ Item* Item::CreateItem(const uint16_t type, uint16_t count /*= 0*/)
 			newItem = new Item(type, count);
 		}
 
-		
-
-		newItem->incrementReferenceCounter();
+		if (newItem) {
+			// Apply rarity effects if the item already has a rarity attribute
+			newItem->incrementReferenceCounter();
+			int rarity = newItem->getIntAttr(ITEM_ATTRIBUTE_RARITY);
+			if (rarity > 0) {
+				Item::applyRarityEffects(newItem);
+			}
+		}
 	}
-
 	return newItem;
 }
+
 
 Container* Item::CreateItemAsContainer(const uint16_t type, uint16_t size)
 {
@@ -597,6 +778,16 @@ Attr_ReadValue Item::readAttr(AttrTypes_t attr, PropStream& propStream)
 			break;
 		}
 
+		case ATTR_RARITY: {
+			int32_t rarity;
+			if (!propStream.read<int32_t>(rarity)) {
+				std::cout << "Failed to read : Rarity \n";
+				return ATTR_READ_ERROR;
+			}
+    		setIntAttr(ITEM_ATTRIBUTE_RARITY, rarity);
+			break;
+		}
+
 		case ATTR_HITCHANCE: {
 			int8_t hitChance;
 			if (!propStream.read<int8_t>(hitChance)) {
@@ -911,6 +1102,11 @@ void Item::serializeAttr(PropWriteStream& propWriteStream) const
 	if (hasAttribute(ITEM_ATTRIBUTE_DURATION)) {
 		propWriteStream.write<uint8_t>(ATTR_DURATION);
 		propWriteStream.write<uint32_t>(getIntAttr(ITEM_ATTRIBUTE_DURATION));
+	}
+
+	if (hasAttribute(ITEM_ATTRIBUTE_RARITY)) {
+		propWriteStream.write<uint8_t>(ATTR_RARITY);
+		propWriteStream.write<uint32_t>(getIntAttr(ITEM_ATTRIBUTE_RARITY));
 	}
 
 	ItemDecayState_t decayState = getDecaying();
@@ -1624,6 +1820,294 @@ bool Item::hasMarketAttributes() const
 		}
 	}
 	return true;
+}
+
+
+void Item::getTooltipStats(const ItemType& it, TooltipDataContainer& tooltipData)
+{
+	if (!it.abilities) {
+		return;
+	}
+
+	for (int32_t statId = STAT_FIRST; statId <= STAT_LAST; ++statId) {
+		int32_t stats = it.abilities->stats[statId];
+		if (stats != 0) {
+			tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_STATS, stats, statId));
+		}
+	}
+}
+
+void Item::getTooltipSkills(const ItemType& it, TooltipDataContainer& tooltipData)
+{
+	if (!it.abilities) {
+		return;
+	}
+
+	for (int32_t skillId = SKILL_FIRST; skillId <= SKILL_LAST; ++skillId) {
+		int32_t skills = it.abilities->skills[skillId];
+		if (skills != 0) {
+			tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_SKILL, skills, skillId));
+		}
+	}
+}
+
+void Item::getTooltipCombats(const ItemType& it, CombatType_t combatType, TooltipDataContainer& tooltipData)
+{
+	if (!it.abilities) {
+		return;
+	}
+	// todo(tooltip): need to develop a static method for augments that allows returning current item
+	// augments (i.e.  absorbs/resistances etc..)
+}
+
+void Item::getTooltipOther(const ItemType& it, TooltipDataContainer& tooltipData)
+{
+	if (!it.abilities) {
+		return;
+	}
+
+	if (it.attackSpeed != 0) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_ATTACK_SPEED, it.attackSpeed));
+	}
+	if (it.abilities->speed != 0) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_SPEED, it.abilities->speed));
+	}
+	if (it.abilities->specialSkills[SPECIALSKILL_MANALEECHAMOUNT] != 0) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_MANA_LEECH_AMOUNT, it.abilities->specialSkills[SPECIALSKILL_MANALEECHAMOUNT]));
+	}
+	if (it.abilities->specialSkills[SPECIALSKILL_MANALEECHCHANCE] != 0) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_MANA_LEECH_CHANCE, it.abilities->specialSkills[SPECIALSKILL_MANALEECHCHANCE]));
+	}
+	if (it.abilities->specialSkills[SPECIALSKILL_LIFELEECHAMOUNT] != 0) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_LIFE_LEECH_AMOUNT, it.abilities->specialSkills[SPECIALSKILL_LIFELEECHAMOUNT]));
+	}
+	if (it.abilities->specialSkills[SPECIALSKILL_LIFELEECHCHANCE] != 0) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_LIFE_LEECH_CHANCE, it.abilities->specialSkills[SPECIALSKILL_LIFELEECHCHANCE]));
+	}
+	if (it.abilities->specialSkills[SPECIALSKILL_CRITICALHITAMOUNT] != 0) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_CRITICALHIT_AMOUNT, it.abilities->specialSkills[SPECIALSKILL_CRITICALHITAMOUNT]));
+	}
+	if (it.abilities->specialSkills[SPECIALSKILL_CRITICALHITCHANCE] != 0) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_CRITICALHIT_CHANCE, it.abilities->specialSkills[SPECIALSKILL_CRITICALHITCHANCE]));
+	}
+	if (it.abilities->elementType == COMBAT_FIREDAMAGE && it.abilities->elementDamage != 0) {
+	tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_FIRE_ATTACK, it.abilities->elementDamage));
+	}
+	if (it.abilities->elementType == COMBAT_ENERGYDAMAGE && it.abilities->elementDamage != 0) {
+	tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_ENERGY_ATTACK, it.abilities->elementDamage));
+	}
+	if (it.abilities->elementType == COMBAT_ICEDAMAGE && it.abilities->elementDamage != 0) {
+	tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_ICE_ATTACK, it.abilities->elementDamage));
+	}
+	if (it.abilities->elementType == COMBAT_DEATHDAMAGE && it.abilities->elementDamage != 0) {
+	tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_DEATH_ATTACK, it.abilities->elementDamage));
+	}
+	if (it.abilities->elementType == COMBAT_EARTHDAMAGE && it.abilities->elementDamage != 0) {
+	tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_EARTH_ATTACK, it.abilities->elementDamage));
+	}
+	if (it.abilities->elementType == COMBAT_HOLYDAMAGE && it.abilities->elementDamage != 0) {
+	tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_HOLY_ATTACK, it.abilities->elementDamage));
+	}
+}
+
+void Item::getTooltipData(Item* item, uint16_t spriteId, uint16_t count, TooltipDataContainer& tooltipData)
+{
+	const ItemType& it = item ? items[item->getID()] : Item::items.getItemIdByClientId(spriteId);
+	tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_NAME, (item ? item->getName() : it.name)));
+	tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_COUNT, (item ? item->getSubType() : count)));
+	if (it.isRune()) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_CHARGES, std::max<uint32_t>(1, (item ? item->getSubType() : it.charges))));
+
+		if (!it.runeSpellName.empty()) {
+			tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_RUNE_NAME, it.runeSpellName));
+		}
+		if (it.runeLevel > 0) {
+			tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_RUNE_LEVEL, it.runeLevel));
+		}
+		if (it.runeMagLevel > 0) {
+			tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_RUNE_LEVEL, it.runeMagLevel));
+		}
+	}
+	else if (it.weaponType != WEAPON_NONE) {
+    if (it.weaponType == WEAPON_DISTANCE && it.ammoType != AMMO_NONE) {
+       if (item && item->hasAttribute(ITEM_ATTRIBUTE_ATTACK)) {
+        int32_t attack = item->getAttack();
+        if (attack > 0) {
+            tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_ATTACK, attack));
+        }
+    	} else if (it.attack > 0) {
+        	tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_ATTACK, it.attack));
+    	}
+
+        if (it.shootRange != 0) {
+            tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_SHOOTRANGE, it.shootRange));
+        }
+        if (item && item->hasAttribute(ITEM_ATTRIBUTE_HITCHANCE)) {
+        int32_t hitChance = item->getHitChance();
+        if (hitChance > 0) {
+            tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_HITCHANCE, hitChance));
+        }
+    } else if (it.hitChance > 0) {
+        tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_HITCHANCE, it.hitChance));
+    }
+    } else if (it.weaponType != WEAPON_AMMO && it.weaponType != WEAPON_WAND && 
+               (it.attack != 0 || it.defense != 0 || it.extraDefense != 0)) {
+        if (item && item->hasAttribute(ITEM_ATTRIBUTE_ATTACK)) {
+        int32_t attack = item->getAttack();
+        if (attack > 0) {
+            tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_ATTACK, attack));
+        }
+    } else if (it.attack > 0) {
+        tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_ATTACK, it.attack));
+    }
+
+        if (item && item->hasAttribute(ITEM_ATTRIBUTE_DEFENSE)) {
+        int32_t defense = item->getDefense();
+        if (defense > 0) {
+            tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_DEFENSE, defense));
+        }
+    } else if (it.defense > 0) {
+        tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_DEFENSE, it.defense));
+    }
+
+        if (item && item->hasAttribute(ITEM_ATTRIBUTE_EXTRADEFENSE)) {
+        int32_t extraDefense = item->getExtraDefense();
+        if (extraDefense > 0) {
+            tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_EXTRADEFENSE, extraDefense));
+        }
+    } else if (it.extraDefense > 0) {
+        tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_EXTRADEFENSE, it.extraDefense));
+    }
+	}
+	} 
+	else if (item && item->hasAttribute(ITEM_ATTRIBUTE_ARMOR)) {
+    int32_t armor = item->getArmor();
+    if (armor > 0) {
+        tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_ARMOR, armor));
+    }
+	} else if (it.armor > 0) {
+    	tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_ARMOR, it.armor));
+	}
+
+	else if (it.isFluidContainer()) {
+		if (item && item->getFluidType() != 0) {
+			tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_FLUIDTYPE, items[item->getFluidType()].name));
+		}
+		else {
+			tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_FLUIDTYPE, "It is empty."));
+		}
+	}
+	else if (it.isContainer()) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_CONTAINER_SIZE, it.maxItems));
+	}
+	else if (it.isKey() && item) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_KEY, item->getActionId()));
+	}
+	else if (it.charges > 0) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_CHARGES, std::max<uint32_t>(1, (item ? item->getSubType() : it.charges))));
+	}
+	else if (it.showDuration) {
+		std::ostringstream s;
+		if (item && item->hasAttribute(ITEM_ATTRIBUTE_DURATION)) {
+			int32_t duration = item->getDuration() / 1000;
+			s << "That has energy for ";
+
+			if (duration >= 120) {
+				s << duration / 60 << " minutes left";
+			}
+			else if (duration > 60) {
+				s << "1 minute left";
+			}
+			else {
+				s << "less than a minute left";
+			}
+		}
+		else {
+			s << "That is brand-new.";
+		}
+
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_DURATION, s.str()));
+	}
+
+	if (it.wieldInfo != 0) {
+		std::ostringstream s;
+		s << std::endl << "It can only be wielded properly by ";
+
+		if (it.wieldInfo & WIELDINFO_PREMIUM) {
+			s << "premium ";
+		}
+
+		if (it.wieldInfo & WIELDINFO_VOCREQ) {
+			s << it.vocationString;
+		}
+		else {
+			s << "players";
+		}
+
+		if (it.wieldInfo & WIELDINFO_LEVEL) {
+			s << " of level " << static_cast<int>(it.minReqLevel) << " or higher";
+		}
+
+		if (it.wieldInfo & WIELDINFO_MAGLV) {
+			if (it.wieldInfo & WIELDINFO_LEVEL) {
+				s << " and";
+			}
+			else {
+				s << " of";
+			}
+
+			s << " magic level " << static_cast<int>(it.minReqMagicLevel) << " or higher";
+		}
+
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_WIELDINFO, s.str()));
+	}
+
+	if (item && item->getSpecialDescription() != "") {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_TEXT, item->getSpecialDescription()));
+	}
+	else if (it.description.length() > 0) {
+		tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_TEXT, it.description));
+	}
+
+	if (it.pickupable) {
+		double weight = (item ? item->getWeight() : it.weight);
+		if (weight > 0) {
+			tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_WEIGHT, getWeightDescription(it, weight)));
+		}
+	}
+
+	if (item) {
+		item->getRarityLevel(tooltipData);
+	}
+
+	getTooltipCombats(it, COMBAT_PHYSICALDAMAGE, tooltipData);
+	getTooltipCombats(it, COMBAT_ENERGYDAMAGE, tooltipData);
+	getTooltipCombats(it, COMBAT_EARTHDAMAGE, tooltipData);
+	getTooltipCombats(it, COMBAT_FIREDAMAGE, tooltipData);
+	getTooltipCombats(it, COMBAT_LIFEDRAIN, tooltipData);
+	getTooltipCombats(it, COMBAT_MANADRAIN, tooltipData);
+	getTooltipCombats(it, COMBAT_HEALING, tooltipData);
+	getTooltipCombats(it, COMBAT_ICEDAMAGE, tooltipData);
+	getTooltipCombats(it, COMBAT_HOLYDAMAGE, tooltipData);
+	getTooltipCombats(it, COMBAT_DEATHDAMAGE, tooltipData);
+	getTooltipStats(it, tooltipData);
+	getTooltipSkills(it, tooltipData);
+	getTooltipOther(it, tooltipData);
+}
+
+void Item::getRarityLevel(TooltipDataContainer& tooltipData)
+{
+	int rarity = 0;
+	const auto rarityId = getCustomAttribute("rarity");
+	if (rarityId && rarityId->value.type() == typeid(int64_t)) {
+		rarity = boost::get<int64_t>(rarityId->value);
+	}
+    if (rarity == 0) {
+        rarity = items[getID()].rarity;
+    }
+    if (rarity > 0) {
+        tooltipData.push_back(TooltipData(TOOLTIP_ATTRIBUTE_RARITY, rarity));
+    }
 }
 
 template<>

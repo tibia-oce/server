@@ -1204,6 +1204,12 @@ class Player final : public Creature, public Cylinder
 			}
 		}
 
+		void sendTooltipData(const TooltipDataContainer& tooltipData) {
+			if (client) {
+				client->sendTooltipData(tooltipData);
+			}
+		}
+
 		void receivePing() {
 			lastPong = OTSYS_TIME();
 		}

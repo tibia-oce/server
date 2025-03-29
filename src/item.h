@@ -101,6 +101,7 @@ enum AttrTypes_t {
 	ATTR_OPENCONTAINER = 46,
 	ATTR_PODIUMOUTFIT = 47,
 	ATTR_IMBUEMENTS = 48,
+	ATTR_RARITY = 49,
 };
 
 enum Attr_ReadValue {
@@ -345,6 +346,14 @@ class ItemAttributes
 
 	private:
 		bool hasAttribute(itemAttrTypes type) const {
+			if (type == ITEM_ATTRIBUTE_CUSTOM) {
+				for (const auto& attribute : attributes) {
+					if (attribute.type == ITEM_ATTRIBUTE_CUSTOM) {
+						return true;
+					}
+				}
+				return false;
+			}
 			return (type & attributeBits) != 0;
 		}
 		void removeAttribute(itemAttrTypes type);
@@ -453,14 +462,16 @@ class ItemAttributes
 		template<typename R>
 		void setCustomAttribute(std::string_view key, R value)
 		{
-
 			if (hasAttribute(ITEM_ATTRIBUTE_CUSTOM)) {
 				removeCustomAttribute(key);
 			} else {
 				getAttr(ITEM_ATTRIBUTE_CUSTOM).value.custom = new CustomAttributeMap();
 			}
 			auto lowercaseKey = boost::algorithm::to_lower_copy(std::string{ key });
-			getAttr(ITEM_ATTRIBUTE_CUSTOM).value.custom->emplace(lowercaseKey, value);
+
+			// explicitly wrap value to avoid overload ambiguity
+			CustomAttribute wrapped(value);
+			getAttr(ITEM_ATTRIBUTE_CUSTOM).value.custom->emplace(lowercaseKey, wrapped);
 		}
 
 		void setCustomAttribute(std::string_view key, const CustomAttribute& value) {
@@ -511,7 +522,7 @@ class ItemAttributes
 			| ITEM_ATTRIBUTE_ARMOR | ITEM_ATTRIBUTE_HITCHANCE | ITEM_ATTRIBUTE_SHOOTRANGE | ITEM_ATTRIBUTE_OWNER
 			| ITEM_ATTRIBUTE_DURATION | ITEM_ATTRIBUTE_DECAYSTATE | ITEM_ATTRIBUTE_CORPSEOWNER | ITEM_ATTRIBUTE_CHARGES
 			| ITEM_ATTRIBUTE_FLUIDTYPE | ITEM_ATTRIBUTE_DOORID | ITEM_ATTRIBUTE_DECAYTO | ITEM_ATTRIBUTE_WRAPID | ITEM_ATTRIBUTE_STOREITEM
-			| ITEM_ATTRIBUTE_ATTACK_SPEED | ITEM_ATTRIBUTE_LOOTCATEGORY | ITEM_ATTRIBUTE_REWARDID;
+			| ITEM_ATTRIBUTE_ATTACK_SPEED | ITEM_ATTRIBUTE_LOOTCATEGORY | ITEM_ATTRIBUTE_REWARDID | ITEM_ATTRIBUTE_RARITY;
 		const static uint32_t stringAttributeTypes = ITEM_ATTRIBUTE_DESCRIPTION | ITEM_ATTRIBUTE_TEXT | ITEM_ATTRIBUTE_WRITER
 			| ITEM_ATTRIBUTE_NAME | ITEM_ATTRIBUTE_ARTICLE | ITEM_ATTRIBUTE_PLURALNAME | ITEM_ATTRIBUTE_CLASSIFICATION | ITEM_ATTRIBUTE_TIER;
 
@@ -523,7 +534,7 @@ class ItemAttributes
 			return (type & stringAttributeTypes) == type;
 		}
 		inline static bool isCustomAttrType(itemAttrTypes type) {
-			return (type & ITEM_ATTRIBUTE_CUSTOM) == type;
+			return type == ITEM_ATTRIBUTE_CUSTOM;
 		}
 
 		const std::vector<Attribute>& getList() const {
@@ -541,6 +552,8 @@ class Item : virtual public Thing
 		static Container* CreateItemAsContainer(const uint16_t type, uint16_t size);
 		static Item* CreateItem(PropStream& propStream);
 		static Items items;
+		static Item* CreateItemWithRarity(const uint16_t type, uint16_t count, int rarityId);
+    	static void applyRarityEffects(Item* item);
 
 		// Constructor for items
 		Item(const uint16_t type, uint16_t count = 0);
@@ -812,6 +825,13 @@ class Item : virtual public Thing
 			return items[id].decayTo;
 		}
 
+		void getRarityLevel(TooltipDataContainer& tooltipData);
+		static void getTooltipData(Item* item, uint16_t spriteId, uint16_t count, TooltipDataContainer& tooltipData);
+		static void getTooltipCombats(const ItemType& it, CombatType_t combatType, TooltipDataContainer& tooltipData);
+		static void getTooltipStats(const ItemType& it, TooltipDataContainer& tooltipData);
+		static void getTooltipSkills(const ItemType& it, TooltipDataContainer& tooltipData);
+		static void getTooltipOther(const ItemType& it, TooltipDataContainer& tooltipData);
+		
 		const bool isEquipped() const;
 		void decayImbuements(bool infight);
 
@@ -886,6 +906,12 @@ class Item : virtual public Thing
 				return getIntAttr(ITEM_ATTRIBUTE_ARMOR);
 			}
 			return items[id].armor;
+		}
+		int32_t getRarity() const {
+    		if (hasAttribute(ITEM_ATTRIBUTE_RARITY)) {
+        		return getIntAttr(ITEM_ATTRIBUTE_RARITY);
+    		}
+    		return items[getID()].rarity;
 		}
 		int32_t getDefense() const {
 			if (hasAttribute(ITEM_ATTRIBUTE_DEFENSE)) {

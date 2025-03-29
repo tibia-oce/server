@@ -522,6 +522,7 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 		case 0x99: parseCloseChannel(msg); break;
 		case 0x9A: parseOpenPrivateChannel(msg); break;
 		case 0x9E: addGameTask([playerID = player->getID()]() { g_game.playerCloseNpcChannel(playerID); }); break;
+		case 0x9F: parseTooltip(msg); break;
 		case 0xA0: parseFightModes(msg); break;
 		case 0xA1: parseAttack(msg); break;
 		case 0xA2: parseFollow(msg); break;
@@ -3257,4 +3258,54 @@ void ProtocolGame::parseAddLootCategory(NetworkMessage& msg)
     uint16_t categoryFlags = msg.get<uint16_t>();
     uint32_t playerId = player->getID();
     addGameTask([playerId, pos, spriteId, stackpos, categoryFlags]() { g_game.playerAddLootCategory(playerId, pos, spriteId, stackpos, categoryFlags); });
+}
+
+void ProtocolGame::sendTooltipData(const TooltipDataContainer& tooltipData)
+{
+	NetworkMessage msg;
+	msg.addByte(0x9E);
+	msg.addByte(tooltipData.size());
+
+	for (auto& itTooltip : tooltipData) {
+		msg.addByte(itTooltip.attributeId);
+		if (itTooltip.isNumber()) {
+			msg.addByte(1);
+
+			int32_t value = itTooltip.getNumber();
+			msg.addByte(value < 0);
+			msg.add<uint32_t>(std::abs(value));
+			msg.add<uint32_t>(itTooltip.attributeType);
+		}
+		else {
+			msg.addByte(0);
+			msg.addString(itTooltip.getString());
+		}
+	}
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::parseTooltip(NetworkMessage& msg)
+{
+	switch (msg.getByte())
+	{
+		case 0:
+		{
+			// Virtual item
+			uint16_t spriteId = msg.get<uint16_t>();
+			uint16_t count = msg.get<uint16_t>();
+			g_game.playerSendTooltip(player->getID(), spriteId, count);
+			break;
+		}
+		case 1:
+		{
+			// Real inventory item
+			Position pos = msg.getPosition();
+			uint16_t spriteId = msg.get<uint16_t>();
+			uint8_t stackpos = msg.getByte();
+			g_game.playerSendTooltip(player->getID(), pos, spriteId, stackpos);
+			break;
+		}
+		default:
+			break;
+	}
 }
