@@ -1,100 +1,36 @@
--- data\scripts\custom\UpgradeSystem\core.lua
+-- data\scripts\custom\itemupgrades\core.lua
 print(">> Loading upgrade system")
 
+-- Global storage tables
 US_CONDITIONS = {}
 US_BUFFS = {}
-
 local US_SUBID = {}
 
-local TargetCombatEvent = EventCallback
-TargetCombatEvent.onTargetCombat = function(creature, target)
-    target:registerEvent("UpgradeSystemHealth")
-    target:registerEvent("UpgradeSystemDeath")
-    return RETURNVALUE_NOERROR
-end
-TargetCombatEvent:register()
-
-local LoginEvent = CreatureEvent("UpgradeSystemLogin")
-
-function LoginEvent.onLogin(player)
-    us_onLogin(player)
-    return true
+--- Checks if two creatures are in the same party
+-- @param creature1 Creature: First creature to check
+-- @param creature2 Creature: Second creature to check
+-- @return boolean: True if both creatures are in the same party
+function isInSameParty(creature1, creature2)
+    if creature1:isPlayer() and creature1:getParty() and creature2:isPlayer() and creature2:getParty() then
+        return creature1:getParty() == creature2:getParty()
+    end
+    return false
 end
 
-local HealthChangeEvent = CreatureEvent("UpgradeSystemHealth")
-local ManaChangeEvent = CreatureEvent("UpgradeSystemMana")
-local DeathEvent = CreatureEvent("UpgradeSystemDeath")
-local KillEvent = CreatureEvent("UpgradeSystemKill")
-local PrepareDeathEvent = CreatureEvent("UpgradeSystemPD")
-
-function us_onEquip(cid, iuid, slot)
-    local player = Player(cid)
-    if not player:getSlotItem(slot) then
-        return
-    end
-    iuid = iuid + 1
-    local slotUid = player:getSlotItem(slot):getUniqueId()
-    if iuid ~= slotUid then
-        return
-    end
-    local item = Item(iuid)
-    if player and item then
-        local maxHP = player:getMaxHealth()
-        local maxMP = player:getMaxMana()
-        local newBonuses = item:getBonusAttributes()
-        if not newBonuses then
-            return
-        end
-
-        for i = 1, #newBonuses do
-            local value = newBonuses[i]
-            local bonusId = value[1]
-            local bonusValue = value[2]
-            local attr = US_ENCHANTMENTS[bonusId]
-            if attr then
-                if attr.combatType == US_TYPES.CONDITION then
-                    if not US_CONDITIONS[bonusId] then
-                        US_CONDITIONS[bonusId] = {}
-                    end
-                    local itemId = item:getId()
-                    if not US_CONDITIONS[bonusId][bonusValue] then
-                        US_CONDITIONS[bonusId][bonusValue] = {}
-                    end
-                    if not US_CONDITIONS[bonusId][bonusValue][itemId] then
-                        US_CONDITIONS[bonusId][bonusValue][itemId] = Condition(attr.condition)
-                        if attr.condition ~= CONDITION_MANASHIELD then
-                            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_SUBID,
-                                1000 + player:getNextSubId(slot, i))
-                            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(attr.param,
-                                attr.percentage == true and 100 + bonusValue or bonusValue)
-                            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, -1)
-                        else
-                            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, 86400000)
-                        end
-                        US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_BUFF_SPELL, true)
-                        player:addCondition(US_CONDITIONS[bonusId][bonusValue][itemId])
-                        if attr == BONUS_TYPE_MAXHP then
-                            if player:getHealth() == maxHP then
-                                player:addHealth(player:getMaxHealth())
-                            end
-                        end
-                        if attr == BONUS_TYPE_MAXMP then
-                            if player:getMana() == maxMP then
-                                player:addMana(player:getMaxMana())
-                            end
-                        end
-                    else
-                        player:addCondition(US_CONDITIONS[bonusId][bonusValue][itemId])
-                        if attr.param == CONDITION_PARAM_STAT_MAXHITPOINTS then
-                            if player:getHealth() == maxHP then
-                                player:addHealth(player:getMaxHealth())
-                            end
-                        end
-                        if attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTS then
-                            if player:getMana() == maxMP then
-                                player:addMana(player:getMaxMana())
-                            end
-                        end
+--- Process kill triggers for a player when killing a monster
+-- @param player Player: The player who killed the monster
+-- @param center Position: Position of the killed monster
+-- @param target Creature: The killed monster
+function processKillTriggers(player, center, target)
+    for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
+        local item = player:getSlotItem(slot)
+        if item then
+            local values = item:getBonusAttributes()
+            if values then
+                for key, value in pairs(values) do
+                    local attr = US_ENCHANTMENTS[value[1]]
+                    if attr and attr.triggerType == US_TRIGGERS.KILL then
+                        attr.execute(player, value[2], center, target)
                     end
                 end
             end
@@ -102,8 +38,62 @@ function us_onEquip(cid, iuid, slot)
     end
 end
 
-local MoveItemEvent = EventCallback
-MoveItemEvent.onMoveItem = function(player, item, count, fromPosition, toPosition, fromCylinder, toCylinder)
+--- Check if player should be revived on death
+-- @param creature Creature: The creature that is about to die
+-- @return boolean: True if the player should be revived
+function checkReviveOnDeath(creature)
+    for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
+        local item = creature:getSlotItem(slot)
+        if item then
+            local values = item:getBonusAttributes()
+            if values then
+                for key, value in pairs(values) do
+                    local attr = US_ENCHANTMENTS[value[1]]
+                    if attr and attr.name == "Revive on death" then
+                        if math.random(100) < value[2] then
+                            creature:addHealth(creature:getMaxHealth())
+                            creature:addMana(creature:getMaxMana())
+                            creature:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
+                            creature:sendTextMessage(MESSAGE_INFO_DESCR, "You have been revived!")
+                            return true
+                        end
+                    end
+                end
+            end
+        end
+    end
+    return false
+end
+
+--- Calculate modified experience based on player's equipment
+-- @param player Player: The player gaining experience
+-- @param exp number: The base experience amount
+-- @return number: The modified experience amount
+function calculateModifiedExperience(player, exp)
+    for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
+        local item = player:getSlotItem(slot)
+        if item then
+            local values = item:getBonusAttributes()
+            if values then
+                for key, value in pairs(values) do
+                    local attr = US_ENCHANTMENTS[value[1]]
+                    if attr and attr.name == "Experience" then
+                        exp = exp + math.ceil(exp * value[2] / 100)
+                    end
+                end
+            end
+        end
+    end
+    return exp
+end
+
+--- Handle item movement validation and effects
+-- @param player Player: The player moving the item
+-- @param item Item: The item being moved
+-- @param fromPosition Position: The original position
+-- @param toPosition Position: The target position
+-- @return boolean: True if the move is allowed
+function handleItemMove(player, item, fromPosition, toPosition)
     if not item:getType():isUpgradable() and not item:getType():canHaveItemLevel() or toPosition.y == CONST_SLOT_AMMO then
         return true
     end
@@ -112,86 +102,70 @@ MoveItemEvent.onMoveItem = function(player, item, count, fromPosition, toPositio
         return true
     end
 
-    if item:isUnidentified() then
-        if toPosition.y <= CONST_SLOT_AMMO and toPosition.y ~= CONST_SLOT_BACKPACK then
-            player:sendTextMessage(MESSAGE_STATUS_SMALL, "You can't wear unidentified items.")
+    -- Check level requirement
+    if US_CONFIG.REQUIRE_LEVEL == true and isEquipPosition(toPosition) then
+        if player:getLevel() < item:getItemLevel() and not item:isLimitless() then
+            player:sendTextMessage(MESSAGE_STATUS_SMALL, "You need higher level to equip that item.")
             return false
         end
     end
 
-    if US_CONFIG.REQUIRE_LEVEL == true then
-        if player:getLevel() < item:getItemLevel() and not item:isLimitless() then
-            if toPosition.y <= CONST_SLOT_AMMO and toPosition.y ~= CONST_SLOT_BACKPACK then
-                player:sendTextMessage(MESSAGE_STATUS_SMALL, "You need higher level to equip that item.")
-                return false
-            end
+    -- Handle equipping effects
+    if isEquipPosition(toPosition) and (fromPosition.y >= 64 or fromPosition.x ~= CONTAINER_POSITION) then
+        -- Remove old item effects
+        local oldItem = player:getSlotItem(toPosition.y)
+        if oldItem and oldItem:getType():isUpgradable() then
+            removeItemConditions(player, oldItem)
         end
-    end
 
-    if toPosition.y <= CONST_SLOT_AMMO then
-        if toPosition.y ~= CONST_SLOT_BACKPACK then
-            if fromPosition.y >= 64 or fromPosition.x ~= CONTAINER_POSITION then
-                -- remove old
-                local oldItem = player:getSlotItem(toPosition.y)
-                if oldItem then
-                    if oldItem:getType():isUpgradable() then
-                        local oldBonuses = oldItem:getBonusAttributes()
-                        if oldBonuses then
-                            local itemId = oldItem:getId()
-                            for key, value in pairs(oldBonuses) do
-                                local attr = US_ENCHANTMENTS[value[1]]
-                                if attr then
-                                    if attr.combatType == US_TYPES.CONDITION then
-                                        if US_CONDITIONS[value[1]] and US_CONDITIONS[value[1]][value[2]] and
-                                            US_CONDITIONS[value[1]][value[2]][itemId] then
-                                            if US_CONDITIONS[value[1]][value[2]][itemId]:getType() ~=
-                                                CONDITION_MANASHIELD then
-                                                player:removeCondition(
-                                                    US_CONDITIONS[value[1]][value[2]][itemId]:getType(),
-                                                    CONDITIONID_COMBAT,
-                                                    US_CONDITIONS[value[1]][value[2]][itemId]:getSubId())
-                                            else
-                                                player:removeCondition(
-                                                    US_CONDITIONS[value[1]][value[2]][itemId]:getType(),
-                                                    CONDITIONID_COMBAT)
-                                            end
-                                        end
-                                    end
-                                end
-                            end
-                        end
-                    end
-                end
-                -- apply new
-                if item:getType():isUpgradable() then
-                    local newBonuses = item:getBonusAttributes()
-                    if newBonuses then
-                        addEvent(us_onEquip, 10, player:getId(), item:getUniqueId(), toPosition.y)
-                    end
-                end
+        -- Apply new item effects
+        if item:getType():isUpgradable() then
+            local newBonuses = item:getBonusAttributes()
+            if newBonuses then
+                addEvent(us_onEquip, 10, player:getId(), item:getUniqueId(), toPosition.y)
             end
         end
     end
 
     return true
 end
-MoveItemEvent:register()
 
-local ItemMovedEvent = EventCallback
-ItemMovedEvent.onItemMoved = function(player, item, count, fromPosition, toPosition, fromCylinder, toCylinder)
+--- Check if a position is an equipment position
+-- @param position Position: The position to check
+-- @return boolean: True if the position is an equipment slot
+function isEquipPosition(position)
+    return position.y <= CONST_SLOT_AMMO and position.y ~= CONST_SLOT_BACKPACK
+end
+
+--- Handle when an item is moved (after the move is completed)
+-- @param player Player: The player who moved the item
+-- @param item Item: The item that was moved
+-- @param fromPosition Position: The original position
+-- @param toPosition Position: The target position
+function handleItemMoved(player, item, fromPosition, toPosition)
     if not item:getType():isUpgradable() then
         return
     end
-    if toPosition.y <= CONST_SLOT_AMMO and toPosition.y ~= CONST_SLOT_BACKPACK then
+
+    if isEquipPosition(toPosition) then
         return
     end
+
     if fromPosition.y >= 64 and toPosition.y >= 64 then
         return
     end
+
     if fromPosition.y >= 64 and toPosition.y == CONST_SLOT_BACKPACK then
         return
     end
 
+    removeItemConditions(player, item)
+end
+
+--- Remove all conditions applied by an item's bonuses
+-- @param player Player: The player wearing the item
+-- @param item Item: The item being unequipped
+function removeItemConditions(player, item)
     local bonuses = item:getBonusAttributes()
     if bonuses then
         local itemId = item:getId()
@@ -200,16 +174,91 @@ ItemMovedEvent.onItemMoved = function(player, item, count, fromPosition, toPosit
             local bonusId = value[1]
             local bonusValue = value[2]
             local attr = US_ENCHANTMENTS[bonusId]
-            if attr then
-                if attr.combatType == US_TYPES.CONDITION then
-                    if US_CONDITIONS[bonusId] and US_CONDITIONS[bonusId][bonusValue] and
-                        US_CONDITIONS[bonusId][bonusValue][itemId] then
-                        if US_CONDITIONS[bonusId][bonusValue][itemId]:getType() ~= CONDITION_MANASHIELD then
-                            player:removeCondition(US_CONDITIONS[bonusId][bonusValue][itemId]:getType(),
-                                CONDITIONID_COMBAT, US_CONDITIONS[bonusId][bonusValue][itemId]:getSubId())
-                        else
-                            player:removeCondition(US_CONDITIONS[bonusId][bonusValue][itemId]:getType(),
-                                CONDITIONID_COMBAT)
+            if attr and attr.combatType == US_TYPES.CONDITION then
+                if US_CONDITIONS[bonusId] and US_CONDITIONS[bonusId][bonusValue] and
+                    US_CONDITIONS[bonusId][bonusValue][itemId] then
+                    if US_CONDITIONS[bonusId][bonusValue][itemId]:getType() ~= CONDITION_MANASHIELD then
+                        player:removeCondition(US_CONDITIONS[bonusId][bonusValue][itemId]:getType(), CONDITIONID_COMBAT,
+                            US_CONDITIONS[bonusId][bonusValue][itemId]:getSubId())
+                    else
+                        player:removeCondition(US_CONDITIONS[bonusId][bonusValue][itemId]:getType(), CONDITIONID_COMBAT)
+                    end
+                end
+            end
+        end
+    end
+end
+
+--- Process a corpse after a monster is killed
+-- @param monsterType MonsterType: The type of monster killed
+-- @param corpsePosition Position: The position of the corpse
+-- @param killerId number: The ID of the killer
+function us_CheckCorpse(monsterType, corpsePosition, killerId)
+    local killer = Player(killerId)
+    local corpse = Tile(corpsePosition):getTopDownItem()
+
+    if not killer or not killer:isPlayer() or not corpse or not corpse:isContainer() then
+        return
+    end
+
+    processAdditionalGold(killer, corpse)
+    processCrystalFossilDrop(monsterType, corpse, corpsePosition)
+end
+
+--- Process additional gold from bonuses
+-- @param killer Player: The player who killed the monster
+-- @param corpse Container: The corpse container
+function processAdditionalGold(killer, corpse)
+    for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
+        local item = killer:getSlotItem(slot)
+        if item then
+            local values = item:getBonusAttributes()
+            if values then
+                for key, value in pairs(values) do
+                    local attr = US_ENCHANTMENTS[value[1]]
+                    if attr and attr.name == "Additonal Gold" then
+                        -- Calculate total gold in corpse
+                        local cc, plat, gold = 0, 0, 0
+                        for i = 0, corpse:getSize() do
+                            local item = corpse:getItem(i)
+                            if item then
+                                if item.itemid == 2160 then
+                                    gold = gold + (item:getCount() * 10000)
+                                elseif item.itemid == 2152 then
+                                    gold = gold + (item:getCount() * 100)
+                                elseif item.itemid == 2148 then
+                                    gold = gold + item:getCount()
+                                end
+                            end
+                        end
+
+                        -- Add bonus gold
+                        gold = math.floor(gold * value[2] / 100)
+
+                        -- Convert to appropriate coin types
+                        while gold >= 10000 do
+                            gold = gold / 10000
+                            cc = cc + 1
+                        end
+
+                        if cc > 0 then
+                            local crystalCoin = Game.createItem(2160, cc)
+                            corpse:addItemEx(crystalCoin)
+                        end
+
+                        while gold >= 100 do
+                            gold = gold / 100
+                            plat = plat + 1
+                        end
+
+                        if plat > 0 then
+                            local platinumCoin = Game.createItem(2152, plat)
+                            corpse:addItemEx(platinumCoin)
+                        end
+
+                        if gold > 0 then
+                            local goldCoin = Game.createItem(2148, gold)
+                            corpse:addItemEx(goldCoin)
                         end
                     end
                 end
@@ -217,8 +266,559 @@ ItemMovedEvent.onItemMoved = function(player, item, count, fromPosition, toPosit
         end
     end
 end
-ItemMovedEvent:register()
 
+--- Process crystal fossil drops
+-- @param monsterType MonsterType: The type of monster killed
+-- @param corpse Container: The corpse container
+-- @param corpsePosition Position: The position of the corpse
+function processCrystalFossilDrop(monsterType, corpse, corpsePosition)
+    local iLvl = monsterType:calculateItemLevel()
+    if iLvl >= US_CONFIG.CRYSTAL_FOSSIL_DROP_LEVEL then
+        if math.random(US_CONFIG.CRYSTAL_FOSSIL_DROP_CHANCE) == 1 then
+            corpse:addItem(US_CONFIG.CRYSTAL_FOSSIL, 1)
+            local specs = Game.getSpectators(corpsePosition, false, true, 9, 9, 8, 8)
+            if #specs > 0 then
+                for i = 1, #specs do
+                    local player = specs[i]
+                    player:say("Crystal Fossil!", TALKTYPE_MONSTER_SAY, false, player, corpsePosition)
+                end
+            end
+        end
+    end
+end
+
+--- Handle damage modifications from bonuses
+-- @param creature Creature: The creature being damaged
+-- @param attacker Creature: The creature dealing damage
+-- @param primaryDamage number: Primary damage amount
+-- @param primaryType number: Primary damage type
+-- @param secondaryDamage number: Secondary damage amount
+-- @param secondaryType number: Secondary damage type
+-- @param origin number: Origin of the damage
+-- @return number, number, number, number: Modified damage values
+function us_onDamaged(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
+    if primaryType == COMBAT_HEALING or secondaryType == COMBAT_HEALING then
+        return processHealingModifiers(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType)
+    end
+
+    if attacker:isPlayer() then
+        local modifiedDamage = processAttackerModifiers(attacker, creature, primaryDamage, primaryType, secondaryDamage,
+            secondaryType)
+        primaryDamage = modifiedDamage.primaryDamage
+        secondaryDamage = modifiedDamage.secondaryDamage
+    end
+
+    if creature:isPlayer() then
+        local modifiedDamage = processDefenderModifiers(creature, attacker, primaryDamage, primaryType, secondaryDamage,
+            secondaryType)
+        primaryDamage = modifiedDamage.primaryDamage
+        secondaryDamage = modifiedDamage.secondaryDamage
+    end
+
+    return primaryDamage, primaryType, secondaryDamage, secondaryType
+end
+
+--- Process healing modifiers from bonuses
+-- @param creature Creature: The creature being healed
+-- @param attacker Creature: The creature doing the healing
+-- @param primaryDamage number: Primary healing amount
+-- @param primaryType number: Primary damage type
+-- @param secondaryDamage number: Secondary healing amount
+-- @param secondaryType number: Secondary damage type
+-- @return number, number, number, number: Modified healing values
+function processHealingModifiers(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType)
+    -- Process attacker healing bonuses
+    if attacker:isPlayer() then
+        local primaryTotal = 0
+        local secondaryTotal = 0
+
+        for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
+            local item = attacker:getSlotItem(slot)
+            if item and item:getType():usesSlot(slot) then
+                local values = item:getBonusAttributes()
+                if values then
+                    for key, value in pairs(values) do
+                        local attr = US_ENCHANTMENTS[value[1]]
+                        if attr and attr.name == "Increased Healing" then
+                            if primaryType == COMBAT_HEALING then
+                                primaryTotal = primaryTotal + value[2]
+                            end
+                            if secondaryType == COMBAT_HEALING then
+                                secondaryTotal = secondaryTotal + value[2]
+                            end
+                        end
+                    end
+                end
+            end
+        end
+
+        if primaryType == COMBAT_HEALING and primaryTotal > 0 then
+            primaryDamage = math.floor(primaryDamage + (primaryDamage * primaryTotal / 100))
+        end
+        if secondaryType == COMBAT_HEALING and secondaryTotal > 0 then
+            secondaryDamage = math.floor(secondaryDamage + (secondaryDamage * secondaryTotal / 100))
+        end
+    end
+
+    -- Process target healing bonuses
+    if creature:isPlayer() then
+        local primaryTotal = 0
+        local secondaryTotal = 0
+
+        for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
+            local item = creature:getSlotItem(slot)
+            if item and item:getType():usesSlot(slot) then
+                local values = item:getBonusAttributes()
+                if values then
+                    for key, value in pairs(values) do
+                        local attr = US_ENCHANTMENTS[value[1]]
+                        if attr and attr.name == "Increased Healing" then
+                            if primaryDamage > 0 then
+                                primaryTotal = primaryTotal + value[2]
+                            end
+                            if secondaryDamage > 0 then
+                                secondaryTotal = secondaryTotal + value[2]
+                            end
+                        end
+                    end
+                end
+            end
+        end
+
+        if primaryTotal > 0 then
+            primaryDamage = math.floor(primaryDamage + (primaryDamage * primaryTotal / 100))
+        end
+        if secondaryTotal > 0 then
+            secondaryDamage = math.floor(secondaryDamage + (secondaryDamage * secondaryTotal / 100))
+        end
+    end
+
+    return primaryDamage, primaryType, secondaryDamage, secondaryType
+end
+
+--- Process attacker damage modifiers from bonuses
+-- @param attacker Creature: The creature dealing damage
+-- @param target Creature: The creature being damaged
+-- @param primaryDamage number: Primary damage amount
+-- @param primaryType number: Primary damage type
+-- @param secondaryDamage number: Secondary damage amount
+-- @param secondaryType number: Secondary damage type
+-- @return table: Table with modified damage values
+function processAttackerModifiers(attacker, target, primaryDamage, primaryType, secondaryDamage, secondaryType)
+    -- Apply damage buffs
+    local pid = attacker:getId()
+    if US_BUFFS[pid] and US_BUFFS[pid][1] then
+        if primaryDamage ~= 0 then
+            primaryDamage = primaryDamage + (primaryDamage * US_BUFFS[pid][1].value / 100)
+        end
+        if secondaryDamage ~= 0 then
+            secondaryDamage = secondaryDamage + (secondaryDamage * US_BUFFS[pid][1].value / 100)
+        end
+    end
+
+    -- Process equipment bonuses
+    local doubleDamageTotal = 0
+    local primaryDamageTotal = 0
+    local secondaryDamageTotal = 0
+    local lifeStealTotal = 0
+    local manaStealTotal = 0
+
+    for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
+        local item = attacker:getSlotItem(slot)
+        if item and item:getType():usesSlot(slot) then
+            local values = item:getBonusAttributes()
+            if values then
+                for key, value in pairs(values) do
+                    local attr = US_ENCHANTMENTS[value[1]]
+                    if attr and attr.combatType and attr.combatType ~= US_TYPES.CONDITION then
+                        if attr.combatType == US_TYPES.TRIGGER then
+                            if attr.triggerType == US_TRIGGERS.ATTACK then
+                                attr.execute(attacker, target, value[2])
+                            end
+                        elseif attr.name == "Double Damage" then
+                            doubleDamageTotal = doubleDamageTotal + value[2]
+                        else
+                            if attr.combatDamage then
+                                if (attr.combatDamage % (primaryType + primaryType) >= primaryType) and attr.combatType ==
+                                    US_TYPES.OFFENSIVE then
+                                    primaryDamageTotal = primaryDamageTotal + value[2]
+                                end
+                                if (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) and
+                                    attr.combatType == US_TYPES.OFFENSIVE then
+                                    secondaryDamageTotal = secondaryDamageTotal + value[2]
+                                end
+                            end
+
+                            if attr.name == "Life Steal" then
+                                lifeStealTotal = lifeStealTotal + value[2]
+                            elseif attr.name == "Mana Steal" then
+                                manaStealTotal = manaStealTotal + value[2]
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    -- Apply double damage chance
+    if doubleDamageTotal > 0 and math.random(100) < doubleDamageTotal then
+        primaryDamage = primaryDamage * 2
+        secondaryDamage = secondaryDamage * 2
+    end
+
+    -- Apply damage bonuses
+    if primaryDamageTotal > 0 then
+        primaryDamage = math.floor(primaryDamage + (primaryDamage * primaryDamageTotal / 100))
+    end
+    if secondaryDamageTotal > 0 then
+        secondaryDamage = math.floor(secondaryDamage + (secondaryDamage * secondaryDamageTotal / 100))
+    end
+
+    -- Apply life/mana steal
+    local damage = math.abs(primaryDamage + secondaryDamage)
+    if lifeStealTotal > 0 then
+        local lifeSteal = math.floor((damage * (lifeStealTotal / 100)))
+        if lifeSteal > 0 then
+            attacker:addHealth(lifeSteal)
+        end
+    end
+    if manaStealTotal > 0 then
+        local manaSteal = math.floor((damage * (manaStealTotal / 100)))
+        if manaSteal > 0 then
+            attacker:addMana(manaSteal)
+        end
+    end
+
+    return {
+        primaryDamage = primaryDamage,
+        secondaryDamage = secondaryDamage
+    }
+end
+
+--- Process defender damage modifiers from bonuses
+-- @param defender Creature: The creature being damaged
+-- @param attacker Creature: The creature dealing damage
+-- @param primaryDamage number: Primary damage amount
+-- @param primaryType number: Primary damage type
+-- @param secondaryDamage number: Secondary damage amount
+-- @param secondaryType number: Secondary damage type
+-- @return table: Table with modified damage values
+function processDefenderModifiers(defender, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType)
+    local primaryDamageTotal = 0
+    local secondaryDamageTotal = 0
+
+    for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
+        local item = defender:getSlotItem(slot)
+        if item and item:getType():usesSlot(slot) then
+            local values = item:getBonusAttributes()
+            if values then
+                for key, value in pairs(values) do
+                    local attr = US_ENCHANTMENTS[value[1]]
+                    if attr and attr.combatType and attr.combatType ~= US_TYPES.CONDITION then
+                        if attr.combatType == US_TYPES.TRIGGER then
+                            if attr.triggerType == US_TRIGGERS.HIT then
+                                attr.execute(defender, attacker, value[2])
+                            end
+                        else
+                            if attr.combatDamage then
+                                if (attr.combatDamage % (primaryType + primaryType) >= primaryType) and attr.combatType ==
+                                    US_TYPES.DEFENSIVE then
+                                    primaryDamageTotal = primaryDamageTotal + value[2]
+                                end
+                                if (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) and
+                                    attr.combatType == US_TYPES.DEFENSIVE then
+                                    secondaryDamageTotal = secondaryDamageTotal + value[2]
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    -- Apply damage reduction bonuses
+    if primaryDamageTotal > 0 then
+        primaryDamage = math.floor(primaryDamage - (primaryDamage * primaryDamageTotal / 100))
+    end
+    if secondaryDamageTotal > 0 then
+        secondaryDamage = math.floor(secondaryDamage - (secondaryDamage * secondaryDamageTotal / 100))
+    end
+
+    return {
+        primaryDamage = primaryDamage,
+        secondaryDamage = secondaryDamage
+    }
+end
+
+--- Remove a buff from a player
+-- @param pid number: The player ID
+-- @param buffId number: The buff ID
+-- @param buffName string: The name of the buff
+function us_RemoveBuff(pid, buffId, buffName)
+    if US_BUFFS[pid] then
+        US_BUFFS[pid][buffId] = nil
+        local player = Player(pid)
+        if player then
+            player:sendTextMessage(MESSAGE_STATUS_WARNING, buffName .. " ended!")
+        end
+    end
+end
+
+--- Enhance item description with bonus and property information
+-- @param player Player: The player looking at the item
+-- @param thing Thing: The thing being looked at
+-- @param description string: The current description
+-- @return string: The enhanced description
+function enhanceItemDescription(player, thing, description)
+    if thing:isItem() then
+        if thing.itemid == US_CONFIG.ITEM_MIND_CRYSTAL and thing:hasMemory() then
+            description = enhanceMindCrystalDescription(thing, description)
+        elseif thing:getType():isUpgradable() then
+            description = enhanceUpgradableItemDescription(thing, description)
+        elseif thing:getType():canHaveItemLevel() then
+            description = enhanceItemLevelDescription(thing, description)
+        end
+    elseif thing:isPlayer() then
+        description = enhancePlayerDescription(player, thing, description)
+    end
+    return description
+end
+
+--- Enhance mind crystal description with stored enchantments
+-- @param crystal Item: The mind crystal
+-- @param description string: The current description
+-- @return string: The enhanced description
+function enhanceMindCrystalDescription(crystal, description)
+    for i = 4, 1, -1 do
+        local enchant = crystal:getBonusAttribute(i)
+        if enchant then
+            local attr = US_ENCHANTMENTS[enchant[1]]
+            description = description:gsub(crystal:getName() .. "%.", "%1\n" .. attr.format(enchant[2]))
+        end
+    end
+    return description
+end
+
+--- Enhance upgradable item description with item properties and bonuses
+-- @param item Item: The upgradable item
+-- @param description string: The current description
+-- @return string: The enhanced description
+function enhanceUpgradableItemDescription(item, description)
+    local upgrade = item:getUpgradeLevel()
+    local itemLevel = item:getItemLevel()
+
+    -- Add upgrade information
+    if upgrade > 0 then
+        description = description:gsub(item:getName(), "%1 +" .. upgrade)
+    end
+
+    -- Add item level information
+    if description:find("(%)%.?)") then
+        description = description:gsub("(%)%.?)", "%1\nItem Level: " .. itemLevel)
+    else
+        if upgrade > 0 then
+            description = description:gsub("+" .. upgrade .. "%.", "%1\nItem Level: " .. itemLevel)
+        else
+            description = description:gsub(item:getName(), "%1\nItem Level: " .. itemLevel)
+        end
+    end
+
+    -- Add rarity and unique information
+    description = description:gsub(item:getName(), item:getRarity().name .. " %1")
+
+    if item:getArticle():len() > 0 and item:getRarity().name == "epic" and item:getArticle() ~= "an" then
+        description = description:gsub("You see (" .. item:getArticle() .. "%S?)", "You see an")
+    end
+
+    if item:isUnique() then
+        description = description:gsub("Item Level: " .. itemLevel, item:getUniqueName() .. "\n%1")
+    end
+
+    -- Add attribute descriptions
+    for i = item:getMaxAttributes(), 1, -1 do
+        local enchant = item:getBonusAttribute(i)
+        if enchant then
+            local attr = US_ENCHANTMENTS[enchant[1]]
+            description = description:gsub("Item Level: " .. itemLevel, "%1\n" .. attr.format(enchant[2]))
+        end
+    end
+
+    -- Add level requirement information
+    if US_CONFIG.REQUIRE_LEVEL then
+        if item:isLimitless() then
+            if description:find("It can only be wielded properly by") then
+                description = description:gsub("It can only be wielded properly by (.-)%.",
+                    "Removed required Item Level to wear.")
+            else
+                description = description:gsub("It weighs", "Removed required Item Level to wear.\nIt weighs")
+            end
+        else
+            if description:find("of level (%d+) or higher") then
+                for match in description:gmatch("of level (%d+) or higher") do
+                    if tonumber(match) < itemLevel then
+                        description = description:gsub("of level (%d+) or higher",
+                            "of level " .. itemLevel .. " or higher")
+                    end
+                end
+            elseif description:find("It can only be wielded properly by") then
+                description = description:gsub("It can only be wielded properly by (.+).\n",
+                    "It can only be wielded properly by %1 of level " .. itemLevel .. " or higher.\n")
+            else
+                if description:find("It weighs") then
+                    description = description:gsub("It weighs",
+                        "It can only be wielded properly by players of level " .. itemLevel .. " or higher.\nIt weighs")
+                else
+                    description =
+                        description .. "\nIt can only be wielded properly by players of level " .. itemLevel ..
+                            " or higher."
+                end
+            end
+        end
+    end
+
+    -- Add mirrored information
+    if item:isMirrored() then
+        if description:find("It weighs") then
+            description = description:gsub("oz.(.+)", "oz.%1\nMirrored")
+        else
+            description = description .. "\nMirrored"
+        end
+    end
+
+    return description
+end
+
+--- Enhance description for items with item level
+-- @param item Item: The item with item level
+-- @param description string: The current description
+-- @return string: The enhanced description
+function enhanceItemLevelDescription(item, description)
+    local itemLevel = item:getItemLevel()
+    if description:find("(%)%.?)") then
+        description = description:gsub("(%)%.?)", "%1\nItem Level: " .. itemLevel)
+    end
+    return description
+end
+
+--- Enhance player description with total item level
+-- @param observer Player: The player observing
+-- @param player Player: The player being observed
+-- @param description string: The current description
+-- @return string: The enhanced description
+function enhancePlayerDescription(observer, player, description)
+    local totalItemLevel = 0
+    for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
+        local item = player:getSlotItem(slot)
+        if item then
+            totalItemLevel = totalItemLevel + item:getItemLevel()
+        end
+    end
+    description = description .. "\nTotal Item Level: " .. totalItemLevel
+    return description
+end
+
+--- Apply item conditions on equip
+-- @param cid number: Player ID
+-- @param iuid number: Item unique ID
+-- @param slot number: Equipment slot
+function us_onEquip(cid, iuid, slot)
+    local player = Player(cid)
+    if not player:getSlotItem(slot) then
+        return
+    end
+
+    iuid = iuid + 1
+    local slotUid = player:getSlotItem(slot):getUniqueId()
+    if iuid ~= slotUid then
+        return
+    end
+
+    local item = Item(iuid)
+    if not player or not item then
+        return
+    end
+
+    local maxHP = player:getMaxHealth()
+    local maxMP = player:getMaxMana()
+    local newBonuses = item:getBonusAttributes()
+
+    if not newBonuses then
+        return
+    end
+
+    for i = 1, #newBonuses do
+        local value = newBonuses[i]
+        local bonusId = value[1]
+        local bonusValue = value[2]
+        local attr = US_ENCHANTMENTS[bonusId]
+
+        if attr and attr.combatType == US_TYPES.CONDITION then
+            applyConditionBonus(player, item, bonusId, bonusValue, attr, slot, i, maxHP, maxMP)
+        end
+    end
+end
+
+--- Apply a condition bonus from an item to a player
+-- @param player Player: The player to receive the condition
+-- @param item Item: The item providing the condition
+-- @param bonusId number: The bonus ID
+-- @param bonusValue number: The bonus value
+-- @param attr table: The attribute information
+-- @param slot number: The equipment slot
+-- @param index number: The bonus index
+-- @param maxHP number: The player's max HP
+-- @param maxMP number: The player's max MP
+function applyConditionBonus(player, item, bonusId, bonusValue, attr, slot, index, maxHP, maxMP)
+    if not US_CONDITIONS[bonusId] then
+        US_CONDITIONS[bonusId] = {}
+    end
+
+    local itemId = item:getId()
+
+    if not US_CONDITIONS[bonusId][bonusValue] then
+        US_CONDITIONS[bonusId][bonusValue] = {}
+    end
+
+    if not US_CONDITIONS[bonusId][bonusValue][itemId] then
+        US_CONDITIONS[bonusId][bonusValue][itemId] = Condition(attr.condition)
+
+        if attr.condition ~= CONDITION_MANASHIELD then
+            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_SUBID,
+                1000 + player:getNextSubId(slot, index))
+            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(attr.param, attr.percentage == true and 100 +
+                bonusValue or bonusValue)
+            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, -1)
+        else
+            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, 86400000)
+        end
+
+        US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_BUFF_SPELL, true)
+        player:addCondition(US_CONDITIONS[bonusId][bonusValue][itemId])
+
+        if attr == BONUS_TYPE_MAXHP and player:getHealth() == maxHP then
+            player:addHealth(player:getMaxHealth())
+        end
+
+        if attr == BONUS_TYPE_MAXMP and player:getMana() == maxMP then
+            player:addMana(player:getMaxMana())
+        end
+    else
+        player:addCondition(US_CONDITIONS[bonusId][bonusValue][itemId])
+
+        if attr.param == CONDITION_PARAM_STAT_MAXHITPOINTS and player:getHealth() == maxHP then
+            player:addHealth(player:getMaxHealth())
+        end
+
+        if attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTS and player:getMana() == maxMP then
+            player:addMana(player:getMaxMana())
+        end
+    end
+end
+
+--- Initialize a player's bonuses on login
+-- @param player Player: The player logging in
 function us_onLogin(player)
     player:registerEvent("UpgradeSystemKill")
     player:registerEvent("UpgradeSystemHealth")
@@ -227,6 +827,7 @@ function us_onLogin(player)
 
     local maxHP = player:getMaxHealth()
     local maxMP = player:getMaxMana()
+
     for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
         local item = player:getSlotItem(slot)
         if item then
@@ -238,52 +839,9 @@ function us_onLogin(player)
                     local bonusId = value[1]
                     local bonusValue = value[2]
                     local attr = US_ENCHANTMENTS[bonusId]
-                    if attr then
-                        if attr.combatType == US_TYPES.CONDITION then
-                            if not US_CONDITIONS[bonusId] then
-                                US_CONDITIONS[bonusId] = {}
-                            end
-                            if not US_CONDITIONS[bonusId][bonusValue] then
-                                US_CONDITIONS[bonusId][bonusValue] = {}
-                            end
-                            if not US_CONDITIONS[bonusId][bonusValue][itemId] then
-                                US_CONDITIONS[bonusId][bonusValue][itemId] = Condition(attr.condition)
-                                if attr.condition ~= CONDITION_MANASHIELD then
-                                    US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_SUBID,
-                                        1000 + player:getNextSubId(slot, i))
-                                    US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(attr.param,
-                                        attr.percentage == true and 100 + bonusValue or bonusValue)
-                                    US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, -1)
-                                else
-                                    US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS,
-                                        86400000)
-                                end
-                                US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_BUFF_SPELL, true)
-                                player:addCondition(US_CONDITIONS[bonusId][bonusValue][itemId])
-                                if attr == BONUS_TYPE_MAXHP then
-                                    if player:getHealth() == maxHP then
-                                        player:addHealth(player:getMaxHealth())
-                                    end
-                                end
-                                if attr == BONUS_TYPE_MAXMP then
-                                    if player:getMana() == maxMP then
-                                        player:addMana(player:getMaxMana())
-                                    end
-                                end
-                            else
-                                player:addCondition(US_CONDITIONS[bonusId][bonusValue][itemId])
-                                if attr.param == CONDITION_PARAM_STAT_MAXHITPOINTS then
-                                    if player:getHealth() == maxHP then
-                                        player:addHealth(player:getMaxHealth())
-                                    end
-                                end
-                                if attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTS then
-                                    if player:getMana() == maxMP then
-                                        player:addMana(player:getMaxMana())
-                                    end
-                                end
-                            end
-                        end
+
+                    if attr and attr.combatType == US_TYPES.CONDITION then
+                        applyConditionBonus(player, item, bonusId, bonusValue, attr, slot, i, maxHP, maxMP)
                     end
                 end
             end
@@ -291,1090 +849,11 @@ function us_onLogin(player)
     end
 end
 
-function ManaChangeEvent.onManaChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType,
-    origin)
-    if not creature or not attacker then
-        return primaryDamage, primaryType, secondaryDamage, secondaryType
-    end
-
-    if creature:isPlayer() and creature:getParty() and attacker:isPlayer() and attacker:getParty() then
-        if creature:getParty() == attacker:getParty() then
-            return primaryDamage, primaryType, secondaryDamage, secondaryType
-        end
-    end
-
-    if primaryType == COMBAT_LIFEDRAIN or secondaryType == COMBAT_LIFEDRAIN then
-        return primaryDamage, primaryType, secondaryDamage, secondaryType
-    end
-
-    if primaryType == COMBAT_MANADRAIN or secondaryType == COMBAT_MANADRAIN then
-        return primaryDamage, primaryType, secondaryDamage, secondaryType
-    end
-
-    if creature == attacker and primaryType ~= COMBAT_HEALING then
-        return primaryDamage, primaryType, secondaryDamage, secondaryType
-    end
-
-    if origin == ORIGIN_CONDITION then
-        return primaryDamage, primaryType, secondaryDamage, secondaryType
-    end
-
-    return us_onDamaged(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
-end
-
-function HealthChangeEvent.onHealthChange(creature, attacker, primaryDamage, primaryType, secondaryDamage,
-    secondaryType, origin)
-    if not creature or not attacker then
-        return primaryDamage, primaryType, secondaryDamage, secondaryType
-    end
-
-    if creature:isPlayer() and creature:getParty() and attacker:isPlayer() and attacker:getParty() then
-        if creature:getParty() == attacker:getParty() then
-            return primaryDamage, primaryType, secondaryDamage, secondaryType
-        end
-    end
-
-    if primaryType == COMBAT_LIFEDRAIN or secondaryType == COMBAT_LIFEDRAIN then
-        return primaryDamage, primaryType, secondaryDamage, secondaryType
-    end
-
-    if creature == attacker and primaryType ~= COMBAT_HEALING then
-        return primaryDamage, primaryType, secondaryDamage, secondaryType
-    end
-
-    if origin == ORIGIN_CONDITION then
-        return primaryDamage, primaryType, secondaryDamage, secondaryType
-    end
-
-    return us_onDamaged(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
-end
-
-function us_onDamaged(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
-    if primaryType == COMBAT_HEALING or secondaryType == COMBAT_HEALING then
-        if attacker:isPlayer() then
-            local primaryTotal = 0
-            local secondaryTotal = 0
-            for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
-                local item = attacker:getSlotItem(slot)
-                if item then
-                    if item:getType():usesSlot(slot) then
-                        local values = item:getBonusAttributes()
-                        if values then
-                            for key, value in pairs(values) do
-                                local attr = US_ENCHANTMENTS[value[1]]
-                                if attr then
-                                    if attr.name == "Increased Healing" then
-                                        if primaryType == COMBAT_HEALING then
-                                            primaryTotal = primaryTotal + value[2]
-                                        end
-                                        if secondaryType == COMBAT_HEALING then
-                                            secondaryTotal = secondaryTotal + value[2]
-                                        end
-                                    end
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-            if primaryType == COMBAT_HEALING then
-                primaryDamage = math.floor(primaryDamage + (primaryDamage * primaryTotal / 100))
-            end
-            if secondaryType == COMBAT_HEALING then
-                secondaryDamage = math.floor(secondaryDamage + (secondaryDamage * secondaryTotal / 100))
-            end
-        end
-        if creature:isPlayer() then
-            local primaryTotal = 0
-            local secondaryTotal = 0
-            for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
-                local item = creature:getSlotItem(slot)
-                if item then
-                    if item:getType():usesSlot(slot) then
-                        local values = item:getBonusAttributes()
-                        if values then
-                            for key, value in pairs(values) do
-                                local attr = US_ENCHANTMENTS[value[1]]
-                                if attr then
-                                    if attr.name == "Increased Healing" then
-                                        if primaryDamage > 0 then
-                                            primaryTotal = primaryTotal + value[2]
-                                        end
-                                        if secondaryDamage > 0 then
-                                            secondaryTotal = secondaryTotal + value[2]
-                                        end
-                                    end
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-
-            if primaryTotal > 0 then
-                primaryDamage = math.floor(primaryDamage + (primaryDamage * primaryTotal / 100))
-            end
-            if secondaryTotal > 0 then
-                secondaryDamage = math.floor(secondaryDamage + (secondaryDamage * secondaryTotal / 100))
-            end
-        end
-        return primaryDamage, primaryType, secondaryDamage, secondaryType
-    end
-
-    if attacker:isPlayer() then
-        local pid = attacker:getId()
-        if US_BUFFS[pid] then
-            if US_BUFFS[pid][1] then
-                if primaryDamage ~= 0 then
-                    primaryDamage = primaryDamage + (primaryDamage * US_BUFFS[pid][1].value / 100)
-                end
-                if secondaryDamage ~= 0 then
-                    secondaryDamage = secondaryDamage + (secondaryDamage * US_BUFFS[pid][1].value / 100)
-                end
-            end
-        end
-        local doubleDamageTotal = 0
-        local primaryDamageTotal = 0
-        local secondaryDamageTotal = 0
-        local lifeStealTotal = 0
-        local manaStealTotal = 0
-        for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
-            local item = attacker:getSlotItem(slot)
-            if item then
-                if item:getType():usesSlot(slot) then
-                    local values = item:getBonusAttributes()
-                    if values then
-                        for key, value in pairs(values) do
-                            local attr = US_ENCHANTMENTS[value[1]]
-                            if attr then
-                                if attr.combatType and attr.combatType ~= US_TYPES.CONDITION then
-                                    if attr.combatType == US_TYPES.TRIGGER then
-                                        if attr.triggerType == US_TRIGGERS.ATTACK then
-                                            attr.execute(attacker, creature, value[2])
-                                        end
-                                    elseif attr.name == "Double Damage" then
-                                        doubleDamageTotal = doubleDamageTotal + value[2]
-                                    else
-                                        if attr.combatDamage then
-                                            if (attr.combatDamage % (primaryType + primaryType) >= primaryType) == true then
-                                                if attr.combatType == US_TYPES.OFFENSIVE then
-                                                    primaryDamageTotal = primaryDamageTotal + value[2]
-                                                end
-                                            end
-                                            if (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) ==
-                                                true then
-                                                if attr.combatType == US_TYPES.OFFENSIVE then
-                                                    secondaryDamageTotal = secondaryDamageTotal + value[2]
-                                                end
-                                            end
-                                        end
-
-                                        if attr.name == "Life Steal" then
-                                            lifeStealTotal = lifeStealTotal + value[2]
-                                        end
-
-                                        if attr.name == "Mana Steal" then
-                                            manaStealTotal = manaStealTotal + value[2]
-                                        end
-                                    end
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-        end
-
-        if doubleDamageTotal > 0 then
-            if math.random(100) < doubleDamageTotal then
-                primaryDamage = primaryDamage * 2
-                secondaryDamage = secondaryDamage * 2
-            end
-        end
-
-        if primaryDamageTotal > 0 then
-            primaryDamage = math.floor(primaryDamage + (primaryDamage * primaryDamageTotal / 100))
-        end
-
-        if secondaryDamageTotal > 0 then
-            secondaryDamage = math.floor(secondaryDamage + (secondaryDamage * secondaryDamageTotal / 100))
-        end
-
-        local damage = (primaryDamage + secondaryDamage)
-        if damage < 0 then
-            damage = damage * -1
-        end
-
-        if lifeStealTotal > 0 then
-            local lifeSteal = math.floor((damage * (lifeStealTotal / 100)))
-            if lifeSteal > 0 then
-                attacker:addHealth(lifeSteal)
-            end
-        end
-
-        if manaStealTotal > 0 then
-            local manaSteal = math.floor((damage * (manaStealTotal / 100)))
-            if manaSteal > 0 then
-                attacker:addMana(manaSteal)
-            end
-        end
-    end
-
-    if creature:isPlayer() then
-        local primaryDamageTotal = 0
-        local secondaryDamageTotal = 0
-        for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
-            local item = creature:getSlotItem(slot)
-            if item then
-                if item:getType():usesSlot(slot) then
-                    local values = item:getBonusAttributes()
-                    if values then
-                        for key, value in pairs(values) do
-                            local attr = US_ENCHANTMENTS[value[1]]
-                            if attr then
-                                if attr.combatType and attr.combatType ~= US_TYPES.CONDITION then
-                                    if attr.combatType == US_TYPES.TRIGGER then
-                                        if attr.triggerType == US_TRIGGERS.HIT then
-                                            attr.execute(creature, attacker, value[2])
-                                        end
-                                    else
-                                        if attr.combatDamage then
-                                            if (attr.combatDamage % (primaryType + primaryType) >= primaryType) == true then
-                                                if attr.combatType == US_TYPES.DEFENSIVE and creature:isPlayer() then
-                                                    primaryDamageTotal = primaryDamageTotal + value[2]
-                                                end
-                                            end
-                                            if (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) ==
-                                                true then
-                                                if attr.combatType == US_TYPES.DEFENSIVE and creature:isPlayer() then
-                                                    secondaryDamageTotal = secondaryDamageTotal + value[2]
-                                                end
-                                            end
-                                        end
-                                    end
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-        end
-        if primaryDamageTotal > 0 then
-            primaryDamage = math.floor(primaryDamage - (primaryDamage * primaryDamageTotal / 100))
-        end
-        if secondaryDamageTotal > 0 then
-            secondaryDamage = math.floor(secondaryDamage - (secondaryDamage * secondaryDamageTotal / 100))
-        end
-    end
-    return primaryDamage, primaryType, secondaryDamage, secondaryType
-end
-
-function DeathEvent.onDeath(creature, corpse, lasthitkiller, mostdamagekiller, lasthitunjustified, mostdamageunjustified)
-    if not lasthitkiller or not creature:isMonster() or not corpse or corpse.itemid == 0 or not corpse:isContainer() then
-        return true
-    end
-    if not lasthitkiller:isPlayer() and not lasthitkiller:getMaster() then
-        return true
-    end
-    return true
-end
-
-function KillEvent.onKill(player, target, lastHit)
-    if not player or not player:isPlayer() or not target or not target:isMonster() then
-        return
-    end
-    local center = target:getPosition()
-    for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
-        local item = player:getSlotItem(slot)
-        if item then
-            local values = item:getBonusAttributes()
-            if values then
-                for key, value in pairs(values) do
-                    local attr = US_ENCHANTMENTS[value[1]]
-                    if attr then
-                        if attr.triggerType == US_TRIGGERS.KILL then
-                            attr.execute(player, value[2], center, target)
-                        end
-                    end
-                end
-            end
-        end
-    end
-end
-
-function PrepareDeathEvent.onPrepareDeath(creature, killer)
-    if creature:isPlayer() then
-        for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
-            local item = creature:getSlotItem(slot)
-            if item then
-                local values = item:getBonusAttributes()
-                if values then
-                    for key, value in pairs(values) do
-                        local attr = US_ENCHANTMENTS[value[1]]
-                        if attr then
-                            if attr.name == "Revive on death" then
-                                if math.random(100) < value[2] then
-                                    creature:addHealth(creature:getMaxHealth())
-                                    creature:addMana(creature:getMaxMana())
-                                    creature:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
-                                    creature:sendTextMessage(MESSAGE_INFO_DESCR, "You have been revived!")
-                                    return false
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end
-    return true
-end
-
-local GainExperienceEvent = EventCallback
-GainExperienceEvent.onGainExperience = function(player, source, exp, rawExp)
-    for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
-        local item = player:getSlotItem(slot)
-        if item then
-            local values = item:getBonusAttributes()
-            if values then
-                for key, value in pairs(values) do
-                    local attr = US_ENCHANTMENTS[value[1]]
-                    if attr then
-                        if attr.name == "Experience" then
-                            exp = exp + math.ceil(exp * value[2] / 100)
-                        end
-                    end
-                end
-            end
-        end
-    end
-    return exp
-end
-GainExperienceEvent:register()
-
-function us_CheckCorpse(monsterType, corpsePosition, killerId)
-    local killer = Player(killerId)
-    local corpse = Tile(corpsePosition):getTopDownItem()
-    if killer and killer:isPlayer() and corpse and corpse:isContainer() then
-        for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
-            local item = killer:getSlotItem(slot)
-            if item then
-                local values = item:getBonusAttributes()
-                if values then
-                    for key, value in pairs(values) do
-                        local attr = US_ENCHANTMENTS[value[1]]
-                        if attr then
-                            if attr.name == "Additonal Gold" then
-                                local cc, plat, gold = 0, 0, 0
-                                for i = 0, corpse:getSize() do
-                                    local item = corpse:getItem(i)
-                                    if item then
-                                        if item.itemid == 2160 then
-                                            gold = gold + (item:getCount() * 10000)
-                                        elseif item.itemid == 2152 then
-                                            gold = gold + (item:getCount() * 100)
-                                        elseif item.itemid == 2148 then
-                                            gold = gold + item:getCount()
-                                        end
-                                    end
-                                end
-
-                                gold = math.floor(gold * value[2] / 100)
-
-                                while gold >= 10000 do
-                                    gold = gold / 10000
-                                    cc = cc + 1
-                                end
-
-                                if cc > 0 then
-                                    local crystalCoin = Game.createItem(2160, cc)
-                                    corpse:addItemEx(crystalCoin)
-                                end
-
-                                while gold >= 100 do
-                                    gold = gold / 100
-                                    plat = plat + 1
-                                end
-
-                                if plat > 0 then
-                                    local platinumCoin = Game.createItem(2152, plat)
-                                    corpse:addItemEx(platinumCoin)
-                                end
-
-                                if gold > 0 then
-                                    local goldCoin = Game.createItem(2148, gold)
-                                    corpse:addItemEx(goldCoin)
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-        end
-
-        -- Crystal fossil drop logic
-        local iLvl = monsterType:calculateItemLevel()
-        if iLvl >= US_CONFIG.CRYSTAL_FOSSIL_DROP_LEVEL then
-            if math.random(US_CONFIG.CRYSTAL_FOSSIL_DROP_CHANCE) == 1 then
-                corpse:addItem(US_CONFIG.CRYSTAL_FOSSIL, 1)
-                local specs = Game.getSpectators(corpsePosition, false, true, 9, 9, 8, 8)
-                if #specs > 0 then
-                    for i = 1, #specs do
-                        local player = specs[i]
-                        player:say("Crystal Fossil!", TALKTYPE_MONSTER_SAY, false, player, corpsePosition)
-                    end
-                end
-            end
-        end
-    end
-end
-
-function us_RemoveBuff(pid, buffId, buffName)
-    if US_BUFFS[pid] then
-        US_BUFFS[pid][buffId] = nil
-        local player = Player(pid)
-        if player then
-            player:sendTextMessage(MESSAGE_STATUS_WARNING, buffName .. " ended!")
-        end
-    end
-end
-
-local LookEvent = EventCallback
-LookEvent.onLook = function(player, thing, position, distance, description)
-    if thing:isItem() and thing.itemid == US_CONFIG.ITEM_MIND_CRYSTAL and thing:hasMemory() then
-        for i = 4, 1, -1 do
-            local enchant = thing:getBonusAttribute(i)
-            if enchant then
-                local attr = US_ENCHANTMENTS[enchant[1]]
-                description = description:gsub(thing:getName() .. "%.", "%1\n" .. attr.format(enchant[2]))
-            end
-        end
-    elseif thing:isItem() then
-        if thing:getType():isUpgradable() then
-            local upgrade = thing:getUpgradeLevel()
-            local itemLevel = thing:getItemLevel()
-            if upgrade > 0 then
-                description = description:gsub(thing:getName(), "%1 +" .. upgrade)
-            end
-            if description:find("(%)%.?)") then
-                description = description:gsub("(%)%.?)", "%1\nItem Level: " .. itemLevel)
-            else
-                if upgrade > 0 then
-                    description = description:gsub("+" .. upgrade .. "%.", "%1\nItem Level: " .. itemLevel)
-                else
-                    description = description:gsub(thing:getName(), "%1\nItem Level: " .. itemLevel)
-                end
-            end
-            if thing:isUnidentified() then
-                description = description:gsub(thing:getName(), "unidentified %1")
-                if thing:getArticle():len() > 0 and thing:getArticle() ~= "an" then
-                    description = description:gsub("You see (" .. thing:getArticle() .. "%S?)", "You see an")
-                end
-            else
-                description = description:gsub(thing:getName(), thing:getRarity().name .. " %1")
-                if thing:getArticle():len() > 0 and thing:getRarity().name == "epic" and thing:getArticle() ~= "an" then
-                    description = description:gsub("You see (" .. thing:getArticle() .. "%S?)", "You see an")
-                end
-                if thing:isUnique() then
-                    description = description:gsub("Item Level: " .. itemLevel, thing:getUniqueName() .. "\n%1")
-                end
-                for i = thing:getMaxAttributes(), 1, -1 do
-                    local enchant = thing:getBonusAttribute(i)
-                    if enchant then
-                        local attr = US_ENCHANTMENTS[enchant[1]]
-                        description = description:gsub("Item Level: " .. itemLevel, "%1\n" .. attr.format(enchant[2]))
-                    end
-                end
-            end
-            if US_CONFIG.REQUIRE_LEVEL then
-                if thing:isLimitless() then
-                    if description:find("It can only be wielded properly by") then
-                        description = description:gsub("It can only be wielded properly by (.-)%.",
-                            "Removed required Item Level to wear.")
-                    else
-                        description = description:gsub("It weighs", "Removed required Item Level to wear.\nIt weighs")
-                    end
-                else
-                    if description:find("of level (%d+) or higher") then
-                        for match in description:gmatch("of level (%d+) or higher") do
-                            if tonumber(match) < itemLevel then
-                                description = description:gsub("of level (%d+) or higher",
-                                    "of level " .. itemLevel .. " or higher")
-                            end
-                        end
-                    elseif description:find("It can only be wielded properly by") then
-                        description = description:gsub("It can only be wielded properly by (.+).\n",
-                            "It can only be wielded properly by %1 of level " .. itemLevel .. " or higher.\n")
-                    else
-                        if description:find("It weighs") then
-                            description = description:gsub("It weighs",
-                                "It can only be wielded properly by players of level " .. itemLevel ..
-                                    " or higher.\nIt weighs")
-                        else
-                            description = description .. "\nIt can only be wielded properly by players of level " ..
-                                              itemLevel .. " or higher."
-                        end
-                    end
-                end
-            end
-            if thing:isMirrored() then
-                if description:find("It weighs") then
-                    description = description:gsub("oz.(.+)", "oz.%1\nMirrored")
-                else
-                    description = description .. "\nMirrored"
-                end
-            end
-        elseif thing:getType():canHaveItemLevel() then
-            local itemLevel = thing:getItemLevel()
-            if description:find("(%)%.?)") then
-                description = description:gsub("(%)%.?)", "%1\nItem Level: " .. itemLevel)
-            end
-        end
-    elseif thing:isPlayer() then
-        local iLvl = 0
-        for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
-            local item = thing:getSlotItem(slot)
-            if item then
-                iLvl = iLvl + item:getItemLevel()
-            end
-        end
-        description = description .. "\nTotal Item LeveL: " .. iLvl
-    end
-    return description
-end
-LookEvent:register(10)
-
-function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
-    if not itemType:isUpgradable() or self:isUnique() then
-        return false
-    end
-    local attrIds = {}
-    local item_level = self:getItemLevel()
-    if unidentify then
-        if US_CONFIG.IDENTIFY_UPGRADE_LEVEL then
-            local upgrade_level = 1
-            for i = US_CONFIG.MAX_UPGRADE_LEVEL, 1, -1 do
-                if i >= US_CONFIG.UPGRADE_LEVEL_DESTROY then
-                    if math.random(100) <= US_CONFIG.UPGRADE_DESTROY_CHANCE[i] then
-                        upgrade_level = i
-                        break
-                    end
-                else
-                    if math.random(100) <= US_CONFIG.UPGRADE_SUCCESS_CHANCE[i] then
-                        upgrade_level = i
-                        break
-                    end
-                end
-            end
-            self:setUpgradeLevel(upgrade_level)
-        end
-        local bonusCount = self:getRarity().maxBonus -- Get exact number of bonus slots based on rarity
-        local usItemType = self:getItemType()
-        for i = 1, bonusCount do
-            local attrId = math.random(1, #US_ENCHANTMENTS)
-            local attr = US_ENCHANTMENTS[attrId]
-            while isInArray(attrIds, attrId) or attr.minLevel and item_level < attr.minLevel or
-                bit.band(usItemType, attr.itemType) == 0 or attr.chance and math.random(100) >= attr.chance do
-                attrId = math.random(1, #US_ENCHANTMENTS)
-                attr = US_ENCHANTMENTS[attrId]
-            end
-            table.insert(attrIds, attrId)
-            local value = attr.VALUES_PER_LEVEL and math.random(1, math.ceil(item_level * attr.VALUES_PER_LEVEL)) or 1
-            self:setCustomAttribute("Slot" .. i, attrId .. "|" .. value)
-        end
-        return true
-    else
-        -- When adding a single bonus through crafting
-        local bonuses = self:getBonusAttributes()
-        if bonuses then
-            local maxPossibleBonuses = US_CONFIG.RARITY[#US_CONFIG.RARITY].maxBonus
-            if #bonuses >= maxPossibleBonuses then
-                player:sendTextMessage(MESSAGE_STATUS_WARNING, "Max number of bonuses reached!")
-                return false
-            end
-
-            for v, k in pairs(bonuses) do
-                table.insert(attrIds, k[1])
-            end
-        end
-
-        -- (Existing code to add a new attribute)
-        local usItemType = self:getItemType()
-        local attrId = math.random(1, #US_ENCHANTMENTS)
-        local attr = US_ENCHANTMENTS[attrId]
-        while isInArray(attrIds, attrId) or attr.minLevel and item_level < attr.minLevel or
-            bit.band(usItemType, attr.itemType) == 0 or attr.chance and math.random(100) >= attr.chance do
-            attrId = math.random(1, #US_ENCHANTMENTS)
-            attr = US_ENCHANTMENTS[attrId]
-        end
-        local value = attr.VALUES_PER_LEVEL and math.random(1, math.ceil(item_level * attr.VALUES_PER_LEVEL)) or 1
-        self:setCustomAttribute("Slot" .. self:getLastSlot() + 1, attrId .. "|" .. value)
-
-        -- Update rarity based on new bonus count
-        self:updateRarityByBonusCount()
-
-        return true
-    end
-    return false
-end
-
-function Item.addAttribute(self, slot, attr, value)
-    self:setCustomAttribute("Slot" .. slot, attr .. "|" .. value)
-end
-
-function Item.setAttributeValue(self, slot, value)
-    self:setCustomAttribute("Slot" .. slot, value)
-end
-
-function Item.getBonusAttribute(self, slot)
-    local bonuses = self:getCustomAttribute("Slot" .. slot)
-    if bonuses then
-        local data = {}
-        for bonus in bonuses:gmatch("([^|]+)") do
-            data[#data + 1] = tonumber(bonus)
-        end
-        return data
-    end
-
-    return nil
-end
-
-function Item.getBonusAttributes(self)
-    local data = {}
-    for i = 1, self:getMaxAttributes() do
-        local bonuses = self:getCustomAttribute("Slot" .. i)
-        if bonuses then
-            local t = {}
-            for bonus in bonuses:gmatch("([^|]+)") do
-                t[#t + 1] = tonumber(bonus)
-            end
-            data[#data + 1] = t
-        end
-    end
-
-    return #data > 0 and data or nil
-end
-
-function Item.getLastSlot(self)
-    local last = 0
-    for i = 1, self:getMaxAttributes() do
-        if self:getCustomAttribute("Slot" .. i) then
-            last = i
-        end
-    end
-    return last
-end
-
-function Item.setItemLevel(self, level, first)
-    local oldLevel = self:getItemLevel()
-    local itemType = ItemType(self.itemid)
-    local finalValue = 0
-    local value = 0
-    if oldLevel < level then
-        value = (level - oldLevel)
-    else
-        value = (oldLevel - level)
-    end
-    if itemType:getAttack() > 0 then
-        if value >= US_CONFIG.ATTACK_PER_ITEM_LEVEL then
-            finalValue = math.floor((value / US_CONFIG.ATTACK_PER_ITEM_LEVEL) * US_CONFIG.ATTACK_FROM_ITEM_LEVEL)
-        else
-            finalValue = 0
-        end
-        if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_ATTACK,
-                (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) > 0) and
-                    (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) + finalValue) or (itemType:getAttack() + finalValue))
-        else
-            self:setAttribute(ITEM_ATTRIBUTE_ATTACK,
-                (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) > 0) and
-                    (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) - finalValue) or (itemType:getAttack() - finalValue))
-        end
-    end
-    if itemType:getDefense() > 0 then
-        if value >= US_CONFIG.DEFENSE_PER_ITEM_LEVEL then
-            finalValue = math.floor((value / US_CONFIG.DEFENSE_PER_ITEM_LEVEL) * US_CONFIG.DEFENSE_FROM_ITEM_LEVEL)
-        else
-            finalValue = 0
-        end
-        if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_DEFENSE,
-                (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) > 0) and
-                    (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) + finalValue) or (itemType:getDefense() + finalValue))
-        else
-            self:setAttribute(ITEM_ATTRIBUTE_DEFENSE,
-                (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) > 0) and
-                    (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) - finalValue) or (itemType:getDefense() - finalValue))
-        end
-    end
-    if itemType:getArmor() > 0 then
-        if value >= US_CONFIG.ARMOR_PER_ITEM_LEVEL then
-            finalValue = math.floor((value / US_CONFIG.ARMOR_PER_ITEM_LEVEL) * US_CONFIG.ARMOR_FROM_ITEM_LEVEL)
-        else
-            finalValue = 0
-        end
-        if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_ARMOR,
-                (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) + finalValue) or
-                    (itemType:getArmor() + finalValue))
-        else
-            self:setAttribute(ITEM_ATTRIBUTE_ARMOR,
-                (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) - finalValue) or
-                    (itemType:getArmor() - finalValue))
-        end
-    end
-    if itemType:getHitChance() > 0 then
-        if value >= US_CONFIG.HITCHANCE_PER_ITEM_LEVEL then
-            finalValue = math.floor((value / US_CONFIG.HITCHANCE_PER_ITEM_LEVEL) * US_CONFIG.HITCHANCE_FROM_ITEM_LEVEL)
-        else
-            finalValue = 0
-        end
-        if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_HITCHANCE,
-                (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) > 0) and
-                    (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) + finalValue) or (itemType:getHitChance() + finalValue))
-        else
-            self:setAttribute(ITEM_ATTRIBUTE_HITCHANCE,
-                (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) > 0) and
-                    (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) - finalValue) or (itemType:getHitChance() - finalValue))
-        end
-    end
-    if first then
-        if itemType:getAttack() > 0 then
-            level = level + math.floor(itemType:getAttack() / US_CONFIG.ITEM_LEVEL_PER_ATTACK)
-        end
-        if itemType:getDefense() > 0 then
-            level = level + math.floor(itemType:getDefense() / US_CONFIG.ITEM_LEVEL_PER_DEFENSE)
-        end
-        if itemType:getArmor() > 0 then
-            level = level + math.floor(itemType:getArmor() / US_CONFIG.ITEM_LEVEL_PER_ARMOR)
-        end
-        if itemType:getHitChance() > 0 then
-            level = level + math.floor(itemType:getHitChance() / US_CONFIG.ITEM_LEVEL_PER_HITCHANCE)
-        end
-    end
-    return self:setCustomAttribute("item_level", level)
-end
-
-function Item.getItemLevel(self)
-    return self:getCustomAttribute("item_level") and self:getCustomAttribute("item_level") or 0
-end
-
-function Item.setUpgradeLevel(self, level)
-    local itemType = ItemType(self.itemid)
-    local oldLevel = self:getUpgradeLevel()
-    if itemType:getAttack() > 0 then
-        if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_ATTACK, self:getAttribute(ITEM_ATTRIBUTE_ATTACK) + (level - oldLevel) *
-                US_CONFIG.ATTACK_PER_UPGRADE)
-        else
-            self:setAttribute(ITEM_ATTRIBUTE_ATTACK, self:getAttribute(ITEM_ATTRIBUTE_ATTACK) - (oldLevel - level) *
-                US_CONFIG.ATTACK_PER_UPGRADE)
-        end
-    end
-    if itemType:getDefense() > 0 then
-        if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_DEFENSE, self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) + (level - oldLevel) *
-                US_CONFIG.DEFENSE_PER_UPGRADE)
-        else
-            self:setAttribute(ITEM_ATTRIBUTE_DEFENSE, self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) - (oldLevel - level) *
-                US_CONFIG.DEFENSE_PER_UPGRADE)
-        end
-    end
-    if itemType:getExtraDefense() > 0 then
-        if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_EXTRADEFENSE,
-                itemType:getExtraDefense() + (level - oldLevel) * US_CONFIG.EXTRADEFENSE_PER_UPGRADE)
-        else
-            self:setAttribute(ITEM_ATTRIBUTE_EXTRADEFENSE, self:getAttribute(ITEM_ATTRIBUTE_EXTRADEFENSE) -
-                (oldLevel - level) * US_CONFIG.EXTRADEFENSE_PER_UPGRADE)
-        end
-    end
-    if itemType:getArmor() > 0 then
-        if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_ARMOR, self:getAttribute(ITEM_ATTRIBUTE_ARMOR) + (level - oldLevel) *
-                US_CONFIG.ARMOR_PER_UPGRADE)
-        else
-            self:setAttribute(ITEM_ATTRIBUTE_ARMOR, self:getAttribute(ITEM_ATTRIBUTE_ARMOR) - (oldLevel - level) *
-                US_CONFIG.ARMOR_PER_UPGRADE)
-        end
-    end
-    if itemType:getHitChance() > 0 then
-        if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_HITCHANCE,
-                self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) + (level - oldLevel) * US_CONFIG.HITCHANCE_PER_UPGRADE)
-        else
-            self:setAttribute(ITEM_ATTRIBUTE_HITCHANCE,
-                self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) - (oldLevel - level) * US_CONFIG.HITCHANCE_PER_UPGRADE)
-        end
-    end
-    self:setCustomAttribute("upgrade", level)
-    if oldLevel < level then
-        self:setItemLevel(self:getItemLevel() + (US_CONFIG.ITEM_LEVEL_PER_UPGRADE * (level - oldLevel)))
-    end
-end
-
-function Item.getUpgradeLevel(self)
-    return self:getCustomAttribute("upgrade") and self:getCustomAttribute("upgrade") or 0
-end
-
-function Item.reduceUpgradeLevel(self)
-    self:setUpgradeLevel(self:getUpgradeLevel() - 1)
-    self:setItemLevel(self:getItemLevel() - US_CONFIG.ITEM_LEVEL_PER_UPGRADE)
-end
-
-function Item.unidentify(self)
-    self:setCustomAttribute("unidentified", true)
-end
-
-function Item.isUnidentified(self)
-    return self:getCustomAttribute("unidentified")
-end
-
-function Item.identify(self, player, itemType, weaponType)
-    self:removeCustomAttribute("unidentified")
-    local usItemType = self:getItemType()
-    local canUnique = false
-    for i = 1, #US_UNIQUES do
-        if US_UNIQUES[i].minLevel <= self:getItemLevel() and bit.band(usItemType, US_UNIQUES[i].itemType) ~= 0 then
-            canUnique = true
-            break
-        end
-    end
-    self:rollRarity()
-    if canUnique and math.random(US_CONFIG.UNIQUE_CHANCE) == 1 then
-        local unique = math.random(#US_UNIQUES)
-        while US_UNIQUES[unique].minLevel > self:getItemLevel() or bit.band(usItemType, US_UNIQUES[unique].itemType) ==
-            0 or US_UNIQUES[unique].chance and math.random(100) >= US_UNIQUES[unique].chance do
-            unique = math.random(#US_UNIQUES)
-        end
-        self:setUnique(unique)
-        player:sendTextMessage(MESSAGE_INFO_DESCR, "Unique item " .. self:getUniqueName() .. " discovered!")
-    else
-        self:rollAttribute(player, itemType, weaponType, true)
-        player:sendTextMessage(MESSAGE_INFO_DESCR, "Item successfully identified!")
-    end
-    return true
-end
-
-function Item.setUnique(self, uniqueId)
-    self:setCustomAttribute("unique", uniqueId)
-    local unique = US_UNIQUES[uniqueId]
-    if unique then
-        for i = 1, #unique.attributes do
-            local attrId = unique.attributes[i]
-            local attr = US_ENCHANTMENTS[attrId]
-            local value = attr.VALUES_PER_LEVEL and
-                              math.random(1, math.ceil(self:getItemLevel() * attr.VALUES_PER_LEVEL)) or 1
-            self:setCustomAttribute("Slot" .. self:getLastSlot() + 1, attrId .. "|" .. value)
-        end
-    end
-end
-
-function Item.getUnique(self)
-    return self:getCustomAttribute("unique") and self:getCustomAttribute("unique") or nil
-end
-
-function Item.isUnique(self)
-    return self:getCustomAttribute("unique") and true or false
-end
-
-function Item.getUniqueName(self)
-    return US_UNIQUES[self:getUnique()].name
-end
-
-function Item.setMemory(self, value)
-    self:setCustomAttribute("memory", value)
-end
-
-function Item.hasMemory(self)
-    return self:getCustomAttribute("memory")
-end
-
-function Item.setLimitless(self, value)
-    self:setCustomAttribute("limitless", value)
-end
-
-function Item.isLimitless(self)
-    return self:getCustomAttribute("limitless")
-end
-
-function Item.setMirrored(self, value)
-    self:setCustomAttribute("mirrored", value)
-end
-
-function Item.isMirrored(self)
-    return self:getCustomAttribute("mirrored")
-end
-
-function Item.getItemType(self)
-    local itemType = self:getType()
-    local slot = itemType:getSlotPosition() - SLOTP_LEFT - SLOTP_RIGHT
-
-    local weaponType = itemType:getWeaponType()
-    if weaponType > 0 then
-        if weaponType == WEAPON_SHIELD then
-            return US_ITEM_TYPES.SHIELD
-        end
-        if weaponType == WEAPON_DISTANCE then
-            return US_ITEM_TYPES.WEAPON_DISTANCE
-        end
-        if weaponType == WEAPON_WAND then
-            return US_ITEM_TYPES.WEAPON_WAND
-        end
-        if isInArray({WEAPON_SWORD, WEAPON_CLUB, WEAPON_AXE}, weaponType) then
-            return US_ITEM_TYPES.WEAPON_MELEE
-        end
-    else
-        if slot == SLOTP_HEAD then
-            return US_ITEM_TYPES.HELMET
-        end
-        if slot == SLOTP_ARMOR then
-            return US_ITEM_TYPES.ARMOR
-        end
-        if slot == SLOTP_LEGS then
-            return US_ITEM_TYPES.LEGS
-        end
-        if slot == SLOTP_FEET then
-            return US_ITEM_TYPES.BOOTS
-        end
-        if slot == SLOTP_NECKLACE then
-            return US_ITEM_TYPES.NECKLACE
-        end
-        if slot == SLOTP_RING then
-            return US_ITEM_TYPES.RING
-        end
-    end
-    return US_ITEM_TYPES.ALL
-end
-
-function Item.setRarity(self, rarity)
-    self:setCustomAttribute("rarity", rarity)
-end
-
-function Item.rollRarity(self)
-    local rarity = COMMON
-    for i = #US_CONFIG.RARITY, 1, -1 do
-        if math.random(US_CONFIG.RARITY[i].chance) == 1 then
-            rarity = i
-            break
-        end
-    end
-    self:setRarity(rarity)
-end
-
-function Item.getRarity(self)
-    return self:getCustomAttribute("rarity") and US_CONFIG.RARITY[self:getCustomAttribute("rarity")] or
-               US_CONFIG.RARITY[COMMON]
-end
-
-function Item.getRarityId(self)
-    return self:getCustomAttribute("rarity") and self:getCustomAttribute("rarity") or COMMON
-end
-
-function Item.getMaxAttributes(self)
-    if self:isUnique() then
-        return #US_UNIQUES[self:getUnique()].attributes
-    end
-    local rarity = self:getRarity()
-    return rarity.maxBonus
-end
-
-function ItemType.isUpgradable(self)
-    if self:isStackable() or self:getTransformEquipId() > 0 or self:getDecayId() > 0 or self:getDestroyId() > 0 or
-        self:getCharges() > 0 then
-        return false
-    end
-    local slot = self:getSlotPosition() - SLOTP_LEFT - SLOTP_RIGHT
-
-    local weaponType = self:getWeaponType()
-    if weaponType > 0 then
-        if weaponType == WEAPON_AMMO then
-            return false
-        end
-        if weaponType == WEAPON_SHIELD or weaponType == WEAPON_DISTANCE or weaponType == WEAPON_WAND or
-            isInArray({WEAPON_SWORD, WEAPON_CLUB, WEAPON_AXE}, weaponType) then
-            return true
-        end
-    else
-        if slot == SLOTP_HEAD or slot == SLOTP_ARMOR or slot == SLOTP_LEGS or slot == SLOTP_FEET or slot ==
-            SLOTP_NECKLACE or slot == SLOTP_RING then
-            return true
-        end
-    end
-    return false
-end
-
-function Item:assignRarityByModifiers()
-    local bonuses = self:getBonusAttributes()
-    if bonuses then
-        local count = #bonuses
-        local rarity = COMMON -- Default rarity
-
-        -- Assign rarity based on modifier count
-        for i = #US_CONFIG.RARITY, 1, -1 do
-            if count >= US_CONFIG.RARITY[i].maxBonus then
-                rarity = i
-                break
-            end
-        end
-
-        self:setRarity(rarity)
-    else
-        -- No modifiers, set to common
-        self:setRarity(COMMON)
-    end
-end
-
-function Item.updateRarityByBonusCount(self)
-    local bonuses = self:getBonusAttributes()
-    if bonuses then
-        local count = #bonuses
-
-        -- Set to appropriate rarity based on exact bonus count
-        for i = 1, #US_CONFIG.RARITY do
-            if US_CONFIG.RARITY[i].maxBonus == count then
-                self:setRarity(i)
-                break
-            end
-        end
-    else
-        -- No bonuses, set to common
-        self:setRarity(COMMON)
-    end
-end
-
-function ItemType.canHaveItemLevel(self)
-    if self:getTransformEquipId() > 0 or self:getDecayId() > 0 or self:getDestroyId() > 0 or self:getCharges() > 0 then
-        return false
-    end
-    local slot = self:getSlotPosition() - SLOTP_LEFT - SLOTP_RIGHT
-
-    local weaponType = self:getWeaponType()
-    if weaponType > 0 then
-        if weaponType == WEAPON_AMMO then
-            return false
-        end
-        if weaponType == WEAPON_SHIELD or weaponType == WEAPON_DISTANCE or weaponType == WEAPON_WAND or
-            isInArray({WEAPON_SWORD, WEAPON_CLUB, WEAPON_AXE}, weaponType) then
-            return true
-        end
-    else
-        if slot == SLOTP_HEAD or slot == SLOTP_ARMOR or slot == SLOTP_LEGS or slot == SLOTP_FEET or slot ==
-            SLOTP_NECKLACE or slot == SLOTP_RING then
-            return true
-        end
-    end
-    return false
-end
-
-function MonsterType.calculateItemLevel(self)
-    local level = 1
-    local monsterValue = self:getMaxHealth() + self:getExperience()
-    level = math.ceil(monsterValue ^ 0.478)
-    return math.max(1, level)
-end
-
+--- Get the next subid for a condition
+-- @param player Player: The player
+-- @param itemSlot number: The equipment slot
+-- @param attrSlot number: The attribute slot
+-- @return number: The next subid
 function Player.getNextSubId(self, itemSlot, attrSlot)
     local cid = self:getId()
     if not US_SUBID[cid] then
@@ -1395,15 +874,152 @@ function Player.getNextSubId(self, itemSlot, attrSlot)
     return subId.current
 end
 
+--- Check if an item is unidentified (always returns false now)
+-- @param self Item: The item to check
+-- @return boolean: Always false as items are no longer unidentified
+function Item.isUnidentified(self)
+    return false
+end
+
+-- Register events
+local TargetCombatEvent = EventCallback
+TargetCombatEvent.onTargetCombat = function(creature, target)
+    target:registerEvent("UpgradeSystemHealth")
+    target:registerEvent("UpgradeSystemDeath")
+    return RETURNVALUE_NOERROR
+end
+TargetCombatEvent:register()
+
+-- Register login event
+local LoginEvent = CreatureEvent("UpgradeSystemLogin")
+function LoginEvent.onLogin(player)
+    us_onLogin(player)
+    return true
+end
 LoginEvent:type("login")
 LoginEvent:register()
+
+-- Register health change event
+local HealthChangeEvent = CreatureEvent("UpgradeSystemHealth")
+function HealthChangeEvent.onHealthChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
+    if not creature or not attacker then
+        return primaryDamage, primaryType, secondaryDamage, secondaryType
+    end
+
+    if isInSameParty(creature, attacker) then
+        return primaryDamage, primaryType, secondaryDamage, secondaryType
+    end
+
+    if primaryType == COMBAT_LIFEDRAIN or secondaryType == COMBAT_LIFEDRAIN then
+        return primaryDamage, primaryType, secondaryDamage, secondaryType
+    end
+
+    if creature == attacker and primaryType ~= COMBAT_HEALING then
+        return primaryDamage, primaryType, secondaryDamage, secondaryType
+    end
+
+    if origin == ORIGIN_CONDITION then
+        return primaryDamage, primaryType, secondaryDamage, secondaryType
+    end
+
+    return us_onDamaged(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
+end
 HealthChangeEvent:type("healthchange")
 HealthChangeEvent:register()
+
+-- Register mana change event
+local ManaChangeEvent = CreatureEvent("UpgradeSystemMana")
+function ManaChangeEvent.onManaChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
+    if not creature or not attacker then
+        return primaryDamage, primaryType, secondaryDamage, secondaryType
+    end
+
+    if isInSameParty(creature, attacker) then
+        return primaryDamage, primaryType, secondaryDamage, secondaryType
+    end
+
+    if primaryType == COMBAT_LIFEDRAIN or secondaryType == COMBAT_LIFEDRAIN or
+       primaryType == COMBAT_MANADRAIN or secondaryType == COMBAT_MANADRAIN then
+        return primaryDamage, primaryType, secondaryDamage, secondaryType
+    end
+
+    if creature == attacker and primaryType ~= COMBAT_HEALING then
+        return primaryDamage, primaryType, secondaryDamage, secondaryType
+    end
+
+    if origin == ORIGIN_CONDITION then
+        return primaryDamage, primaryType, secondaryDamage, secondaryType
+    end
+
+    return us_onDamaged(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
+end
 ManaChangeEvent:type("manachange")
 ManaChangeEvent:register()
+
+-- Register death event
+local DeathEvent = CreatureEvent("UpgradeSystemDeath")
+function DeathEvent.onDeath(creature, corpse, lasthitkiller, mostdamagekiller, lasthitunjustified, mostdamageunjustified)
+    if not lasthitkiller or not creature:isMonster() or not corpse or corpse.itemid == 0 or not corpse:isContainer() then
+        return true
+    end
+    if not lasthitkiller:isPlayer() and not lasthitkiller:getMaster() then
+        return true
+    end
+    return true
+end
 DeathEvent:type("death")
 DeathEvent:register()
+
+-- Register kill event
+local KillEvent = CreatureEvent("UpgradeSystemKill")
+function KillEvent.onKill(player, target, lastHit)
+    if not player or not player:isPlayer() or not target or not target:isMonster() then
+        return
+    end
+    
+    local center = target:getPosition()
+    processKillTriggers(player, center, target)
+end
 KillEvent:type("kill")
 KillEvent:register()
+
+-- Register prepare death event
+local PrepareDeathEvent = CreatureEvent("UpgradeSystemPD")
+function PrepareDeathEvent.onPrepareDeath(creature, killer)
+    if creature:isPlayer() then
+        if checkReviveOnDeath(creature) then
+            return false -- Prevent death
+        end
+    end
+    return true
+end
 PrepareDeathEvent:type("preparedeath")
 PrepareDeathEvent:register()
+
+-- Register gain experience event
+local GainExperienceEvent = EventCallback
+GainExperienceEvent.onGainExperience = function(player, source, exp, rawExp)
+    return calculateModifiedExperience(player, exp)
+end
+GainExperienceEvent:register()
+
+-- Register move item event
+local MoveItemEvent = EventCallback
+MoveItemEvent.onMoveItem = function(player, item, count, fromPosition, toPosition, fromCylinder, toCylinder)
+    return handleItemMove(player, item, fromPosition, toPosition)
+end
+MoveItemEvent:register()
+
+-- Register item moved event
+local ItemMovedEvent = EventCallback
+ItemMovedEvent.onItemMoved = function(player, item, count, fromPosition, toPosition, fromCylinder, toCylinder)
+    handleItemMoved(player, item, fromPosition, toPosition)
+end
+ItemMovedEvent:register()
+
+-- Register look event
+local LookEvent = EventCallback
+LookEvent.onLook = function(player, thing, position, distance, description)
+    return enhanceItemDescription(player, thing, description)
+end
+LookEvent:register(10)

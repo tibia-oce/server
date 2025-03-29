@@ -62,13 +62,9 @@ function processCorpseItems(corpse, iLvl)
                 -- Apply rarity and bonuses to upgradable items
                 if itemType:isUpgradable() then
                     -- First determine rarity
-                    item:rollRarity()
-
                     -- Then roll attributes matching rarity's maxBonus exactly
+                    item:rollRarity()
                     item:rollAttribute(nil, itemType, itemType:getWeaponType(), true)
-
-                    -- Mark as unidentified
-                    item:unidentify()
                 end
             end
         end

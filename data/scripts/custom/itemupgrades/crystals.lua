@@ -121,7 +121,7 @@ local function handleEnchantCrystal(player, item, target)
     local itemType = ItemType(target.itemid)
     local weaponType = itemType:getWeaponType()
 
-    if not target:rollAttribute(player, itemType, weaponType) then
+    if not target:rollAttribute(player, itemType, weaponType, true) then
         player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
         return false
     end
