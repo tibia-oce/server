@@ -1,3 +1,4 @@
+-- data\scripts\custom\UpgradeSystem\core.lua
 print(">> Loading upgrade system")
 
 US_CONDITIONS = {}
@@ -62,8 +63,10 @@ function us_onEquip(cid, iuid, slot)
                     if not US_CONDITIONS[bonusId][bonusValue][itemId] then
                         US_CONDITIONS[bonusId][bonusValue][itemId] = Condition(attr.condition)
                         if attr.condition ~= CONDITION_MANASHIELD then
-                            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_SUBID, 1000 + player:getNextSubId(slot, i))
-                            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(attr.param, attr.percentage == true and 100 + bonusValue or bonusValue)
+                            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_SUBID,
+                                1000 + player:getNextSubId(slot, i))
+                            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(attr.param,
+                                attr.percentage == true and 100 + bonusValue or bonusValue)
                             US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, -1)
                         else
                             US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, 86400000)
@@ -139,15 +142,18 @@ MoveItemEvent.onMoveItem = function(player, item, count, fromPosition, toPositio
                                 local attr = US_ENCHANTMENTS[value[1]]
                                 if attr then
                                     if attr.combatType == US_TYPES.CONDITION then
-                                        if US_CONDITIONS[value[1]] and US_CONDITIONS[value[1]][value[2]] and US_CONDITIONS[value[1]][value[2]][itemId] then
-                                            if US_CONDITIONS[value[1]][value[2]][itemId]:getType() ~= CONDITION_MANASHIELD then
+                                        if US_CONDITIONS[value[1]] and US_CONDITIONS[value[1]][value[2]] and
+                                            US_CONDITIONS[value[1]][value[2]][itemId] then
+                                            if US_CONDITIONS[value[1]][value[2]][itemId]:getType() ~=
+                                                CONDITION_MANASHIELD then
                                                 player:removeCondition(
                                                     US_CONDITIONS[value[1]][value[2]][itemId]:getType(),
                                                     CONDITIONID_COMBAT,
-                                                    US_CONDITIONS[value[1]][value[2]][itemId]:getSubId()
-                                                )
+                                                    US_CONDITIONS[value[1]][value[2]][itemId]:getSubId())
                                             else
-                                                player:removeCondition(US_CONDITIONS[value[1]][value[2]][itemId]:getType(), CONDITIONID_COMBAT)
+                                                player:removeCondition(
+                                                    US_CONDITIONS[value[1]][value[2]][itemId]:getType(),
+                                                    CONDITIONID_COMBAT)
                                             end
                                         end
                                     end
@@ -196,15 +202,14 @@ ItemMovedEvent.onItemMoved = function(player, item, count, fromPosition, toPosit
             local attr = US_ENCHANTMENTS[bonusId]
             if attr then
                 if attr.combatType == US_TYPES.CONDITION then
-                    if US_CONDITIONS[bonusId] and US_CONDITIONS[bonusId][bonusValue] and US_CONDITIONS[bonusId][bonusValue][itemId] then
+                    if US_CONDITIONS[bonusId] and US_CONDITIONS[bonusId][bonusValue] and
+                        US_CONDITIONS[bonusId][bonusValue][itemId] then
                         if US_CONDITIONS[bonusId][bonusValue][itemId]:getType() ~= CONDITION_MANASHIELD then
-                            player:removeCondition(
-                                US_CONDITIONS[bonusId][bonusValue][itemId]:getType(),
-                                CONDITIONID_COMBAT,
-                                US_CONDITIONS[bonusId][bonusValue][itemId]:getSubId()
-                            )
+                            player:removeCondition(US_CONDITIONS[bonusId][bonusValue][itemId]:getType(),
+                                CONDITIONID_COMBAT, US_CONDITIONS[bonusId][bonusValue][itemId]:getSubId())
                         else
-                            player:removeCondition(US_CONDITIONS[bonusId][bonusValue][itemId]:getType(), CONDITIONID_COMBAT)
+                            player:removeCondition(US_CONDITIONS[bonusId][bonusValue][itemId]:getType(),
+                                CONDITIONID_COMBAT)
                         end
                     end
                 end
@@ -244,14 +249,14 @@ function us_onLogin(player)
                             if not US_CONDITIONS[bonusId][bonusValue][itemId] then
                                 US_CONDITIONS[bonusId][bonusValue][itemId] = Condition(attr.condition)
                                 if attr.condition ~= CONDITION_MANASHIELD then
-                                    US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_SUBID, 1000 + player:getNextSubId(slot, i))
-                                    US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(
-                                        attr.param,
-                                        attr.percentage == true and 100 + bonusValue or bonusValue
-                                    )
+                                    US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_SUBID,
+                                        1000 + player:getNextSubId(slot, i))
+                                    US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(attr.param,
+                                        attr.percentage == true and 100 + bonusValue or bonusValue)
                                     US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, -1)
                                 else
-                                    US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, 86400000)
+                                    US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS,
+                                        86400000)
                                 end
                                 US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_BUFF_SPELL, true)
                                 player:addCondition(US_CONDITIONS[bonusId][bonusValue][itemId])
@@ -286,7 +291,8 @@ function us_onLogin(player)
     end
 end
 
-function ManaChangeEvent.onManaChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
+function ManaChangeEvent.onManaChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType,
+    origin)
     if not creature or not attacker then
         return primaryDamage, primaryType, secondaryDamage, secondaryType
     end
@@ -316,7 +322,8 @@ function ManaChangeEvent.onManaChange(creature, attacker, primaryDamage, primary
     return us_onDamaged(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
 end
 
-function HealthChangeEvent.onHealthChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
+function HealthChangeEvent.onHealthChange(creature, attacker, primaryDamage, primaryType, secondaryDamage,
+    secondaryType, origin)
     if not creature or not attacker then
         return primaryDamage, primaryType, secondaryDamage, secondaryType
     end
@@ -454,7 +461,8 @@ function us_onDamaged(creature, attacker, primaryDamage, primaryType, secondaryD
                                                     primaryDamageTotal = primaryDamageTotal + value[2]
                                                 end
                                             end
-                                            if (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) == true then
+                                            if (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) ==
+                                                true then
                                                 if attr.combatType == US_TYPES.OFFENSIVE then
                                                     secondaryDamageTotal = secondaryDamageTotal + value[2]
                                                 end
@@ -536,7 +544,8 @@ function us_onDamaged(creature, attacker, primaryDamage, primaryType, secondaryD
                                                     primaryDamageTotal = primaryDamageTotal + value[2]
                                                 end
                                             end
-                                            if (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) == true then
+                                            if (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) ==
+                                                true then
                                                 if attr.combatType == US_TYPES.DEFENSIVE and creature:isPlayer() then
                                                     secondaryDamageTotal = secondaryDamageTotal + value[2]
                                                 end
@@ -702,7 +711,7 @@ function us_CheckCorpse(monsterType, corpsePosition, killerId)
                 end
             end
         end
-        
+
         -- Crystal fossil drop logic
         local iLvl = monsterType:calculateItemLevel()
         if iLvl >= US_CONFIG.CRYSTAL_FOSSIL_DROP_LEVEL then
@@ -780,7 +789,8 @@ LookEvent.onLook = function(player, thing, position, distance, description)
             if US_CONFIG.REQUIRE_LEVEL then
                 if thing:isLimitless() then
                     if description:find("It can only be wielded properly by") then
-                        description = description:gsub("It can only be wielded properly by (.-)%.", "Removed required Item Level to wear.")
+                        description = description:gsub("It can only be wielded properly by (.-)%.",
+                            "Removed required Item Level to wear.")
                     else
                         description = description:gsub("It weighs", "Removed required Item Level to wear.\nIt weighs")
                     end
@@ -788,21 +798,21 @@ LookEvent.onLook = function(player, thing, position, distance, description)
                     if description:find("of level (%d+) or higher") then
                         for match in description:gmatch("of level (%d+) or higher") do
                             if tonumber(match) < itemLevel then
-                                description = description:gsub("of level (%d+) or higher", "of level " .. itemLevel .. " or higher")
+                                description = description:gsub("of level (%d+) or higher",
+                                    "of level " .. itemLevel .. " or higher")
                             end
                         end
                     elseif description:find("It can only be wielded properly by") then
-                        description =
-                            description:gsub(
-                            "It can only be wielded properly by (.+).\n",
-                            "It can only be wielded properly by %1 of level " .. itemLevel .. " or higher.\n"
-                        )
+                        description = description:gsub("It can only be wielded properly by (.+).\n",
+                            "It can only be wielded properly by %1 of level " .. itemLevel .. " or higher.\n")
                     else
                         if description:find("It weighs") then
-                            description =
-                                description:gsub("It weighs", "It can only be wielded properly by players of level " .. itemLevel .. " or higher.\nIt weighs")
+                            description = description:gsub("It weighs",
+                                "It can only be wielded properly by players of level " .. itemLevel ..
+                                    " or higher.\nIt weighs")
                         else
-                            description = description .. "\nIt can only be wielded properly by players of level " .. itemLevel .. " or higher."
+                            description = description .. "\nIt can only be wielded properly by players of level " ..
+                                              itemLevel .. " or higher."
                         end
                     end
                 end
@@ -858,13 +868,13 @@ function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
             end
             self:setUpgradeLevel(upgrade_level)
         end
-        local slots = math.random(1, self:getMaxAttributes())
+        local bonusCount = self:getRarity().maxBonus -- Get exact number of bonus slots based on rarity
         local usItemType = self:getItemType()
-        for i = 1, slots do
+        for i = 1, bonusCount do
             local attrId = math.random(1, #US_ENCHANTMENTS)
             local attr = US_ENCHANTMENTS[attrId]
-            while isInArray(attrIds, attrId) or attr.minLevel and item_level < attr.minLevel or bit.band(usItemType, attr.itemType) == 0 or
-                attr.chance and math.random(100) >= attr.chance do
+            while isInArray(attrIds, attrId) or attr.minLevel and item_level < attr.minLevel or
+                bit.band(usItemType, attr.itemType) == 0 or attr.chance and math.random(100) >= attr.chance do
                 attrId = math.random(1, #US_ENCHANTMENTS)
                 attr = US_ENCHANTMENTS[attrId]
             end
@@ -874,26 +884,35 @@ function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
         end
         return true
     else
+        -- When adding a single bonus through crafting
         local bonuses = self:getBonusAttributes()
         if bonuses then
-            if #bonuses >= self:getMaxAttributes() then
+            local maxPossibleBonuses = US_CONFIG.RARITY[#US_CONFIG.RARITY].maxBonus
+            if #bonuses >= maxPossibleBonuses then
                 player:sendTextMessage(MESSAGE_STATUS_WARNING, "Max number of bonuses reached!")
                 return false
             end
+
             for v, k in pairs(bonuses) do
                 table.insert(attrIds, k[1])
             end
         end
+
+        -- (Existing code to add a new attribute)
         local usItemType = self:getItemType()
         local attrId = math.random(1, #US_ENCHANTMENTS)
         local attr = US_ENCHANTMENTS[attrId]
-        while isInArray(attrIds, attrId) or attr.minLevel and item_level < attr.minLevel or bit.band(usItemType, attr.itemType) == 0 or
-            attr.chance and math.random(100) >= attr.chance do
+        while isInArray(attrIds, attrId) or attr.minLevel and item_level < attr.minLevel or
+            bit.band(usItemType, attr.itemType) == 0 or attr.chance and math.random(100) >= attr.chance do
             attrId = math.random(1, #US_ENCHANTMENTS)
             attr = US_ENCHANTMENTS[attrId]
         end
         local value = attr.VALUES_PER_LEVEL and math.random(1, math.ceil(item_level * attr.VALUES_PER_LEVEL)) or 1
         self:setCustomAttribute("Slot" .. self:getLastSlot() + 1, attrId .. "|" .. value)
+
+        -- Update rarity based on new bonus count
+        self:updateRarityByBonusCount()
+
         return true
     end
     return false
@@ -963,17 +982,13 @@ function Item.setItemLevel(self, level, first)
             finalValue = 0
         end
         if oldLevel < level then
-            self:setAttribute(
-                ITEM_ATTRIBUTE_ATTACK,
-                (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) + finalValue) or
-                    (itemType:getAttack() + finalValue)
-            )
+            self:setAttribute(ITEM_ATTRIBUTE_ATTACK,
+                (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) > 0) and
+                    (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) + finalValue) or (itemType:getAttack() + finalValue))
         else
-            self:setAttribute(
-                ITEM_ATTRIBUTE_ATTACK,
-                (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) - finalValue) or
-                    (itemType:getAttack() - finalValue)
-            )
+            self:setAttribute(ITEM_ATTRIBUTE_ATTACK,
+                (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) > 0) and
+                    (self:getAttribute(ITEM_ATTRIBUTE_ATTACK) - finalValue) or (itemType:getAttack() - finalValue))
         end
     end
     if itemType:getDefense() > 0 then
@@ -983,17 +998,13 @@ function Item.setItemLevel(self, level, first)
             finalValue = 0
         end
         if oldLevel < level then
-            self:setAttribute(
-                ITEM_ATTRIBUTE_DEFENSE,
-                (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) + finalValue) or
-                    (itemType:getDefense() + finalValue)
-            )
+            self:setAttribute(ITEM_ATTRIBUTE_DEFENSE,
+                (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) > 0) and
+                    (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) + finalValue) or (itemType:getDefense() + finalValue))
         else
-            self:setAttribute(
-                ITEM_ATTRIBUTE_DEFENSE,
-                (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) - finalValue) or
-                    (itemType:getDefense() - finalValue)
-            )
+            self:setAttribute(ITEM_ATTRIBUTE_DEFENSE,
+                (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) > 0) and
+                    (self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) - finalValue) or (itemType:getDefense() - finalValue))
         end
     end
     if itemType:getArmor() > 0 then
@@ -1003,15 +1014,13 @@ function Item.setItemLevel(self, level, first)
             finalValue = 0
         end
         if oldLevel < level then
-            self:setAttribute(
-                ITEM_ATTRIBUTE_ARMOR,
-                (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) + finalValue) or (itemType:getArmor() + finalValue)
-            )
+            self:setAttribute(ITEM_ATTRIBUTE_ARMOR,
+                (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) + finalValue) or
+                    (itemType:getArmor() + finalValue))
         else
-            self:setAttribute(
-                ITEM_ATTRIBUTE_ARMOR,
-                (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) - finalValue) or (itemType:getArmor() - finalValue)
-            )
+            self:setAttribute(ITEM_ATTRIBUTE_ARMOR,
+                (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_ARMOR) - finalValue) or
+                    (itemType:getArmor() - finalValue))
         end
     end
     if itemType:getHitChance() > 0 then
@@ -1021,17 +1030,13 @@ function Item.setItemLevel(self, level, first)
             finalValue = 0
         end
         if oldLevel < level then
-            self:setAttribute(
-                ITEM_ATTRIBUTE_HITCHANCE,
-                (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) + finalValue) or
-                    (itemType:getHitChance() + finalValue)
-            )
+            self:setAttribute(ITEM_ATTRIBUTE_HITCHANCE,
+                (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) > 0) and
+                    (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) + finalValue) or (itemType:getHitChance() + finalValue))
         else
-            self:setAttribute(
-                ITEM_ATTRIBUTE_HITCHANCE,
-                (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) > 0) and (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) - finalValue) or
-                    (itemType:getHitChance() - finalValue)
-            )
+            self:setAttribute(ITEM_ATTRIBUTE_HITCHANCE,
+                (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) > 0) and
+                    (self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) - finalValue) or (itemType:getHitChance() - finalValue))
         end
     end
     if first then
@@ -1060,40 +1065,47 @@ function Item.setUpgradeLevel(self, level)
     local oldLevel = self:getUpgradeLevel()
     if itemType:getAttack() > 0 then
         if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_ATTACK, self:getAttribute(ITEM_ATTRIBUTE_ATTACK) + (level - oldLevel) * US_CONFIG.ATTACK_PER_UPGRADE)
+            self:setAttribute(ITEM_ATTRIBUTE_ATTACK, self:getAttribute(ITEM_ATTRIBUTE_ATTACK) + (level - oldLevel) *
+                US_CONFIG.ATTACK_PER_UPGRADE)
         else
-            self:setAttribute(ITEM_ATTRIBUTE_ATTACK, self:getAttribute(ITEM_ATTRIBUTE_ATTACK) - (oldLevel - level) * US_CONFIG.ATTACK_PER_UPGRADE)
+            self:setAttribute(ITEM_ATTRIBUTE_ATTACK, self:getAttribute(ITEM_ATTRIBUTE_ATTACK) - (oldLevel - level) *
+                US_CONFIG.ATTACK_PER_UPGRADE)
         end
     end
     if itemType:getDefense() > 0 then
         if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_DEFENSE, self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) + (level - oldLevel) * US_CONFIG.DEFENSE_PER_UPGRADE)
+            self:setAttribute(ITEM_ATTRIBUTE_DEFENSE, self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) + (level - oldLevel) *
+                US_CONFIG.DEFENSE_PER_UPGRADE)
         else
-            self:setAttribute(ITEM_ATTRIBUTE_DEFENSE, self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) - (oldLevel - level) * US_CONFIG.DEFENSE_PER_UPGRADE)
+            self:setAttribute(ITEM_ATTRIBUTE_DEFENSE, self:getAttribute(ITEM_ATTRIBUTE_DEFENSE) - (oldLevel - level) *
+                US_CONFIG.DEFENSE_PER_UPGRADE)
         end
     end
     if itemType:getExtraDefense() > 0 then
         if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_EXTRADEFENSE, itemType:getExtraDefense() + (level - oldLevel) * US_CONFIG.EXTRADEFENSE_PER_UPGRADE)
+            self:setAttribute(ITEM_ATTRIBUTE_EXTRADEFENSE,
+                itemType:getExtraDefense() + (level - oldLevel) * US_CONFIG.EXTRADEFENSE_PER_UPGRADE)
         else
-            self:setAttribute(
-                ITEM_ATTRIBUTE_EXTRADEFENSE,
-                self:getAttribute(ITEM_ATTRIBUTE_EXTRADEFENSE) - (oldLevel - level) * US_CONFIG.EXTRADEFENSE_PER_UPGRADE
-            )
+            self:setAttribute(ITEM_ATTRIBUTE_EXTRADEFENSE, self:getAttribute(ITEM_ATTRIBUTE_EXTRADEFENSE) -
+                (oldLevel - level) * US_CONFIG.EXTRADEFENSE_PER_UPGRADE)
         end
     end
     if itemType:getArmor() > 0 then
         if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_ARMOR, self:getAttribute(ITEM_ATTRIBUTE_ARMOR) + (level - oldLevel) * US_CONFIG.ARMOR_PER_UPGRADE)
+            self:setAttribute(ITEM_ATTRIBUTE_ARMOR, self:getAttribute(ITEM_ATTRIBUTE_ARMOR) + (level - oldLevel) *
+                US_CONFIG.ARMOR_PER_UPGRADE)
         else
-            self:setAttribute(ITEM_ATTRIBUTE_ARMOR, self:getAttribute(ITEM_ATTRIBUTE_ARMOR) - (oldLevel - level) * US_CONFIG.ARMOR_PER_UPGRADE)
+            self:setAttribute(ITEM_ATTRIBUTE_ARMOR, self:getAttribute(ITEM_ATTRIBUTE_ARMOR) - (oldLevel - level) *
+                US_CONFIG.ARMOR_PER_UPGRADE)
         end
     end
     if itemType:getHitChance() > 0 then
         if oldLevel < level then
-            self:setAttribute(ITEM_ATTRIBUTE_HITCHANCE, self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) + (level - oldLevel) * US_CONFIG.HITCHANCE_PER_UPGRADE)
+            self:setAttribute(ITEM_ATTRIBUTE_HITCHANCE,
+                self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) + (level - oldLevel) * US_CONFIG.HITCHANCE_PER_UPGRADE)
         else
-            self:setAttribute(ITEM_ATTRIBUTE_HITCHANCE, self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) - (oldLevel - level) * US_CONFIG.HITCHANCE_PER_UPGRADE)
+            self:setAttribute(ITEM_ATTRIBUTE_HITCHANCE,
+                self:getAttribute(ITEM_ATTRIBUTE_HITCHANCE) - (oldLevel - level) * US_CONFIG.HITCHANCE_PER_UPGRADE)
         end
     end
     self:setCustomAttribute("upgrade", level)
@@ -1132,8 +1144,8 @@ function Item.identify(self, player, itemType, weaponType)
     self:rollRarity()
     if canUnique and math.random(US_CONFIG.UNIQUE_CHANCE) == 1 then
         local unique = math.random(#US_UNIQUES)
-        while US_UNIQUES[unique].minLevel > self:getItemLevel() or bit.band(usItemType, US_UNIQUES[unique].itemType) == 0 or
-            US_UNIQUES[unique].chance and math.random(100) >= US_UNIQUES[unique].chance do
+        while US_UNIQUES[unique].minLevel > self:getItemLevel() or bit.band(usItemType, US_UNIQUES[unique].itemType) ==
+            0 or US_UNIQUES[unique].chance and math.random(100) >= US_UNIQUES[unique].chance do
             unique = math.random(#US_UNIQUES)
         end
         self:setUnique(unique)
@@ -1152,7 +1164,8 @@ function Item.setUnique(self, uniqueId)
         for i = 1, #unique.attributes do
             local attrId = unique.attributes[i]
             local attr = US_ENCHANTMENTS[attrId]
-            local value = attr.VALUES_PER_LEVEL and math.random(1, math.ceil(self:getItemLevel() * attr.VALUES_PER_LEVEL)) or 1
+            local value = attr.VALUES_PER_LEVEL and
+                              math.random(1, math.ceil(self:getItemLevel() * attr.VALUES_PER_LEVEL)) or 1
             self:setCustomAttribute("Slot" .. self:getLastSlot() + 1, attrId .. "|" .. value)
         end
     end
@@ -1251,7 +1264,8 @@ function Item.rollRarity(self)
 end
 
 function Item.getRarity(self)
-    return self:getCustomAttribute("rarity") and US_CONFIG.RARITY[self:getCustomAttribute("rarity")] or US_CONFIG.RARITY[COMMON]
+    return self:getCustomAttribute("rarity") and US_CONFIG.RARITY[self:getCustomAttribute("rarity")] or
+               US_CONFIG.RARITY[COMMON]
 end
 
 function Item.getRarityId(self)
@@ -1267,7 +1281,8 @@ function Item.getMaxAttributes(self)
 end
 
 function ItemType.isUpgradable(self)
-    if self:isStackable() or self:getTransformEquipId() > 0 or self:getDecayId() > 0 or self:getDestroyId() > 0 or self:getCharges() > 0 then
+    if self:isStackable() or self:getTransformEquipId() > 0 or self:getDecayId() > 0 or self:getDestroyId() > 0 or
+        self:getCharges() > 0 then
         return false
     end
     local slot = self:getSlotPosition() - SLOTP_LEFT - SLOTP_RIGHT
@@ -1277,18 +1292,56 @@ function ItemType.isUpgradable(self)
         if weaponType == WEAPON_AMMO then
             return false
         end
-        if
-            weaponType == WEAPON_SHIELD or weaponType == WEAPON_DISTANCE or weaponType == WEAPON_WAND or
-                isInArray({WEAPON_SWORD, WEAPON_CLUB, WEAPON_AXE}, weaponType)
-         then
+        if weaponType == WEAPON_SHIELD or weaponType == WEAPON_DISTANCE or weaponType == WEAPON_WAND or
+            isInArray({WEAPON_SWORD, WEAPON_CLUB, WEAPON_AXE}, weaponType) then
             return true
         end
     else
-        if slot == SLOTP_HEAD or slot == SLOTP_ARMOR or slot == SLOTP_LEGS or slot == SLOTP_FEET or slot == SLOTP_NECKLACE or slot == SLOTP_RING then
+        if slot == SLOTP_HEAD or slot == SLOTP_ARMOR or slot == SLOTP_LEGS or slot == SLOTP_FEET or slot ==
+            SLOTP_NECKLACE or slot == SLOTP_RING then
             return true
         end
     end
     return false
+end
+
+function Item:assignRarityByModifiers()
+    local bonuses = self:getBonusAttributes()
+    if bonuses then
+        local count = #bonuses
+        local rarity = COMMON -- Default rarity
+
+        -- Assign rarity based on modifier count
+        for i = #US_CONFIG.RARITY, 1, -1 do
+            if count >= US_CONFIG.RARITY[i].maxBonus then
+                rarity = i
+                break
+            end
+        end
+
+        self:setRarity(rarity)
+    else
+        -- No modifiers, set to common
+        self:setRarity(COMMON)
+    end
+end
+
+function Item.updateRarityByBonusCount(self)
+    local bonuses = self:getBonusAttributes()
+    if bonuses then
+        local count = #bonuses
+
+        -- Set to appropriate rarity based on exact bonus count
+        for i = 1, #US_CONFIG.RARITY do
+            if US_CONFIG.RARITY[i].maxBonus == count then
+                self:setRarity(i)
+                break
+            end
+        end
+    else
+        -- No bonuses, set to common
+        self:setRarity(COMMON)
+    end
 end
 
 function ItemType.canHaveItemLevel(self)
@@ -1302,14 +1355,13 @@ function ItemType.canHaveItemLevel(self)
         if weaponType == WEAPON_AMMO then
             return false
         end
-        if
-            weaponType == WEAPON_SHIELD or weaponType == WEAPON_DISTANCE or weaponType == WEAPON_WAND or
-                isInArray({WEAPON_SWORD, WEAPON_CLUB, WEAPON_AXE}, weaponType)
-         then
+        if weaponType == WEAPON_SHIELD or weaponType == WEAPON_DISTANCE or weaponType == WEAPON_WAND or
+            isInArray({WEAPON_SWORD, WEAPON_CLUB, WEAPON_AXE}, weaponType) then
             return true
         end
     else
-        if slot == SLOTP_HEAD or slot == SLOTP_ARMOR or slot == SLOTP_LEGS or slot == SLOTP_FEET or slot == SLOTP_NECKLACE or slot == SLOTP_RING then
+        if slot == SLOTP_HEAD or slot == SLOTP_ARMOR or slot == SLOTP_LEGS or slot == SLOTP_FEET or slot ==
+            SLOTP_NECKLACE or slot == SLOTP_RING then
             return true
         end
     end
@@ -1326,7 +1378,9 @@ end
 function Player.getNextSubId(self, itemSlot, attrSlot)
     local cid = self:getId()
     if not US_SUBID[cid] then
-        US_SUBID[cid] = {current = 0}
+        US_SUBID[cid] = {
+            current = 0
+        }
     end
 
     local subId = US_SUBID[cid]

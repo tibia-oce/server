@@ -1,3 +1,4 @@
+-- data\scripts\custom\itemupgrades\extractor.lua
 local CrystalExtractor = Action()
 
 function CrystalExtractor.onUse(player, item, fromPosition, target, toPosition, isHotkey)
