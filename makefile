@@ -1,10 +1,11 @@
-.PHONY: up down clean env
+.PHONY: up down clean env up-mac
+RELEASE_ARCH ?= release_64
 
 compose: up
 
 up: env
 	docker build -t server-base:local -f docker/Dockerfile.base .
-	docker build --build-arg BASE_IMAGE=server-base:local --build-arg RELEASE_ARCH=release_64 -t server-compiled:local -f docker/Dockerfile.compiled .
+	docker build --build-arg BASE_IMAGE=server-base:local --build-arg RELEASE_ARCH=$(RELEASE_ARCH) -t server-compiled:local -f docker/Dockerfile.compiled .
 	docker build --build-arg APP_IMAGE=server-compiled:local -t server:local -f docker/Dockerfile.datapack .
 	docker-compose -f docker/docker-compose.yml --env-file ./.env up -d
 	docker logs server -f
@@ -18,3 +19,6 @@ clean:
 
 env:
 	@if [ ! -f .env ]; then cp .env.example .env; fi
+
+macos: export RELEASE_ARCH=release_arm64
+macos: up

@@ -116,6 +116,36 @@ workspace "Black-Tek-Server"
          vectorextensions "AVX"
       filter {}
 
+      filter "system:macosx"
+         buildoptions { 
+            "-fvisibility=hidden",
+            "-Wall", 
+            "-Wextra", 
+            "-pedantic", 
+            "-pipe"
+         }
+         libdirs { "/usr/local/lib", "/opt/homebrew/lib" }
+         includedirs { "/usr/local/include", "/opt/homebrew/include" }
+         links { 
+            "pugixml",
+            _OPTIONS["lua"],
+            "fmt",
+            "mariadb",
+            "cryptopp",
+            "boost_iostreams",
+            "zstd",
+            "z",
+            "curl",
+            "ssl",
+            "crypto"
+         }
+      filter {}
+
+      filter { "system:macosx", "architecture:ARM64" }
+         libdirs { "/opt/homebrew/lib" }
+         includedirs { "/opt/homebrew/include" }
+      filter {}
+   
       -- Linux specific settings
       filter { "system:linux", "options:verbose" }
          linkoptions { "-v" }
