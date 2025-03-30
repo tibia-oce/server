@@ -188,7 +188,7 @@ US_ENCHANTMENTS = {
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
     },
-    [9] = {
+    [5] = {
         name = "Distance Fighting",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
@@ -199,7 +199,7 @@ US_ENCHANTMENTS = {
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
     },
-    [10] = {
+    [6] = {
         name = "Shielding",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
@@ -210,7 +210,7 @@ US_ENCHANTMENTS = {
         end,
         itemType = US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
     },
-    [12] = {
+    [7] = {
         name = "Life Steal",
         combatType = US_TYPES.OFFENSIVE,
         VALUES_PER_LEVEL = 0.1,
@@ -220,7 +220,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.WEAPON_MELEE + US_ITEM_TYPES.WEAPON_DISTANCE,
         chance = 10
     },
-    [14] = {
+    [8] = {
         name = "Physical Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_PHYSICALDAMAGE,
@@ -230,7 +230,7 @@ US_ENCHANTMENTS = {
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
     },
-    [15] = {
+    [9] = {
         name = "Energy Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE,
@@ -240,7 +240,7 @@ US_ENCHANTMENTS = {
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
     },
-    [16] = {
+    [10] = {
         name = "Earth Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_EARTHDAMAGE,
@@ -250,7 +250,7 @@ US_ENCHANTMENTS = {
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
     },
-    [17] = {
+    [11] = {
         name = "Fire Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_FIREDAMAGE,
@@ -260,7 +260,7 @@ US_ENCHANTMENTS = {
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
     },
-    [18] = {
+    [12] = {
         name = "Ice Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_ICEDAMAGE,
@@ -270,7 +270,7 @@ US_ENCHANTMENTS = {
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
     },
-    [19] = {
+    [13] = {
         name = "Holy Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_HOLYDAMAGE,
@@ -280,7 +280,7 @@ US_ENCHANTMENTS = {
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
     },
-    [20] = {
+    [14] = {
         name = "Death Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_DEATHDAMAGE,
@@ -290,7 +290,7 @@ US_ENCHANTMENTS = {
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
     },
-    [21] = {
+    [15] = {
         name = "Elemental Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE + COMBAT_ICEDAMAGE +
@@ -302,7 +302,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS,
         chance = 10
     },
-    [22] = {
+    [16] = {
         name = "Physical Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_PHYSICALDAMAGE,
@@ -313,7 +313,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
             US_ITEM_TYPES.LEGS
     },
-    [23] = {
+    [17] = {
         name = "Energy Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE,
@@ -324,7 +324,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
             US_ITEM_TYPES.LEGS
     },
-    [24] = {
+    [18] = {
         name = "Earth Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_EARTHDAMAGE,
@@ -335,7 +335,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
             US_ITEM_TYPES.LEGS
     },
-    [25] = {
+    [19] = {
         name = "Fire Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_FIREDAMAGE,
@@ -346,7 +346,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
             US_ITEM_TYPES.LEGS
     },
-    [26] = {
+    [20] = {
         name = "Ice Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_ICEDAMAGE,
@@ -357,7 +357,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
             US_ITEM_TYPES.LEGS
     },
-    [27] = {
+    [21] = {
         name = "Holy Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_HOLYDAMAGE,
@@ -368,7 +368,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
             US_ITEM_TYPES.LEGS
     },
-    [28] = {
+    [22] = {
         name = "Death Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_DEATHDAMAGE,
@@ -379,7 +379,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
             US_ITEM_TYPES.LEGS
     },
-    [29] = {
+    [23] = {
         name = "Elemental Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE + COMBAT_ICEDAMAGE +
@@ -392,7 +392,7 @@ US_ENCHANTMENTS = {
             US_ITEM_TYPES.LEGS,
         chance = 10
     },
-    [43] = {
+    [24] = {
         name = "Health on Kill",
         combatType = US_TYPES.TRIGGER,
         triggerType = US_TRIGGERS.KILL,
@@ -406,7 +406,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE,
         chance = 25
     },
-    [44] = {
+    [25] = {
         name = "Mana on Kill",
         combatType = US_TYPES.TRIGGER,
         triggerType = US_TRIGGERS.KILL,
@@ -420,7 +420,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE,
         chance = 25
     },
-    [45] = {
+    [26] = {
         name = "Mana Steal",
         combatType = US_TYPES.OFFENSIVE,
         VALUES_PER_LEVEL = 0.1,
@@ -430,7 +430,7 @@ US_ENCHANTMENTS = {
         itemType = US_ITEM_TYPES.WEAPON_WAND + US_ITEM_TYPES.WEAPON_DISTANCE,
         chance = 10
     },
-    [49] = {
+    [27] = {
         name = "Increased Healing",
         VALUES_PER_LEVEL = 0.35,
         format = function(value)
@@ -440,7 +440,7 @@ US_ENCHANTMENTS = {
         minLevel = 25,
         chance = 20
     },
-    [51] = {
+    [28] = {
         name = "Double Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE + COMBAT_ICEDAMAGE +
