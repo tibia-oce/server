@@ -1,10 +1,10 @@
 -- data\scripts\custom\itemupgrades\config.lua
 ITEM_UPGRADE_CRYSTAL = 1
-ITEM_ENCHANT_CRYSTAL = 2
+ITEM_AUGMENTING_CRYSTAL = 2
 ITEM_ALTER_CRYSTAL = 3
-ITEM_CLEAN_CRYSTAL = 4
-ITEM_FORTUNE_CRYSTAL = 5
-ITEM_FAITH_CRYSTAL = 6
+ITEM_SCOURING_CRYSTAL = 4
+ITEM_EXALT_CRYSTAL = 5
+ITEM_CHAOS_CRYSTAL = 6
 
 COMMON = 1
 RARE = 2
@@ -15,17 +15,17 @@ US_CONFIG = {
     {
         -- crystals here can be extracted using Crystal Extractor
         [ITEM_UPGRADE_CRYSTAL] = 26799, -- Upgrade Crystal item id
-        [ITEM_ENCHANT_CRYSTAL] = 26801, -- Enchantment Crystal item id
+        [ITEM_AUGMENTING_CRYSTAL] = 26801, -- Enchantment Crystal item id
         [ITEM_ALTER_CRYSTAL] = 26800, -- Alteration Crystal item id
-        [ITEM_CLEAN_CRYSTAL] = 27703, -- Cleansing Crystal item id
-        [ITEM_FORTUNE_CRYSTAL] = 27704, -- Fortune Crystal item id
-        [ITEM_FAITH_CRYSTAL] = 27705 -- Faith Crystal item id
+        [ITEM_SCOURING_CRYSTAL] = 27703, -- Cleansing Crystal item id
+        [ITEM_EXALT_CRYSTAL] = 27704, -- Fortune Crystal item id
+        [ITEM_CHAOS_CRYSTAL] = 27705 -- Faith Crystal item id
     },
 
     ITEM_MIRRORED_CRYSTAL = 27698, -- Mirrored Crystal item id
-    ITEM_MIND_CRYSTAL = 27699, -- Mind Crystal item id
-    ITEM_LIMITLESS_CRYSTAL = 27700, -- Limitless Crystal item id
-    ITEM_VOID_CRYSTAL = 27702, -- Void Crystal item id
+    ITEM_MIND_CRYSTAL = 27701, -- Mind Crystal item id
+    ITEM_ANNULMENT_CRYSTAL = 27700, -- Limitless Crystal item id
+    ITEM_DIVINE_CRYSTAL = 27702, -- Void Crystal item id
     ITEM_UPGRADE_CATALYST = 26798, -- Upgrade Catalyst item id
     CRYSTAL_EXTRACTOR = 27149, -- Crystal Extractor item id
     CRYSTAL_FOSSIL = 27133, -- Crystal Fossil item id
@@ -148,10 +148,11 @@ US_ENCHANTMENTS = {
         name = "Max HP",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_STAT_MAXHITPOINTS,
-        VALUES_PER_LEVEL = 3,
+        param = CONDITION_PARAM_STAT_MAXHITPOINTSPERCENT, -- Changed from MAXHITPOINTS to MAXHITPOINTSPERCENT
+        VALUES_PER_LEVEL = 0.05, -- Will now generate values like 5-10% instead of flat values
+        percentage = true, -- Flag to indicate this is a percentage-based enchantment
         format = function(value)
-            return "Max HP +" .. value
+            return "Max HP +" .. value .. "%%"
         end,
         itemType = US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS
     },
@@ -159,10 +160,11 @@ US_ENCHANTMENTS = {
         name = "Max MP",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_STAT_MAXMANAPOINTS,
-        VALUES_PER_LEVEL = 4,
+        param = CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT, -- Changed to percentage version
+        VALUES_PER_LEVEL = 0.05, -- Adjusted for percentage
+        percentage = true,
         format = function(value)
-            return "Max MP +" .. value
+            return "Max MP +" .. value .. "%%"
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
     },
@@ -170,10 +172,11 @@ US_ENCHANTMENTS = {
         name = "Magic Level",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_STAT_MAGICPOINTS,
-        VALUES_PER_LEVEL = 0.1,
+        param = CONDITION_PARAM_STAT_MAGICPOINTSPERCENT, -- Changed to percentage version
+        VALUES_PER_LEVEL = 0.05, -- Adjusted for percentage
+        percentage = true,
         format = function(value)
-            return "Magic Level +" .. value
+            return "Magic Level +" .. value .. "%%"
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
     },
@@ -181,10 +184,11 @@ US_ENCHANTMENTS = {
         name = "Melee Skills",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_SKILL_MELEE,
-        VALUES_PER_LEVEL = 0.2,
+        param = CONDITION_PARAM_SKILL_MELEEPERCENT, -- Changed to percentage version
+        VALUES_PER_LEVEL = 0.05, -- Adjusted for percentage
+        percentage = true,
         format = function(value)
-            return "Melee Skills +" .. value
+            return "Melee Skills +" .. value .. "%%"
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
     },
@@ -192,10 +196,11 @@ US_ENCHANTMENTS = {
         name = "Distance Fighting",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_SKILL_DISTANCE,
-        VALUES_PER_LEVEL = 0.2,
+        param = CONDITION_PARAM_SKILL_DISTANCEPERCENT, -- Changed to percentage version
+        VALUES_PER_LEVEL = 0.05, -- Adjusted for percentage
+        percentage = true,
         format = function(value)
-            return "Distance Fighting +" .. value
+            return "Distance Fighting +" .. value .. "%%"
         end,
         itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
     },
@@ -203,17 +208,19 @@ US_ENCHANTMENTS = {
         name = "Shielding",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_SKILL_SHIELD,
-        VALUES_PER_LEVEL = 0.2,
+        param = CONDITION_PARAM_SKILL_SHIELDPERCENT, -- Changed to percentage version
+        VALUES_PER_LEVEL = 0.05, -- Adjusted for percentage
+        percentage = true,
         format = function(value)
-            return "Shielding +" .. value
+            return "Shielding +" .. value .. "%%"
         end,
         itemType = US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
     },
     [7] = {
         name = "Life Steal",
         combatType = US_TYPES.OFFENSIVE,
-        VALUES_PER_LEVEL = 0.1,
+        VALUES_PER_LEVEL = 0.05,
+        percentage = true,
         format = function(value)
             return "Heal for " .. value .. "%% of dealt damage"
         end,
@@ -224,7 +231,8 @@ US_ENCHANTMENTS = {
         name = "Physical Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_PHYSICALDAMAGE,
-        VALUES_PER_LEVEL = 0.3,
+        percentage = true,
+        VALUES_PER_LEVEL = 0.05,
         format = function(value)
             return "Physical Damage +" .. value .. "%%"
         end,
@@ -234,7 +242,8 @@ US_ENCHANTMENTS = {
         name = "Energy Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE,
-        VALUES_PER_LEVEL = 0.2,
+        percentage = true,
+        VALUES_PER_LEVEL = 0.05,
         format = function(value)
             return "Energy Damage +" .. value .. "%%"
         end,
@@ -244,6 +253,7 @@ US_ENCHANTMENTS = {
         name = "Earth Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_EARTHDAMAGE,
+        percentage = true,
         VALUES_PER_LEVEL = 0.2,
         format = function(value)
             return "Earth Damage +" .. value .. "%%"
@@ -254,6 +264,7 @@ US_ENCHANTMENTS = {
         name = "Fire Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_FIREDAMAGE,
+        percentage = true,
         VALUES_PER_LEVEL = 0.2,
         format = function(value)
             return "Fire Damage +" .. value .. "%%"
@@ -264,6 +275,7 @@ US_ENCHANTMENTS = {
         name = "Ice Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_ICEDAMAGE,
+        percentage = true,
         VALUES_PER_LEVEL = 0.2,
         format = function(value)
             return "Ice Damage +" .. value .. "%%"
@@ -274,6 +286,7 @@ US_ENCHANTMENTS = {
         name = "Holy Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_HOLYDAMAGE,
+        percentage = true,
         VALUES_PER_LEVEL = 0.2,
         format = function(value)
             return "Holy Damage +" .. value .. "%%"
@@ -284,6 +297,7 @@ US_ENCHANTMENTS = {
         name = "Death Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_DEATHDAMAGE,
+        percentage = true,
         VALUES_PER_LEVEL = 0.2,
         format = function(value)
             return "Death Damage +" .. value .. "%%"
@@ -296,6 +310,7 @@ US_ENCHANTMENTS = {
         combatDamage = COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE + COMBAT_ICEDAMAGE +
             COMBAT_HOLYDAMAGE + COMBAT_DEATHDAMAGE,
         VALUES_PER_LEVEL = 0.2,
+        percentage = true,
         format = function(value)
             return "Elemental Damage +" .. value .. "%%"
         end,
@@ -306,6 +321,7 @@ US_ENCHANTMENTS = {
         name = "Physical Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_PHYSICALDAMAGE,
+        percentage = true,
         VALUES_PER_LEVEL = 0.1,
         format = function(value)
             return "Physical Protection +" .. value .. "%%"
@@ -317,6 +333,7 @@ US_ENCHANTMENTS = {
         name = "Energy Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE,
+        percentage = true,
         VALUES_PER_LEVEL = 0.15,
         format = function(value)
             return "Energy Protection +" .. value .. "%%"
@@ -328,6 +345,7 @@ US_ENCHANTMENTS = {
         name = "Earth Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_EARTHDAMAGE,
+        percentage = true,
         VALUES_PER_LEVEL = 0.15,
         format = function(value)
             return "Earth Protection +" .. value .. "%%"
@@ -339,6 +357,7 @@ US_ENCHANTMENTS = {
         name = "Fire Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_FIREDAMAGE,
+        percentage = true,
         VALUES_PER_LEVEL = 0.15,
         format = function(value)
             return "Fire Protection +" .. value .. "%%"
@@ -350,6 +369,7 @@ US_ENCHANTMENTS = {
         name = "Ice Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_ICEDAMAGE,
+        percentage = true,
         VALUES_PER_LEVEL = 0.15,
         format = function(value)
             return "Ice Protection +" .. value .. "%%"
@@ -361,6 +381,7 @@ US_ENCHANTMENTS = {
         name = "Holy Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_HOLYDAMAGE,
+        percentage = true,
         VALUES_PER_LEVEL = 0.15,
         format = function(value)
             return "Holy Protection +" .. value .. "%%"
@@ -370,6 +391,7 @@ US_ENCHANTMENTS = {
     },
     [22] = {
         name = "Death Protection",
+        percentage = true,
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_DEATHDAMAGE,
         VALUES_PER_LEVEL = 0.15,
@@ -381,6 +403,7 @@ US_ENCHANTMENTS = {
     },
     [23] = {
         name = "Elemental Protection",
+        percentage = true,
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE + COMBAT_ICEDAMAGE +
             COMBAT_HOLYDAMAGE + COMBAT_DEATHDAMAGE,
@@ -394,6 +417,7 @@ US_ENCHANTMENTS = {
     },
     [24] = {
         name = "Health on Kill",
+        percentage = true,
         combatType = US_TYPES.TRIGGER,
         triggerType = US_TRIGGERS.KILL,
         VALUES_PER_LEVEL = 2,
@@ -408,6 +432,7 @@ US_ENCHANTMENTS = {
     },
     [25] = {
         name = "Mana on Kill",
+        percentage = true,
         combatType = US_TYPES.TRIGGER,
         triggerType = US_TRIGGERS.KILL,
         VALUES_PER_LEVEL = 3,
@@ -422,6 +447,7 @@ US_ENCHANTMENTS = {
     },
     [26] = {
         name = "Mana Steal",
+        percentage = true,
         combatType = US_TYPES.OFFENSIVE,
         VALUES_PER_LEVEL = 0.1,
         format = function(value)
@@ -432,6 +458,7 @@ US_ENCHANTMENTS = {
     },
     [27] = {
         name = "Increased Healing",
+        percentage = true,
         VALUES_PER_LEVEL = 0.35,
         format = function(value)
             return value .. "%% more healing from all sources"
@@ -442,6 +469,7 @@ US_ENCHANTMENTS = {
     },
     [28] = {
         name = "Double Damage",
+        percentage = true,
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE + COMBAT_ICEDAMAGE +
             COMBAT_HOLYDAMAGE + COMBAT_DEATHDAMAGE + COMBAT_PHYSICALDAMAGE,

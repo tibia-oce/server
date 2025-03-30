@@ -787,8 +787,16 @@ function applyConditionBonus(player, item, bonusId, bonusValue, attr, slot, inde
         if attr.condition ~= CONDITION_MANASHIELD then
             US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_SUBID,
                 1000 + player:getNextSubId(slot, index))
-            US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(attr.param, attr.percentage == true and 100 +
-                bonusValue or bonusValue)
+                
+            -- Handle percentage-based attributes differently
+            if attr.percentage then
+                -- For percentage attributes, we add to 100 (base value)
+                US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(attr.param, 100 + bonusValue)
+            else
+                -- For flat values, use the value directly
+                US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(attr.param, bonusValue)
+            end
+            
             US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, -1)
         else
             US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, 86400000)
@@ -797,21 +805,21 @@ function applyConditionBonus(player, item, bonusId, bonusValue, attr, slot, inde
         US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_BUFF_SPELL, true)
         player:addCondition(US_CONDITIONS[bonusId][bonusValue][itemId])
 
-        if attr == BONUS_TYPE_MAXHP and player:getHealth() == maxHP then
+        if attr.param == CONDITION_PARAM_STAT_MAXHITPOINTS or attr.param == CONDITION_PARAM_STAT_MAXHITPOINTSPERCENT and player:getHealth() == maxHP then
             player:addHealth(player:getMaxHealth())
         end
 
-        if attr == BONUS_TYPE_MAXMP and player:getMana() == maxMP then
+        if attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTS or attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT and player:getMana() == maxMP then
             player:addMana(player:getMaxMana())
         end
     else
         player:addCondition(US_CONDITIONS[bonusId][bonusValue][itemId])
 
-        if attr.param == CONDITION_PARAM_STAT_MAXHITPOINTS and player:getHealth() == maxHP then
+        if attr.param == CONDITION_PARAM_STAT_MAXHITPOINTS or attr.param == CONDITION_PARAM_STAT_MAXHITPOINTSPERCENT and player:getHealth() == maxHP then
             player:addHealth(player:getMaxHealth())
         end
 
-        if attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTS and player:getMana() == maxMP then
+        if attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTS or attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT and player:getMana() == maxMP then
             player:addMana(player:getMaxMana())
         end
     end

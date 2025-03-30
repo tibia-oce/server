@@ -15,11 +15,6 @@ function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
     local item_level = self:getItemLevel()
 
     if unidentify then
-        -- Handle upgrade level rolling for unidentified items
-        if US_CONFIG.IDENTIFY_UPGRADE_LEVEL then
-            local upgrade_level = rollUpgradeLevel()
-            self:setUpgradeLevel(upgrade_level)
-        end
 
         -- Get exact number of bonus slots based on rarity
         local bonusCount = self:getRarity().maxBonus
@@ -113,7 +108,20 @@ end
 -- @param item_level number: The item level
 -- @return number: The calculated value
 function calculateAttributeValue(attr, item_level)
-    return attr.VALUES_PER_LEVEL and math.random(1, math.ceil(item_level * attr.VALUES_PER_LEVEL)) or 1
+    if attr.percentage then
+        -- Fixed range of 1-10% for percentage-based enchantments
+        return math.random(1, 10)
+    elseif attr.VALUES_PER_LEVEL then
+        -- For non-percentage attributes
+        local maxValue = math.ceil(item_level * attr.VALUES_PER_LEVEL)
+        if maxValue < 1 then
+            return 1
+        else
+            return math.random(1, maxValue)
+        end
+    else
+        return 1
+    end
 end
 
 --- Add an attribute to an item
@@ -131,6 +139,8 @@ end
 -- @param value string: The new attribute value string
 function Item.setAttributeValue(self, slot, value)
     self:setCustomAttribute("Slot" .. slot, value)
+    self:setAttribute(ITEM_ATTRIBUTE_ACTIONID, self:getActionId())
+    return true
 end
 
 --- Get a specific bonus attribute from an item
@@ -198,6 +208,7 @@ function Item.updateRarityByBonusCount(self)
         -- No bonuses, set to common
         self:setRarity(COMMON)
     end
+    self:setAttribute(ITEM_ATTRIBUTE_ACTIONID, self:getActionId())
 end
 
 --- Set the item level of an item
@@ -288,8 +299,27 @@ function updateItemAttribute(item, attrType, baseValue, changeValue, isIncrease)
     local currentValue = item:getAttribute(attrType)
     local newValue
 
+    local attrNameMap = {
+        [ITEM_ATTRIBUTE_ATTACK] = "Attack",
+        [ITEM_ATTRIBUTE_DEFENSE] = "Defense",
+        [ITEM_ATTRIBUTE_EXTRADEFENSE] = "Extra Defense",
+        [ITEM_ATTRIBUTE_ARMOR] = "Armor",
+        [ITEM_ATTRIBUTE_HITCHANCE] = "Hit Chance"
+    }
+    local attrName = attrNameMap[attrType] or ("Attribute " .. tostring(attrType))
+
+    local msg = string.format(
+        "[Upgrade Debug] %s - Base: %d | Current: %d | Change: %d | Increase: %s",
+        attrName, baseValue, currentValue, changeValue, tostring(isIncrease)
+    )
+
     if isIncrease then
-        newValue = (currentValue > 0) and (currentValue + changeValue) or (baseValue + changeValue)
+        if changeValue == 0 and currentValue < baseValue then
+            -- First-time upgrade, force base + 1 * per-upgrade scaling
+            newValue = baseValue + US_CONFIG[attrName:upper():gsub(" ", "_") .. "_PER_UPGRADE"]
+        else
+            newValue = (currentValue > 0) and (currentValue + changeValue) or (baseValue + changeValue)
+        end
     else
         newValue = (currentValue > 0) and (currentValue - changeValue) or (baseValue - changeValue)
     end
@@ -643,6 +673,6 @@ end
 function MonsterType.calculateItemLevel(self)
     local level = 1
     local monsterValue = self:getMaxHealth() + self:getExperience()
-    level = math.ceil(monsterValue ^ 0.478)
-    return math.max(1, level)
+    level = math.ceil((monsterValue ^ 0.4) / 1.25)
+    return math.max(1, math.min(200, level))
 end

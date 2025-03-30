@@ -1,6 +1,11 @@
 -- data\scripts\custom\itemupgrades\crystals.lua
 local CrystalsAction = Action()
 
+-- Helper function for debugging (optional)
+local function debugPrint(player, message)
+    player:sendTextMessage(MESSAGE_STATUS_CONSOLE, message)
+end
+
 -- Common validation functions
 --- Validates if the target item can be modified.
 -- @param player Player: The player using the crystal
@@ -70,6 +75,7 @@ local function handleUpgradeCrystal(player, item, target)
     end
 
     upgrade = upgrade + 1
+
     if upgrade >= US_CONFIG.UPGRADE_LEVEL_DESTROY then
         if math.random(100) > US_CONFIG.UPGRADE_DESTROY_CHANCE[upgrade] then
             if player:getItemCount(US_CONFIG.ITEM_UPGRADE_CATALYST) > 0 then
@@ -79,6 +85,7 @@ local function handleUpgradeCrystal(player, item, target)
                 player:getPosition():sendMagicEffect(CONST_ME_GROUNDSHAKER)
                 return true
             end
+
             player:sendTextMessage(MESSAGE_STATUS_WARNING, "Upgrade failed! Item destroyed!")
             target:remove(1)
             item:remove(1)
@@ -97,73 +104,127 @@ local function handleUpgradeCrystal(player, item, target)
 
     target:setUpgradeLevel(upgrade)
     item:remove(1)
+
+    -- Only apply initial item level logic if the item already has attributes
+    local bonuses = target:getBonusAttributes()
+    if target:getItemLevel() == 0 and bonuses and #bonuses > 0 then
+        target:setItemLevel(1, true)
+    end
+
     player:sendTextMessage(MESSAGE_INFO_DESCR, "Item upgrade level increased to " .. upgrade .. "!")
     player:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
     player:getPosition():sendMagicEffect(CONST_ME_FIREWORK_YELLOW)
 
-    if target:getItemLevel() == 0 then
-        target:setItemLevel(1, true)
-    end
-
     return true
 end
 
---- Handles the Enchant Crystal which adds a random bonus attribute to the item.
+--- Handles the Augmenting Crystal (formerly Enchantment Crystal)
+--- Adds a modifier to an existing common item
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
 -- @param target Item: The target item
 -- @return boolean: True if handled successfully
-local function handleEnchantCrystal(player, item, target)
+local function handleAugmentingCrystal(player, item, target)
     if not validateNotUnique(player, target) then
         return false
     end
 
-    local itemType = ItemType(target.itemid)
-    local weaponType = itemType:getWeaponType()
-
-    if not target:rollAttribute(player, itemType, weaponType, true) then
+    local currentRarityId = target:getRarityId()
+    if currentRarityId ~= COMMON then
+        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Augmentation can only be used on common items!")
         player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
         return false
+    end
+
+    local bonuses = target:getBonusAttributes() or {}
+    if #bonuses >= 2 then
+        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item already has the maximum number of modifiers for common rarity.")
+        player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
+        return false
+    end
+
+    local newRarityId = (currentRarityId == COMMON and #bonuses == 1) and RARE or currentRarityId
+    local currentItemLevel = target:getItemLevel()
+    local existingAttrIds = {}
+
+    for _, bonus in ipairs(bonuses) do
+        table.insert(existingAttrIds, bonus[1])
+    end
+
+    local newAttrId = rollRandomAttribute(existingAttrIds, currentItemLevel, target:getItemType())
+    local newAttr = US_ENCHANTMENTS[newAttrId]
+    local newValue = calculateAttributeValue(newAttr, currentItemLevel)
+
+    target:setCustomAttribute("Slot" .. (target:getLastSlot() + 1), newAttrId .. "|" .. newValue)
+    target:setAttribute(ITEM_ATTRIBUTE_ACTIONID, target:getActionId())
+
+    -- Upgrade to RARE if this is the second modifier
+    if newRarityId ~= currentRarityId then
+        target:setRarity(newRarityId)
+        player:sendTextMessage(MESSAGE_INFO_DESCR,
+            "Item has been augmented and upgraded from " .. US_CONFIG.RARITY[currentRarityId].name .. " to " ..
+            US_CONFIG.RARITY[newRarityId].name .. " with a new modifier: " .. newAttr.name .. "!")
+    else
+        player:sendTextMessage(MESSAGE_INFO_DESCR,
+            "Item has been augmented with a new modifier: " .. newAttr.name)
     end
 
     item:remove(1)
     return true
 end
 
---- Handles the Alter Crystal which removes the last bonus attribute from the item.
+
+--- Handles the Alteration Crystal
+--- Rerolls any existing modifiers of a rare or common item
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
 -- @param target Item: The target item
 -- @return boolean: True if handled successfully
-local function handleAlterCrystal(player, item, target)
+local function handleAlterationCrystal(player, item, target)
     if not validateNotUnique(player, target) then
+        return false
+    end
+
+    local rarity = target:getRarityId()
+    if rarity > RARE then
+        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Alteration can only be used on common or rare items!")
+        player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
         return false
     end
 
     local bonuses = target:getBonusAttributes()
     if not bonuses then
-        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item has no attributes!")
+        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item has no modifiers to alter!")
         player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
         return false
     end
 
-    local last = target:getLastSlot()
-    target:removeCustomAttribute("Slot" .. last)
+    -- Clear all existing modifiers
+    for i = 1, #bonuses do
+        target:removeCustomAttribute("Slot" .. i)
+    end
 
-    -- Update rarity based on new bonus count
-    target:updateRarityByBonusCount()
+    -- Set rarity randomly to either common or rare
+    local newRarity = math.random(1, 2) -- Either COMMON (1) or RARE (2)
+    target:setRarity(newRarity)
+
+    -- Generate new modifiers based on the new rarity
+    local itemType = ItemType(target.itemid)
+    local weaponType = itemType:getWeaponType()
+    target:rollAttribute(nil, itemType, weaponType, true)
 
     item:remove(1)
-    player:sendTextMessage(MESSAGE_INFO_DESCR, "Successfully removed last attribute.")
+    player:sendTextMessage(MESSAGE_INFO_DESCR, "Item has been altered to " .. target:getRarity().name .. "!")
     return true
 end
 
---- Handles the Clean Crystal which removes all bonus attributes from the item.
+--- Handles the Scouring Crystal (formerly Clean Crystal)
+--- Removes all modifiers from an item
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
 -- @param target Item: The target item
 -- @return boolean: True if handled successfully
-local function handleCleanCrystal(player, item, target)
+local function handleScouringCrystal(player, item, target)
     if not validateNotUnique(player, target) then
         return false
     end
@@ -183,60 +244,102 @@ local function handleCleanCrystal(player, item, target)
     target:setRarity(COMMON)
 
     item:remove(1)
-    player:sendTextMessage(MESSAGE_INFO_DESCR, "Successfully removed all attributes.")
+    player:sendTextMessage(MESSAGE_INFO_DESCR, "All modifiers have been scoured from the item.")
     return true
 end
 
---- Handles the Fortune Crystal which rerolls the value of the last bonus attribute.
+--- Handles the Exaltation Crystal
+--- Adds a new modifier to an item with existing modifiers
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
 -- @param target Item: The target item
 -- @return boolean: True if handled successfully
-local function handleFortuneCrystal(player, item, target)
+local function handleExaltationCrystal(player, item, target)
+    if not validateNotUnique(player, target) then
+        return false
+    end
+
     local bonuses = target:getBonusAttributes()
-    if not bonuses then
-        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item has no attributes!")
+    if not bonuses or #bonuses == 0 then
+        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item needs at least one existing modifier!")
         player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
         return false
     end
 
-    local last = target:getLastSlot()
-    local values = target:getBonusAttribute(last)
-    local attr = US_ENCHANTMENTS[values[1]]
-    local item_level = target:getItemLevel()
+    if #bonuses >= 4 then
+        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item already has the maximum number of modifiers!")
+        player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
+        return false
+    end
 
-    values[2] = attr.VALUES_PER_LEVEL and math.random(1, math.ceil(item_level * attr.VALUES_PER_LEVEL)) or 1
-    target:setAttributeValue(last, values[1] .. "|" .. values[2])
+    local currentRarityId = target:getRarityId()
+    local newRarityId = currentRarityId + 1
+
+    -- Make sure the next rarity exists in config
+    if not US_CONFIG.RARITY[newRarityId] then
+        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item is already at maximum rarity.")
+        player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
+        return false
+    end
+
+    local currentItemLevel = target:getItemLevel()
+    local existingAttrIds = {}
+
+    for _, bonus in ipairs(bonuses) do
+        table.insert(existingAttrIds, bonus[1])
+    end
+
+    local newAttrId = rollRandomAttribute(existingAttrIds, currentItemLevel, target:getItemType())
+    local newAttr = US_ENCHANTMENTS[newAttrId]
+    local newValue = calculateAttributeValue(newAttr, currentItemLevel)
+
+    target:setCustomAttribute("Slot" .. (target:getLastSlot() + 1), newAttrId .. "|" .. newValue)
+    target:setRarity(newRarityId)
+    target:setAttribute(ITEM_ATTRIBUTE_ACTIONID, target:getActionId())
 
     item:remove(1)
-    player:sendTextMessage(MESSAGE_INFO_DESCR, "Successfully rerolled last attribute value.")
+
+    player:sendTextMessage(MESSAGE_INFO_DESCR,
+        "Item has been exalted and upgraded from " .. US_CONFIG.RARITY[currentRarityId].name .. " to " ..
+            US_CONFIG.RARITY[newRarityId].name .. " with a new modifier: " .. newAttr.name .. "!")
+
     return true
 end
 
---- Handles the Faith Crystal which rerolls the values of all bonus attributes.
+--- Handles the Chaos Crystal (formerly Faith Crystal)
+--- Rerolls the rarity and all modifiers of the item
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
 -- @param target Item: The target item
 -- @return boolean: True if handled successfully
-local function handleFaithCrystal(player, item, target)
+local function handleChaosCrystal(player, item, target)
+    if not validateNotUnique(player, target) then
+        return false
+    end
+
     local bonuses = target:getBonusAttributes()
     if not bonuses then
-        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item has no attributes!")
+        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item has no modifiers to chaos reroll!")
         player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
         return false
     end
 
+    -- Clear all existing modifiers
     for i = 1, #bonuses do
-        local values = bonuses[i]
-        local attr = US_ENCHANTMENTS[values[1]]
-        local item_level = target:getItemLevel()
-
-        values[2] = attr.VALUES_PER_LEVEL and math.random(1, math.ceil(item_level * attr.VALUES_PER_LEVEL)) or 1
-        target:setAttributeValue(i, values[1] .. "|" .. values[2])
+        target:removeCustomAttribute("Slot" .. i)
     end
 
+    -- Roll a new rarity
+    target:rollRarity()
+
+    -- Generate new modifiers based on the new rarity
+    local itemType = ItemType(target.itemid)
+    local weaponType = itemType:getWeaponType()
+    target:rollAttribute(nil, itemType, weaponType, true)
+
     item:remove(1)
-    player:sendTextMessage(MESSAGE_INFO_DESCR, "Successfully rerolled all attribute values.")
+    player:sendTextMessage(MESSAGE_INFO_DESCR,
+        "Chaotic forces have rerolled the item to " .. target:getRarity().name .. "!")
     return true
 end
 
@@ -308,21 +411,64 @@ local function handleMindCrystal(player, item, target)
     return false
 end
 
---- Handles the Limitless Crystal which removes level requirements from an item.
+--- Handles the Annulment Crystal (formerly Limitless Crystal)
+--- Removes one random modifier from an item
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
 -- @param target Item: The target item
 -- @return boolean: True if handled successfully
-local function handleLimitlessCrystal(player, item, target)
-    if target:isLimitless() then
-        player:sendTextMessage(MESSAGE_STATUS_WARNING, "This item is already limitless!")
+local function handleAnnulmentCrystal(player, item, target)
+    if not validateNotUnique(player, target) then
+        return false
+    end
+
+    local bonuses = target:getBonusAttributes()
+    if not bonuses or #bonuses == 0 then
+        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item has no attributes!")
         player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
         return false
     end
 
-    target:setLimitless(true)
+    -- Select a random slot to remove
+    local slotToRemove = math.random(1, #bonuses)
+
+    -- Save attribute info for message
+    local attributeInfo = target:getBonusAttribute(slotToRemove)
+    if not attributeInfo then
+        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Error accessing attribute!")
+        return false
+    end
+    local attrName = US_ENCHANTMENTS[attributeInfo[1]].name
+
+    -- Save all attributes except the one to remove
+    local tempAttributes = {}
+    for i = 1, #bonuses do
+        if i ~= slotToRemove then
+            local attr = target:getBonusAttribute(i)
+            if attr then
+                tempAttributes[#tempAttributes + 1] = {
+                    id = attr[1],
+                    value = attr[2]
+                }
+            end
+        end
+    end
+
+    -- Clear all attributes
+    for i = 1, #bonuses do
+        target:removeCustomAttribute("Slot" .. i)
+    end
+
+    -- Re-add remaining attributes in order
+    for i = 1, #tempAttributes do
+        target:setCustomAttribute("Slot" .. i, tempAttributes[i].id .. "|" .. tempAttributes[i].value)
+    end
+
+    -- Update rarity based on new count
+    target:updateRarityByBonusCount()
+
     item:remove(1)
-    player:sendTextMessage(MESSAGE_INFO_DESCR, "Required Item Level removed from the item!")
+    player:sendTextMessage(MESSAGE_INFO_DESCR, "Annulled " .. attrName .. " modifier from the item.")
     return true
 end
 
@@ -376,41 +522,48 @@ local function handleMirroredCrystal(player, item, target)
     return false
 end
 
---- Handles the Void Crystal which transforms an item into a unique item.
+--- Handles the Divining Crystal (formerly Void Crystal)
+--- Rerolls all modifier values at random
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
 -- @param target Item: The target item
 -- @return boolean: True if handled successfully
-local function handleVoidCrystal(player, item, target)
-    local usItemType = target:getItemType()
-    local canUnique = false
-
-    for i = 1, #US_UNIQUES do
-        if US_UNIQUES[i].minLevel <= target:getItemLevel() and bit.band(usItemType, US_UNIQUES[i].itemType) ~= 0 then
-            canUnique = true
-            break
-        end
+local function handleDiviningCrystal(player, item, target)
+    if not validateNotUnique(player, target) then
+        return false
     end
 
-    if not canUnique then
-        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Sorry, there are no Uniques available for this item!")
+    local bonuses = target:getBonusAttributes()
+    if not bonuses or #bonuses == 0 then
+        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item has no modifiers to divine!")
         player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
         return false
     end
 
-    local unique = math.random(#US_UNIQUES)
-    while US_UNIQUES[unique].minLevel > target:getItemLevel() or bit.band(usItemType, US_UNIQUES[unique].itemType) == 0 do
-        unique = math.random(#US_UNIQUES)
+    -- Reroll each attribute value
+    for i = 1, #bonuses do
+        local attr = US_ENCHANTMENTS[bonuses[i][1]]
+
+        -- Calculate new value
+        local newValue = 1
+        if attr.percentage then
+            newValue = math.random(1, 10) -- Fixed 1-10% range
+        else
+            local item_level = target:getItemLevel()
+            if attr.VALUES_PER_LEVEL then
+                local maxValue = math.ceil(item_level * attr.VALUES_PER_LEVEL)
+                if maxValue >= 1 then
+                    newValue = math.random(1, maxValue)
+                end
+            end
+        end
+
+        -- Update the attribute value
+        target:setCustomAttribute("Slot" .. i, bonuses[i][1] .. "|" .. newValue)
     end
 
-    local slots = target:getMaxAttributes()
-    for i = 1, slots do
-        target:removeCustomAttribute("Slot" .. i)
-    end
-
-    target:setUnique(unique)
-    player:sendTextMessage(MESSAGE_INFO_DESCR, "Unique item " .. target:getUniqueName() .. " discovered!")
     item:remove(1)
+    player:sendTextMessage(MESSAGE_INFO_DESCR, "All modifier values have been divined anew!")
     return true
 end
 
@@ -427,16 +580,15 @@ function CrystalsAction.onUse(player, item, fromPosition, target, toPosition, is
     -- Crystal type handlers mapping
     local crystalHandlers = {
         [US_CONFIG[1][ITEM_UPGRADE_CRYSTAL]] = handleUpgradeCrystal,
-        [US_CONFIG[1][ITEM_ENCHANT_CRYSTAL]] = handleEnchantCrystal,
-        [US_CONFIG[1][ITEM_ALTER_CRYSTAL]] = handleAlterCrystal,
-        [US_CONFIG[1][ITEM_CLEAN_CRYSTAL]] = handleCleanCrystal,
-        [US_CONFIG[1][ITEM_FORTUNE_CRYSTAL]] = handleFortuneCrystal,
-        [US_CONFIG[1][ITEM_FAITH_CRYSTAL]] = handleFaithCrystal,
+        [US_CONFIG[1][ITEM_AUGMENTING_CRYSTAL]] = handleAugmentingCrystal,
+        [US_CONFIG[1][ITEM_ALTER_CRYSTAL]] = handleAlterationCrystal,
+        [US_CONFIG[1][ITEM_SCOURING_CRYSTAL]] = handleScouringCrystal,
+        [US_CONFIG[1][ITEM_EXALT_CRYSTAL]] = handleExaltationCrystal,
+        [US_CONFIG[1][ITEM_CHAOS_CRYSTAL]] = handleChaosCrystal,
         [US_CONFIG.ITEM_MIND_CRYSTAL] = handleMindCrystal,
-        [US_CONFIG.ITEM_LIMITLESS_CRYSTAL] = handleLimitlessCrystal,
+        [US_CONFIG.ITEM_ANNULMENT_CRYSTAL] = handleAnnulmentCrystal,
         [US_CONFIG.ITEM_MIRRORED_CRYSTAL] = handleMirroredCrystal,
-        [US_CONFIG.ITEM_VOID_CRYSTAL] = handleVoidCrystal
-        -- Removed identification scroll
+        [US_CONFIG.ITEM_DIVINE_CRYSTAL] = handleDiviningCrystal
     }
 
     local handler = crystalHandlers[item.itemid]
@@ -448,8 +600,8 @@ function CrystalsAction.onUse(player, item, fromPosition, target, toPosition, is
 end
 
 -- Register crystal action for all crystal types
-CrystalsAction:id(US_CONFIG[1][ITEM_UPGRADE_CRYSTAL], US_CONFIG[1][ITEM_ENCHANT_CRYSTAL],
-    US_CONFIG[1][ITEM_ALTER_CRYSTAL], US_CONFIG[1][ITEM_CLEAN_CRYSTAL], US_CONFIG[1][ITEM_FORTUNE_CRYSTAL],
-    US_CONFIG[1][ITEM_FAITH_CRYSTAL], US_CONFIG.ITEM_MIND_CRYSTAL, US_CONFIG.ITEM_LIMITLESS_CRYSTAL,
-    US_CONFIG.ITEM_MIRRORED_CRYSTAL, US_CONFIG.ITEM_VOID_CRYSTAL)
+CrystalsAction:id(US_CONFIG[1][ITEM_UPGRADE_CRYSTAL], US_CONFIG[1][ITEM_AUGMENTING_CRYSTAL],
+    US_CONFIG[1][ITEM_ALTER_CRYSTAL], US_CONFIG[1][ITEM_SCOURING_CRYSTAL], US_CONFIG[1][ITEM_EXALT_CRYSTAL],
+    US_CONFIG[1][ITEM_CHAOS_CRYSTAL], US_CONFIG.ITEM_MIND_CRYSTAL, US_CONFIG.ITEM_ANNULMENT_CRYSTAL,
+    US_CONFIG.ITEM_MIRRORED_CRYSTAL, US_CONFIG.ITEM_DIVINE_CRYSTAL)
 CrystalsAction:register()
