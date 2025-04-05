@@ -93,7 +93,7 @@ function rollUpgradeLevel()
     return upgrade_level
 end
 
---- Roll a random attribute that doesn't conflict with existing ones
+--- Roll a random attribute that may or may not allow duplicates
 -- @param existingAttrIds table: Array of existing attribute IDs
 -- @param item_level number: The item level
 -- @param usItemType number: The item type
@@ -102,9 +102,13 @@ function rollRandomAttribute(existingAttrIds, item_level, usItemType)
     local attrId = math.random(1, #US_ENCHANTMENTS)
     local attr = US_ENCHANTMENTS[attrId]
 
-    -- Keep rolling until we find a suitable attribute
-    while isInArray(existingAttrIds, attrId) or (attr.minLevel and item_level < attr.minLevel) or
-        bit.band(usItemType, attr.itemType) == 0 or (attr.chance and math.random(100) >= attr.chance) do
+    while (
+        -- Check duplicates only if ALLOW_DUPLICATE_ENCHANTS is false
+        (not US_CONFIG.ALLOW_DUPLICATE_ENCHANTS and isInArray(existingAttrIds, attrId))
+        -- or (attr.minLevel and item_level < attr.minLevel)
+        or (bit.band(usItemType, attr.itemType) == 0)
+        or (attr.chance and math.random(100) >= attr.chance)
+    ) do
         attrId = math.random(1, #US_ENCHANTMENTS)
         attr = US_ENCHANTMENTS[attrId]
     end
@@ -119,7 +123,7 @@ end
 function calculateAttributeValue(attr, item_level)
     if attr.percentage then
         -- Fixed range of 1-10% for percentage-based enchantments
-        return math.random(1, 10)
+        return math.random(1, US_CONFIG.MAX_PERCENTAGE_ROLL)
     elseif attr.VALUES_PER_LEVEL then
         -- For non-percentage attributes
         local maxValue = math.ceil(item_level * attr.VALUES_PER_LEVEL)

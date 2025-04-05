@@ -1,16 +1,14 @@
--- data\scripts\custom\itemupgrades\config.lua
+s-- data\scripts\custom\itemupgrades\config.lua
 ITEM_UPGRADE_CRYSTAL = 1
 ITEM_AUGMENTING_CRYSTAL = 2
 ITEM_ALTER_CRYSTAL = 3
 ITEM_SCOURING_CRYSTAL = 4
 ITEM_EXALT_CRYSTAL = 5
 ITEM_CHAOS_CRYSTAL = 6
-
 COMMON = 1
 RARE = 2
 EPIC = 3
 LEGENDARY = 4
-
 US_CONFIG = {
     {
         -- crystals here can be extracted using Crystal Extractor
@@ -45,11 +43,14 @@ US_CONFIG = {
     UPGRADE_DESTROY_CHANCE = {
         [7] = 30,
         [8] = 15,
-        [9] = 5
+        [9] = 10,
+        [10] = 5
     }, -- chance for the item to break at given upgrade level
     --
     MAX_ITEM_LEVEL = 300, -- max that Item Level can be assigned to item
-    MAX_UPGRADE_LEVEL = 9, -- max level that item can be upgraded to,
+    MAX_UPGRADE_LEVEL = 10, -- max level that item can be upgraded to,
+    MAX_PERCENTAGE_ROLL = 10,
+    ALLOW_DUPLICATE_ENCHANTS = true, -- allow duplicate enchants on item
     --
     ATTACK_PER_ITEM_LEVEL = 10, -- every X Item Level +ATTACK_FROM_ITEM_LEVEL attack
     ATTACK_FROM_ITEM_LEVEL = 1, -- +X bonus attack for every ATTACK_PER_ITEM_LEVEL
@@ -148,258 +149,253 @@ US_ENCHANTMENTS = {
         name = "Max HP",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_STAT_MAXHITPOINTSPERCENT, -- Changed from MAXHITPOINTS to MAXHITPOINTSPERCENT
-        VALUES_PER_LEVEL = 0.05, -- Will now generate values like 5-10% instead of flat values
-        percentage = true, -- Flag to indicate this is a percentage-based enchantment
+        param = CONDITION_PARAM_STAT_MAXHITPOINTSPERCENT,
+        VALUES_PER_LEVEL = 1,
+        percentage = true,
         format = function(value)
-            return "Max HP +" .. value .. "%%"
+            return "Max HP +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS
+        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
     [2] = {
         name = "Max MP",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
         param = CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT,
-        VALUES_PER_LEVEL = 0.05,
+        VALUES_PER_LEVEL = 1,
         percentage = true,
         format = function(value)
-            return "Max MP +" .. value .. "%%"
+            return "Max MP +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
+        itemType = US_ITEM_TYPES.WEAPON_WAND + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
     [3] = {
         name = "Magic Level",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
         param = CONDITION_PARAM_STAT_MAGICPOINTSPERCENT,
-        VALUES_PER_LEVEL = 0.05,
+        VALUES_PER_LEVEL = 1,
         percentage = true,
         format = function(value)
-            return "Magic Level +" .. value .. "%%"
+            return "Magic Level +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
+        itemType = US_ITEM_TYPES.WEAPON_WAND + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
     [4] = {
         name = "Melee Skills",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
         param = CONDITION_PARAM_SKILL_MELEEPERCENT,
-        VALUES_PER_LEVEL = 0.05,
+        VALUES_PER_LEVEL = 1,
         percentage = true,
         format = function(value)
-            return "Melee Skills +" .. value .. "%%"
+            return "Melee Skills +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
+        itemType = US_ITEM_TYPES.WEAPON_MELEE + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
     [5] = {
         name = "Distance Fighting",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
         param = CONDITION_PARAM_SKILL_DISTANCEPERCENT,
-        VALUES_PER_LEVEL = 0.05,
+        VALUES_PER_LEVEL = 1,
         percentage = true,
         format = function(value)
-            return "Distance Fighting +" .. value .. "%%"
+            return "Distance Fighting +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
+        itemType = US_ITEM_TYPES.WEAPON_DISTANCE + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
     [6] = {
-        name = "Shielding",
-        combatType = US_TYPES.CONDITION,
-        condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_SKILL_SHIELDPERCENT,
-        VALUES_PER_LEVEL = 0.05,
-        percentage = true,
-        format = function(value)
-            return "Shielding +" .. value .. "%%"
-        end,
-        itemType = US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
-    },
-    [7] = {
-        name = "Life Steal",
-        combatType = US_TYPES.OFFENSIVE,
-        VALUES_PER_LEVEL = 0.05,
-        percentage = true,
-        format = function(value)
-            return "Heal for " .. value .. "%% of dealt damage"
-        end,
-        itemType = US_ITEM_TYPES.WEAPON_MELEE + US_ITEM_TYPES.WEAPON_DISTANCE,
-        chance = 10
-    },
-    [8] = {
         name = "Physical Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_PHYSICALDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.05,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Physical Damage +" .. value .. "%%"
+            return "Physical Damage +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
+        itemType = US_ITEM_TYPES.WEAPON_MELEE + US_ITEM_TYPES.RING + US_ITEM_TYPES.WEAPON_DISTANCE + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
-    [9] = {
+    [7] = {
         name = "Energy Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.05,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Energy Damage +" .. value .. "%%"
+            return "Energy Damage +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
+        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
-    [10] = {
+    [8] = {
         name = "Earth Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_EARTHDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.2,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Earth Damage +" .. value .. "%%"
+            return "Earth Damage +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
+        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
-    [11] = {
+    [9] = {
         name = "Fire Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_FIREDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.2,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Fire Damage +" .. value .. "%%"
+            return "Fire Damage +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
+        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
-    [12] = {
+    [10] = {
         name = "Ice Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_ICEDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.2,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Ice Damage +" .. value .. "%%"
+            return "Ice Damage +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
+        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
-    [13] = {
+    [11] = {
         name = "Holy Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_HOLYDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.2,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Holy Damage +" .. value .. "%%"
+            return "Holy Damage +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
+        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
-    [14] = {
+    [12] = {
         name = "Death Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_DEATHDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.2,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Death Damage +" .. value .. "%%"
+            return "Death Damage +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS
+        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
-    [15] = {
+    [13] = {
         name = "Elemental Damage",
         combatType = US_TYPES.OFFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE + COMBAT_ICEDAMAGE +
             COMBAT_HOLYDAMAGE + COMBAT_DEATHDAMAGE,
-        VALUES_PER_LEVEL = 0.2,
+        VALUES_PER_LEVEL = 1,
         percentage = true,
         format = function(value)
-            return "Elemental Damage +" .. value .. "%%"
+            return "Elemental Damage +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS,
-        chance = 10
+        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.BOOTS,
+        minLevel = 8
     },
-    [16] = {
+    [14] = {
         name = "Physical Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_PHYSICALDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.1,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Physical Protection +" .. value .. "%%"
+            return "Physical Protection +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
-            US_ITEM_TYPES.LEGS
+        itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.LEGS,
+        minLevel = 8
     },
-    [17] = {
+    [15] = {
         name = "Energy Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.15,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Energy Protection +" .. value .. "%%"
+            return "Energy Protection +" .. value .. "%"
         end,
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
-            US_ITEM_TYPES.LEGS
+            US_ITEM_TYPES.LEGS,
+        minLevel = 8
     },
-    [18] = {
+    [16] = {
         name = "Earth Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_EARTHDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.15,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Earth Protection +" .. value .. "%%"
+            return "Earth Protection +" .. value .. "%"
         end,
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
-            US_ITEM_TYPES.LEGS
+            US_ITEM_TYPES.LEGS,
+        minLevel = 8
     },
-    [19] = {
+    [17] = {
         name = "Fire Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_FIREDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.15,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Fire Protection +" .. value .. "%%"
+            return "Fire Protection +" .. value .. "%"
         end,
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
-            US_ITEM_TYPES.LEGS
+            US_ITEM_TYPES.LEGS,
+        minLevel = 8
     },
-    [20] = {
+    [18] = {
         name = "Ice Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_ICEDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.15,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Ice Protection +" .. value .. "%%"
+            return "Ice Protection +" .. value .. "%"
         end,
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
-            US_ITEM_TYPES.LEGS
+            US_ITEM_TYPES.LEGS,
+        minLevel = 8
     },
-    [21] = {
+    [19] = {
         name = "Holy Protection",
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_HOLYDAMAGE,
         percentage = true,
-        VALUES_PER_LEVEL = 0.15,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Holy Protection +" .. value .. "%%"
+            return "Holy Protection +" .. value .. "%"
         end,
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
-            US_ITEM_TYPES.LEGS
+            US_ITEM_TYPES.LEGS,
+        minLevel = 8
     },
-    [22] = {
+    [20] = {
         name = "Death Protection",
         percentage = true,
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_DEATHDAMAGE,
-        VALUES_PER_LEVEL = 0.15,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Death Protection +" .. value .. "%%"
+            return "Death Protection +" .. value .. "%"
         end,
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
-            US_ITEM_TYPES.LEGS
+            US_ITEM_TYPES.LEGS,
+        minLevel = 8
     },
     [23] = {
         name = "Elemental Protection",
@@ -407,78 +403,101 @@ US_ENCHANTMENTS = {
         combatType = US_TYPES.DEFENSIVE,
         combatDamage = COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE + COMBAT_ICEDAMAGE +
             COMBAT_HOLYDAMAGE + COMBAT_DEATHDAMAGE,
-        VALUES_PER_LEVEL = 0.05,
+        VALUES_PER_LEVEL = 1,
         format = function(value)
-            return "Elemental Protection +" .. value .. "%%"
+            return "Elemental Protection +" .. value .. "%"
         end,
         itemType = US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.BOOTS + US_ITEM_TYPES.HELMET +
             US_ITEM_TYPES.LEGS,
-        chance = 10
+        minLevel = 8
     },
-    [24] = {
-        name = "Health on Kill",
-        percentage = true,
-        combatType = US_TYPES.TRIGGER,
-        triggerType = US_TRIGGERS.KILL,
-        VALUES_PER_LEVEL = 2,
-        execute = function(player, value, center, target)
-            player:addHealth(value)
-        end,
-        format = function(value)
-            return "Regenerate " .. value .. " Health on Kill"
-        end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE,
-        chance = 25
-    },
-    [25] = {
-        name = "Mana on Kill",
-        percentage = true,
-        combatType = US_TYPES.TRIGGER,
-        triggerType = US_TRIGGERS.KILL,
-        VALUES_PER_LEVEL = 3,
-        execute = function(player, value, center, target)
-            player:addMana(value)
-        end,
-        format = function(value)
-            return "Regenerate " .. value .. " Mana on Kill"
-        end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE,
-        chance = 25
-    },
-    [26] = {
-        name = "Mana Steal",
-        percentage = true,
-        combatType = US_TYPES.OFFENSIVE,
-        VALUES_PER_LEVEL = 0.1,
-        format = function(value)
-            return "Regenerate Mana for " .. value .. "%% of dealt damage"
-        end,
-        itemType = US_ITEM_TYPES.WEAPON_WAND + US_ITEM_TYPES.WEAPON_DISTANCE,
-        chance = 10
-    },
-    [27] = {
-        name = "Increased Healing",
-        percentage = true,
-        VALUES_PER_LEVEL = 0.35,
-        format = function(value)
-            return value .. "%% more healing from all sources"
-        end,
-        itemType = US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE,
-        minLevel = 25,
-        chance = 20
-    },
-    [28] = {
-        name = "Double Damage",
-        percentage = true,
-        combatType = US_TYPES.OFFENSIVE,
-        combatDamage = COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE + COMBAT_ICEDAMAGE +
-            COMBAT_HOLYDAMAGE + COMBAT_DEATHDAMAGE + COMBAT_PHYSICALDAMAGE,
-        VALUES_PER_LEVEL = 0.05,
-        format = function(value)
-            return value .. "%% to deal double damage"
-        end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY,
-        minLevel = 80,
-        chance = 5
-    }
+    -- [6] = {
+    --     name = "Shielding",
+    --     combatType = US_TYPES.CONDITION,
+    --     condition = CONDITION_ATTRIBUTES,
+    --     param = CONDITION_PARAM_SKILL_SHIELDPERCENT,
+    --     VALUES_PER_LEVEL = 1,
+    --     percentage = true,
+    --     format = function(value)
+    --         return "Shielding +" .. value .. "%"
+    --     end,
+    --     itemType = US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE
+    -- },
+    -- [7] = {
+    --     name = "Life Steal",
+    --     combatType = US_TYPES.OFFENSIVE,
+    --     VALUES_PER_LEVEL = 1,
+    --     percentage = true,
+    --     format = function(value)
+    --         return "Heal for " .. value .. "% of dealt damage"
+    --     end,
+    --     itemType = US_ITEM_TYPES.WEAPON_MELEE + US_ITEM_TYPES.WEAPON_DISTANCE,
+    --     chance = 10
+    -- },
+    -- [24] = {
+    --     name = "Health on Kill",
+    --     percentage = true,
+    --     combatType = US_TYPES.TRIGGER,
+    --     triggerType = US_TRIGGERS.KILL,
+    --     VALUES_PER_LEVEL = 2,
+    --     execute = function(player, value, center, target)
+    --         player:addHealth(value)
+    --     end,
+    --     format = function(value)
+    --         return "Regenerate " .. value .. " Health on Kill"
+    --     end,
+    --     itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE,
+    --     chance = 25
+    -- },
+    -- [25] = {
+    --     name = "Mana on Kill",
+    --     percentage = true,
+    --     combatType = US_TYPES.TRIGGER,
+    --     triggerType = US_TRIGGERS.KILL,
+    --     VALUES_PER_LEVEL = 3,
+    --     execute = function(player, value, center, target)
+    --         player:addMana(value)
+    --     end,
+    --     format = function(value)
+    --         return "Regenerate " .. value .. " Mana on Kill"
+    --     end,
+    --     itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE,
+    --     chance = 25
+    -- },
+    -- [26] = {
+    --     name = "Mana Steal",
+    --     percentage = true,
+    --     combatType = US_TYPES.OFFENSIVE,
+    --     VALUES_PER_LEVEL = 0.1,
+    --     format = function(value)
+    --         return "Regenerate Mana for " .. value .. "% of dealt damage"
+    --     end,
+    --     itemType = US_ITEM_TYPES.WEAPON_WAND + US_ITEM_TYPES.WEAPON_DISTANCE,
+    --     chance = 10
+    -- },
+    -- [27] = {
+    --     name = "Increased Healing",
+    --     percentage = true,
+    --     VALUES_PER_LEVEL = 0.35,
+    --     format = function(value)
+    --         return value .. "% more healing from all sources"
+    --     end,
+    --     itemType = US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE,
+    --     minLevel = 25,
+    --     chance = 20
+    -- },
+    -- [28] = {
+    --     name = "Double Damage",
+    --     percentage = true,
+    --     combatType = US_TYPES.OFFENSIVE,
+    --     combatDamage = COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE + COMBAT_ICEDAMAGE +
+    --         COMBAT_HOLYDAMAGE + COMBAT_DEATHDAMAGE + COMBAT_PHYSICALDAMAGE,
+    --     VALUES_PER_LEVEL = 1,
+    --     format = function(value)
+    --         return value .. "% to deal double damage"
+    --     end,
+    --     itemType = US_ITEM_TYPES.WEAPON_ANY,
+    --     minLevel = 80,
+    --     chance = 5
+    -- }
 }

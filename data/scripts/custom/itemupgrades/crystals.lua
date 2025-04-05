@@ -575,7 +575,7 @@ local function handleDiviningCrystal(player, item, target)
         -- Calculate new value
         local newValue = 1
         if attr.percentage then
-            newValue = math.random(1, 10) -- Fixed 1-10% range
+            newValue = math.random(1, US_CONFIG.MAX_PERCENTAGE_ROLL)
         else
             local item_level = target:getItemLevel()
             if attr.VALUES_PER_LEVEL then
