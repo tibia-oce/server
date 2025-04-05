@@ -1,4 +1,4 @@
-s-- data\scripts\custom\itemupgrades\config.lua
+-- data\scripts\custom\itemupgrades\config.lua
 ITEM_UPGRADE_CRYSTAL = 1
 ITEM_AUGMENTING_CRYSTAL = 2
 ITEM_ALTER_CRYSTAL = 3
