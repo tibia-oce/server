@@ -406,19 +406,13 @@ end
 -- @param secondaryType number: Secondary damage type
 -- @return table: Table with modified damage values
 function processAttackerModifiers(attacker, target, primaryDamage, primaryType, secondaryDamage, secondaryType)
-    print("[processAttackerModifiers] Attacker ID:", attacker:getId())
-    print(string.format("Initial Damage: Primary=%d (Type=%d), Secondary=%d (Type=%d)", primaryDamage, primaryType, secondaryDamage, secondaryType))
-
     local pid = attacker:getId()
     if US_BUFFS[pid] and US_BUFFS[pid][1] then
-        print("[Buffs] Found active buff for player:", US_BUFFS[pid][1].name or "Unknown", "Value:", US_BUFFS[pid][1].value)
         if primaryDamage ~= 0 then
             primaryDamage = primaryDamage + (primaryDamage * US_BUFFS[pid][1].value / 100)
-            print("[Buffs] Modified Primary Damage:", primaryDamage)
         end
         if secondaryDamage ~= 0 then
             secondaryDamage = secondaryDamage + (secondaryDamage * US_BUFFS[pid][1].value / 100)
-            print("[Buffs] Modified Secondary Damage:", secondaryDamage)
         end
     end
 
@@ -432,51 +426,35 @@ function processAttackerModifiers(attacker, target, primaryDamage, primaryType, 
         local item = attacker:getSlotItem(slot)
         if item and item:getType():usesSlot(slot) then
             local values = item:getBonusAttributes()
-            print(string.format("[Slot %d] Checking item: %s", slot, item:getName()))
-
             if values then
                 for key, value in pairs(values) do
                     local attr = US_ENCHANTMENTS[value[1]]
-                    print(string.format("[Attr] Key: %s, Value: %s", tostring(key), tostring(value[1])))
-
                     if attr and attr.combatType and attr.combatType ~= US_TYPES.CONDITION then
-                        print(string.format("[Attr] Processing %s (Type=%s)", attr.name, attr.combatType))
-
                         if attr.combatType == US_TYPES.TRIGGER and attr.triggerType == US_TRIGGERS.ATTACK then
-                            print(string.format("[Trigger] Executing trigger for %s", attr.name))
                             attr.execute(attacker, target, value[2])
                         elseif attr.name == "Double Damage" then
-                            print("[Attr] Adding Double Damage bonus:", value[2])
                             doubleDamageTotal = doubleDamageTotal + value[2]
                         else
                             if attr.combatDamage then
-                                print(string.format("[Attr] Checking combatDamage flag: %d", attr.combatDamage))
-
                                 if primaryType > 0 and attr.combatType == US_TYPES.OFFENSIVE then
                                     local match = (attr.combatDamage % (primaryType + primaryType) >= primaryType)
-                                    print(string.format("[Primary Check] combatDamage %% (%d) = %s", primaryType + primaryType, tostring(match)))
                                     if match then
                                         primaryDamageTotal = primaryDamageTotal + value[2]
-                                        print("[Primary Check] Added to primaryDamageTotal:", value[2])
                                     end
                                 end
 
                                 if secondaryType > 0 and attr.combatType == US_TYPES.OFFENSIVE then
                                     local match = (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType)
-                                    print(string.format("[Secondary Check] combatDamage %% (%d) = %s", secondaryType + secondaryType, tostring(match)))
                                     if match then
                                         secondaryDamageTotal = secondaryDamageTotal + value[2]
-                                        print("[Secondary Check] Added to secondaryDamageTotal:", value[2])
                                     end
                                 end
                             end
 
                             if attr.name == "Life Steal" then
                                 lifeStealTotal = lifeStealTotal + value[2]
-                                print("[Attr] Added Life Steal:", value[2])
                             elseif attr.name == "Mana Steal" then
                                 manaStealTotal = manaStealTotal + value[2]
-                                print("[Attr] Added Mana Steal:", value[2])
                             end
                         end
                     end
@@ -488,23 +466,19 @@ function processAttackerModifiers(attacker, target, primaryDamage, primaryType, 
     -- Apply double damage
     if doubleDamageTotal > 0 then
         local roll = math.random(100)
-        print(string.format("[Double Damage] Roll=%d vs Threshold=%d", roll, doubleDamageTotal))
         if roll < doubleDamageTotal then
             primaryDamage = primaryDamage * 2
             secondaryDamage = secondaryDamage * 2
-            print("[Double Damage] Applied!")
         end
     end
 
     if primaryDamageTotal > 0 then
         local bonus = math.floor(primaryDamage * primaryDamageTotal / 100)
         primaryDamage = math.floor(primaryDamage + bonus)
-        print("[Bonus] Primary Damage Increased by", bonus, "to", primaryDamage)
     end
     if secondaryDamageTotal > 0 then
         local bonus = math.floor(secondaryDamage * secondaryDamageTotal / 100)
         secondaryDamage = math.floor(secondaryDamage + bonus)
-        print("[Bonus] Secondary Damage Increased by", bonus, "to", secondaryDamage)
     end
 
     -- Apply life/mana steal
@@ -513,18 +487,15 @@ function processAttackerModifiers(attacker, target, primaryDamage, primaryType, 
         local heal = math.floor((damage * lifeStealTotal / 100))
         if heal > 0 then
             attacker:addHealth(heal)
-            print("[Life Steal] Recovered HP:", heal)
         end
     end
     if manaStealTotal > 0 then
         local mp = math.floor((damage * manaStealTotal / 100))
         if mp > 0 then
             attacker:addMana(mp)
-            print("[Mana Steal] Recovered MP:", mp)
         end
     end
 
-    print(string.format("[Return] Final Primary=%d, Secondary=%d", primaryDamage, secondaryDamage))
     return {
         primaryDamage = primaryDamage,
         secondaryDamage = secondaryDamage
@@ -540,8 +511,6 @@ end
 -- @param secondaryType number: Secondary damage type
 -- @return table: Table with modified damage values
 function processDefenderModifiers(defender, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType)
-    print(string.format("[processDefenderModifiers] Defender ID: %d", defender:getId()))
-    print(string.format("Initial Damage: Primary=%d (Type=%d), Secondary=%d (Type=%d)", primaryDamage, primaryType, secondaryDamage, secondaryType))
 
     local primaryDamageTotal = 0
     local secondaryDamageTotal = 0
@@ -549,32 +518,24 @@ function processDefenderModifiers(defender, attacker, primaryDamage, primaryType
     for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
         local item = defender:getSlotItem(slot)
         if item and item:getType():usesSlot(slot) then
-            print(string.format("[Slot %d] Checking item: %s", slot, item:getName()))
             local values = item:getBonusAttributes()
             if values then
                 for key, value in pairs(values) do
                     local attr = US_ENCHANTMENTS[value[1]]
-                    print(string.format("[Attr] Key: %s, Value: %s", tostring(key), tostring(value[2])))
                     if attr and attr.combatType and attr.combatType ~= US_TYPES.CONDITION then
-                        print(string.format("[Attr] Processing %s (Type=%s)", attr.name, tostring(attr.combatType)))
                         if attr.combatType == US_TYPES.TRIGGER then
                             if attr.triggerType == US_TRIGGERS.HIT then
                                 attr.execute(defender, attacker, value[2])
                             end
                         elseif attr.combatDamage then
-                            print(string.format("[Attr] Checking combatDamage flag: %s", tostring(attr.combatDamage)))
-
-                            if primaryType ~= 0 and
-                                (attr.combatDamage % (primaryType + primaryType) >= primaryType) and
+                            if primaryType ~= 0 and (attr.combatDamage % (primaryType + primaryType) >= primaryType) and
                                 attr.combatType == US_TYPES.DEFENSIVE then
-                                print(string.format("[Primary Check] combatDamage %% (%d) = true", primaryType + primaryType))
                                 primaryDamageTotal = primaryDamageTotal + value[2]
                             end
 
                             if secondaryType ~= 0 and
                                 (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) and
                                 attr.combatType == US_TYPES.DEFENSIVE then
-                                print(string.format("[Secondary Check] combatDamage %% (%d) = true", secondaryType + secondaryType))
                                 secondaryDamageTotal = secondaryDamageTotal + value[2]
                             end
                         end
@@ -588,16 +549,13 @@ function processDefenderModifiers(defender, attacker, primaryDamage, primaryType
     if primaryDamageTotal > 0 then
         local reduced = math.floor(primaryDamage * primaryDamageTotal / 100)
         primaryDamage = math.floor(primaryDamage - reduced)
-        print(string.format("[Primary Reduction] -%d (%d%%)", reduced, primaryDamageTotal))
     end
 
     if secondaryDamageTotal > 0 then
         local reduced = math.floor(secondaryDamage * secondaryDamageTotal / 100)
         secondaryDamage = math.floor(secondaryDamage - reduced)
-        print(string.format("[Secondary Reduction] -%d (%d%%)", reduced, secondaryDamageTotal))
     end
 
-    print(string.format("[Return] Final Primary=%d, Secondary=%d", primaryDamage, secondaryDamage))
     return {
         primaryDamage = primaryDamage,
         secondaryDamage = secondaryDamage
@@ -656,10 +614,30 @@ function enhanceMindCrystalDescription(crystal, description, lookDistance)
     return description
 end
 
+--- Adjusts the default “It can only be wielded properly by … of level X or higher” line,
+--  overriding the X requirement if the item's custom item level is higher.
+-- @param description string: The current item description (including TFS's default text).
+-- @param item Item: The upgradable item whose level we want to apply.
+-- @return string: The updated item description with the adjusted wield-requirement line.
+local function overrideRequiredLevelText(description, item)
+    description = description:gsub("(It can only be wielded properly by [^%.]- of level )(%d+)( or higher)",
+        function(prefix, reqStr, suffix)
+            local defaultLevel = tonumber(reqStr) or 0
+            local itemLevel = item:getItemLevel()
+            if itemLevel > defaultLevel then
+                -- If the item's level is greater, override the default required level
+                return prefix .. itemLevel .. suffix
+            end
+            -- Otherwise leave the default requirement unchanged
+            return prefix .. reqStr .. suffix
+        end)
+
+    return description
+end
+
 --- Enhance upgradable item description with item properties and bonuses
 -- @param item Item: The upgradable item
--- @param description string: The current description
--- @param lookDistance number: The distance from which the player is looking
+-- @param description string: The current (TFS) description
 -- @return string: The enhanced description
 function enhanceUpgradableItemDescription(item, description)
     local name = item:getName()
@@ -668,27 +646,23 @@ function enhanceUpgradableItemDescription(item, description)
     local rarity = item:getRarity()
     local bonuses = item:getBonusAttributes()
 
-    -- Force prefix "You see" if missing:
+    -- Ensure the prefix "You see" exists
     if not description:match("^You see") then
         description = "You see " .. description
     end
 
-    -- Insert rarity name (e.g., "epic") into the "You see..." line
+    -- Insert rarity name in the "You see..." line
     if rarity and rarity.name and rarity.name ~= "" then
         local pattern = "You see (an? )" .. name
         if description:match(pattern) then
-            -- e.g. "You see a leather boots" -> "You see a epic leather boots"
             description = description:gsub(pattern, "You see %1" .. rarity.name .. " " .. name)
         else
-            -- Fallback if it didn't match
-            -- "You see leather boots" -> "You see epic leather boots"
             description = description:gsub("You see ([^%(]+)", "You see " .. rarity.name .. " %1")
         end
     end
 
-    -- Insert upgrade (e.g., +2) in the item name line
+    -- Insert upgrade (e.g. "+8") after the item’s base name
     if upgrade and upgrade > 0 then
-        -- If "You see ... boots" was found, add " +X" after "boots"
         local pattern = "You see (.-" .. name .. ")"
         if description:match(pattern) then
             description = description:gsub(pattern, "You see %1 +" .. upgrade)
@@ -700,36 +674,43 @@ function enhanceUpgradableItemDescription(item, description)
         description = description:gsub(item:getName(), item:getUniqueName())
     end
 
-    -- Remove any existing "Item Level: N" lines
+    -- Remove any old "Item Level: X" lines
     description = description:gsub("\nItem Level:%s?%d+", "")
 
-    -- Append "Item Level: X" at the very end of the item stats
-    -- but before the enchantment lines:
-    description = description .. "\nItem Level: " .. itemLevel
+    -- === [ Attributes ] section ===
+    -- Always add a blank line before the attributes header
+    description = description .. "\n\n[ Attributes ]" .. "\nItem Level: " .. itemLevel
 
-    -- Now append any custom enchantment bonuses
-    if bonuses then
+    -- === [ Enchantments ] section (only if there are any bonuses) ===
+    if bonuses and #bonuses > 0 then
+        local enchantSection = "\n\n[ Enchantments ]"
+
         for _, bonus in ipairs(bonuses) do
             local attrId, value = bonus[1], bonus[2]
             local attr = US_ENCHANTMENTS[attrId]
             if attr then
                 local formatted = attr.format(value)
-                -- Only append if not already there
+                -- Add each enchantment line if not already found
                 if formatted and not description:find(formatted, 1, true) then
-                    description = description .. "\n" .. formatted
+                    enchantSection = enchantSection .. "\n" .. formatted
                 end
             end
         end
+
+        -- Append the entire enchantments block
+        description = description .. enchantSection
     end
 
-    -- If mirrored, tack that on at the end
+    -- If mirrored, add a line
     if item:isMirrored() and not description:find("Mirrored") then
         description = description .. "\nMirrored"
     end
 
+    -- Finally, override TFS's “level XX or higher” if item level is bigger
+    description = overrideRequiredLevelText(description, item)
+
     return description
 end
-
 
 --- Enhance description for items with item level
 -- @param item Item: The item with item level
@@ -738,19 +719,19 @@ end
 -- @return string: The enhanced description
 function enhanceItemLevelDescription(item, description, lookDistance)
     local itemLevel = item:getItemLevel()
-    
+
     -- Ensure description starts with "You see"
     if not description:match("^You see") then
         description = "You see " .. description
     end
-    
+
     -- Get the item type to access the default description
     local itemType = ItemType(item:getId())
     local defaultDesc = itemType and itemType:getDescription() or ""
-    
+
     -- First, remove any existing Item Level info (in case we're updating an item)
     description = description:gsub("\nItem Level: %d+", "")
-    
+
     -- Only show the default description when close enough
     if lookDistance <= 1 then
         -- Check if the item has a custom description from items.xml
@@ -779,7 +760,7 @@ function enhanceItemLevelDescription(item, description, lookDistance)
             description = description .. "\nItem Level: " .. itemLevel
         end
     end
-    
+
     return description
 end
 
@@ -839,7 +820,7 @@ function us_onEquip(cid, iuid, slot)
             applyConditionBonus(player, item, bonusId, bonusValue, attr, slot, i, maxHP, maxMP)
         end
     end
-    
+
     -- Ensure item has all required augments based on enchantments
     syncItemAugments(item)
 end
@@ -871,7 +852,7 @@ function applyConditionBonus(player, item, bonusId, bonusValue, attr, slot, inde
         if attr.condition ~= CONDITION_MANASHIELD then
             US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_SUBID,
                 1000 + player:getNextSubId(slot, index))
-                
+
             -- Handle percentage-based attributes differently
             if attr.percentage then
                 -- For percentage attributes, we add to 100 (base value)
@@ -880,7 +861,7 @@ function applyConditionBonus(player, item, bonusId, bonusValue, attr, slot, inde
                 -- For flat values, use the value directly
                 US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(attr.param, bonusValue)
             end
-            
+
             US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, -1)
         else
             US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_TICKS, 86400000)
@@ -889,21 +870,25 @@ function applyConditionBonus(player, item, bonusId, bonusValue, attr, slot, inde
         US_CONDITIONS[bonusId][bonusValue][itemId]:setParameter(CONDITION_PARAM_BUFF_SPELL, true)
         player:addCondition(US_CONDITIONS[bonusId][bonusValue][itemId])
 
-        if attr.param == CONDITION_PARAM_STAT_MAXHITPOINTS or attr.param == CONDITION_PARAM_STAT_MAXHITPOINTSPERCENT and player:getHealth() == maxHP then
+        if attr.param == CONDITION_PARAM_STAT_MAXHITPOINTS or attr.param == CONDITION_PARAM_STAT_MAXHITPOINTSPERCENT and
+            player:getHealth() == maxHP then
             player:addHealth(player:getMaxHealth())
         end
 
-        if attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTS or attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT and player:getMana() == maxMP then
+        if attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTS or attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT and
+            player:getMana() == maxMP then
             player:addMana(player:getMaxMana())
         end
     else
         player:addCondition(US_CONDITIONS[bonusId][bonusValue][itemId])
 
-        if attr.param == CONDITION_PARAM_STAT_MAXHITPOINTS or attr.param == CONDITION_PARAM_STAT_MAXHITPOINTSPERCENT and player:getHealth() == maxHP then
+        if attr.param == CONDITION_PARAM_STAT_MAXHITPOINTS or attr.param == CONDITION_PARAM_STAT_MAXHITPOINTSPERCENT and
+            player:getHealth() == maxHP then
             player:addHealth(player:getMaxHealth())
         end
 
-        if attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTS or attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT and player:getMana() == maxMP then
+        if attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTS or attr.param == CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT and
+            player:getMana() == maxMP then
             player:addMana(player:getMaxMana())
         end
     end
@@ -974,7 +959,6 @@ function Item.isUnidentified(self)
     return false
 end
 
--- Register events
 local TargetCombatEvent = EventCallback
 TargetCombatEvent.onTargetCombat = function(creature, target)
     target:registerEvent("UpgradeSystemHealth")
@@ -982,7 +966,6 @@ TargetCombatEvent.onTargetCombat = function(creature, target)
     return RETURNVALUE_NOERROR
 end
 TargetCombatEvent:register()
-
 
 local AugmentSyncLoginEvent = CreatureEvent("AugmentSyncLogin")
 function AugmentSyncLoginEvent.onLogin(player)
@@ -1008,7 +991,6 @@ function initializeAugmentIntegration()
     end
 end
 
--- Register login event
 local LoginEvent = CreatureEvent("UpgradeSystemLogin")
 function LoginEvent.onLogin(player)
     us_onLogin(player)
@@ -1020,9 +1002,9 @@ AugmentSyncLoginEvent:register()
 LoginEvent:type("login")
 LoginEvent:register()
 
--- Register health change event
 local HealthChangeEvent = CreatureEvent("UpgradeSystemHealth")
-function HealthChangeEvent.onHealthChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
+function HealthChangeEvent.onHealthChange(creature, attacker, primaryDamage, primaryType, secondaryDamage,
+    secondaryType, origin)
     if not creature or not attacker then
         return primaryDamage, primaryType, secondaryDamage, secondaryType
     end
@@ -1048,9 +1030,9 @@ end
 HealthChangeEvent:type("healthchange")
 HealthChangeEvent:register()
 
--- Register mana change event
 local ManaChangeEvent = CreatureEvent("UpgradeSystemMana")
-function ManaChangeEvent.onManaChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
+function ManaChangeEvent.onManaChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType,
+    origin)
     if not creature or not attacker then
         return primaryDamage, primaryType, secondaryDamage, secondaryType
     end
@@ -1059,8 +1041,8 @@ function ManaChangeEvent.onManaChange(creature, attacker, primaryDamage, primary
         return primaryDamage, primaryType, secondaryDamage, secondaryType
     end
 
-    if primaryType == COMBAT_LIFEDRAIN or secondaryType == COMBAT_LIFEDRAIN or
-       primaryType == COMBAT_MANADRAIN or secondaryType == COMBAT_MANADRAIN then
+    if primaryType == COMBAT_LIFEDRAIN or secondaryType == COMBAT_LIFEDRAIN or primaryType == COMBAT_MANADRAIN or
+        secondaryType == COMBAT_MANADRAIN then
         return primaryDamage, primaryType, secondaryDamage, secondaryType
     end
 
@@ -1077,7 +1059,6 @@ end
 ManaChangeEvent:type("manachange")
 ManaChangeEvent:register()
 
--- Register death event
 local DeathEvent = CreatureEvent("UpgradeSystemDeath")
 function DeathEvent.onDeath(creature, corpse, lasthitkiller, mostdamagekiller, lasthitunjustified, mostdamageunjustified)
     if not lasthitkiller or not creature:isMonster() or not corpse or corpse.itemid == 0 or not corpse:isContainer() then
@@ -1091,20 +1072,18 @@ end
 DeathEvent:type("death")
 DeathEvent:register()
 
--- Register kill event
 local KillEvent = CreatureEvent("UpgradeSystemKill")
 function KillEvent.onKill(player, target, lastHit)
     if not player or not player:isPlayer() or not target or not target:isMonster() then
         return
     end
-    
+
     local center = target:getPosition()
     processKillTriggers(player, center, target)
 end
 KillEvent:type("kill")
 KillEvent:register()
 
--- Register prepare death event
 local PrepareDeathEvent = CreatureEvent("UpgradeSystemPD")
 function PrepareDeathEvent.onPrepareDeath(creature, killer)
     if creature:isPlayer() then
@@ -1117,28 +1096,24 @@ end
 PrepareDeathEvent:type("preparedeath")
 PrepareDeathEvent:register()
 
--- Register gain experience event
 local GainExperienceEvent = EventCallback
 GainExperienceEvent.onGainExperience = function(player, source, exp, rawExp)
     return calculateModifiedExperience(player, exp)
 end
 GainExperienceEvent:register()
 
--- Register move item event
 local MoveItemEvent = EventCallback
 MoveItemEvent.onMoveItem = function(player, item, count, fromPosition, toPosition, fromCylinder, toCylinder)
     return handleItemMove(player, item, fromPosition, toPosition)
 end
 MoveItemEvent:register()
 
--- Register item moved event
 local ItemMovedEvent = EventCallback
 ItemMovedEvent.onItemMoved = function(player, item, count, fromPosition, toPosition, fromCylinder, toCylinder)
     handleItemMoved(player, item, fromPosition, toPosition)
 end
 ItemMovedEvent:register()
 
--- Register look event
 local LookEvent = EventCallback
 LookEvent.onLook = function(player, thing, position, distance, description)
     return enhanceItemDescription(player, thing, description)
