@@ -15,7 +15,6 @@ function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
     local item_level = self:getItemLevel()
 
     if unidentify then
-
         -- Get exact number of bonus slots based on rarity
         local bonusCount = self:getRarity().maxBonus
         local usItemType = self:getItemType()
@@ -28,6 +27,11 @@ function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
             local attr = US_ENCHANTMENTS[attrId]
             local value = calculateAttributeValue(attr, item_level)
             self:setCustomAttribute("Slot" .. i, attrId .. "|" .. value)
+            
+            -- If this is a combat-related enchantment, add an augment
+            if isCombatEnchantment(attrId) then
+                applyAugmentForEnchantment(self, attrId, value)
+            end
         end
         return true
     else
@@ -56,6 +60,11 @@ function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
 
         -- Add the new attribute
         self:setCustomAttribute("Slot" .. self:getLastSlot() + 1, attrId .. "|" .. value)
+        
+        -- If this is a combat-related enchantment, add an augment
+        if isCombatEnchantment(attrId) then
+            applyAugmentForEnchantment(self, attrId, value)
+        end
 
         -- Update rarity based on new bonus count
         self:updateRarityByBonusCount()
@@ -209,6 +218,9 @@ function Item.updateRarityByBonusCount(self)
         self:setRarity(COMMON)
     end
     self:setAttribute(ITEM_ATTRIBUTE_ACTIONID, self:getActionId())
+    
+    -- Make sure augments match enchantments
+    syncItemAugments(self)
 end
 
 --- Set the item level of an item
@@ -307,11 +319,6 @@ function updateItemAttribute(item, attrType, baseValue, changeValue, isIncrease)
         [ITEM_ATTRIBUTE_HITCHANCE] = "Hit Chance"
     }
     local attrName = attrNameMap[attrType] or ("Attribute " .. tostring(attrType))
-
-    local msg = string.format(
-        "[Upgrade Debug] %s - Base: %d | Current: %d | Change: %d | Increase: %s",
-        attrName, baseValue, currentValue, changeValue, tostring(isIncrease)
-    )
 
     if isIncrease then
         if changeValue == 0 and currentValue < baseValue then

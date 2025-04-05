@@ -1,5 +1,6 @@
 -- data\scripts\custom\itemupgrades\core.lua
 print(">> Loading upgrade system")
+dofile('data/scripts/custom/itemupgrades/augments.lua')
 
 -- Global storage tables
 US_CONDITIONS = {}
@@ -405,18 +406,22 @@ end
 -- @param secondaryType number: Secondary damage type
 -- @return table: Table with modified damage values
 function processAttackerModifiers(attacker, target, primaryDamage, primaryType, secondaryDamage, secondaryType)
-    -- Apply damage buffs
+    print("[processAttackerModifiers] Attacker ID:", attacker:getId())
+    print(string.format("Initial Damage: Primary=%d (Type=%d), Secondary=%d (Type=%d)", primaryDamage, primaryType, secondaryDamage, secondaryType))
+
     local pid = attacker:getId()
     if US_BUFFS[pid] and US_BUFFS[pid][1] then
+        print("[Buffs] Found active buff for player:", US_BUFFS[pid][1].name or "Unknown", "Value:", US_BUFFS[pid][1].value)
         if primaryDamage ~= 0 then
             primaryDamage = primaryDamage + (primaryDamage * US_BUFFS[pid][1].value / 100)
+            print("[Buffs] Modified Primary Damage:", primaryDamage)
         end
         if secondaryDamage ~= 0 then
             secondaryDamage = secondaryDamage + (secondaryDamage * US_BUFFS[pid][1].value / 100)
+            print("[Buffs] Modified Secondary Damage:", secondaryDamage)
         end
     end
 
-    -- Process equipment bonuses
     local doubleDamageTotal = 0
     local primaryDamageTotal = 0
     local secondaryDamageTotal = 0
@@ -427,32 +432,51 @@ function processAttackerModifiers(attacker, target, primaryDamage, primaryType, 
         local item = attacker:getSlotItem(slot)
         if item and item:getType():usesSlot(slot) then
             local values = item:getBonusAttributes()
+            print(string.format("[Slot %d] Checking item: %s", slot, item:getName()))
+
             if values then
                 for key, value in pairs(values) do
                     local attr = US_ENCHANTMENTS[value[1]]
+                    print(string.format("[Attr] Key: %s, Value: %s", tostring(key), tostring(value[1])))
+
                     if attr and attr.combatType and attr.combatType ~= US_TYPES.CONDITION then
-                        if attr.combatType == US_TYPES.TRIGGER then
-                            if attr.triggerType == US_TRIGGERS.ATTACK then
-                                attr.execute(attacker, target, value[2])
-                            end
+                        print(string.format("[Attr] Processing %s (Type=%s)", attr.name, attr.combatType))
+
+                        if attr.combatType == US_TYPES.TRIGGER and attr.triggerType == US_TRIGGERS.ATTACK then
+                            print(string.format("[Trigger] Executing trigger for %s", attr.name))
+                            attr.execute(attacker, target, value[2])
                         elseif attr.name == "Double Damage" then
+                            print("[Attr] Adding Double Damage bonus:", value[2])
                             doubleDamageTotal = doubleDamageTotal + value[2]
                         else
                             if attr.combatDamage then
-                                if (attr.combatDamage % (primaryType + primaryType) >= primaryType) and attr.combatType ==
-                                    US_TYPES.OFFENSIVE then
-                                    primaryDamageTotal = primaryDamageTotal + value[2]
+                                print(string.format("[Attr] Checking combatDamage flag: %d", attr.combatDamage))
+
+                                if primaryType > 0 and attr.combatType == US_TYPES.OFFENSIVE then
+                                    local match = (attr.combatDamage % (primaryType + primaryType) >= primaryType)
+                                    print(string.format("[Primary Check] combatDamage %% (%d) = %s", primaryType + primaryType, tostring(match)))
+                                    if match then
+                                        primaryDamageTotal = primaryDamageTotal + value[2]
+                                        print("[Primary Check] Added to primaryDamageTotal:", value[2])
+                                    end
                                 end
-                                if (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) and
-                                    attr.combatType == US_TYPES.OFFENSIVE then
-                                    secondaryDamageTotal = secondaryDamageTotal + value[2]
+
+                                if secondaryType > 0 and attr.combatType == US_TYPES.OFFENSIVE then
+                                    local match = (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType)
+                                    print(string.format("[Secondary Check] combatDamage %% (%d) = %s", secondaryType + secondaryType, tostring(match)))
+                                    if match then
+                                        secondaryDamageTotal = secondaryDamageTotal + value[2]
+                                        print("[Secondary Check] Added to secondaryDamageTotal:", value[2])
+                                    end
                                 end
                             end
 
                             if attr.name == "Life Steal" then
                                 lifeStealTotal = lifeStealTotal + value[2]
+                                print("[Attr] Added Life Steal:", value[2])
                             elseif attr.name == "Mana Steal" then
                                 manaStealTotal = manaStealTotal + value[2]
+                                print("[Attr] Added Mana Steal:", value[2])
                             end
                         end
                     end
@@ -461,35 +485,46 @@ function processAttackerModifiers(attacker, target, primaryDamage, primaryType, 
         end
     end
 
-    -- Apply double damage chance
-    if doubleDamageTotal > 0 and math.random(100) < doubleDamageTotal then
-        primaryDamage = primaryDamage * 2
-        secondaryDamage = secondaryDamage * 2
+    -- Apply double damage
+    if doubleDamageTotal > 0 then
+        local roll = math.random(100)
+        print(string.format("[Double Damage] Roll=%d vs Threshold=%d", roll, doubleDamageTotal))
+        if roll < doubleDamageTotal then
+            primaryDamage = primaryDamage * 2
+            secondaryDamage = secondaryDamage * 2
+            print("[Double Damage] Applied!")
+        end
     end
 
-    -- Apply damage bonuses
     if primaryDamageTotal > 0 then
-        primaryDamage = math.floor(primaryDamage + (primaryDamage * primaryDamageTotal / 100))
+        local bonus = math.floor(primaryDamage * primaryDamageTotal / 100)
+        primaryDamage = math.floor(primaryDamage + bonus)
+        print("[Bonus] Primary Damage Increased by", bonus, "to", primaryDamage)
     end
     if secondaryDamageTotal > 0 then
-        secondaryDamage = math.floor(secondaryDamage + (secondaryDamage * secondaryDamageTotal / 100))
+        local bonus = math.floor(secondaryDamage * secondaryDamageTotal / 100)
+        secondaryDamage = math.floor(secondaryDamage + bonus)
+        print("[Bonus] Secondary Damage Increased by", bonus, "to", secondaryDamage)
     end
 
     -- Apply life/mana steal
     local damage = math.abs(primaryDamage + secondaryDamage)
     if lifeStealTotal > 0 then
-        local lifeSteal = math.floor((damage * (lifeStealTotal / 100)))
-        if lifeSteal > 0 then
-            attacker:addHealth(lifeSteal)
+        local heal = math.floor((damage * lifeStealTotal / 100))
+        if heal > 0 then
+            attacker:addHealth(heal)
+            print("[Life Steal] Recovered HP:", heal)
         end
     end
     if manaStealTotal > 0 then
-        local manaSteal = math.floor((damage * (manaStealTotal / 100)))
-        if manaSteal > 0 then
-            attacker:addMana(manaSteal)
+        local mp = math.floor((damage * manaStealTotal / 100))
+        if mp > 0 then
+            attacker:addMana(mp)
+            print("[Mana Steal] Recovered MP:", mp)
         end
     end
 
+    print(string.format("[Return] Final Primary=%d, Secondary=%d", primaryDamage, secondaryDamage))
     return {
         primaryDamage = primaryDamage,
         secondaryDamage = secondaryDamage
@@ -505,31 +540,42 @@ end
 -- @param secondaryType number: Secondary damage type
 -- @return table: Table with modified damage values
 function processDefenderModifiers(defender, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType)
+    print(string.format("[processDefenderModifiers] Defender ID: %d", defender:getId()))
+    print(string.format("Initial Damage: Primary=%d (Type=%d), Secondary=%d (Type=%d)", primaryDamage, primaryType, secondaryDamage, secondaryType))
+
     local primaryDamageTotal = 0
     local secondaryDamageTotal = 0
 
     for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
         local item = defender:getSlotItem(slot)
         if item and item:getType():usesSlot(slot) then
+            print(string.format("[Slot %d] Checking item: %s", slot, item:getName()))
             local values = item:getBonusAttributes()
             if values then
                 for key, value in pairs(values) do
                     local attr = US_ENCHANTMENTS[value[1]]
+                    print(string.format("[Attr] Key: %s, Value: %s", tostring(key), tostring(value[2])))
                     if attr and attr.combatType and attr.combatType ~= US_TYPES.CONDITION then
+                        print(string.format("[Attr] Processing %s (Type=%s)", attr.name, tostring(attr.combatType)))
                         if attr.combatType == US_TYPES.TRIGGER then
                             if attr.triggerType == US_TRIGGERS.HIT then
                                 attr.execute(defender, attacker, value[2])
                             end
-                        else
-                            if attr.combatDamage then
-                                if (attr.combatDamage % (primaryType + primaryType) >= primaryType) and attr.combatType ==
-                                    US_TYPES.DEFENSIVE then
-                                    primaryDamageTotal = primaryDamageTotal + value[2]
-                                end
-                                if (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) and
-                                    attr.combatType == US_TYPES.DEFENSIVE then
-                                    secondaryDamageTotal = secondaryDamageTotal + value[2]
-                                end
+                        elseif attr.combatDamage then
+                            print(string.format("[Attr] Checking combatDamage flag: %s", tostring(attr.combatDamage)))
+
+                            if primaryType ~= 0 and
+                                (attr.combatDamage % (primaryType + primaryType) >= primaryType) and
+                                attr.combatType == US_TYPES.DEFENSIVE then
+                                print(string.format("[Primary Check] combatDamage %% (%d) = true", primaryType + primaryType))
+                                primaryDamageTotal = primaryDamageTotal + value[2]
+                            end
+
+                            if secondaryType ~= 0 and
+                                (attr.combatDamage % (secondaryType + secondaryType) >= secondaryType) and
+                                attr.combatType == US_TYPES.DEFENSIVE then
+                                print(string.format("[Secondary Check] combatDamage %% (%d) = true", secondaryType + secondaryType))
+                                secondaryDamageTotal = secondaryDamageTotal + value[2]
                             end
                         end
                     end
@@ -540,12 +586,18 @@ function processDefenderModifiers(defender, attacker, primaryDamage, primaryType
 
     -- Apply damage reduction bonuses
     if primaryDamageTotal > 0 then
-        primaryDamage = math.floor(primaryDamage - (primaryDamage * primaryDamageTotal / 100))
-    end
-    if secondaryDamageTotal > 0 then
-        secondaryDamage = math.floor(secondaryDamage - (secondaryDamage * secondaryDamageTotal / 100))
+        local reduced = math.floor(primaryDamage * primaryDamageTotal / 100)
+        primaryDamage = math.floor(primaryDamage - reduced)
+        print(string.format("[Primary Reduction] -%d (%d%%)", reduced, primaryDamageTotal))
     end
 
+    if secondaryDamageTotal > 0 then
+        local reduced = math.floor(secondaryDamage * secondaryDamageTotal / 100)
+        secondaryDamage = math.floor(secondaryDamage - reduced)
+        print(string.format("[Secondary Reduction] -%d (%d%%)", reduced, secondaryDamageTotal))
+    end
+
+    print(string.format("[Return] Final Primary=%d, Secondary=%d", primaryDamage, secondaryDamage))
     return {
         primaryDamage = primaryDamage,
         secondaryDamage = secondaryDamage
@@ -570,15 +622,16 @@ end
 -- @param player Player: The player looking at the item
 -- @param thing Thing: The thing being looked at
 -- @param description string: The current description
+-- @param lookDistance number: The distance from which the player is looking
 -- @return string: The enhanced description
-function enhanceItemDescription(player, thing, description)
+function enhanceItemDescription(player, thing, description, lookDistance)
     if thing:isItem() then
         if thing.itemid == US_CONFIG.ITEM_MIND_CRYSTAL and thing:hasMemory() then
-            description = enhanceMindCrystalDescription(thing, description)
+            description = enhanceMindCrystalDescription(thing, description, lookDistance)
         elseif thing:getType():isUpgradable() then
-            description = enhanceUpgradableItemDescription(thing, description)
+            description = enhanceUpgradableItemDescription(thing, description, lookDistance)
         elseif thing:getType():canHaveItemLevel() then
-            description = enhanceItemLevelDescription(thing, description)
+            description = enhanceItemLevelDescription(thing, description, lookDistance)
         end
     elseif thing:isPlayer() then
         description = enhancePlayerDescription(player, thing, description)
@@ -589,8 +642,10 @@ end
 --- Enhance mind crystal description with stored enchantments
 -- @param crystal Item: The mind crystal
 -- @param description string: The current description
+-- @param lookDistance number: The distance from which the player is looking
 -- @return string: The enhanced description
-function enhanceMindCrystalDescription(crystal, description)
+function enhanceMindCrystalDescription(crystal, description, lookDistance)
+    -- Show enchantment info regardless of distance
     for i = 4, 1, -1 do
         local enchant = crystal:getBonusAttribute(i)
         if enchant then
@@ -604,101 +659,127 @@ end
 --- Enhance upgradable item description with item properties and bonuses
 -- @param item Item: The upgradable item
 -- @param description string: The current description
+-- @param lookDistance number: The distance from which the player is looking
 -- @return string: The enhanced description
 function enhanceUpgradableItemDescription(item, description)
-    local upgrade = item:getUpgradeLevel()
+    local name = item:getName()
     local itemLevel = item:getItemLevel()
+    local upgrade = item:getUpgradeLevel()
+    local rarity = item:getRarity()
+    local bonuses = item:getBonusAttributes()
 
-    -- Add upgrade information
-    if upgrade > 0 then
-        description = description:gsub(item:getName(), "%1 +" .. upgrade)
+    -- Force prefix "You see" if missing:
+    if not description:match("^You see") then
+        description = "You see " .. description
     end
 
-    -- Add item level information
-    if description:find("(%)%.?)") then
-        description = description:gsub("(%)%.?)", "%1\nItem Level: " .. itemLevel)
-    else
-        if upgrade > 0 then
-            description = description:gsub("+" .. upgrade .. "%.", "%1\nItem Level: " .. itemLevel)
+    -- Insert rarity name (e.g., "epic") into the "You see..." line
+    if rarity and rarity.name and rarity.name ~= "" then
+        local pattern = "You see (an? )" .. name
+        if description:match(pattern) then
+            -- e.g. "You see a leather boots" -> "You see a epic leather boots"
+            description = description:gsub(pattern, "You see %1" .. rarity.name .. " " .. name)
         else
-            description = description:gsub(item:getName(), "%1\nItem Level: " .. itemLevel)
+            -- Fallback if it didn't match
+            -- "You see leather boots" -> "You see epic leather boots"
+            description = description:gsub("You see ([^%(]+)", "You see " .. rarity.name .. " %1")
         end
     end
 
-    -- Add rarity and unique information
-    description = description:gsub(item:getName(), item:getRarity().name .. " %1")
-
-    if item:getArticle():len() > 0 and item:getRarity().name == "epic" and item:getArticle() ~= "an" then
-        description = description:gsub("You see (" .. item:getArticle() .. "%S?)", "You see an")
+    -- Insert upgrade (e.g., +2) in the item name line
+    if upgrade and upgrade > 0 then
+        -- If "You see ... boots" was found, add " +X" after "boots"
+        local pattern = "You see (.-" .. name .. ")"
+        if description:match(pattern) then
+            description = description:gsub(pattern, "You see %1 +" .. upgrade)
+        end
     end
 
+    -- If it's a unique item, replace its base name with the unique name
     if item:isUnique() then
-        description = description:gsub("Item Level: " .. itemLevel, item:getUniqueName() .. "\n%1")
+        description = description:gsub(item:getName(), item:getUniqueName())
     end
 
-    -- Add attribute descriptions
-    for i = item:getMaxAttributes(), 1, -1 do
-        local enchant = item:getBonusAttribute(i)
-        if enchant then
-            local attr = US_ENCHANTMENTS[enchant[1]]
-            description = description:gsub("Item Level: " .. itemLevel, "%1\n" .. attr.format(enchant[2]))
-        end
-    end
+    -- Remove any existing "Item Level: N" lines
+    description = description:gsub("\nItem Level:%s?%d+", "")
 
-    -- Add level requirement information
-    if US_CONFIG.REQUIRE_LEVEL then
-        if item:isLimitless() then
-            if description:find("It can only be wielded properly by") then
-                description = description:gsub("It can only be wielded properly by (.-)%.",
-                    "Removed required Item Level to wear.")
-            else
-                description = description:gsub("It weighs", "Removed required Item Level to wear.\nIt weighs")
-            end
-        else
-            if description:find("of level (%d+) or higher") then
-                for match in description:gmatch("of level (%d+) or higher") do
-                    if tonumber(match) < itemLevel then
-                        description = description:gsub("of level (%d+) or higher",
-                            "of level " .. itemLevel .. " or higher")
-                    end
-                end
-            elseif description:find("It can only be wielded properly by") then
-                description = description:gsub("It can only be wielded properly by (.+).\n",
-                    "It can only be wielded properly by %1 of level " .. itemLevel .. " or higher.\n")
-            else
-                if description:find("It weighs") then
-                    description = description:gsub("It weighs",
-                        "It can only be wielded properly by players of level " .. itemLevel .. " or higher.\nIt weighs")
-                else
-                    description =
-                        description .. "\nIt can only be wielded properly by players of level " .. itemLevel ..
-                            " or higher."
+    -- Append "Item Level: X" at the very end of the item stats
+    -- but before the enchantment lines:
+    description = description .. "\nItem Level: " .. itemLevel
+
+    -- Now append any custom enchantment bonuses
+    if bonuses then
+        for _, bonus in ipairs(bonuses) do
+            local attrId, value = bonus[1], bonus[2]
+            local attr = US_ENCHANTMENTS[attrId]
+            if attr then
+                local formatted = attr.format(value)
+                -- Only append if not already there
+                if formatted and not description:find(formatted, 1, true) then
+                    description = description .. "\n" .. formatted
                 end
             end
         end
     end
 
-    -- Add mirrored information
-    if item:isMirrored() then
-        if description:find("It weighs") then
-            description = description:gsub("oz.(.+)", "oz.%1\nMirrored")
-        else
-            description = description .. "\nMirrored"
-        end
+    -- If mirrored, tack that on at the end
+    if item:isMirrored() and not description:find("Mirrored") then
+        description = description .. "\nMirrored"
     end
 
     return description
 end
 
+
 --- Enhance description for items with item level
 -- @param item Item: The item with item level
 -- @param description string: The current description
+-- @param lookDistance number: The distance from which the player is looking
 -- @return string: The enhanced description
-function enhanceItemLevelDescription(item, description)
+function enhanceItemLevelDescription(item, description, lookDistance)
     local itemLevel = item:getItemLevel()
-    if description:find("(%)%.?)") then
-        description = description:gsub("(%)%.?)", "%1\nItem Level: " .. itemLevel)
+    
+    -- Ensure description starts with "You see"
+    if not description:match("^You see") then
+        description = "You see " .. description
     end
+    
+    -- Get the item type to access the default description
+    local itemType = ItemType(item:getId())
+    local defaultDesc = itemType and itemType:getDescription() or ""
+    
+    -- First, remove any existing Item Level info (in case we're updating an item)
+    description = description:gsub("\nItem Level: %d+", "")
+    
+    -- Only show the default description when close enough
+    if lookDistance <= 1 then
+        -- Check if the item has a custom description from items.xml
+        if defaultDesc and defaultDesc ~= "" and description:find(defaultDesc, 1, true) then
+            -- Add Item Level after the default description
+            description = description:gsub(defaultDesc, defaultDesc .. "\nItem Level: " .. itemLevel)
+        else
+            -- Weight info is in the description (player is close)
+            if description:find("oz%.", 1, true) then
+                description = description:gsub("oz%.", "oz.\nItem Level: " .. itemLevel)
+            else
+                -- Check for stats section
+                if description:find("%)%.?", 1, true) then
+                    description = description:gsub("(%)%.?)", "%1\nItem Level: " .. itemLevel)
+                else
+                    -- No identifiable pattern, add at the end
+                    description = description .. "\nItem Level: " .. itemLevel
+                end
+            end
+        end
+    else
+        -- When far away, append at the end or after stats if present
+        if description:find("%)%.?", 1, true) then
+            description = description:gsub("(%)%.?)", "%1\nItem Level: " .. itemLevel)
+        else
+            description = description .. "\nItem Level: " .. itemLevel
+        end
+    end
+    
     return description
 end
 
@@ -758,6 +839,9 @@ function us_onEquip(cid, iuid, slot)
             applyConditionBonus(player, item, bonusId, bonusValue, attr, slot, i, maxHP, maxMP)
         end
     end
+    
+    -- Ensure item has all required augments based on enchantments
+    syncItemAugments(item)
 end
 
 --- Apply a condition bonus from an item to a player
@@ -853,6 +937,7 @@ function us_onLogin(player)
                     end
                 end
             end
+            syncItemAugments(item)
         end
     end
 end
@@ -898,12 +983,40 @@ TargetCombatEvent.onTargetCombat = function(creature, target)
 end
 TargetCombatEvent:register()
 
+
+local AugmentSyncLoginEvent = CreatureEvent("AugmentSyncLogin")
+function AugmentSyncLoginEvent.onLogin(player)
+    -- Process equipped items
+    for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
+        local item = player:getSlotItem(slot)
+        if item then
+            syncItemAugments(item)
+        end
+    end
+    return true
+end
+
+function initializeAugmentIntegration()
+    local players = Game.getPlayers()
+    for _, player in ipairs(players) do
+        for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
+            local item = player:getSlotItem(slot)
+            if item then
+                syncItemAugments(item)
+            end
+        end
+    end
+end
+
 -- Register login event
 local LoginEvent = CreatureEvent("UpgradeSystemLogin")
 function LoginEvent.onLogin(player)
     us_onLogin(player)
     return true
 end
+initializeAugmentIntegration()
+AugmentSyncLoginEvent:type("login")
+AugmentSyncLoginEvent:register()
 LoginEvent:type("login")
 LoginEvent:register()
 

@@ -1,4 +1,5 @@
 -- data\scripts\custom\itemupgrades\crystals.lua
+dofile('data/scripts/custom/itemupgrades/augments.lua')
 local CrystalsAction = Action()
 
 -- Helper function for debugging (optional)
@@ -168,10 +169,16 @@ local function handleAugmentingCrystal(player, item, target)
         player:sendTextMessage(MESSAGE_INFO_DESCR,
             "Item has been augmented with a new modifier: " .. newAttr.name)
     end
+    
+    -- Create and add augment if this was a combat enchantment
+    if isCombatEnchantment(newAttrId) then
+        applyAugmentForEnchantment(target, newAttrId, newValue)
+    end
 
     item:remove(1)
     return true
 end
+
 
 
 --- Handles the Alteration Crystal
@@ -199,6 +206,9 @@ local function handleAlterationCrystal(player, item, target)
         return false
     end
 
+    -- Remove all augments before changing enchantments
+    removeAllAugments(target)
+
     -- Clear all existing modifiers
     for i = 1, #bonuses do
         target:removeCustomAttribute("Slot" .. i)
@@ -212,6 +222,9 @@ local function handleAlterationCrystal(player, item, target)
     local itemType = ItemType(target.itemid)
     local weaponType = itemType:getWeaponType()
     target:rollAttribute(nil, itemType, weaponType, true)
+    
+    -- Synchronize augments with the new enchantments
+    syncItemAugments(target)
 
     item:remove(1)
     player:sendTextMessage(MESSAGE_INFO_DESCR, "Item has been altered to " .. target:getRarity().name .. "!")
@@ -236,6 +249,10 @@ local function handleScouringCrystal(player, item, target)
         return false
     end
 
+    -- Remove all augments
+    removeAllAugments(target)
+
+    -- Remove all enchantments
     for i = 1, #bonuses do
         target:removeCustomAttribute("Slot" .. i)
     end
@@ -296,6 +313,11 @@ local function handleExaltationCrystal(player, item, target)
     target:setCustomAttribute("Slot" .. (target:getLastSlot() + 1), newAttrId .. "|" .. newValue)
     target:setRarity(newRarityId)
     target:setAttribute(ITEM_ATTRIBUTE_ACTIONID, target:getActionId())
+    
+    -- Create and add augment if this was a combat enchantment
+    if isCombatEnchantment(newAttrId) then
+        applyAugmentForEnchantment(target, newAttrId, newValue)
+    end
 
     item:remove(1)
 
@@ -324,6 +346,9 @@ local function handleChaosCrystal(player, item, target)
         return false
     end
 
+    -- Remove all augments
+    removeAllAugments(target)
+
     -- Clear all existing modifiers
     for i = 1, #bonuses do
         target:removeCustomAttribute("Slot" .. i)
@@ -336,6 +361,9 @@ local function handleChaosCrystal(player, item, target)
     local itemType = ItemType(target.itemid)
     local weaponType = itemType:getWeaponType()
     target:rollAttribute(nil, itemType, weaponType, true)
+    
+    -- Synchronize augments with the new enchantments
+    syncItemAugments(target)
 
     item:remove(1)
     player:sendTextMessage(MESSAGE_INFO_DESCR,

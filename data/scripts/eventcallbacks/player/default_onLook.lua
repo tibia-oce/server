@@ -125,12 +125,12 @@ ec.onLook = function(self, thing, position, distance, description)
 			end
 		end
 
-		if thing:isAugmented() then
-			for index, augment in pairs(thing:getAugments()) do
-				augDesc = augment:getDescription()
-				description = description.. " \n Augment : " .. augment:getName() .. " \n " .. augDesc
-			end
-		end
+		-- if thing:isAugmented() then
+		-- 	for index, augment in pairs(thing:getAugments()) do
+		-- 		augDesc = augment:getDescription()
+		-- 		description = description.. " \n Augment : " .. augment:getName() .. " \n " .. augDesc
+		-- 	end
+		-- end
 
 	end
 
