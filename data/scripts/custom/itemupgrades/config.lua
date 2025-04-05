@@ -160,8 +160,8 @@ US_ENCHANTMENTS = {
         name = "Max MP",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT, -- Changed to percentage version
-        VALUES_PER_LEVEL = 0.05, -- Adjusted for percentage
+        param = CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT,
+        VALUES_PER_LEVEL = 0.05,
         percentage = true,
         format = function(value)
             return "Max MP +" .. value .. "%%"
@@ -172,8 +172,8 @@ US_ENCHANTMENTS = {
         name = "Magic Level",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_STAT_MAGICPOINTSPERCENT, -- Changed to percentage version
-        VALUES_PER_LEVEL = 0.05, -- Adjusted for percentage
+        param = CONDITION_PARAM_STAT_MAGICPOINTSPERCENT,
+        VALUES_PER_LEVEL = 0.05,
         percentage = true,
         format = function(value)
             return "Magic Level +" .. value .. "%%"
@@ -184,8 +184,8 @@ US_ENCHANTMENTS = {
         name = "Melee Skills",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_SKILL_MELEEPERCENT, -- Changed to percentage version
-        VALUES_PER_LEVEL = 0.05, -- Adjusted for percentage
+        param = CONDITION_PARAM_SKILL_MELEEPERCENT,
+        VALUES_PER_LEVEL = 0.05,
         percentage = true,
         format = function(value)
             return "Melee Skills +" .. value .. "%%"
@@ -196,8 +196,8 @@ US_ENCHANTMENTS = {
         name = "Distance Fighting",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_SKILL_DISTANCEPERCENT, -- Changed to percentage version
-        VALUES_PER_LEVEL = 0.05, -- Adjusted for percentage
+        param = CONDITION_PARAM_SKILL_DISTANCEPERCENT,
+        VALUES_PER_LEVEL = 0.05,
         percentage = true,
         format = function(value)
             return "Distance Fighting +" .. value .. "%%"
@@ -208,8 +208,8 @@ US_ENCHANTMENTS = {
         name = "Shielding",
         combatType = US_TYPES.CONDITION,
         condition = CONDITION_ATTRIBUTES,
-        param = CONDITION_PARAM_SKILL_SHIELDPERCENT, -- Changed to percentage version
-        VALUES_PER_LEVEL = 0.05, -- Adjusted for percentage
+        param = CONDITION_PARAM_SKILL_SHIELDPERCENT,
+        VALUES_PER_LEVEL = 0.05,
         percentage = true,
         format = function(value)
             return "Shielding +" .. value .. "%%"
