@@ -27,7 +27,7 @@ function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
             local attr = US_ENCHANTMENTS[attrId]
             local value = calculateAttributeValue(attr, item_level)
             self:setCustomAttribute("Slot" .. i, attrId .. "|" .. value)
-            
+
             -- If this is a combat-related enchantment, add an augment
             if isCombatEnchantment(attrId) then
                 applyAugmentForEnchantment(self, attrId, value)
@@ -60,7 +60,7 @@ function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
 
         -- Add the new attribute
         self:setCustomAttribute("Slot" .. self:getLastSlot() + 1, attrId .. "|" .. value)
-        
+
         -- If this is a combat-related enchantment, add an augment
         if isCombatEnchantment(attrId) then
             applyAugmentForEnchantment(self, attrId, value)
@@ -218,7 +218,7 @@ function Item.updateRarityByBonusCount(self)
         self:setRarity(COMMON)
     end
     self:setAttribute(ITEM_ATTRIBUTE_ACTIONID, self:getActionId())
-    
+
     -- Make sure augments match enchantments
     syncItemAugments(self)
 end
@@ -308,23 +308,26 @@ end
 -- @param changeValue number: The value to change by
 -- @param isIncrease boolean: True if increasing, false if decreasing
 function updateItemAttribute(item, attrType, baseValue, changeValue, isIncrease)
-    local currentValue = item:getAttribute(attrType)
-    local newValue
-
     local attrNameMap = {
         [ITEM_ATTRIBUTE_ATTACK] = "Attack",
         [ITEM_ATTRIBUTE_DEFENSE] = "Defense",
-        [ITEM_ATTRIBUTE_EXTRADEFENSE] = "Extra Defense",
-        [ITEM_ATTRIBUTE_ARMOR] = "Armor",
-        [ITEM_ATTRIBUTE_HITCHANCE] = "Hit Chance"
+        [ITEM_ATTRIBUTE_ARMOR] = "Armor"
+        -- [ITEM_ATTRIBUTE_EXTRADEFENSE] = "Extra Defense",
+        -- [ITEM_ATTRIBUTE_HITCHANCE] = "Hit Chance"
     }
     local attrName = attrNameMap[attrType] or ("Attribute " .. tostring(attrType))
+    local configKey = attrName:upper():gsub(" ", "_") .. "_PER_UPGRADE"
+    local perUpgrade = US_CONFIG[configKey] or 0
+    baseValue = baseValue or 0
+    local currentValue = item:getAttribute(attrType) or 0
+    local newValue
 
     if isIncrease then
         if changeValue == 0 and currentValue < baseValue then
-            -- First-time upgrade, force base + 1 * per-upgrade scaling
-            newValue = baseValue + US_CONFIG[attrName:upper():gsub(" ", "_") .. "_PER_UPGRADE"]
+            -- Force to (baseValue + perUpgrade) if there's no real "changeValue" but we haven't reached baseValue yet
+            newValue = baseValue + perUpgrade
         else
+            -- Either use currentValue or baseValue, whichever was non-zero
             newValue = (currentValue > 0) and (currentValue + changeValue) or (baseValue + changeValue)
         end
     else

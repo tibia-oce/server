@@ -635,79 +635,109 @@ local function overrideRequiredLevelText(description, item)
     return description
 end
 
---- Enhance upgradable item description with item properties and bonuses
--- @param item Item: The upgradable item
--- @param description string: The current (TFS) description
--- @return string: The enhanced description
+--- Decide whether to use "a" or "an" based on the first letter of the given text.
+-- @param text string: The text to check (e.g. "epic", "legendary", etc.).
+-- @return string: Returns "an" if `text` starts with a vowel, otherwise "a".
+local function getIndefiniteArticleFor(text)
+    local firstChar = text:sub(1, 1):lower()
+    if firstChar:match("[aeiou]") then
+        return "an"
+    end
+    return "a"
+end
+
+--- Build a full item name with the correct indefinite article and optional rarity.
+-- @param rarityName string: The rarity name (may be empty).
+-- @param baseName string: The item's base name (e.g. "bug-blaster bow").
+-- @return string: A string like "a legendary bug-blaster bow" or "an epic axe".
+local function buildItemNameWithArticle(rarityName, baseName)
+    if rarityName and rarityName ~= "" then
+        return string.format("%s %s %s", getIndefiniteArticleFor(rarityName), rarityName, baseName)
+    else
+        return string.format("%s %s", getIndefiniteArticleFor(baseName), baseName)
+    end
+end
+
+--- Override TFS's default "It can only be wielded properly by ... of level X or higher"
+--  if the item's custom item level is higher than X.
+-- @param description string: The current item description from TFS (including "of level X or higher").
+-- @param item Item: The item whose custom item level we want to apply.
+-- @return string: The updated description with the replaced requirement if needed.
+local function overrideRequiredLevelText(description, item)
+    description = description:gsub("(It can only be wielded properly by [^%.]- of level )(%d+)( or higher)",
+        function(prefix, reqStr, suffix)
+            local defaultLevel = tonumber(reqStr) or 0
+            local itemLevel = item:getItemLevel()
+            if itemLevel > defaultLevel then
+                return prefix .. itemLevel .. suffix
+            end
+            return prefix .. reqStr .. suffix
+        end)
+    return description
+end
+
+--- Enhance upgradable item description with item properties, custom articles, and bonuses.
+-- @param item Item: The upgradable item.
+-- @param description string: The current TFS-generated description (e.g. from `thing:getDescription(distance)`).
+-- @return string: The enhanced description, including corrected articles, upgrade level, item level, and enchantments.
 function enhanceUpgradableItemDescription(item, description)
-    local name = item:getName()
-    local itemLevel = item:getItemLevel()
-    local upgrade = item:getUpgradeLevel()
+    local baseName = item:getName()
     local rarity = item:getRarity()
+    local rarityName = (rarity and rarity.name ~= "") and rarity.name or ""
+    local upgrade = item:getUpgradeLevel() or 0
+    local itemLevel = item:getItemLevel()
     local bonuses = item:getBonusAttributes()
 
-    -- Ensure the prefix "You see" exists
-    if not description:match("^You see") then
-        description = "You see " .. description
-    end
+    -- Remove TFS's default "You see a/an/the"
+    description = description:gsub("You see (an? )", "You see ")
+    description = description:gsub("You see the ", "You see ")
 
-    -- Insert rarity name in the "You see..." line
-    if rarity and rarity.name and rarity.name ~= "" then
-        local pattern = "You see (an? )" .. name
-        if description:match(pattern) then
-            description = description:gsub(pattern, "You see %1" .. rarity.name .. " " .. name)
-        else
-            description = description:gsub("You see ([^%(]+)", "You see " .. rarity.name .. " %1")
-        end
-    end
+    -- Build new "You see a/an [rarityName] [baseName]" prefix
+    local forcedName = buildItemNameWithArticle(rarityName, baseName)
+    description = description:gsub("^(You see [^%(\n%.]+)", "You see " .. forcedName)
 
-    -- Insert upgrade (e.g. "+8") after the item’s base name
-    if upgrade and upgrade > 0 then
-        local pattern = "You see (.-" .. name .. ")"
-        if description:match(pattern) then
-            description = description:gsub(pattern, "You see %1 +" .. upgrade)
-        end
-    end
-
-    -- If it's a unique item, replace its base name with the unique name
+    -- Replace base name with unique name if needed
     if item:isUnique() then
-        description = description:gsub(item:getName(), item:getUniqueName())
+        description = description:gsub(baseName, item:getUniqueName())
     end
 
-    -- Remove any old "Item Level: X" lines
+    -- Append "+X" if there's an upgrade level
+    if upgrade > 0 then
+        description = description:gsub("^(You see [^%(%.]+)", "%1 +" .. upgrade)
+        -- Fix missing space if we end up with "+3("
+        description = description:gsub("(%+%d+)%(", "%1 (")
+    end
+
+    -- Remove any old "Item Level: N" lines, then append [ Attributes ] block
     description = description:gsub("\nItem Level:%s?%d+", "")
+    description = description .. "\n\n[ Attributes ]\nItem Level: " .. itemLevel
 
-    -- === [ Attributes ] section ===
-    -- Always add a blank line before the attributes header
-    description = description .. "\n\n[ Attributes ]" .. "\nItem Level: " .. itemLevel
-
-    -- === [ Enchantments ] section (only if there are any bonuses) ===
+    -- If there are bonus enchantments, append [ Enchantments ] block
     if bonuses and #bonuses > 0 then
         local enchantSection = "\n\n[ Enchantments ]"
-
         for _, bonus in ipairs(bonuses) do
             local attrId, value = bonus[1], bonus[2]
             local attr = US_ENCHANTMENTS[attrId]
             if attr then
                 local formatted = attr.format(value)
-                -- Add each enchantment line if not already found
                 if formatted and not description:find(formatted, 1, true) then
                     enchantSection = enchantSection .. "\n" .. formatted
                 end
             end
         end
-
-        -- Append the entire enchantments block
         description = description .. enchantSection
     end
 
-    -- If mirrored, add a line
+    -- Add "Mirrored" line if applicable
     if item:isMirrored() and not description:find("Mirrored") then
         description = description .. "\nMirrored"
     end
 
-    -- Finally, override TFS's “level XX or higher” if item level is bigger
+    -- Override TFS's default level requirement if the item's item level is higher
     description = overrideRequiredLevelText(description, item)
+
+    -- Final pass: ensure a space before any "(" if missing
+    description = description:gsub("([^%s])%(", "%1 (")
 
     return description
 end
