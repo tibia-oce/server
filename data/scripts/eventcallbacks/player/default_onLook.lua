@@ -1,3 +1,4 @@
+-- data\scripts\eventcallbacks\player\default_onLook.lua
 local ec = EventCallback
 
 ec.onLook = function(self, thing, position, distance, description)

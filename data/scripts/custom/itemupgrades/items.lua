@@ -102,13 +102,9 @@ function rollRandomAttribute(existingAttrIds, item_level, usItemType)
     local attrId = math.random(1, #US_ENCHANTMENTS)
     local attr = US_ENCHANTMENTS[attrId]
 
-    while (
-        -- Check duplicates only if ALLOW_DUPLICATE_ENCHANTS is false
-        (not US_CONFIG.ALLOW_DUPLICATE_ENCHANTS and isInArray(existingAttrIds, attrId))
-        -- or (attr.minLevel and item_level < attr.minLevel)
-        or (bit.band(usItemType, attr.itemType) == 0)
-        or (attr.chance and math.random(100) >= attr.chance)
-    ) do
+    while ( -- Check duplicates only if ALLOW_DUPLICATE_ENCHANTS is false
+    (not US_CONFIG.ALLOW_DUPLICATE_ENCHANTS and isInArray(existingAttrIds, attrId)) -- or (attr.minLevel and item_level < attr.minLevel)
+    or (bit.band(usItemType, attr.itemType) == 0) or (attr.chance and math.random(100) >= attr.chance)) do
         attrId = math.random(1, #US_ENCHANTMENTS)
         attr = US_ENCHANTMENTS[attrId]
     end

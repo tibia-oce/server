@@ -1,52 +1,48 @@
--- data\scripts\eventcallbacks\monster\default_onDropLoot.lua
---- Process monster loot drops with upgrade system integration
--- @param self Monster: The monster dropping loot
--- @param corpse Container: The corpse container
+--- Processes global loot entries (from the in-memory globalLoot table) and adds them to the corpse.
+-- The loot is only added if the monster's item level meets the required level.
+-- @param corpse Container: The corpse container.
+-- @param iLvl number: The calculated item level of the monster.
+local function processGlobalLoot(corpse, iLvl)
+    for _, loot in ipairs(globalLoot) do
+        if not loot.requiredLvl or iLvl >= loot.requiredLvl then
+            corpse:createLootItem(loot)
+        end
+    end
+end
+
 local ec = EventCallback
 ec.onDropLoot = function(self, corpse)
-    -- Skip if loot rate is disabled
     if configManager.getNumber(configKeys.RATE_LOOT) == 0 then
         return
     end
 
     local player = Player(corpse:getCorpseOwner())
     local mType = self:getType()
+    local iLvl = mType:calculateItemLevel()
 
-    -- Process loot drops based on player stamina
     if not player or player:getStamina() > 840 then
-        -- Create loot items from monster loot table
         local monsterLoot = mType:getLoot()
         for i = 1, #monsterLoot do
-            local item = corpse:createLootItem(monsterLoot[i])
-            if not item then
-                print('[Warning] DropLoot:', 'Could not add loot item to corpse.')
-            end
+            corpse:createLootItem(monsterLoot[i])
         end
 
-        -- Process items in corpse for the upgrade system
-        -- This happens before auto-looting, so items will have their correct status
-        local iLvl = mType:calculateItemLevel()
+        processGlobalLoot(corpse, iLvl)
         processCorpseItems(corpse, iLvl)
 
-        -- Send loot message to player or party
         if player then
             sendLootMessage(player, mType, corpse, false)
         end
     else
-        -- Player has low stamina, no loot
         if player then
             sendLootMessage(player, mType, corpse, true)
         end
     end
-
-    -- Schedule additional upgrade system processing after auto-looting
-    addEvent(us_CheckCorpse, 10, mType, corpse:getPosition(), player and player:getId() or 0)
 end
 ec:register()
 
---- Process items in a corpse to apply item level and rarity
--- @param corpse Container: The corpse container
--- @param iLvl number: The calculated item level for dropped items
+--- Processes items in a corpse to apply item level and rarity.
+-- @param corpse Container: The corpse container.
+-- @param iLvl number: The calculated item level for dropped items.
 function processCorpseItems(corpse, iLvl)
     for i = 0, corpse:getCapacity() do
         local item = corpse:getItem(i)
@@ -87,7 +83,6 @@ function processCorpseItems(corpse, iLvl)
 
                     -- Then manually apply the upgrade-related stats
                     if upgradeLevel > 0 then
-                        -- Apply the stats based on the upgrade level
                         if origAttack > 0 then
                             item:setAttribute(ITEM_ATTRIBUTE_ATTACK,
                                 origAttack + (upgradeLevel * US_CONFIG.ATTACK_PER_UPGRADE))
@@ -115,7 +110,6 @@ function processCorpseItems(corpse, iLvl)
 
                     -- Roll attributes matching rarity's maxBonus exactly
                     item:rollAttribute(nil, itemType, itemType:getWeaponType(), true)
-                    -- Apply item level to other eligible items that aren't upgradable
                 elseif itemType:canHaveItemLevel() then
                     local calculatedLevel = math.min(US_CONFIG.MAX_ITEM_LEVEL, math.random(math.max(1, iLvl - 5), iLvl))
                     item:setItemLevel(calculatedLevel, true)
@@ -125,14 +119,13 @@ function processCorpseItems(corpse, iLvl)
     end
 end
 
---- Send a loot message to a player or party
--- @param player Player: The player who killed the monster
--- @param mType MonsterType: The type of monster killed
--- @param corpse Container: The corpse container
--- @param lowStamina boolean: True if player has low stamina
+--- Sends a loot message to a player or party.
+-- @param player Player: The player who killed the monster.
+-- @param mType MonsterType: The type of monster killed.
+-- @param corpse Container: The corpse container.
+-- @param lowStamina boolean: True if the player has low stamina.
 function sendLootMessage(player, mType, corpse, lowStamina)
     local text
-
     if lowStamina then
         text = ("Loot of %s: nothing (due to low stamina)"):format(mType:getNameDescription())
     else

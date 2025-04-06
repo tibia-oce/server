@@ -1,6 +1,7 @@
 -- data\scripts\custom\itemupgrades\core.lua
 print(">> Loading upgrade system")
 dofile('data/scripts/custom/itemupgrades/augments.lua')
+dofile('data/scripts/custom/itemupgrades/loot.lua')
 
 -- Global storage tables
 US_CONDITIONS = {}
@@ -184,104 +185,6 @@ function removeItemConditions(player, item)
                     else
                         player:removeCondition(US_CONDITIONS[bonusId][bonusValue][itemId]:getType(), CONDITIONID_COMBAT)
                     end
-                end
-            end
-        end
-    end
-end
-
---- Process a corpse after a monster is killed
--- @param monsterType MonsterType: The type of monster killed
--- @param corpsePosition Position: The position of the corpse
--- @param killerId number: The ID of the killer
-function us_CheckCorpse(monsterType, corpsePosition, killerId)
-    local killer = Player(killerId)
-    local corpse = Tile(corpsePosition):getTopDownItem()
-
-    if not killer or not killer:isPlayer() or not corpse or not corpse:isContainer() then
-        return
-    end
-
-    processAdditionalGold(killer, corpse)
-    processCrystalFossilDrop(monsterType, corpse, corpsePosition)
-end
-
---- Process additional gold from bonuses
--- @param killer Player: The player who killed the monster
--- @param corpse Container: The corpse container
-function processAdditionalGold(killer, corpse)
-    for slot = CONST_SLOT_HEAD, CONST_SLOT_AMMO do
-        local item = killer:getSlotItem(slot)
-        if item then
-            local values = item:getBonusAttributes()
-            if values then
-                for key, value in pairs(values) do
-                    local attr = US_ENCHANTMENTS[value[1]]
-                    if attr and attr.name == "Additonal Gold" then
-                        -- Calculate total gold in corpse
-                        local cc, plat, gold = 0, 0, 0
-                        for i = 0, corpse:getSize() do
-                            local item = corpse:getItem(i)
-                            if item then
-                                if item.itemid == 2160 then
-                                    gold = gold + (item:getCount() * 10000)
-                                elseif item.itemid == 2152 then
-                                    gold = gold + (item:getCount() * 100)
-                                elseif item.itemid == 2148 then
-                                    gold = gold + item:getCount()
-                                end
-                            end
-                        end
-
-                        -- Add bonus gold
-                        gold = math.floor(gold * value[2] / 100)
-
-                        -- Convert to appropriate coin types
-                        while gold >= 10000 do
-                            gold = gold / 10000
-                            cc = cc + 1
-                        end
-
-                        if cc > 0 then
-                            local crystalCoin = Game.createItem(2160, cc)
-                            corpse:addItemEx(crystalCoin)
-                        end
-
-                        while gold >= 100 do
-                            gold = gold / 100
-                            plat = plat + 1
-                        end
-
-                        if plat > 0 then
-                            local platinumCoin = Game.createItem(2152, plat)
-                            corpse:addItemEx(platinumCoin)
-                        end
-
-                        if gold > 0 then
-                            local goldCoin = Game.createItem(2148, gold)
-                            corpse:addItemEx(goldCoin)
-                        end
-                    end
-                end
-            end
-        end
-    end
-end
-
---- Process crystal fossil drops
--- @param monsterType MonsterType: The type of monster killed
--- @param corpse Container: The corpse container
--- @param corpsePosition Position: The position of the corpse
-function processCrystalFossilDrop(monsterType, corpse, corpsePosition)
-    local iLvl = monsterType:calculateItemLevel()
-    if iLvl >= US_CONFIG.CRYSTAL_FOSSIL_DROP_LEVEL then
-        if math.random(US_CONFIG.CRYSTAL_FOSSIL_DROP_CHANCE) == 1 then
-            corpse:addItem(US_CONFIG.CRYSTAL_FOSSIL, 1)
-            local specs = Game.getSpectators(corpsePosition, false, true, 9, 9, 8, 8)
-            if #specs > 0 then
-                for i = 1, #specs do
-                    local player = specs[i]
-                    player:say("Crystal Fossil!", TALKTYPE_MONSTER_SAY, false, player, corpsePosition)
                 end
             end
         end

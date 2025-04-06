@@ -2,11 +2,6 @@
 dofile('data/scripts/custom/itemupgrades/augments.lua')
 local CrystalsAction = Action()
 
--- Helper function for debugging (optional)
-local function debugPrint(player, message)
-    player:sendTextMessage(MESSAGE_STATUS_CONSOLE, message)
-end
-
 -- Common validation functions
 --- Validates if the target item can be modified.
 -- @param player Player: The player using the crystal
@@ -119,7 +114,6 @@ local function handleUpgradeCrystal(player, item, target)
     return true
 end
 
---- Handles the Augmenting Crystal (formerly Enchantment Crystal)
 --- Adds a modifier to an existing common item
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
@@ -139,7 +133,8 @@ local function handleAugmentingCrystal(player, item, target)
 
     local bonuses = target:getBonusAttributes() or {}
     if #bonuses >= 2 then
-        player:sendTextMessage(MESSAGE_STATUS_WARNING, "Item already has the maximum number of modifiers for common rarity.")
+        player:sendTextMessage(MESSAGE_STATUS_WARNING,
+            "Item already has the maximum number of modifiers for common rarity.")
         player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
         return false
     end
@@ -164,12 +159,11 @@ local function handleAugmentingCrystal(player, item, target)
         target:setRarity(newRarityId)
         player:sendTextMessage(MESSAGE_INFO_DESCR,
             "Item has been augmented and upgraded from " .. US_CONFIG.RARITY[currentRarityId].name .. " to " ..
-            US_CONFIG.RARITY[newRarityId].name .. " with a new modifier: " .. newAttr.name .. "!")
+                US_CONFIG.RARITY[newRarityId].name .. " with a new modifier: " .. newAttr.name .. "!")
     else
-        player:sendTextMessage(MESSAGE_INFO_DESCR,
-            "Item has been augmented with a new modifier: " .. newAttr.name)
+        player:sendTextMessage(MESSAGE_INFO_DESCR, "Item has been augmented with a new modifier: " .. newAttr.name)
     end
-    
+
     -- Create and add augment if this was a combat enchantment
     if isCombatEnchantment(newAttrId) then
         applyAugmentForEnchantment(target, newAttrId, newValue)
@@ -178,8 +172,6 @@ local function handleAugmentingCrystal(player, item, target)
     item:remove(1)
     return true
 end
-
-
 
 --- Handles the Alteration Crystal
 --- Rerolls any existing modifiers of a rare or common item
@@ -222,7 +214,7 @@ local function handleAlterationCrystal(player, item, target)
     local itemType = ItemType(target.itemid)
     local weaponType = itemType:getWeaponType()
     target:rollAttribute(nil, itemType, weaponType, true)
-    
+
     -- Synchronize augments with the new enchantments
     syncItemAugments(target)
 
@@ -231,7 +223,6 @@ local function handleAlterationCrystal(player, item, target)
     return true
 end
 
---- Handles the Scouring Crystal (formerly Clean Crystal)
 --- Removes all modifiers from an item
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
@@ -313,7 +304,7 @@ local function handleExaltationCrystal(player, item, target)
     target:setCustomAttribute("Slot" .. (target:getLastSlot() + 1), newAttrId .. "|" .. newValue)
     target:setRarity(newRarityId)
     target:setAttribute(ITEM_ATTRIBUTE_ACTIONID, target:getActionId())
-    
+
     -- Create and add augment if this was a combat enchantment
     if isCombatEnchantment(newAttrId) then
         applyAugmentForEnchantment(target, newAttrId, newValue)
@@ -328,7 +319,6 @@ local function handleExaltationCrystal(player, item, target)
     return true
 end
 
---- Handles the Chaos Crystal (formerly Faith Crystal)
 --- Rerolls the rarity and all modifiers of the item
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
@@ -361,7 +351,7 @@ local function handleChaosCrystal(player, item, target)
     local itemType = ItemType(target.itemid)
     local weaponType = itemType:getWeaponType()
     target:rollAttribute(nil, itemType, weaponType, true)
-    
+
     -- Synchronize augments with the new enchantments
     syncItemAugments(target)
 
@@ -439,7 +429,6 @@ local function handleMindCrystal(player, item, target)
     return false
 end
 
---- Handles the Annulment Crystal (formerly Limitless Crystal)
 --- Removes one random modifier from an item
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
@@ -529,8 +518,9 @@ local function handleMirroredCrystal(player, item, target)
     end
 
     -- Copy all item attributes
-    local attributes = {ITEM_ATTRIBUTE_ATTACK, ITEM_ATTRIBUTE_DEFENSE, ITEM_ATTRIBUTE_EXTRADEFENSE,
-                        ITEM_ATTRIBUTE_ARMOR, ITEM_ATTRIBUTE_HITCHANCE}
+    local attributes =
+        {ITEM_ATTRIBUTE_ATTACK, ITEM_ATTRIBUTE_DEFENSE, ITEM_ATTRIBUTE_EXTRADEFENSE, ITEM_ATTRIBUTE_ARMOR -- ITEM_ATTRIBUTE_HITCHANCE
+        }
 
     for _, attr in ipairs(attributes) do
         local value = target:getAttribute(attr)
@@ -550,7 +540,6 @@ local function handleMirroredCrystal(player, item, target)
     return false
 end
 
---- Handles the Divining Crystal (formerly Void Crystal)
 --- Rerolls all modifier values at random
 -- @param player Player: The player using the crystal
 -- @param item Item: The crystal being used
@@ -595,7 +584,6 @@ local function handleDiviningCrystal(player, item, target)
     return true
 end
 
--- Main function to handle crystal use
 function CrystalsAction.onUse(player, item, fromPosition, target, toPosition, isHotkey)
     if not validateTarget(player, item, target, toPosition) then
         return false
@@ -605,7 +593,6 @@ function CrystalsAction.onUse(player, item, fromPosition, target, toPosition, is
         return true
     end
 
-    -- Crystal type handlers mapping
     local crystalHandlers = {
         [US_CONFIG[1][ITEM_UPGRADE_CRYSTAL]] = handleUpgradeCrystal,
         [US_CONFIG[1][ITEM_AUGMENTING_CRYSTAL]] = handleAugmentingCrystal,
@@ -627,7 +614,6 @@ function CrystalsAction.onUse(player, item, fromPosition, target, toPosition, is
     return false
 end
 
--- Register crystal action for all crystal types
 CrystalsAction:id(US_CONFIG[1][ITEM_UPGRADE_CRYSTAL], US_CONFIG[1][ITEM_AUGMENTING_CRYSTAL],
     US_CONFIG[1][ITEM_ALTER_CRYSTAL], US_CONFIG[1][ITEM_SCOURING_CRYSTAL], US_CONFIG[1][ITEM_EXALT_CRYSTAL],
     US_CONFIG[1][ITEM_CHAOS_CRYSTAL], US_CONFIG.ITEM_MIND_CRYSTAL, US_CONFIG.ITEM_ANNULMENT_CRYSTAL,

@@ -20,14 +20,14 @@ US_CONFIG = {
         [ITEM_CHAOS_CRYSTAL] = 27705 -- Faith Crystal item id
     },
 
-    ITEM_MIRRORED_CRYSTAL = 27698, -- Mirrored Crystal item id
-    ITEM_MIND_CRYSTAL = 27701, -- Mind Crystal item id
-    ITEM_ANNULMENT_CRYSTAL = 27700, -- Limitless Crystal item id
-    ITEM_DIVINE_CRYSTAL = 27702, -- Void Crystal item id
-    ITEM_UPGRADE_CATALYST = 26798, -- Upgrade Catalyst item id
-    CRYSTAL_EXTRACTOR = 27149, -- Crystal Extractor item id
-    CRYSTAL_FOSSIL = 27133, -- Crystal Fossil item id
-    ITEM_SCROLL_IDENTIFY = 28137, -- Scrol of Identification item id
+    ITEM_MIRRORED_CRYSTAL = 27698,
+    ITEM_MIND_CRYSTAL = 27701,
+    ITEM_ANNULMENT_CRYSTAL = 27700,
+    ITEM_DIVINE_CRYSTAL = 27702,
+    ITEM_UPGRADE_CATALYST = 26798,
+    CRYSTAL_EXTRACTOR = 27149,
+    CRYSTAL_FOSSIL = 27133,
+    ITEM_SCROLL_IDENTIFY = 28137,
     --
     --
     IDENTIFY_UPGRADE_LEVEL = false, -- if true, roll random upgrade level when identifing an item
@@ -155,7 +155,7 @@ US_ENCHANTMENTS = {
         format = function(value)
             return "Max HP +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS,
+        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS,
         minLevel = 8
     },
     [2] = {
@@ -168,7 +168,7 @@ US_ENCHANTMENTS = {
         format = function(value)
             return "Max MP +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_WAND + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS,
+        itemType = US_ITEM_TYPES.WEAPON_WAND + US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS,
         minLevel = 8
     },
     [3] = {
@@ -181,7 +181,7 @@ US_ENCHANTMENTS = {
         format = function(value)
             return "Magic Level +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_WAND + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS,
+        itemType = US_ITEM_TYPES.WEAPON_WAND + US_ITEM_TYPES.SHIELD +  US_ITEM_TYPES.SHIELD + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.ARMOR + US_ITEM_TYPES.LEGS + US_ITEM_TYPES.BOOTS,
         minLevel = 8
     },
     [4] = {
@@ -304,7 +304,7 @@ US_ENCHANTMENTS = {
         format = function(value)
             return "Elemental Damage +" .. value .. "%"
         end,
-        itemType = US_ITEM_TYPES.WEAPON_ANY + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE + US_ITEM_TYPES.HELMET + US_ITEM_TYPES.BOOTS,
+        itemType = US_ITEM_TYPES.WEAPON_WAND + US_ITEM_TYPES.RING + US_ITEM_TYPES.NECKLACE,
         minLevel = 8
     },
     [14] = {
