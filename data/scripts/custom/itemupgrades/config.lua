@@ -1,15 +1,32 @@
--- data/scripts/custom/itemupgrades/config.lua
+-- Global configuration for the Item Upgrade System
+-- Contains constants, settings, and configuration tables
+-- Crystal type constants
 ITEM_UPGRADE_CRYSTAL = 1
 ITEM_AUGMENTING_CRYSTAL = 2
 ITEM_ALTER_CRYSTAL = 3
 ITEM_SCOURING_CRYSTAL = 4
 ITEM_EXALT_CRYSTAL = 5
 ITEM_CHAOS_CRYSTAL = 6
+
+-- Rarity constants
 COMMON = 1
 RARE = 2
 EPIC = 3
 LEGENDARY = 4
 
+-- Combat constants (added here to ensure they're available globally)
+COMBAT_NONE = 0
+ATTACK_MOD = 0
+DEFENSE_MOD = 1
+ATTACK_MODIFIER_PIERCING = 6
+DEFENSE_MODIFIER_RESIST = 8
+PERCENT_MODIFIER = 1
+FLAT_MODIFIER = 0
+ORIGIN_AUGMENT = 12
+CREATURETYPE_ATTACKABLE = 12
+RACE_NONE = 0
+
+-- Main configuration
 US_CONFIG = {
     {
         [ITEM_UPGRADE_CRYSTAL] = 26799,
@@ -90,14 +107,14 @@ US_CONFIG = {
         },
         [WEAPON_DISTANCE] = {
             attack = 1,
-            hitchance = 3
+            hitchance = 0
         },
         [WEAPON_WAND] = {
             attack = 2,
             magic_level = 1
         },
         [WEAPON_SHIELD] = {
-            extra_defense = 2,
+            extra_defense = 0,
             armor = 1,
             magic_level = 1
         }
@@ -132,6 +149,7 @@ US_CONFIG = {
     }
 }
 
+-- Item types
 US_ITEM_TYPES = {
     ALL = 1,
     WEAPON_MELEE = 2,
@@ -147,6 +165,7 @@ US_ITEM_TYPES = {
     WEAPON_ANY = 14
 }
 
+-- Unique items
 US_UNIQUES = {
     [1] = {
         name = "Flame Spirit",
@@ -157,6 +176,7 @@ US_UNIQUES = {
     }
 }
 
+-- Enchantment types
 US_TYPES = {
     CONDITION = 0,
     OFFENSIVE = 1,
@@ -164,12 +184,22 @@ US_TYPES = {
     TRIGGER = 3
 }
 
+-- Trigger types
 US_TRIGGERS = {
     ATTACK = 0,
     HIT = 1,
     KILL = 2
 }
 
+-- Bonus configuration
+BONUS_CONFIG = {
+    MAGIC_LEVEL = {
+        ATTR_ID = 3,
+        CONDITIONS = {}
+    }
+}
+
+-- Enchantment definitions
 US_ENCHANTMENTS = {
     [1] = {
         name = "Max HP",
@@ -445,3 +475,38 @@ US_ENCHANTMENTS = {
         minLevel = 8
     }
 }
+
+-- For access to enchantment types by category
+ENCHANT_TYPES = {
+    OFFENSIVE = {},
+    DEFENSIVE = {}
+}
+
+-- Initialize ENCHANT_TYPES tables
+for id, enchant in pairs(US_ENCHANTMENTS) do
+    if enchant.combatType == US_TYPES.OFFENSIVE then
+        ENCHANT_TYPES.OFFENSIVE[id] = {
+            name = enchant.name,
+            type = enchant.combatDamage == COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE +
+                COMBAT_ICEDAMAGE + COMBAT_HOLYDAMAGE + COMBAT_DEATHDAMAGE and "elemental" or enchant.combatDamage ==
+                COMBAT_PHYSICALDAMAGE and "physical" or enchant.combatDamage == COMBAT_ENERGYDAMAGE and "energy" or
+                enchant.combatDamage == COMBAT_EARTHDAMAGE and "earth" or enchant.combatDamage == COMBAT_FIREDAMAGE and
+                "fire" or enchant.combatDamage == COMBAT_ICEDAMAGE and "ice" or enchant.combatDamage ==
+                COMBAT_HOLYDAMAGE and "holy" or enchant.combatDamage == COMBAT_DEATHDAMAGE and "death"
+        }
+    elseif enchant.combatType == US_TYPES.DEFENSIVE then
+        ENCHANT_TYPES.DEFENSIVE[id] = {
+            name = enchant.name,
+            type = enchant.combatDamage == COMBAT_ENERGYDAMAGE + COMBAT_EARTHDAMAGE + COMBAT_FIREDAMAGE +
+                COMBAT_ICEDAMAGE + COMBAT_HOLYDAMAGE + COMBAT_DEATHDAMAGE and "elemental" or enchant.combatDamage ==
+                COMBAT_PHYSICALDAMAGE and "physical" or enchant.combatDamage == COMBAT_ENERGYDAMAGE and "energy" or
+                enchant.combatDamage == COMBAT_EARTHDAMAGE and "earth" or enchant.combatDamage == COMBAT_FIREDAMAGE and
+                "fire" or enchant.combatDamage == COMBAT_ICEDAMAGE and "ice" or enchant.combatDamage ==
+                COMBAT_HOLYDAMAGE and "holy" or enchant.combatDamage == COMBAT_DEATHDAMAGE and "death"
+        }
+    end
+end
+
+-- Table of global conditions for item attributes
+US_CONDITIONS = {}
+US_BUFFS = {}

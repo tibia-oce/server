@@ -113,6 +113,8 @@ Refactor the custom system into a Domain-Driven Design (DDD) approach. The refac
 **Deliverable:**  
 Produce the refactored code following the new DDD approach using the proposed directory structure. The output should maintain all current functionality while significantly improving code modularity, testability, and maintainability.  Return the full refactored code files for all modules, services, managers, and top-level files according to the specified structure, with every line of code present in each file.
 
+Do not ever use require or dofile within a method.  Alwaays use dofile at the top of the files to import other module code.  NEVER EVER, use require within a function.
+
 -----
 
 **Current state of code:**

@@ -1,131 +1,20 @@
--- Roll a random attribute for an item.
--- @param self Item
--- @param player Player|nil
--- @param itemType ItemType
--- @param weaponType number
--- @param unidentify boolean
--- @return boolean
-function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
-    if not itemType:isUpgradable() or self:isUnique() then
-        return false
-    end
-
-    local attrIds = {}
-    local item_level = self:getItemLevel()
-
-    if unidentify then
-        local bonusCount = self:getRarity().maxBonus
-        local usItemType = self:getItemType()
-        for i = 1, bonusCount do
-            local attrId = rollRandomAttribute(attrIds, item_level, usItemType)
-            table.insert(attrIds, attrId)
-
-            local attr = US_ENCHANTMENTS[attrId]
-            local value = calculateAttributeValue(attr, item_level)
-            self:setCustomAttribute("Slot" .. i, attrId .. "|" .. value)
-            if isCombatEnchantment(attrId) then
-                applyAugmentForEnchantment(self, attrId, value)
-            end
-        end
-        return true
-    else
-        local bonuses = self:getBonusAttributes()
-        if bonuses then
-            local maxPossible = US_CONFIG.RARITY[#US_CONFIG.RARITY].maxBonus
-            if #bonuses >= maxPossible then
-                if player then
-                    player:sendTextMessage(MESSAGE_STATUS_WARNING, "Max number of bonuses reached!")
-                end
-                return false
-            end
-            for _, b in pairs(bonuses) do
-                table.insert(attrIds, b[1])
-            end
-        end
-
-        local usItemType = self:getItemType()
-        local attrId = rollRandomAttribute(attrIds, item_level, usItemType)
-        local attr = US_ENCHANTMENTS[attrId]
-        local value = calculateAttributeValue(attr, item_level)
-        self:setCustomAttribute("Slot" .. (self:getLastSlot() + 1), attrId .. "|" .. value)
-
-        if isCombatEnchantment(attrId) then
-            applyAugmentForEnchantment(self, attrId, value)
-        end
-
-        self:updateRarityByBonusCount()
-        return true
-    end
-end
-
---- Randomly decide an upgrade level (not typically used in your script).
--- @return number
-function rollUpgradeLevel()
-    local level = 1
-    for i = US_CONFIG.MAX_UPGRADE_LEVEL, 1, -1 do
-        if i >= US_CONFIG.UPGRADE_LEVEL_DESTROY then
-            if math.random(100) <= US_CONFIG.UPGRADE_DESTROY_CHANCE[i] then
-                level = i
-                break
-            end
-        else
-            if math.random(100) <= US_CONFIG.UPGRADE_SUCCESS_CHANCE[i] then
-                level = i
-                break
-            end
-        end
-    end
-    return level
-end
-
---- Roll a random attribute ID, possibly avoiding duplicates.
--- @param existingAttrIds table
--- @param item_level number
--- @param usItemType number
--- @return number
-function rollRandomAttribute(existingAttrIds, item_level, usItemType)
-    local attrId = math.random(1, #US_ENCHANTMENTS)
-    local attr = US_ENCHANTMENTS[attrId]
-
-    while ((not US_CONFIG.ALLOW_DUPLICATE_ENCHANTS and isInArray(existingAttrIds, attrId)) or
-        (bit.band(usItemType, attr.itemType) == 0) or (attr.chance and math.random(100) >= attr.chance)) do
-        attrId = math.random(1, #US_ENCHANTMENTS)
-        attr = US_ENCHANTMENTS[attrId]
-    end
-    return attrId
-end
-
---- Compute an attribute's magnitude (percentage or otherwise).
--- @param attr table
--- @param item_level number
--- @return number
-function calculateAttributeValue(attr, item_level)
-    if attr.percentage then
-        return math.random(1, US_CONFIG.MAX_PERCENTAGE_ROLL)
-    elseif attr.VALUES_PER_LEVEL then
-        local maxValue = math.ceil(item_level * attr.VALUES_PER_LEVEL)
-        if maxValue < 1 then
-            return 1
-        end
-        return math.random(1, maxValue)
-    else
-        return 1
-    end
-end
+-- Domain model for items (native stats, bonus attributes, enchants)
+-- Handles all core item operations including getting/setting item properties
+dofile('data/scripts/custom/itemupgrades/helpers.lua')
 
 --- Add an attribute to a specific slot.
 -- @param self Item
--- @param slot number
--- @param attr number
--- @param value number
+-- @param slot number Slot index
+-- @param attr number Attribute ID
+-- @param value number Attribute value
 function Item.addAttribute(self, slot, attr, value)
     self:setCustomAttribute("Slot" .. slot, attr .. "|" .. value)
 end
 
 --- Get a single attribute from a slot.
 -- @param self Item
--- @param slot number
--- @return table|nil  {attrId, attrValue}
+-- @param slot number Slot index
+-- @return table|nil {attrId, attrValue}
 function Item.getBonusAttribute(self, slot)
     local bonuses = self:getCustomAttribute("Slot" .. slot)
     if bonuses then
@@ -140,7 +29,7 @@ end
 
 --- Return all bonus attributes from an item.
 -- @param self Item
--- @return table|nil
+-- @return table|nil Table of attribute pairs
 function Item.getBonusAttributes(self)
     local data = {}
     for i = 1, self:getMaxAttributes() do
@@ -158,7 +47,7 @@ end
 
 --- Get the last slot index that has a bonus.
 -- @param self Item
--- @return number
+-- @return number Last occupied slot index
 function Item.getLastSlot(self)
     local last = 0
     for i = 1, self:getMaxAttributes() do
@@ -185,14 +74,13 @@ function Item.updateRarityByBonusCount(self)
         self:setRarity(COMMON)
     end
     self:setAttribute(ITEM_ATTRIBUTE_ACTIONID, self:getActionId())
-    syncItemAugments(self)
 end
 
 --- Set item level, adjusting stats based on the difference from old level.
 -- @param self Item
--- @param level number
--- @param first boolean
--- @return boolean
+-- @param level number New level
+-- @param first boolean Whether this is the first time setting level
+-- @return boolean Success
 function Item.setItemLevel(self, level, first)
     local oldLevel = self:getItemLevel()
     local it = ItemType(self.itemid)
@@ -263,14 +151,14 @@ end
 
 --- Get the item level.
 -- @param self Item
--- @return number
+-- @return number Item level
 function Item.getItemLevel(self)
     return self:getCustomAttribute("item_level") or 0
 end
 
 --- Set the upgrade level, adjusting stats accordingly.
 -- @param self Item
--- @param level number
+-- @param level number New upgrade level
 function Item.setUpgradeLevel(self, level)
     local it = ItemType(self.itemid)
     local oldLevel = self:getUpgradeLevel()
@@ -298,7 +186,6 @@ function Item.setUpgradeLevel(self, level)
         updateUpgradeAttribute(self, ITEM_ATTRIBUTE_HITCHANCE, config.hitchance_per_upgrade, oldLevel, level)
     end
 
-    MAGICLEVEL.updateBonus(self, oldLevel, level)
     self:setCustomAttribute("upgrade", level)
 
     if oldLevel < level then
@@ -306,24 +193,9 @@ function Item.setUpgradeLevel(self, level)
     end
 end
 
---- Update an attribute by comparing old vs. new upgrade level.
--- @param item Item
--- @param attrType number
--- @param perUpgrade number
--- @param oldLevel number
--- @param newLevel number
-function updateUpgradeAttribute(item, attrType, perUpgrade, oldLevel, newLevel)
-    local current = item:getAttribute(attrType)
-    if oldLevel < newLevel then
-        item:setAttribute(attrType, current + (newLevel - oldLevel) * perUpgrade)
-    else
-        item:setAttribute(attrType, current - (oldLevel - newLevel) * perUpgrade)
-    end
-end
-
 --- Get the current upgrade level.
 -- @param self Item
--- @return number
+-- @return number Current upgrade level
 function Item.getUpgradeLevel(self)
     return self:getCustomAttribute("upgrade") or 0
 end
@@ -337,14 +209,14 @@ end
 
 --- Check if an item is unique.
 -- @param self Item
--- @return boolean
+-- @return boolean True if unique
 function Item.isUnique(self)
     return self:getCustomAttribute("unique") and true or false
 end
 
 --- Set an item as unique by ID, adding relevant attributes from US_UNIQUES.
 -- @param self Item
--- @param uniqueId number
+-- @param uniqueId number Unique ID from US_UNIQUES
 function Item.setUnique(self, uniqueId)
     self:setCustomAttribute("unique", uniqueId)
     local entry = US_UNIQUES[uniqueId]
@@ -360,49 +232,63 @@ end
 
 --- Get the unique ID if present.
 -- @param self Item
--- @return number|nil
+-- @return number|nil Unique ID
 function Item.getUnique(self)
     return self:getCustomAttribute("unique")
 end
 
 --- Get the unique name from US_UNIQUES table.
 -- @param self Item
--- @return string
+-- @return string Unique item name
 function Item.getUniqueName(self)
     return US_UNIQUES[self:getUnique()].name
 end
 
 --- Make the item indefinite for level requirements.
 -- @param self Item
--- @param value boolean
+-- @param value boolean True to make limitless
 function Item.setLimitless(self, value)
     self:setCustomAttribute("limitless", value)
 end
 
 --- Check if item is indefinite for level requirements.
 -- @param self Item
--- @return boolean
+-- @return boolean True if limitless
 function Item.isLimitless(self)
     return self:getCustomAttribute("limitless")
 end
 
 --- Flag an item as mirrored.
 -- @param self Item
--- @param value boolean
+-- @param value boolean True to mark as mirrored
 function Item.setMirrored(self, value)
     self:setCustomAttribute("mirrored", value)
 end
 
 --- Check if item is mirrored.
 -- @param self Item
--- @return boolean
+-- @return boolean True if mirrored
 function Item.isMirrored(self)
     return self:getCustomAttribute("mirrored")
 end
 
---- Return the item type classification for your system.
+--- Flag an item as having memory (for Mind Crystal).
 -- @param self Item
--- @return number
+-- @param value boolean True to mark as having memory
+function Item.setMemory(self, value)
+    self:setCustomAttribute("has_memory", value and 1 or nil)
+end
+
+--- Check if item has memory.
+-- @param self Item
+-- @return boolean True if has memory
+function Item.hasMemory(self)
+    return self:getCustomAttribute("has_memory") and true or false
+end
+
+--- Return the item type classification for the upgrade system.
+-- @param self Item
+-- @return number Item type constant
 function Item.getItemType(self)
     local it = self:getType()
     local slot = it:getSlotPosition() - SLOTP_LEFT - SLOTP_RIGHT
@@ -437,7 +323,7 @@ end
 
 --- Set the item's rarity.
 -- @param self Item
--- @param rarity number
+-- @param rarity number Rarity ID
 function Item.setRarity(self, rarity)
     self:setCustomAttribute("rarity", rarity)
 end
@@ -457,7 +343,7 @@ end
 
 --- Get the current rarity from the config.
 -- @param self Item
--- @return table
+-- @return table Rarity configuration
 function Item.getRarity(self)
     local r = self:getCustomAttribute("rarity")
     return r and US_CONFIG.RARITY[r] or US_CONFIG.RARITY[COMMON]
@@ -465,14 +351,14 @@ end
 
 --- Return the rarity ID.
 -- @param self Item
--- @return number
+-- @return number Rarity ID
 function Item.getRarityId(self)
     return self:getCustomAttribute("rarity") or COMMON
 end
 
 --- Return the maximum number of bonus attributes an item can hold.
 -- @param self Item
--- @return number
+-- @return number Maximum attributes
 function Item.getMaxAttributes(self)
     if self:isUnique() then
         return #US_UNIQUES[self:getUnique()].attributes
@@ -480,9 +366,64 @@ function Item.getMaxAttributes(self)
     return self:getRarity().maxBonus
 end
 
+--- Roll a random attribute for an item.
+-- @param self Item
+-- @param player Player|nil Player using the item (optional)
+-- @param itemType ItemType Item type information
+-- @param weaponType number Weapon type constant
+-- @param unidentify boolean True if unidentified roll
+-- @return boolean Success
+function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
+    if not itemType:isUpgradable() or self:isUnique() then
+        return false
+    end
+
+    local attrIds = {}
+    local item_level = self:getItemLevel()
+
+    if unidentify then
+        local bonusCount = self:getRarity().maxBonus
+        local usItemType = self:getItemType()
+        for i = 1, bonusCount do
+            local attrId = rollRandomAttribute(attrIds, item_level, usItemType)
+            table.insert(attrIds, attrId)
+
+            local attr = US_ENCHANTMENTS[attrId]
+            local value = calculateAttributeValue(attr, item_level)
+            self:setCustomAttribute("Slot" .. i, attrId .. "|" .. value)
+        end
+        return true
+    else
+        local bonuses = self:getBonusAttributes()
+        if bonuses then
+            local maxPossible = US_CONFIG.RARITY[#US_CONFIG.RARITY].maxBonus
+            if #bonuses >= maxPossible then
+                if player then
+                    player:sendTextMessage(MESSAGE_STATUS_WARNING, "Max number of bonuses reached!")
+                end
+                return false
+            end
+            for _, b in pairs(bonuses) do
+                table.insert(attrIds, b[1])
+            end
+        end
+
+        local usItemType = self:getItemType()
+        local attrId = rollRandomAttribute(attrIds, item_level, usItemType)
+        local attr = US_ENCHANTMENTS[attrId]
+        local value = calculateAttributeValue(attr, item_level)
+        self:setCustomAttribute("Slot" .. (self:getLastSlot() + 1), attrId .. "|" .. value)
+
+        self:updateRarityByBonusCount()
+        return true
+    end
+end
+
+-- ItemType methods
+
 --- Check if an item type can be upgraded.
 -- @param self ItemType
--- @return boolean
+-- @return boolean True if upgradable
 function ItemType.isUpgradable(self)
     if self:isStackable() or self:getTransformEquipId() > 0 or self:getDecayId() > 0 or self:getDestroyId() > 0 or
         self:getCharges() > 0 then
@@ -509,7 +450,7 @@ end
 
 --- Check if an item type can have item level.
 -- @param self ItemType
--- @return boolean
+-- @return boolean True if can have item level
 function ItemType.canHaveItemLevel(self)
     if self:getTransformEquipId() > 0 or self:getDecayId() > 0 or self:getDestroyId() > 0 or self:getCharges() > 0 then
         return false
@@ -533,36 +474,38 @@ function ItemType.canHaveItemLevel(self)
     return false
 end
 
+-- MonsterType methods
+
 --- Compute item level for a monster (if dropping an item).
 -- @param self MonsterType
--- @return number
+-- @return number Calculated item level
 function MonsterType.calculateItemLevel(self)
     local monsterValue = self:getMaxHealth() + self:getExperience()
     local level = math.ceil((monsterValue ^ 0.4) / 1.25)
     return math.max(1, math.min(200, level))
 end
 
---- Get the per-upgrade config for an item, if it exists in config.lua.
--- @param item Item
--- @return table
-function getUpgradeConfig(item)
-    local it = ItemType(item:getId())
-    local wtype = it:getWeaponType()
-    if wtype > 0 and US_CONFIG.WEAPON_UPGRADES and US_CONFIG.WEAPON_UPGRADES[wtype] then
-        return {
-            attack_per_upgrade = US_CONFIG.WEAPON_UPGRADES[wtype].attack or US_CONFIG.ATTACK_PER_UPGRADE,
-            defense_per_upgrade = US_CONFIG.WEAPON_UPGRADES[wtype].defense or US_CONFIG.DEFENSE_PER_UPGRADE,
-            extra_defense_per_upgrade = US_CONFIG.WEAPON_UPGRADES[wtype].extra_defense or
-                US_CONFIG.EXTRADEFENSE_PER_UPGRADE,
-            armor_per_upgrade = US_CONFIG.WEAPON_UPGRADES[wtype].armor or US_CONFIG.ARMOR_PER_UPGRADE,
-            hitchance_per_upgrade = US_CONFIG.WEAPON_UPGRADES[wtype].hitchance or US_CONFIG.HITCHANCE_PER_UPGRADE
+-- Player methods
+
+--- Provides a unique subId for consecutive condition usage.
+-- @param self Player
+-- @param itemSlot number
+-- @param attrSlot number
+-- @return number
+function Player.getNextSubId(self, itemSlot, attrSlot)
+    local cid = self:getId()
+    if not US_SUBID then
+        US_SUBID = {}
+    end
+    if not US_SUBID[cid] then
+        US_SUBID[cid] = {
+            current = 0
         }
     end
-    return {
-        attack_per_upgrade = US_CONFIG.ATTACK_PER_UPGRADE,
-        defense_per_upgrade = US_CONFIG.DEFENSE_PER_UPGRADE,
-        extra_defense_per_upgrade = US_CONFIG.EXTRADEFENSE_PER_UPGRADE,
-        armor_per_upgrade = US_CONFIG.ARMOR_PER_UPGRADE,
-        hitchance_per_upgrade = US_CONFIG.HITCHANCE_PER_UPGRADE
-    }
+    US_SUBID[cid].current = US_SUBID[cid].current + 1
+    if not US_SUBID[cid][itemSlot] then
+        US_SUBID[cid][itemSlot] = {}
+    end
+    US_SUBID[cid][itemSlot][attrSlot] = US_SUBID[cid].current
+    return US_SUBID[cid].current
 end

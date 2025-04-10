@@ -1,20 +1,12 @@
--- data/scripts/custom/itemupgrades/augments.lua
--- Routines for creating damage/protection augments from enchantments.
-ATTACK_MOD = 0
-DEFENSE_MOD = 1
-ATTACK_MODIFIER_PIERCING = 6
-DEFENSE_MODIFIER_RESIST = 8
-PERCENT_MODIFIER = 1
-FLAT_MODIFIER = 0
-COMBAT_NONE = 0
-ORIGIN_AUGMENT = 12
-CREATURETYPE_ATTACKABLE = 12
-RACE_NONE = 0
+-- Logic for creating/handling augments (enchantments)
+-- Provides functionality for damage/protection augments
+-- Augments module
+local Augments = {}
 
---- Convert a string-based damage type (e.g., "energy") to its constant.
--- @param typeName string
--- @return number
-function getCombatType(typeName)
+--- Convert a string-based damage type to its constant.
+-- @param typeName string Damage type name
+-- @return number Combat type constant
+function Augments.getCombatType(typeName)
     local mapping = {
         physical = COMBAT_PHYSICALDAMAGE,
         energy = COMBAT_ENERGYDAMAGE,
@@ -28,22 +20,22 @@ function getCombatType(typeName)
 end
 
 --- Check if an enchantment ID is in the OFFENSIVE/DEFENSIVE table.
--- @param id number
--- @return boolean
-function isCombatEnchantment(id)
+-- @param id number Enchantment ID
+-- @return boolean True if combat enchantment
+function Augments.isCombatEnchantment(id)
     return ENCHANT_TYPES and
                (ENCHANT_TYPES.OFFENSIVE and ENCHANT_TYPES.OFFENSIVE[id] or ENCHANT_TYPES.DEFENSIVE and
                    ENCHANT_TYPES.DEFENSIVE[id])
 end
 
 --- Create a DamageModifier instance.
--- @param stance number
--- @param modType number
--- @param value number
--- @param factor number
--- @param combatType number
--- @return DamageModifier|nil
-local function makeModifier(stance, modType, value, factor, combatType)
+-- @param stance number Stance type
+-- @param modType number Modifier type
+-- @param value number Value
+-- @param factor number Factor
+-- @param combatType number Combat type
+-- @return DamageModifier|nil Damage modifier
+function Augments.makeModifier(stance, modType, value, factor, combatType)
     local mod = DamageModifier((stance == 0) and 1 or stance, (modType == 0) and 1 or modType,
         (value == 0) and 1 or value, (factor == 0) and 1 or factor, 100, combatType or COMBAT_NONE, ORIGIN_AUGMENT,
         CREATURETYPE_ATTACKABLE, RACE_NONE, "")
@@ -58,19 +50,19 @@ local function makeModifier(stance, modType, value, factor, combatType)
 end
 
 --- Create an Augment object from given info.
--- @param info table
--- @param value number
--- @param stance number
--- @param modType number
--- @return Augment
-local function createAugment(info, value, stance, modType)
+-- @param info table Enchantment info
+-- @param value number Value
+-- @param stance number Stance type
+-- @param modType number Modifier type
+-- @return Augment Created augment
+function Augments.createAugment(info, value, stance, modType)
     local modifiers = {}
     local augmentName = info.name
     local types = (info.type == "elemental") and {"energy", "earth", "fire", "ice", "holy", "death"} or {info.type}
 
     for _, typeName in ipairs(types) do
-        local combatType = getCombatType(typeName)
-        local modifier = makeModifier(stance, modType, value, PERCENT_MODIFIER, combatType)
+        local combatType = Augments.getCombatType(typeName)
+        local modifier = Augments.makeModifier(stance, modType, value, PERCENT_MODIFIER, combatType)
         if modifier then
             table.insert(modifiers, modifier)
         end
@@ -79,40 +71,40 @@ local function createAugment(info, value, stance, modType)
 end
 
 --- Create a damage-type augment.
--- @param info table
--- @param value number
--- @return Augment
-function createDamageAugment(info, value)
-    return createAugment(info, value, ATTACK_MOD, ATTACK_MODIFIER_PIERCING)
+-- @param info table Enchantment info
+-- @param value number Value
+-- @return Augment Created damage augment
+function Augments.createDamageAugment(info, value)
+    return Augments.createAugment(info, value, ATTACK_MOD, ATTACK_MODIFIER_PIERCING)
 end
 
 --- Create a protection-type augment.
--- @param info table
--- @param value number
--- @return Augment
-function createProtectionAugment(info, value)
-    return createAugment(info, value, DEFENSE_MOD, DEFENSE_MODIFIER_RESIST)
+-- @param info table Enchantment info
+-- @param value number Value
+-- @return Augment Created protection augment
+function Augments.createProtectionAugment(info, value)
+    return Augments.createAugment(info, value, DEFENSE_MOD, DEFENSE_MODIFIER_RESIST)
 end
 
 --- Create an Augment by ID.
--- @param enchantId number
--- @param value number
--- @return Augment|nil
-function createAugmentFromEnchantment(enchantId, value)
+-- @param enchantId number Enchantment ID
+-- @param value number Value
+-- @return Augment|nil Created augment
+function Augments.createAugmentFromEnchantment(enchantId, value)
     local info = ENCHANT_TYPES and ENCHANT_TYPES.OFFENSIVE and ENCHANT_TYPES.OFFENSIVE[enchantId]
     if info then
-        return createDamageAugment(info, value)
+        return Augments.createDamageAugment(info, value)
     end
     info = ENCHANT_TYPES and ENCHANT_TYPES.DEFENSIVE and ENCHANT_TYPES.DEFENSIVE[enchantId]
     if info then
-        return createProtectionAugment(info, value)
+        return Augments.createProtectionAugment(info, value)
     end
     return nil
 end
 
 --- Ensure item has required augments for its offensive/defensive bonuses.
--- @param item Item
-function syncItemAugments(item)
+-- @param item Item Item to synchronize
+function Augments.syncItemAugments(item)
     if not item then
         return
     end
@@ -131,7 +123,7 @@ function syncItemAugments(item)
         local info = (ENCHANT_TYPES and ENCHANT_TYPES.OFFENSIVE and ENCHANT_TYPES.OFFENSIVE[id]) or
                          (ENCHANT_TYPES and ENCHANT_TYPES.DEFENSIVE and ENCHANT_TYPES.DEFENSIVE[id])
         if info and not existing[info.name] then
-            local augment = createAugmentFromEnchantment(id, val)
+            local augment = Augments.createAugmentFromEnchantment(id, val)
             if augment then
                 item:addAugment(augment)
             end
@@ -140,12 +132,12 @@ function syncItemAugments(item)
 end
 
 --- Apply an augment for a given enchantment.
--- @param item Item
--- @param enchantId number
--- @param enchantValue number
-function applyAugmentForEnchantment(item, enchantId, enchantValue)
-    if isCombatEnchantment(enchantId) then
-        local augment = createAugmentFromEnchantment(enchantId, enchantValue)
+-- @param item Item Item to apply augment to
+-- @param enchantId number Enchantment ID
+-- @param enchantValue number Enchantment value
+function Augments.applyAugmentForEnchantment(item, enchantId, enchantValue)
+    if Augments.isCombatEnchantment(enchantId) then
+        local augment = Augments.createAugmentFromEnchantment(enchantId, enchantValue)
         if augment then
             item:addAugment(augment)
         end
@@ -153,8 +145,8 @@ function applyAugmentForEnchantment(item, enchantId, enchantValue)
 end
 
 --- Remove all augments from an item.
--- @param item Item
-function removeAllAugments(item)
+-- @param item Item Item to remove augments from
+function Augments.removeAllAugments(item)
     local augments = item:getAugments()
     if augments then
         for _, augment in ipairs(augments) do
@@ -162,3 +154,17 @@ function removeAllAugments(item)
         end
     end
 end
+
+--- Create description string for an enchantment
+-- @param enchantId number Enchantment ID
+-- @param value number Enchantment value
+-- @return string Formatted description
+function Augments.getDescription(enchantId, value)
+    local enchant = US_ENCHANTMENTS[enchantId]
+    if enchant and enchant.format then
+        return enchant.format(value)
+    end
+    return "Unknown enchantment"
+end
+
+return Augments
