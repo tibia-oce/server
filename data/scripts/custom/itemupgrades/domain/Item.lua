@@ -2,6 +2,15 @@
 -- Handles all core item operations including getting/setting item properties
 dofile('data/scripts/custom/itemupgrades/helpers.lua')
 
+--- Get the minimum required level for this item.
+-- @param self Item
+-- @return number Minimum required level (0 if none)
+function Item.getMinReqLevel(self)
+    local it = ItemType(self:getId())
+    local reqLevel = it:getMinLevel()
+    return reqLevel
+end
+
 --- Add an attribute to a specific slot.
 -- @param self Item
 -- @param slot number Slot index
@@ -419,7 +428,20 @@ function Item.rollAttribute(self, player, itemType, weaponType, unidentify)
     end
 end
 
--- ItemType methods
+--- Get the minimum required level from an item type.
+-- @param self ItemType
+-- @return number Minimum required level (0 if none)
+function ItemType.getMinLevel(self)
+    -- Try to extract the level from the item description
+    local desc = self:getDescription()
+    if desc then
+        local level = desc:match("level (%d+)")
+        if level then
+            return tonumber(level)
+        end
+    end
+    return 0
+end
 
 --- Check if an item type can be upgraded.
 -- @param self ItemType
@@ -474,8 +496,6 @@ function ItemType.canHaveItemLevel(self)
     return false
 end
 
--- MonsterType methods
-
 --- Compute item level for a monster (if dropping an item).
 -- @param self MonsterType
 -- @return number Calculated item level
@@ -484,8 +504,6 @@ function MonsterType.calculateItemLevel(self)
     local level = math.ceil((monsterValue ^ 0.4) / 1.25)
     return math.max(1, math.min(200, level))
 end
-
--- Player methods
 
 --- Provides a unique subId for consecutive condition usage.
 -- @param self Player

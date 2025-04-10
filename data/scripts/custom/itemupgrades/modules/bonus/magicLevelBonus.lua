@@ -6,11 +6,17 @@ local MagicLevelBonus = {}
 -- @param item Item Item to check
 -- @return boolean True if spellbook
 function MagicLevelBonus.isSpellbook(item)
-    local it = ItemType(item:getId())
-    if it:getWeaponType() == WEAPON_SHIELD then
-        local name = it:getName():lower()
-        return (name:find("spellbook") or name:find("scroll")) and true or false
+    -- List of spellbook item IDs
+    local spellbookIds = {
+        2175, 6120, 8900, 8901, 8902, 8903, 8904, 8918, 
+        16112, 18401, 22422, 22423, 22424, 23771, 28136
+    }
+    for _, spellbookId in ipairs(spellbookIds) do
+        if item:getId() == spellbookId then
+            return true
+        end
     end
+    
     return false
 end
 

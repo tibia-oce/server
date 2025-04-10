@@ -24,6 +24,12 @@ function AttributeManager.handleUpgrade(player, crystal, target)
         return false
     end
 
+    -- Initialize the item level if it doesn't have one yet
+    if target:getItemLevel() == 0 then
+        local baseLevel = target:getMinReqLevel()
+        target:setItemLevel(baseLevel, true)
+    end
+
     local upg = target:getUpgradeLevel()
     if upg >= US_CONFIG.MAX_UPGRADE_LEVEL then
         player:sendTextMessage(MESSAGE_STATUS_WARNING, "Maximum upgrade level reached!")
@@ -89,12 +95,6 @@ function AttributeManager.handleUpgrade(player, crystal, target)
     end
 
     crystal:remove(1)
-
-    -- Set item level if none exists
-    local bonuses = target:getBonusAttributes()
-    if target:getItemLevel() == 0 and bonuses and #bonuses > 0 then
-        target:setItemLevel(1, true)
-    end
 
     player:sendTextMessage(MESSAGE_INFO_DESCR, "Item upgrade level is now +" .. newLevel .. "!")
     player:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
