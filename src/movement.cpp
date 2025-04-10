@@ -802,7 +802,7 @@ ReturnValue MoveEvent::EquipItem(MoveEvent* moveEvent, Player* player, Item* ite
 
 
 	if (needUpdateSkills) {
-		std::cout << "Skills updated!" << std::endl;
+		// std::cout << "Skills updated!" << std::endl;
 		player->sendSkills();
 	}
 
@@ -885,7 +885,7 @@ ReturnValue MoveEvent::DeEquipItem(MoveEvent*, Player* player, Item* item, slots
 	}
 
 	if (needUpdateSkills) {
-		std::cout << "Skills updated!" << std::endl;
+		// std::cout << "Skills updated!" << std::endl;
 		player->sendSkills();
 	}
 

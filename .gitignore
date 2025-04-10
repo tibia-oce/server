@@ -17,3 +17,7 @@
 /.idea
 .vscode/
 .env
+prompt.md
+
+# MacOS specific
+.DS_Store
