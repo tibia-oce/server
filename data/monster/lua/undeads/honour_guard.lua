@@ -1,0 +1,112 @@
+-- Version: 9.10
+-- Monster: https://tibia.fandom.com/wiki/Honour_Guard
+-- Loot table: https://tibia.fandom.com/wiki/Loot_Statistics:Honour_Guard
+---
+
+
+local mType = Game.createMonsterType("Honour Guard")
+local monster = {}
+
+monster.description = "a honour guard"
+monster.experience = 55
+monster.outfit = {
+	lookType = 298,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
+	lookAddons = 0,
+	lookMount = 0,
+}
+
+
+monster.health = 85
+monster.maxHealth = 85
+monster.race = "undead"
+monster.corpse = 2843
+monster.speed = 77
+monster.manaCost = 0
+
+monster.changeTarget = {
+	interval = 4000,
+	chance = 0,
+}
+
+monster.strategiesTarget = {
+	nearest = 100,
+}
+
+monster.flags = {
+	summonable = false,
+	attackable = true,
+	hostile = true,
+	convinceable = false,
+	pushable = true,
+	rewardBoss = false,
+	illusionable = true,
+	canPushItems = true,
+	canPushCreatures = false,
+	staticAttackChance = 90,
+	targetDistance = 1,
+	runHealth = 0,
+	healthHidden = false,
+	isBlockable = false,
+	canWalkOnEnergy = false,
+	canWalkOnFire = false,
+	canWalkOnPoison = false}
+
+monster.light = {
+	level = 0,
+	color = 0,
+}
+
+monster.voices = {
+	interval = 5000,
+	chance = 10,
+	{ text = "Horestis curse upon you!", yell = false },
+	{ text = "Vengeance!", yell = false },
+	{ text = "Thy punishment is at hand!", yell = false },
+	{ text = "For the pharao!", yell = false },
+}
+
+monster.loot = {
+	{ id = "gold coin", chance = 49542, minCount = 1, maxCount = 15 },  -- 2148
+	{ id = "pelvis bone", chance = 8847 },  -- 12437
+	{ id = "brown mushroom", chance = 6135, minCount = 1, maxCount = 2 },  -- 2789
+	{ id = "mace", chance = 3681 },  -- 2398
+	{ id = "scarab coin", chance = 2609 },  -- 2159
+	{ id = 2419, chance = 1330 },  -- scimitar
+}
+
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -40 },
+	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_LIFEDRAIN, minDamage = -5, maxDamage = -13, range = 1, effect = CONST_ME_MAGIC_RED, target = false },
+}
+
+monster.defenses = {
+	defense = 15,
+	armor = 4,
+	mitigation = 0.20,
+}
+
+monster.elements = {
+	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
+	{ type = COMBAT_FIREDAMAGE, percent = 0 },
+	{ type = COMBAT_LIFEDRAIN, percent = 0 },
+	{ type = COMBAT_MANADRAIN, percent = 0 },
+	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = 0 },
+	{ type = COMBAT_HOLYDAMAGE, percent = -10 },
+	{ type = COMBAT_DEATHDAMAGE, percent = 100 },
+}
+
+monster.immunities = {
+	{ type = "paralyze", condition = true },
+	{ type = "outfit", condition = false },
+	{ type = "invisible", condition = true },
+	{ type = "bleed", condition = false },
+}
+
+mType:register(monster)
