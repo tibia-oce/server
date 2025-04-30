@@ -20,7 +20,7 @@ services:
 
   check-db-started:
     container_name: db-healthcheck
-    image: jwilder/dockerize:0.6.1    
+    image: jwilder/dockerize:v0.9.3    
     env_file:
       - '../.env'      
     depends_on:
